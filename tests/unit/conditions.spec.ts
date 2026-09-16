@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
 import {
   qualityColor,
-  qualityOpacity,
+  qualityTier,
+  qualityStyle,
   windBadge,
   swellColor,
   formatWind,
@@ -31,28 +32,57 @@ function forecast(overrides: Partial<MarineForecast> = {}): MarineForecast {
   };
 }
 
-test.describe('spec: condition-rating / Escala de calidad monocroma amarilla', () => {
-  test('a higher score renders more opaque in the same hue', () => {
-    expect(qualityOpacity(9)).toBeGreaterThan(qualityOpacity(3));
-    expect(qualityColor(9)).toContain('250, 204, 21');
-    expect(qualityColor(3)).toContain('250, 204, 21');
+test.describe('spec: condition-rating / Escala de tres niveles legible', () => {
+  test('8 and above is epic, 5-7 is fair, below 5 is poor', () => {
+    expect(qualityTier(10)).toBe('epic');
+    expect(qualityTier(8)).toBe('epic');
+    expect(qualityTier(7)).toBe('good');
+    expect(qualityTier(5)).toBe('good');
+    expect(qualityTier(4)).toBe('poor');
+    expect(qualityTier(0)).toBe('poor');
   });
 
-  test('no score anywhere on the scale produces a green', () => {
-    // Greens have a dominant green channel; the yellow ramp has R ~= G.
+  test('the tiers differ in size, not only in colour', () => {
+    // Opacity alone was unreadable on a dark map; size carries the signal too.
+    const epic = qualityStyle(9);
+    const good = qualityStyle(6);
+    const poor = qualityStyle(2);
+
+    expect(epic.size).toBeGreaterThan(good.size);
+    expect(good.size).toBeGreaterThan(poor.size);
+    expect(new Set([epic.background, good.background, poor.background]).size).toBe(3);
+  });
+
+  test('only the best spots glow and carry their score', () => {
+    expect(qualityStyle(9).boxShadow).not.toBe('none');
+    expect(qualityStyle(6).boxShadow).toBe('none');
+
+    expect(qualityStyle(9).showScore).toBe(true);
+    expect(qualityStyle(6).showScore).toBe(true);
+    expect(qualityStyle(2).showScore).toBe(false);
+  });
+
+  test('no tier on the quality scale is green', () => {
     for (let stars = 0; stars <= 10; stars++) {
-      const color = qualityColor(stars);
-      const [r, g] = color.match(/\d+/g)!.slice(0, 2).map(Number);
-      expect(g).toBeLessThanOrEqual(r);
+      const hex = qualityColor(stars);
+      if (!hex.startsWith('#')) continue;
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      expect(g, `${stars} stars rendered ${hex}`).toBeLessThanOrEqual(r);
     }
   });
 
-  test('a dangerous spot overrides the ramp with red', () => {
-    expect(qualityColor(8, { isDangerous: true })).toBe('#EF4444');
+  test('a dangerous spot overrides the ramp with red, whatever it scores', () => {
+    const danger = qualityStyle(9, { isDangerous: true });
+    expect(danger.tier).toBe('danger');
+    expect(danger.background).toBe('#EF4444');
   });
 
-  test('an unrated spot is grey, not a zero-star yellow', () => {
-    expect(qualityColor(0, { unrated: true })).toBe('#52525B');
+  test('an unrated spot is hollow, so no data never reads as bad data', () => {
+    const unrated = qualityStyle(0, { unrated: true });
+    expect(unrated.tier).toBe('unrated');
+    expect(unrated.background).toBe('transparent');
+    expect(unrated.border).toContain('dashed');
   });
 });
 

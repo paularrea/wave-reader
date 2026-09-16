@@ -8,27 +8,134 @@
 
 import { MarineForecast } from './marine-api';
 
-/** One hue for quality; only opacity carries the score. */
-const QUALITY_HUE = '250, 204, 21'; // Tailwind yellow-400
-const DANGER_COLOR = '#EF4444'; // red-500
-const UNRATED_COLOR = '#52525B'; // zinc-600
+/**
+ * Quality is encoded in several channels at once -- fill, size, ring and glow --
+ * not in opacity alone.
+ *
+ * A single hue ramped only by opacity is unreadable on a dark map: a 4-star and
+ * a 7-star spot differ by a few percent of alpha against near-black, which is
+ * below what the eye resolves at 20px. Separating the tiers by size and weight
+ * as well means the map answers "where should I go today" at a glance, before
+ * any number is read.
+ */
+
+export type QualityTier = 'epic' | 'good' | 'poor' | 'danger' | 'unrated';
+
+export interface QualityStyle {
+  tier: QualityTier;
+  /** Marker fill. */
+  background: string;
+  /** Marker diameter in px. */
+  size: number;
+  border: string;
+  boxShadow: string;
+  /** Text colour for the score printed inside the marker, if shown. */
+  foreground: string;
+  /** Poor and unrated spots stay as plain dots: the number is noise there. */
+  showScore: boolean;
+  /** Short human label, used by the legend and the drawer. */
+  label: string;
+}
 
 export const MAX_STARS = 10;
 
-/**
- * Opacity ramp for a 0-10 score. Starts at 0.15 so a zero-star spot is still
- * visible on the dark map, and reaches full opacity only at a perfect score.
- */
-export function qualityOpacity(stars: number): number {
-  const clamped = Math.min(MAX_STARS, Math.max(0, stars));
-  return Number((0.15 + (clamped / MAX_STARS) * 0.85).toFixed(3));
+/** 8+ is a day worth driving for; below 5 is not worth the petrol. */
+const EPIC_THRESHOLD = 8;
+const GOOD_THRESHOLD = 5;
+
+const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
+  // Saturated, large, ringed and glowing: impossible to miss among the rest.
+  epic: {
+    background: '#FBBF24',
+    size: 30,
+    border: '3px solid #FFFFFF',
+    boxShadow: '0 0 0 3px rgba(251,191,36,0.35), 0 0 18px 4px rgba(251,191,36,0.75)',
+    foreground: '#422006',
+    showScore: true,
+    label: 'Epic',
+  },
+  // Clearly present but visibly secondary to epic: darker, smaller, no glow.
+  good: {
+    background: '#A16207',
+    size: 21,
+    border: '2px solid rgba(255,255,255,0.75)',
+    boxShadow: 'none',
+    foreground: '#FEF3C7',
+    showScore: true,
+    label: 'Fair',
+  },
+  // Recedes into the map. Present, findable, never competing for attention.
+  poor: {
+    background: '#3F3F46',
+    size: 13,
+    border: '1px solid rgba(255,255,255,0.3)',
+    boxShadow: 'none',
+    foreground: 'transparent',
+    showScore: false,
+    label: 'Poor',
+  },
+  // Red overrides the quality ramp entirely: this is a safety signal, not a
+  // rating, and it must read as "stop" even on a spot scoring well.
+  danger: {
+    background: '#EF4444',
+    size: 26,
+    border: '3px solid #FCA5A5',
+    boxShadow: '0 0 0 3px rgba(239,68,68,0.3), 0 0 16px 3px rgba(239,68,68,0.6)',
+    foreground: '#FFFFFF',
+    showScore: true,
+    label: 'Above your level',
+  },
+  // Hollow, so "no forecast" never looks like "bad forecast".
+  unrated: {
+    background: 'transparent',
+    size: 13,
+    border: '1.5px dashed rgba(161,161,170,0.8)',
+    boxShadow: 'none',
+    foreground: 'transparent',
+    showScore: false,
+    label: 'No data',
+  },
+};
+
+export function qualityTier(
+  stars: number,
+  options?: { isDangerous?: boolean; unrated?: boolean }
+): QualityTier {
+  if (options?.unrated) return 'unrated';
+  if (options?.isDangerous) return 'danger';
+  if (stars >= EPIC_THRESHOLD) return 'epic';
+  if (stars >= GOOD_THRESHOLD) return 'good';
+  return 'poor';
 }
 
-/** `rgba(...)` for a score. Dangerous spots override the ramp entirely. */
-export function qualityColor(stars: number, options?: { isDangerous?: boolean; unrated?: boolean }): string {
-  if (options?.unrated) return UNRATED_COLOR;
-  if (options?.isDangerous) return DANGER_COLOR;
-  return `rgba(${QUALITY_HUE}, ${qualityOpacity(stars)})`;
+export function qualityStyle(
+  stars: number,
+  options?: { isDangerous?: boolean; unrated?: boolean }
+): QualityStyle {
+  const tier = qualityTier(stars, options);
+  return { tier, ...STYLES[tier] };
+}
+
+/** The tiers a legend should list, in reading order. */
+export const LEGEND_TIERS: QualityTier[] = ['epic', 'good', 'poor', 'danger'];
+
+export function legendEntry(tier: QualityTier): QualityStyle & { range: string } {
+  const ranges: Record<QualityTier, string> = {
+    epic: `${EPIC_THRESHOLD}-${MAX_STARS}`,
+    good: `${GOOD_THRESHOLD}-${EPIC_THRESHOLD - 1}`,
+    poor: `0-${GOOD_THRESHOLD - 1}`,
+    danger: '!',
+    unrated: '--',
+  };
+  return { tier, ...STYLES[tier], range: ranges[tier] };
+}
+
+/** Fill colour alone, for surfaces that only need the hue. */
+export function qualityColor(
+  stars: number,
+  options?: { isDangerous?: boolean; unrated?: boolean }
+): string {
+  return qualityStyle(stars, options).background;
 }
 
 export type WindCategory = 'Glass' | 'Off-shore' | 'Cross-shore' | 'On-shore';
@@ -94,7 +201,7 @@ const SWELL_RAMP: Array<{ maxHeight: number; color: string }> = [
 ];
 
 export function swellColor(height: number | null): string {
-  if (height === null) return UNRATED_COLOR;
+  if (height === null) return '#52525B';
   return SWELL_RAMP.find(step => height < step.maxHeight)!.color;
 }
 

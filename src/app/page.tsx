@@ -3,10 +3,11 @@
 import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import { MarineMap } from '@/components/shared/MarineMap';
 import { SpotDetailDrawer, ForecastPayload } from '@/components/shared/SpotDetailDrawer';
+import { QualityLegend } from '@/components/shared/QualityLegend';
 import { useStore } from '@/store/useStore';
 import { Calendar, User, MapPin } from 'lucide-react';
-import spots from '@/data/spots.json';
 import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
+import { allRegions } from '@/services/regions';
 
 /** Groups the timeline's hours into days so the strip can show one chip per day. */
 function useDaySegments(utcOffsetSeconds: number) {
@@ -98,13 +99,15 @@ export default function WaveReaderPage() {
   const daySegments = useDaySegments(spotUtcOffsetSeconds);
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
   const { label: currentDayLabel } = dayLabel(instant, spotUtcOffsetSeconds);
-  const regions = ['all', ...Array.from(new Set(spots.map(s => s.community)))];
+  const regions = allRegions();
 
   return (
     <main className="relative w-full h-screen overflow-hidden bg-zinc-950 text-white font-sans">
       <div className="absolute inset-0 z-0">
         <MarineMap />
       </div>
+
+      <QualityLegend />
 
       <div className="absolute top-6 left-6 z-10 pointer-events-none">
         <h1 className="text-3xl font-black tracking-tighter italic flex items-center gap-2 drop-shadow-lg">
@@ -121,13 +124,14 @@ export default function WaveReaderPage() {
             <MapPin size={18} className="text-zinc-500 shrink-0" />
             <select
               aria-label="Region"
+              data-testid="region-select"
               value={selectedRegion}
               onChange={e => setSelectedRegion(e.target.value)}
               className="flex-1 bg-zinc-800 border-none text-xs font-bold rounded-lg px-3 py-1.5 text-zinc-200 focus:ring-2 ring-blue-500 outline-none"
             >
               {regions.map(r => (
                 <option key={r} value={r}>
-                  {r === 'all' ? 'All Regions' : r}
+                  {r}
                 </option>
               ))}
             </select>

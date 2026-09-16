@@ -119,3 +119,4 @@ test.describe('catalogue is usable', () => {
     }
   });
 });
+

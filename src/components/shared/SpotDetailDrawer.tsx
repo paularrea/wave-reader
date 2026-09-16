@@ -9,7 +9,7 @@ import { MarineForecast } from '@/services/marine-api';
 import { TideExtreme } from '@/services/tides';
 import { SpotConfig } from '@/services/star-engine';
 import {
-  qualityColor,
+  qualityStyle,
   swellColor,
   windBadge,
   compassPoint,
@@ -76,9 +76,9 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
   const forecast = forecastData?.forecast ?? null;
   const badge = forecast ? windBadge(forecast, spot.config as SpotConfig) : null;
   const isDangerous = forecastData?.safety.isDangerous ?? false;
-  const scoreColor = forecastData
-    ? qualityColor(forecastData.stars, { isDangerous, unrated: forecastData.unrated })
-    : '#52525B';
+  const quality = forecastData
+    ? qualityStyle(forecastData.stars, { isDangerous, unrated: forecastData.unrated })
+    : null;
 
   return (
     <Drawer.Root open={!!selectedSpotId} onOpenChange={open => !open && setSelectedSpot(null)}>
@@ -98,10 +98,12 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
                 {spot.community} • {spot.type}
               </p>
             </div>
-            <div className="flex flex-col items-end">
+            {/* The drawer repeats the map's tier so the two never disagree:
+                same colour, same label, same thresholds. */}
+            <div className="flex flex-col items-end shrink-0" data-testid="spot-quality">
               <div
                 className="text-4xl font-black leading-none"
-                style={{ color: scoreColor }}
+                style={{ color: quality?.tier === 'poor' ? '#A1A1AA' : quality?.background }}
                 data-testid="spot-score"
               >
                 {forecastData && !forecastData.unrated ? forecastData.stars : '--'}
@@ -109,6 +111,18 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
               <span className="text-[10px] uppercase tracking-widest text-zinc-500 mt-1">
                 of {MAX_STARS}
               </span>
+              {quality && (
+                <span
+                  data-testid="spot-tier"
+                  className="text-[10px] font-bold uppercase tracking-wide mt-1.5 px-2 py-0.5 rounded-full"
+                  style={{
+                    backgroundColor: quality.tier === 'poor' ? '#27272A' : quality.background,
+                    color: quality.tier === 'poor' ? '#A1A1AA' : quality.foreground,
+                  }}
+                >
+                  {quality.label}
+                </span>
+              )}
             </div>
           </div>
 

@@ -182,8 +182,53 @@ test.describe('spec: condition-rating', () => {
 
     expect(colors.length).toBeGreaterThan(0);
     for (const color of colors) {
+      if (color === 'rgba(0, 0, 0, 0)') continue; // unrated markers are hollow
       const [r, g] = color.match(/\d+/g)!.slice(0, 2).map(Number);
       expect(g, `marker rendered ${color}`).toBeLessThanOrEqual(r);
+    }
+  });
+
+  test('the three quality tiers are visually distinct on the map', async ({ page }) => {
+    // The complaint that started this: several yellows at different opacity
+    // were indistinguishable, so the map could not be read at a glance.
+    const sizes: Record<string, number> = {};
+
+    for (const [tier, stars] of [['epic', 9], ['good', 6], ['poor', 2]] as const) {
+      await stubForecast(page, { stars });
+      await page.goto('/');
+      const marker = page.locator('[data-testid="spot-marker"]').first();
+      await marker.waitFor({ state: 'attached', timeout: 45_000 });
+
+      await expect(marker).toHaveAttribute('data-tier', tier);
+      const box = await marker.evaluate(n => n.getBoundingClientRect().width);
+      sizes[tier] = box;
+    }
+
+    expect(sizes.epic).toBeGreaterThan(sizes.good);
+    expect(sizes.good).toBeGreaterThan(sizes.poor);
+  });
+
+  test('only the best spots print their score on the marker', async ({ page }) => {
+    await stubForecast(page, { stars: 9 });
+    await page.goto('/');
+    const epic = page.locator('[data-testid="spot-marker"]').first();
+    await epic.waitFor({ state: 'attached', timeout: 45_000 });
+    await expect(epic).toHaveText('9');
+
+    await stubForecast(page, { stars: 2 });
+    await page.goto('/');
+    const poor = page.locator('[data-testid="spot-marker"]').first();
+    await poor.waitFor({ state: 'attached', timeout: 45_000 });
+    await expect(poor).toHaveText('');
+  });
+
+  test('the legend explains what the marker styles mean', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    await expect(page.getByTestId('quality-legend')).toBeVisible();
+    for (const tier of ['epic', 'good', 'poor', 'danger']) {
+      await expect(page.getByTestId(`legend-${tier}`)).toBeVisible();
     }
   });
 
@@ -289,5 +334,50 @@ test.describe('spec: forecast-timeline', () => {
     await page.getByTestId('day-chip').nth(1).click();
     // Jumping via a chip must move the slider too, not just the label.
     await expect(page.getByLabel('Forecast hour')).not.toHaveValue('0');
+  });
+});
+
+test.describe('spec: region-selection', () => {
+  test('there is no "all regions" option', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    const options = await page.getByTestId('region-select').locator('option').allTextContents();
+    expect(options.length).toBeGreaterThan(0);
+    for (const option of options) {
+      expect(option.toLowerCase()).not.toContain('all');
+    }
+  });
+
+  test('geolocation picks the region of the nearest coast', async ({ page, context }) => {
+    // Basque coast: the default (Cataluña) must be overridden.
+    await context.setGeolocation({ latitude: 43.29, longitude: -2.15 });
+    await stubForecast(page);
+    await page.goto('/');
+
+    await expect(page.getByTestId('region-select')).toHaveValue('País Vasco', { timeout: 15_000 });
+  });
+
+  test('without geolocation the region falls back to the default', async ({ browser }) => {
+    const context = await browser.newContext({ permissions: [] });
+    const page = await context.newPage();
+    await stubForecast(page);
+    await page.goto('/');
+
+    // Asserted against the exported default rather than a hard-coded name, so
+    // this stays a test of the fallback behaviour. That the default is
+    // Cataluña is asserted in tests/unit/regions.spec.ts against the catalogue.
+    const { DEFAULT_REGION } = await import('../../src/services/regions');
+    await expect(page.getByTestId('region-select')).toHaveValue(DEFAULT_REGION);
+    await context.close();
+  });
+
+  test('a manual pick is not overwritten by a late geolocation callback', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    await page.getByTestId('region-select').selectOption('Galicia');
+    await page.waitForTimeout(2000);
+    await expect(page.getByTestId('region-select')).toHaveValue('Galicia');
   });
 });
