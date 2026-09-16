@@ -94,6 +94,21 @@ test.describe('map and spot detail', () => {
     });
   });
 
+  test('REGRESSION: markers still render on a warm reload with the style cached', async ({ page }) => {
+    // First load primes the browser cache; on the second the map can finish
+    // loading before the `load` listener attaches, and that event is then
+    // missed -- which left production showing an empty map under a permanent
+    // "Loading Marine Data" overlay.
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 20_000 });
+
+    await page.reload();
+
+    await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({ timeout: 20_000 });
+    await expect(page.getByText('Loading Marine Data')).toHaveCount(0);
+  });
+
   test('spec: marine-data — the detail shows swell height, direction and wind', async ({ page }) => {
     await stubForecast(page);
     await page.goto('/');

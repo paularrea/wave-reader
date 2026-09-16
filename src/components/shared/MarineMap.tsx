@@ -118,10 +118,17 @@ export function MarineMap() {
       );
     }
 
-    map.on('load', () => {
-      setLoading(false);
-      renderMarkers();
-    });
+    // With the style already in the browser cache the map can finish loading
+    // before this listener is attached, and the event is then missed for good:
+    // the overlay stays up and no markers are ever drawn. Check the state
+    // first, and keep `idle` as a safety net.
+    const onReady = () => setLoading(false);
+    if (map.loaded()) {
+      onReady();
+    } else {
+      map.once('load', onReady);
+      map.once('idle', onReady);
+    }
 
     return () => {
       markersRef.current.forEach(marker => marker.remove());
