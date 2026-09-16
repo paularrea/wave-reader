@@ -20,6 +20,8 @@ export default defineConfig({
     timezoneId: 'Europe/Madrid',
   },
 
+  // The prod project talks to the live site; everything else needs the local
+  // server started below.
   projects: [
     // Pure logic: timeline maths, tide detection, catalogue integrity.
     { name: 'unit', testMatch: /tests\/unit\/.*\.spec\.ts/ },
@@ -27,6 +29,13 @@ export default defineConfig({
       name: 'e2e',
       testMatch: /tests\/e2e\/.*\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
+    },
+    // Opt-in: runs against the live deployment, so it is excluded from the
+    // default run and needs no local server.
+    {
+      name: 'prod',
+      testMatch: /tests\/prod\/.*\.spec\.ts/,
+      use: { ...devices['Desktop Chrome'], baseURL: undefined },
     },
   ],
 
