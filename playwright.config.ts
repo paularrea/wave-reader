@@ -6,6 +6,13 @@ const BASE_URL = `http://127.0.0.1:${PORT}`;
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
+  /**
+   * Each e2e test renders a Mapbox GL map, which headless Chromium draws with
+   * SwiftShader on the CPU. Three of those at once starve the machine and the
+   * map's `load` event arrives after the test has already given up, so the
+   * suite fails in ways that have nothing to do with the code.
+   */
+  workers: 2,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   reporter: process.env.CI ? 'github' : [['list']],

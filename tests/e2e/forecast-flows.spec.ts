@@ -78,7 +78,7 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
 
 async function openFirstSpot(page: Page) {
   const marker = page.locator('[data-testid="spot-marker"]').first();
-  await marker.waitFor({ state: 'attached', timeout: 20_000 });
+  await marker.waitFor({ state: 'attached', timeout: 45_000 });
   await marker.dispatchEvent('click');
   await expect(page.getByTestId('spot-drawer')).toBeVisible();
 }
@@ -90,7 +90,7 @@ test.describe('map and spot detail', () => {
 
     await expect(page.locator('.mapboxgl-map')).toBeVisible();
     await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({
-      timeout: 20_000,
+      timeout: 45_000,
     });
   });
 
@@ -101,11 +101,11 @@ test.describe('map and spot detail', () => {
     // "Loading Marine Data" overlay.
     await stubForecast(page);
     await page.goto('/');
-    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 20_000 });
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
 
     await page.reload();
 
-    await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({ timeout: 20_000 });
+    await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({ timeout: 45_000 });
     await expect(page.getByText('Loading Marine Data')).toHaveCount(0);
   });
 
@@ -174,7 +174,7 @@ test.describe('spec: condition-rating', () => {
   test('no map marker is rendered in green', async ({ page }) => {
     await stubForecast(page, { stars: 4 });
     await page.goto('/');
-    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 20_000 });
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
 
     const colors = await page
       .locator('[data-testid="spot-marker"]')
@@ -205,7 +205,7 @@ test.describe('spec: condition-rating', () => {
     await page.getByTestId('level-beginner').click();
 
     const marker = page.locator('[data-testid="spot-marker"][data-dangerous="true"]').first();
-    await expect(marker).toBeAttached({ timeout: 20_000 });
+    await expect(marker).toBeAttached({ timeout: 45_000 });
     await expect(marker).toHaveCSS('background-color', 'rgb(239, 68, 68)');
   });
 });
