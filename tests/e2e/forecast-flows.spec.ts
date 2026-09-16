@@ -197,12 +197,20 @@ test.describe('spec: condition-rating', () => {
     for (const [tier, stars] of [['epic', 9], ['good', 6], ['poor', 2]] as const) {
       await stubForecast(page, { stars });
       await page.goto('/');
-      const marker = page.locator('[data-testid="spot-marker"]').first();
-      await marker.waitFor({ state: 'attached', timeout: 45_000 });
+      await page
+        .locator('[data-testid="spot-marker"]')
+        .first()
+        .waitFor({ state: 'attached', timeout: 45_000 });
 
+      // The region fly-to fires moveend, which rebuilds the marker layer; a
+      // node captured before that settles is detached by the time it is
+      // measured and reports a zero-width box.
+      await page.waitForTimeout(2500);
+
+      const marker = page.locator('[data-testid="spot-marker"]').first();
       await expect(marker).toHaveAttribute('data-tier', tier);
-      const box = await marker.evaluate(n => n.getBoundingClientRect().width);
-      sizes[tier] = box;
+      sizes[tier] = await marker.evaluate(n => n.getBoundingClientRect().width);
+      expect(sizes[tier], `${tier} marker has no box`).toBeGreaterThan(0);
     }
 
     expect(sizes.epic).toBeGreaterThan(sizes.good);
@@ -546,26 +554,31 @@ test.describe('spec: map-viewport', () => {
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
     await page.waitForTimeout(1500);
 
-    // Zoom in hard, well past the region-framing zoom.
-    await page.mouse.move(400, 300);
-    for (let i = 0; i < 6; i++) await page.mouse.wheel(0, -400);
-    await page.waitForTimeout(1200);
+    // Pan rather than zoom: zooming right in empties the viewport of spots,
+    // and markers are only rendered for what is on screen.
+    const map = page.locator('.mapboxgl-map');
+    const box = (await map.boundingBox())!;
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    await page.mouse.down();
+    await page.mouse.move(box.x + box.width / 2 - 140, box.y + box.height / 2 - 60, { steps: 12 });
+    await page.mouse.up();
+    await page.waitForTimeout(1800);
 
-    const zoomedBox = await page
+    const panned = await page
       .locator('[data-testid="spot-marker"]')
       .first()
       .evaluate(n => n.getBoundingClientRect().left);
 
     await page.getByLabel('Forecast hour').fill('3');
-    await page.waitForTimeout(1800);
+    await page.waitForTimeout(2000);
 
-    const afterBox = await page
+    const afterHourChange = await page
       .locator('[data-testid="spot-marker"]')
       .first()
       .evaluate(n => n.getBoundingClientRect().left);
 
-    // The marker stays roughly where it was; a refit would move it a long way.
-    expect(Math.abs(afterBox - zoomedBox)).toBeLessThan(60);
+    // The pan survives; a refit would snap the view back and move the marker.
+    expect(Math.abs(afterHourChange - panned)).toBeLessThan(40);
   });
 
   test('REGRESSION: the scoring indicator clears once scoring finishes', async ({ page }) => {

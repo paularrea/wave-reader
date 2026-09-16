@@ -13,6 +13,12 @@ export default defineConfig({
    * suite fails in ways that have nothing to do with the code.
    */
   workers: 2,
+  /**
+   * Assertions wait longer than Playwright's 5s default: two workers each
+   * rendering a Mapbox GL map through SwiftShader contend for the CPU, and a
+   * marker's attributes can land well after the map reports itself loaded.
+   */
+  expect: { timeout: 15_000 },
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   reporter: process.env.CI ? 'github' : [['list']],

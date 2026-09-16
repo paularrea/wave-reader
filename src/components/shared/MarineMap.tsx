@@ -18,6 +18,13 @@ const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 const MAX_CONCURRENT_FETCHES = 6;
 /** Beyond this many visible spots, scoring all of them helps nobody. */
 const MAX_SPOTS_PER_VIEWPORT = 60;
+/**
+ * Markers are DOM nodes, and a Mapbox marker each for Galicia's 1,286 beaches
+ * would stall the main thread on every pan. Only what is on screen -- plus a
+ * margin so panning does not reveal bare sea -- gets a node.
+ */
+const MAX_MARKERS = 300;
+const VIEWPORT_MARGIN = 0.35; // fraction of the viewport span, added each side
 const MOVE_DEBOUNCE_MS = 400;
 
 interface Rating {
@@ -80,7 +87,30 @@ export function MarineMap() {
   const [loading, setLoading] = useState(true);
   const [pending, setPending] = useState(0);
 
-  /** Rebuilds the marker layer for the selected region. Cheap: no network. */
+  /** The spots worth giving a DOM node right now: on screen, plus a margin. */
+  const spotsToRender = useCallback((): typeof spots => {
+    const map = mapRef.current;
+    const inRegion = spots.filter(spot => spot.community === selectedRegion);
+    if (!map) return inRegion.slice(0, MAX_MARKERS);
+
+    const bounds = map.getBounds();
+    if (!bounds) return inRegion.slice(0, MAX_MARKERS);
+
+    const latMargin = (bounds.getNorth() - bounds.getSouth()) * VIEWPORT_MARGIN;
+    const lonMargin = (bounds.getEast() - bounds.getWest()) * VIEWPORT_MARGIN;
+
+    return inRegion
+      .filter(
+        spot =>
+          spot.coordinates.lat >= bounds.getSouth() - latMargin &&
+          spot.coordinates.lat <= bounds.getNorth() + latMargin &&
+          spot.coordinates.lon >= bounds.getWest() - lonMargin &&
+          spot.coordinates.lon <= bounds.getEast() + lonMargin
+      )
+      .slice(0, MAX_MARKERS);
+  }, [selectedRegion]);
+
+  /** Rebuilds the marker layer. Cheap: no network. */
   const renderMarkers = useCallback(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -88,9 +118,7 @@ export function MarineMap() {
     markersRef.current.forEach(({ marker }) => marker.remove());
     markersRef.current.clear();
 
-    const visible = spots.filter(spot => spot.community === selectedRegion);
-
-    for (const spot of visible) {
+    for (const spot of spotsToRender()) {
       const el = document.createElement('div');
       el.className = 'mapboxgl-marker custom-marker';
       el.dataset.testid = 'spot-marker';
@@ -124,8 +152,7 @@ export function MarineMap() {
         .addTo(map);
       markersRef.current.set(spot.id, { marker, el });
     }
-
-  }, [selectedRegion, setSelectedSpot]);
+  }, [spotsToRender, setSelectedSpot]);
 
   /**
    * Frames the region, but only when the region itself changes.
@@ -276,7 +303,12 @@ export function MarineMap() {
 
     const onMoveEnd = () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
-      debounceRef.current = setTimeout(() => fetchVisibleForecasts(), MOVE_DEBOUNCE_MS);
+      debounceRef.current = setTimeout(() => {
+        // Panning brings new spots into view: they need a node before they can
+        // be scored.
+        renderMarkers();
+        fetchVisibleForecasts();
+      }, MOVE_DEBOUNCE_MS);
     };
 
     map.on('moveend', onMoveEnd);
@@ -284,7 +316,7 @@ export function MarineMap() {
       map.off('moveend', onMoveEnd);
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [fetchVisibleForecasts, loading]);
+  }, [renderMarkers, fetchVisibleForecasts, loading]);
 
   return (
     <div className="relative w-full h-full">
