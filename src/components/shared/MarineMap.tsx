@@ -125,19 +125,30 @@ export function MarineMap() {
       markersRef.current.set(spot.id, { marker, el });
     }
 
-    // Fly to the region whenever it changes: switching to Donegal from Cádiz
-    // must take the user there, not leave them staring at an empty sea.
-    const box = regionBounds(selectedRegion);
-    if (box) {
-      map.fitBounds(
-        [
-          [box.west, box.south],
-          [box.east, box.north],
-        ],
-        { padding: 60, maxZoom: 9, duration: 900 }
-      );
-    }
   }, [selectedRegion, setSelectedSpot]);
+
+  /**
+   * Frames the region, but only when the region itself changes.
+   *
+   * This used to live at the end of renderMarkers, which re-runs whenever the
+   * hour or skill level changes -- so every step of the time slider yanked a
+   * user zoomed into one beach back out to the whole region.
+   */
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || loading) return;
+
+    const box = regionBounds(selectedRegion);
+    if (!box) return;
+
+    map.fitBounds(
+      [
+        [box.west, box.south],
+        [box.east, box.north],
+      ],
+      { padding: 60, maxZoom: 9, duration: 900 }
+    );
+  }, [selectedRegion, loading]);
 
   /** Scores only the spots currently on screen. */
   const fetchVisibleForecasts = useCallback(async () => {
@@ -154,12 +165,15 @@ export function MarineMap() {
       .filter(spot => !ratingsRef.current.has(spot.id))
       .slice(0, MAX_SPOTS_PER_VIEWPORT);
 
-    if (onScreen.length === 0) return;
+    // Set unconditionally: an early return that left a superseded round's count
+    // in place kept "Scoring N spots…" on screen for good.
     setPending(onScreen.length);
+    if (onScreen.length === 0) return;
 
     await mapWithLimit(onScreen, MAX_CONCURRENT_FETCHES, async spot => {
-      if (token !== fetchTokenRef.current) return;
       try {
+        // Inside the try, so the finally below still runs when superseded.
+        if (token !== fetchTokenRef.current) return;
         const res = await fetch(
           `/api/forecast?spotId=${spot.id}&level=${userSkillLevel}&hour=${currentHour}`
         );

@@ -536,3 +536,74 @@ test.describe('spec: region-selection / El mapa sigue a la región', () => {
     expect(regions).toContain(await page.getByTestId('region-select').inputValue());
   });
 });
+
+test.describe('spec: map-viewport', () => {
+  test('REGRESSION: stepping the hour does not reset the map view', async ({ page }) => {
+    // fitBounds used to live in renderMarkers, which re-runs on every hour
+    // change, so dragging the timeline yanked a zoomed-in user back out.
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(1500);
+
+    // Zoom in hard, well past the region-framing zoom.
+    await page.mouse.move(400, 300);
+    for (let i = 0; i < 6; i++) await page.mouse.wheel(0, -400);
+    await page.waitForTimeout(1200);
+
+    const zoomedBox = await page
+      .locator('[data-testid="spot-marker"]')
+      .first()
+      .evaluate(n => n.getBoundingClientRect().left);
+
+    await page.getByLabel('Forecast hour').fill('3');
+    await page.waitForTimeout(1800);
+
+    const afterBox = await page
+      .locator('[data-testid="spot-marker"]')
+      .first()
+      .evaluate(n => n.getBoundingClientRect().left);
+
+    // The marker stays roughly where it was; a refit would move it a long way.
+    expect(Math.abs(afterBox - zoomedBox)).toBeLessThan(60);
+  });
+
+  test('REGRESSION: the scoring indicator clears once scoring finishes', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+
+    await expect(page.getByTestId('scoring-indicator')).toHaveCount(0, { timeout: 30_000 });
+  });
+});
+
+test.describe('spec: drawer-navigation / Límites de la navegación', () => {
+  test('the active day tab always matches the day shown', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') }); // anchor 15:00
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    // Walk to a later day, then step back to an early hour that does not exist
+    // today, then ask for Today. The tab shown must be the tab that is active.
+    await page.getByTestId('drawer-day-tab').nth(3).click();
+    for (let i = 0; i < 6; i++) await page.getByTestId('hour-prev').click();
+
+    await page.getByTestId('drawer-day-tab').first().click();
+    await expect(page.getByTestId('drawer-day-tab').first()).toHaveAttribute('data-active', 'true');
+  });
+
+  test('the earliest reachable hour of today is the anchor hour', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await page.getByTestId('drawer-day-tab').nth(2).click();
+    await page.getByTestId('drawer-day-tab').first().click();
+
+    // Never earlier than 15:00: the hours before it are in the past.
+    const shown = await page.getByTestId('drawer-time').textContent();
+    expect(Number.parseInt(shown!.slice(0, 2), 10)).toBeGreaterThanOrEqual(15);
+  });
+});

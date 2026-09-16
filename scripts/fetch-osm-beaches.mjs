@@ -14,6 +14,7 @@ import { setTimeout as sleep } from 'node:timers/promises';
 
 const OUT_DIR = new URL('../src/data/', import.meta.url);
 const OUT_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
+const EMPTY_PATH = new URL('../src/data/osm-empty-regions.json', import.meta.url);
 
 const ENDPOINTS = [
   'https://overpass-api.de/api/interpreter',
@@ -174,6 +175,12 @@ async function main() {
   // Resume support: regions already in the file are skipped, so adding a
   // country does not mean re-querying everything Overpass already gave us.
   let beaches = [];
+  /**
+   * Regions with no matching features leave no trace in the raw file, so they
+   * are tracked separately: otherwise every resumed run re-queries County Meath
+   * and Louth, which have none, against a service already prone to 504s.
+   */
+  let emptyRegions = new Set();
   if (process.env.RESUME) {
     try {
       beaches = JSON.parse(await readFile(OUT_PATH, 'utf8'));
@@ -181,8 +188,13 @@ async function main() {
     } catch {
       log('Nothing to resume from; starting fresh');
     }
+    try {
+      emptyRegions = new Set(JSON.parse(await readFile(EMPTY_PATH, 'utf8')));
+    } catch {
+      // No record yet; empty regions will be discovered and written below.
+    }
   }
-  const alreadyFetched = new Set(beaches.map(b => b.community));
+  const alreadyFetched = new Set([...beaches.map(b => b.community), ...emptyRegions]);
 
   for (const { iso, name: community, country, level } of REGIONS) {
     if (alreadyFetched.has(community)) {
@@ -219,7 +231,11 @@ async function main() {
     }
 
     log(`${community}: ${kept} beaches (running total ${beaches.length})`);
-    if (kept === 0) log(`    WARNING: ${community} returned nothing -- check the ISO code`);
+    if (kept === 0) {
+      log(`    ${community} returned nothing -- recorded so RESUME skips it`);
+      emptyRegions.add(community);
+      await writeFile(EMPTY_PATH, JSON.stringify([...emptyRegions], null, 1) + '\n');
+    }
 
     // Save as we go: a failure late in the list must not discard the rest.
     await writeFile(OUT_PATH, JSON.stringify(beaches, null, 1) + '\n');

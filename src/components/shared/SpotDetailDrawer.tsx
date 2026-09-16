@@ -135,11 +135,25 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
     ? qualityStyle(forecastData.stars, { isDangerous, unrated: forecastData.unrated })
     : null;
 
-  /** Keeps the hour of day when jumping to another day, so comparison is fair. */
-  const goToDay = (startHour: number) => {
-    const target = instantAt(spotUtcOffsetSeconds, startHour);
-    const keepHour = instant.hour;
-    setCurrentHour(Math.min(MAX_FORECAST_HOURS, startHour + ((keepHour - target.hour + 24) % 24)));
+  /**
+   * Jumps to another day, keeping the hour of day where that hour exists.
+   *
+   * Comparing a spot across days is only meaningful at the same hour, but the
+   * hours before today's anchor are in the past and the horizon ends mid-day at
+   * the far end. Rather than wrap around -- which sent "Today" at 02:00 to
+   * *tomorrow* at 02:00, with no tab matching what was shown -- the offset is
+   * clamped to the requested day.
+   */
+  const goToDay = (day: { day: string; startHour: number }) => {
+    const first = instantAt(spotUtcOffsetSeconds, day.startHour);
+    const wanted = day.startHour + (instant.hour - first.hour);
+
+    // Never before the day's first available hour, never past the horizon, and
+    // never past the day's last hour.
+    const lastOfDay = day.startHour + (23 - first.hour);
+    const clamped = Math.max(day.startHour, Math.min(wanted, lastOfDay, MAX_FORECAST_HOURS));
+
+    setCurrentHour(clamped);
   };
 
   const stepHour = (delta: number) =>
@@ -221,7 +235,7 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
                 return (
                   <button
                     key={day.day}
-                    onClick={() => goToDay(day.startHour)}
+                    onClick={() => goToDay(day)}
                     data-testid="drawer-day-tab"
                     data-active={isActive}
                     className={`shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-colors ${
