@@ -206,7 +206,8 @@ export function MarineMap() {
       zoom: userLocation ? 8 : 5,
     });
 
-    map.addControl(new mapboxgl.NavigationControl());
+    // No NavigationControl: it renders top-right, directly under the legend,
+    // and the map is driven by pinch, scroll and double-tap anyway.
     mapRef.current = map;
     const markers = markersRef.current;
 

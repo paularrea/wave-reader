@@ -184,49 +184,51 @@ export default function WaveReaderPage() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <div
-                className="flex gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-                data-testid="day-strip"
-              >
-                {mounted &&
-                  daySegments.map(segment => {
-                    const isActive = segment.day === instant.day;
-                    return (
-                      <button
-                        key={segment.day}
-                        onClick={() => setCurrentHour(segment.startHour)}
-                        data-testid="day-chip"
-                        data-active={isActive}
-                        className={`shrink-0 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-tight transition-colors ${
-                          isActive
-                            ? 'bg-white text-zinc-950'
-                            : 'bg-zinc-900 text-zinc-500 hover:text-zinc-300'
-                        }`}
-                      >
-                        {segment.label}
-                      </button>
-                    );
-                  })}
-              </div>
+            {/* The day strip gets a full row of its own: sharing one with the
+                time label clipped the last chip against it. */}
+            <div
+              className="flex gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              data-testid="day-strip"
+            >
+              {mounted &&
+                daySegments.map(segment => {
+                  const isActive = segment.day === instant.day;
+                  return (
+                    <button
+                      key={segment.day}
+                      onClick={() => setCurrentHour(segment.startHour)}
+                      data-testid="day-chip"
+                      data-active={isActive}
+                      className={`shrink-0 px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-tight transition-colors ${
+                        isActive
+                          ? 'bg-white text-zinc-950'
+                          : 'bg-zinc-900 text-zinc-500 hover:text-zinc-300'
+                      }`}
+                    >
+                      {segment.label}
+                    </button>
+                  );
+                })}
+            </div>
+
+            <div className="flex items-center gap-3">
               <span
-                className="text-[13px] font-bold tabular-nums text-zinc-100 shrink-0 pl-3"
+                className="text-[12px] font-bold tabular-nums text-zinc-100 shrink-0 w-[92px]"
                 data-testid="forecast-time"
               >
                 {mounted ? `${currentDayLabel}, ${String(instant.hour).padStart(2, '0')}:00` : '—'}
               </span>
+              <input
+                type="range"
+                aria-label="Forecast hour"
+                min={0}
+                max={MAX_FORECAST_HOURS}
+                step={1}
+                value={currentHour}
+                className="flex-1 accent-blue-500 h-1 bg-zinc-800 rounded-full cursor-pointer"
+                onChange={e => setCurrentHour(Number.parseInt(e.target.value, 10))}
+              />
             </div>
-
-            <input
-              type="range"
-              aria-label="Forecast hour"
-              min={0}
-              max={MAX_FORECAST_HOURS}
-              step={1}
-              value={currentHour}
-              className="w-full accent-blue-500 h-1 bg-zinc-800 rounded-full cursor-pointer"
-              onChange={e => setCurrentHour(Number.parseInt(e.target.value, 10))}
-            />
           </div>
         </div>
       </div>

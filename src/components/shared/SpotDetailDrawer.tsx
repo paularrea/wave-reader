@@ -43,6 +43,7 @@ function Metric({
   fromDegrees,
   testId,
   subTestId,
+  badge,
 }: {
   label: string;
   value: string;
@@ -51,6 +52,8 @@ function Metric({
   fromDegrees?: number | null;
   testId?: string;
   subTestId?: string;
+  /** Sits with the reading it qualifies, not in a section of its own. */
+  badge?: React.ReactNode;
 }) {
   return (
     <div className="flex-1 min-w-0">
@@ -72,6 +75,7 @@ function Metric({
           </span>
         </div>
       )}
+      {badge && <div className="mt-2">{badge}</div>}
     </div>
   );
 }
@@ -306,20 +310,19 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
                 fromDegrees={forecast?.windDirection ?? null}
                 testId="wind-reading"
                 subTestId="wind-direction"
+                badge={
+                  badge ? (
+                    <span
+                      data-testid="wind-badge"
+                      className="text-[10px] px-2 py-0.5 rounded font-bold"
+                      style={{ backgroundColor: badge.background, color: badge.foreground }}
+                    >
+                      {badge.label}
+                    </span>
+                  ) : null
+                }
               />
             </div>
-
-            {badge && (
-              <div className="py-4 border-b border-zinc-900">
-                <span
-                  data-testid="wind-badge"
-                  className="text-[11px] px-2.5 py-1 rounded-md font-semibold"
-                  style={{ backgroundColor: badge.background, color: badge.foreground }}
-                >
-                  {badge.label}
-                </span>
-              </div>
-            )}
 
             <section className="py-4 border-b border-zinc-900" data-testid="tides-section">
               <h3 className="text-[10px] uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">
