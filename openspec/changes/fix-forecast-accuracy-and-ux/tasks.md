@@ -55,3 +55,29 @@
 - [x] 7.3 Corregir la race condition del evento `load` de Mapbox con el estilo cacheado
 - [x] 7.4 Linkear el proyecto a Vercel y publicar `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN` como Config
 - [x] 7.5 Desplegar a producción y validar con un smoke test contra la URL en vivo
+
+## 8. Catálogo nacional y segundo país
+
+- [x] 8.1 `scripts/fetch-osm-beaches.mjs`: descarga por código ISO 3166-2 de todas las regiones costeras, con detección de respuestas parciales de Overpass y reanudación
+- [x] 8.2 Ampliar la consulta a bahías y guijarro en Irlanda, donde OSM etiqueta pocas playas
+- [x] 8.3 `scripts/derive-spot-config.mjs`: sondeo de elevación en 12 rumbos para determinar exposición al mar abierto y orientación, y derivar de ahí la ventana de swell y el ángulo offshore
+- [ ] 8.4 Regenerar `src/data/spots.json` a escala nacional España + Irlanda
+- [ ] 8.5 Verificar contra los specs: `spot-catalog`
+
+## 9. Selección de país y región
+
+- [x] 9.1 Eliminar la opción "todas las regiones"
+- [x] 9.2 Derivar país y región del spot más cercano a la geolocalización, con Cataluña por defecto
+- [x] 9.3 Selector de país junto al de región
+- [x] 9.4 Encuadrar el mapa en la región al cambiarla
+- [x] 9.5 Cargar el forecast solo de los spots visibles, con concurrencia acotada
+- [x] 9.6 Verificar contra los specs: `region-selection`
+
+## 10. UI y detalle del spot
+
+- [x] 10.1 Escala de calidad en tres niveles por color, tamaño y realce, con leyenda
+- [x] 10.2 Ajustar la página a la altura visible real (dvh) sin scroll en móvil
+- [x] 10.3 Fijar la acción principal del detalle, antes inalcanzable bajo el pliegue
+- [x] 10.4 Navegación por días y horas dentro del detalle
+- [x] 10.5 Flechas de dirección para swell y viento, giradas al recíproco del rumbo
+- [x] 10.6 Verificar contra los specs: `condition-rating`, `drawer-navigation`, `responsive-layout`

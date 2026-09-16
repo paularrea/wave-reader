@@ -4,16 +4,31 @@ Traduce la puntuación numérica de condiciones a señales visuales coherentes e
 
 ## ADDED Requirements
 
-### Requirement: Escala de calidad monocroma amarilla
-La calidad de las condiciones SHALL representarse mediante una única tonalidad amarilla cuya opacidad crece con la puntuación. NO SHALL usarse verde en ninguna superficie que represente calidad de condiciones, incluidos los marcadores del mapa.
+### Requirement: Escala de calidad legible de un vistazo
+La calidad SHALL representarse en tres niveles claramente distinguibles: excelente (8 a 10), aceptable (5 a 7) y pobre (por debajo de 5). Los niveles SHALL diferenciarse por más de un canal visual a la vez — color, tamaño y realce — y NO SHALL distinguirse únicamente por la opacidad de un mismo color, que resulta indistinguible sobre un mapa oscuro. NO SHALL usarse verde en ninguna superficie que represente calidad.
 
-#### Scenario: Mayor puntuación, mayor opacidad
-- **WHEN** se comparan dos spots, uno con puntuación alta y otro con puntuación baja
-- **THEN** ambos se representan en la misma tonalidad amarilla y el de puntuación alta se muestra con mayor opacidad
+#### Scenario: Los tres niveles se distinguen por tamaño
+- **WHEN** se comparan marcadores de un spot excelente, uno aceptable y uno pobre
+- **THEN** el excelente se dibuja mayor que el aceptable y este mayor que el pobre, y los tres usan colores distintos
+
+#### Scenario: Solo lo excelente destaca
+- **WHEN** un spot puntúa 8 o más
+- **THEN** su marcador lleva realce luminoso y muestra su puntuación; los de puntuación inferior a 5 no muestran puntuación
 
 #### Scenario: Ausencia de verde
-- **WHEN** se inspecciona cualquier marcador del mapa o indicador de calidad del detalle
+- **WHEN** se inspecciona cualquier marcador o indicador de calidad
 - **THEN** ninguno usa un color verde
+
+#### Scenario: Sin datos no es mala puntuación
+- **WHEN** un spot no tiene forecast disponible
+- **THEN** su marcador se dibuja hueco y se distingue de un spot con mala puntuación
+
+### Requirement: Leyenda de la escala
+La interfaz SHALL mostrar una leyenda que explique qué representa cada nivel de la escala y su rango de puntuación.
+
+#### Scenario: Leyenda visible
+- **WHEN** el usuario abre la aplicación
+- **THEN** ve una leyenda con los niveles de calidad y el aviso de peligro
 
 ### Requirement: Badge de condición de viento legible
 La condición de viento SHALL mostrarse como un badge con una de estas categorías y colores: `On-shore` en gris, `Cross-shore` en verde claro, `Off-shore` en verde, `Glass` en verde. El badge SHALL acompañarse siempre de la fuerza y la dirección del viento.

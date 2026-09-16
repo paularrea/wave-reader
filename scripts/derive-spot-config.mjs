@@ -12,20 +12,40 @@
  *   node scripts/derive-spot-config.mjs
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { appendFileSync } from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
 
 const IN_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
 const OUT_PATH = new URL('../src/data/spots.json', import.meta.url);
 const REPORT_PATH = new URL('../src/data/spots.catalog-report.json', import.meta.url);
 
-const BEARINGS = 16;                   // 22.5 degrees apart
-const PROBE_KM = [1.5, 4, 9];          // near shore, mid, offshore
-const MIN_OPEN_ARC = 3;                // >= 67 degrees of open water
+const BEARINGS = 12;                   // 30 degrees apart
+/**
+ * One distance, not three.
+ *
+ * The elevation endpoint caps a request at 100 coordinates and Open-Meteo
+ * enforces per-minute and per-hour limits, so probe points are the budget. A
+ * single sample 6 km out already separates open ocean from the head of a ría:
+ * at 12 bearings a narrow inlet leaves at most one or two bearings clear, well
+ * under the contiguous arc a surfable spot needs. Dropping from 48 probes per
+ * beach to 12 cut the run from 2,435 requests to about 600.
+ */
+const PROBE_KM = [6];
+const MIN_OPEN_ARC = 3;                // >= 90 degrees of open water
 const SEA_LEVEL_M = 0;
-const BATCH_BEACHES = 2;               // 96 coords per request, under the 100 cap
-const REQUEST_PAUSE_MS = 250;
+const BATCH_BEACHES = 8;               // 96 coords per request, under the 100 cap
+const REQUEST_PAUSE_MS = 1200;         // stays clear of the minutely limit
 
 const KM_PER_DEG_LAT = 110.574;
+
+const LOG_PATH = process.env.CATALOG_LOG;
+
+/** Unbuffered, so a long run can be watched while it happens. */
+function log(line) {
+  const stamped = `[${new Date().toISOString().slice(11, 19)}] ${line}`;
+  console.log(stamped);
+  if (LOG_PATH) appendFileSync(LOG_PATH, stamped + '\n');
+}
 
 function destination(lat, lon, bearingDeg, km) {
   const dLat = km / KM_PER_DEG_LAT;
@@ -54,15 +74,34 @@ async function elevations(points, attempt = 0) {
     `https://api.open-meteo.com/v1/elevation?latitude=${points.map(p => p.lat.toFixed(4)).join(',')}` +
     `&longitude=${points.map(p => p.lon.toFixed(4)).join(',')}`;
 
-  const res = await fetch(url);
+  let res;
+  try {
+    res = await fetch(url, { signal: AbortSignal.timeout(60_000) });
+  } catch (err) {
+    if (attempt >= 8) throw new Error(`Elevation API unreachable: ${err.message}`);
+    await sleep(5000);
+    return elevations(points, attempt + 1);
+  }
+
   if (res.status === 429) {
-    if (attempt >= 6) throw new Error('Elevation API kept rate limiting');
-    await sleep(5000 * (attempt + 1));
+    if (attempt >= 10) throw new Error('Elevation API kept rate limiting');
+    // The limit is per minute, so waiting out the window beats hammering it.
+    const wait = Math.min(65_000, 15_000 * (attempt + 1));
+    log(`    rate limited, waiting ${Math.round(wait / 1000)}s`);
+    await sleep(wait);
     return elevations(points, attempt + 1);
   }
   if (!res.ok) throw new Error(`Elevation API ${res.status}`);
 
   const body = await res.json();
+  // A JSON error body still arrives with HTTP 200 on this endpoint.
+  if (body.error) {
+    if (attempt >= 10) throw new Error(`Elevation API: ${body.reason}`);
+    log(`    ${body.reason}, waiting 65s`);
+    await sleep(65_000);
+    return elevations(points, attempt + 1);
+  }
+
   return body.elevation ?? [];
 }
 
@@ -153,7 +192,7 @@ const IDEAL_HEIGHT = {
 
 async function main() {
   const beaches = JSON.parse(await readFile(IN_PATH, 'utf8'));
-  console.log(`Analysing ${beaches.length} beaches for ocean exposure...\n`);
+  log(`Analysing ${beaches.length} shore features for ocean exposure...`);
 
   const spots = [];
   const dropped = [];
@@ -168,6 +207,7 @@ async function main() {
     try {
       values = await elevations(points);
     } catch (err) {
+        log(`  elevation batch failed: ${err.message}`);
       batch.forEach(b => dropped.push({ name: b.name, community: b.community, reason: `elevation failed: ${err.message}` }));
       continue;
     }
@@ -197,6 +237,7 @@ async function main() {
         id,
         name: beach.name,
         community: beach.community,
+        country: beach.country ?? 'Spain',
         type: 'Beach',
         coordinates: { lat: beach.lat, lon: beach.lon },
         config: {
@@ -209,6 +250,7 @@ async function main() {
           source: 'openstreetmap-overpass',
           osmType: beach.osmType,
           osmId: beach.osmId,
+          feature: beach.feature ?? 'beach',
           facingDeg: result.facing,
           exposureDeg: result.exposureDeg,
           retrievedAt: new Date().toISOString().slice(0, 10),
@@ -216,8 +258,8 @@ async function main() {
       });
     });
 
-    if (i % 100 === 0) {
-      process.stdout.write(`  ${i}/${beaches.length} analysed, ${spots.length} surfable\n`);
+    if (i % 200 === 0) {
+      log(`  ${i}/${beaches.length} analysed, ${spots.length} surfable`);
     }
     await sleep(REQUEST_PAUSE_MS);
   }
@@ -231,11 +273,11 @@ async function main() {
   const byCommunity = {};
   spots.forEach(s => (byCommunity[s.community] = (byCommunity[s.community] ?? 0) + 1));
 
-  console.log(`\nSurfable: ${spots.length} / ${beaches.length}. Dropped ${dropped.length}.`);
-  console.log(JSON.stringify(byCommunity, null, 1));
+  log(`DONE. Surfable: ${spots.length} / ${beaches.length}. Dropped ${dropped.length}.`);
+  log(JSON.stringify(byCommunity));
 }
 
 main().catch(err => {
-  console.error(err);
+  log(`FATAL: ${err.message}`);
   process.exit(1);
 });

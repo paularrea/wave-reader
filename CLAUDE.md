@@ -46,9 +46,14 @@ Returns a 0-10 rating plus a safety verdict.
 
 ### Conditions (`src/services/conditions.ts`)
 Single source of truth for colour. Both the map markers and the drawer read from here.
-- **Quality**: one yellow hue (`250, 204, 21`), opacity ramping 0.15 -> 1.0 with the score.
-  **No green anywhere on the quality scale.** Dangerous spots override to red `#EF4444`;
-  unrated spots are grey.
+- **Quality tiers**: `epic` (8-10), `good` (5-7), `poor` (0-4), plus `danger` and
+  `unrated`. Each tier differs in **fill, size, ring and glow at once** — not opacity
+  alone. A single hue ramped only by alpha is unreadable on a dark map: 4 stars and 7
+  stars differ by a few percent of alpha against near-black, below what the eye resolves
+  at 20px. Epic and good print their score on the marker; poor stays a plain dot.
+  **No green anywhere on the quality scale.** Dangerous spots override to red `#EF4444`
+  whatever they score; unrated markers are hollow so "no forecast" never reads as
+  "bad forecast".
 - **Wind badges**: `Glass` < 5 km/h (green), `Off-shore` (green), `Cross-shore` (light green),
   `On-shore` (grey). Returns `null` when wind is unknown — a missing reading must never
   fall through to `Glass`.
@@ -70,20 +75,56 @@ accurate to about +/- 30 min — the UI says so.
 
 ## Spot catalogue
 
-`src/data/spots.json` is **generated, not hand-edited**:
+`src/data/spots.json` is **generated, not hand-edited**. Two stages, run manually; the
+output is committed so the Vercel build stays hermetic and offline.
 
 ```bash
-npm run build:catalog
+node scripts/fetch-osm-beaches.mjs      # stage 1: OSM -> osm-beaches.raw.json
+node scripts/derive-spot-config.mjs     # stage 2: exposure -> spots.json
 ```
 
-`scripts/build-spot-catalog.mjs` resolves each name in `src/data/spots.seed.json` against
-OpenStreetMap Nominatim, keeps only `natural/beach|bay|reef` features whose
-`address.state` matches the seed's community, and validates the coordinate sits in the
-coastal elevation band `0 < elevation < 100 m`. Anything unverifiable is dropped and
-recorded in `src/data/spots.catalog-report.json` with its reason.
+**Stage 1** pulls every named shore feature per region from Overpass, keyed by
+**ISO 3166-2 code, never by name**: OSM labels regions in the local language
+("Asturias / Asturies", "Euskadi", "Catalunya"), so a Spanish-name query silently
+returns zero for exactly those regions. Set `RESUME=1` to skip regions already in the
+raw file, and `CATALOG_LOG=<path>` to get unbuffered progress.
 
-Run it manually — Nominatim allows 1 req/s and forbids heavy automated use, so the build
-must never depend on it. The output is committed to keep Vercel builds hermetic.
+Overpass answers a timed-out query with **HTTP 200, partial elements and a `remark`**.
+The script treats that as a failure and retries — accepting it is how County Donegal
+went from 15 features to 2 between runs. Ireland is queried for bays and shingle as
+well as beaches, because OSM maps Irish beaches sparsely: County Clare, the home of
+Irish surfing, has four tagged `natural=beach`.
+
+**Stage 2** decides which features actually face open ocean. It probes elevation along
+12 bearings 6 km out; a bearing is open water when the sample is at or below sea level,
+and a spot needs a contiguous arc of at least 90° to qualify. That arc becomes the swell
+window, its bisector the facing direction, and the reciprocal the offshore wind angle.
+A cove inside a ría has water in front of it but no arc, which is what separates it from
+a surfable beach without anyone judging spots by hand.
+
+`idealHeight` is a generic per-level default: OSM knows nothing about how a given bank
+breaks, and inventing per-spot numbers would be fabricating precision.
+
+**Open-Meteo rate limits bite here.** The elevation endpoint is capped at 100
+coordinates per request and the account has per-minute *and per-hour* caps shared with
+the forecast API. The probe budget (12 bearings, one distance, 8 beaches per request) is
+sized around that. Exceeding the hourly cap locks the whole account out until the next
+hour, so do not raise the probe count without recalculating the request total.
+
+Anything unverifiable is dropped and recorded in `src/data/spots.catalog-report.json`
+with its reason.
+
+## Regions and loading
+
+There is no "all regions" view. It meant one forecast request per spot in the country
+and an undifferentiated cloud of dots. Country and region are always both set, derived
+from geolocation via the nearest catalogued spot (`src/services/regions.ts`) — nearest
+spot beats bounding boxes because regions interlock along the coast — and defaulting to
+Cataluña. A manual pick is never overwritten by a late geolocation callback.
+
+The map draws every marker in the region immediately as unrated, then scores **only the
+spots in the viewport**, six at a time, refreshing on pan and zoom. With a national
+catalogue, fetching per spot on load would fire thousands of upstream calls.
 
 ## Verification
 
