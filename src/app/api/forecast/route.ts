@@ -3,14 +3,6 @@ import { getMarineForecast, SpotForecast } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
 import spots from '@/data/spots.json';
 
-interface CacheEntry {
-  data: SpotForecast;
-  timestamp: number;
-}
-
-const forecastCache = new Map<string, CacheEntry>();
-const CACHE_TTL = 1000 * 60 * 60; // 1 hour, matching the forecast's own resolution
-
 const VALID_LEVELS: SkillLevel[] = ['beginner', 'intermediate', 'expert'];
 
 export async function GET(request: Request) {
@@ -32,24 +24,17 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Spot not found' }, { status: 404 });
   }
 
-  // The upstream payload does not depend on skill level, so the cache is keyed
-  // by spot and hour only; the rating is recomputed per request. Keying it by
-  // level as well would triple the upstream calls for identical data.
-  const cacheKey = `${spotId}-${hour}`;
-  const cached = forecastCache.get(cacheKey);
-
+  // Caching lives in the service layer, on Next's data cache: it survives cold
+  // starts, which a module-level Map does not. The rating is recomputed per
+  // request because it depends on the skill level while the upstream payload
+  // does not.
   let bundle: SpotForecast;
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    bundle = cached.data;
-  } else {
-    try {
-      bundle = await getMarineForecast(spot.coordinates.lat, spot.coordinates.lon, hour);
-      forecastCache.set(cacheKey, { data: bundle, timestamp: Date.now() });
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      console.error(`Forecast API error for spot ${spotId}:`, message);
-      return NextResponse.json({ error: `Failed to fetch forecast: ${message}` }, { status: 502 });
-    }
+  try {
+    bundle = await getMarineForecast(spot.coordinates.lat, spot.coordinates.lon, hour);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(`Forecast API error for spot ${spotId}:`, message);
+    return NextResponse.json({ error: `Failed to fetch forecast: ${message}` }, { status: 502 });
   }
 
   const rating = calculateStarRating(

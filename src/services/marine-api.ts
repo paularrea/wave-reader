@@ -76,8 +76,17 @@ interface HourlyResponse {
   timezone?: string;
 }
 
+/**
+ * Upstream responses are cached by Next's data cache rather than a module-level
+ * Map. On Vercel each serverless invocation may be a cold start, so an
+ * in-process cache is empty most of the time -- and with a national catalogue
+ * that means thousands of upstream calls against an account with per-minute and
+ * per-hour caps. The data cache survives invocations and is shared across them.
+ */
+const UPSTREAM_CACHE_SECONDS = 3600; // matches the forecast's hourly resolution
+
 async function getJson(url: string): Promise<HourlyResponse> {
-  const res = await fetch(url);
+  const res = await fetch(url, { next: { revalidate: UPSTREAM_CACHE_SECONDS } });
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`${new URL(url).host} responded ${res.status}: ${body.slice(0, 200)}`);
