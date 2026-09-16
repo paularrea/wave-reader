@@ -1,0 +1,2420 @@
+[
+  {
+    "id": "pantin-beach",
+    "name": "Pantin",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    },
+    "coordinates": {
+      "lat": 43.64577,
+      "lon": -8.1026
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 274119087,
+      "displayName": "Praia de Figaredo, A Gabeira, Pantín, Valdoviño, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 38,
+      "query": "Playa de Pantin, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "valdovino-beach",
+    "name": "Valdoviño",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful waves, prone to rips."
+    },
+    "coordinates": {
+      "lat": 43.5821,
+      "lon": -8.21681
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 26721234,
+      "displayName": "Praia de Campelo, O Feal, Meirás, Valdoviño, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 72,
+      "query": "Playa de Valdoviño, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "doninos-beach",
+    "name": "Playa de Doniños",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4.5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent spot near Ferrol."
+    },
+    "coordinates": {
+      "lat": 43.49527,
+      "lon": -8.31932
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 646340327,
+      "displayName": "Praia de Doniños, Vilar, Doniños, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 9,
+      "query": "Playa de Doniños, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "razo-beach",
+    "name": "Playa de Razo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    },
+    "coordinates": {
+      "lat": 43.29041,
+      "lon": -8.70621
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 39473257,
+      "displayName": "Praia de Razo, Arnados, Razo, Carballo, Bergantiños, A Coruña, Galicia, 15107, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 19,
+      "query": "Playa de Razo, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "nemina-river",
+    "name": "Nemiña",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 50,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Famous for a long left."
+    },
+    "coordinates": {
+      "lat": 43.00717,
+      "lon": -9.25992
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 513685117,
+      "displayName": "Praia de Nemiña, Talón, Nemiña, Muxía, Fisterra, A Coruña, Galicia, 15125, España",
+      "featureType": "natural/beach",
+      "elevationM": 3,
+      "nearbyLandElevationM": 40,
+      "query": "Praia de Nemiña, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "carnota-beach",
+    "name": "Playa de Carnota",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.8,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful and remote."
+    },
+    "coordinates": {
+      "lat": 42.88196,
+      "lon": -9.14165
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 444412547,
+      "displayName": "Praia de Quilmas, O Porto de Quilmas, O Pindo, Carnota, Muros, A Coruña, Galicia, 15295, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 24,
+      "query": "Playa de Carnota, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "lanzada-beach",
+    "name": "Playa de Lanzada",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Excellent for beginners."
+    },
+    "coordinates": {
+      "lat": 42.44693,
+      "lon": -8.87597
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 173598722,
+      "displayName": "Praia da Lanzada, San Vicente do Grove, Noalla, O Grove, O Salnés, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 6,
+      "query": "Playa de Lanzada, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "el-pico-patos",
+    "name": "Playa de Patos (El Pico)",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    },
+    "coordinates": {
+      "lat": 42.15533,
+      "lon": -8.82499
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 37909121,
+      "displayName": "Praia de Patos, Patos, Panxón, Nigrán, Vigo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 10,
+      "query": "Playa de Patos, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "ponzos-beach",
+    "name": "Ponzos",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Exposed beach break."
+    },
+    "coordinates": {
+      "lat": 43.55654,
+      "lon": -8.26264
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 652251567,
+      "displayName": "Praia de Ponzos, Covarradeiras, Covas, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 41,
+      "query": "Ponzos, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "espasante-beach",
+    "name": "Playa de Espasante",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 300,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Sheltered beach break."
+    },
+    "coordinates": {
+      "lat": 43.72201,
+      "lon": -7.80285
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 90818963,
+      "displayName": "Praia de Santo Antón, O Porto de Espasante, Espasante, Ortigueira, Ortegal, A Coruña, Galicia, 15330, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 30,
+      "query": "Playa de Espasante, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "louro-beach",
+    "name": "Louro (Playa Area Maior)",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 200,
+        "maxAngle": 260
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "intermediate": {
+          "min": 0.8,
+          "max": 1.5
+        },
+        "expert": {
+          "min": 1.5,
+          "max": 3
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Summer",
+        "Autumn"
+      ],
+      "description": "Sheltered from NW storms."
+    },
+    "coordinates": {
+      "lat": 42.76004,
+      "lon": -9.06369
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 290004930,
+      "displayName": "Praia da Vouga, O Espadanal, Louro, Muros, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 25,
+      "nearbyLandElevationM": 118,
+      "query": "Praia Louro, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "pedra-do-sal",
+    "name": "Pedra do Sal",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Solid North coast break."
+    },
+    "coordinates": {
+      "lat": 43.29621,
+      "lon": -8.68423
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 303157404,
+      "displayName": "Praia de Baldaio - As Saíñas, A Pedra do Sal, Lema, Carballo, Bergantiños, A Coruña, Galicia, 15105, España",
+      "featureType": "natural/beach",
+      "elevationM": 3,
+      "nearbyLandElevationM": 3,
+      "query": "Playa de Pedra do Sal, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "aguieira-reef",
+    "name": "Playa Aguieira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Reef",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Technical reef break."
+    },
+    "coordinates": {
+      "lat": 42.74215,
+      "lon": -8.96467
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 294809917,
+      "displayName": "Praia da Aguieira, Cadeiras, Nebra, O Porto do Son, Noia, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 9,
+      "query": "Playa Aguieira, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "barona-beach",
+    "name": "Playa de Barona",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    },
+    "coordinates": {
+      "lat": 42.69076,
+      "lon": -9.02798
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 199785544,
+      "displayName": "Praia de Area Longa, O Castro, Baroña, O Porto do Son, Noia, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 24,
+      "query": "Playa de Barona, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "barra-beach",
+    "name": "Playa de Barra",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable beach break."
+    },
+    "coordinates": {
+      "lat": 42.26104,
+      "lon": -8.85315
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 75688877,
+      "displayName": "Praia de Barra, O Hío, Cangas de Morrazo, Morrazo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 5,
+      "nearbyLandElevationM": 10,
+      "query": "Playa de Barra, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "barranan-beach",
+    "name": "Playa de Barranan",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    },
+    "coordinates": {
+      "lat": 43.31089,
+      "lon": -8.55457
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 88551197,
+      "displayName": "Praia de Barrañán, A Ponte, Barrañán, Arteixo, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 6,
+      "query": "Playa de Barranan, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "bastiagueiro-point",
+    "name": "Playa de Bastiagueiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Point",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Clean point break."
+    },
+    "coordinates": {
+      "lat": 43.34364,
+      "lon": -8.35577
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 337240098,
+      "displayName": "Praia de Bastiagueiriño, Bastiagueiro, Liáns, Oleiros, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 33,
+      "query": "Platja de Bastiagueiro, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "caion-beach",
+    "name": "Playa de Caion",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent and powerful."
+    },
+    "coordinates": {
+      "lat": 43.3164,
+      "lon": -8.60912
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 88551184,
+      "displayName": "Praia de Salseiras, Caión, A Laracha, Bergantiños, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 22,
+      "query": "Playa de Caion, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "campelo-beach",
+    "name": "Playa de Campelo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    },
+    "coordinates": {
+      "lat": 43.75916,
+      "lon": -7.68434
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 274176116,
+      "displayName": "Praia de Campelo, Campelo, Bares, Mañón, Ortegal, A Coruña, Galicia, 15337, España",
+      "featureType": "natural/beach",
+      "elevationM": 43,
+      "nearbyLandElevationM": 115,
+      "query": "Playa de Campelo, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "carino-beach",
+    "name": "Playa de Carino",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Clean North coast wave."
+    },
+    "coordinates": {
+      "lat": 43.73238,
+      "lon": -7.87179
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 279316608,
+      "displayName": "Area da Basteira, Cariño de Arriba, Cariño, Ortegal, A Coruña, Galicia, 15360, España",
+      "featureType": "natural/beach",
+      "elevationM": 4,
+      "nearbyLandElevationM": 16,
+      "query": "Playa de Carino, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "castro-beach",
+    "name": "Playa de Castro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    },
+    "coordinates": {
+      "lat": 43.75191,
+      "lon": -7.69036
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 1193580453,
+      "displayName": "Praia do Castro, O Espiñeiral, Bares, O Porto do Barqueiro, Mañón, Ortegal, A Coruña, Galicia, 15337, España",
+      "featureType": "natural/beach",
+      "elevationM": 26,
+      "nearbyLandElevationM": 43,
+      "query": "Castro hondartza, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "esteiro-beach",
+    "name": "Playa de Esteiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local beach break."
+    },
+    "coordinates": {
+      "lat": 42.31926,
+      "lon": -8.65641
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 428480745,
+      "displayName": "O Areo do Esteiro, Riomaior, Santa Cristina de Cobres, Vilaboa, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 10,
+      "nearbyLandElevationM": 27,
+      "query": "Esteiro hondartza, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "fonforron-beach",
+    "name": "Playa de Fonforron",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Mix of sand and reef."
+    },
+    "coordinates": {
+      "lat": 42.71472,
+      "lon": -9.0094
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 452744807,
+      "displayName": "Praia de Fonforrón, Xío, Noal, O Porto do Son, Noia, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 53,
+      "query": "Playa de Fonforron, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "ladeira-beach",
+    "name": "Playa de Ladeira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful peaks."
+    },
+    "coordinates": {
+      "lat": 42.11611,
+      "lon": -8.82467
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 39301011,
+      "displayName": "Praia da Ladeira, As Areas, Santa Cristina da Ramallosa, Baiona, Vigo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 9,
+      "query": "Playa de Ladeira, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "larino-beach",
+    "name": "Playa de Larino",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent North coast break."
+    },
+    "coordinates": {
+      "lat": 42.78168,
+      "lon": -9.1272
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 452769199,
+      "displayName": "Praia das Botes, Lariño, Carnota, Muros, A Coruña, Galicia, 15292, España",
+      "featureType": "natural/beach",
+      "elevationM": 3,
+      "nearbyLandElevationM": 25,
+      "query": "Playa de Larino, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "madorra-beach",
+    "name": "Playa de Madorra",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    },
+    "coordinates": {
+      "lat": 42.14584,
+      "lon": -8.82615
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 203933213,
+      "displayName": "Praia da Madorra, A Madorra, Panxón, Nigrán, Vigo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 32,
+      "query": "Praia de Madorra, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "malpica-beach",
+    "name": "Playa de Malpica",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    },
+    "coordinates": {
+      "lat": 43.31483,
+      "lon": -8.85727
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 681328079,
+      "displayName": "Praia de Esteiro, Esteiro, Barizo, Malpica, Malpica de Bergantiños, Bergantiños, A Coruña, Galicia, 15113, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 16,
+      "query": "Playa de Malpica, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "melide-beach",
+    "name": "Playa de Melide",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    },
+    "coordinates": {
+      "lat": 42.25136,
+      "lon": -8.8665
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 75688875,
+      "displayName": "Praia de Melide, O Hío, Cangas de Morrazo, Morrazo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 4,
+      "nearbyLandElevationM": 37,
+      "query": "Playa de Melide, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "montalbo-beach",
+    "name": "Playa de Montalbo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    },
+    "coordinates": {
+      "lat": 42.39643,
+      "lon": -8.84825
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 173032642,
+      "displayName": "Praia de Montalbo, Montalbo, Arra, Sanxenxo, O Salnés, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 20,
+      "query": "Playa de Montalbo, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "nerga-beach",
+    "name": "Playa de Nerga",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    },
+    "coordinates": {
+      "lat": 42.25744,
+      "lon": -8.83641
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 129872640,
+      "displayName": "Praia da Folla de Nerga, Nerga, O Hío, Cangas de Morrazo, Morrazo, Pontevedra, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 20,
+      "query": "Playa de Nerga, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "rio-sieira-beach",
+    "name": "Playa de Rio Sieira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    },
+    "coordinates": {
+      "lat": 42.64845,
+      "lon": -9.03643
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 437293643,
+      "displayName": "Praia do Río Sieira, A Coviña, Xuño, O Porto do Son, Noia, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 5,
+      "query": "Praia de Rio Sieira, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "sabon-beach",
+    "name": "Playa de Sabon",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    },
+    "coordinates": {
+      "lat": 43.32969,
+      "lon": -8.50643
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "node",
+      "osmId": 14169909709,
+      "displayName": "O Areal de Sabón, Sabón, Oseiro, Arteixo, A Coruña, Galicia, 15142, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 16,
+      "query": "Playa de Sabon, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "san-miguel-beach",
+    "name": "Playa de San Miguel de Reinante",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    },
+    "coordinates": {
+      "lat": 43.56146,
+      "lon": -7.18261
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 164952300,
+      "displayName": "Praia da Pasada, O Feal da Paula, San Miguel de Reinante, Barreiros, A Mariña Oriental, Lugo, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 13,
+      "query": "Playa de San Miguel de Reinante, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "san-roman-beach",
+    "name": "Playa de San Roman",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    },
+    "coordinates": {
+      "lat": 43.71886,
+      "lon": -7.62505
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 171788541,
+      "displayName": "Praia de San Román, Pontellas, San Román de Vale, O Vicedo, A Mariña Occidental, Lugo, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 15,
+      "query": "Playa de San Roman, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "san-xurxo-beach",
+    "name": "Playa de San Xurxo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Mix of beach and point break."
+    },
+    "coordinates": {
+      "lat": 43.52736,
+      "lon": -8.30088
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 646340311,
+      "displayName": "Praia de San Xurxo, Vila da Praia, San Xurxo da Mariña, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 4,
+      "query": "Playa de San Xurxo, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "seaia-beach",
+    "name": "Playa de Seaia",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    },
+    "coordinates": {
+      "lat": 43.32827,
+      "lon": -8.82803
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 40370258,
+      "displayName": "Praia de Seaia, As Pedreiras, Malpica de Bergantiños, Malpica, Malpica de Bergantiños, Bergantiños, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 53,
+      "query": "Playa de Seaia, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "soesto-beach",
+    "name": "Playa de Soesto",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    },
+    "coordinates": {
+      "lat": 43.20841,
+      "lon": -9.03337
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 369216247,
+      "displayName": "Praia de Arnado, Soesto, Laxe, Bergantiños, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 11,
+      "nearbyLandElevationM": 49,
+      "query": "Platja de Soesto, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "traba-beach",
+    "name": "Playa de Traba",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local beach break."
+    },
+    "coordinates": {
+      "lat": 43.19061,
+      "lon": -9.04502
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 369217071,
+      "displayName": "Praia de Traba, Mórdomo, Traba, Laxe, Bergantiños, A Coruña, Galicia, 15119, España",
+      "featureType": "natural/beach",
+      "elevationM": 4,
+      "nearbyLandElevationM": 4,
+      "query": "Playa de Traba, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "carreiro-beach",
+    "name": "Playa do Carreiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Sheltered rivermouth beach."
+    },
+    "coordinates": {
+      "lat": 43.31679,
+      "lon": -8.60781
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "node",
+      "osmId": 6165774499,
+      "displayName": "Praia do Carreiro, Caión, A Laracha, Bergantiños, A Coruña, Galicia, 15105, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 21,
+      "query": "Playa do Carreiro, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "orzan-beach",
+    "name": "Playa do Orzan",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Urban beach break."
+    },
+    "coordinates": {
+      "lat": 43.37204,
+      "lon": -8.40443
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 39472001,
+      "displayName": "Praia do Orzán, O Orzán, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 12,
+      "query": "Playa do Orzan, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "rapadoira-beach",
+    "name": "Playa Rapadoira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Consistent local break."
+    },
+    "coordinates": {
+      "lat": 43.57191,
+      "lon": -7.24804
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 131930910,
+      "displayName": "Praia da Rapadoira, Fondós, Foz, A Mariña Central, Lugo, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 19,
+      "query": "Playa Rapadoira, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "santa-comba-beach",
+    "name": "Santa Comba",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent Galicia break."
+    },
+    "coordinates": {
+      "lat": 43.55618,
+      "lon": -8.29152
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 26753688,
+      "displayName": "Praia de Santa Comba, As Pozas, Covas, Ferrol, A Coruña, Galicia, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 15,
+      "query": "Playa de Santa Comba, Galicia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "zarautz-beach",
+    "name": "Zarautz",
+    "community": "País Vasco",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Heart of Basque surf culture."
+    },
+    "coordinates": {
+      "lat": 43.28918,
+      "lon": -2.15295
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 440740520,
+      "displayName": "Inurritzako hondartza eta biotopoa, Zarautz, Gipuzkoa, Euskadi, 20800, España",
+      "featureType": "natural/beach",
+      "elevationM": 3,
+      "nearbyLandElevationM": 56,
+      "query": "Playa de Zarautz, País Vasco, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "el-palmar-beach",
+    "name": "El Palmar",
+    "community": "Andalucia",
+    "region": "South",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 320
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 60,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent and mellow."
+    },
+    "coordinates": {
+      "lat": 36.2253,
+      "lon": -6.06616
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 239298194,
+      "displayName": "Playa de El Palmar, Vejer de la Frontera, La Janda, Cádiz, Andalucía, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 8,
+      "query": "Playa de El Palmar, Andalucia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "barbate-point",
+    "name": "Barbate",
+    "community": "Andalucia",
+    "region": "South",
+    "type": "Point",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 70,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful right-hand point."
+    },
+    "coordinates": {
+      "lat": 36.18519,
+      "lon": -5.93889
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 186218106,
+      "displayName": "Playa de la Hierbabuena, Barbate, La Janda, Cádiz, Andalucía, España",
+      "featureType": "natural/beach",
+      "elevationM": 3,
+      "nearbyLandElevationM": 24,
+      "query": "Playa de Barbate, Andalucia, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "cala-mesquida-beach",
+    "name": "Cala Mesquida",
+    "community": "Baleares",
+    "region": "Balearics",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 330,
+        "maxAngle": 30
+      },
+      "offshoreWindAngle": 130,
+      "windTolerance": 50,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Spring"
+      ],
+      "description": "Most consistent in Mallorca."
+    },
+    "coordinates": {
+      "lat": 39.74442,
+      "lon": 3.43322
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "way",
+      "osmId": 583995195,
+      "displayName": "Cala Mesquida, Capdepera, Llevant, Illes Balears, España",
+      "featureType": "natural/beach",
+      "elevationM": 1,
+      "nearbyLandElevationM": 30,
+      "query": "Cala Mesquida, Baleares, España",
+      "retrievedAt": "2026-09-16"
+    }
+  },
+  {
+    "id": "cavalleria-right",
+    "name": "Platja de Cavalleria",
+    "community": "Baleares",
+    "region": "Balearics",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 310,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "High performance right in Menorca."
+    },
+    "coordinates": {
+      "lat": 40.05974,
+      "lon": 4.0768
+    },
+    "provenance": {
+      "source": "openstreetmap-nominatim",
+      "osmType": "relation",
+      "osmId": 1590080,
+      "displayName": "Platja de Cavalleria, es Mercadal, Menorca, Illes Balears, España",
+      "featureType": "natural/beach",
+      "elevationM": 0,
+      "nearbyLandElevationM": 29,
+      "query": "Platja de Cavalleria, Baleares, España",
+      "retrievedAt": "2026-09-16"
+    }
+  }
+]

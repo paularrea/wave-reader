@@ -1,0 +1,2225 @@
+[
+  {
+    "id": "pantin-beach",
+    "name": "Pantin",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    }
+  },
+  {
+    "id": "valdovino-beach",
+    "name": "Valdoviño",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful waves, prone to rips."
+    }
+  },
+  {
+    "id": "doninos-beach",
+    "name": "Playa de Doniños",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4.5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent spot near Ferrol."
+    }
+  },
+  {
+    "id": "razo-beach",
+    "name": "Playa de Razo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    }
+  },
+  {
+    "id": "nemina-river",
+    "name": "Nemiña",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 50,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Famous for a long left."
+    }
+  },
+  {
+    "id": "carnota-beach",
+    "name": "Playa de Carnota",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.8,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful and remote."
+    }
+  },
+  {
+    "id": "lanzada-beach",
+    "name": "Playa de Lanzada",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Excellent for beginners."
+    }
+  },
+  {
+    "id": "el-pico-patos",
+    "name": "Playa de Patos (El Pico)",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    }
+  },
+  {
+    "id": "ponzos-beach",
+    "name": "Ponzos",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Exposed beach break."
+    }
+  },
+  {
+    "id": "espasante-beach",
+    "name": "Playa de Espasante",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 300,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Sheltered beach break."
+    }
+  },
+  {
+    "id": "louro-beach",
+    "name": "Louro (Playa Area Maior)",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 200,
+        "maxAngle": 260
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 0.8
+        },
+        "intermediate": {
+          "min": 0.8,
+          "max": 1.5
+        },
+        "expert": {
+          "min": 1.5,
+          "max": 3
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Summer",
+        "Autumn"
+      ],
+      "description": "Sheltered from NW storms."
+    }
+  },
+  {
+    "id": "matadeiro-beach",
+    "name": "Matadeiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach and reef sections."
+    }
+  },
+  {
+    "id": "pedra-do-sal",
+    "name": "Pedra do Sal",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Solid North coast break."
+    }
+  },
+  {
+    "id": "aguieira-reef",
+    "name": "Playa Aguieira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Reef",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Technical reef break."
+    }
+  },
+  {
+    "id": "marosa-beach",
+    "name": "Playa da A Marosa",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    }
+  },
+  {
+    "id": "baldayo-laguna",
+    "name": "Playa de Baldayo - La Laguna",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "baleo-sandbar",
+    "name": "Playa de Baleo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Sandbar break with friendly waves."
+    }
+  },
+  {
+    "id": "barona-beach",
+    "name": "Playa de Barona",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    }
+  },
+  {
+    "id": "barra-beach",
+    "name": "Playa de Barra",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable beach break."
+    }
+  },
+  {
+    "id": "barranan-beach",
+    "name": "Playa de Barranan",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "bastiagueiro-point",
+    "name": "Playa de Bastiagueiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Point",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Clean point break."
+    }
+  },
+  {
+    "id": "caion-beach",
+    "name": "Playa de Caion",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent and powerful."
+    }
+  },
+  {
+    "id": "campelo-beach",
+    "name": "Playa de Campelo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    }
+  },
+  {
+    "id": "carino-beach",
+    "name": "Playa de Carino",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Clean North coast wave."
+    }
+  },
+  {
+    "id": "castro-beach",
+    "name": "Playa de Castro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "esteiro-beach",
+    "name": "Playa de Esteiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local beach break."
+    }
+  },
+  {
+    "id": "fonforron-beach",
+    "name": "Playa de Fonforron",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Mix of sand and reef."
+    }
+  },
+  {
+    "id": "ladeira-beach",
+    "name": "Playa de Ladeira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful peaks."
+    }
+  },
+  {
+    "id": "larino-beach",
+    "name": "Playa de Larino",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent North coast break."
+    }
+  },
+  {
+    "id": "madorra-beach",
+    "name": "Playa de Madorra",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "malpica-beach",
+    "name": "Playa de Malpica",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "melide-beach",
+    "name": "Playa de Melide",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    }
+  },
+  {
+    "id": "montalbo-beach",
+    "name": "Playa de Montalbo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent beach break."
+    }
+  },
+  {
+    "id": "nerga-beach",
+    "name": "Playa de Nerga",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "rio-sieira-beach",
+    "name": "Playa de Rio Sieira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "sabon-beach",
+    "name": "Playa de Sabon",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "san-cibrao-beach",
+    "name": "Playa de San Cibrao",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local beach break."
+    }
+  },
+  {
+    "id": "san-miguel-beach",
+    "name": "Playa de San Miguel de Reinante",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    }
+  },
+  {
+    "id": "san-roman-beach",
+    "name": "Playa de San Roman",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "san-xurxo-beach",
+    "name": "Playa de San Xurxo",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Mix of beach and point break."
+    }
+  },
+  {
+    "id": "sarrigal-beach",
+    "name": "Playa de Sarrigal",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "seaia-beach",
+    "name": "Playa de Seaia",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Reliable North coast break."
+    }
+  },
+  {
+    "id": "soesto-beach",
+    "name": "Playa de Soesto",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Gentle beach break."
+    }
+  },
+  {
+    "id": "traba-beach",
+    "name": "Playa de Traba",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local beach break."
+    }
+  },
+  {
+    "id": "carreiro-beach",
+    "name": "Playa do Carreiro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Sheltered rivermouth beach."
+    }
+  },
+  {
+    "id": "orzan-beach",
+    "name": "Playa do Orzan",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Urban beach break."
+    }
+  },
+  {
+    "id": "rostro-beach",
+    "name": "Playa do Rostro",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Playful beach break."
+    }
+  },
+  {
+    "id": "rapadoira-beach",
+    "name": "Playa Rapadoira",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 290,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Autumn"
+      ],
+      "description": "Consistent local break."
+    }
+  },
+  {
+    "id": "ria-foz-river",
+    "name": "Ria Foz",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Sheltered river mouth."
+    }
+  },
+  {
+    "id": "santa-comba-beach",
+    "name": "Santa Comba",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 270,
+        "maxAngle": 330
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Consistent Galicia break."
+    }
+  },
+  {
+    "id": "santa-maria-oia",
+    "name": "Santa Maria de Oia",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Reef",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Technical reef break."
+    }
+  },
+  {
+    "id": "serans-beach",
+    "name": "Serans",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 310
+      },
+      "offshoreWindAngle": 100,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Mix of sand and rock."
+    }
+  },
+  {
+    "id": "villarrube-beach",
+    "name": "Villarrube",
+    "community": "Galicia",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Local Galicia break."
+    }
+  },
+  {
+    "id": "mundaka-point",
+    "name": "Mundaka",
+    "community": "País Vasco",
+    "region": "North",
+    "type": "Point",
+    "config": {
+      "swellWindow": {
+        "minAngle": 310,
+        "maxAngle": 360
+      },
+      "offshoreWindAngle": 110,
+      "windTolerance": 20,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter",
+        "Spring"
+      ],
+      "description": "World-famous long left."
+    }
+  },
+  {
+    "id": "zarautz-beach",
+    "name": "Zarautz",
+    "community": "País Vasco",
+    "region": "North",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 280,
+        "maxAngle": 340
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Heart of Basque surf culture."
+    }
+  },
+  {
+    "id": "el-palmar-beach",
+    "name": "El Palmar",
+    "community": "Andalucia",
+    "region": "South",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 260,
+        "maxAngle": 320
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 60,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Autumn",
+        "Winter"
+      ],
+      "description": "Consistent and mellow."
+    }
+  },
+  {
+    "id": "barbate-point",
+    "name": "Barbate",
+    "community": "Andalucia",
+    "region": "South",
+    "type": "Point",
+    "config": {
+      "swellWindow": {
+        "minAngle": 250,
+        "maxAngle": 300
+      },
+      "offshoreWindAngle": 70,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "Powerful right-hand point."
+    }
+  },
+  {
+    "id": "famara-beach",
+    "name": "Famara",
+    "community": "Canarias",
+    "region": "Canaries",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 300,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 140,
+      "windTolerance": 40,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1.2,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2.5,
+          "max": 5
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Easy",
+      "bestSeason": [
+        "Year-round"
+      ],
+      "description": "Gold standard for beginners."
+    }
+  },
+  {
+    "id": "el-quemao-reef",
+    "name": "El Quemao",
+    "community": "Canarias",
+    "region": "Canaries",
+    "type": "Reef",
+    "config": {
+      "swellWindow": {
+        "minAngle": 310,
+        "maxAngle": 360
+      },
+      "offshoreWindAngle": 160,
+      "windTolerance": 20,
+      "idealHeight": {
+        "beginner": {
+          "min": 2,
+          "max": 3
+        },
+        "intermediate": {
+          "min": 3,
+          "max": 5
+        },
+        "expert": {
+          "min": 5,
+          "max": 10
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "The Canary Pipeline."
+    }
+  },
+  {
+    "id": "cala-mesquida-beach",
+    "name": "Cala Mesquida",
+    "community": "Baleares",
+    "region": "Balearics",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 330,
+        "maxAngle": 30
+      },
+      "offshoreWindAngle": 130,
+      "windTolerance": 50,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.5,
+          "max": 1
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2
+        },
+        "expert": {
+          "min": 2,
+          "max": 4
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Medium",
+      "bestSeason": [
+        "Winter",
+        "Spring"
+      ],
+      "description": "Most consistent in Mallorca."
+    }
+  },
+  {
+    "id": "cavalleria-right",
+    "name": "Platja de Cavalleria",
+    "community": "Baleares",
+    "region": "Balearics",
+    "type": "Beach",
+    "config": {
+      "swellWindow": {
+        "minAngle": 310,
+        "maxAngle": 350
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 30,
+      "idealHeight": {
+        "beginner": {
+          "min": 1,
+          "max": 1.5
+        },
+        "intermediate": {
+          "min": 1.5,
+          "max": 3
+        },
+        "expert": {
+          "min": 3,
+          "max": 6
+        }
+      }
+    },
+    "metadata": {
+      "difficulty": "Hard",
+      "bestSeason": [
+        "Winter"
+      ],
+      "description": "High performance right in Menorca."
+    }
+  }
+]
