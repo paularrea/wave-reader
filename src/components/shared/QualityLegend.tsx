@@ -11,7 +11,7 @@ export function QualityLegend() {
   return (
     <div
       data-testid="quality-legend"
-      className="absolute top-6 right-4 z-10 bg-zinc-900/85 backdrop-blur-md border border-zinc-800 rounded-2xl px-3 py-2.5 shadow-xl"
+      className="bg-zinc-950/90 backdrop-blur-xl border border-zinc-800 rounded-xl px-2.5 py-2 shadow-xl"
     >
       <h2 className="text-[9px] uppercase tracking-widest text-zinc-500 font-bold mb-2">
         Conditions

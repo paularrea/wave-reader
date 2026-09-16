@@ -116,7 +116,8 @@ test.describe('map and spot detail', () => {
 
     await expect(page.getByTestId('swell-height')).toHaveText('1.5m');
     await expect(page.getByTestId('swell-direction')).toHaveText('NW');
-    await expect(page.getByTestId('wind-reading')).toHaveText('18 km/h SE');
+    await expect(page.getByTestId('wind-reading')).toHaveText('18 km/h');
+    await expect(page.getByTestId('wind-direction')).toHaveText('SE');
   });
 
   test('spec: marine-data — wind is km/h and never the raw knots conversion', async ({ page }) => {
@@ -379,5 +380,159 @@ test.describe('spec: region-selection', () => {
     await page.getByTestId('region-select').selectOption('Galicia');
     await page.waitForTimeout(2000);
     await expect(page.getByTestId('region-select')).toHaveValue('Galicia');
+  });
+});
+
+test.describe('spec: drawer-ux', () => {
+  test('the Go to Spot action is reachable without scrolling the drawer', async ({ page }) => {
+    // It used to sit at the end of the scroll area, below the fold and in
+    // practice unreachable on a phone.
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const action = page.getByTestId('go-to-spot');
+    await expect(action).toBeInViewport();
+    await expect(action).toHaveAttribute('href', /google\.com\/maps/);
+  });
+
+  test('the forecast can be moved a day at a time without leaving the drawer', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const tabs = page.getByTestId('drawer-day-tab');
+    await expect(tabs.first()).toHaveAttribute('data-active', 'true');
+
+    await tabs.nth(1).click();
+    await expect(page.getByTestId('spot-drawer')).toBeVisible();
+    await expect(tabs.nth(1)).toHaveAttribute('data-active', 'true');
+  });
+
+  test('the hour can be stepped inside the drawer', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('drawer-time')).toHaveText('15:00');
+    await page.getByTestId('hour-next').click();
+    await expect(page.getByTestId('drawer-time')).toHaveText('16:00');
+    await page.getByTestId('hour-prev').click();
+    await expect(page.getByTestId('drawer-time')).toHaveText('15:00');
+  });
+
+  test('jumping to another day keeps the hour of day', async ({ page }) => {
+    await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await page.getByTestId('hour-next').click();
+    await expect(page.getByTestId('drawer-time')).toHaveText('16:00');
+
+    await page.getByTestId('drawer-day-tab').nth(2).click();
+    // Comparing a spot across days is only meaningful at the same hour.
+    await expect(page.getByTestId('drawer-time')).toHaveText('16:00');
+  });
+
+  test('swell and wind carry a direction arrow pointing where they travel', async ({ page }) => {
+    await stubForecast(page, { windSpeed: 18, windDirection: 140 });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const arrows = page.getByTestId('direction-arrow');
+    await expect(arrows.first()).toBeVisible();
+
+    // Swell comes from 315, so the glyph must point at 135, not 315.
+    const swellArrow = arrows.filter({ has: page.locator('[data-from="315"]') }).or(
+      page.locator('[data-testid="direction-arrow"][data-from="315"]')
+    );
+    await expect(swellArrow.first()).toHaveCSS('transform', /matrix/);
+  });
+});
+
+test.describe('spec: responsive-layout', () => {
+  test('the page does not scroll on a phone viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await page.goto('/');
+
+    const overflow = await page.evaluate(() => ({
+      vertical: document.documentElement.scrollHeight > window.innerHeight + 1,
+      horizontal: document.documentElement.scrollWidth > window.innerWidth + 1,
+    }));
+
+    expect(overflow.vertical, 'page scrolls vertically').toBe(false);
+    expect(overflow.horizontal, 'page scrolls horizontally').toBe(false);
+  });
+
+  test('the controls stay on screen on a phone', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await page.goto('/');
+
+    await expect(page.getByTestId('region-select')).toBeInViewport();
+    await expect(page.getByLabel('Forecast hour')).toBeInViewport();
+  });
+
+  test('the drawer fits the phone viewport with its action visible', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('go-to-spot')).toBeInViewport();
+    await expect(page.getByTestId('spot-score')).toBeInViewport();
+  });
+});
+
+test.describe('spec: region-selection / El mapa sigue a la región', () => {
+  test('switching region flies the map to it', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+
+    const centreOf = () =>
+      page.evaluate(() => {
+        const marker = document.querySelector('[data-testid="spot-marker"]') as HTMLElement | null;
+        return marker ? marker.getBoundingClientRect().top : null;
+      });
+
+    const before = await centreOf();
+
+    const select = page.getByTestId('region-select');
+    const options = await select.locator('option').allTextContents();
+    const current = await select.inputValue();
+    const other = options.find(o => o !== current);
+    test.skip(!other, 'catalogue has a single region');
+
+    await select.selectOption(other!);
+    await page.waitForTimeout(1500);
+
+    await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({
+      timeout: 45_000,
+    });
+    // Markers exist for the new region, meaning the map framed it rather than
+    // staying put over the old one.
+    expect(await centreOf()).not.toBe(before);
+  });
+
+  test('switching country switches to one of its regions', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    const countries = await page.getByTestId('country-select').locator('option').allTextContents();
+    test.skip(countries.length < 2, 'catalogue has a single country');
+
+    const current = await page.getByTestId('country-select').inputValue();
+    const other = countries.find(c => c !== current)!;
+
+    await page.getByTestId('country-select').selectOption(other);
+
+    const regions = await page.getByTestId('region-select').locator('option').allTextContents();
+    expect(regions.length).toBeGreaterThan(0);
+    expect(regions).toContain(await page.getByTestId('region-select').inputValue());
   });
 });

@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { useStore } from '@/store/useStore';
 import spots from '@/data/spots.json';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
-import { regionForLocation } from '@/services/regions';
+import { locationDefaults, regionBounds } from '@/services/regions';
 
 const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 
@@ -74,7 +74,7 @@ export function MarineMap() {
     userSkillLevel,
     currentHour,
     selectedRegion,
-    resolveRegion,
+    resolveLocation,
   } = useStore();
 
   const [loading, setLoading] = useState(true);
@@ -125,12 +125,17 @@ export function MarineMap() {
       markersRef.current.set(spot.id, { marker, el });
     }
 
-    // Frame the region the first time it is drawn, so the user is not left
-    // looking at empty sea after switching.
-    if (visible.length > 0) {
-      const bounds = new mapboxgl.LngLatBounds();
-      visible.forEach(s => bounds.extend([s.coordinates.lon, s.coordinates.lat]));
-      map.fitBounds(bounds, { padding: 80, maxZoom: 9, duration: 600 });
+    // Fly to the region whenever it changes: switching to Donegal from Cádiz
+    // must take the user there, not leave them staring at an empty sea.
+    const box = regionBounds(selectedRegion);
+    if (box) {
+      map.fitBounds(
+        [
+          [box.west, box.south],
+          [box.east, box.north],
+        ],
+        { padding: 60, maxZoom: 9, duration: 900 }
+      );
     }
   }, [selectedRegion, setSelectedSpot]);
 
@@ -210,7 +215,8 @@ export function MarineMap() {
         pos => {
           const { latitude, longitude } = pos.coords;
           setUserLocation(latitude, longitude);
-          resolveRegion(regionForLocation(latitude, longitude));
+          const { country, region } = locationDefaults(latitude, longitude);
+          resolveLocation(country, region);
         },
         // Refused or unavailable: the store's default region already applies.
         err => console.warn('Geolocation unavailable:', err.message)
