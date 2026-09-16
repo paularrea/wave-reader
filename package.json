@@ -9,8 +9,9 @@
     "lint": "eslint",
     "test:e2e": "playwright test --project=e2e",
     "test:unit": "playwright test --project=unit",
-    "test": "playwright test",
-    "build:catalog": "node scripts/build-spot-catalog.mjs"
+    "test": "playwright test --project=unit --project=e2e",
+    "build:catalog": "node scripts/build-spot-catalog.mjs",
+    "test:prod": "playwright test --project=prod"
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",

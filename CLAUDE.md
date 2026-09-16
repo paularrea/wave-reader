@@ -90,7 +90,8 @@ must never depend on it. The output is committed to keep Vercel builds hermetic.
 ```bash
 npm run test:unit   # timeline maths, tide detection, colour rules, catalogue integrity
 npm run test:e2e    # browser flows against the production build
-npm test            # both
+npm test            # unit + e2e (no network beyond the local server)
+npm run test:prod   # smoke test against the live deployment; hits real APIs
 ```
 
 E2E runs against `next build && next start`, not the dev server: that is what Vercel
