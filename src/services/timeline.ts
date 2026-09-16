@@ -106,6 +106,23 @@ export function dayLabel(
   return { label, isDayBoundary: instant.hour === 0 };
 }
 
+/**
+ * Short form for the day strip, where eight chips share the control's width and
+ * the full label gets ellipsised into uselessness ("Tomo…", "Wed 2…").
+ */
+export function compactDayLabel(
+  instant: LocalInstant,
+  utcOffsetSeconds: number,
+  now: Date = new Date()
+): string {
+  const full = dayLabel(instant, utcOffsetSeconds, now).label;
+  if (full === 'Today') return 'Today';
+  if (full === 'Tomorrow') return 'Tmrw';
+  // "Sat 19 Sept" -> "Sat 19": the month is redundant across a 7-day window.
+  const [weekday, dayOfMonth] = full.split(' ');
+  return `${weekday} ${dayOfMonth}`;
+}
+
 /** `Today, 15:00` — the full label shown next to the slider. */
 export function formatInstant(
   instant: LocalInstant,

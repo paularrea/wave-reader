@@ -6,27 +6,22 @@ import { SpotDetailDrawer, ForecastPayload } from '@/components/shared/SpotDetai
 import { useStore } from '@/store/useStore';
 import { Calendar, User, MapPin } from 'lucide-react';
 import spots from '@/data/spots.json';
-import { instantAt, dayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
+import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
 
 /** Groups the timeline's hours into days so the strip can show one chip per day. */
 function useDaySegments(utcOffsetSeconds: number) {
   return useMemo(() => {
     const now = new Date();
-    const segments: Array<{ day: string; label: string; startHour: number; hours: number }> = [];
+    const segments: Array<{ day: string; label: string; startHour: number }> = [];
 
     for (let hour = 0; hour <= MAX_FORECAST_HOURS; hour++) {
       const instant = instantAt(utcOffsetSeconds, hour, now);
-      const last = segments[segments.length - 1];
-      if (last && last.day === instant.day) {
-        last.hours += 1;
-      } else {
-        segments.push({
-          day: instant.day,
-          label: dayLabel(instant, utcOffsetSeconds, now).label,
-          startHour: hour,
-          hours: 1,
-        });
-      }
+      if (segments[segments.length - 1]?.day === instant.day) continue;
+      segments.push({
+        day: instant.day,
+        label: compactDayLabel(instant, utcOffsetSeconds, now),
+        startHour: hour,
+      });
     }
     return segments;
   }, [utcOffsetSeconds]);
@@ -152,19 +147,21 @@ export default function WaveReaderPage() {
               </span>
             </div>
 
-            {/* One chip per day; width tracks how many of the day's hours are
-                inside the window, so the strip lines up with the slider. */}
-            <div className="flex gap-1" data-testid="day-strip">
+            {/* Chips keep a legible minimum width and the strip scrolls rather
+                than squeezing eight labels into ellipses. */}
+            <div
+              className="flex gap-1 overflow-x-auto pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              data-testid="day-strip"
+            >
               {mounted && daySegments.map(segment => {
                 const isActive = segment.day === instant.day;
                 return (
                   <button
                     key={segment.day}
                     onClick={() => setCurrentHour(segment.startHour)}
-                    style={{ flexGrow: segment.hours }}
                     data-testid="day-chip"
                     data-active={isActive}
-                    className={`text-[9px] font-bold uppercase tracking-tight py-1 rounded-md transition-colors truncate px-1 ${
+                    className={`shrink-0 min-w-[3.75rem] text-[10px] font-bold uppercase tracking-tight py-1 rounded-md transition-colors px-2 ${
                       isActive
                         ? 'bg-blue-600 text-white'
                         : 'bg-zinc-800 text-zinc-500 hover:text-zinc-300'

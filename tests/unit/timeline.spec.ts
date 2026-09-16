@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { anchorInstant, instantAt, dayLabel, formatInstant } from '../../src/services/timeline';
+import { anchorInstant, instantAt, dayLabel, formatInstant, compactDayLabel } from '../../src/services/timeline';
 
 const MADRID_SUMMER = 2 * 3600; // UTC+2
 const CANARY_SUMMER = 1 * 3600; // UTC+1
@@ -85,5 +85,18 @@ test.describe('spec: forecast-timeline / Agrupación por días', () => {
     const now = new Date('2026-09-16T12:20:00Z');
     const instant = instantAt(MADRID_SUMMER, 0, now);
     expect(formatInstant(instant, MADRID_SUMMER, now)).toBe('Today, 15:00');
+  });
+});
+
+test.describe('spec: forecast-timeline / Etiquetas compactas de la tira de días', () => {
+  test('compact labels stay short enough to render without ellipsis', () => {
+    const now = new Date('2026-09-16T12:20:00Z');
+
+    expect(compactDayLabel(instantAt(MADRID_SUMMER, 0, now), MADRID_SUMMER, now)).toBe('Today');
+    expect(compactDayLabel(instantAt(MADRID_SUMMER, 24, now), MADRID_SUMMER, now)).toBe('Tmrw');
+
+    const later = compactDayLabel(instantAt(MADRID_SUMMER, 72, now), MADRID_SUMMER, now);
+    expect(later).toMatch(/^[A-Z][a-z]{2} \d{1,2}$/); // "Sat 19", no month
+    expect(later.length).toBeLessThanOrEqual(6);
   });
 });

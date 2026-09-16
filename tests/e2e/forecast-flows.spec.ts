@@ -257,8 +257,9 @@ test.describe('spec: forecast-timeline', () => {
     await page.goto('/');
 
     const chips = page.getByTestId('day-chip');
+    // The strip uses compact labels so eight days fit without ellipses.
     await expect(chips.first()).toHaveText('Today');
-    await expect(chips.nth(1)).toHaveText('Tomorrow');
+    await expect(chips.nth(1)).toHaveText('Tmrw');
 
     await chips.nth(1).click();
     await expect(page.getByTestId('forecast-time')).toContainText('Tomorrow');
