@@ -1,0 +1,698 @@
+{
+ "source": "surf-forecast.com six-day forecast tables, read 2026-09-17",
+ "note": "Reference cases for calibration tests. Swells are [heightM, periodS]; windState is surf-forecast's own label.",
+ "cases": [
+  {
+   "spot": "Supertubos",
+   "slot": "PM",
+   "rating": 0,
+   "swells": [
+    [
+     0.1,
+     12
+    ],
+    [
+     0.1,
+     16
+    ],
+    [
+     -2.4,
+     9
+    ]
+   ],
+   "windKmh": 35,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Famara",
+   "slot": "PM",
+   "rating": 0,
+   "swells": [
+    [
+     1.2,
+     8
+    ],
+    [
+     0.7,
+     14
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Supertubos",
+   "slot": "PM",
+   "rating": 0,
+   "swells": [
+    [
+     -1.7,
+     11
+    ],
+    [
+     0.1,
+     13
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross"
+  },
+  {
+   "spot": "Somo",
+   "slot": "Night",
+   "rating": 0,
+   "swells": [
+    [
+     1.2,
+     10
+    ],
+    [
+     0.2,
+     10
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross"
+  },
+  {
+   "spot": "Somo",
+   "slot": "PM",
+   "rating": 0,
+   "swells": [
+    [
+     0.8,
+     14
+    ],
+    [
+     0.6,
+     10
+    ],
+    [
+     0.1,
+     10
+    ],
+    [
+     0.6,
+     5
+    ]
+   ],
+   "windKmh": 20,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Famara",
+   "slot": "Night",
+   "rating": 0,
+   "swells": [
+    [
+     0.7,
+     12
+    ],
+    [
+     2,
+     9
+    ]
+   ],
+   "windKmh": 30,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Supertubos",
+   "slot": "AM",
+   "rating": 0,
+   "swells": [
+    [
+     -2.4,
+     14
+    ],
+    [
+     0.1,
+     14
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "glassy"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "AM",
+   "rating": 0,
+   "swells": [
+    [
+     1.4,
+     10
+    ],
+    [
+     0.4,
+     13
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "AM",
+   "rating": 1,
+   "swells": [
+    [
+     1.3,
+     12
+    ],
+    [
+     0.5,
+     5
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "on"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "PM",
+   "rating": 1,
+   "swells": [
+    [
+     1.6,
+     11
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Somo",
+   "slot": "Night",
+   "rating": 1,
+   "swells": [
+    [
+     1.1,
+     13
+    ],
+    [
+     0.4,
+     4
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "AM",
+   "rating": 1,
+   "swells": [
+    [
+     1.3,
+     10
+    ],
+    [
+     0.5,
+     12
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "AM",
+   "rating": 1,
+   "swells": [
+    [
+     0.9,
+     11
+    ],
+    [
+     0.7,
+     16
+    ],
+    [
+     0.5,
+     5
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Fistral-North",
+   "slot": "Night",
+   "rating": 1,
+   "swells": [
+    [
+     1.2,
+     12
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross"
+  },
+  {
+   "spot": "Fistral-North",
+   "slot": "PM",
+   "rating": 1,
+   "swells": [
+    [
+     1.5,
+     13
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-on"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "PM",
+   "rating": 1,
+   "swells": [
+    [
+     1.2,
+     12
+    ],
+    [
+     0.4,
+     5
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "on"
+  },
+  {
+   "spot": "Somo",
+   "slot": "Night",
+   "rating": 2,
+   "swells": [
+    [
+     1.6,
+     11
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "off"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "Night",
+   "rating": 2,
+   "swells": [
+    [
+     1.2,
+     13
+    ],
+    [
+     0.4,
+     4
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Supertubos",
+   "slot": "AM",
+   "rating": 2,
+   "swells": [
+    [
+     1.1,
+     15
+    ],
+    [
+     -1.1,
+     6
+    ],
+    [
+     0.6,
+     11
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "Night",
+   "rating": 2,
+   "swells": [
+    [
+     1.1,
+     11
+    ],
+    [
+     0.7,
+     5
+    ],
+    [
+     0.1,
+     19
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Mundaka",
+   "slot": "AM",
+   "rating": 2,
+   "swells": [
+    [
+     1.3,
+     9
+    ],
+    [
+     0.6,
+     12
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Somo",
+   "slot": "AM",
+   "rating": 2,
+   "swells": [
+    [
+     1.7,
+     11
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Fistral-North",
+   "slot": "Night",
+   "rating": 2,
+   "swells": [
+    [
+     1.1,
+     11
+    ],
+    [
+     -0.2,
+     4
+    ],
+    [
+     0.1,
+     13
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "glassy"
+  },
+  {
+   "spot": "Bells-Beach",
+   "slot": "AM",
+   "rating": 2,
+   "swells": [
+    [
+     1.5,
+     13
+    ],
+    [
+     0.3,
+     15
+    ]
+   ],
+   "windKmh": 20,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "AM",
+   "rating": 3,
+   "swells": [
+    [
+     1.8,
+     12
+    ]
+   ],
+   "windKmh": 0,
+   "windState": "glassy"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "Night",
+   "rating": 3,
+   "swells": [
+    [
+     1.6,
+     11
+    ],
+    [
+     0.4,
+     4
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "glassy"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "AM",
+   "rating": 3,
+   "swells": [
+    [
+     1.3,
+     13
+    ],
+    [
+     0.6,
+     19
+    ],
+    [
+     0.4,
+     12
+    ],
+    [
+     -0.6,
+     5
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "off"
+  },
+  {
+   "spot": "Mundaka",
+   "slot": "Night",
+   "rating": 3,
+   "swells": [
+    [
+     1.6,
+     11
+    ],
+    [
+     0.9,
+     13
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "off"
+  },
+  {
+   "spot": "Zarautz",
+   "slot": "PM",
+   "rating": 3,
+   "swells": [
+    [
+     1.8,
+     13
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "on"
+  },
+  {
+   "spot": "Mundaka",
+   "slot": "PM",
+   "rating": 3,
+   "swells": [
+    [
+     2.3,
+     14
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "on"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "Night",
+   "rating": 3,
+   "swells": [
+    [
+     1.3,
+     14
+    ],
+    [
+     0.4,
+     20
+    ],
+    [
+     -0.5,
+     6
+    ]
+   ],
+   "windKmh": 20,
+   "windState": "off"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "AM",
+   "rating": 3,
+   "swells": [
+    [
+     1.6,
+     12
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "glassy"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "Night",
+   "rating": 4,
+   "swells": [
+    [
+     2.3,
+     13
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "glassy"
+  },
+  {
+   "spot": "Bells-Beach",
+   "slot": "Night",
+   "rating": 4,
+   "swells": [
+    [
+     1.8,
+     15
+    ],
+    [
+     -0.4,
+     4
+    ],
+    [
+     0.4,
+     15
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "AM",
+   "rating": 4,
+   "swells": [
+    [
+     1.3,
+     14
+    ],
+    [
+     0.6,
+     18
+    ],
+    [
+     0.6,
+     18
+    ],
+    [
+     -0.6,
+     5
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "off"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "Night",
+   "rating": 4,
+   "swells": [
+    [
+     2,
+     14
+    ],
+    [
+     0.4,
+     5
+    ],
+    [
+     -0.7,
+     5
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "cross-off"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "PM",
+   "rating": 4,
+   "swells": [
+    [
+     2,
+     16
+    ],
+    [
+     0.9,
+     6
+    ],
+    [
+     0.6,
+     6
+    ]
+   ],
+   "windKmh": 15,
+   "windState": "off"
+  },
+  {
+   "spot": "Somo",
+   "slot": "Night",
+   "rating": 4,
+   "swells": [
+    [
+     2.5,
+     14
+    ]
+   ],
+   "windKmh": 10,
+   "windState": "off"
+  },
+  {
+   "spot": "Uluwatu",
+   "slot": "PM",
+   "rating": 4,
+   "swells": [
+    [
+     2.2,
+     15
+    ],
+    [
+     -0.5,
+     5
+    ]
+   ],
+   "windKmh": 20,
+   "windState": "off"
+  },
+  {
+   "spot": "La-Graviere",
+   "slot": "AM",
+   "rating": 4,
+   "swells": [
+    [
+     1.9,
+     13
+    ]
+   ],
+   "windKmh": 5,
+   "windState": "cross-off"
+  }
+ ]
+}

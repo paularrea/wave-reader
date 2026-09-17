@@ -7,10 +7,12 @@ import {
   directionFactor,
   windFactor,
   breakingHeightM,
+  effectiveWindKmh,
   SpotConfig,
   SkillLevel,
 } from '../../src/services/star-engine';
 import type { MarineForecast } from '../../src/services/marine-api';
+import anchors from '../fixtures/surf-forecast-anchors.json';
 
 /** A west-facing beach: offshore wind blows from the east (90). */
 const SPOT: SpotConfig = {
@@ -92,11 +94,56 @@ test.describe('spec: surf-rating / La energía es la base', () => {
     expect(energyScore(100)).toBeLessThan(energyScore(300));
     expect(energyScore(300)).toBeLessThan(energyScore(1000));
     expect(energyScore(1000)).toBeLessThan(energyScore(3000));
-    expect(energyScore(5000)).toBe(10);
+    expect(energyScore(40_000)).toBe(10);
+  });
+});
+
+test.describe('spec: surf-rating / La escala reproduce la de surf-forecast', () => {
+  test('1.5 m @ 12 s with no wind scores 2 to 4', () => {
+    const r = rate(sea(1.5, 12, { windSpeed: 0 }));
+    expect(r.stars).toBeGreaterThanOrEqual(2);
+    expect(r.stars).toBeLessThanOrEqual(4);
   });
 
-  test('beyond closeout energy a beach gets worse, not better', () => {
-    expect(energyScore(12_000)).toBeLessThan(energyScore(5000));
+  test('2.5 m @ 14 s with no wind scores 4 to 6', () => {
+    const r = rate(sea(2.5, 14, { windSpeed: 0 }));
+    expect(r.stars).toBeGreaterThanOrEqual(4);
+    expect(r.stars).toBeLessThanOrEqual(6);
+  });
+
+  test('at least 85% of surf-forecast reference cases land within one star', () => {
+    // surf-forecast labels wind rather than giving its angle to the spot.
+    const RELATIVE: Record<string, number> = { off: 0, 'cross-off': 45, cross: 90, 'cross-on': 135, on: 180, glassy: 0 };
+    const spot: SpotConfig = { ...SPOT, swellWindow: { minAngle: 0, maxAngle: 0 }, offshoreWindAngle: 0 };
+
+    const misses: string[] = [];
+    for (const c of anchors.cases) {
+      const sorted = [...c.swells].sort((a, b) => energyKj(b[0], b[1]) - energyKj(a[0], a[1]));
+      const f = sea(sorted[0][0], sorted[0][1], {
+        swellDirection: null,
+        secondarySwellHeight: sorted[1]?.[0] ?? null,
+        secondarySwellPeriod: sorted[1]?.[1] ?? null,
+        windWaveHeight: sorted[2]?.[0] ?? null,
+        windWavePeriod: sorted[2]?.[1] ?? null,
+        windSpeed: c.windState === 'glassy' ? Math.min(c.windKmh ?? 0, 5) : c.windKmh,
+        // Wind *from* the spot's facing (180) is onshore; from its offshore angle (0) is offshore.
+        windDirection: RELATIVE[c.windState] ?? 90,
+      });
+      const ours = calculateStarRating(f, spot, 'intermediate').stars;
+      if (Math.abs(ours - c.rating) > 1) misses.push(`${c.spot} ${c.slot}: ours ${ours}, theirs ${c.rating}`);
+    }
+
+    const hit = 1 - misses.length / anchors.cases.length;
+    expect(hit, misses.join('\n')).toBeGreaterThanOrEqual(0.85);
+  });
+
+  test('a bigger clean swell never scores lower', () => {
+    let previous = -1;
+    for (const [h, t] of [[1, 10], [1.5, 12], [2.5, 14], [3, 16], [4, 18], [6, 18], [8, 20]]) {
+      const stars = rate(sea(h, t, { windSpeed: 0 })).stars;
+      expect(stars, `${h}m @ ${t}s`).toBeGreaterThanOrEqual(previous);
+      previous = stars;
+    }
   });
 });
 
@@ -211,6 +258,25 @@ test.describe('spec: surf-rating / El viento degrada', () => {
 
   test('light wind does nothing whatever its direction', () => {
     expect(windFactor(6, FACING, OFFSHORE)).toBe(1);
+  });
+
+  test('normally gusty wind scores exactly as mean wind', () => {
+    // 1.77 is the median gust ratio measured on the coast.
+    expect(effectiveWindKmh(20, 20 * 1.77)).toBeCloseTo(20, 5);
+    const calm = rate(sea(2, 13, { windSpeed: 12, windDirection: 0 }));
+    const gusty = rate(sea(2, 13, { windSpeed: 12, windDirection: 0, windGust: 12 * 1.77 }));
+    expect(gusty.stars).toBe(calm.stars);
+  });
+
+  test('unusually strong gusts score no higher than normal gusts', () => {
+    const normal = rate(sea(2, 13, { windSpeed: 10, windDirection: 0, windGust: 10 * 1.77 }));
+    const squally = rate(sea(2, 13, { windSpeed: 10, windDirection: 0, windGust: 40 }));
+    expect(squally.stars).toBeLessThanOrEqual(normal.stars);
+    expect(effectiveWindKmh(10, 40)).toBeGreaterThan(10);
+  });
+
+  test('missing gust falls back to mean wind', () => {
+    expect(effectiveWindKmh(15, null)).toBe(15);
   });
 });
 

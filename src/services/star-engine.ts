@@ -35,10 +35,15 @@ export interface StarRatingResult {
  * with offshore wind 8/10 for an intermediate and 10/10 for a beginner -- the
  * same as 1.5 m at 12 s. Skill level now only drives the safety alert.
  *
- * Pipeline: wave energy per component (direction-weighted) -> log-scaled base
- * -> beach closeout taper -> period quality -> wind. The coefficients are
- * calibrated against surf-forecast's published data; see
- * openspec/changes/rework-star-rating/design.md for the table.
+ * Pipeline: wave energy per component (direction-weighted) -> log-scaled,
+ * gamma-curved base -> period quality -> wind (gust-aware).
+ *
+ * The structure follows what surf-forecast, Magicseaweed and Surfline publish
+ * about their ratings. None of them publishes a formula, so the numbers are
+ * fitted to surf-forecast's actual output: 206 time slots at 10 spots, with
+ * leave-one-spot-out validation giving a mean error of 0.50 stars and 96% of
+ * slots within one star. Re-run scripts/calibrate-rating.mjs to refit; the
+ * benchmark is in openspec/changes/archive/*-calibrate-rating-to-surf-forecast.
  */
 
 /**
@@ -47,25 +52,32 @@ export interface StarRatingResult {
  */
 const ENERGY_COEFFICIENT = 1.9;
 
-/** Below this the sea is flat for surfing purposes. surf-forecast: ~100 kJ "just about surfable". */
-const FLAT_ENERGY_KJ = 50;
-/** Energy that maps to a 10 before any penalty. */
-const TOP_ENERGY_KJ = 5000;
-/** Above this a beach break closes out rather than getting better. */
-// Equal to TOP_ENERGY_KJ: a lower value would stop a beach ever reaching 10.
-const CLOSEOUT_ENERGY_KJ = 5000;
-const CLOSEOUT_PENALTY_PER_DOUBLING = 2;
+// --- Calibrated against surf-forecast (see header). Change only by refitting. ---
+
+/** Below this the sea is flat for surfing purposes. Fitted 51 kJ; FAQ says ~100 "just about surfable". */
+const FLAT_ENERGY_KJ = 51.27;
+/** Energy that maps to a 10. surf-forecast keeps high scores for very large, clean swell. */
+const TOP_ENERGY_KJ = 31764;
+/** >1 compresses the low and middle of the scale, as surf-forecast does. */
+const SCALE_GAMMA = 1.41;
 
 /** Beyond the window edge, energy fades linearly to this floor over this many degrees. */
 const OFF_WINDOW_FLOOR = 0.1;
 const OFF_WINDOW_FADE_DEG = 45;
 
 /** Below this, wind has no effect in any direction. */
-const LIGHT_WIND_KMH = 8;
+const LIGHT_WIND_KMH = 7.08;
 /** Onshore wind speed at which the sea is blown out. */
-const ONSHORE_BLOWOUT_KMH = 35;
+const ONSHORE_BLOWOUT_KMH = 19.28;
 /** Cross-shore wind speed at which the sea is blown out. */
-const CROSS_BLOWOUT_KMH = 90;
+const CROSS_BLOWOUT_KMH = 30.1;
+/**
+ * Median gust-to-mean ratio on the coast, measured in Open-Meteo at 7 points
+ * over 7 days (IQR 1.65-1.91). Dividing gusts by it means a normally gusty hour
+ * scores exactly as calibrated on mean wind, and only unusually gusty hours
+ * lose more -- Magicseaweed's point that gusts matter more than the mean.
+ */
+const TYPICAL_GUST_RATIO = 1.77;
 /** Above this, wind degrades the surf whatever its direction... */
 const STRONG_WIND_KMH = 45;
 /** ...reaching zero this many km/h later. */
@@ -135,24 +147,21 @@ export function directionFactor(
 
 /** Short-period sea is disorganised, not just weaker. Cuts follow the windswell/groundswell line. */
 export function periodFactor(periodS: number): number {
-  if (periodS < 6) return 0.5;
-  if (periodS < 8) return 0.7;
-  if (periodS < 10) return 0.85;
+  if (periodS < 6) return 0.48;
+  if (periodS < 8) return 0.69;
+  if (periodS < 10) return 0.71;
   return 1;
 }
 
-/** Log-scaled energy to 0-10, with a closeout taper for beach breaks. */
+/**
+ * Log-scaled, gamma-curved energy to 0-10. Monotonic: surf-forecast does not
+ * mark big days down for closing out, so neither does this.
+ */
 export function energyScore(energy: number): number {
   if (energy < FLAT_ENERGY_KJ) return 0;
 
-  const decades = Math.log10(TOP_ENERGY_KJ / FLAT_ENERGY_KJ);
-  let score = (10 * Math.log10(energy / FLAT_ENERGY_KJ)) / decades;
-
-  if (energy > CLOSEOUT_ENERGY_KJ) {
-    score -= CLOSEOUT_PENALTY_PER_DOUBLING * Math.log2(energy / CLOSEOUT_ENERGY_KJ);
-  }
-
-  return Math.min(10, Math.max(0, score));
+  const ratio = Math.log(energy / FLAT_ENERGY_KJ) / Math.log(TOP_ENERGY_KJ / FLAT_ENERGY_KJ);
+  return 10 * Math.min(1, Math.max(0, ratio)) ** SCALE_GAMMA;
 }
 
 /**
@@ -161,6 +170,13 @@ export function energyScore(energy: number): number {
  * No bonus for offshore: 10 is already the ceiling, and multiplying a saturated
  * score was part of the original bug.
  */
+/** Mean wind, raised only when gusts run above their usual ratio to it. */
+export function effectiveWindKmh(meanKmh: number | null, gustKmh: number | null): number | null {
+  if (meanKmh === null) return null;
+  if (gustKmh === null) return meanKmh;
+  return Math.max(meanKmh, gustKmh / TYPICAL_GUST_RATIO);
+}
+
 export function windFactor(
   speedKmh: number | null,
   fromDeg: number | null,
@@ -223,7 +239,11 @@ export function calculateStarRating(
   const combinedHeight = Math.sqrt(components.reduce((sum, c) => sum + c.heightM ** 2, 0));
 
   const swellScore = energyScore(deliveredEnergy) * periodFactor(weightedPeriod);
-  const wind = windFactor(forecast.windSpeed, forecast.windDirection, config.offshoreWindAngle);
+  const wind = windFactor(
+    effectiveWindKmh(forecast.windSpeed, forecast.windGust ?? null),
+    forecast.windDirection,
+    config.offshoreWindAngle
+  );
 
   const swellStars = Math.round(swellScore);
   // Round the product rather than the parts, then never exceed the potential.

@@ -39,9 +39,14 @@ export interface QualityStyle {
 
 export const MAX_STARS = 10;
 
-/** 8+ is a day worth driving for; below 5 is not worth the petrol. */
-const EPIC_THRESHOLD = 8;
-const GOOD_THRESHOLD = 5;
+/**
+ * On surf-forecast's scale, which the rating is calibrated to: one star is
+ * already "good surf" in their own interface, and in the benchmark no ordinary
+ * spot went above 4 -- scores of 5 to 9 only appeared at the best spot in the
+ * world for each time slot.
+ */
+const EPIC_THRESHOLD = 5;
+const GOOD_THRESHOLD = 1;
 
 const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
   // Saturated, large, ringed and glowing: impossible to miss among the rest.
@@ -120,10 +125,11 @@ export function qualityStyle(
 export const LEGEND_TIERS: QualityTier[] = ['epic', 'good', 'poor', 'danger'];
 
 export function legendEntry(tier: QualityTier): QualityStyle & { range: string } {
+  const span = (from: number, to: number) => (from === to ? String(from) : `${from}-${to}`);
   const ranges: Record<QualityTier, string> = {
-    epic: `${EPIC_THRESHOLD}-${MAX_STARS}`,
-    good: `${GOOD_THRESHOLD}-${EPIC_THRESHOLD - 1}`,
-    poor: `0-${GOOD_THRESHOLD - 1}`,
+    epic: span(EPIC_THRESHOLD, MAX_STARS),
+    good: span(GOOD_THRESHOLD, EPIC_THRESHOLD - 1),
+    poor: span(0, GOOD_THRESHOLD - 1),
     danger: '!',
     unrated: '--',
   };

@@ -29,7 +29,7 @@ const MARINE_PARAMS = [
   'sea_level_height_msl',
 ].join(',');
 
-const WEATHER_PARAMS = ['wind_speed_10m', 'wind_direction_10m'].join(',');
+const WEATHER_PARAMS = ['wind_speed_10m', 'wind_direction_10m', 'wind_gusts_10m'].join(',');
 
 /**
  * Every optional magnitude is `number | null`. Nothing between here and the UI
@@ -51,6 +51,8 @@ export interface MarineForecast {
   /** km/h, exactly as Open-Meteo delivers it. No conversion is applied. */
   windSpeed: number | null;
   windDirection: number | null;
+  /** km/h, as delivered. Null when the provider has no gust for the hour. */
+  windGust?: number | null;
   seaLevel: number | null;
 }
 
@@ -152,6 +154,7 @@ export async function getMarineForecast(
     windWaveDirection: at(marineHourly.wind_wave_direction, marineIndex),
     windSpeed: weatherIndex === -1 ? null : at(weatherHourly?.wind_speed_10m, weatherIndex),
     windDirection: weatherIndex === -1 ? null : at(weatherHourly?.wind_direction_10m, weatherIndex),
+    windGust: weatherIndex === -1 ? null : at(weatherHourly?.wind_gusts_10m, weatherIndex),
     seaLevel: at(marineHourly.sea_level_height_msl, marineIndex),
   };
 

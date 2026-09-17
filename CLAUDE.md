@@ -36,38 +36,43 @@ bug this codebase was built to stop repeating.
 
 ### Star Engine (`src/services/star-engine.ts`)
 Rates **the surf, not how well it suits the viewer** — the way surf-forecast,
-Magicseaweed and Surfline all rate. The old engine scored "is the height inside your
-level's comfort range", which gave 0.3 m @ 3 s with offshore wind 8/10 for an
-intermediate and 10/10 for a beginner. Skill level now only drives the safety alert;
-never reintroduce it into `stars`. Full research and calibration table:
-`openspec/changes/archive/*-rework-star-rating/design.md`.
+Magicseaweed and Surfline all rate. Skill level only drives the safety alert; never
+reintroduce it into `stars`.
+
+**The scale is calibrated to surf-forecast.** None of the services publishes a formula
+(Surfline's is a model trained on 35 years of private observations), so the structure
+follows what they publish and the constants are fitted to surf-forecast's real output:
+206 time slots at 10 spots, leave-one-spot-out validation, mean error 0.50 stars, 96%
+within one star (the previous hand-picked constants: 2.77 and 15%). Do not hand-tune
+the constants: refit with `node scripts/calibrate-rating.mjs` from the benchmark data
+in `.cache/benchmark/` (not versioned, third-party data collected by reading public
+pages; do not automate recurring extraction). Research and benchmark:
+`openspec/changes/archive/*-calibrate-rating-to-surf-forecast/design.md`.
+
+On this scale a clean 1.5 m @ 12 s is ~3, 2.5 m @ 14 s ~5, 4 m @ 18 s ~8. Scores of 5+
+are rare: in the benchmark only the best spot in the world per time slot reached them.
 
 1. **Energy** per component (primary swell, secondary swell, wind waves):
-   `kJ = 1.9 · H² · T²`, fitted to surf-forecast's published values (2.5 m @ 14 s →
-   2,323 kJ published, 2,328 computed). Each component is weighted by its direction
-   against the spot's swell window (×1 inside, fading to ×0.1 at 45° beyond the edge —
-   never 0, swell refracts).
-2. **Flat**: under 50 kJ scores 0 whatever the wind.
-3. **Base**: `10 · log10(E / 50) / 2` — 100 kJ ≈ 1.5, 1,000 ≈ 6.5, 5,000 = 10.
-   Above 5,000 kJ a beach closes out: −2 per doubling. The closeout threshold must equal
-   the top of the scale or no beach can ever reach 10.
-4. **Period**: ×0.5 under 6 s, ×0.7 under 8 s, ×0.85 under 10 s. Energy already
-   penalises short period, but not disorder: 3 m @ 6 s and 1.5 m @ 12 s carry the same
-   energy and are not the same session.
-5. **Wind**: with the spot facing `F = offshoreWindAngle + 180`,
-   `factor = 1 − onshore/35 − cross/90` where `onshore = v·max(0, cos(W−F))` and
-   `cross = v·|sin(W−F)|`; no effect under 8 km/h; above 45 km/h also fades to 0 at
-   75 km/h from any direction. No bonus for offshore — multiplying a saturated score
-   was part of the original bug.
-6. **`swellStars`** is the score without wind (the "faded stars"); `stars` never exceeds it.
-7. **Unrated**: no component with both height and period → `unrated: true`, not 0.
-8. **Safety** uses breaking height (Komar–Gaughan, `Hb = 0.39·g^0.2·(T·H²)^0.4`), not
-   deep-water height: 1.2 m @ 14 s breaks around 2 m. Beginners are alerted above
-   `max(idealHeight.beginner.max, 1.5 m)`.
+   `kJ = 1.9 · H² · T²` (surf-forecast's scale). Each weighted by direction against the
+   spot's swell window (×1 inside, fading to ×0.1 at 45° beyond the edge).
+2. **Base**: `10 · r^1.41`, `r = ln(E/51.27) / ln(31764/51.27)` clamped to [0,1]. Under
+   51 kJ is flat → 0. Monotonic: no closeout penalty, surf-forecast has none.
+3. **Period**: ×0.48 under 6 s, ×0.69 under 8 s, ×0.71 under 10 s.
+4. **Wind**: effective speed `max(mean, gust / 1.77)` — 1.77 is the median coastal
+   gust ratio measured in Open-Meteo, so normal gustiness keeps the calibration and only
+   unusually gusty hours lose more (Magicseaweed: gusts matter more than the mean).
+   With the spot facing `F = offshoreWindAngle + 180`:
+   `factor = 1 − onshore/19.28 − cross/30.1`, no effect under 7.08 km/h, and above
+   45 km/h also fading to 0 at 75 km/h from any direction.
+5. **`swellStars`** is the score without wind (the "faded stars"); `stars` never exceeds it.
+6. **Unrated**: no component with both height and period → `unrated: true`, not 0.
+7. **Safety** uses breaking height (Komar–Gaughan, `Hb = 0.39·g^0.2·(T·H²)^0.4`), not
+   deep-water height. Beginners are alerted above `max(idealHeight.beginner.max, 1.5 m)`.
 
 ### Conditions (`src/services/conditions.ts`)
 Single source of truth for colour. Both the map markers and the drawer read from here.
-- **Quality tiers**: `epic` (8-10), `good` (5-7), `poor` (0-4), plus `danger` and
+- **Quality tiers** on the surf-forecast scale: `epic` (5-10), `good` (1-4), `poor` (0),
+  plus `danger` and
   `unrated`. Each tier differs in **fill, size, ring and glow at once** — not opacity
   alone. A single hue ramped only by alpha is unreadable on a dark map: 4 stars and 7
   stars differ by a few percent of alpha against near-black, below what the eye resolves

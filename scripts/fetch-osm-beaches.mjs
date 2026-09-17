@@ -15,6 +15,12 @@ import { setTimeout as sleep } from 'node:timers/promises';
 const OUT_DIR = new URL('../src/data/', import.meta.url);
 const OUT_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
 const EMPTY_PATH = new URL('../src/data/osm-empty-regions.json', import.meta.url);
+/**
+ * Every region fully fetched, empty or not. Needed once a region is split into
+ * subdivisions: England's beaches are stored under county names, so the region
+ * name itself never appears in the raw file for RESUME to find.
+ */
+const FETCHED_PATH = new URL('../src/data/osm-fetched-regions.json', import.meta.url);
 
 const ENDPOINTS = [
   'https://overpass-api.de/api/interpreter',
@@ -76,6 +82,38 @@ const REGIONS = [
   { iso: 'IE-D', name: 'Dublin', country: 'Ireland', level: 6 },
   { iso: 'IE-MH', name: 'Meath', country: 'Ireland', level: 6 },
   { iso: 'IE-LH', name: 'Louth', country: 'Ireland', level: 6 },
+
+  // France: régions, admin_level 4, named as OSM names them. Metropolitan
+  // coast first, then the overseas régions -- La Réunion, Guadeloupe and
+  // Martinique are serious surf destinations, and Spain already includes the
+  // Canaries on the same principle.
+  { iso: 'FR-HDF', name: 'Hauts-de-France', country: 'France', level: 4 },
+  { iso: 'FR-NOR', name: 'Normandie', country: 'France', level: 4 },
+  { iso: 'FR-BRE', name: 'Bretagne', country: 'France', level: 4 },
+  { iso: 'FR-PDL', name: 'Pays de la Loire', country: 'France', level: 4 },
+  { iso: 'FR-NAQ', name: 'Nouvelle-Aquitaine', country: 'France', level: 4 },
+  { iso: 'FR-OCC', name: 'Occitanie', country: 'France', level: 4 },
+  { iso: 'FR-PAC', name: "Provence-Alpes-Côte d'Azur", country: 'France', level: 4 },
+  { iso: 'FR-20R', name: 'Corse', country: 'France', level: 4 },
+  { iso: 'FR-RE', name: 'La Réunion', country: 'France', level: 4 },
+  { iso: 'FR-971', name: 'Guadeloupe', country: 'France', level: 4 },
+  { iso: 'FR-972', name: 'Martinique', country: 'France', level: 4 },
+  { iso: 'FR-GF', name: 'Guyane', country: 'France', level: 4 },
+  { iso: 'FR-976', name: 'Mayotte', country: 'France', level: 4 },
+
+  // United Kingdom: the devolved nations, admin_level 4.
+  { iso: 'GB-SCT', name: 'Scotland', country: 'United Kingdom', level: 4 },
+  { iso: 'GB-WLS', name: 'Wales', country: 'United Kingdom', level: 4 },
+  { iso: 'GB-NIR', name: 'Northern Ireland', country: 'United Kingdom', level: 4 },
+  /**
+   * England is one query, then split by ceremonial county. As a single region
+   * it would put Cornwall and Northumberland in the same list; OSM's admin
+   * level 5 in England is combined authorities, which do not even cover
+   * Cornwall. Querying 48 counties one by one against an Overpass that is
+   * returning 504s is not viable, so each beach is assigned its county with
+   * batched is_in lookups instead.
+   */
+  { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: 'ceremonial' },
 ];
 
 /**
@@ -169,6 +207,59 @@ function pointOf(element) {
   return null;
 }
 
+const SUBDIVISION_BATCH = 250;
+
+/**
+ * Sets each beach's `community` to the subdivision containing it, using
+ * Overpass is_in(lat,lon) in batches. A marker element is emitted before each
+ * point's areas so the flat output can be mapped back to the right beach.
+ *
+ * Beach centroids often sit on the waterline, just outside a county polygon
+ * drawn to the high-water line; those take the county of the nearest beach
+ * that did resolve, rather than being dumped into a catch-all region.
+ */
+async function assignSubdivisions(beaches, boundary, parentName) {
+  for (let start = 0; start < beaches.length; start += SUBDIVISION_BATCH) {
+    const batch = beaches.slice(start, start + SUBDIVISION_BATCH);
+    const statements = batch
+      .map(
+        (b, i) =>
+          `make marker idx="${i}"; out; ` +
+          `is_in(${b.lat},${b.lon})->.a; area.a["boundary"="${boundary}"]; out tags;`
+      )
+      .join('\n');
+
+    const data = await overpass(`[out:json][timeout:180];\n${statements}`);
+
+    let current = -1;
+    for (const element of data.elements ?? []) {
+      if (element.type === 'marker') {
+        current = Number(element.tags?.idx);
+        continue;
+      }
+      const name = element.tags?.name;
+      if (current >= 0 && name && batch[current].community === parentName) {
+        batch[current].community = name;
+      }
+    }
+
+    log(`    ${parentName}: assigned ${Math.min(start + SUBDIVISION_BATCH, beaches.length)}/${beaches.length}`);
+    await sleep(4000);
+  }
+
+  const resolved = beaches.filter(b => b.community !== parentName);
+  const unresolved = beaches.filter(b => b.community === parentName);
+  for (const beach of unresolved) {
+    let best = null;
+    for (const other of resolved) {
+      const d = (other.lat - beach.lat) ** 2 + ((other.lon - beach.lon) * Math.cos((beach.lat * Math.PI) / 180)) ** 2;
+      if (!best || d < best.d) best = { d, community: other.community };
+    }
+    if (best) beach.community = best.community;
+  }
+  log(`    ${parentName}: ${resolved.length} by polygon, ${unresolved.length} by nearest neighbour`);
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
@@ -194,9 +285,26 @@ async function main() {
       // No record yet; empty regions will be discovered and written below.
     }
   }
-  const alreadyFetched = new Set([...beaches.map(b => b.community), ...emptyRegions]);
+  let fetchedRegions = new Set();
+  if (process.env.RESUME) {
+    try {
+      fetchedRegions = new Set(JSON.parse(await readFile(FETCHED_PATH, 'utf8')));
+    } catch {
+      // Older runs did not write this file; community names cover them.
+    }
+  }
+  const alreadyFetched = new Set([
+    ...beaches.map(b => b.community),
+    ...emptyRegions,
+    ...fetchedRegions,
+  ]);
 
-  for (const { iso, name: community, country, level } of REGIONS) {
+  const markFetched = async name => {
+    fetchedRegions.add(name);
+    await writeFile(FETCHED_PATH, JSON.stringify([...fetchedRegions], null, 1) + '\n');
+  };
+
+  for (const { iso, name: community, country, level, subdivide } of REGIONS) {
     if (alreadyFetched.has(community)) {
       log(`${community}: already fetched, skipping`);
       continue;
@@ -212,12 +320,13 @@ async function main() {
     }
 
     let kept = 0;
+    const fromThisRegion = [];
     for (const element of data.elements ?? []) {
       const point = pointOf(element);
       const name = element.tags?.name;
       if (!point || !name) continue;
 
-      beaches.push({
+      fromThisRegion.push({
         osmType: element.type,
         osmId: element.id,
         name,
@@ -230,6 +339,16 @@ async function main() {
       kept++;
     }
 
+    if (subdivide && fromThisRegion.length > 0) {
+      try {
+        await assignSubdivisions(fromThisRegion, subdivide, community);
+      } catch (err) {
+        log(`    ${community} subdivision FAILED: ${err.message} -- not saved, rerun with RESUME=1`);
+        continue;
+      }
+    }
+    beaches.push(...fromThisRegion);
+
     log(`${community}: ${kept} beaches (running total ${beaches.length})`);
     if (kept === 0) {
       log(`    ${community} returned nothing -- recorded so RESUME skips it`);
@@ -239,6 +358,7 @@ async function main() {
 
     // Save as we go: a failure late in the list must not discard the rest.
     await writeFile(OUT_PATH, JSON.stringify(beaches, null, 1) + '\n');
+    await markFetched(community);
     await sleep(4000); // be a good Overpass citizen
   }
 

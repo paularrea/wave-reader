@@ -13,7 +13,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { appendFileSync } from 'node:fs';
-import { setTimeout as sleep } from 'node:timers/promises';
+import { Bathymetry } from './lib/bathymetry.mjs';
 
 const IN_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
 const OUT_PATH = new URL('../src/data/spots.json', import.meta.url);
@@ -44,8 +44,6 @@ const MIN_OPEN_ARC = 3;                // >= 90 degrees of open water
  * the ambiguous 0 a land-only model gives for anything at sea level.
  */
 const SEA_LEVEL_M = 0;
-const BATCH_BEACHES = 8;               // 96 locations per request, under the 100 cap
-const REQUEST_PAUSE_MS = 1100;         // the public instance allows 1 call/second
 
 const KM_PER_DEG_LAT = 110.574;
 
@@ -78,52 +76,6 @@ function probePoints(beach) {
     }
   }
   return points;
-}
-
-/**
- * Elevation source: OpenTopoData's public ETOPO1 dataset.
- *
- * Not Open-Meteo's elevation endpoint, which this script originally used. That
- * endpoint shares an account-wide daily quota with the forecast API the app
- * itself depends on, and a single full run exhausted it for the rest of the
- * day -- blocking both the catalogue build and local development.
- *
- * ETOPO1 is also the better dataset for the question being asked: it carries
- * bathymetry, so open ocean reads as a large negative number rather than the
- * ambiguous 0 that a land-only model returns for anything at sea level. Its
- * 1 arc-minute resolution (~1.8 km) is well inside the 6 km probe distance.
- *
- * Public instance limits: 100 locations per call, 1 call/second, 1000/day.
- */
-const ELEVATION_ENDPOINT = 'https://api.opentopodata.org/v1/etopo1';
-
-async function elevations(points, attempt = 0) {
-  const locations = points.map(p => `${p.lat.toFixed(4)},${p.lon.toFixed(4)}`).join('|');
-
-  let res;
-  try {
-    res = await fetch(`${ELEVATION_ENDPOINT}?locations=${locations}`, {
-      signal: AbortSignal.timeout(60_000),
-    });
-  } catch (err) {
-    if (attempt >= 8) throw new Error(`Elevation API unreachable: ${err.message}`);
-    await sleep(5000);
-    return elevations(points, attempt + 1);
-  }
-
-  if (res.status === 429 || res.status === 503) {
-    if (attempt >= 10) throw new Error(`Elevation API kept returning ${res.status}`);
-    const wait = 5_000 * (attempt + 1);
-    log(`    ${res.status} from elevation API, waiting ${wait / 1000}s`);
-    await sleep(wait);
-    return elevations(points, attempt + 1);
-  }
-  if (!res.ok) throw new Error(`Elevation API ${res.status}`);
-
-  const body = await res.json();
-  if (body.status !== 'OK') throw new Error(`Elevation API: ${body.error ?? body.status}`);
-
-  return (body.results ?? []).map(r => r.elevation);
 }
 
 /** Circular mean of a set of bearings, in degrees. */
@@ -211,79 +163,108 @@ const IDEAL_HEIGHT = {
   expert: { min: 2.0, max: 5.0 },
 };
 
+/**
+ * ONLY_COUNTRIES=France,United Kingdom recomputes just those countries and
+ * keeps every other country's spots and drop records exactly as they are, so
+ * adding a country never silently re-rates the rest of the catalogue.
+ */
+function onlyCountries() {
+  const raw = process.env.ONLY_COUNTRIES;
+  return raw ? new Set(raw.split(',').map(c => c.trim()).filter(Boolean)) : null;
+}
+
+async function readJson(url, fallback) {
+  try {
+    return JSON.parse(await readFile(url, 'utf8'));
+  } catch {
+    return fallback;
+  }
+}
+
 async function main() {
-  const beaches = JSON.parse(await readFile(IN_PATH, 'utf8'));
-  log(`Analysing ${beaches.length} shore features for ocean exposure...`);
+  const raw = JSON.parse(await readFile(IN_PATH, 'utf8'));
+  const only = onlyCountries();
+
+  // Older drop records predate the country field; recover it from the raw file.
+  const countryOfCommunity = new Map(raw.map(b => [b.community, b.country ?? 'Spain']));
+  const countryOf = entry => entry.country ?? countryOfCommunity.get(entry.community) ?? 'Spain';
 
   const spots = [];
   const dropped = [];
   const usedIds = new Set();
   const usedCoords = new Set();
 
-  for (let i = 0; i < beaches.length; i += BATCH_BEACHES) {
-    const batch = beaches.slice(i, i + BATCH_BEACHES);
-    const points = batch.flatMap(probePoints);
-
-    let values;
-    try {
-      values = await elevations(points);
-    } catch (err) {
-        log(`  elevation batch failed: ${err.message}`);
-      batch.forEach(b => dropped.push({ name: b.name, community: b.community, reason: `elevation failed: ${err.message}` }));
-      continue;
+  if (only) {
+    const existing = await readJson(OUT_PATH, []);
+    const report = await readJson(REPORT_PATH, { dropped: [] });
+    for (const spot of existing) {
+      if (only.has(countryOf(spot))) continue;
+      spots.push(spot);
+      usedIds.add(spot.id);
+      usedCoords.add(`${spot.coordinates.lat},${spot.coordinates.lon}`);
     }
-
-    const perBeach = points.length / batch.length;
-    batch.forEach((beach, b) => {
-      const slice = values.slice(b * perBeach, (b + 1) * perBeach);
-      const result = analyse(beach, slice);
-
-      if (!result.surfable) {
-        dropped.push({ name: beach.name, community: beach.community, reason: result.reason });
-        return;
-      }
-
-      const coordKey = `${beach.lat},${beach.lon}`;
-      if (usedCoords.has(coordKey)) {
-        dropped.push({ name: beach.name, community: beach.community, reason: 'duplicate coordinate' });
-        return;
-      }
-      usedCoords.add(coordKey);
-
-      let id = slugify(beach.name);
-      if (usedIds.has(id)) id = `${id}-${beach.osmId}`;
-      usedIds.add(id);
-
-      spots.push({
-        id,
-        name: beach.name,
-        community: beach.community,
-        country: beach.country ?? 'Spain',
-        type: 'Beach',
-        coordinates: { lat: beach.lat, lon: beach.lon },
-        config: {
-          swellWindow: result.swellWindow,
-          offshoreWindAngle: result.offshoreWindAngle,
-          windTolerance: 45,
-          idealHeight: IDEAL_HEIGHT,
-        },
-        provenance: {
-          source: 'openstreetmap-overpass',
-          osmType: beach.osmType,
-          osmId: beach.osmId,
-          feature: beach.feature ?? 'beach',
-          facingDeg: result.facing,
-          exposureDeg: result.exposureDeg,
-          retrievedAt: new Date().toISOString().slice(0, 10),
-        },
-      });
-    });
-
-    if (i % 200 === 0) {
-      log(`  ${i}/${beaches.length} analysed, ${spots.length} surfable`);
+    for (const entry of report.dropped ?? []) {
+      if (!only.has(countryOf(entry))) dropped.push(entry);
     }
-    await sleep(REQUEST_PAUSE_MS);
+    log(`Keeping ${spots.length} spots outside ${[...only].join(', ')}`);
   }
+
+  const beaches = only ? raw.filter(b => only.has(b.country ?? 'Spain')) : raw;
+  log(`Analysing ${beaches.length} shore features for ocean exposure...`);
+
+  const bathymetry = new Bathymetry(log);
+  await bathymetry.prepare(beaches.flatMap(probePoints));
+
+  let kept = 0;
+  beaches.forEach((beach, i) => {
+    const values = probePoints(beach).map(p => bathymetry.at(p.lat, p.lon));
+    const result = analyse(beach, values);
+    const country = beach.country ?? 'Spain';
+
+    if (!result.surfable) {
+      dropped.push({ name: beach.name, community: beach.community, country, osmId: beach.osmId, reason: result.reason });
+      return;
+    }
+
+    const coordKey = `${beach.lat},${beach.lon}`;
+    if (usedCoords.has(coordKey)) {
+      dropped.push({ name: beach.name, community: beach.community, country, osmId: beach.osmId, reason: 'duplicate coordinate' });
+      return;
+    }
+    usedCoords.add(coordKey);
+
+    let id = slugify(beach.name);
+    if (!id || usedIds.has(id)) id = `${id || 'spot'}-${beach.osmId}`;
+    usedIds.add(id);
+
+    spots.push({
+      id,
+      name: beach.name,
+      community: beach.community,
+      country,
+      type: 'Beach',
+      coordinates: { lat: beach.lat, lon: beach.lon },
+      config: {
+        swellWindow: result.swellWindow,
+        offshoreWindAngle: result.offshoreWindAngle,
+        windTolerance: 45,
+        idealHeight: IDEAL_HEIGHT,
+      },
+      provenance: {
+        source: 'openstreetmap-overpass',
+        osmType: beach.osmType,
+        osmId: beach.osmId,
+        feature: beach.feature ?? 'beach',
+        facingDeg: result.facing,
+        exposureDeg: result.exposureDeg,
+        elevationSource: 'etopo1-erddap-bilinear',
+        retrievedAt: new Date().toISOString().slice(0, 10),
+      },
+    });
+    kept++;
+
+    if (i % 500 === 0) log(`  ${i}/${beaches.length} analysed, ${kept} surfable`);
+  });
 
   await writeFile(OUT_PATH, JSON.stringify(spots, null, 1) + '\n');
 
@@ -301,12 +282,10 @@ async function main() {
     JSON.stringify({ generatedAt: new Date().toISOString(), kept: spots.length, dropped }, null, 1) + '\n'
   );
 
-  const byCommunity = {};
-  spots.forEach(s => (byCommunity[s.community] = (byCommunity[s.community] ?? 0) + 1));
-
-  log(`DONE. Surfable: ${spots.length} / ${beaches.length}. Dropped ${dropped.length}.`);
-  log(`Index -> ${INDEX_PATH.pathname}`);
-  log(JSON.stringify(byCommunity));
+  const byCountry = {};
+  spots.forEach(s => (byCountry[s.country] = (byCountry[s.country] ?? 0) + 1));
+  log(`DONE. ${kept} surfable of ${beaches.length} analysed. Catalogue: ${spots.length} spots.`);
+  log(JSON.stringify(byCountry));
 }
 
 main().catch(err => {

@@ -213,7 +213,7 @@ test.describe('spec: condition-rating', () => {
     // were indistinguishable, so the map could not be read at a glance.
     const sizes: Record<string, number> = {};
 
-    for (const [tier, stars] of [['epic', 9], ['good', 6], ['poor', 2]] as const) {
+    for (const [tier, stars] of [['epic', 7], ['good', 3], ['poor', 0]] as const) {
       await stubForecast(page, { stars });
       await page.goto('/');
       await page
@@ -243,7 +243,7 @@ test.describe('spec: condition-rating', () => {
     await epic.waitFor({ state: 'attached', timeout: 45_000 });
     await expect(epic).toHaveText('9');
 
-    await stubForecast(page, { stars: 2 });
+    await stubForecast(page, { stars: 0 });
     await page.goto('/');
     const poor = page.locator('[data-testid="spot-marker"]').first();
     await poor.waitFor({ state: 'attached', timeout: 45_000 });

@@ -32,20 +32,19 @@ function forecast(overrides: Partial<MarineForecast> = {}): MarineForecast {
 }
 
 test.describe('spec: condition-rating / Escala de tres niveles legible', () => {
-  test('8 and above is epic, 5-7 is fair, below 5 is poor', () => {
+  test('5 and above is epic, 1-4 is fair, 0 is poor (surf-forecast scale)', () => {
     expect(qualityTier(10)).toBe('epic');
-    expect(qualityTier(8)).toBe('epic');
-    expect(qualityTier(7)).toBe('good');
-    expect(qualityTier(5)).toBe('good');
-    expect(qualityTier(4)).toBe('poor');
+    expect(qualityTier(5)).toBe('epic');
+    expect(qualityTier(4)).toBe('good');
+    expect(qualityTier(1)).toBe('good');
     expect(qualityTier(0)).toBe('poor');
   });
 
   test('the tiers differ in size, not only in colour', () => {
     // Opacity alone was unreadable on a dark map; size carries the signal too.
-    const epic = qualityStyle(9);
-    const good = qualityStyle(6);
-    const poor = qualityStyle(2);
+    const epic = qualityStyle(7);
+    const good = qualityStyle(3);
+    const poor = qualityStyle(0);
 
     expect(epic.size).toBeGreaterThan(good.size);
     expect(good.size).toBeGreaterThan(poor.size);
@@ -53,12 +52,12 @@ test.describe('spec: condition-rating / Escala de tres niveles legible', () => {
   });
 
   test('only the best spots glow and carry their score', () => {
-    expect(qualityStyle(9).boxShadow).not.toBe('none');
-    expect(qualityStyle(6).boxShadow).toBe('none');
+    expect(qualityStyle(7).boxShadow).not.toBe('none');
+    expect(qualityStyle(3).boxShadow).toBe('none');
 
-    expect(qualityStyle(9).showScore).toBe(true);
-    expect(qualityStyle(6).showScore).toBe(true);
-    expect(qualityStyle(2).showScore).toBe(false);
+    expect(qualityStyle(7).showScore).toBe(true);
+    expect(qualityStyle(3).showScore).toBe(true);
+    expect(qualityStyle(0).showScore).toBe(false);
   });
 
   test('no tier on the quality scale is green', () => {
