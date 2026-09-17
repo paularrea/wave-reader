@@ -15,8 +15,13 @@ const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 
 /** Must match the server's BATCH_SIZE so client and server cut the same chunks. */
 const BATCH_SIZE = 50;
-/** Chunk requests in flight at once; each chunk is two upstream calls. */
-const MAX_CONCURRENT_CHUNKS = 4;
+/**
+ * Chunk requests in flight at once. Kept low: Open-Meteo's free tier limits
+ * calls per minute, and each chunk is two multi-location upstream calls.
+ */
+const MAX_CONCURRENT_CHUNKS = 2;
+/** A rate-limited chunk is retried on its own rather than waiting for a pan. */
+const CHUNK_RETRY_MS = 20_000;
 /**
  * Markers are DOM nodes, and a node per beach in a busy region stalls the main
  * thread on every pan. Only what is on screen, plus a margin, gets one.
@@ -72,6 +77,8 @@ export function MarineMap() {
   /** Bumped whenever region, hour or level change, so stale responses are ignored. */
   const generationRef = useRef(0);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  /** Latest scoreVisible, for retries scheduled by an older closure. */
+  const scoreVisibleRef = useRef<(() => Promise<void>) | null>(null);
 
   const {
     userLocation,
@@ -199,8 +206,12 @@ export function MarineMap() {
         );
         if (generation !== generationRef.current) return;
         if (!res.ok) {
-          // Let a later pan retry this chunk rather than marking it done.
           chunksRef.current.delete(chunk);
+          // Retry by itself: without this, a 429 left a patch of the map empty
+          // until the user happened to pan.
+          setTimeout(() => {
+            if (generation === generationRef.current) scoreVisibleRef.current?.();
+          }, CHUNK_RETRY_MS);
           return;
         }
         const data = await res.json();
@@ -221,6 +232,10 @@ export function MarineMap() {
       }
     });
   }, [nearViewport, reconcileMarkers, selectedRegion, currentHour, userSkillLevel]);
+
+  useEffect(() => {
+    scoreVisibleRef.current = scoreVisible;
+  }, [scoreVisible]);
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';

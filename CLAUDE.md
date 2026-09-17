@@ -181,9 +181,12 @@ Cataluña. A manual pick is never overwritten by a late geolocation callback.
 
 The map scores **every spot near the viewport** through `/api/forecast/batch`: each
 region's spots are ordered by id and cut into fixed chunks of 50
-(`src/services/spot-batches.ts`), each chunk is two upstream Open-Meteo calls for a single
-UTC hour with all 50 coordinates, and identical chunk URLs for every visitor share the
-data cache. A marker is only created once its spot has a rating with data; spots without
+(`src/services/spot-batches.ts`), each chunk is two upstream Open-Meteo calls with all 50
+coordinates covering the **whole UTC day** of the requested hour, joined by timestamp.
+Asking per day rather than per hour means stepping the slider within a day reuses the
+cached upstream response, which matters because Open-Meteo's free tier limits calls per
+minute (a preview deploy hit 429 after ~10 hour-by-hour chunks). The client runs at most
+two chunks at once and retries a failed chunk by itself after 20 s. A marker is only created once its spot has a rating with data; spots without
 data never appear. The earlier per-spot fetching was capped at 60 spots per viewport and
 left 194 of 300 Catalan markers permanently hollow — do not reintroduce a cap.
 

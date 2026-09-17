@@ -1,12 +1,9 @@
 [
  "Louth",
  "Hauts-de-France",
- "Normandie",
- "Bretagne",
  "Pays de la Loire",
  "Nouvelle-Aquitaine",
  "Occitanie",
- "Provence-Alpes-Côte d'Azur",
  "Corse",
  "La Réunion",
  "Guadeloupe",
@@ -16,5 +13,11 @@
  "Scotland",
  "Wales",
  "Northern Ireland",
- "England"
+ "England",
+ "Normandie",
+ "Kerry",
+ "Dublin",
+ "Bretagne",
+ "Provence-Alpes-Côte d'Azur",
+ "Andalucía"
 ]

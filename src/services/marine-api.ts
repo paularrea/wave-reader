@@ -175,8 +175,8 @@ export async function getMarineForecast(
 /** Open-Meteo accepts many coordinates per call; 50 keeps URLs well within limits. */
 export const BATCH_SIZE = 50;
 
-/** `YYYY-MM-DDTHH:00` in UTC for the timeline's hour offset. */
-function utcHourKey(hourOffset: number, now: Date = new Date()): string {
+/** The absolute UTC hour the timeline's offset points at. */
+function targetUtcHour(hourOffset: number, now: Date = new Date()): Date {
   const next = new Date(now);
   // Round up to the next whole hour, as the timeline anchor does. Every offset
   // in the catalogue is a whole number of hours, so the absolute hour matches.
@@ -184,8 +184,10 @@ function utcHourKey(hourOffset: number, now: Date = new Date()): string {
     next.setUTCHours(next.getUTCHours() + 1, 0, 0, 0);
   }
   next.setUTCHours(next.getUTCHours() + hourOffset);
-  return next.toISOString().slice(0, 13) + ':00';
+  return next;
 }
+
+const isoHour = (d: Date) => d.toISOString().slice(0, 13) + ':00';
 
 /**
  * Rating inputs for up to BATCH_SIZE points at a single hour, in two upstream
@@ -200,10 +202,20 @@ export async function getMarineForecastBatch(
   if (points.length === 0) return [];
   if (points.length > BATCH_SIZE) throw new Error(`batch of ${points.length} exceeds ${BATCH_SIZE}`);
 
-  const hour = utcHourKey(hourOffset);
+  /**
+   * Ask for the whole UTC day containing the target hour, not the hour alone.
+   * Open-Meteo's free tier rate-limits per minute and a busy region is many
+   * chunks: with a day per request, moving the slider within that day costs no
+   * upstream call, and the URL is identical for every visitor all day long.
+   */
+  const target = targetUtcHour(hourOffset);
+  const dayStart = new Date(Date.UTC(target.getUTCFullYear(), target.getUTCMonth(), target.getUTCDate()));
+  const dayEnd = new Date(dayStart.getTime() + 23 * 3_600_000);
+  const hour = isoHour(target);
+
   const lats = points.map(p => p.lat.toFixed(4)).join(',');
   const lons = points.map(p => p.lon.toFixed(4)).join(',');
-  const window = `timezone=GMT&start_hour=${hour}&end_hour=${hour}`;
+  const window = `timezone=GMT&start_hour=${isoHour(dayStart)}&end_hour=${isoHour(dayEnd)}`;
 
   const [marineRaw, weatherRaw] = await Promise.all([
     getJson(`${MARINE_HOST}?latitude=${lats}&longitude=${lons}&hourly=${MARINE_PARAMS}&${window}`),
@@ -220,20 +232,25 @@ export async function getMarineForecastBatch(
     const w = weather[i]?.hourly;
     if (!m?.time?.length) return null;
 
+    // Join by timestamp, never by position, as the single-spot path does.
+    const mi = m.time.indexOf(hour);
+    if (mi === -1) return null;
+    const wi = w?.time?.indexOf(hour) ?? -1;
+
     const forecast: MarineForecast = {
       timestamp: hour,
-      swellHeight: at(m.swell_wave_height, 0) ?? at(m.wave_height, 0),
-      swellPeriod: at(m.swell_wave_period, 0) ?? at(m.wave_period, 0),
-      swellDirection: at(m.swell_wave_direction, 0) ?? at(m.wave_direction, 0),
-      secondarySwellHeight: at(m.secondary_swell_wave_height, 0),
-      secondarySwellPeriod: at(m.secondary_swell_wave_period, 0),
-      secondarySwellDirection: at(m.secondary_swell_wave_direction, 0),
-      windWaveHeight: at(m.wind_wave_height, 0),
-      windWavePeriod: at(m.wind_wave_period, 0),
-      windWaveDirection: at(m.wind_wave_direction, 0),
-      windSpeed: at(w?.wind_speed_10m, 0),
-      windDirection: at(w?.wind_direction_10m, 0),
-      windGust: at(w?.wind_gusts_10m, 0),
+      swellHeight: at(m.swell_wave_height, mi) ?? at(m.wave_height, mi),
+      swellPeriod: at(m.swell_wave_period, mi) ?? at(m.wave_period, mi),
+      swellDirection: at(m.swell_wave_direction, mi) ?? at(m.wave_direction, mi),
+      secondarySwellHeight: at(m.secondary_swell_wave_height, mi),
+      secondarySwellPeriod: at(m.secondary_swell_wave_period, mi),
+      secondarySwellDirection: at(m.secondary_swell_wave_direction, mi),
+      windWaveHeight: at(m.wind_wave_height, mi),
+      windWavePeriod: at(m.wind_wave_period, mi),
+      windWaveDirection: at(m.wind_wave_direction, mi),
+      windSpeed: wi === -1 ? null : at(w?.wind_speed_10m, wi),
+      windDirection: wi === -1 ? null : at(w?.wind_direction_10m, wi),
+      windGust: wi === -1 ? null : at(w?.wind_gusts_10m, wi),
       seaLevel: null,
     };
 

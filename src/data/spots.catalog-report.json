@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-17T00:17:00.838Z",
- "kept": 4343,
+ "generatedAt": "2026-09-17T08:09:19.758Z",
+ "kept": 7870,
  "dropped": [
   {
    "name": "Río A Pesqueira",
@@ -2631,6 +2631,2715 @@
    "name": "Ross Bay",
    "community": "Meath",
    "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Axo'Plage",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 173515595,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Argales",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 298636317,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage d'Isle",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 360749095,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "carrière",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 380824166,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Manège",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 386005707,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage aux catamarands",
+   "community": "Hauts-de-France",
+   "country": "France",
+   "osmId": 1022804436,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Naturiste",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 9913849107,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Ponton ARBL",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 10750854644,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Monnerie",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 37420157,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Sablières",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 97217867,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Sillé Plage",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 151639805,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la roche Martin",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 160729483,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Rochefort",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 622293034,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "plage aux oiseaux",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 867345081,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la rincerie",
+   "community": "Pays de la Loire",
+   "country": "France",
+   "osmId": 1275210443,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Montaut",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 5322122769,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de Maubuisson",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 5322122770,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Poey d'Oloron",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 7758314395,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Sablière d'Estos",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 7761746103,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Bonneuil-Matours",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 7786832320,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage d'Aren",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 8680121944,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bègles Plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 9399118364,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Pont de Vicq",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 9919343764,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "petite plage galets",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 11019536501,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "plagette galets",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 11019619128,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage d'Orin",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 12101343461,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage municipale d'Azur",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 12155972263,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Istudianteko Hondartza Ttikia (Vers 1970 - N'existe plus aujourd'hui)",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 12529839747,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Gagne-vin",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 13956954326,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "plage du Pont Noir",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 14052593022,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Le Bourg d'Hem plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 25073695,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bègles Plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 25874471,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Lac",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 27514042,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Île de Mijema",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 30472456,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Guerlie",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 39827879,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Chassagne",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 39827882,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Port",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 92762431,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage du Lac de Léon",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 118338778,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage 1",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 125863517,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Port",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 127254533,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Sainte-Hélène",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 131264206,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Gazaille",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 131734800,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de La Cèpe",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 140304686,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de Fréaudour",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 154336414,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Santrop",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 154336420,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage 2",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 176706371,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Vauveix",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 176782873,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Nergout",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 176785682,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Aire naturelle de Pelletanges",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 177045428,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Baignade aménagée, La Plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 180140042,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Moulin Blanc",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 188174624,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Jaugà",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 199042981,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Pierrefitte",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 211247435,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Saint-Julien-Le-Petit",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 214290995,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Foncillon",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 222741774,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "La Grande Conche",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 222741782,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Chabannes",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 253638114,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Bardoulets",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 264294606,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage naturiste du Maillereau",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 282146306,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Masgrangeas",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 282314924,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Soleil Levant",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 288749491,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plages des Aubazines",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 297009331,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Lavaud",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 331218224,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bac de Sors",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 335063079,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La petite plage du Tedey",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 341059559,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Sagnat",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 358589787,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Libourne plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 407011520,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage De Petit-Bersac",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 512470295,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "plan d'eau des Gours",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 516497190,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Bardets",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 540274766,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Base de Loisirs de Vauchiron",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 545900317,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage d'Outre-Val",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 720318878,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Châtelus le Marcheix",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 731591485,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Montréal",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 757801712,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Maury",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 830436491,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Baignade du Portal",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1038888543,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Garonne Plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1064344455,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Baignade de Marsac",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1084086458,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Bertholière",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1085349046,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Marmande plage",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1268118102,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Peyre",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1337690832,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des naufragés",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1357453585,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Le Ponton",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1388718404,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Caudon",
+   "community": "Nouvelle-Aquitaine",
+   "country": "France",
+   "osmId": 1419248906,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Antinea",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 5844594638,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Gorges du Verdouble",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 7259083325,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Rabastens",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 7730081635,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de La Maurinié",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 7999169292,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Meyraguet",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 8001173023,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Borie",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 8001202488,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage naturiste",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 8506072268,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Aire de la Roque",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 9043770950,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Stade",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 9193792151,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Le 15",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 10810944804,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Badech",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 12100943691,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Grave",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 12137333618,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Roc Blanc",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 12361191178,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Collias",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13004915754,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage naturiste du Parc des Libertés",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13048344826,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Planche",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13094704217,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13866913333,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Plage de la Cesse",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13922493556,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Gourg de bade",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 13962274019,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage publique des Escoumes",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 8609417,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Corbières",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 172746041,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Calquière",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 172780027,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Muse",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 172780028,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Saint-Rome Plage",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 175791525,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Lac de la Cisba",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 201488846,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Les Vidissières",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 220457086,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Fort",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 359513462,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Lampy",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 359960179,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de La Nauq",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 363884524,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Foussac",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 435640556,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Vernhes II",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 465236336,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plaja dau Verç",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 577425957,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Les Moulinoches",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 608219944,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Montbel",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 618642673,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Mésange",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 729512148,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Fauvette",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 729512150,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Vernhes I",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 756297256,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Trémie",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 842793251,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de la Pyramide",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 842809182,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Alès Plage",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 889358307,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du plan d'eau",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 894400141,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Les Pierres Plates",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 943613718,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "plage publique",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1027381809,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Trébas Plage",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1083825015,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Le Rocher",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1185071248,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Baignade El Mouli",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1219401040,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage communale",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1282553405,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Port",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1342677542,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plaja dau Verç",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1416357075,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "LAGON",
+   "community": "Occitanie",
+   "country": "France",
+   "osmId": 1457719265,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Stagnone",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 35997391,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Porto",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 41688589,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de la Roya",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 130416802,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de la Roya",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 210669778,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Baracci",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 234880672,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Bussaglia",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 244204815,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de Portigliolo",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 258423189,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage Sampiero",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 281356343,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Golfo di Sogno",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 300694305,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Tettola",
+   "community": "Corse",
+   "country": "France",
+   "osmId": 803552233,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de la Pointe Marin",
+   "community": "Martinique",
+   "country": "France",
+   "osmId": 353688667,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Crique Toussaint",
+   "community": "Guyane",
+   "country": "France",
+   "osmId": 332232705,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Kapiai uwa’a",
+   "community": "Guyane",
+   "country": "France",
+   "osmId": 4048968776,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Débarcadère de la Glacière",
+   "community": "Guyane",
+   "country": "France",
+   "osmId": 4893873410,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Carbet bâche",
+   "community": "Guyane",
+   "country": "France",
+   "osmId": 10270426012,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "mozaïk",
+   "community": "Guyane",
+   "country": "France",
+   "osmId": 385043639,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de M'Tsanga-Beach / M'Tsanga Chéhi",
+   "community": "Mayotte",
+   "country": "France",
+   "osmId": 149893173,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Poroani / Fassigny Poroani",
+   "community": "Mayotte",
+   "country": "France",
+   "osmId": 836777019,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Salmon Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 281897551,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Long Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1289375999,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Sandy Cove (Old Picnic Spot)",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 4988487627,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Sandy Bays",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 4988490121,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Coral Beach - Plockton",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 9971678901,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Black Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 11968956821,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 14059959481,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Gairloch Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 24797582,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Drum Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 41065883,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Wig Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 59164906,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Scart Island",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 60437827,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Scapa beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 78329024,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Dunnet Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 146078733,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Little Ganavan Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 150031039,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Ganavan Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 150031042,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Traigh nam Feannag",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 154561676,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Duck Bay Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 155638626,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Coral Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 157534015,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh na Beirigh",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 157687436,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Burleigh Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 170484679,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Grassy Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 179863519,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Sands of Evie",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 181002753,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tràigh Ostaig",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 182930636,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh a' Chnuic",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 182931552,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Camas a'Chruthaich",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 209883893,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Little Gruinard Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 209883895,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Gainmheach Mhòr",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 209972642,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Fhaodhailinn",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 210025031,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Camas na Muic",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 210081853,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Gainmheach Achadh Deuthasdal",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 210185565,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Port Ban",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 252234992,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Dores Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 259657077,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Singing Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 276696011,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Singing Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 277378032,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Sallochy Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 278192086,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tralee Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 282730882,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Milton Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 292436172,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Gulls Walk",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 298996056,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Hunterston Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 299339909,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Southanan Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 301605798,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Camas a' Mhòr Bheòil (or Braes Beach)",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 336632810,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tràigh Iar",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 336704237,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tràigh Niosaboist",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 336704238,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Mhòr",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 336704239,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tràigh Lingeigh",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 350928424,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Netherlee Stone Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 489631125,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Boat's Ayre",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 493485886,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Timna Ayre",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 493485887,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Dukies",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 493485891,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Peanmeanach Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 503834563,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Bodden Boo",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 508461250,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tràigh nam Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 516870593,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tràigh Hòrnais",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 662927174,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Newton Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 671185965,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Thunga",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 674082484,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Sandy Hole",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 688247379,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Camas Gaineamhaich",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 862488521,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Wigtown Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 884086616,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Baldoon Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 884086628,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Marine Lake Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 884308168,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Rosemarkie Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 897074971,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Cuthill Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 897667693,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Drumbuie Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 960190895,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Cockle Shore Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 963405620,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Traigh Shanndaig",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1052990557,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Edderton Sands",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1150453717,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tarlogie Scalps",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1207816781,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Da Blade",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1227695018,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Blaa",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1227695020,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Patersons",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1227695021,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Roond Ayre",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1230720823,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Holland Ayre",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1230720824,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Woodhaven Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1339216369,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Wormit Bay",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1339216371,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Camas Cros",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 1245896,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Ghriais",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 2292722,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Traigh Rebac",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 2292723,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Chuil",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 2292747,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Mhealaboist",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 3869875,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Oitir Mhòr",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 5429059,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Broughty Ferry Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 7496469,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tràigh Losgaintir",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 14940652,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Rosamol",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 14940653,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tràigh Sheileboist",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 14940654,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grogport Beach",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 15871689,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Bolltravagh",
+   "community": "Scotland",
+   "country": "United Kingdom",
+   "osmId": 18323647,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Traeth y Gribin",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 301568386,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Tywyn Bâch",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 594355819,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Y Ro",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 672637585,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Scott's Bay",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 1098843448,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Private Beach",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 1188903487,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Sandy Haven Beach",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 1317723912,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Traeth Gwyllt",
+   "community": "Wales",
+   "country": "United Kingdom",
+   "osmId": 19523501,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Newtownabbey Bay (Hazelbank) Beach",
+   "community": "Northern Ireland",
+   "country": "United Kingdom",
+   "osmId": 13189683536,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Seapark Beach",
+   "community": "Northern Ireland",
+   "country": "United Kingdom",
+   "osmId": 920733589,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "jordanstown beach",
+   "community": "Northern Ireland",
+   "country": "United Kingdom",
+   "osmId": 1548187373,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Smiths Strand",
+   "community": "Northern Ireland",
+   "country": "United Kingdom",
+   "osmId": 4658498,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Trimley Shores",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 3634485837,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Fossil Beach",
+   "community": "Gloucestershire",
+   "country": "United Kingdom",
+   "osmId": 7231274168,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Car Park Beach",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 10118723099,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Creek Beach South",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 10118781388,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Stone Beach",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 10118786957,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Creek  Beach North",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 10118807334,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Wader Point",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 10119538278,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "library",
+   "community": "Nottinghamshire",
+   "country": "United Kingdom",
+   "osmId": 12389365730,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Beach at Doncaster Lakeside",
+   "community": "South Yorkshire",
+   "country": "United Kingdom",
+   "osmId": 13036042199,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Hill Head Beach",
+   "community": "Hampshire",
+   "country": "United Kingdom",
+   "osmId": 23714975,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "The Beach",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 39750541,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Prinsted Beach",
+   "community": "West Sussex",
+   "country": "United Kingdom",
+   "osmId": 55280968,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Basett's Ridge",
+   "community": "Devon",
+   "country": "United Kingdom",
+   "osmId": 67117163,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Mill Beach",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 104285152,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Thorney Bay Beach",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 106522753,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Instow Beach",
+   "community": "Devon",
+   "country": "United Kingdom",
+   "osmId": 165323326,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "West Appledore",
+   "community": "Devon",
+   "country": "United Kingdom",
+   "osmId": 165326922,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Kelson Beach",
+   "community": "Greater London",
+   "country": "United Kingdom",
+   "osmId": 178159753,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tranmere Beach",
+   "community": "Merseyside",
+   "country": "United Kingdom",
+   "osmId": 300314313,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Pebble Beach",
+   "community": "North Yorkshire",
+   "country": "United Kingdom",
+   "osmId": 314934440,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Lake North Beach",
+   "community": "Dorset",
+   "country": "United Kingdom",
+   "osmId": 333875487,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "York Beach",
+   "community": "North Yorkshire",
+   "country": "United Kingdom",
+   "osmId": 360562601,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Amity Beach",
+   "community": "Surrey",
+   "country": "United Kingdom",
+   "osmId": 363108220,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Amity Beach",
+   "community": "Surrey",
+   "country": "United Kingdom",
+   "osmId": 363108221,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Loe Beach",
+   "community": "Cornwall",
+   "country": "United Kingdom",
+   "osmId": 369096312,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Beach",
+   "community": "Bedfordshire",
+   "country": "United Kingdom",
+   "osmId": 398764678,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Hollows",
+   "community": "Greater London",
+   "country": "United Kingdom",
+   "osmId": 505414700,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Hollows",
+   "community": "Greater London",
+   "country": "United Kingdom",
+   "osmId": 505414701,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Hog Hole",
+   "community": "Greater London",
+   "country": "United Kingdom",
+   "osmId": 505414704,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Shipstal Beach",
+   "community": "Dorset",
+   "country": "United Kingdom",
+   "osmId": 661830926,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Calshot Beach",
+   "community": "Hampshire",
+   "country": "United Kingdom",
+   "osmId": 667037406,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Penguin Beach",
+   "community": "Hampshire",
+   "country": "United Kingdom",
+   "osmId": 695505468,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Dock Beach",
+   "community": "Greater London",
+   "country": "United Kingdom",
+   "osmId": 703154627,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Beach",
+   "community": "Cumbria",
+   "country": "United Kingdom",
+   "osmId": 714861359,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Egypt Bay Beach",
+   "community": "Kent",
+   "country": "United Kingdom",
+   "osmId": 739652149,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Penarvon Cove",
+   "community": "Cornwall",
+   "country": "United Kingdom",
+   "osmId": 800350163,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Brockenhurst Beach",
+   "community": "Hampshire",
+   "country": "United Kingdom",
+   "osmId": 946973720,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Northfleet Beach",
+   "community": "Kent",
+   "country": "United Kingdom",
+   "osmId": 987466338,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Double Mills Beach",
+   "community": "Cumbria",
+   "country": "United Kingdom",
+   "osmId": 1116487398,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Beach",
+   "community": "Nottinghamshire",
+   "country": "United Kingdom",
+   "osmId": 1137862037,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Beach",
+   "community": "Kent",
+   "country": "United Kingdom",
+   "osmId": 1168460534,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Sea Lions",
+   "community": "South Yorkshire",
+   "country": "United Kingdom",
+   "osmId": 1170517330,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Shingle Beach",
+   "community": "Tyne and Wear",
+   "country": "United Kingdom",
+   "osmId": 1280198160,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Shingles",
+   "community": "Tyne and Wear",
+   "country": "United Kingdom",
+   "osmId": 1280222473,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Shingles",
+   "community": "Tyne and Wear",
+   "country": "United Kingdom",
+   "osmId": 1280222474,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Stort Beach",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 1289226296,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Doncaster Lakeside Beach",
+   "community": "South Yorkshire",
+   "country": "United Kingdom",
+   "osmId": 1418528793,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "The Leys Park",
+   "community": "Oxfordshire",
+   "country": "United Kingdom",
+   "osmId": 1429779203,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "East Point Beach",
+   "community": "Essex",
+   "country": "United Kingdom",
+   "osmId": 1469862075,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Brea Beach",
+   "community": "Cornwall",
+   "country": "United Kingdom",
+   "osmId": 2194118,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Browndown Point",
+   "community": "Hampshire",
+   "country": "United Kingdom",
+   "osmId": 4077216,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Butin",
+   "community": "Normandie",
+   "country": "France",
+   "osmId": 624113097,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Pors Donn",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 1425137977,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage des sables rouges",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 9780274540,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage du Vallion",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 10139284944,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Moulin Blanc",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 23432320,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage d'Apigné",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 25815156,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Manchette",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 32390913,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage des Briantais",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 126278586,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grève de Porsguen",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 132103162,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage des Granges",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 144977256,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Commana",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 162862006,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Sizun",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 162863822,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Bill",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 164950339,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Grande Plage du Drehen",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 167159857,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Kerbilouet",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 169132737,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grève de Garel",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 171495020,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de l'Hôtellerie",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 184557682,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grève de Penn al Lann",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 199653962,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage du Ruet",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 201928459,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Le Rudel",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 220428235,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Trémelin",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 227392375,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Dré Hen",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 245671681,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Belle Adour",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 251461261,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de la Passagère",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 285500396,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage du Douvez",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 287516882,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du passage",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 374339528,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de la Roche Morin",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 385638384,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage des Barges",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 389843027,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage des Sables Blancs",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 413129123,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Port Miquel",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 414770176,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "plage de Pont Mahé",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 467953849,
+   "reason": "duplicate coordinate"
+  },
+  {
+   "name": "Plage de Brouel",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 481426410,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grève du Yelen",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 533122533,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Grève du Roz",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 533123240,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Grève du Stang",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 631375739,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de Kerolan",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 633948374,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Quatre Vaux",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 677454711,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Petite plage",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 708783103,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de Lasné",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 708783104,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage du Vauvert",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 956388885,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "ancienne base nautique",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 1214143389,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Trézmalaouen",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 1239470457,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Zone de Pêche",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 1279593478,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Trez Rouz",
+   "community": "Bretagne",
+   "country": "France",
+   "osmId": 16204495,
+   "reason": "duplicate coordinate"
+  },
+  {
+   "name": "Plage naturiste",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 8022125906,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la baie du Cheiron",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 11120056868,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Saint-Julien du Verdon",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 11121883453,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Chaumets",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 11124674265,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la petite ruine",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 11124674266,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Sulagran",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 11124674267,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 13593057726,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de St-Julien",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 14039867325,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Les Marines de Cogolin",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 95565061,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage du Centre Ville",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 122511791,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Val de Durance",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 160432911,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Europe",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 302321303,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage naturiste des Pintrons",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 383853486,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Moune",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 431528441,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage de Guerrevielle",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 435288755,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Beauvallon beach",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 435288756,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage de la Romaniquette",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 442267700,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage des Pommiers",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 467763446,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Tremouilles",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 467779064,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Moune",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 479304760,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage des Marettes",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 676802969,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "L'Estang beach",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 701623981,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Plan",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 839901378,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Galetas",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 954178304,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Cigales",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 973669937,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Anse du Vieux Moulin",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 973669941,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage du Vieux Moulin",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 973669942,
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Plage Margaridon",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1064848147,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Des Cabassons",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1065930147,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage ombragée",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1086155773,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Chanterenne",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1203927661,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage \"Au droit des deux campings\"",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1278524673,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Commandon et Charoup",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1278535966,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Vigne d'Aiguines",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1278538722,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage naturiste de Sainte Croix",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1313925799,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage du Gros Pins",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1313953992,
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Plage Les Ruisses",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1343806581,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Chabassole",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1343806599,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage des Américains",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1368061887,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Cadeno",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1393925569,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de Bauduen",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1429731927,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage de la Cave ds Fées",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 1497847103,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Plage Sud",
+   "community": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "osmId": 8952209,
+   "reason": "open arc of only 22.5 degrees"
   }
  ]
 }
