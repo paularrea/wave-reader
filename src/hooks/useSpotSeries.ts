@@ -14,12 +14,17 @@ export interface SpotSeriesPayload {
 }
 
 export type SeriesState =
-  | { status: 'idle' | 'loading'; data: null }
+  | { status: 'idle'; data: null }
+  | { status: 'loading'; data: null; retrying?: boolean }
   | { status: 'ready'; data: SpotSeriesPayload }
   | { status: 'error'; data: null };
 
-/** Waits before each retry. A 429 from the upstream quota usually clears within seconds. */
-export const RETRY_DELAYS_MS = [1500, 4000, 8000];
+/**
+ * Waits before each retry, about 70 s in all. The upstream quota is per minute,
+ * so giving up sooner can fail just before it resets -- which is what happened
+ * when loading a large region spent the minute's quota.
+ */
+export const RETRY_DELAYS_MS = [2000, 5000, 10000, 20000, 30000];
 /** Matches the server's upstream cache: a reopened spot within this window costs nothing. */
 const FRESH_MS = 30 * 60_000;
 
@@ -76,6 +81,7 @@ export function useSpotSeries(spotId: string | null, level: string) {
             setSettled({ requestKey, value: { status: 'error', data: null } });
             return;
           }
+          setSettled({ requestKey, value: { status: 'loading', data: null, retrying: true } });
           await sleep(RETRY_DELAYS_MS[i]);
           if (cancelled) return;
         }

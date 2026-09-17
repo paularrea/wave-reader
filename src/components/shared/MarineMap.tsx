@@ -85,6 +85,7 @@ export function MarineMap() {
     userSkillLevel,
     currentHour,
     selectedRegion,
+    selectedSpotId,
     resolveLocation,
     setSelectedCountry,
     setSelectedRegion,
@@ -238,6 +239,9 @@ export function MarineMap() {
   const scoreVisible = useCallback(async () => {
     const map = mapRef.current;
     if (!map) return;
+    // An open spot gets the upstream quota to itself: map chunks for a large
+    // region can spend a whole minute's worth and leave the detail blank.
+    if (selectedSpotId) return;
     const generation = generationRef.current;
     const now = Date.now();
 
@@ -303,7 +307,7 @@ export function MarineMap() {
         setPending(p => (p.key === key ? { key, n: Math.max(0, p.n - 1) } : p));
       }
     });
-  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, selectedRegion, userSkillLevel, queryKey]);
+  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, selectedRegion, selectedSpotId, userSkillLevel, queryKey]);
 
   useEffect(() => {
     scoreVisibleRef.current = scoreVisible;

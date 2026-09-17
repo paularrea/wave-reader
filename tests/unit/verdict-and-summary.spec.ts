@@ -3,6 +3,7 @@ import { verdict, bestWindow, periodClass } from '../../src/services/verdict';
 import { bestAt, bestByDay, ratingAt, SpotHorizon } from '../../src/services/map-summary';
 import type { SeriesHour } from '../../src/services/forecast-series';
 import type { MarineForecast } from '../../src/services/marine-api';
+import { edgeCacheHeaders } from '../../src/services/http-cache';
 
 const CONFIG = { offshoreWindAngle: 140, windTolerance: 30 };
 
@@ -113,5 +114,13 @@ test.describe('spec: region-selection / Mejores spots y mejor nota por día', ()
     const spots = [spot('a', [0, 1, 0, 0]), spot('b', [0, 0, 0, 5])];
     const days = bestByDay(spots, 4, h => START + h * H, h => (h < 2 ? 'thu' : 'fri'));
     expect(days).toEqual({ thu: 1, fri: 5 });
+  });
+});
+
+test.describe('edge caching', () => {
+  test('hour-anchored responses expire at the next whole hour, absolute ones last longer', () => {
+    expect(edgeCacheHeaders(undefined, new Date('2026-09-17T10:45:00Z'))['Cache-Control']).toContain('s-maxage=900');
+    expect(edgeCacheHeaders(undefined, new Date('2026-09-17T10:59:50Z'))['Cache-Control']).toContain('s-maxage=30');
+    expect(edgeCacheHeaders(1800, new Date('2026-09-17T10:59:50Z'))['Cache-Control']).toContain('s-maxage=1800');
   });
 });

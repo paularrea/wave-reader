@@ -203,6 +203,14 @@ is refetched only after 60 min. Open-Meteo's free tier limits calls per minute (
 preview deploy once hit 429 after ~10 hour-by-hour chunks), so the client runs at most
 two chunks at once and retries a failed chunk by itself after 20 s.
 
+**Quota protection** (a large region is ~20 chunks, more than Open-Meteo's per-minute
+allowance): batch windows start at the current 6-hour UTC block so the upstream URL is
+stable and cached for 3 h; batch responses carry `s-maxage=1800` and the spot series
+`s-maxage` until the next whole hour (its index 0 is that hour), so repeats are served by
+Vercel's edge (`services/http-cache.ts`); the map fetches nothing while a spot is open;
+and the spot series retries for ~70 s (2, 5, 10, 20, 30 s) showing "Still trying", since
+giving up inside the minute once left the detail blank after a region load.
+
 The same horizons feed the bottom sheet: **Best in view** (top 3 at the selected hour,
 opening the spot *at that hour* because that is what was ranked) and each day chip's
 best score, plus a per-region "best today" shown in the region picker for regions

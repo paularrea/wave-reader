@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { edgeCacheHeaders } from '@/services/http-cache';
 import { getMarineSeries, SpotSeries } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
 import spots from '@/data/spots.json';
@@ -38,6 +39,7 @@ export async function GET(request: Request) {
   const config = spot.config as SpotConfig;
   const basin = basinOf(spot.coordinates.lat, spot.coordinates.lon);
 
+  // Index 0 is the next whole hour, so a cached copy is only valid until then.
   return NextResponse.json({
     spot: { id: spot.id, config },
     timezone: series.timezone,
@@ -47,5 +49,5 @@ export async function GET(request: Request) {
       ...calculateStarRating(forecast, config, level, spot.name, basin),
       forecast,
     })),
-  });
+  }, { headers: edgeCacheHeaders() });
 }

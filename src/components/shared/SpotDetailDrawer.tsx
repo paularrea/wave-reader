@@ -361,7 +361,13 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
               </div>
             ) : (
               <div data-testid="forecast-loading" aria-live="polite">
-                <span className="sr-only">Loading forecast</span>
+                {series.status === 'loading' && series.retrying ? (
+                  <p className="text-[13px] text-ink-2 mb-2" data-testid="forecast-retrying">
+                    The data provider is busy. Still trying…
+                  </p>
+                ) : (
+                  <span className="sr-only">Loading forecast</span>
+                )}
                 <ForecastTimelineSkeleton />
               </div>
             )}

@@ -1070,17 +1070,33 @@ test.describe('spec: drawer-navigation / Carga fiable del detalle', () => {
     await openFirstSpot(page);
 
     await expect(page.getByTestId('forecast-loading')).toBeVisible();
-    await expect(page.getByTestId('swell-height')).toContainText('1.5 m', { timeout: 10_000 });
+    await expect(page.getByTestId('swell-height')).toContainText('1.5 m', { timeout: 15_000 });
     await expect(page.getByTestId('forecast-error')).toHaveCount(0);
   });
 
-  test('a persistent failure says so and can be retried', async ({ page }) => {
-    // Initial attempt plus three retries all fail; the manual retry succeeds.
-    await stubForecast(page, { seriesFailures: [429, 429, 502, 502] });
+  test('a persistent failure keeps trying for about a minute, then says so and can be retried', async ({ page }) => {
+    const CLOCK = new Date('2026-09-16T12:20:00Z').getTime();
+    await page.clock.install({ time: CLOCK });
+    // The first attempt and all five retries fail; the manual retry succeeds.
+    await stubForecast(page, { now: CLOCK, seriesFailures: [429, 429, 502, 429, 429, 502] });
     await page.goto('/');
     await openFirstSpot(page);
 
-    await expect(page.getByTestId('forecast-error')).toBeVisible({ timeout: 25_000 });
+    await expect(page.getByTestId('forecast-retrying')).toBeVisible();
+    // The upstream quota is per minute, so the app must not give up before it resets.
+    // Each retry waits on a real (stubbed) request before its next timer exists,
+    // so fake time is advanced one wait at a time.
+    const advance = async (ms: number) => {
+      await page.waitForTimeout(400);
+      await page.clock.runFor(ms);
+    };
+    await advance(2_000);
+    await advance(5_000);
+    await advance(10_000);
+    await expect(page.getByTestId('forecast-error')).toHaveCount(0);
+    await advance(20_000);
+    await advance(30_000);
+    await expect(page.getByTestId('forecast-error')).toBeVisible({ timeout: 15_000 });
     await expect(page.getByTestId('swell-height')).toHaveText('—');
 
     await page.getByTestId('forecast-retry').click();

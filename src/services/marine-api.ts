@@ -87,8 +87,8 @@ interface HourlyResponse {
  */
 const UPSTREAM_CACHE_SECONDS = 3600; // matches the forecast's hourly resolution
 
-async function getJson(url: string): Promise<HourlyResponse> {
-  const res = await fetch(url, { next: { revalidate: UPSTREAM_CACHE_SECONDS } });
+async function getJson(url: string, revalidate: number = UPSTREAM_CACHE_SECONDS): Promise<HourlyResponse> {
+  const res = await fetch(url, { next: { revalidate } });
   if (!res.ok) {
     const body = await res.text().catch(() => '');
     throw new Error(`${new URL(url).host} responded ${res.status}: ${body.slice(0, 200)}`);
@@ -220,6 +220,14 @@ function targetUtcHour(hourOffset: number, now: Date = new Date()): Date {
 
 const isoHour = (d: Date) => d.toISOString().slice(0, 13) + ':00';
 
+const BLOCK_HOURS = 6;
+/** Wave models run every 6-12 h; three hours keeps a batch fresh without re-buying it hourly. */
+const BLOCK_CACHE_SECONDS = 3 * 3600;
+/** The map never needs sea level; one variable fewer also lowers the call's quota weight. */
+const MARINE_BATCH_PARAMS = MARINE_PARAMS.split(',')
+  .filter(p => p !== 'sea_level_height_msl')
+  .join(',');
+
 export interface HorizonBatch {
   /** UTC hour of index 0, `YYYY-MM-DDTHH:00`. */
   start: string;
@@ -237,18 +245,25 @@ export async function getMarineHorizonBatch(
   hours: number = MAX_FORECAST_HOURS
 ): Promise<HorizonBatch> {
   if (points.length > BATCH_SIZE) throw new Error(`batch of ${points.length} exceeds ${BATCH_SIZE}`);
-  const startDate = targetUtcHour(0);
+  // The window starts at the current 6-hour UTC block, not the current hour, so
+  // the upstream URL -- and every cache keyed on it -- stays the same for six
+  // hours. Open-Meteo's free tier limits calls per minute and a large region is
+  // ~20 chunks: a new URL every hour meant paying for the whole region again.
+  const now = new Date();
+  const startDate = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), Math.floor(now.getUTCHours() / BLOCK_HOURS) * BLOCK_HOURS)
+  );
   const start = isoHour(startDate);
   if (points.length === 0) return { start, series: [] };
-  const end = isoHour(new Date(startDate.getTime() + hours * 3_600_000));
+  const end = isoHour(new Date(targetUtcHour(0).getTime() + hours * 3_600_000));
 
   const lats = points.map(p => p.lat.toFixed(4)).join(',');
   const lons = points.map(p => p.lon.toFixed(4)).join(',');
   const window = `timezone=GMT&start_hour=${start}&end_hour=${end}`;
 
   const [marineRaw, weatherRaw] = await Promise.all([
-    getJson(`${MARINE_HOST}?latitude=${lats}&longitude=${lons}&hourly=${MARINE_PARAMS}&${window}`),
-    getJson(`${WEATHER_HOST}?latitude=${lats}&longitude=${lons}&hourly=${WEATHER_PARAMS}&${window}`),
+    getJson(`${MARINE_HOST}?latitude=${lats}&longitude=${lons}&hourly=${MARINE_BATCH_PARAMS}&${window}`, BLOCK_CACHE_SECONDS),
+    getJson(`${WEATHER_HOST}?latitude=${lats}&longitude=${lons}&hourly=${WEATHER_PARAMS}&${window}`, BLOCK_CACHE_SECONDS),
   ]);
   const asList = (raw: unknown) => (Array.isArray(raw) ? raw : [raw]) as HourlyResponse[];
   const marine = asList(marineRaw);

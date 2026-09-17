@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { edgeCacheHeaders } from '@/services/http-cache';
 import spots from '@/data/spots.json';
 import { getMarineHorizonBatch, BATCH_SIZE } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
@@ -71,5 +72,6 @@ export async function GET(request: Request) {
     return out;
   });
 
-  return NextResponse.json({ region, chunk, start: batch.start, results });
+  // Hours are looked up by absolute time, so a cached batch stays correct for a while.
+  return NextResponse.json({ region, chunk, start: batch.start, results }, { headers: edgeCacheHeaders(1800) });
 }
