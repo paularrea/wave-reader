@@ -18,6 +18,13 @@ import { setTimeout as sleep } from 'node:timers/promises';
 const IN_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
 const OUT_PATH = new URL('../src/data/spots.json', import.meta.url);
 const REPORT_PATH = new URL('../src/data/spots.catalog-report.json', import.meta.url);
+/**
+ * Slim client index. The full catalogue carries surf config and provenance and
+ * runs to megabytes at national scale; shipping that to the browser would put
+ * it all in the JS bundle. The client only needs enough to place a marker and
+ * filter by region -- roughly a fifth of the bytes.
+ */
+const INDEX_PATH = new URL('../src/data/spots.index.json', import.meta.url);
 
 const BEARINGS = 12;                   // 30 degrees apart
 /**
@@ -265,6 +272,16 @@ async function main() {
   }
 
   await writeFile(OUT_PATH, JSON.stringify(spots, null, 1) + '\n');
+
+  const index = spots.map(s => ({
+    id: s.id,
+    name: s.name,
+    community: s.community,
+    country: s.country,
+    type: s.type,
+    coordinates: s.coordinates,
+  }));
+  await writeFile(INDEX_PATH, JSON.stringify(index) + '\n');
   await writeFile(
     REPORT_PATH,
     JSON.stringify({ generatedAt: new Date().toISOString(), kept: spots.length, dropped }, null, 1) + '\n'
@@ -274,6 +291,7 @@ async function main() {
   spots.forEach(s => (byCommunity[s.community] = (byCommunity[s.community] ?? 0) + 1));
 
   log(`DONE. Surfable: ${spots.length} / ${beaches.length}. Dropped ${dropped.length}.`);
+  log(`Index -> ${INDEX_PATH.pathname}`);
   log(JSON.stringify(byCommunity));
 }
 

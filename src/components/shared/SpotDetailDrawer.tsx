@@ -3,7 +3,7 @@
 import React, { useMemo } from 'react';
 import { Drawer } from 'vaul';
 import { useStore } from '@/store/useStore';
-import spots from '@/data/spots.json';
+import spots from '@/data/spots.index.json';
 import { Navigation, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { MarineForecast } from '@/services/marine-api';
 import { TideExtreme } from '@/services/tides';
@@ -18,6 +18,8 @@ export interface ForecastPayload {
   safety: { isDangerous: boolean; reason: string | null };
   forecast: MarineForecast;
   tides: TideExtreme[];
+  /** Comes with the response: the client index carries no surf config. */
+  config: SpotConfig | null;
 }
 
 interface SpotDetailDrawerProps {
@@ -129,7 +131,8 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
   if (!spot) return null;
 
   const forecast = forecastData?.forecast ?? null;
-  const badge = forecast ? windBadge(forecast, spot.config as SpotConfig) : null;
+  const badge =
+    forecast && forecastData?.config ? windBadge(forecast, forecastData.config) : null;
   const isDangerous = forecastData?.safety.isDangerous ?? false;
   const quality = forecastData
     ? qualityStyle(forecastData.stars, { isDangerous, unrated: forecastData.unrated })

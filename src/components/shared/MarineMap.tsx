@@ -4,7 +4,9 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useStore } from '@/store/useStore';
-import spots from '@/data/spots.json';
+// The slim index, not the full catalogue: surf config and provenance are
+// server-side concerns and would otherwise ship in the JS bundle.
+import spots from '@/data/spots.index.json';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
 import { locationDefaults, regionBounds } from '@/services/regions';
 

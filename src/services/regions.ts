@@ -1,7 +1,7 @@
 // Relative rather than the "@/" alias: Playwright's TypeScript loader does not
 // apply tsconfig path mappings, and this module is imported directly by unit
 // tests.
-import spots from '../data/spots.json';
+import spots from '../data/spots.index.json';
 
 /**
  * Country and region selection.

@@ -79,6 +79,7 @@ export default function WaveReaderPage() {
             safety: data.safety,
             forecast: data.forecast,
             tides: data.tides ?? [],
+            config: data.spot?.config ?? null,
           },
         });
 

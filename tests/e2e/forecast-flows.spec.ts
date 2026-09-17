@@ -44,7 +44,21 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({
-        spot: { id: spotId },
+        // The drawer reads surf config from the response: the client index
+        // carries only what a marker needs.
+        spot: {
+          id: spotId,
+          config: {
+            swellWindow: { minAngle: 280, maxAngle: 340 },
+            offshoreWindAngle: 140,
+            windTolerance: 30,
+            idealHeight: {
+              beginner: { min: 0.5, max: 1 },
+              intermediate: { min: 1, max: 2 },
+              expert: { min: 2, max: 4 },
+            },
+          },
+        },
         stars,
         unrated: false,
         safety: {
