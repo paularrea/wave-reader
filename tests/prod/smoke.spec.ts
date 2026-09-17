@@ -43,7 +43,10 @@ test('the deployed app serves a working forecast', async ({ page }) => {
   // tides below the prominence floor and must say so rather than stay blank.
   await expect(page.getByTestId('tides-section')).toBeVisible();
 
-  // Day navigation must work on the live site, not just against fixtures.
+  // The week at a glance and day navigation must work on the live site too.
+  await expect(page.getByTestId('timeline-pill').first()).toBeVisible();
+  expect(await page.getByTestId('timeline-pill').count()).toBeGreaterThan(40);
+  await expect(page.getByTestId('forecast-error')).toHaveCount(0);
   await expect(page.getByTestId('drawer-day-tab').first()).toBeVisible();
   await page.getByTestId('hour-next').click();
   await expect(page.getByTestId('drawer-time')).toBeVisible();

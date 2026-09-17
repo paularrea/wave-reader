@@ -1,8 +1,20 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Drawer } from 'vaul';
-import { Info, Waves, Wind, RefreshCw, Star, MapPin, AlertTriangle, Sparkles } from 'lucide-react';
+import {
+  Info,
+  Waves,
+  Wind,
+  RefreshCw,
+  Star,
+  MapPin,
+  AlertTriangle,
+  Sparkles,
+  ShieldAlert,
+  Gauge,
+} from 'lucide-react';
+import { pillColour, pillHeightPx } from '@/services/forecast-series';
 import spots from '@/data/spots.index.json';
 import { LEGEND_TIERS, legendEntry } from '@/services/conditions';
 import {
@@ -19,26 +31,55 @@ interface DataStatus {
 }
 
 function Section({
+  id,
   icon,
   title,
   children,
   testId,
 }: {
+  id: string;
   icon: React.ReactNode;
   title: string;
   children: React.ReactNode;
   testId?: string;
 }) {
   return (
-    <section className="py-5 border-b border-zinc-900 last:border-0" data-testid={testId}>
-      <h3 className="flex items-center gap-2 text-[13px] font-semibold text-zinc-100 mb-3">
-        <span className="text-zinc-500">{icon}</span>
+    <section
+      id={`info-${id}`}
+      data-section={id}
+      className="rounded-2xl bg-zinc-900/60 border border-zinc-800/70 p-4 scroll-mt-3"
+      data-testid={testId}
+    >
+      <h3 className="flex items-center gap-2.5 text-[14px] font-semibold text-zinc-100 mb-3">
+        <span className="w-7 h-7 rounded-lg bg-zinc-800/80 text-zinc-300 flex items-center justify-center shrink-0">
+          {icon}
+        </span>
         {title}
       </h3>
-      <div className="text-[13px] leading-relaxed text-zinc-400 space-y-2">{children}</div>
+      <div className="text-[13px] leading-relaxed text-zinc-400 space-y-2.5">{children}</div>
     </section>
   );
 }
+
+/** A labelled fact in a rating or safety card: the term stands out, the detail follows. */
+function Fact({ term, children }: { term: string; children: React.ReactNode }) {
+  return (
+    <li className="flex gap-3">
+      <span className="mt-[7px] w-1.5 h-1.5 rounded-full bg-amber-400/80 shrink-0" />
+      <span>
+        <span className="text-zinc-100 font-medium">{term}.</span> {children}
+      </span>
+    </li>
+  );
+}
+
+const QUICK_LINKS = [
+  { id: 'conditions', label: 'Conditions' },
+  { id: 'sources', label: 'Data' },
+  { id: 'rating', label: 'Rating' },
+  { id: 'safety', label: 'Safety' },
+  { id: 'limitations', label: 'Limits' },
+];
 
 function ModelRow({ model, now }: { model: ModelStatus; now: number }) {
   const unavailable = model.status !== 'ok';
@@ -116,6 +157,15 @@ export function DataInfoPanel() {
     return { total: spots.length, byCountry: [...byCountry.entries()].sort((a, b) => b[1] - a[1]) };
   }, []);
 
+  const scroller = useRef<HTMLDivElement>(null);
+  /** Scrolls the panel itself, never the page behind it. */
+  const jumpTo = (id: string) => {
+    const container = scroller.current;
+    const target = container?.querySelector<HTMLElement>(`[data-section="${id}"]`);
+    if (!container || !target) return;
+    container.scrollTo({ top: target.offsetTop - container.offsetTop - 12, behavior: 'smooth' });
+  };
+
   const waves = status?.models.filter(m => m.role === 'waves') ?? [];
   const wind = status?.models.filter(m => m.role === 'wind') ?? [];
 
@@ -141,26 +191,59 @@ export function DataInfoPanel() {
           <div className="px-5 pt-3 pb-3 shrink-0 border-b border-zinc-900">
             <Drawer.Title className="text-[20px] font-semibold">About the data</Drawer.Title>
             <Drawer.Description className="text-[13px] text-zinc-500 mt-0.5">
-              Sources, freshness and how the rating is calculated
+              What the colours mean, where forecasts come from and how spots are rated
             </Drawer.Description>
+            <nav
+              className="flex gap-1.5 mt-3 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              aria-label="Sections"
+              data-testid="info-quick-links"
+            >
+              {QUICK_LINKS.map(link => (
+                <button
+                  key={link.id}
+                  type="button"
+                  onClick={() => jumpTo(link.id)}
+                  data-testid={`info-link-${link.id}`}
+                  className="shrink-0 rounded-full border border-zinc-800 bg-zinc-900 px-3 py-1 text-[12px] font-medium text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
           </div>
 
           <div
-            className="flex-1 overflow-y-auto overscroll-contain px-5 min-h-0"
+            ref={scroller}
+            className="flex-1 overflow-y-auto overscroll-contain px-4 pt-4 min-h-0 flex flex-col gap-3"
             style={{ paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
+            data-testid="info-scroll"
           >
             {/* First thing in the panel: what the map's markers mean. */}
-            <Section icon={<Star size={15} />} title="Conditions" testId="quality-legend">
-              <ul className="flex flex-col gap-2">
+            <section
+              id="info-conditions"
+              data-section="conditions"
+              data-testid="quality-legend"
+              className="rounded-2xl border border-amber-400/25 bg-gradient-to-b from-amber-400/[0.07] to-zinc-900/60 p-4 scroll-mt-3"
+            >
+              <h3 className="flex items-center gap-2.5 text-[14px] font-semibold text-zinc-100">
+                <span className="w-7 h-7 rounded-lg bg-amber-400/15 text-amber-300 flex items-center justify-center shrink-0">
+                  <Star size={15} />
+                </span>
+                Conditions
+              </h3>
+              <p className="text-[12px] text-zinc-400 mt-2 mb-3">
+                Every spot is scored from 0 to 10. Bigger, brighter markers mean better surf.
+              </p>
+              <ul className="grid grid-cols-2 gap-2">
                 {LEGEND_TIERS.map(tier => {
                   const entry = legendEntry(tier);
                   return (
                     <li
                       key={tier}
-                      className="flex items-center gap-3"
+                      className="flex items-center gap-2.5 rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-2.5 py-2"
                       data-testid={`legend-${tier}`}
                     >
-                      <span className="w-8 flex justify-center shrink-0">
+                      <span className="w-8 h-8 flex items-center justify-center shrink-0">
                         <span
                           className="rounded-full flex items-center justify-center font-bold"
                           style={{
@@ -176,29 +259,62 @@ export function DataInfoPanel() {
                           {entry.showScore && tier !== 'danger' ? entry.range.split('-')[0] : ''}
                         </span>
                       </span>
-                      <span className="text-zinc-200 font-medium">{entry.label}</span>
-                      <span className="ml-auto tabular-nums text-zinc-500">{entry.range}</span>
+                      <span className="min-w-0">
+                        <span className="block text-[13px] text-zinc-100 font-medium leading-tight truncate">
+                          {entry.label}
+                        </span>
+                        <span className="block text-[11px] tabular-nums text-zinc-500 leading-tight">
+                          {tier === 'danger' ? 'Beginner alert' : `Score ${entry.range}`}
+                        </span>
+                      </span>
                     </li>
                   );
                 })}
               </ul>
-              <p className="text-[12px] text-zinc-500">
-                Bigger and brighter markers mean better surf. Scores use the surf-forecast scale; in the
-                Mediterranean they are adjusted to what counts as a good day there.
-              </p>
-            </Section>
 
-            <Section icon={<Waves size={15} />} title="Forecast data" testId="info-sources">
+              {/* The same scale, as it appears in a spot's timeline. */}
+              <div className="mt-3 flex items-center gap-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 py-2.5">
+                <div className="flex items-end gap-1 h-11 shrink-0" aria-hidden>
+                  {[
+                    [0.3, 0],
+                    [0.7, 1],
+                    [1.2, 2],
+                    [1.6, 4],
+                    [2.4, 5],
+                    [3.5, 7],
+                  ].map(([height, stars]) => (
+                    <span
+                      key={height}
+                      className="w-2 rounded-full"
+                      style={{ height: pillHeightPx(height), backgroundColor: pillColour(stars) }}
+                    />
+                  ))}
+                </div>
+                <p className="text-[12px] leading-snug text-zinc-400">
+                  In a spot&apos;s timeline each pill is 3 hours: taller with bigger swell (up to 3 m),
+                  from grey to yellow as the score rises.
+                </p>
+              </div>
+
+              <p className="text-[11px] text-zinc-500 mt-3">
+                Scores follow the surf-forecast scale. The Mediterranean has its own, tuned to what a good
+                day there looks like.
+              </p>
+            </section>
+
+            <Section id="sources" icon={<Waves size={15} />} title="Forecast data" testId="info-sources">
               <p>
                 Waves, swell and sea level come from the{' '}
                 <span className="text-zinc-200">Open-Meteo Marine API</span>; wind and gusts from the{' '}
                 <span className="text-zinc-200">Open-Meteo Forecast API</span>. For each spot Open-Meteo
-                automatically picks the highest-resolution model available, so a spot may be served by
-                any of the models below.
+                picks the highest-resolution model available, so a spot may be served by any of these.
               </p>
 
               {failed && (
-                <p className="text-zinc-500" data-testid="info-status-failed">
+                <p
+                  className="rounded-lg bg-zinc-950/60 border border-zinc-800 px-3 py-2 text-zinc-500"
+                  data-testid="info-status-failed"
+                >
                   Model update status is unavailable right now.
                 </p>
               )}
@@ -206,114 +322,141 @@ export function DataInfoPanel() {
 
               {status && (
                 <>
-                  <div className="pt-2">
-                    <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">
+                  <div className="rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 pt-2">
+                    <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold">
                       <Waves size={12} /> Waves and swell
                     </div>
                     {waves.map(m => (
                       <ModelRow key={m.id} model={m} now={now} />
                     ))}
                   </div>
-                  <div className="pt-3">
-                    <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">
+                  <div className="rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 pt-2">
+                    <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold">
                       <Wind size={12} /> Wind
                     </div>
                     {wind.map(m => (
                       <ModelRow key={m.id} model={m} now={now} />
                     ))}
                   </div>
-                  <p className="text-[11px] text-zinc-600 pt-1">
+                  <p className="text-[11px] text-zinc-600">
                     Next update times are expected from each model&apos;s last run and schedule, as
                     published by Open-Meteo.
                   </p>
                 </>
               )}
+
+              <div
+                className="flex items-start gap-2.5 rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 py-2.5"
+                data-testid="info-refresh"
+              >
+                <RefreshCw size={14} className="mt-0.5 shrink-0 text-zinc-500" />
+                <p className="text-[12px]">
+                  The app reuses each forecast for up to{' '}
+                  <span className="text-zinc-200" data-testid="info-cache-duration">
+                    {Math.round((status?.forecastCacheSeconds ?? 3600) / 60)} minutes
+                  </span>
+                  , so a new model run can take that long to appear.
+                </p>
+              </div>
             </Section>
 
-            <Section icon={<RefreshCw size={15} />} title="How often the app refreshes" testId="info-refresh">
+            <Section id="rating" icon={<Gauge size={15} />} title="How the rating works" testId="info-rating">
               <p>
-                Forecasts for each spot are reused for up to{' '}
-                <span className="text-zinc-200" data-testid="info-cache-duration">
-                  {Math.round((status?.forecastCacheSeconds ?? 3600) / 60)} minutes
-                </span>{' '}
-                before being fetched again, so a new model run can take up to that long to appear here.
+                The score measures the surf itself, not how well it suits your level. It combines four
+                things:
               </p>
-            </Section>
-
-            <Section icon={<Star size={15} />} title="How the rating works" testId="info-rating">
-              <p>
-                The 0–10 rating measures the surf itself, not how well it suits your level. It follows
-                the principles surf-forecast, Magicseaweed and Surfline publish:
-              </p>
-              <ul className="list-disc pl-4 space-y-1">
-                <li>
-                  <span className="text-zinc-200">Wave energy</span> (height² × period²) summed over the
-                  primary swell, secondary swell and wind waves. Under about 50 kJ the sea is flat.
-                </li>
-                <li>
-                  <span className="text-zinc-200">Period</span>: short-period wind swell scores lower than
-                  groundswell of the same energy.
-                </li>
-                <li>
-                  <span className="text-zinc-200">Swell direction</span>: energy arriving from outside the
-                  spot&apos;s open-water window counts for less.
-                </li>
-                <li>
-                  <span className="text-zinc-200">Wind</span>: onshore and cross-shore wind take stars away,
-                  unusually strong gusts count against it, and very strong wind from any direction scores 0.
-                  Light and offshore wind cost nothing.
-                </li>
+              <ul className="space-y-2">
+                <Fact term="Wave energy">
+                  Height² × period², summed over primary swell, secondary swell and wind waves. Under about
+                  50 kJ the sea is flat.
+                </Fact>
+                <Fact term="Period">Short wind swell scores lower than groundswell of the same energy.</Fact>
+                <Fact term="Swell direction">
+                  Energy arriving from outside the spot&apos;s open-water window counts for less.
+                </Fact>
+                <Fact term="Wind">
+                  Onshore and cross-shore wind take points away, strong gusts count against it and very
+                  strong wind from any direction scores 0. Light and offshore wind cost nothing.
+                </Fact>
               </ul>
-              <p data-testid="info-calibration">
-                None of these services publishes a formula, so the scale is calibrated against{' '}
-                <span className="text-zinc-200">surf-forecast</span>&apos;s real ratings: 206 forecast slots
-                at 10 spots, with an average error of{' '}
-                <span className="text-zinc-200">0.5 stars</span> and 96% of slots within one star.
-              </p>
-              <p data-testid="info-mediterranean">
-                The Mediterranean rarely sees the long swells that score well on that scale, so it has its
-                own: 1 m at 7 s with clean wind is a 2–3 there, and 1.5 m at 8 s a 5–6.
-              </p>
-              <p>
+              <div className="grid grid-cols-2 gap-2 pt-1">
+                <div
+                  className="rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 py-2.5"
+                  data-testid="info-calibration"
+                >
+                  <div className="text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">
+                    Atlantic
+                  </div>
+                  <p className="text-[12px] leading-snug">
+                    Calibrated against <span className="text-zinc-200">surf-forecast</span>: 206 slots at 10
+                    spots, average error <span className="text-zinc-200">0.5 stars</span>, 96% within one.
+                  </p>
+                </div>
+                <div
+                  className="rounded-xl bg-zinc-950/60 border border-zinc-800/80 px-3 py-2.5"
+                  data-testid="info-mediterranean"
+                >
+                  <div className="text-[11px] uppercase tracking-[0.12em] text-zinc-500 font-semibold mb-1">
+                    Mediterranean
+                  </div>
+                  <p className="text-[12px] leading-snug">
+                    Its own scale: 1 m at 7 s with clean wind scores 2–3, and 1.5 m at 8 s scores 5–6.
+                  </p>
+                </div>
+              </div>
+              <p className="text-[12px] text-zinc-500">
                 When wind spoils a good swell, the spot detail shows what the swell alone would score.
               </p>
             </Section>
 
-            <Section icon={<AlertTriangle size={15} />} title="Safety alert" testId="info-safety">
+            <Section id="safety" icon={<ShieldAlert size={15} />} title="Safety alert" testId="info-safety">
               <p>
-                With the beginner level selected, a spot turns red when the waves are expected to break
-                above 1.5 m. Breaking height is estimated from swell height and period, because a long
-                period swell breaks much bigger than its offshore height suggests.
+                With the <span className="text-zinc-200">beginner</span> level selected, a spot turns red when
+                waves are expected to break above <span className="text-zinc-200">1.5 m</span>. Breaking
+                height uses swell height and period, because long-period swell breaks much bigger than its
+                offshore height suggests.
               </p>
             </Section>
 
-            <Section icon={<MapPin size={15} />} title="Spot catalogue" testId="info-catalogue">
+            <Section id="catalogue" icon={<MapPin size={15} />} title="Spot catalogue" testId="info-catalogue">
               <p>
-                <span className="text-zinc-200">{catalogue.total.toLocaleString('en-GB')} spots</span> built
-                from named beaches in OpenStreetMap, kept only where the coast faces open water.
+                <span className="text-zinc-200">{catalogue.total.toLocaleString('en-GB')} spots</span> from
+                named beaches in OpenStreetMap, kept only where the coast faces open water.
               </p>
-              <p className="text-zinc-500">
-                {catalogue.byCountry
-                  .map(([country, n]) => `${country} ${n.toLocaleString('en-GB')}`)
-                  .join(' · ')}
-              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {catalogue.byCountry.map(([country, n]) => (
+                  <span
+                    key={country}
+                    className="rounded-full bg-zinc-950/60 border border-zinc-800 px-2.5 py-0.5 text-[12px]"
+                  >
+                    {country} <span className="text-zinc-200 tabular-nums">{n.toLocaleString('en-GB')}</span>
+                  </span>
+                ))}
+              </div>
             </Section>
 
-            <Section icon={<AlertTriangle size={15} />} title="Known limitations" testId="info-limitations">
-              <ul className="list-disc pl-4 space-y-1">
-                <li>
-                  Tide times come from modelled sea level. Open-Meteo notes its accuracy on the coast is
-                  limited; do not use it for navigation.
-                </li>
-                <li>The rating does not yet account for tide or the type of seabed at each spot.</li>
-                <li>Models run on grids of 1.5–25 km, so local shelter and banks are not resolved.</li>
+            <Section
+              id="limitations"
+              icon={<AlertTriangle size={15} />}
+              title="Known limitations"
+              testId="info-limitations"
+            >
+              <ul className="space-y-2">
+                <Fact term="Tides">
+                  Times come from modelled sea level, which is less accurate on the coast. Not for
+                  navigation.
+                </Fact>
+                <Fact term="Local detail">
+                  The rating doesn&apos;t yet account for tide or seabed, and models run on 1.5–25 km grids,
+                  so local shelter and banks aren&apos;t resolved.
+                </Fact>
               </ul>
             </Section>
 
-            <Section icon={<Sparkles size={15} />} title="Coming next" testId="info-next">
+            <Section id="next" icon={<Sparkles size={15} />} title="Coming next" testId="info-next">
               <p>
-                Comparing several wave and wind models side by side, so you can see where they agree and
-                how confident the forecast is.
+                Comparing several wave and wind models side by side, to show where they agree and how
+                confident the forecast is.
               </p>
             </Section>
           </div>

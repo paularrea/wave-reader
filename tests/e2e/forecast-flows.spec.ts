@@ -20,6 +20,12 @@ interface StubOptions {
   dangerous?: boolean;
   tides?: Array<{ kind: 'high' | 'low'; timestamp: string; heightM: number }>;
   utcOffsetSeconds?: number;
+  /** Clock the page runs on, so the stubbed series starts at the page's anchor hour. */
+  now?: number;
+  /** Per-hour rating, for timeline scenarios. Defaults to `stars` everywhere. */
+  starsAt?: (hourOffset: number) => number;
+  /** Status codes to answer the series route with, in order, before succeeding. */
+  seriesFailures?: number[];
 }
 
 const DEFAULT_TIDES = [
@@ -39,7 +45,78 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
     dangerous = false,
     tides = DEFAULT_TIDES,
     utcOffsetSeconds = MADRID_OFFSET,
+    now,
+    starsAt,
+    seriesFailures = [],
   } = options;
+
+  const SPOT_CONFIG = {
+    swellWindow: { minAngle: 280, maxAngle: 340 },
+    offshoreWindAngle: 140,
+    windTolerance: 30,
+    idealHeight: {
+      beginner: { min: 0.5, max: 1 },
+      intermediate: { min: 1, max: 2 },
+      expert: { min: 2, max: 4 },
+    },
+  };
+  const reason = dangerous
+    ? 'Waves at Playa de Razo are forecast at 2.4m, 1.4m above the 1m ceiling for beginners here.'
+    : null;
+  const forecastAt = (timestamp: string) => ({
+    timestamp,
+    swellHeight,
+    swellPeriod: 12,
+    swellDirection: 315,
+    secondarySwellHeight: 0.6,
+    secondarySwellPeriod: 8,
+    secondarySwellDirection: 270,
+    windWaveHeight: 0.4,
+    windWavePeriod: 4,
+    windWaveDirection: 140,
+    windSpeed,
+    windDirection,
+    seaLevel: 0.42,
+  });
+
+  // The detail loads the whole horizon at once, starting at the page's anchor.
+  const failures = [...seriesFailures];
+  await page.route('**/api/forecast/series*', async route => {
+    const failure = failures.shift();
+    if (failure !== undefined) {
+      await route.fulfill({ status: failure, contentType: 'application/json', body: '{"error":"stubbed failure"}' });
+      return;
+    }
+    const clock = now ?? Date.now();
+    const local = clock + utcOffsetSeconds * 1000;
+    const anchor = Math.ceil(local / 3_600_000) * 3_600_000;
+    const hours = Array.from({ length: 169 }, (_, i) => {
+      const timestamp = new Date(anchor + i * 3_600_000).toISOString().slice(0, 13) + ':00';
+      const hourStars = starsAt ? starsAt(i) : stars;
+      return {
+        stars: hourStars,
+        swellStars: swellStars ?? hourStars,
+        energyKj: 820,
+        breakingHeightM: 1.9,
+        unrated: false,
+        safety: { isDangerous: dangerous, reason },
+        forecast: forecastAt(timestamp),
+      };
+    });
+    const tidesByDay: Record<string, typeof tides> = {};
+    for (const h of hours) tidesByDay[h.forecast.timestamp.slice(0, 10)] = tides;
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        spot: { id: new URL(route.request().url()).searchParams.get('spotId'), config: SPOT_CONFIG },
+        timezone: 'Europe/Madrid',
+        utcOffsetSeconds,
+        tidesByDay,
+        hours,
+      }),
+    });
+  });
 
   // The map scores spots in batches; the detail drawer still asks per spot.
   await page.route('**/api/forecast/batch*', async route => {
@@ -344,7 +421,7 @@ test.describe('spec: tide-extremes', () => {
 test.describe('spec: forecast-timeline', () => {
   test('the timeline opens on the next whole hour, not the current minute', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') }); // 14:20 in Madrid
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
 
     await expect(page.getByTestId('forecast-time')).toHaveText('Today, 15:00');
@@ -352,7 +429,7 @@ test.describe('spec: forecast-timeline', () => {
 
   test('each slider step advances exactly one hour', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
 
     const slider = page.getByLabel('Forecast hour');
@@ -364,7 +441,7 @@ test.describe('spec: forecast-timeline', () => {
 
   test('crossing midnight flips the day label', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T20:20:00Z') }); // 22:20 Madrid
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T20:20:00Z')).valueOf() });
     await page.goto('/');
 
     await expect(page.getByTestId('forecast-time')).toHaveText('Today, 23:00');
@@ -375,7 +452,7 @@ test.describe('spec: forecast-timeline', () => {
 
   test('the day strip lets you jump between days', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
 
     const chips = page.getByTestId('day-chip');
@@ -390,7 +467,7 @@ test.describe('spec: forecast-timeline', () => {
 
   test('the slider is controlled and stays in sync with the label', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
 
     await page.getByTestId('day-chip').nth(1).click();
@@ -458,7 +535,7 @@ test.describe('spec: drawer-ux', () => {
 
   test('the forecast can be moved a day at a time without leaving the drawer', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
     await openFirstSpot(page);
 
@@ -472,7 +549,7 @@ test.describe('spec: drawer-ux', () => {
 
   test('the hour can be stepped inside the drawer', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
     await openFirstSpot(page);
 
@@ -485,7 +562,7 @@ test.describe('spec: drawer-ux', () => {
 
   test('jumping to another day keeps the hour of day', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
     await openFirstSpot(page);
 
@@ -645,7 +722,7 @@ test.describe('spec: map-viewport', () => {
 test.describe('spec: drawer-navigation / Límites de la navegación', () => {
   test('the active day tab always matches the day shown', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') }); // anchor 15:00
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
     await openFirstSpot(page);
 
@@ -660,7 +737,7 @@ test.describe('spec: drawer-navigation / Límites de la navegación', () => {
 
   test('the earliest reachable hour of today is the anchor hour', async ({ page }) => {
     await page.clock.install({ time: new Date('2026-09-16T12:20:00Z') });
-    await stubForecast(page);
+    await stubForecast(page, { now: (new Date('2026-09-16T12:20:00Z')).valueOf() });
     await page.goto('/');
     await openFirstSpot(page);
 
@@ -741,7 +818,7 @@ test.describe('spec: data-transparency', () => {
 
   test('the info button opens a panel with sources, freshness and rating logic', async ({ page }) => {
     await page.clock.install({ time: NOW });
-    await stubForecast(page);
+    await stubForecast(page, { now: NOW });
     await stubDataStatus(page);
     await page.goto('/');
 
@@ -762,7 +839,7 @@ test.describe('spec: data-transparency', () => {
 
   test('an overdue model says due now and a missing one says unavailable', async ({ page }) => {
     await page.clock.install({ time: NOW });
-    await stubForecast(page);
+    await stubForecast(page, { now: NOW });
     await stubDataStatus(page);
     await page.goto('/');
     await page.getByTestId('info-button').click();
@@ -783,7 +860,7 @@ test.describe('spec: data-transparency', () => {
 
   test('closing the panel keeps the selected region and hour', async ({ page }) => {
     await page.clock.install({ time: NOW });
-    await stubForecast(page);
+    await stubForecast(page, { now: NOW });
     await stubDataStatus(page);
     await page.goto('/');
 
@@ -868,5 +945,142 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
       .evaluateAll(nodes => nodes.map(n => (n as HTMLElement).dataset.spotId));
     expect(drawn.length).toBeGreaterThan(0);
     for (const id of drawn) expect(withoutData.has(id!), `${id} has no data but is drawn`).toBe(false);
+  });
+});
+
+test.describe('spec: drawer-navigation / Línea temporal de pills', () => {
+  const CLOCK = new Date('2026-09-16T12:20:00Z').getTime(); // anchor 15:00 Madrid
+
+  test('a better day ahead shows up in the pills without navigating', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    // Flat for the first two days, then a 5 from offset 57 (Fri 00:00 local).
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 ? 5 : 0) });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const pills = page.getByTestId('timeline-pill');
+    await expect(pills.first()).toBeVisible();
+    expect(await pills.count()).toBeGreaterThan(50);
+
+    const colourOf = (offset: number) =>
+      page
+        .locator(`[data-testid="timeline-pill"][data-hour-offset="${offset}"] span`)
+        .evaluate(n => getComputedStyle(n).backgroundColor);
+    expect(await colourOf(0)).toBe('rgb(82, 82, 91)');
+    expect(await colourOf(57)).toBe('rgb(251, 191, 36)');
+  });
+
+  test('tapping a pill opens that slot and marks it', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    // Tomorrow's 06:00 slot: 15:00 today + 15 hours.
+    const pill = page.locator('[data-testid="timeline-pill"][data-hour-offset="15"]');
+    await pill.click();
+    await expect(page.getByTestId('drawer-time')).toHaveText('06:00');
+    await expect(page.getByTestId('drawer-day-label')).toHaveText('Tomorrow');
+    await expect(pill).toHaveAttribute('data-selected', 'true');
+    await expect(page.getByTestId('drawer-day-tab').nth(1)).toHaveAttribute('data-active', 'true');
+  });
+
+  test('on a 375 px phone at least three days of pills fit on screen', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const timeline = page.getByTestId('forecast-timeline');
+    await expect(timeline).toBeVisible();
+    const frame = (await timeline.boundingBox())!;
+    const days = await page.getByTestId('timeline-day').evaluateAll(nodes =>
+      nodes.map(n => n.getBoundingClientRect().right)
+    );
+    const fullyVisible = days.filter(right => right <= frame.x + frame.width + 1);
+    // Today is partial (from 15:00), so three full days means at least four groups.
+    expect(fullyVisible.length).toBeGreaterThanOrEqual(3);
+    const pageWidth = await page.evaluate(() => document.documentElement.scrollWidth);
+    expect(pageWidth).toBeLessThanOrEqual(375);
+  });
+
+  test('changing the hour does not fetch the forecast again', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK });
+    let requests = 0;
+    page.on('request', r => {
+      if (r.url().includes('/api/forecast/series')) requests++;
+    });
+    await page.goto('/');
+    await openFirstSpot(page);
+    await expect(page.getByTestId('swell-height')).toContainText('m');
+
+    await page.getByTestId('hour-next').click();
+    await page.getByTestId('hour-next').click();
+    await page.getByTestId('drawer-day-tab').nth(2).click();
+    await expect(page.getByTestId('drawer-time')).toHaveText('17:00');
+    expect(requests).toBe(1);
+  });
+});
+
+test.describe('spec: drawer-navigation / Abrir un spot empieza por hoy', () => {
+  test('opening a spot resets the forecast to the first hour of today', async ({ page }) => {
+    const CLOCK = new Date('2026-09-16T12:20:00Z').getTime();
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK });
+    await page.goto('/');
+
+    await page.getByLabel('Forecast hour').fill('50');
+    await expect(page.getByTestId('forecast-time')).not.toContainText('Today');
+
+    await openFirstSpot(page);
+    await expect(page.getByTestId('drawer-day-label')).toHaveText('Today');
+    await expect(page.getByTestId('drawer-time')).toHaveText('15:00');
+    await expect(page.getByTestId('forecast-time')).toHaveText('Today, 15:00');
+  });
+});
+
+test.describe('spec: drawer-navigation / Carga fiable del detalle', () => {
+  test('a transient failure is retried without the user doing anything', async ({ page }) => {
+    await stubForecast(page, { seriesFailures: [502] });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('forecast-loading')).toBeVisible();
+    await expect(page.getByTestId('swell-height')).toContainText('1.5m', { timeout: 10_000 });
+    await expect(page.getByTestId('forecast-error')).toHaveCount(0);
+  });
+
+  test('a persistent failure says so and can be retried', async ({ page }) => {
+    // Initial attempt plus three retries all fail; the manual retry succeeds.
+    await stubForecast(page, { seriesFailures: [429, 429, 502, 502] });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('forecast-error')).toBeVisible({ timeout: 25_000 });
+    await expect(page.getByTestId('swell-height')).toHaveText('—');
+
+    await page.getByTestId('forecast-retry').click();
+    await expect(page.getByTestId('swell-height')).toContainText('1.5m', { timeout: 10_000 });
+    await expect(page.getByTestId('forecast-error')).toHaveCount(0);
+  });
+});
+
+test.describe('spec: data-transparency / Panel fácil de leer', () => {
+  test('quick links take you to each section', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await page.goto('/');
+    await page.getByTestId('info-button').click();
+
+    const first = page.getByTestId('info-scroll').locator('section').first();
+    await expect(first).toHaveAttribute('data-testid', 'quality-legend');
+    await expect(page.getByTestId('legend-epic')).toBeInViewport();
+
+    await page.getByTestId('info-link-safety').click();
+    await expect(page.getByTestId('info-safety')).toBeInViewport();
+    await page.getByTestId('info-link-conditions').click();
+    await expect(page.getByTestId('quality-legend')).toBeInViewport();
   });
 });

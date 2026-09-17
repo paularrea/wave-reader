@@ -103,6 +103,19 @@ accurate to about +/- 30 min — the UI says so.
 - Advances in exact 1-hour steps up to 168 h.
 - Labels render in the spot's `utc_offset_seconds`, never the browser's.
 - Days are labelled `Today` / `Tomorrow` / `Sat 19 Sept`, with a chip strip for jumping.
+- Opening a spot resets the hour to 0 (`setSelectedSpot`), so the detail always starts at today.
+
+### Spot detail (`SpotDetailDrawer`, `ForecastTimeline`, `useSpotSeries`)
+- Loads `/api/forecast/series` **once per spot and level**: every hour of the horizon, rated
+  server-side, with tides per local day. Moving between hours never refetches. The old
+  per-hour fetch dropped errors silently, which is why the drawer sometimes stayed blank
+  after a 429.
+- Failures retry after 1.5 s, 4 s and 8 s, then show `forecast-error` with a retry button.
+  Results are cached in the session for 30 minutes.
+- The pill timeline (`src/services/forecast-series.ts`): one pill per 3-hour local slot,
+  represented by — and opening — its first available hour. Height is primary swell,
+  0–3 m capped; colour interpolates zinc-600 to the epic yellow by `min(stars,5)/5`, red
+  when dangerous, hollow when unrated. 12 px per pill keeps 3+ days on a 375 px phone.
 - All time-dependent UI renders only after mount; rendering it during SSR causes a
   hydration mismatch (React #418) because the server cannot know the viewer's "now".
 
@@ -190,7 +203,17 @@ two chunks at once and retries a failed chunk by itself after 20 s. A marker is 
 data never appear. The earlier per-spot fetching was capped at 60 spots per viewport and
 left 194 of 300 Catalan markers permanently hollow — do not reintroduce a cap.
 
-The conditions legend lives as the first section of the info panel, not over the map.
+The conditions legend lives as the first card of the info panel, not over the map. The
+panel is cards with quick links that scroll the panel itself; all content stays rendered.
+
+## Puertos del Estado — investigated, not integrated
+
+Public THREDDS at `opendap.puertos.es` serves regional wave grids for Spain (0.7–3 km,
+72 h, twice daily), but Puertos del Estado's terms for its data service authorise use only
+for the purpose of the download and **forbid transferring the data to third parties**,
+which a public web app does. Do not integrate it without written authorisation. The open
+alternative is Copernicus Marine `IBI_ANALYSISFORECAST_WAV_005_005` (needs an account).
+Details: `openspec/changes/archive/*-spot-timeline-and-info-redesign/design.md`.
 
 ## Verification
 

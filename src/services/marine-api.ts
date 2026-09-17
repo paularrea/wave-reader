@@ -105,11 +105,21 @@ function dateRange(): { start: string; end: string } {
   };
 }
 
-export async function getMarineForecast(
-  lat: number,
-  lon: number,
-  hourOffset: number
-): Promise<SpotForecast> {
+export interface SpotSeries {
+  /** Every hour of the horizon from the anchor, in the spot's local time. */
+  hours: MarineForecast[];
+  timezone: string;
+  utcOffsetSeconds: number;
+  /** Tide extremes keyed by local day, `YYYY-MM-DD`. */
+  tidesByDay: Record<string, TideExtreme[]>;
+}
+
+/**
+ * The whole horizon for one spot in two upstream calls. Open-Meteo returns
+ * seven days per request anyway; asking again for every hour the user steps
+ * through only multiplied calls against a rate-limited account.
+ */
+export async function getMarineSeries(lat: number, lon: number): Promise<SpotSeries> {
   const { start, end } = dateRange();
   const common = `latitude=${lat}&longitude=${lon}&start_date=${start}&end_date=${end}&timezone=auto`;
 
@@ -127,48 +137,69 @@ export async function getMarineForecast(
 
   const utcOffsetSeconds: number = marine.utc_offset_seconds ?? 0;
   const timezone: string = marine.timezone ?? 'UTC';
-
-  const target = instantAt(utcOffsetSeconds, hourOffset);
-  const marineIndex = marineHourly.time.indexOf(target.key);
-  if (marineIndex === -1) {
-    throw new Error(`No marine data for ${target.key} (${timezone})`);
-  }
-
-  // Join the two hosts by timestamp, never by array position: if one of them
-  // trims its horizon the offsets diverge and every reading silently shifts.
   const weatherHourly = weather?.hourly;
-  const weatherIndex: number = weatherHourly?.time?.indexOf(target.key) ?? -1;
 
-  const forecast: MarineForecast = {
-    timestamp: target.key,
-    // `swell_wave_*` is the swell proper; `wave_*` is the combined sea. Prefer
-    // the former and fall back so a spot is never left blank.
-    swellHeight: at(marineHourly.swell_wave_height, marineIndex) ?? at(marineHourly.wave_height, marineIndex),
-    swellPeriod: at(marineHourly.swell_wave_period, marineIndex) ?? at(marineHourly.wave_period, marineIndex),
-    swellDirection: at(marineHourly.swell_wave_direction, marineIndex) ?? at(marineHourly.wave_direction, marineIndex),
-    secondarySwellHeight: at(marineHourly.secondary_swell_wave_height, marineIndex),
-    secondarySwellPeriod: at(marineHourly.secondary_swell_wave_period, marineIndex),
-    secondarySwellDirection: at(marineHourly.secondary_swell_wave_direction, marineIndex),
-    windWaveHeight: at(marineHourly.wind_wave_height, marineIndex),
-    windWavePeriod: at(marineHourly.wind_wave_period, marineIndex),
-    windWaveDirection: at(marineHourly.wind_wave_direction, marineIndex),
-    windSpeed: weatherIndex === -1 ? null : at(weatherHourly?.wind_speed_10m, weatherIndex),
-    windDirection: weatherIndex === -1 ? null : at(weatherHourly?.wind_direction_10m, weatherIndex),
-    windGust: weatherIndex === -1 ? null : at(weatherHourly?.wind_gusts_10m, weatherIndex),
-    seaLevel: at(marineHourly.sea_level_height_msl, marineIndex),
-  };
+  const now = new Date();
+  const hours: MarineForecast[] = [];
+  for (let offset = 0; offset <= MAX_FORECAST_HOURS; offset++) {
+    const target = instantAt(utcOffsetSeconds, offset, now);
+    const mi = marineHourly.time.indexOf(target.key);
+    if (mi === -1) break;
+
+    // Join the two hosts by timestamp, never by array position: if one of them
+    // trims its horizon the offsets diverge and every reading silently shifts.
+    const wi: number = weatherHourly?.time?.indexOf(target.key) ?? -1;
+
+    hours.push({
+      timestamp: target.key,
+      // `swell_wave_*` is the swell proper; `wave_*` is the combined sea. Prefer
+      // the former and fall back so a spot is never left blank.
+      swellHeight: at(marineHourly.swell_wave_height, mi) ?? at(marineHourly.wave_height, mi),
+      swellPeriod: at(marineHourly.swell_wave_period, mi) ?? at(marineHourly.wave_period, mi),
+      swellDirection: at(marineHourly.swell_wave_direction, mi) ?? at(marineHourly.wave_direction, mi),
+      secondarySwellHeight: at(marineHourly.secondary_swell_wave_height, mi),
+      secondarySwellPeriod: at(marineHourly.secondary_swell_wave_period, mi),
+      secondarySwellDirection: at(marineHourly.secondary_swell_wave_direction, mi),
+      windWaveHeight: at(marineHourly.wind_wave_height, mi),
+      windWavePeriod: at(marineHourly.wind_wave_period, mi),
+      windWaveDirection: at(marineHourly.wind_wave_direction, mi),
+      windSpeed: wi === -1 ? null : at(weatherHourly?.wind_speed_10m, wi),
+      windDirection: wi === -1 ? null : at(weatherHourly?.wind_direction_10m, wi),
+      windGust: wi === -1 ? null : at(weatherHourly?.wind_gusts_10m, wi),
+      seaLevel: at(marineHourly.sea_level_height_msl, mi),
+    });
+  }
 
   const seaLevelSeries = marineHourly.sea_level_height_msl;
   const series: TideSeries = {
     time: marineHourly.time,
     seaLevel: Array.isArray(seaLevelSeries) ? (seaLevelSeries as (number | null)[]) : [],
   };
+  const tidesByDay: Record<string, TideExtreme[]> = {};
+  for (const hour of hours) {
+    const day = hour.timestamp.slice(0, 10);
+    if (!(day in tidesByDay)) tidesByDay[day] = tidesForDay(series, day);
+  }
 
+  return { hours, timezone, utcOffsetSeconds, tidesByDay };
+}
+
+export async function getMarineForecast(
+  lat: number,
+  lon: number,
+  hourOffset: number
+): Promise<SpotForecast> {
+  const series = await getMarineSeries(lat, lon);
+  const forecast = series.hours[hourOffset];
+  if (!forecast) {
+    const target = instantAt(series.utcOffsetSeconds, hourOffset);
+    throw new Error(`No marine data for ${target.key} (${series.timezone})`);
+  }
   return {
     forecast,
-    timezone,
-    utcOffsetSeconds,
-    tides: tidesForDay(series, target.day),
+    timezone: series.timezone,
+    utcOffsetSeconds: series.utcOffsetSeconds,
+    tides: series.tidesByDay[forecast.timestamp.slice(0, 10)] ?? [],
   };
 }
 

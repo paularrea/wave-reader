@@ -47,7 +47,9 @@ export const useStore = create<WaveStore>(set => ({
   regionResolved: false,
   spotUtcOffsetSeconds: browserOffsetSeconds(),
 
-  setSelectedSpot: id => set({ selectedSpotId: id }),
+  // Opening a spot starts from today's first hour, whatever the map was showing:
+  // the detail's timeline then shows the rest of the week at a glance.
+  setSelectedSpot: id => set(id ? { selectedSpotId: id, currentHour: 0 } : { selectedSpotId: null }),
   setCurrentHour: hour => set({ currentHour: hour }),
   setUserSkillLevel: level => set({ userSkillLevel: level }),
   setUserLocation: (lat, lon) => set({ userLocation: { lat, lon } }),

@@ -4,13 +4,16 @@ import React, { useMemo } from 'react';
 import { Drawer } from 'vaul';
 import { useStore } from '@/store/useStore';
 import spots from '@/data/spots.index.json';
-import { Navigation, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Navigation, AlertTriangle, ChevronLeft, ChevronRight, RotateCw } from 'lucide-react';
 import { MarineForecast } from '@/services/marine-api';
 import { TideExtreme } from '@/services/tides';
 import { SpotConfig } from '@/services/star-engine';
 import { qualityStyle, swellColor, windBadge, compassPoint, MAX_STARS } from '@/services/conditions';
-import { instantAt, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
+import { instantAt, dayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
+import { buildTimeline, TimelineDay } from '@/services/forecast-series';
+import type { SeriesState } from '@/hooks/useSpotSeries';
 import { DirectionArrow } from './DirectionArrow';
+import { ForecastTimeline, ForecastTimelineSkeleton } from './ForecastTimeline';
 
 export interface ForecastPayload {
   stars: number;
@@ -27,7 +30,7 @@ export interface ForecastPayload {
 }
 
 interface SpotDetailDrawerProps {
-  forecastData: ForecastPayload | null;
+  series: SeriesState & { retry: () => void };
 }
 
 const NO_DATA = '—';
@@ -109,28 +112,36 @@ function TideRow({ tide }: { tide: TideExtreme }) {
   );
 }
 
-export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
+export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
   const { selectedSpotId, setSelectedSpot, currentHour, setCurrentHour, spotUtcOffsetSeconds } =
     useStore();
   const spot = spots.find(s => s.id === selectedSpotId);
 
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
+  const data = series.status === 'ready' ? series.data : null;
 
-  /** The days reachable from the drawer, and the offset that opens each one. */
-  const days = useMemo(() => {
-    const now = new Date();
-    const seen: Array<{ day: string; label: string; startHour: number }> = [];
-    for (let hour = 0; hour <= MAX_FORECAST_HOURS; hour++) {
-      const at = instantAt(spotUtcOffsetSeconds, hour, now);
-      if (seen[seen.length - 1]?.day === at.day) continue;
-      seen.push({
-        day: at.day,
-        label: compactDayLabel(at, spotUtcOffsetSeconds, now),
-        startHour: hour,
-      });
-    }
-    return seen;
-  }, [spotUtcOffsetSeconds]);
+  const timeline = useMemo<TimelineDay[]>(
+    () => (data ? buildTimeline(data.hours, data.utcOffsetSeconds) : []),
+    [data]
+  );
+
+  // Only ever the hour on screen, from the spot on screen: the series is keyed
+  // by both, so a slow response can never paint another hour or spot.
+  const entry = data?.hours[currentHour] ?? null;
+  const forecastData: ForecastPayload | null =
+    data && entry
+      ? {
+          stars: entry.stars,
+          swellStars: entry.swellStars ?? entry.stars,
+          energyKj: entry.energyKj ?? null,
+          breakingHeightM: entry.breakingHeightM ?? null,
+          unrated: entry.unrated ?? false,
+          safety: entry.safety,
+          forecast: entry.forecast,
+          tides: data.tidesByDay[entry.forecast.timestamp.slice(0, 10)] ?? [],
+          config: data.config,
+        }
+      : null;
 
   if (!spot) return null;
 
@@ -151,6 +162,9 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
    * *tomorrow* at 02:00, with no tab matching what was shown -- the offset is
    * clamped to the requested day.
    */
+  /** The last hour the loaded series reaches, or the nominal horizon before it loads. */
+  const lastHour = data ? Math.max(0, Math.min(MAX_FORECAST_HOURS, data.hours.length - 1)) : MAX_FORECAST_HOURS;
+
   const goToDay = (day: { day: string; startHour: number }) => {
     const first = instantAt(spotUtcOffsetSeconds, day.startHour);
     const wanted = day.startHour + (instant.hour - first.hour);
@@ -158,13 +172,13 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
     // Never before the day's first available hour, never past the horizon, and
     // never past the day's last hour.
     const lastOfDay = day.startHour + (23 - first.hour);
-    const clamped = Math.max(day.startHour, Math.min(wanted, lastOfDay, MAX_FORECAST_HOURS));
+    const clamped = Math.max(day.startHour, Math.min(wanted, lastOfDay, lastHour));
 
     setCurrentHour(clamped);
   };
 
   const stepHour = (delta: number) =>
-    setCurrentHour(Math.min(MAX_FORECAST_HOURS, Math.max(0, currentHour + delta)));
+    setCurrentHour(Math.min(lastHour, Math.max(0, currentHour + delta)));
 
   return (
     <Drawer.Root open={!!selectedSpotId} onOpenChange={open => !open && setSelectedSpot(null)}>
@@ -243,58 +257,70 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
             )}
           </div>
 
-          {/* Day and hour navigation, so the forecast can be browsed in place. */}
+          {/* Hour stepper and the week at a glance, browsable in place. */}
           <div className="px-5 pb-3 shrink-0 border-b border-zinc-900">
-            <div
-              className="flex gap-1.5 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              data-testid="drawer-day-tabs"
-            >
-              {days.map(day => {
-                const isActive = day.day === instant.day;
-                return (
-                  <button
-                    key={day.day}
-                    onClick={() => goToDay(day)}
-                    data-testid="drawer-day-tab"
-                    data-active={isActive}
-                    className={`shrink-0 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-colors ${
-                      isActive
-                        ? 'bg-white text-zinc-950'
-                        : 'bg-zinc-900 text-zinc-500 hover:text-zinc-300'
-                    }`}
-                  >
-                    {day.label}
-                  </button>
-                );
-              })}
-            </div>
-
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-2">
               <button
                 onClick={() => stepHour(-1)}
                 disabled={currentHour === 0}
                 aria-label="Previous hour"
                 data-testid="hour-prev"
-                className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-900 disabled:opacity-25 disabled:hover:bg-transparent transition-colors"
+                className="p-1.5 -ml-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-900 disabled:opacity-25 disabled:hover:bg-transparent transition-colors"
               >
                 <ChevronLeft size={18} />
               </button>
-              <span
-                className="text-sm font-semibold tabular-nums text-zinc-200"
-                data-testid="drawer-time"
-              >
-                {String(instant.hour).padStart(2, '0')}:00
+              <span className="flex items-baseline gap-1.5 text-sm font-semibold tabular-nums">
+                <span className="text-zinc-400 font-medium" data-testid="drawer-day-label">
+                  {dayLabel(instant, spotUtcOffsetSeconds).label}
+                </span>
+                <span className="text-zinc-100" data-testid="drawer-time">
+                  {String(instant.hour).padStart(2, '0')}:00
+                </span>
               </span>
               <button
                 onClick={() => stepHour(1)}
-                disabled={currentHour >= MAX_FORECAST_HOURS}
+                disabled={currentHour >= lastHour}
                 aria-label="Next hour"
                 data-testid="hour-next"
-                className="p-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-900 disabled:opacity-25 disabled:hover:bg-transparent transition-colors"
+                className="p-1.5 -mr-1.5 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-900 disabled:opacity-25 disabled:hover:bg-transparent transition-colors"
               >
                 <ChevronRight size={18} />
               </button>
             </div>
+
+            {series.status === 'ready' ? (
+              <ForecastTimeline
+                days={timeline}
+                currentHour={currentHour}
+                activeDay={instant.day}
+                onSelectHour={setCurrentHour}
+                onSelectDay={goToDay}
+              />
+            ) : series.status === 'error' ? (
+              <div
+                className="flex items-center justify-between gap-3 rounded-xl bg-zinc-900/70 border border-zinc-800 px-3.5 py-3"
+                data-testid="forecast-error"
+                role="alert"
+              >
+                <p className="text-[12px] leading-snug text-zinc-300">
+                  Couldn&apos;t load this spot&apos;s forecast.
+                  <span className="block text-zinc-500">The data provider may be busy.</span>
+                </p>
+                <button
+                  onClick={series.retry}
+                  data-testid="forecast-retry"
+                  className="shrink-0 flex items-center gap-1.5 rounded-lg bg-white text-zinc-950 px-3 py-1.5 text-[12px] font-semibold active:scale-[0.98]"
+                >
+                  <RotateCw size={13} />
+                  Try again
+                </button>
+              </div>
+            ) : (
+              <div data-testid="forecast-loading" aria-live="polite">
+                <span className="sr-only">Loading forecast</span>
+                <ForecastTimelineSkeleton />
+              </div>
+            )}
           </div>
 
           {/* Only this region scrolls, so the header and the action stay put. */}

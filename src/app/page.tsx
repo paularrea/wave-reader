@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
+import React, { useEffect, useMemo, useSyncExternalStore } from 'react';
 import { MarineMap } from '@/components/shared/MarineMap';
-import { SpotDetailDrawer, ForecastPayload } from '@/components/shared/SpotDetailDrawer';
+import { SpotDetailDrawer } from '@/components/shared/SpotDetailDrawer';
 import { DataInfoPanel } from '@/components/shared/DataInfoPanel';
 import { useStore } from '@/store/useStore';
 import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
 import { allCountries, regionsForCountry } from '@/services/regions';
+import { useSpotSeries } from '@/hooks/useSpotSeries';
 
 /** Groups the timeline's hours into days so the strip can show one chip per day. */
 function useDaySegments(utcOffsetSeconds: number) {
@@ -42,9 +43,11 @@ export default function WaveReaderPage() {
     setSpotUtcOffsetSeconds,
   } = useStore();
 
-  /** Keyed by spot so a slow response can never paint onto a different spot. */
-  const [loaded, setLoaded] = useState<{ spotId: string; payload: ForecastPayload } | null>(null);
-  const forecastData = loaded && loaded.spotId === selectedSpotId ? loaded.payload : null;
+  /**
+   * The spot's whole horizon, loaded once per spot and level. Stepping through
+   * hours reads from it locally; failures retry and then surface in the drawer.
+   */
+  const series = useSpotSeries(selectedSpotId, userSkillLevel);
 
   /**
    * Everything time-dependent renders only after hydration. The server has no
@@ -57,48 +60,11 @@ export default function WaveReaderPage() {
     () => false
   );
 
+  // Labels follow the spot's own timezone once its forecast says what it is.
+  const seriesOffset = series.status === 'ready' ? series.data.utcOffsetSeconds : null;
   useEffect(() => {
-    if (!selectedSpotId) return;
-
-    const spotId = selectedSpotId;
-    let cancelled = false;
-
-    async function fetchDetails() {
-      try {
-        const res = await fetch(
-          `/api/forecast?spotId=${spotId}&level=${userSkillLevel}&hour=${currentHour}`
-        );
-        const data = await res.json();
-        if (cancelled || data.error) return;
-
-        setLoaded({
-          spotId,
-          payload: {
-            stars: data.stars,
-            swellStars: data.swellStars ?? data.stars,
-            energyKj: data.energyKj ?? null,
-            breakingHeightM: data.breakingHeightM ?? null,
-            unrated: data.unrated ?? false,
-            safety: data.safety,
-            forecast: data.forecast,
-            tides: data.tides ?? [],
-            config: data.spot?.config ?? null,
-          },
-        });
-
-        if (typeof data.utcOffsetSeconds === 'number') {
-          setSpotUtcOffsetSeconds(data.utcOffsetSeconds);
-        }
-      } catch (e) {
-        console.error('Error fetching spot details:', e);
-      }
-    }
-
-    fetchDetails();
-    return () => {
-      cancelled = true;
-    };
-  }, [selectedSpotId, userSkillLevel, currentHour, setSpotUtcOffsetSeconds]);
+    if (seriesOffset !== null) setSpotUtcOffsetSeconds(seriesOffset);
+  }, [seriesOffset, setSpotUtcOffsetSeconds]);
 
   const daySegments = useDaySegments(spotUtcOffsetSeconds);
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
@@ -239,7 +205,7 @@ export default function WaveReaderPage() {
         </div>
       </div>
 
-      <SpotDetailDrawer forecastData={forecastData} />
+      <SpotDetailDrawer series={series} />
     </main>
   );
 }
