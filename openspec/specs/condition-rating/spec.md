@@ -25,11 +25,15 @@ La calidad SHALL representarse en tres niveles claramente distinguibles: excelen
 - **THEN** su marcador se dibuja hueco y se distingue de un spot con mala puntuación
 
 ### Requirement: Leyenda de la escala
-La interfaz SHALL mostrar una leyenda que explique qué representa cada nivel de la escala y su rango de puntuación.
+La interfaz SHALL mostrar una leyenda que explique qué representa cada nivel de la escala y su rango de puntuación. La leyenda SHALL mostrarse como primera sección del panel de información y NO SHALL ocupar espacio permanente sobre el mapa.
 
 #### Scenario: Leyenda visible
-- **WHEN** el usuario abre la aplicación
-- **THEN** ve una leyenda con los niveles de calidad y el aviso de peligro
+- **WHEN** el usuario abre el panel de información
+- **THEN** lo primero que ve es la leyenda con los niveles de calidad y el aviso de peligro
+
+#### Scenario: Mapa despejado
+- **WHEN** el usuario abre la aplicación en un móvil
+- **THEN** no hay leyenda superpuesta al mapa
 
 ### Requirement: Badge de condición de viento legible
 La condición de viento SHALL mostrarse como un badge con una de estas categorías y colores: `On-shore` en gris, `Cross-shore` en verde claro, `Off-shore` en verde, `Glass` en verde. El badge SHALL acompañarse siempre de la fuerza y la dirección del viento.
