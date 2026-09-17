@@ -40,3 +40,14 @@ El forecast de un spot SHALL exponer altura, periodo y dirección del swell prim
 #### Scenario: Información ampliada
 - **WHEN** el usuario consulta la información ampliada de un spot y hay swell secundario disponible
 - **THEN** ve la altura, el periodo y la dirección del swell secundario y de las olas de viento
+
+### Requirement: Racha de viento
+El forecast SHALL exponer la racha de viento en km/h, procedente del endpoint meteorológico, con el mismo tratamiento de ausencia que el resto de magnitudes.
+
+#### Scenario: Racha disponible
+- **WHEN** el proveedor devuelve racha para la hora consultada
+- **THEN** la respuesta la expone en km/h sin reescalar
+
+#### Scenario: Racha ausente
+- **WHEN** el proveedor no devuelve racha
+- **THEN** la racha se expone como ausente y la puntuación usa solo el viento medio
