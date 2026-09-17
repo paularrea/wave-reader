@@ -260,7 +260,7 @@ export function DataInfoPanel() {
                         </span>
                       </span>
                       <span className="min-w-0">
-                        <span className="block text-[13px] text-zinc-100 font-medium leading-tight truncate">
+                        <span className="block text-[13px] text-zinc-100 font-medium leading-tight">
                           {entry.label}
                         </span>
                         <span className="block text-[11px] tabular-nums text-zinc-500 leading-tight">
