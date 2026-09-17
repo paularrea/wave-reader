@@ -260,6 +260,88 @@ async function assignSubdivisions(beaches, boundary, parentName) {
   log(`    ${parentName}: ${resolved.length} by polygon, ${unresolved.length} by nearest neighbour`);
 }
 
+/**
+ * VERIFY=1 compares every region's fetched count with an Overpass `out count`
+ * for the same query, and re-fetches the regions that come up short.
+ *
+ * Needed because a truncated response does not always carry a `remark`: the
+ * first run kept 25 of Normandie's 38 named beaches with no sign of trouble.
+ */
+/**
+ * Fetches a region and checks the element count against `out count` before
+ * accepting it, retrying when short.
+ *
+ * Overpass mirrors can answer with a complete, well-formed JSON that is simply
+ * missing elements, and no `remark` says so: a re-fetch of Andalucía came back
+ * with 150 of its 507 beaches. Only comparing against a count catches that.
+ */
+async function fetchComplete(iso, level, country, name, attempt = 0) {
+  const data = await overpass(queryFor(iso, level, country));
+  const have = (data.elements ?? []).length;
+
+  let expected = null;
+  try {
+    const counted = await overpass(queryFor(iso, level, country).replace('out center tags;', 'out count;'));
+    expected = Number(counted.elements?.[0]?.tags?.total ?? NaN);
+  } catch (err) {
+    log(`    ${name}: could not count (${err.message}); accepting ${have} unverified`);
+    return data;
+  }
+
+  if (!Number.isFinite(expected) || have >= expected) return data;
+  if (attempt >= 5) throw new Error(`still short after retries: ${have} of ${expected}`);
+
+  log(`    ${name}: got ${have} of ${expected}, retrying`);
+  await sleep(15_000);
+  return fetchComplete(iso, level, country, name, attempt + 1);
+}
+
+async function verify() {
+  const beaches = JSON.parse(await readFile(OUT_PATH, 'utf8'));
+  let fetched = [];
+  try {
+    fetched = JSON.parse(await readFile(FETCHED_PATH, 'utf8'));
+  } catch {
+    // nothing recorded
+  }
+
+  const short = [];
+  for (const { iso, name, country, level, subdivide } of REGIONS) {
+    const countQuery = queryFor(iso, level, country).replace('out center tags;', 'out count;');
+    let expected;
+    try {
+      const data = await overpass(countQuery);
+      expected = Number(data.elements?.[0]?.tags?.total ?? NaN);
+    } catch (err) {
+      log(`  ${name}: count failed (${err.message}), skipping`);
+      continue;
+    }
+
+    // A subdivided region's beaches are stored under its subdivisions' names.
+    const have = subdivide
+      ? beaches.filter(b => b.country === country && b.parentRegion === name).length
+      : beaches.filter(b => b.community === name).length;
+
+    const status = have >= expected ? 'ok' : `SHORT by ${expected - have}`;
+    log(`  ${name}: have ${have}, Overpass counts ${expected} -> ${status}`);
+    if (have < expected) short.push(name);
+    await sleep(3000);
+  }
+
+  if (short.length === 0) {
+    log('VERIFY: every region complete');
+    return;
+  }
+
+  log(`VERIFY: re-fetching ${short.join(', ')}`);
+  const shortSet = new Set(short);
+  const isShort = b => shortSet.has(b.community) || shortSet.has(b.parentRegion);
+  await writeFile(OUT_PATH, JSON.stringify(beaches.filter(b => !isShort(b)), null, 1) + '\n');
+  await writeFile(FETCHED_PATH, JSON.stringify(fetched.filter(r => !shortSet.has(r)), null, 1) + '\n');
+  process.env.RESUME = '1';
+  await main();
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
@@ -304,7 +386,12 @@ async function main() {
     await writeFile(FETCHED_PATH, JSON.stringify([...fetchedRegions], null, 1) + '\n');
   };
 
+  const onlyRegions = process.env.ONLY_REGIONS
+    ? new Set(process.env.ONLY_REGIONS.split(',').map(r => r.trim()))
+    : null;
+
   for (const { iso, name: community, country, level, subdivide } of REGIONS) {
+    if (onlyRegions && !onlyRegions.has(community)) continue;
     if (alreadyFetched.has(community)) {
       log(`${community}: already fetched, skipping`);
       continue;
@@ -313,7 +400,7 @@ async function main() {
 
     let data;
     try {
-      data = await overpass(queryFor(iso, level, country));
+      data = await fetchComplete(iso, level, country, community);
     } catch (err) {
       log(`    ${community} FAILED: ${err.message}`);
       continue;
@@ -340,6 +427,7 @@ async function main() {
     }
 
     if (subdivide && fromThisRegion.length > 0) {
+      fromThisRegion.forEach(b => (b.parentRegion = community));
       try {
         await assignSubdivisions(fromThisRegion, subdivide, community);
       } catch (err) {
@@ -365,7 +453,7 @@ async function main() {
   log(`DONE. ${beaches.length} named beaches -> ${OUT_PATH.pathname}`);
 }
 
-main().catch(err => {
+(process.env.VERIFY ? verify() : main()).catch(err => {
   log(`FATAL: ${err.message}`);
   process.exit(1);
 });

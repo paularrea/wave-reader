@@ -9,38 +9,33 @@ import { useStore } from '@/store/useStore';
 import spots from '@/data/spots.index.json';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
 import { locationDefaults, regionBounds } from '@/services/regions';
+import { chunkIndexById } from '@/services/spot-batches';
 
 const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 
+/** Must match the server's BATCH_SIZE so client and server cut the same chunks. */
+const BATCH_SIZE = 50;
+/** Chunk requests in flight at once; each chunk is two upstream calls. */
+const MAX_CONCURRENT_CHUNKS = 4;
 /**
- * Open-Meteo is a free service and every spot costs two upstream calls, so the
- * map never fetches the whole region at once: it renders every marker
- * immediately as "no data" and then fills in only what the user is looking at.
+ * Markers are DOM nodes, and a node per beach in a busy region stalls the main
+ * thread on every pan. Only what is on screen, plus a margin, gets one.
  */
-const MAX_CONCURRENT_FETCHES = 6;
-/** Beyond this many visible spots, scoring all of them helps nobody. */
-const MAX_SPOTS_PER_VIEWPORT = 60;
-/**
- * Markers are DOM nodes, and a Mapbox marker each for Galicia's 1,286 beaches
- * would stall the main thread on every pan. Only what is on screen -- plus a
- * margin so panning does not reveal bare sea -- gets a node.
- */
-const MAX_MARKERS = 300;
+const MAX_MARKERS = 400;
 const VIEWPORT_MARGIN = 0.35; // fraction of the viewport span, added each side
 const MOVE_DEBOUNCE_MS = 400;
 
 interface Rating {
+  hasData: boolean;
   stars: number;
   unrated: boolean;
   isDangerous: boolean;
 }
 
+type Spot = (typeof spots)[number];
+
 /** Runs `worker` over `items`, at most `limit` in flight at any moment. */
-async function mapWithLimit<T>(
-  items: T[],
-  limit: number,
-  worker: (item: T) => Promise<void>
-): Promise<void> {
+async function mapWithLimit<T>(items: T[], limit: number, worker: (item: T) => Promise<void>) {
   let cursor = 0;
   const runners = Array.from({ length: Math.min(limit, items.length) }, async () => {
     while (cursor < items.length) {
@@ -51,9 +46,9 @@ async function mapWithLimit<T>(
   await Promise.all(runners);
 }
 
-function applyStyle(el: HTMLElement, style: QualityStyle, stars: number | null) {
+function applyStyle(el: HTMLElement, style: QualityStyle, stars: number) {
   el.dataset.tier = style.tier;
-  el.dataset.stars = stars === null ? '' : String(stars);
+  el.dataset.stars = String(stars);
   el.dataset.dangerous = String(style.tier === 'danger');
   el.style.width = `${style.size}px`;
   el.style.height = `${style.size}px`;
@@ -62,18 +57,20 @@ function applyStyle(el: HTMLElement, style: QualityStyle, stars: number | null) 
   el.style.boxShadow = style.boxShadow;
   el.style.color = style.foreground;
   el.style.fontSize = `${Math.round(style.size * 0.45)}px`;
-  el.textContent = style.showScore && stars !== null ? String(stars) : '';
+  el.textContent = style.showScore ? String(stars) : '';
   el.style.zIndex = style.tier === 'epic' || style.tier === 'danger' ? '2' : '1';
 }
 
 export function MarineMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
-  /** Marker handles and their elements, keyed by spot id. */
   const markersRef = useRef(new Map<string, { marker: mapboxgl.Marker; el: HTMLElement }>());
-  /** Ratings already fetched for the current level/hour, keyed by spot id. */
+  /** Ratings for the current region, hour and level, keyed by spot id. */
   const ratingsRef = useRef(new Map<string, Rating>());
-  const fetchTokenRef = useRef(0);
+  /** Chunks already fetched or in flight for the current region, hour and level. */
+  const chunksRef = useRef(new Set<number>());
+  /** Bumped whenever region, hour or level change, so stale responses are ignored. */
+  const generationRef = useRef(0);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const {
@@ -87,40 +84,69 @@ export function MarineMap() {
   } = useStore();
 
   const [loading, setLoading] = useState(true);
-  const [pending, setPending] = useState(0);
+  /**
+   * In-flight chunks, labelled with the query they belong to. A stale label
+   * simply stops counting, so switching region mid-load can never leave the
+   * "Scoring" chip stuck on screen.
+   */
+  const queryKey = `${selectedRegion}|${currentHour}|${userSkillLevel}`;
+  const [pending, setPending] = useState<{ key: string; n: number }>({ key: '', n: 0 });
+  const pendingHere = pending.key === queryKey ? pending.n : 0;
 
-  /** The spots worth giving a DOM node right now: on screen, plus a margin. */
-  const spotsToRender = useCallback((): typeof spots => {
+  const regionSpots = useCallback(
+    (): Spot[] => spots.filter(spot => spot.community === selectedRegion),
+    [selectedRegion]
+  );
+
+  /** Spots within the viewport plus a margin, so panning does not reveal bare sea. */
+  const nearViewport = useCallback((): Spot[] => {
     const map = mapRef.current;
-    const inRegion = spots.filter(spot => spot.community === selectedRegion);
-    if (!map) return inRegion.slice(0, MAX_MARKERS);
-
+    const inRegion = regionSpots();
+    if (!map) return inRegion;
     const bounds = map.getBounds();
-    if (!bounds) return inRegion.slice(0, MAX_MARKERS);
+    if (!bounds) return inRegion;
 
     const latMargin = (bounds.getNorth() - bounds.getSouth()) * VIEWPORT_MARGIN;
     const lonMargin = (bounds.getEast() - bounds.getWest()) * VIEWPORT_MARGIN;
+    return inRegion.filter(
+      s =>
+        s.coordinates.lat >= bounds.getSouth() - latMargin &&
+        s.coordinates.lat <= bounds.getNorth() + latMargin &&
+        s.coordinates.lon >= bounds.getWest() - lonMargin &&
+        s.coordinates.lon <= bounds.getEast() + lonMargin
+    );
+  }, [regionSpots]);
 
-    return inRegion
-      .filter(
-        spot =>
-          spot.coordinates.lat >= bounds.getSouth() - latMargin &&
-          spot.coordinates.lat <= bounds.getNorth() + latMargin &&
-          spot.coordinates.lon >= bounds.getWest() - lonMargin &&
-          spot.coordinates.lon <= bounds.getEast() + lonMargin
-      )
-      .slice(0, MAX_MARKERS);
-  }, [selectedRegion]);
-
-  /** Rebuilds the marker layer. Cheap: no network. */
-  const renderMarkers = useCallback(() => {
+  /**
+   * Brings the marker layer in line with what should be visible: a marker for
+   * every nearby spot that has a rating with data, and nothing else. There are
+   * no placeholder markers -- a spot without data never appears.
+   */
+  const reconcileMarkers = useCallback(() => {
     const map = mapRef.current;
     if (!map) return;
 
-    markersRef.current.forEach(({ marker }) => marker.remove());
-    markersRef.current.clear();
+    const wanted = nearViewport()
+      .filter(s => ratingsRef.current.get(s.id)?.hasData)
+      .slice(0, MAX_MARKERS);
+    const wantedIds = new Set(wanted.map(s => s.id));
 
-    for (const spot of spotsToRender()) {
+    for (const [id, { marker }] of markersRef.current) {
+      if (!wantedIds.has(id)) {
+        marker.remove();
+        markersRef.current.delete(id);
+      }
+    }
+
+    for (const spot of wanted) {
+      const rating = ratingsRef.current.get(spot.id)!;
+      const style = qualityStyle(rating.stars, { isDangerous: rating.isDangerous });
+      const existing = markersRef.current.get(spot.id);
+      if (existing) {
+        applyStyle(existing.el, style, rating.stars);
+        continue;
+      }
+
       const el = document.createElement('div');
       el.className = 'mapboxgl-marker custom-marker';
       el.dataset.testid = 'spot-marker';
@@ -131,19 +157,8 @@ export function MarineMap() {
       el.style.alignItems = 'center';
       el.style.justifyContent = 'center';
       el.style.fontWeight = '800';
-      el.style.transition = 'width 0.15s ease, height 0.15s ease';
       el.title = spot.name;
-
-      const known = ratingsRef.current.get(spot.id);
-      applyStyle(
-        el,
-        qualityStyle(known?.stars ?? 0, {
-          isDangerous: known?.isDangerous,
-          unrated: known?.unrated ?? true,
-        }),
-        known && !known.unrated ? known.stars : null
-      );
-
+      applyStyle(el, style, rating.stars);
       el.addEventListener('click', event => {
         event.stopPropagation();
         setSelectedSpot(spot.id);
@@ -154,89 +169,58 @@ export function MarineMap() {
         .addTo(map);
       markersRef.current.set(spot.id, { marker, el });
     }
-  }, [spotsToRender, setSelectedSpot]);
+  }, [nearViewport, setSelectedSpot]);
 
   /**
-   * Frames the region, but only when the region itself changes.
-   *
-   * This used to live at the end of renderMarkers, which re-runs whenever the
-   * hour or skill level changes -- so every step of the time slider yanked a
-   * user zoomed into one beach back out to the whole region.
+   * Scores every spot near the viewport, a chunk at a time. Chunks are fixed
+   * per region (see spot-batches), so the same chunk is never requested twice
+   * for the same hour and level, and every visitor shares upstream cache hits.
    */
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map || loading) return;
-
-    const box = regionBounds(selectedRegion);
-    if (!box) return;
-
-    map.fitBounds(
-      [
-        [box.west, box.south],
-        [box.east, box.north],
-      ],
-      { padding: 60, maxZoom: 9, duration: 900 }
-    );
-  }, [selectedRegion, loading]);
-
-  /** Scores only the spots currently on screen. */
-  const fetchVisibleForecasts = useCallback(async () => {
+  const scoreVisible = useCallback(async () => {
     const map = mapRef.current;
     if (!map) return;
+    const generation = generationRef.current;
 
-    const token = ++fetchTokenRef.current;
-    const bounds = map.getBounds();
-    if (!bounds) return;
+    const chunkOf = chunkIndexById(spots, selectedRegion, BATCH_SIZE);
+    const needed = [
+      ...new Set(nearViewport().map(s => chunkOf.get(s.id)).filter((c): c is number => c !== undefined)),
+    ].filter(c => !chunksRef.current.has(c));
 
-    const onScreen = spots
-      .filter(spot => spot.community === selectedRegion)
-      .filter(spot => bounds.contains([spot.coordinates.lon, spot.coordinates.lat]))
-      .filter(spot => !ratingsRef.current.has(spot.id))
-      .slice(0, MAX_SPOTS_PER_VIEWPORT);
+    if (needed.length === 0) return;
+    needed.forEach(c => chunksRef.current.add(c));
+    const key = `${selectedRegion}|${currentHour}|${userSkillLevel}`;
+    setPending(p => ({ key, n: (p.key === key ? p.n : 0) + needed.length }));
 
-    // Set unconditionally: an early return that left a superseded round's count
-    // in place kept "Scoring N spots…" on screen for good.
-    setPending(onScreen.length);
-    if (onScreen.length === 0) return;
-
-    await mapWithLimit(onScreen, MAX_CONCURRENT_FETCHES, async spot => {
+    await mapWithLimit(needed, MAX_CONCURRENT_CHUNKS, async chunk => {
       try {
-        // Inside the try, so the finally below still runs when superseded.
-        if (token !== fetchTokenRef.current) return;
         const res = await fetch(
-          `/api/forecast?spotId=${spot.id}&level=${userSkillLevel}&hour=${currentHour}`
+          `/api/forecast/batch?region=${encodeURIComponent(selectedRegion)}&chunk=${chunk}` +
+            `&hour=${currentHour}&level=${userSkillLevel}`
         );
-        if (!res.ok) return;
-        const data = await res.json();
-        if (data.error || token !== fetchTokenRef.current) return;
-
-        const rating: Rating = {
-          stars: data.stars,
-          unrated: data.unrated ?? false,
-          isDangerous: data.safety?.isDangerous ?? false,
-        };
-        ratingsRef.current.set(spot.id, rating);
-
-        const entry = markersRef.current.get(spot.id);
-        if (entry) {
-          applyStyle(
-            entry.el,
-            qualityStyle(rating.stars, {
-              isDangerous: rating.isDangerous,
-              unrated: rating.unrated,
-            }),
-            rating.unrated ? null : rating.stars
-          );
+        if (generation !== generationRef.current) return;
+        if (!res.ok) {
+          // Let a later pan retry this chunk rather than marking it done.
+          chunksRef.current.delete(chunk);
+          return;
         }
+        const data = await res.json();
+        if (generation !== generationRef.current) return;
+        for (const r of data.results ?? []) {
+          ratingsRef.current.set(r.id, {
+            hasData: Boolean(r.hasData),
+            stars: r.stars,
+            unrated: r.unrated,
+            isDangerous: r.isDangerous,
+          });
+        }
+        reconcileMarkers();
       } catch {
-        // A single failed spot stays hollow; it must not stop the others.
+        if (generation === generationRef.current) chunksRef.current.delete(chunk);
       } finally {
-        if (token === fetchTokenRef.current) setPending(p => Math.max(0, p - 1));
+        setPending(p => (p.key === key ? { key, n: Math.max(0, p.n - 1) } : p));
       }
     });
-
-    if (token === fetchTokenRef.current) setPending(0);
-  }, [selectedRegion, userSkillLevel, currentHour]);
+  }, [nearViewport, reconcileMarkers, selectedRegion, currentHour, userSkillLevel]);
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';
@@ -249,8 +233,7 @@ export function MarineMap() {
       zoom: userLocation ? 8 : 5,
     });
 
-    // No NavigationControl: it renders top-right, directly under the legend,
-    // and the map is driven by pinch, scroll and double-tap anyway.
+    // No NavigationControl: the map is driven by pinch, scroll and double-tap.
     mapRef.current = map;
     const markers = markersRef.current;
 
@@ -262,7 +245,6 @@ export function MarineMap() {
           const { country, region } = locationDefaults(latitude, longitude);
           resolveLocation(country, region);
         },
-        // Refused or unavailable: the store's default region already applies.
         err => console.warn('Geolocation unavailable:', err.message)
       );
     }
@@ -287,18 +269,38 @@ export function MarineMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Changing level or hour invalidates every score we hold.
+  // A new region, hour or level invalidates every rating and fetched chunk.
   useEffect(() => {
+    generationRef.current += 1;
     ratingsRef.current.clear();
-  }, [userSkillLevel, currentHour]);
+    chunksRef.current.clear();
+  }, [selectedRegion, currentHour, userSkillLevel]);
 
   useEffect(() => {
     if (!mapRef.current || loading) return;
-    renderMarkers();
-    fetchVisibleForecasts();
-  }, [renderMarkers, fetchVisibleForecasts, loading]);
+    reconcileMarkers();
+    scoreVisible();
+  }, [reconcileMarkers, scoreVisible, loading]);
 
-  // Panning and zooming bring new spots on screen; score those too.
+  /**
+   * Frames the region, but only when the region itself changes. Tying this to
+   * marker rendering once yanked a zoomed-in user back out on every hour step.
+   */
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || loading) return;
+    const box = regionBounds(selectedRegion);
+    if (!box) return;
+    map.fitBounds(
+      [
+        [box.west, box.south],
+        [box.east, box.north],
+      ],
+      { padding: 60, maxZoom: 9, duration: 900 }
+    );
+  }, [selectedRegion, loading]);
+
+  // Panning and zooming bring new spots near the viewport.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || loading) return;
@@ -306,10 +308,8 @@ export function MarineMap() {
     const onMoveEnd = () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
       debounceRef.current = setTimeout(() => {
-        // Panning brings new spots into view: they need a node before they can
-        // be scored.
-        renderMarkers();
-        fetchVisibleForecasts();
+        reconcileMarkers();
+        scoreVisible();
       }, MOVE_DEBOUNCE_MS);
     };
 
@@ -318,7 +318,7 @@ export function MarineMap() {
       map.off('moveend', onMoveEnd);
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [renderMarkers, fetchVisibleForecasts, loading]);
+  }, [reconcileMarkers, scoreVisible, loading]);
 
   return (
     <div className="relative w-full h-full">
@@ -327,12 +327,12 @@ export function MarineMap() {
           <div className="text-white font-medium animate-pulse">Loading Marine Data...</div>
         </div>
       )}
-      {!loading && pending > 0 && (
+      {!loading && pendingHere > 0 && (
         <div
           data-testid="scoring-indicator"
-          className="absolute top-6 left-1/2 -translate-x-1/2 z-10 bg-zinc-900/85 backdrop-blur-md border border-zinc-800 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-zinc-400"
+          className="absolute top-16 left-1/2 -translate-x-1/2 z-10 bg-zinc-900/85 backdrop-blur-md border border-zinc-800 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-zinc-400"
         >
-          Scoring {pending} spots…
+          Scoring spots…
         </div>
       )}
       <div ref={mapContainerRef} className="mapboxgl-map w-full h-full" />

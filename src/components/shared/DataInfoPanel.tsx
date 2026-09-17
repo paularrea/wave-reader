@@ -149,6 +149,45 @@ export function DataInfoPanel() {
             className="flex-1 overflow-y-auto overscroll-contain px-5 min-h-0"
             style={{ paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
           >
+            {/* First thing in the panel: what the map's markers mean. */}
+            <Section icon={<Star size={15} />} title="Conditions" testId="quality-legend">
+              <ul className="flex flex-col gap-2">
+                {LEGEND_TIERS.map(tier => {
+                  const entry = legendEntry(tier);
+                  return (
+                    <li
+                      key={tier}
+                      className="flex items-center gap-3"
+                      data-testid={`legend-${tier}`}
+                    >
+                      <span className="w-8 flex justify-center shrink-0">
+                        <span
+                          className="rounded-full flex items-center justify-center font-bold"
+                          style={{
+                            width: entry.size,
+                            height: entry.size,
+                            backgroundColor: entry.background,
+                            border: entry.border,
+                            boxShadow: entry.boxShadow,
+                            color: entry.foreground,
+                            fontSize: Math.round(entry.size * 0.45),
+                          }}
+                        >
+                          {entry.showScore && tier !== 'danger' ? entry.range.split('-')[0] : ''}
+                        </span>
+                      </span>
+                      <span className="text-zinc-200 font-medium">{entry.label}</span>
+                      <span className="ml-auto tabular-nums text-zinc-500">{entry.range}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="text-[12px] text-zinc-500">
+                Bigger and brighter markers mean better surf. Scores use the surf-forecast scale; in the
+                Mediterranean they are adjusted to what counts as a good day there.
+              </p>
+            </Section>
+
             <Section icon={<Waves size={15} />} title="Forecast data" testId="info-sources">
               <p>
                 Waves, swell and sea level come from the{' '}
@@ -231,28 +270,10 @@ export function DataInfoPanel() {
                 at 10 spots, with an average error of{' '}
                 <span className="text-zinc-200">0.5 stars</span> and 96% of slots within one star.
               </p>
-              <div className="pt-1">
-                {LEGEND_TIERS.filter(t => t !== 'danger').map(tier => {
-                  const entry = legendEntry(tier);
-                  return (
-                    <div key={tier} className="flex items-center justify-between py-1">
-                      <span className="flex items-center gap-2">
-                        <span
-                          className="inline-block rounded-full"
-                          style={{
-                            width: 10,
-                            height: 10,
-                            backgroundColor: entry.background,
-                            border: entry.border,
-                          }}
-                        />
-                        <span className="text-zinc-200">{entry.label}</span>
-                      </span>
-                      <span className="tabular-nums text-zinc-500">{entry.range}</span>
-                    </div>
-                  );
-                })}
-              </div>
+              <p data-testid="info-mediterranean">
+                The Mediterranean rarely sees the long swells that score well on that scale, so it has its
+                own: 1 m at 7 s with clean wind is a 2–3 there, and 1.5 m at 8 s a 5–6.
+              </p>
               <p>
                 When wind spoils a good swell, the spot detail shows what the swell alone would score.
               </p>

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { getMarineForecast, SpotForecast } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
 import spots from '@/data/spots.json';
+import { basinOf } from '@/services/basins';
 
 const VALID_LEVELS: SkillLevel[] = ['beginner', 'intermediate', 'expert'];
 
@@ -41,7 +42,8 @@ export async function GET(request: Request) {
     bundle.forecast,
     spot.config as SpotConfig,
     level,
-    spot.name
+    spot.name,
+    basinOf(spot.coordinates.lat, spot.coordinates.lon)
   );
 
   return NextResponse.json({

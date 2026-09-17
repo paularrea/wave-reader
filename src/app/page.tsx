@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react';
 import { MarineMap } from '@/components/shared/MarineMap';
 import { SpotDetailDrawer, ForecastPayload } from '@/components/shared/SpotDetailDrawer';
-import { QualityLegend } from '@/components/shared/QualityLegend';
 import { DataInfoPanel } from '@/components/shared/DataInfoPanel';
 import { useStore } from '@/store/useStore';
 import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
@@ -131,9 +130,10 @@ export default function WaveReaderPage() {
             Marine Forecast
           </p>
         </div>
-        <div className="pointer-events-auto flex items-start gap-2">
+        {/* The legend lives inside the info panel: on a phone a permanent box
+            over the map cost more than it explained. */}
+        <div className="pointer-events-auto">
           <DataInfoPanel />
-          <QualityLegend />
         </div>
       </header>
 

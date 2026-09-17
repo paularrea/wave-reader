@@ -1,4 +1,5 @@
 import { MarineForecast } from './marine-api';
+import type { Basin } from './basins';
 
 export type SkillLevel = 'beginner' | 'intermediate' | 'expert';
 
@@ -52,14 +53,52 @@ export interface StarRatingResult {
  */
 const ENERGY_COEFFICIENT = 1.9;
 
-// --- Calibrated against surf-forecast (see header). Change only by refitting. ---
+interface EnergyScale {
+  /** Below this the sea is flat for surfing purposes. */
+  flatKj: number;
+  /** Energy that maps to a 10. */
+  topKj: number;
+  /** >1 compresses the low and middle of the scale. */
+  gamma: number;
+  /** Multipliers for short periods, checked in ascending order of `under`. */
+  period: Array<{ under: number; factor: number }>;
+}
 
-/** Below this the sea is flat for surfing purposes. Fitted 51 kJ; FAQ says ~100 "just about surfable". */
-const FLAT_ENERGY_KJ = 51.27;
-/** Energy that maps to a 10. surf-forecast keeps high scores for very large, clean swell. */
-const TOP_ENERGY_KJ = 31764;
-/** >1 compresses the low and middle of the scale, as surf-forecast does. */
-const SCALE_GAMMA = 1.41;
+/**
+ * Energy scales per basin. Wind handling is shared: the sea's energy changes
+ * between basins, what wind does to a wave does not.
+ */
+const SCALES: Record<Basin, EnergyScale> = {
+  /**
+   * Fitted to surf-forecast's ratings (see header). Change only by refitting.
+   * Flat fitted at 51 kJ; their FAQ says ~100 kJ is "just about surfable".
+   */
+  atlantic: {
+    flatKj: 51.27,
+    topKj: 31764,
+    gamma: 1.41,
+    period: [
+      { under: 6, factor: 0.48 },
+      { under: 8, factor: 0.69 },
+      { under: 10, factor: 0.71 },
+    ],
+  },
+  /**
+   * No reference service rates the Mediterranean on its own terms, so this is
+   * anchored to local expertise: 1 m @ 7 s glassy or cross-off is a 2-3 day,
+   * 1.5 m @ 8 s glassy a 5-6 day. 5-8 s is the normal Mediterranean period, so
+   * only very short wind chop is penalised.
+   */
+  mediterranean: {
+    flatKj: 5,
+    topKj: 1500,
+    gamma: 1.6,
+    period: [
+      { under: 5, factor: 0.6 },
+      { under: 6, factor: 0.85 },
+    ],
+  },
+};
 
 /** Beyond the window edge, energy fades linearly to this floor over this many degrees. */
 const OFF_WINDOW_FLOOR = 0.1;
@@ -145,11 +184,11 @@ export function directionFactor(
   return 1 - (1 - OFF_WINDOW_FLOOR) * (beyond / OFF_WINDOW_FADE_DEG);
 }
 
-/** Short-period sea is disorganised, not just weaker. Cuts follow the windswell/groundswell line. */
-export function periodFactor(periodS: number): number {
-  if (periodS < 6) return 0.48;
-  if (periodS < 8) return 0.69;
-  if (periodS < 10) return 0.71;
+/** Short-period sea is disorganised, not just weaker. Cut-offs depend on the basin. */
+export function periodFactor(periodS: number, basin: Basin = 'atlantic'): number {
+  for (const { under, factor } of SCALES[basin].period) {
+    if (periodS < under) return factor;
+  }
   return 1;
 }
 
@@ -157,11 +196,12 @@ export function periodFactor(periodS: number): number {
  * Log-scaled, gamma-curved energy to 0-10. Monotonic: surf-forecast does not
  * mark big days down for closing out, so neither does this.
  */
-export function energyScore(energy: number): number {
-  if (energy < FLAT_ENERGY_KJ) return 0;
+export function energyScore(energy: number, basin: Basin = 'atlantic'): number {
+  const { flatKj, topKj, gamma } = SCALES[basin];
+  if (energy < flatKj) return 0;
 
-  const ratio = Math.log(energy / FLAT_ENERGY_KJ) / Math.log(TOP_ENERGY_KJ / FLAT_ENERGY_KJ);
-  return 10 * Math.min(1, Math.max(0, ratio)) ** SCALE_GAMMA;
+  const ratio = Math.log(energy / flatKj) / Math.log(topKj / flatKj);
+  return 10 * Math.min(1, Math.max(0, ratio)) ** gamma;
 }
 
 /**
@@ -220,7 +260,8 @@ export function calculateStarRating(
   forecast: MarineForecast,
   config: SpotConfig,
   level: SkillLevel,
-  spotName = 'this spot'
+  spotName = 'this spot',
+  basin: Basin = 'atlantic'
 ): StarRatingResult {
   const components = componentsOf(forecast);
   if (components.length === 0) return UNRATED;
@@ -238,7 +279,7 @@ export function calculateStarRating(
     components.reduce((sum, c, i) => sum + c.periodS * energies[i], 0) / totalEnergy;
   const combinedHeight = Math.sqrt(components.reduce((sum, c) => sum + c.heightM ** 2, 0));
 
-  const swellScore = energyScore(deliveredEnergy) * periodFactor(weightedPeriod);
+  const swellScore = energyScore(deliveredEnergy, basin) * periodFactor(weightedPeriod, basin);
   const wind = windFactor(
     effectiveWindKmh(forecast.windSpeed, forecast.windGust ?? null),
     forecast.windDirection,

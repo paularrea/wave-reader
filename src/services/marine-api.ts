@@ -171,3 +171,76 @@ export async function getMarineForecast(
     tides: tidesForDay(series, target.day),
   };
 }
+
+/** Open-Meteo accepts many coordinates per call; 50 keeps URLs well within limits. */
+export const BATCH_SIZE = 50;
+
+/** `YYYY-MM-DDTHH:00` in UTC for the timeline's hour offset. */
+function utcHourKey(hourOffset: number, now: Date = new Date()): string {
+  const next = new Date(now);
+  // Round up to the next whole hour, as the timeline anchor does. Every offset
+  // in the catalogue is a whole number of hours, so the absolute hour matches.
+  if (next.getUTCMinutes() !== 0 || next.getUTCSeconds() !== 0 || next.getUTCMilliseconds() !== 0) {
+    next.setUTCHours(next.getUTCHours() + 1, 0, 0, 0);
+  }
+  next.setUTCHours(next.getUTCHours() + hourOffset);
+  return next.toISOString().slice(0, 13) + ':00';
+}
+
+/**
+ * Rating inputs for up to BATCH_SIZE points at a single hour, in two upstream
+ * calls. The map uses this to score a whole viewport: one call per spot left
+ * most of a busy region unscored behind a per-viewport cap. Tides are not
+ * included -- only the spot detail needs them.
+ */
+export async function getMarineForecastBatch(
+  points: Array<{ lat: number; lon: number }>,
+  hourOffset: number
+): Promise<Array<MarineForecast | null>> {
+  if (points.length === 0) return [];
+  if (points.length > BATCH_SIZE) throw new Error(`batch of ${points.length} exceeds ${BATCH_SIZE}`);
+
+  const hour = utcHourKey(hourOffset);
+  const lats = points.map(p => p.lat.toFixed(4)).join(',');
+  const lons = points.map(p => p.lon.toFixed(4)).join(',');
+  const window = `timezone=GMT&start_hour=${hour}&end_hour=${hour}`;
+
+  const [marineRaw, weatherRaw] = await Promise.all([
+    getJson(`${MARINE_HOST}?latitude=${lats}&longitude=${lons}&hourly=${MARINE_PARAMS}&${window}`),
+    getJson(`${WEATHER_HOST}?latitude=${lats}&longitude=${lons}&hourly=${WEATHER_PARAMS}&${window}`),
+  ]);
+
+  // A single coordinate comes back as an object, several as an array.
+  const asList = (raw: unknown) => (Array.isArray(raw) ? raw : [raw]) as HourlyResponse[];
+  const marine = asList(marineRaw);
+  const weather = asList(weatherRaw);
+
+  return points.map((_, i) => {
+    const m = marine[i]?.hourly;
+    const w = weather[i]?.hourly;
+    if (!m?.time?.length) return null;
+
+    const forecast: MarineForecast = {
+      timestamp: hour,
+      swellHeight: at(m.swell_wave_height, 0) ?? at(m.wave_height, 0),
+      swellPeriod: at(m.swell_wave_period, 0) ?? at(m.wave_period, 0),
+      swellDirection: at(m.swell_wave_direction, 0) ?? at(m.wave_direction, 0),
+      secondarySwellHeight: at(m.secondary_swell_wave_height, 0),
+      secondarySwellPeriod: at(m.secondary_swell_wave_period, 0),
+      secondarySwellDirection: at(m.secondary_swell_wave_direction, 0),
+      windWaveHeight: at(m.wind_wave_height, 0),
+      windWavePeriod: at(m.wind_wave_period, 0),
+      windWaveDirection: at(m.wind_wave_direction, 0),
+      windSpeed: at(w?.wind_speed_10m, 0),
+      windDirection: at(w?.wind_direction_10m, 0),
+      windGust: at(w?.wind_gusts_10m, 0),
+      seaLevel: null,
+    };
+
+    // The model has no waves here at all: treat the spot as having no data.
+    const anyWave = [forecast.swellHeight, forecast.secondarySwellHeight, forecast.windWaveHeight].some(
+      v => v !== null
+    );
+    return anyWave ? forecast : null;
+  });
+}

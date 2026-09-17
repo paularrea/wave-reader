@@ -39,7 +39,14 @@ Rates **the surf, not how well it suits the viewer** — the way surf-forecast,
 Magicseaweed and Surfline all rate. Skill level only drives the safety alert; never
 reintroduce it into `stars`.
 
-**The scale is calibrated to surf-forecast.** None of the services publishes a formula
+**Two energy scales, by basin** (`src/services/basins.ts`, from coordinates): the
+Mediterranean never sees the long swells that score on an Atlantic scale, so it has its
+own, anchored to local expertise — 1 m @ 7 s clean is 2–3, 1.5 m @ 8 s glassy 5–6
+(flat under 5 kJ, 10 at 1,500 kJ, gamma 1.6, period ×0.6 under 5 s, ×0.85 under 6 s).
+Wind handling is shared across basins. Everything else uses the Atlantic scale below.
+The basin rule would need revisiting before adding Italy or the Adriatic.
+
+**The Atlantic scale is calibrated to surf-forecast.** None of the services publishes a formula
 (Surfline's is a model trained on 35 years of private observations), so the structure
 follows what they publish and the constants are fitted to surf-forecast's real output:
 206 time slots at 10 spots, leave-one-spot-out validation, mean error 0.50 stars, 96%
@@ -105,9 +112,16 @@ accurate to about +/- 30 min — the UI says so.
 output is committed so the Vercel build stays hermetic and offline.
 
 ```bash
-node scripts/fetch-osm-beaches.mjs      # stage 1: OSM -> osm-beaches.raw.json
-node scripts/derive-spot-config.mjs     # stage 2: exposure -> spots.json
+node scripts/fetch-osm-beaches.mjs        # stage 1: OSM -> osm-beaches.raw.json
+node scripts/derive-spot-config.mjs       # stage 2: exposure -> spots.json + index
+node scripts/filter-spots-with-data.mjs   # stage 3: drop spots the wave model has no data for
 ```
+
+Coverage: Spain, Ireland, France (incl. overseas régions) and the United Kingdom.
+England is fetched once and split by ceremonial county with batched Overpass
+`is_in(lat,lon)` lookups (nearest resolved beach for centroids on the waterline).
+Only **named** `natural=beach` features are used, so counties whose beaches are mapped
+unnamed in OSM (Norfolk, Suffolk, Northumberland) are thin — a data limit, not a bug.
 
 **Stage 1** pulls every named shore feature per region from Overpass, keyed by
 **ISO 3166-2 code, never by name**: OSM labels regions in the local language
@@ -115,13 +129,21 @@ node scripts/derive-spot-config.mjs     # stage 2: exposure -> spots.json
 returns zero for exactly those regions. Set `RESUME=1` to skip regions already in the
 raw file, and `CATALOG_LOG=<path>` to get unbuffered progress.
 
-Overpass answers a timed-out query with **HTTP 200, partial elements and a `remark`**.
-The script treats that as a failure and retries — accepting it is how County Donegal
-went from 15 features to 2 between runs. Ireland is queried for bays and shingle as
+Overpass answers a timed-out query with **HTTP 200, partial elements and a `remark`**,
+and mirrors can also return **well-formed JSON that is simply missing elements, with no
+remark at all** (Normandie came back with 25 of 38, Andalucía with 150 of 507). Every
+region fetch is therefore checked against `out count` and retried until it matches;
+`VERIFY=1` re-checks the whole raw file, `ONLY_REGIONS=a,b` limits a run. Ireland is queried for bays and shingle as
 well as beaches, because OSM maps Irish beaches sparsely: County Clare, the home of
 Irish surfing, has four tagged `natural=beach`.
 
-**Stage 2** decides which features actually face open ocean. It probes elevation along
+**Stage 2** probes bathymetry **locally**: `scripts/lib/bathymetry.mjs` downloads NOAA
+ETOPO1 tiles from ERDDAP once into `.cache/etopo/` and interpolates bilinearly (which
+reproduces OpenTopoData's values on 44 of 45 sampled spots). Public elevation APIs
+were abandoned after both hit daily quotas mid-run. `ONLY_COUNTRIES=France,United Kingdom`
+re-derives just those countries and leaves every other spot byte-identical.
+
+Stage 2 decides which features actually face open ocean. It probes elevation along
 12 bearings 6 km out; a bearing is open water when the sample is at or below sea level,
 and a spot needs a contiguous arc of at least 90° to qualify. That arc becomes the swell
 window, its bisector the facing direction, and the reciprocal the offshore wind angle.
@@ -130,12 +152,6 @@ a surfable beach without anyone judging spots by hand.
 
 `idealHeight` is a generic per-level default: OSM knows nothing about how a given bank
 breaks, and inventing per-spot numbers would be fabricating precision.
-
-**Open-Meteo rate limits bite here.** The elevation endpoint is capped at 100
-coordinates per request and the account has per-minute *and per-hour* caps shared with
-the forecast API. The probe budget (12 bearings, one distance, 8 beaches per request) is
-sized around that. Exceeding the hourly cap locks the whole account out until the next
-hour, so do not raise the probe count without recalculating the request total.
 
 Anything unverifiable is dropped and recorded in `src/data/spots.catalog-report.json`
 with its reason.
@@ -163,9 +179,15 @@ from geolocation via the nearest catalogued spot (`src/services/regions.ts`) —
 spot beats bounding boxes because regions interlock along the coast — and defaulting to
 Cataluña. A manual pick is never overwritten by a late geolocation callback.
 
-The map draws every marker in the region immediately as unrated, then scores **only the
-spots in the viewport**, six at a time, refreshing on pan and zoom. With a national
-catalogue, fetching per spot on load would fire thousands of upstream calls.
+The map scores **every spot near the viewport** through `/api/forecast/batch`: each
+region's spots are ordered by id and cut into fixed chunks of 50
+(`src/services/spot-batches.ts`), each chunk is two upstream Open-Meteo calls for a single
+UTC hour with all 50 coordinates, and identical chunk URLs for every visitor share the
+data cache. A marker is only created once its spot has a rating with data; spots without
+data never appear. The earlier per-spot fetching was capped at 60 spots per viewport and
+left 194 of 300 Catalan markers permanently hollow — do not reintroduce a cap.
+
+The conditions legend lives as the first section of the info panel, not over the map.
 
 ## Verification
 

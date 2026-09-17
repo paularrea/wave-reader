@@ -142,3 +142,32 @@ test.describe('spec: spot-catalog / Cobertura', () => {
     }
   });
 });
+
+
+test.describe('spec: spot-catalog / Cobertura de Francia y Reino Unido', () => {
+  test('the catalogue covers Spain, Ireland, France and the United Kingdom', () => {
+    const countries = new Set(catalogue.map(s => s.country));
+    for (const c of ['Spain', 'Ireland', 'France', 'United Kingdom']) expect(countries).toContain(c);
+  });
+
+  test('England is split into counties, not one region', () => {
+    const ukRegions = new Set(catalogue.filter(s => s.country === 'United Kingdom').map(s => s.community));
+    expect(ukRegions).toContain('Cornwall');
+    expect(ukRegions).toContain('Devon');
+    expect(ukRegions).not.toContain('England');
+  });
+
+  test('France includes its overseas regions', () => {
+    const frRegions = new Set(catalogue.filter(s => s.country === 'France').map(s => s.community));
+    expect(frRegions).toContain('Bretagne');
+    expect(frRegions).toContain('La Réunion');
+  });
+});
+
+test.describe('spec: spot-catalog / Solo spots con datos de oleaje', () => {
+  test('spots without wave model data are recorded as dropped, not kept', () => {
+    const dropped = report.dropped.filter(d => d.reason === 'no wave model data at these coordinates');
+    const kept = new Set(catalogue.map(s => `${s.name}|${s.community}`));
+    for (const d of dropped) expect(kept.has(`${d.name}|${d.community}`), `${d.name} kept without data`).toBe(false);
+  });
+});

@@ -1,4 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
+import spotIndex from '../../src/data/spots.index.json';
+import { regionOrder } from '../../src/services/spot-batches';
+import { DEFAULT_REGION } from '../../src/services/regions';
 
 /**
  * End-to-end coverage of the flows in the change's specs. The forecast API is
@@ -38,7 +41,31 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
     utcOffsetSeconds = MADRID_OFFSET,
   } = options;
 
-  await page.route('**/api/forecast*', async route => {
+  // The map scores spots in batches; the detail drawer still asks per spot.
+  await page.route('**/api/forecast/batch*', async route => {
+    const url = new URL(route.request().url());
+    const region = url.searchParams.get('region') ?? '';
+    const chunk = Number(url.searchParams.get('chunk') ?? 0);
+    const members = regionOrder(spotIndex, region).slice(chunk * 50, (chunk + 1) * 50);
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        region,
+        chunk,
+        results: members.map(m => ({
+          id: m.id,
+          hasData: true,
+          stars,
+          swellStars: swellStars ?? stars,
+          unrated: false,
+          isDangerous: dangerous,
+        })),
+      }),
+    });
+  });
+
+  await page.route('**/api/forecast?*', async route => {
     const url = new URL(route.request().url());
     const spotId = url.searchParams.get('spotId');
 
@@ -250,11 +277,18 @@ test.describe('spec: condition-rating', () => {
     await expect(poor).toHaveText('');
   });
 
-  test('the legend explains what the marker styles mean', async ({ page }) => {
+  test('the legend is the first thing in the info panel', async ({ page }) => {
     await stubForecast(page);
     await page.goto('/');
 
-    await expect(page.getByTestId('quality-legend')).toBeVisible();
+    // Not over the map any more: it cost more space on a phone than it explained.
+    await expect(page.getByTestId('quality-legend')).toHaveCount(0);
+
+    await page.getByTestId('info-button').click();
+    const legend = page.getByTestId('quality-legend');
+    await expect(legend).toBeVisible();
+    const first = await page.getByTestId('info-panel').locator('section').first().getAttribute('data-testid');
+    expect(first).toBe('quality-legend');
     for (const tier of ['epic', 'good', 'poor', 'danger']) {
       await expect(page.getByTestId(`legend-${tier}`)).toBeVisible();
     }
@@ -395,7 +429,6 @@ test.describe('spec: region-selection', () => {
     // Asserted against the exported default rather than a hard-coded name, so
     // this stays a test of the fallback behaviour. That the default is
     // Cataluña is asserted in tests/unit/regions.spec.ts against the catalogue.
-    const { DEFAULT_REGION } = await import('../../src/services/regions');
     await expect(page.getByTestId('region-select')).toHaveValue(DEFAULT_REGION);
     await context.close();
   });
@@ -782,5 +815,58 @@ test.describe('spec: data-transparency', () => {
     expect(box.height).toBeLessThanOrEqual(844);
     await page.getByTestId('info-next').scrollIntoViewIfNeeded();
     await expect(page.getByTestId('info-next')).toBeInViewport();
+  });
+});
+
+
+test.describe('spec: region-selection / Todos los spots visibles puntuados', () => {
+  test('a large region is fully scored, with no unrated markers', async ({ page }) => {
+    await stubForecast(page, { stars: 3 });
+    await page.goto('/');
+    await page.getByTestId('region-select').selectOption('Cataluña');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(3000);
+
+    const tiers = await page
+      .locator('[data-testid="spot-marker"]')
+      .evaluateAll(nodes => nodes.map(n => (n as HTMLElement).dataset.tier));
+    // The old per-viewport cap left most of Catalonia hollow for good.
+    expect(tiers.length).toBeGreaterThan(60);
+    expect(tiers.filter(t => t === 'unrated')).toHaveLength(0);
+  });
+
+  test('a spot without data is not drawn at all', async ({ page }) => {
+    await stubForecast(page, { stars: 3 });
+    // Override: every other spot in each chunk has no data.
+    await page.route('**/api/forecast/batch*', async route => {
+      const url = new URL(route.request().url());
+      const region = url.searchParams.get('region') ?? '';
+      const chunk = Number(url.searchParams.get('chunk') ?? 0);
+      const members = regionOrder(spotIndex, region).slice(chunk * 50, (chunk + 1) * 50);
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          region,
+          chunk,
+          results: members.map((m, i) => ({
+            id: m.id, hasData: i % 2 === 0, stars: 3, swellStars: 3, unrated: i % 2 !== 0, isDangerous: false,
+          })),
+        }),
+      });
+    });
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(2500);
+
+    const region = await page.getByTestId('region-select').inputValue();
+    const withoutData = new Set(
+      regionOrder(spotIndex, region).filter((_, i) => i % 50 % 2 !== 0).map(s => s.id)
+    );
+    const drawn = await page
+      .locator('[data-testid="spot-marker"]')
+      .evaluateAll(nodes => nodes.map(n => (n as HTMLElement).dataset.spotId));
+    expect(drawn.length).toBeGreaterThan(0);
+    for (const id of drawn) expect(withoutData.has(id!), `${id} has no data but is drawn`).toBe(false);
   });
 });
