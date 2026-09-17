@@ -9,6 +9,7 @@ import { test, expect, Page } from '@playwright/test';
 const MADRID_OFFSET = 2 * 3600;
 
 interface StubOptions {
+  swellStars?: number;
   windSpeed?: number | null;
   windDirection?: number | null;
   swellHeight?: number;
@@ -31,6 +32,7 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
     windDirection = 140,
     swellHeight = 1.5,
     stars = 7,
+    swellStars,
     dangerous = false,
     tides = DEFAULT_TIDES,
     utcOffsetSeconds = MADRID_OFFSET,
@@ -60,6 +62,9 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
           },
         },
         stars,
+        swellStars: swellStars ?? stars,
+        energyKj: 820,
+        breakingHeightM: 1.9,
         unrated: false,
         safety: {
           isDangerous: dangerous,
@@ -632,5 +637,34 @@ test.describe('spec: drawer-navigation / Límites de la navegación', () => {
     // Never earlier than 15:00: the hours before it are in the past.
     const shown = await page.getByTestId('drawer-time').textContent();
     expect(Number.parseInt(shown!.slice(0, 2), 10)).toBeGreaterThanOrEqual(15);
+  });
+});
+
+test.describe('spec: surf-rating / Detalle', () => {
+  test('the drawer shows wave energy and breaking height', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('energy')).toHaveText(/820 kJ/);
+    await expect(page.getByTestId('breaking-height')).toContainText('1.9m');
+  });
+
+  test('wind-ruined surf says what the swell alone would score', async ({ page }) => {
+    await stubForecast(page, { stars: 2, swellStars: 7 });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('spot-potential')).toContainText('7/10');
+    await expect(page.getByTestId('spot-potential')).toContainText('wind costs 5');
+  });
+
+  test('clean surf shows no potential line', async ({ page }) => {
+    await stubForecast(page, { stars: 7, swellStars: 7 });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('spot-quality')).toBeVisible();
+    await expect(page.getByTestId('spot-potential')).toHaveCount(0);
   });
 });

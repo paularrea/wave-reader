@@ -8,7 +8,6 @@ import {
   formatWind,
   compassPoint,
 } from '../../src/services/conditions';
-import { calculateStarRating } from '../../src/services/star-engine';
 import type { MarineForecast } from '../../src/services/marine-api';
 
 const SPOT = { offshoreWindAngle: 140, windTolerance: 30 };
@@ -138,44 +137,4 @@ test.describe('spec: condition-rating / Gradiente de altura de ola', () => {
   });
 });
 
-test.describe('spec: condition-rating / Alerta de seguridad', () => {
-  const config = {
-    swellWindow: { minAngle: 280, maxAngle: 340 },
-    offshoreWindAngle: 140,
-    windTolerance: 30,
-    idealHeight: {
-      beginner: { min: 0.5, max: 1.0 },
-      intermediate: { min: 1.0, max: 2.0 },
-      expert: { min: 2.0, max: 4.0 },
-    },
-  };
-
-  test('a beginner above the ceiling gets a reason naming size, limit and spot', () => {
-    const result = calculateStarRating(forecast({ swellHeight: 2.4 }), config, 'beginner', 'Playa de Razo');
-
-    expect(result.safety.isDangerous).toBe(true);
-    expect(result.safety.reason).toContain('Playa de Razo');
-    expect(result.safety.reason).toContain('2.4m');
-    expect(result.safety.reason).toContain('1m');
-  });
-
-  test('an expert within range gets no alert', () => {
-    const result = calculateStarRating(forecast({ swellHeight: 2.5 }), config, 'expert', 'Playa de Razo');
-    expect(result.safety.isDangerous).toBe(false);
-    expect(result.safety.reason).toBeNull();
-  });
-
-  test('the alert fires even when the swell misses the window', () => {
-    // A closed-out spot is still dangerous to paddle out at.
-    const offWindow = forecast({ swellHeight: 3.0, swellDirection: 90 });
-    const result = calculateStarRating(offWindow, config, 'beginner', 'Playa de Razo');
-
-    expect(result.stars).toBe(0);
-    expect(result.safety.isDangerous).toBe(true);
-  });
-
-  test('missing swell data is unrated, not zero stars', () => {
-    const result = calculateStarRating(forecast({ swellHeight: null }), config, 'intermediate');
-    expect(result.unrated).toBe(true);
-  });
-});
+// Safety is covered against breaking height in tests/unit/surf-rating.spec.ts.

@@ -35,14 +35,35 @@ bug this codebase was built to stop repeating.
 ## Core Logic
 
 ### Star Engine (`src/services/star-engine.ts`)
-Returns a 0-10 rating plus a safety verdict.
-1. **Unrated**: missing swell height or direction returns `unrated: true`, not 0 stars.
-2. **Swell window**: direction outside the spot's window -> 0 stars (safety still evaluated).
-3. **Height match**: 10 points inside the level's range; -5 points per metre of deviation.
-4. **Wind**: offshore within tolerance x1.2; onshore x0.6; unknown wind leaves the score alone.
-5. **Period bonus**: +1 over 10s, +1 more over 14s.
-6. **Safety**: `beginner` above `idealHeight.beginner.max` triggers a red alert whose
-   message names the forecast height, the spot's ceiling and why it is dangerous.
+Rates **the surf, not how well it suits the viewer** — the way surf-forecast,
+Magicseaweed and Surfline all rate. The old engine scored "is the height inside your
+level's comfort range", which gave 0.3 m @ 3 s with offshore wind 8/10 for an
+intermediate and 10/10 for a beginner. Skill level now only drives the safety alert;
+never reintroduce it into `stars`. Full research and calibration table:
+`openspec/changes/archive/*-rework-star-rating/design.md`.
+
+1. **Energy** per component (primary swell, secondary swell, wind waves):
+   `kJ = 1.9 · H² · T²`, fitted to surf-forecast's published values (2.5 m @ 14 s →
+   2,323 kJ published, 2,328 computed). Each component is weighted by its direction
+   against the spot's swell window (×1 inside, fading to ×0.1 at 45° beyond the edge —
+   never 0, swell refracts).
+2. **Flat**: under 50 kJ scores 0 whatever the wind.
+3. **Base**: `10 · log10(E / 50) / 2` — 100 kJ ≈ 1.5, 1,000 ≈ 6.5, 5,000 = 10.
+   Above 5,000 kJ a beach closes out: −2 per doubling. The closeout threshold must equal
+   the top of the scale or no beach can ever reach 10.
+4. **Period**: ×0.5 under 6 s, ×0.7 under 8 s, ×0.85 under 10 s. Energy already
+   penalises short period, but not disorder: 3 m @ 6 s and 1.5 m @ 12 s carry the same
+   energy and are not the same session.
+5. **Wind**: with the spot facing `F = offshoreWindAngle + 180`,
+   `factor = 1 − onshore/35 − cross/90` where `onshore = v·max(0, cos(W−F))` and
+   `cross = v·|sin(W−F)|`; no effect under 8 km/h; above 45 km/h also fades to 0 at
+   75 km/h from any direction. No bonus for offshore — multiplying a saturated score
+   was part of the original bug.
+6. **`swellStars`** is the score without wind (the "faded stars"); `stars` never exceeds it.
+7. **Unrated**: no component with both height and period → `unrated: true`, not 0.
+8. **Safety** uses breaking height (Komar–Gaughan, `Hb = 0.39·g^0.2·(T·H²)^0.4`), not
+   deep-water height: 1.2 m @ 14 s breaks around 2 m. Beginners are alerted above
+   `max(idealHeight.beginner.max, 1.5 m)`.
 
 ### Conditions (`src/services/conditions.ts`)
 Single source of truth for colour. Both the map markers and the drawer read from here.

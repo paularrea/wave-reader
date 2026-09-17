@@ -75,6 +75,9 @@ export default function WaveReaderPage() {
           spotId,
           payload: {
             stars: data.stars,
+            swellStars: data.swellStars ?? data.stars,
+            energyKj: data.energyKj ?? null,
+            breakingHeightM: data.breakingHeightM ?? null,
             unrated: data.unrated ?? false,
             safety: data.safety,
             forecast: data.forecast,

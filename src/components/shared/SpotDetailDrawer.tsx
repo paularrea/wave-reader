@@ -14,6 +14,10 @@ import { DirectionArrow } from './DirectionArrow';
 
 export interface ForecastPayload {
   stars: number;
+  /** Score the swell alone would earn with perfect wind: the "faded stars". */
+  swellStars: number;
+  energyKj: number | null;
+  breakingHeightM: number | null;
   unrated: boolean;
   safety: { isDangerous: boolean; reason: string | null };
   forecast: MarineForecast;
@@ -225,6 +229,18 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
                 </span>
               </div>
             </div>
+            {/* The faded-stars idea from Magicseaweed and surf-forecast: say what
+                the swell alone would score, so a low number caused by wind is
+                not mistaken for no swell. */}
+            {forecastData && !forecastData.unrated && forecastData.swellStars > forecastData.stars && (
+              <p
+                className="text-[11px] text-zinc-500 mt-2 text-right"
+                data-testid="spot-potential"
+              >
+                Swell alone {forecastData.swellStars}/{MAX_STARS} · wind costs{' '}
+                {forecastData.swellStars - forecastData.stars}
+              </p>
+            )}
           </div>
 
           {/* Day and hour navigation, so the forecast can be browsed in place. */}
@@ -402,6 +418,28 @@ export function SpotDetailDrawer({ forecastData }: SpotDetailDrawerProps) {
                     </dd>
                   </div>
                 ))}
+                <div
+                  className="flex items-center justify-between gap-4 py-2 border-b border-zinc-900/80"
+                  data-testid="energy"
+                >
+                  <dt className="text-zinc-500">Wave energy</dt>
+                  <dd className="font-medium tabular-nums text-zinc-200">
+                    {forecastData?.energyKj == null
+                      ? NO_DATA
+                      : `${forecastData.energyKj.toLocaleString('en-GB')} kJ`}
+                  </dd>
+                </div>
+                <div
+                  className="flex items-center justify-between gap-4 py-2 border-b border-zinc-900/80"
+                  data-testid="breaking-height"
+                >
+                  <dt className="text-zinc-500">Breaking height</dt>
+                  <dd className="font-medium tabular-nums text-zinc-200">
+                    {forecastData?.breakingHeightM == null
+                      ? NO_DATA
+                      : `~${forecastData.breakingHeightM.toFixed(1)}m`}
+                  </dd>
+                </div>
                 <div className="flex items-center justify-between gap-4 py-2">
                   <dt className="text-zinc-500">Sea level</dt>
                   <dd className="font-medium tabular-nums text-zinc-200">

@@ -10,20 +10,80 @@ export interface SpotConfig {
 }
 
 export interface StarRatingResult {
+  /** Surf quality 0-10 for this hour, wind included. Independent of skill level. */
   stars: number;
+  /** What the swell alone would score if the wind were perfect. Never below `stars`. */
+  swellStars: number;
+  /** Total wave energy in kJ, on surf-forecast's scale. Null when unrated. */
+  energyKj: number | null;
+  /** Estimated breaking wave height in metres. Null when unrated. */
+  breakingHeightM: number | null;
   safety: {
     isDangerous: boolean;
     reason: string | null;
   };
-  /** True when the rating could not be computed because data is missing. */
+  /** True when there is no wave data to rate. Distinct from a flat 0. */
   unrated: boolean;
 }
 
-const UNRATED: StarRatingResult = {
-  stars: 0,
-  safety: { isDangerous: false, reason: null },
-  unrated: true,
-};
+/**
+ * How the rating works, and why.
+ *
+ * The rating measures the surf, not how well it suits the viewer. That is how
+ * surf-forecast, Magicseaweed and Surfline all rate. The previous engine scored
+ * "is the height inside your level's comfort range", which gave 0.3 m at 3 s
+ * with offshore wind 8/10 for an intermediate and 10/10 for a beginner -- the
+ * same as 1.5 m at 12 s. Skill level now only drives the safety alert.
+ *
+ * Pipeline: wave energy per component (direction-weighted) -> log-scaled base
+ * -> beach closeout taper -> period quality -> wind. The coefficients are
+ * calibrated against surf-forecast's published data; see
+ * openspec/changes/rework-star-rating/design.md for the table.
+ */
+
+/**
+ * kJ = ENERGY_COEFFICIENT * H^2 * T^2. Fitted to 26 surf-forecast time slots:
+ * 2.5 m @ 14 s publishes 2,323 kJ, the formula gives 2,328.
+ */
+const ENERGY_COEFFICIENT = 1.9;
+
+/** Below this the sea is flat for surfing purposes. surf-forecast: ~100 kJ "just about surfable". */
+const FLAT_ENERGY_KJ = 50;
+/** Energy that maps to a 10 before any penalty. */
+const TOP_ENERGY_KJ = 5000;
+/** Above this a beach break closes out rather than getting better. */
+// Equal to TOP_ENERGY_KJ: a lower value would stop a beach ever reaching 10.
+const CLOSEOUT_ENERGY_KJ = 5000;
+const CLOSEOUT_PENALTY_PER_DOUBLING = 2;
+
+/** Beyond the window edge, energy fades linearly to this floor over this many degrees. */
+const OFF_WINDOW_FLOOR = 0.1;
+const OFF_WINDOW_FADE_DEG = 45;
+
+/** Below this, wind has no effect in any direction. */
+const LIGHT_WIND_KMH = 8;
+/** Onshore wind speed at which the sea is blown out. */
+const ONSHORE_BLOWOUT_KMH = 35;
+/** Cross-shore wind speed at which the sea is blown out. */
+const CROSS_BLOWOUT_KMH = 90;
+/** Above this, wind degrades the surf whatever its direction... */
+const STRONG_WIND_KMH = 45;
+/** ...reaching zero this many km/h later. */
+const STRONG_WIND_SPAN_KMH = 30;
+
+/** Commonly cited ceiling for beginners: roughly chest-to-head high on the face. */
+const BEGINNER_BREAKING_CEILING_M = 1.5;
+const GRAVITY = 9.81;
+
+interface Component {
+  heightM: number;
+  periodS: number;
+  directionDeg: number | null;
+}
+
+function round1(value: number): number {
+  return Math.round(value * 10) / 10;
+}
 
 /** Shortest angular distance between two bearings, 0-180. */
 function angularDistance(a: number, b: number): number {
@@ -31,89 +91,178 @@ function angularDistance(a: number, b: number): number {
   return Math.min(diff, 360 - diff);
 }
 
+function componentsOf(forecast: MarineForecast): Component[] {
+  const candidates: Array<[number | null, number | null, number | null]> = [
+    [forecast.swellHeight, forecast.swellPeriod, forecast.swellDirection],
+    [forecast.secondarySwellHeight, forecast.secondarySwellPeriod, forecast.secondarySwellDirection],
+    [forecast.windWaveHeight, forecast.windWavePeriod, forecast.windWaveDirection],
+  ];
+
+  return candidates
+    .filter(([h, t]) => h !== null && t !== null && h > 0 && t > 0)
+    .map(([h, t, d]) => ({ heightM: h as number, periodS: t as number, directionDeg: d }));
+}
+
+export function energyKj(heightM: number, periodS: number): number {
+  return ENERGY_COEFFICIENT * heightM ** 2 * periodS ** 2;
+}
+
+/**
+ * 1 inside the swell window, fading to a floor outside it. Never 0: swell
+ * refracts around headlands and still delivers some energy.
+ */
+export function directionFactor(
+  directionDeg: number | null,
+  window: SpotConfig['swellWindow']
+): number {
+  // Unknown direction cannot be penalised without inventing one.
+  if (directionDeg === null) return 1;
+
+  const { minAngle, maxAngle } = window;
+  // A full-circle window is stored with equal edges.
+  if (minAngle === maxAngle) return 1;
+
+  const inside =
+    minAngle < maxAngle
+      ? directionDeg >= minAngle && directionDeg <= maxAngle
+      : directionDeg >= minAngle || directionDeg <= maxAngle;
+  if (inside) return 1;
+
+  const beyond = Math.min(angularDistance(directionDeg, minAngle), angularDistance(directionDeg, maxAngle));
+  if (beyond >= OFF_WINDOW_FADE_DEG) return OFF_WINDOW_FLOOR;
+  return 1 - (1 - OFF_WINDOW_FLOOR) * (beyond / OFF_WINDOW_FADE_DEG);
+}
+
+/** Short-period sea is disorganised, not just weaker. Cuts follow the windswell/groundswell line. */
+export function periodFactor(periodS: number): number {
+  if (periodS < 6) return 0.5;
+  if (periodS < 8) return 0.7;
+  if (periodS < 10) return 0.85;
+  return 1;
+}
+
+/** Log-scaled energy to 0-10, with a closeout taper for beach breaks. */
+export function energyScore(energy: number): number {
+  if (energy < FLAT_ENERGY_KJ) return 0;
+
+  const decades = Math.log10(TOP_ENERGY_KJ / FLAT_ENERGY_KJ);
+  let score = (10 * Math.log10(energy / FLAT_ENERGY_KJ)) / decades;
+
+  if (energy > CLOSEOUT_ENERGY_KJ) {
+    score -= CLOSEOUT_PENALTY_PER_DOUBLING * Math.log2(energy / CLOSEOUT_ENERGY_KJ);
+  }
+
+  return Math.min(10, Math.max(0, score));
+}
+
+/**
+ * 1 when wind does no harm, 0 when it blows the surf out. Onshore wind hurts
+ * far more than cross-shore; offshore of moderate strength does not hurt at all.
+ * No bonus for offshore: 10 is already the ceiling, and multiplying a saturated
+ * score was part of the original bug.
+ */
+export function windFactor(
+  speedKmh: number | null,
+  fromDeg: number | null,
+  offshoreWindAngle: number
+): number {
+  if (speedKmh === null || fromDeg === null) return 1;
+  if (speedKmh < LIGHT_WIND_KMH) return 1;
+
+  // The spot faces the reciprocal of its offshore direction. Wind *from* that
+  // bearing comes off the sea: onshore.
+  const facing = (offshoreWindAngle + 180) % 360;
+  const rad = ((fromDeg - facing) * Math.PI) / 180;
+
+  const onshore = speedKmh * Math.max(0, Math.cos(rad));
+  const cross = speedKmh * Math.abs(Math.sin(rad));
+
+  let factor = 1 - onshore / ONSHORE_BLOWOUT_KMH - cross / CROSS_BLOWOUT_KMH;
+
+  if (speedKmh > STRONG_WIND_KMH) {
+    factor *= Math.max(0, 1 - (speedKmh - STRONG_WIND_KMH) / STRONG_WIND_SPAN_KMH);
+  }
+
+  return Math.min(1, Math.max(0, factor));
+}
+
+/** Komar & Gaughan (1972): breaker height from deep-water height and period. */
+export function breakingHeightM(heightM: number, periodS: number): number {
+  return 0.39 * GRAVITY ** 0.2 * (periodS * heightM ** 2) ** 0.4;
+}
+
+const UNRATED: StarRatingResult = {
+  stars: 0,
+  swellStars: 0,
+  energyKj: null,
+  breakingHeightM: null,
+  safety: { isDangerous: false, reason: null },
+  unrated: true,
+};
+
 export function calculateStarRating(
   forecast: MarineForecast,
   config: SpotConfig,
   level: SkillLevel,
   spotName = 'this spot'
 ): StarRatingResult {
-  const swellDir = forecast.swellDirection;
-  const height = forecast.swellHeight;
+  const components = componentsOf(forecast);
+  if (components.length === 0) return UNRATED;
 
-  // Without swell height or direction there is nothing to rate. Returning 0
-  // here would read as "flat", which is a different claim than "unknown".
-  if (swellDir === null || height === null) return UNRATED;
+  const energies = components.map(c => energyKj(c.heightM, c.periodS));
+  const totalEnergy = energies.reduce((sum, e) => sum + e, 0);
 
-  // 1. Swell window filter, handling wrap-around (e.g. 350 -> 10 degrees).
-  const { minAngle, maxAngle } = config.swellWindow;
-  const isInWindow =
-    minAngle <= maxAngle
-      ? swellDir >= minAngle && swellDir <= maxAngle
-      : swellDir >= minAngle || swellDir <= maxAngle;
+  // What actually reaches the spot: each component weighted by its direction.
+  const deliveredEnergy = components.reduce(
+    (sum, c, i) => sum + energies[i] * directionFactor(c.directionDeg, config.swellWindow),
+    0
+  );
 
-  const ideal = config.idealHeight[level];
+  const weightedPeriod =
+    components.reduce((sum, c, i) => sum + c.periodS * energies[i], 0) / totalEnergy;
+  const combinedHeight = Math.sqrt(components.reduce((sum, c) => sum + c.heightM ** 2, 0));
 
-  // 2. Safety check runs even when the swell misses the window: a closed-out
-  //    spot can still be dangerous to paddle out at.
-  const safety = assessSafety(height, ideal, level, spotName);
+  const swellScore = energyScore(deliveredEnergy) * periodFactor(weightedPeriod);
+  const wind = windFactor(forecast.windSpeed, forecast.windDirection, config.offshoreWindAngle);
 
-  if (!isInWindow) {
-    return { stars: 0, safety, unrated: false };
-  }
+  const swellStars = Math.round(swellScore);
+  // Round the product rather than the parts, then never exceed the potential.
+  const stars = Math.min(swellStars, Math.round(swellScore * wind));
 
-  // 3. Base score from how well the height matches the surfer's range.
-  let score: number;
-  if (height >= ideal.min && height <= ideal.max) {
-    score = 10;
-  } else {
-    const deviation = height < ideal.min ? ideal.min - height : height - ideal.max;
-    score = Math.max(0, 10 - deviation * 5); // 5 points lost per metre off range
-  }
-
-  // 4. Wind weighting. Unknown wind leaves the score untouched rather than
-  //    inventing a penalty or a bonus.
-  if (forecast.windDirection !== null) {
-    const offshoreDistance = angularDistance(forecast.windDirection, config.offshoreWindAngle);
-    if (offshoreDistance <= config.windTolerance) {
-      score *= 1.2;
-    } else if (offshoreDistance > 180 - config.windTolerance) {
-      score *= 0.6;
-    }
-  }
-
-  // 5. Period bonus: long-period groundswell beats short-period windswell.
-  if (forecast.swellPeriod !== null) {
-    if (forecast.swellPeriod > 10) score += 1;
-    if (forecast.swellPeriod > 14) score += 1;
-  }
+  const breaking = breakingHeightM(combinedHeight, weightedPeriod);
 
   return {
-    stars: Math.min(10, Math.max(0, Math.round(score))),
-    safety,
+    stars,
+    swellStars,
+    energyKj: Math.round(totalEnergy),
+    breakingHeightM: round1(breaking),
+    safety: assessSafety(breaking, config.idealHeight, level, spotName),
     unrated: false,
   };
 }
 
 /**
- * Names the magnitude, the limit and the spot, so the surfer can tell *why*
- * these conditions are out of their depth rather than just seeing a red box.
+ * Judged on breaking height, not deep-water height: at the same height a long
+ * period breaks far bigger. 1.2 m at 14 s breaks around 2 m, which the old
+ * deep-water check waved through for a beginner.
  */
 function assessSafety(
-  height: number,
-  ideal: { min: number; max: number },
+  breaking: number,
+  idealHeight: SpotConfig['idealHeight'],
   level: SkillLevel,
   spotName: string
 ): StarRatingResult['safety'] {
-  if (level !== 'beginner' || height <= ideal.max) {
+  const ceiling = Math.max(idealHeight.beginner.max, BEGINNER_BREAKING_CEILING_M);
+
+  if (level !== 'beginner' || breaking <= ceiling) {
     return { isDangerous: false, reason: null };
   }
 
-  const over = (height - ideal.max).toFixed(1);
   return {
     isDangerous: true,
     reason:
-      `Waves at ${spotName} are forecast at ${height.toFixed(1)}m, ` +
-      `${over}m above the ${ideal.max}m ceiling for beginners here. ` +
+      `Waves at ${spotName} are expected to break around ${breaking.toFixed(1)}m, ` +
+      `above the ${ceiling.toFixed(1)}m ceiling for beginners. ` +
       `Waves this size break with enough force to hold you under, and the rips ` +
       `that drain them are strong enough to carry you out faster than you can paddle. ` +
       `Pick a smaller day or a spot with a gentler bank.`,
