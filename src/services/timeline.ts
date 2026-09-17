@@ -131,3 +131,9 @@ export function formatInstant(
 ): string {
   return `${dayLabel(instant, utcOffsetSeconds, now).label}, ${pad(instant.hour)}:00`;
 }
+
+/** The UTC instant, in ms, of the hour `hourOffset` after the anchor. */
+export function utcMsAt(utcOffsetSeconds: number, hourOffset: number, now: Date = new Date()): number {
+  const local = instantAt(utcOffsetSeconds, hourOffset, now);
+  return Date.parse(`${local.key}:00Z`) - utcOffsetSeconds * 1000;
+}

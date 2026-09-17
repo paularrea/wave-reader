@@ -45,7 +45,7 @@ export const MAX_STARS = 10;
  * spot went above 4 -- scores of 5 to 9 only appeared at the best spot in the
  * world for each time slot.
  */
-const EPIC_THRESHOLD = 5;
+export const EPIC_THRESHOLD = 5;
 const GOOD_THRESHOLD = 1;
 
 const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
@@ -53,17 +53,17 @@ const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
   epic: {
     background: '#FBBF24',
     size: 30,
-    border: '3px solid #FFFFFF',
-    boxShadow: '0 0 0 3px rgba(251,191,36,0.35), 0 0 18px 4px rgba(251,191,36,0.75)',
+    border: '2px solid #FFFFFF',
+    boxShadow: '0 0 0 4px rgba(251,191,36,0.28), 0 0 14px 2px rgba(251,191,36,0.45)',
     foreground: '#422006',
     showScore: true,
     label: 'Epic',
   },
   // Clearly present but visibly secondary to epic: darker, smaller, no glow.
   good: {
-    background: '#A16207',
-    size: 21,
-    border: '2px solid rgba(255,255,255,0.75)',
+    background: '#B45309',
+    size: 22,
+    border: '1.5px solid rgba(255,255,255,0.7)',
     boxShadow: 'none',
     foreground: '#FEF3C7',
     showScore: true,
@@ -71,9 +71,9 @@ const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
   },
   // Recedes into the map. Present, findable, never competing for attention.
   poor: {
-    background: '#3F3F46',
-    size: 13,
-    border: '1px solid rgba(255,255,255,0.3)',
+    background: '#52525B',
+    size: 11,
+    border: '1px solid rgba(255,255,255,0.28)',
     boxShadow: 'none',
     foreground: 'transparent',
     showScore: false,
@@ -93,7 +93,7 @@ const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
   // Hollow, so "no forecast" never looks like "bad forecast".
   unrated: {
     background: 'transparent',
-    size: 13,
+    size: 11,
     border: '1.5px dashed rgba(161,161,170,0.8)',
     boxShadow: 'none',
     foreground: 'transparent',
@@ -153,11 +153,12 @@ export interface WindBadge {
   foreground: string;
 }
 
+// Tinted, not filled: the wind qualifies the reading, it must not outshout the score.
 const WIND_BADGES: Record<WindCategory, Omit<WindBadge, 'label'>> = {
-  'Glass': { background: '#16A34A', foreground: '#FFFFFF' }, // green-600
-  'Off-shore': { background: '#22C55E', foreground: '#052E16' }, // green-500
-  'Cross-shore': { background: '#86EFAC', foreground: '#14532D' }, // green-300, light
-  'On-shore': { background: '#71717A', foreground: '#FFFFFF' }, // zinc-500, grey
+  'Glass': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
+  'Off-shore': { background: 'rgba(74,222,128,0.12)', foreground: '#86EFAC' },
+  'Cross-shore': { background: 'rgba(190,242,100,0.10)', foreground: '#D9F99D' },
+  'On-shore': { background: 'rgba(161,161,170,0.14)', foreground: '#D4D4D8' },
 };
 
 /** Wind below this is glass-off regardless of direction. */

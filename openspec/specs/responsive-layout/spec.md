@@ -22,3 +22,10 @@ El detalle de un spot SHALL caber en la pantalla y SHALL respetar el área segur
 #### Scenario: Detalle en móvil
 - **WHEN** el usuario abre el detalle en una pantalla de móvil
 - **THEN** la puntuación y la acción principal quedan ambas dentro del área visible
+
+### Requirement: Objetivos táctiles y legibilidad
+Todo control interactivo principal SHALL medir al menos 44 px de alto en móvil, y ningún texto SHALL renderizarse por debajo de 12 px.
+
+#### Scenario: Controles de la barra superior
+- **WHEN** se muestra el mapa en un móvil
+- **THEN** la región, el nivel, la información y la ubicación son botones de al menos 44 px de alto

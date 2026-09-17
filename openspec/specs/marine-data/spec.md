@@ -62,3 +62,10 @@ El servicio SHALL ofrecer para un spot la previsión de cada hora del horizonte 
 #### Scenario: Hora sin viento
 - **WHEN** el proveedor de viento no tiene una hora que sí tiene el de oleaje
 - **THEN** esa hora conserva el oleaje y el viento queda como ausente
+
+### Requirement: Lotes del mapa con todo el horizonte
+Cada lote de puntuación del mapa SHALL devolver, para cada spot, la nota, el tamaño y el periodo de cada hora del horizonte junto con la hora UTC del primer valor, de forma que cambiar de hora no requiera nuevas peticiones.
+
+#### Scenario: Mover el slider
+- **WHEN** los lotes visibles ya están cargados y el usuario cambia de hora
+- **THEN** los marcadores se actualizan sin nuevas peticiones al servidor

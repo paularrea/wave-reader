@@ -220,75 +220,74 @@ function targetUtcHour(hourOffset: number, now: Date = new Date()): Date {
 
 const isoHour = (d: Date) => d.toISOString().slice(0, 13) + ':00';
 
-/**
- * Rating inputs for up to BATCH_SIZE points at a single hour, in two upstream
- * calls. The map uses this to score a whole viewport: one call per spot left
- * most of a busy region unscored behind a per-viewport cap. Tides are not
- * included -- only the spot detail needs them.
- */
-export async function getMarineForecastBatch(
-  points: Array<{ lat: number; lon: number }>,
-  hourOffset: number
-): Promise<Array<MarineForecast | null>> {
-  if (points.length === 0) return [];
-  if (points.length > BATCH_SIZE) throw new Error(`batch of ${points.length} exceeds ${BATCH_SIZE}`);
+export interface HorizonBatch {
+  /** UTC hour of index 0, `YYYY-MM-DDTHH:00`. */
+  start: string;
+  /** Per point, one forecast per hour from `start`, or null where the model has no waves there. */
+  series: Array<Array<MarineForecast | null> | null>;
+}
 
-  /**
-   * Ask for the whole UTC day containing the target hour, not the hour alone.
-   * Open-Meteo's free tier rate-limits per minute and a busy region is many
-   * chunks: with a day per request, moving the slider within that day costs no
-   * upstream call, and the URL is identical for every visitor all day long.
-   */
-  const target = targetUtcHour(hourOffset);
-  const dayStart = new Date(Date.UTC(target.getUTCFullYear(), target.getUTCMonth(), target.getUTCDate()));
-  const dayEnd = new Date(dayStart.getTime() + 23 * 3_600_000);
-  const hour = isoHour(target);
+/**
+ * The whole horizon for up to BATCH_SIZE points in two upstream calls. The map
+ * keeps every hour of every visible spot, so moving the time slider costs no
+ * request and the best spots and days can be ranked locally.
+ */
+export async function getMarineHorizonBatch(
+  points: Array<{ lat: number; lon: number }>,
+  hours: number = MAX_FORECAST_HOURS
+): Promise<HorizonBatch> {
+  if (points.length > BATCH_SIZE) throw new Error(`batch of ${points.length} exceeds ${BATCH_SIZE}`);
+  const startDate = targetUtcHour(0);
+  const start = isoHour(startDate);
+  if (points.length === 0) return { start, series: [] };
+  const end = isoHour(new Date(startDate.getTime() + hours * 3_600_000));
 
   const lats = points.map(p => p.lat.toFixed(4)).join(',');
   const lons = points.map(p => p.lon.toFixed(4)).join(',');
-  const window = `timezone=GMT&start_hour=${isoHour(dayStart)}&end_hour=${isoHour(dayEnd)}`;
+  const window = `timezone=GMT&start_hour=${start}&end_hour=${end}`;
 
   const [marineRaw, weatherRaw] = await Promise.all([
     getJson(`${MARINE_HOST}?latitude=${lats}&longitude=${lons}&hourly=${MARINE_PARAMS}&${window}`),
     getJson(`${WEATHER_HOST}?latitude=${lats}&longitude=${lons}&hourly=${WEATHER_PARAMS}&${window}`),
   ]);
-
-  // A single coordinate comes back as an object, several as an array.
   const asList = (raw: unknown) => (Array.isArray(raw) ? raw : [raw]) as HourlyResponse[];
   const marine = asList(marineRaw);
   const weather = asList(weatherRaw);
 
-  return points.map((_, i) => {
+  const series = points.map((_, i) => {
     const m = marine[i]?.hourly;
     const w = weather[i]?.hourly;
     if (!m?.time?.length) return null;
+    // Weather is joined by timestamp, never by position.
+    const weatherIndex = new Map<string, number>((w?.time ?? []).map((t, k) => [t, k]));
 
-    // Join by timestamp, never by position, as the single-spot path does.
-    const mi = m.time.indexOf(hour);
-    if (mi === -1) return null;
-    const wi = w?.time?.indexOf(hour) ?? -1;
-
-    const forecast: MarineForecast = {
-      timestamp: hour,
-      swellHeight: at(m.swell_wave_height, mi) ?? at(m.wave_height, mi),
-      swellPeriod: at(m.swell_wave_period, mi) ?? at(m.wave_period, mi),
-      swellDirection: at(m.swell_wave_direction, mi) ?? at(m.wave_direction, mi),
-      secondarySwellHeight: at(m.secondary_swell_wave_height, mi),
-      secondarySwellPeriod: at(m.secondary_swell_wave_period, mi),
-      secondarySwellDirection: at(m.secondary_swell_wave_direction, mi),
-      windWaveHeight: at(m.wind_wave_height, mi),
-      windWavePeriod: at(m.wind_wave_period, mi),
-      windWaveDirection: at(m.wind_wave_direction, mi),
-      windSpeed: wi === -1 ? null : at(w?.wind_speed_10m, wi),
-      windDirection: wi === -1 ? null : at(w?.wind_direction_10m, wi),
-      windGust: wi === -1 ? null : at(w?.wind_gusts_10m, wi),
-      seaLevel: null,
-    };
-
-    // The model has no waves here at all: treat the spot as having no data.
-    const anyWave = [forecast.swellHeight, forecast.secondarySwellHeight, forecast.windWaveHeight].some(
-      v => v !== null
-    );
-    return anyWave ? forecast : null;
+    let any = false;
+    const hoursOut = m.time.map((time, mi): MarineForecast | null => {
+      const wi = weatherIndex.get(time) ?? -1;
+      const forecast: MarineForecast = {
+        timestamp: time,
+        swellHeight: at(m.swell_wave_height, mi) ?? at(m.wave_height, mi),
+        swellPeriod: at(m.swell_wave_period, mi) ?? at(m.wave_period, mi),
+        swellDirection: at(m.swell_wave_direction, mi) ?? at(m.wave_direction, mi),
+        secondarySwellHeight: at(m.secondary_swell_wave_height, mi),
+        secondarySwellPeriod: at(m.secondary_swell_wave_period, mi),
+        secondarySwellDirection: at(m.secondary_swell_wave_direction, mi),
+        windWaveHeight: at(m.wind_wave_height, mi),
+        windWavePeriod: at(m.wind_wave_period, mi),
+        windWaveDirection: at(m.wind_wave_direction, mi),
+        windSpeed: wi === -1 ? null : at(w?.wind_speed_10m, wi),
+        windDirection: wi === -1 ? null : at(w?.wind_direction_10m, wi),
+        windGust: wi === -1 ? null : at(w?.wind_gusts_10m, wi),
+        seaLevel: null,
+      };
+      const hasWave = [forecast.swellHeight, forecast.secondarySwellHeight, forecast.windWaveHeight].some(
+        v => v !== null
+      );
+      if (hasWave) any = true;
+      return hasWave ? forecast : null;
+    });
+    return any ? hoursOut : null;
   });
+
+  return { start, series };
 }

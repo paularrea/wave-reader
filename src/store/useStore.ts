@@ -3,6 +3,16 @@ import { create } from 'zustand';
 export type SkillLevel = 'beginner' | 'intermediate' | 'expert';
 
 import { DEFAULT_COUNTRY, DEFAULT_REGION } from '@/services/regions';
+import type { BestSpot } from '@/services/map-summary';
+
+export interface MapSummary {
+  /** Best rated spots in view at the selected hour. */
+  best: BestSpot[];
+  /** Best score per local day among spots in view; -1 when nothing is rated yet. */
+  bestByDay: Record<string, number>;
+  /** Spots in view with a rating. */
+  rated: number;
+}
 
 interface WaveStore {
   selectedSpotId: string | null;
@@ -20,7 +30,13 @@ interface WaveStore {
    */
   spotUtcOffsetSeconds: number;
 
-  setSelectedSpot: (id: string | null) => void;
+  /** Opening resets the hour to today unless `keepHour` (a ranking made for that hour). */
+  setSelectedSpot: (id: string | null, options?: { keepHour?: boolean }) => void;
+  mapSummary: MapSummary;
+  setMapSummary: (summary: MapSummary) => void;
+  /** Best score today per region, for regions the map has scored this session. */
+  regionBestToday: Record<string, number>;
+  setRegionBestToday: (region: string, best: number) => void;
   setCurrentHour: (hour: number) => void;
   setUserSkillLevel: (level: SkillLevel) => void;
   setUserLocation: (lat: number, lon: number) => void;
@@ -49,7 +65,23 @@ export const useStore = create<WaveStore>(set => ({
 
   // Opening a spot starts from today's first hour, whatever the map was showing:
   // the detail's timeline then shows the rest of the week at a glance.
-  setSelectedSpot: id => set(id ? { selectedSpotId: id, currentHour: 0 } : { selectedSpotId: null }),
+  setSelectedSpot: (id, options) =>
+    set(
+      id
+        ? options?.keepHour
+          ? { selectedSpotId: id }
+          : { selectedSpotId: id, currentHour: 0 }
+        : { selectedSpotId: null }
+    ),
+  mapSummary: { best: [], bestByDay: {}, rated: 0 },
+  setMapSummary: summary => set({ mapSummary: summary }),
+  regionBestToday: {},
+  setRegionBestToday: (region, best) =>
+    set(state =>
+      state.regionBestToday[region] === best
+        ? state
+        : { regionBestToday: { ...state.regionBestToday, [region]: best } }
+    ),
   setCurrentHour: hour => set({ currentHour: hour }),
   setUserSkillLevel: level => set({ userSkillLevel: level }),
   setUserLocation: (lat, lon) => set({ userLocation: { lat, lon } }),

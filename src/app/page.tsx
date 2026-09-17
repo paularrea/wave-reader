@@ -4,9 +4,11 @@ import React, { useEffect, useMemo, useSyncExternalStore } from 'react';
 import { MarineMap } from '@/components/shared/MarineMap';
 import { SpotDetailDrawer } from '@/components/shared/SpotDetailDrawer';
 import { DataInfoPanel } from '@/components/shared/DataInfoPanel';
+import { RegionPicker } from '@/components/shared/RegionPicker';
+import { LevelPicker } from '@/components/shared/LevelPicker';
 import { useStore } from '@/store/useStore';
 import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
-import { allCountries, regionsForCountry } from '@/services/regions';
+import { qualityTier } from '@/services/conditions';
 import { useSpotSeries } from '@/hooks/useSpotSeries';
 
 /** Groups the timeline's hours into days so the strip can show one chip per day. */
@@ -28,19 +30,27 @@ function useDaySegments(utcOffsetSeconds: number) {
   }, [utcOffsetSeconds]);
 }
 
+const TIER_FILL: Record<string, string> = {
+  epic: 'bg-epic text-epic-ink',
+  good: 'bg-fair text-fair-ink',
+  poor: 'bg-zinc-700 text-ink-1',
+};
+const TIER_BAR: Record<string, string> = {
+  epic: 'bg-epic',
+  good: 'bg-fair',
+  poor: 'bg-zinc-700',
+};
+
 export default function WaveReaderPage() {
   const {
     userSkillLevel,
-    setUserSkillLevel,
     currentHour,
     setCurrentHour,
     selectedSpotId,
-    selectedCountry,
-    setSelectedCountry,
-    selectedRegion,
-    setSelectedRegion,
+    setSelectedSpot,
     spotUtcOffsetSeconds,
     setSpotUtcOffsetSeconds,
+    mapSummary,
   } = useStore();
 
   /**
@@ -69,141 +79,154 @@ export default function WaveReaderPage() {
   const daySegments = useDaySegments(spotUtcOffsetSeconds);
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
   const { label: currentDayLabel } = dayLabel(instant, spotUtcOffsetSeconds);
-  const countries = allCountries();
-  const regions = regionsForCountry(selectedCountry);
-
-  /** Switching country lands on its first region rather than an empty map. */
-  const onCountryChange = (country: string) => {
-    setSelectedCountry(country);
-    const first = regionsForCountry(country)[0];
-    if (first) setSelectedRegion(first);
-  };
+  const best = mapSummary.best.filter(spot => spot.stars > 0);
+  const progress = `${(currentHour / MAX_FORECAST_HOURS) * 100}%`;
 
   return (
     /* dvh, not vh: on mobile the browser chrome makes vh taller than the visible
        area, which pushes the controls off-screen and creates a scrollbar. */
-    <main className="relative w-full h-[100dvh] overflow-hidden bg-zinc-950 text-white font-sans">
+    <main className="relative w-full h-[100dvh] overflow-hidden bg-ground text-ink-0">
+      <h1 className="sr-only">Wave Reader surf forecast</h1>
       <div className="absolute inset-0 z-0">
         <MarineMap />
       </div>
 
-      <header className="absolute top-0 left-0 right-0 z-10 flex items-start justify-between p-4 pointer-events-none">
-        <div>
-          <h1 className="text-xl font-bold tracking-tight leading-none drop-shadow-lg">
-            WAVE<span className="text-blue-500">READER</span>
-          </h1>
-          <p className="text-[9px] text-zinc-500 font-semibold uppercase tracking-[0.18em] mt-1">
-            Marine Forecast
-          </p>
-        </div>
-        {/* The legend lives inside the info panel: on a phone a permanent box
-            over the map cost more than it explained. */}
-        <div className="pointer-events-auto">
+      <header className="absolute top-0 left-0 right-0 z-10 px-4 pt-3.5 pointer-events-none">
+        <div className="mx-auto max-w-md flex items-center gap-2 pointer-events-auto">
+          <RegionPicker />
+          <LevelPicker />
           <DataInfoPanel />
         </div>
       </header>
 
-      <div
-        className="absolute bottom-0 left-0 right-0 z-20 px-3"
-        style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+      <section
+        aria-label="Forecast controls"
+        className="absolute bottom-0 left-0 right-0 z-20"
       >
-        <div className="mx-auto w-full max-w-md bg-zinc-950/90 backdrop-blur-xl border border-zinc-800 rounded-2xl p-3 shadow-2xl flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <select
-              aria-label="Country"
-              data-testid="country-select"
-              value={selectedCountry}
-              onChange={e => onCountryChange(e.target.value)}
-              className="shrink-0 bg-zinc-900 border border-zinc-800 text-[13px] font-semibold rounded-lg px-2.5 py-2 text-zinc-100 focus:ring-1 focus:ring-blue-500 outline-none appearance-none"
-            >
-              {countries.map(c => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-            <select
-              aria-label="Region"
-              data-testid="region-select"
-              value={selectedRegion}
-              onChange={e => setSelectedRegion(e.target.value)}
-              className="flex-1 min-w-0 bg-zinc-900 border border-zinc-800 text-[13px] font-semibold rounded-lg px-2.5 py-2 text-zinc-100 focus:ring-1 focus:ring-blue-500 outline-none appearance-none"
-            >
-              {regions.map(r => (
-                <option key={r} value={r}>
-                  {r}
-                </option>
-              ))}
-            </select>
+        <div
+          className="mx-auto w-full max-w-md bg-sheet border-t border-x border-line rounded-t-3xl pt-2 flex flex-col gap-3.5"
+          style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
+        >
+          <div className="w-9 h-1 rounded-full bg-zinc-700 self-center" aria-hidden />
 
-            <div className="flex bg-zinc-900 border border-zinc-800 p-0.5 rounded-lg shrink-0">
-              {(['beginner', 'intermediate', 'expert'] as const).map(level => (
-                <button
-                  key={level}
-                  onClick={() => setUserSkillLevel(level)}
-                  data-testid={`level-${level}`}
-                  title={level}
-                  className={`px-2.5 py-1.5 rounded-md text-[11px] font-bold uppercase transition-colors ${
-                    userSkillLevel === level
-                      ? 'bg-white text-zinc-950'
-                      : 'text-zinc-500 hover:text-zinc-300'
-                  }`}
-                >
-                  {level.slice(0, 3)}
-                </button>
-              ))}
+          <div className="flex flex-col gap-2.5" data-testid="best-in-view">
+            <div className="flex items-baseline justify-between px-5">
+              <h2 className="text-[15px] font-semibold">Best in view</h2>
+              <span className="text-[13px] text-ink-2 tabular-nums" data-testid="rated-count">
+                {mapSummary.rated > 0 ? `${mapSummary.rated.toLocaleString('en-GB')} spots rated` : ''}
+              </span>
             </div>
+            {best.length > 0 ? (
+              <ul className="flex gap-2 px-5 overflow-x-auto no-scrollbar">
+                {best.map(spot => {
+                  const tier = qualityTier(spot.stars, { isDangerous: spot.isDangerous });
+                  const detail = [
+                    spot.heightM !== null ? `${spot.heightM.toFixed(1)} m` : null,
+                    spot.periodS !== null ? `${spot.periodS} s` : null,
+                  ]
+                    .filter(Boolean)
+                    .join(' · ');
+                  return (
+                    <li key={spot.id} className="shrink-0">
+                      <button
+                        type="button"
+                        data-testid="best-spot"
+                        data-spot-id={spot.id}
+                        // Ranked for this hour, so it opens at this hour.
+                        onClick={() => setSelectedSpot(spot.id, { keepHour: true })}
+                        className="h-14 flex items-center gap-2.5 pl-2 pr-3.5 rounded-2xl bg-card border border-line text-left hover:bg-raised transition-colors"
+                      >
+                        <span
+                          className={`w-10 h-10 rounded-xl flex items-center justify-center text-[17px] font-bold tabular-nums ${
+                            tier === 'danger' ? 'bg-alert text-white' : TIER_FILL[tier]
+                          }`}
+                        >
+                          {spot.stars}
+                        </span>
+                        <span className="flex flex-col leading-tight">
+                          <span className="text-[14px] font-semibold whitespace-nowrap max-w-[150px] truncate">
+                            {spot.name}
+                          </span>
+                          <span className="text-[12px] text-ink-2 whitespace-nowrap tabular-nums">{detail}</span>
+                        </span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p className="px-5 text-[14px] text-ink-2 h-14 flex items-center" data-testid="best-empty">
+                {mapSummary.rated > 0 ? 'Nothing surfable in view at this hour.' : 'Rating the spots in view…'}
+              </p>
+            )}
           </div>
 
-          <div className="flex flex-col gap-2">
-            {/* The day strip gets a full row of its own: sharing one with the
-                time label clipped the last chip against it. */}
-            <div
-              className="flex gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              data-testid="day-strip"
-            >
+          <div className="h-px bg-line mx-5" />
+
+          <div className="flex flex-col gap-2.5 px-5">
+            <div className="flex items-center justify-between h-8">
+              <span className="text-[17px] font-semibold tabular-nums" data-testid="forecast-time">
+                {mounted ? `${currentDayLabel}, ${String(instant.hour).padStart(2, '0')}:00` : '—'}
+              </span>
+              {mounted && currentHour > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setCurrentHour(0)}
+                  data-testid="back-to-now"
+                  className="h-8 px-3 rounded-full border border-line-strong text-[13px] font-medium text-ink-1 hover:text-white transition-colors"
+                >
+                  Back to now
+                </button>
+              )}
+            </div>
+
+            <div className="grid grid-cols-7 gap-1" data-testid="day-strip">
               {mounted &&
-                daySegments.map(segment => {
+                daySegments.slice(0, 7).map(segment => {
                   const isActive = segment.day === instant.day;
+                  const dayBest = mapSummary.bestByDay[segment.day];
+                  const known = dayBest !== undefined && dayBest >= 0;
                   return (
                     <button
                       key={segment.day}
+                      type="button"
                       onClick={() => setCurrentHour(segment.startHour)}
                       data-testid="day-chip"
                       data-active={isActive}
-                      className={`shrink-0 px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-tight transition-colors ${
+                      data-best={known ? dayBest : ''}
+                      aria-pressed={isActive}
+                      aria-label={`${segment.label}${known ? `, best score ${dayBest}` : ''}`}
+                      className={`h-12 rounded-xl flex flex-col items-center justify-center gap-1.5 border transition-colors ${
                         isActive
-                          ? 'bg-white text-zinc-950'
-                          : 'bg-zinc-900 text-zinc-500 hover:text-zinc-300'
+                          ? 'bg-raised border-ink-0 text-white'
+                          : 'border-transparent text-ink-2 hover:text-ink-0'
                       }`}
                     >
-                      {segment.label}
+                      <span className="text-[12px] font-medium leading-none">{segment.label}</span>
+                      <span
+                        className={`w-[18px] h-1 rounded-full ${known ? TIER_BAR[qualityTier(dayBest)] : 'bg-zinc-800'}`}
+                        aria-hidden
+                      />
                     </button>
                   );
                 })}
             </div>
 
-            <div className="flex items-center gap-3">
-              <span
-                className="text-[12px] font-bold tabular-nums text-zinc-100 shrink-0 w-[92px]"
-                data-testid="forecast-time"
-              >
-                {mounted ? `${currentDayLabel}, ${String(instant.hour).padStart(2, '0')}:00` : '—'}
-              </span>
-              <input
-                type="range"
-                aria-label="Forecast hour"
-                min={0}
-                max={MAX_FORECAST_HOURS}
-                step={1}
-                value={currentHour}
-                className="flex-1 accent-blue-500 h-1 bg-zinc-800 rounded-full cursor-pointer"
-                onChange={e => setCurrentHour(Number.parseInt(e.target.value, 10))}
-              />
-            </div>
+            <input
+              type="range"
+              aria-label="Forecast hour"
+              aria-valuetext={mounted ? `${currentDayLabel}, ${String(instant.hour).padStart(2, '0')}:00` : undefined}
+              min={0}
+              max={MAX_FORECAST_HOURS}
+              step={1}
+              value={currentHour}
+              className="time-slider w-full"
+              style={{ '--progress': progress } as React.CSSProperties}
+              onChange={e => setCurrentHour(Number.parseInt(e.target.value, 10))}
+            />
           </div>
         </div>
-      </div>
+      </section>
 
       <SpotDetailDrawer series={series} />
     </main>

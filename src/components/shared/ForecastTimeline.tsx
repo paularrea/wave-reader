@@ -28,13 +28,13 @@ export function ForecastTimelineSkeleton() {
             {Array.from({ length: 8 }, (_, s) => (
               <span key={s} className="w-3 flex justify-center">
                 <span
-                  className="w-2 rounded-full bg-zinc-800 animate-pulse"
+                  className="w-2 rounded-full bg-card animate-pulse"
                   style={{ height: 8 + ((d * 8 + s) % 5) * 5 }}
                 />
               </span>
             ))}
           </div>
-          <span className="h-3 w-10 rounded bg-zinc-900" />
+          <span className="h-3 w-10 rounded bg-card" />
         </div>
       ))}
     </div>
@@ -83,7 +83,7 @@ export function ForecastTimeline({
           return (
             <div
               key={day.day}
-              className={`flex flex-col gap-1.5 shrink-0 ${index > 0 ? 'pl-2 ml-2 border-l border-zinc-900' : ''}`}
+              className={`flex flex-col gap-1.5 shrink-0 ${index > 0 ? 'pl-2 ml-2 border-l border-line' : ''}`}
               data-testid="timeline-day"
               data-day={day.day}
             >
@@ -111,7 +111,7 @@ export function ForecastTimeline({
                     >
                       <span
                         className={`w-2 rounded-full transition-[box-shadow] ${
-                          isSelected ? 'ring-2 ring-white ring-offset-1 ring-offset-zinc-950' : ''
+                          isSelected ? 'ring-2 ring-white ring-offset-1 ring-offset-sheet' : ''
                         }`}
                         style={
                           slot.unrated
@@ -136,8 +136,8 @@ export function ForecastTimeline({
                 onClick={() => onSelectDay(day)}
                 data-testid="drawer-day-tab"
                 data-active={isActiveDay}
-                className={`text-left text-[10px] font-semibold leading-none tracking-tight transition-colors ${
-                  isActiveDay ? 'text-white' : 'text-zinc-500 hover:text-zinc-300'
+                className={`text-left text-[12px] font-medium leading-none transition-colors ${
+                  isActiveDay ? 'text-white' : 'text-ink-2 hover:text-ink-0'
                 }`}
               >
                 {day.label}

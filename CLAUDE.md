@@ -195,15 +195,34 @@ Cataluña. A manual pick is never overwritten by a late geolocation callback.
 The map scores **every spot near the viewport** through `/api/forecast/batch`: each
 region's spots are ordered by id and cut into fixed chunks of 50
 (`src/services/spot-batches.ts`), each chunk is two upstream Open-Meteo calls with all 50
-coordinates covering the **whole UTC day** of the requested hour, joined by timestamp.
-Asking per day rather than per hour means stepping the slider within a day reuses the
-cached upstream response, which matters because Open-Meteo's free tier limits calls per
-minute (a preview deploy hit 429 after ~10 hour-by-hour chunks). The client runs at most
-two chunks at once and retries a failed chunk by itself after 20 s. A marker is only created once its spot has a rating with data; spots without
+coordinates covering the **whole horizon** (anchor UTC hour + 168 h), joined by timestamp.
+The response is compact parallel arrays per spot (`stars`, `swellStars`, `height` in dm,
+`period`, `danger` indices) plus the UTC `start`; the client looks hours up by absolute
+time (`services/map-summary.ts`), so the time slider never requests anything and a chunk
+is refetched only after 60 min. Open-Meteo's free tier limits calls per minute (a
+preview deploy once hit 429 after ~10 hour-by-hour chunks), so the client runs at most
+two chunks at once and retries a failed chunk by itself after 20 s.
+
+The same horizons feed the bottom sheet: **Best in view** (top 3 at the selected hour,
+opening the spot *at that hour* because that is what was ranked) and each day chip's
+best score, plus a per-region "best today" shown in the region picker for regions
+scored this session. A marker is only created once its spot has a rating with data; spots without
 data never appear. The earlier per-spot fetching was capped at 60 spots per viewport and
 left 194 of 300 Catalan markers permanently hollow — do not reintroduce a cap.
 
-The conditions legend lives as the first card of the info panel, not over the map. The
+## UI system
+
+Approved design: https://claude.ai/artifact/DaKvq44utPzrFcqztPEDyx. Tokens live in
+`globals.css` `@theme` (`bg-ground`, `bg-sheet`, `bg-card`, `border-line`, `text-ink-0..3`,
+`bg-epic`, `bg-fair`, `bg-alert`). Rules: **yellow only means surf quality**, actions are
+white/neutral, no brand blue; nothing under 12 px (an E2E walks the DOM to check); touch
+targets 44 px. Region and level are Vaul sheets (`RegionPicker`, `LevelPicker`), not native
+selects; level only changes safety alerts. The spot detail leads with a one-line verdict
+(`services/verdict.ts`) and the day's best window, then swell/period/wind cards, a tide
+curve and folded sea-state details. `globals.css` once forced Arial over Geist; keep the
+body on `var(--font-sans)`.
+
+The conditions legend lives as the first section of the info panel, not over the map. The
 panel is cards with quick links that scroll the panel itself; all content stays rendered.
 
 ## Puertos del Estado — investigated, not integrated

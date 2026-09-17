@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { Navigation } from 'lucide-react';
 import { useStore } from '@/store/useStore';
 // The slim index, not the full catalogue: surf config and provenance are
 // server-side concerns and would otherwise ship in the JS bundle.
@@ -10,6 +11,8 @@ import spots from '@/data/spots.index.json';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
 import { locationDefaults, regionBounds } from '@/services/regions';
 import { chunkIndexById } from '@/services/spot-batches';
+import { SpotHorizon, bestAt, bestByDay, ratingAt } from '@/services/map-summary';
+import { instantAt, utcMsAt, MAX_FORECAST_HOURS } from '@/services/timeline';
 
 const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 
@@ -22,6 +25,8 @@ const BATCH_SIZE = 50;
 const MAX_CONCURRENT_CHUNKS = 2;
 /** A rate-limited chunk is retried on its own rather than waiting for a pan. */
 const CHUNK_RETRY_MS = 20_000;
+/** A chunk carries the whole horizon; after this it is fetched again for the new model hour. */
+const CHUNK_FRESH_MS = 60 * 60_000;
 /**
  * Markers are DOM nodes, and a node per beach in a busy region stalls the main
  * thread on every pan. Only what is on screen, plus a margin, gets one.
@@ -29,13 +34,6 @@ const CHUNK_RETRY_MS = 20_000;
 const MAX_MARKERS = 400;
 const VIEWPORT_MARGIN = 0.35; // fraction of the viewport span, added each side
 const MOVE_DEBOUNCE_MS = 400;
-
-interface Rating {
-  hasData: boolean;
-  stars: number;
-  unrated: boolean;
-  isDangerous: boolean;
-}
 
 type Spot = (typeof spots)[number];
 
@@ -61,7 +59,7 @@ function applyStyle(el: HTMLElement, style: QualityStyle, stars: number) {
   el.style.border = style.border;
   el.style.boxShadow = style.boxShadow;
   el.style.color = style.foreground;
-  el.style.fontSize = `${Math.round(style.size * 0.45)}px`;
+  el.style.fontSize = `${Math.max(12, Math.round(style.size * 0.5))}px`;
   el.textContent = style.showScore ? String(stars) : '';
   el.style.zIndex = style.tier === 'epic' || style.tier === 'danger' ? '2' : '1';
 }
@@ -70,11 +68,11 @@ export function MarineMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef(new Map<string, { marker: mapboxgl.Marker; el: HTMLElement }>());
-  /** Ratings for the current region, hour and level, keyed by spot id. */
-  const ratingsRef = useRef(new Map<string, Rating>());
-  /** Chunks already fetched or in flight for the current region, hour and level. */
-  const chunksRef = useRef(new Set<number>());
-  /** Bumped whenever region, hour or level change, so stale responses are ignored. */
+  /** Every hour of the horizon for the current region and level, keyed by spot id. */
+  const horizonsRef = useRef(new Map<string, SpotHorizon>());
+  /** When each chunk was fetched; `0` while in flight. */
+  const chunksRef = useRef(new Map<number, number>());
+  /** Bumped whenever region or level change, so stale responses are ignored. */
   const generationRef = useRef(0);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   /** Latest scoreVisible, for retries scheduled by an older closure. */
@@ -88,55 +86,79 @@ export function MarineMap() {
     currentHour,
     selectedRegion,
     resolveLocation,
+    setSelectedCountry,
+    setSelectedRegion,
+    spotUtcOffsetSeconds,
+    setMapSummary,
+    setRegionBestToday,
   } = useStore();
 
   const [loading, setLoading] = useState(true);
   /**
    * In-flight chunks, labelled with the query they belong to. A stale label
    * simply stops counting, so switching region mid-load can never leave the
-   * "Scoring" chip stuck on screen.
+   * indicator stuck on screen.
    */
-  const queryKey = `${selectedRegion}|${currentHour}|${userSkillLevel}`;
+  const queryKey = `${selectedRegion}|${userSkillLevel}`;
   const [pending, setPending] = useState<{ key: string; n: number }>({ key: '', n: 0 });
   const pendingHere = pending.key === queryKey ? pending.n : 0;
+  /** Spots in view with a rating, and whether the view has been scored at all. */
+  const [inView, setInView] = useState<{ key: string; rated: number; scored: boolean }>({
+    key: '',
+    rated: 0,
+    scored: false,
+  });
 
   const regionSpots = useCallback(
     (): Spot[] => spots.filter(spot => spot.community === selectedRegion),
     [selectedRegion]
   );
 
-  /** Spots within the viewport plus a margin, so panning does not reveal bare sea. */
-  const nearViewport = useCallback((): Spot[] => {
-    const map = mapRef.current;
-    const inRegion = regionSpots();
-    if (!map) return inRegion;
-    const bounds = map.getBounds();
-    if (!bounds) return inRegion;
+  /** Spots within the viewport widened by `margin`, so panning does not reveal bare sea. */
+  const nearViewport = useCallback(
+    (margin = VIEWPORT_MARGIN): Spot[] => {
+      const map = mapRef.current;
+      const inRegion = regionSpots();
+      if (!map) return inRegion;
+      const bounds = map.getBounds();
+      if (!bounds) return inRegion;
 
-    const latMargin = (bounds.getNorth() - bounds.getSouth()) * VIEWPORT_MARGIN;
-    const lonMargin = (bounds.getEast() - bounds.getWest()) * VIEWPORT_MARGIN;
-    return inRegion.filter(
-      s =>
-        s.coordinates.lat >= bounds.getSouth() - latMargin &&
-        s.coordinates.lat <= bounds.getNorth() + latMargin &&
-        s.coordinates.lon >= bounds.getWest() - lonMargin &&
-        s.coordinates.lon <= bounds.getEast() + lonMargin
-    );
-  }, [regionSpots]);
+      const latMargin = (bounds.getNorth() - bounds.getSouth()) * margin;
+      const lonMargin = (bounds.getEast() - bounds.getWest()) * margin;
+      return inRegion.filter(
+        s =>
+          s.coordinates.lat >= bounds.getSouth() - latMargin &&
+          s.coordinates.lat <= bounds.getNorth() + latMargin &&
+          s.coordinates.lon >= bounds.getWest() - lonMargin &&
+          s.coordinates.lon <= bounds.getEast() + lonMargin
+      );
+    },
+    [regionSpots]
+  );
+
+  const targetMs = useCallback(
+    (hour: number) => utcMsAt(spotUtcOffsetSeconds, hour),
+    [spotUtcOffsetSeconds]
+  );
 
   /**
-   * Brings the marker layer in line with what should be visible: a marker for
-   * every nearby spot that has a rating with data, and nothing else. There are
-   * no placeholder markers -- a spot without data never appears.
+   * Brings the marker layer in line with the selected hour: a marker for every
+   * nearby spot rated at that hour, and nothing else. A spot without data never
+   * appears.
    */
   const reconcileMarkers = useCallback(() => {
     const map = mapRef.current;
     if (!map) return;
+    const target = targetMs(currentHour);
 
-    const wanted = nearViewport()
-      .filter(s => ratingsRef.current.get(s.id)?.hasData)
-      .slice(0, MAX_MARKERS);
-    const wantedIds = new Set(wanted.map(s => s.id));
+    const wanted: Array<{ spot: Spot; stars: number; isDangerous: boolean }> = [];
+    for (const spot of nearViewport()) {
+      const horizon = horizonsRef.current.get(spot.id);
+      const rating = horizon ? ratingAt(horizon, target) : null;
+      if (rating) wanted.push({ spot, stars: rating.stars, isDangerous: rating.isDangerous });
+      if (wanted.length >= MAX_MARKERS) break;
+    }
+    const wantedIds = new Set(wanted.map(w => w.spot.id));
 
     for (const [id, { marker }] of markersRef.current) {
       if (!wantedIds.has(id)) {
@@ -145,12 +167,11 @@ export function MarineMap() {
       }
     }
 
-    for (const spot of wanted) {
-      const rating = ratingsRef.current.get(spot.id)!;
-      const style = qualityStyle(rating.stars, { isDangerous: rating.isDangerous });
+    for (const { spot, stars, isDangerous } of wanted) {
+      const style = qualityStyle(stars, { isDangerous });
       const existing = markersRef.current.get(spot.id);
       if (existing) {
-        applyStyle(existing.el, style, rating.stars);
+        applyStyle(existing.el, style, stars);
         continue;
       }
 
@@ -158,14 +179,16 @@ export function MarineMap() {
       el.className = 'mapboxgl-marker custom-marker';
       el.dataset.testid = 'spot-marker';
       el.dataset.spotId = spot.id;
+      el.setAttribute('role', 'button');
+      el.setAttribute('aria-label', spot.name);
       el.style.borderRadius = '50%';
       el.style.cursor = 'pointer';
       el.style.display = 'flex';
       el.style.alignItems = 'center';
       el.style.justifyContent = 'center';
-      el.style.fontWeight = '800';
+      el.style.fontWeight = '700';
       el.title = spot.name;
-      applyStyle(el, style, rating.stars);
+      applyStyle(el, style, stars);
       el.addEventListener('click', event => {
         event.stopPropagation();
         setSelectedSpot(spot.id);
@@ -176,33 +199,71 @@ export function MarineMap() {
         .addTo(map);
       markersRef.current.set(spot.id, { marker, el });
     }
-  }, [nearViewport, setSelectedSpot]);
+  }, [nearViewport, setSelectedSpot, targetMs, currentHour]);
+
+  /** Ranks what is strictly on screen for the bottom sheet. */
+  const publishSummary = useCallback(() => {
+    const visible: SpotHorizon[] = [];
+    for (const spot of nearViewport(0)) {
+      const horizon = horizonsRef.current.get(spot.id);
+      if (horizon) visible.push(horizon);
+    }
+    const now = new Date();
+    const at = (h: number) => utcMsAt(spotUtcOffsetSeconds, h, now);
+    const dayOf = (h: number) => instantAt(spotUtcOffsetSeconds, h, now).day;
+    const hourCount = MAX_FORECAST_HOURS + 1;
+
+    const best = bestAt(visible, at(currentHour));
+    const byDay = bestByDay(visible, hourCount, at, dayOf);
+    const rated = visible.filter(h => ratingAt(h, at(currentHour))).length;
+    setMapSummary({ best, bestByDay: byDay, rated });
+    setInView({ key: queryKey, rated, scored: chunksRef.current.size > 0 });
+
+    // Today's best across the whole loaded region, for the region picker.
+    const loaded = [...horizonsRef.current.values()];
+    if (loaded.length > 0) {
+      const today = dayOf(0);
+      let hours = 0;
+      while (hours < hourCount && dayOf(hours) === today) hours++;
+      const regionToday = bestByDay(loaded, hours, at, dayOf)[today];
+      if (regionToday !== undefined && regionToday >= 0) setRegionBestToday(selectedRegion, regionToday);
+    }
+  }, [nearViewport, spotUtcOffsetSeconds, currentHour, setMapSummary, setRegionBestToday, selectedRegion, queryKey]);
 
   /**
    * Scores every spot near the viewport, a chunk at a time. Chunks are fixed
-   * per region (see spot-batches), so the same chunk is never requested twice
-   * for the same hour and level, and every visitor shares upstream cache hits.
+   * per region (see spot-batches) and carry the whole horizon, so a chunk is
+   * requested once per hour of model data whatever the slider does.
    */
   const scoreVisible = useCallback(async () => {
     const map = mapRef.current;
     if (!map) return;
     const generation = generationRef.current;
+    const now = Date.now();
 
     const chunkOf = chunkIndexById(spots, selectedRegion, BATCH_SIZE);
     const needed = [
       ...new Set(nearViewport().map(s => chunkOf.get(s.id)).filter((c): c is number => c !== undefined)),
-    ].filter(c => !chunksRef.current.has(c));
+    ].filter(c => {
+      const fetchedAt = chunksRef.current.get(c);
+      if (fetchedAt === undefined) return true;
+      return fetchedAt !== 0 && now - fetchedAt > CHUNK_FRESH_MS;
+    });
 
-    if (needed.length === 0) return;
-    needed.forEach(c => chunksRef.current.add(c));
-    const key = `${selectedRegion}|${currentHour}|${userSkillLevel}`;
+    if (needed.length === 0) {
+      publishSummary();
+      return;
+    }
+    needed.forEach(c => chunksRef.current.set(c, 0));
+    const key = queryKey;
     setPending(p => ({ key, n: (p.key === key ? p.n : 0) + needed.length }));
+
+    const names = new Map(regionSpots().map(s => [s.id, s.name]));
 
     await mapWithLimit(needed, MAX_CONCURRENT_CHUNKS, async chunk => {
       try {
         const res = await fetch(
-          `/api/forecast/batch?region=${encodeURIComponent(selectedRegion)}&chunk=${chunk}` +
-            `&hour=${currentHour}&level=${userSkillLevel}`
+          `/api/forecast/batch?region=${encodeURIComponent(selectedRegion)}&chunk=${chunk}&level=${userSkillLevel}`
         );
         if (generation !== generationRef.current) return;
         if (!res.ok) {
@@ -216,22 +277,33 @@ export function MarineMap() {
         }
         const data = await res.json();
         if (generation !== generationRef.current) return;
+        const startMs = Date.parse(`${data.start}:00Z`);
         for (const r of data.results ?? []) {
-          ratingsRef.current.set(r.id, {
-            hasData: Boolean(r.hasData),
-            stars: r.stars,
-            unrated: r.unrated,
-            isDangerous: r.isDangerous,
+          if (!r.hasData) {
+            horizonsRef.current.delete(r.id);
+            continue;
+          }
+          horizonsRef.current.set(r.id, {
+            id: r.id,
+            name: names.get(r.id) ?? r.id,
+            startMs,
+            stars: r.stars ?? [],
+            swellStars: r.swellStars ?? [],
+            height: r.height ?? [],
+            period: r.period ?? [],
+            danger: r.danger ?? [],
           });
         }
+        chunksRef.current.set(chunk, Date.now());
         reconcileMarkers();
+        publishSummary();
       } catch {
         if (generation === generationRef.current) chunksRef.current.delete(chunk);
       } finally {
         setPending(p => (p.key === key ? { key, n: Math.max(0, p.n - 1) } : p));
       }
     });
-  }, [nearViewport, reconcileMarkers, selectedRegion, currentHour, userSkillLevel]);
+  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, selectedRegion, userSkillLevel, queryKey]);
 
   useEffect(() => {
     scoreVisibleRef.current = scoreVisible;
@@ -246,7 +318,11 @@ export function MarineMap() {
       style: 'mapbox://styles/mapbox/dark-v11',
       center: userLocation ? [userLocation.lon, userLocation.lat] : SPAIN_CENTER,
       zoom: userLocation ? 8 : 5,
+      attributionControl: false,
+      // The bottom sheet covers the default corner; the logo and credits must stay visible.
+      logoPosition: 'top-left',
     });
+    map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'top-left');
 
     // No NavigationControl: the map is driven by pinch, scroll and double-tap.
     mapRef.current = map;
@@ -284,12 +360,13 @@ export function MarineMap() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // A new region, hour or level invalidates every rating and fetched chunk.
+  // A new region or level invalidates every rating and fetched chunk. The hour
+  // does not: every chunk already holds the whole horizon.
   useEffect(() => {
     generationRef.current += 1;
-    ratingsRef.current.clear();
+    horizonsRef.current.clear();
     chunksRef.current.clear();
-  }, [selectedRegion, currentHour, userSkillLevel]);
+  }, [selectedRegion, userSkillLevel]);
 
   useEffect(() => {
     if (!mapRef.current || loading) return;
@@ -311,7 +388,7 @@ export function MarineMap() {
         [box.west, box.south],
         [box.east, box.north],
       ],
-      { padding: 60, maxZoom: 9, duration: 900 }
+      { padding: { top: 90, bottom: 320, left: 40, right: 40 }, maxZoom: 9, duration: 900 }
     );
   }, [selectedRegion, loading]);
 
@@ -335,21 +412,66 @@ export function MarineMap() {
     };
   }, [reconcileMarkers, scoreVisible, loading]);
 
+  /** Centres on the user; if they are on another coast, switches to its region. */
+  const locate = () => {
+    if (typeof navigator === 'undefined' || !navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        const { latitude, longitude } = pos.coords;
+        setUserLocation(latitude, longitude);
+        const { country, region } = locationDefaults(latitude, longitude);
+        if (region !== selectedRegion) {
+          setSelectedCountry(country);
+          setSelectedRegion(region);
+          return;
+        }
+        mapRef.current?.flyTo({ center: [longitude, latitude], zoom: 10, duration: 900 });
+      },
+      err => console.warn('Geolocation unavailable:', err.message)
+    );
+  };
+
+  const showEmpty = !loading && pendingHere === 0 && inView.key === queryKey && inView.scored && inView.rated === 0;
+
   return (
     <div className="relative w-full h-full">
       {loading && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-zinc-900/50 backdrop-blur-sm">
-          <div className="text-white font-medium animate-pulse">Loading Marine Data...</div>
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-ground">
+          <div className="flex items-center gap-2.5 text-[13px] text-ink-2" role="status">
+            <span className="w-2 h-2 rounded-full bg-epic animate-pulse" />
+            Loading map
+          </div>
         </div>
       )}
       {!loading && pendingHere > 0 && (
         <div
           data-testid="scoring-indicator"
-          className="absolute top-16 left-1/2 -translate-x-1/2 z-10 bg-zinc-900/85 backdrop-blur-md border border-zinc-800 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-zinc-400"
+          role="status"
+          className="absolute top-[76px] left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 h-9 px-3.5 rounded-full bg-sheet/90 backdrop-blur-md border border-line text-[13px] text-ink-1 whitespace-nowrap"
         >
-          Scoring spots…
+          <span className="w-2 h-2 rounded-full bg-epic animate-pulse" />
+          Rating spots…
         </div>
       )}
+      {showEmpty && (
+        <div
+          data-testid="map-empty"
+          role="status"
+          className="absolute top-[76px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-0.5 px-4 py-2.5 rounded-2xl bg-sheet/90 backdrop-blur-md border border-line text-center whitespace-nowrap"
+        >
+          <span className="text-[14px] font-medium text-ink-0">No spots in view</span>
+          <span className="text-[13px] text-ink-2">Zoom out or pick another region.</span>
+        </div>
+      )}
+      <button
+        type="button"
+        onClick={locate}
+        aria-label="Centre on my location"
+        data-testid="locate-button"
+        className="absolute right-4 top-[76px] z-10 w-11 h-11 rounded-full bg-sheet/90 backdrop-blur-md border border-line flex items-center justify-center text-ink-1 hover:text-white transition-colors"
+      >
+        <Navigation size={17} />
+      </button>
       <div ref={mapContainerRef} className="mapboxgl-map w-full h-full" />
     </div>
   );

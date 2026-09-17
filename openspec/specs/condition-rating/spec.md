@@ -75,3 +75,10 @@ Cuando las condiciones excedan el rango seguro del nivel declarado por el surfis
 #### Scenario: Nivel adecuado sin alerta
 - **WHEN** el surfista tiene nivel experto y la altura de rompiente está dentro de su rango
 - **THEN** no se muestra ninguna alerta de peligro
+
+### Requirement: Un solo acento de calidad
+El amarillo SHALL reservarse para la calidad del surf; las acciones SHALL usar blanco y neutros, y la interfaz no SHALL usar azul de marca.
+
+#### Scenario: Controles
+- **WHEN** se muestra el panel inferior
+- **THEN** el slider y los botones son blancos o neutros

@@ -118,25 +118,30 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
     });
   });
 
-  // The map scores spots in batches; the detail drawer still asks per spot.
+  // The map scores spots in batches carrying the whole horizon from the anchor UTC hour.
   await page.route('**/api/forecast/batch*', async route => {
     const url = new URL(route.request().url());
     const region = url.searchParams.get('region') ?? '';
     const chunk = Number(url.searchParams.get('chunk') ?? 0);
     const members = regionOrder(spotIndex, region).slice(chunk * 50, (chunk + 1) * 50);
+    const clock = now ?? Date.now();
+    const start = new Date(Math.ceil(clock / 3_600_000) * 3_600_000).toISOString().slice(0, 13) + ':00';
+    const hours = Array.from({ length: 169 }, (_, h) => h);
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
       body: JSON.stringify({
         region,
         chunk,
+        start,
         results: members.map(m => ({
           id: m.id,
           hasData: true,
-          stars,
-          swellStars: swellStars ?? stars,
-          unrated: false,
-          isDangerous: dangerous,
+          stars: hours.map(h => (starsAt ? starsAt(h) : stars)),
+          swellStars: hours.map(h => swellStars ?? (starsAt ? starsAt(h) : stars)),
+          height: hours.map(() => Math.round(swellHeight * 10)),
+          period: hours.map(() => 12),
+          danger: dangerous ? hours : [],
         })),
       }),
     });
@@ -199,6 +204,21 @@ async function stubForecast(page: Page, options: StubOptions = {}) {
   });
 }
 
+/** Opens the region picker and chooses a region by name. */
+async function pickRegion(page: Page, region: string) {
+  await page.getByTestId('region-button').click();
+  await expect(page.getByTestId('region-picker')).toBeVisible();
+  await page.getByTestId('region-search').fill(region);
+  await page.locator(`[data-testid="region-option"][data-region="${region}"]`).click();
+  await expect(page.getByTestId('region-picker')).toHaveCount(0);
+}
+
+async function pickLevel(page: Page, level: 'beginner' | 'intermediate' | 'expert') {
+  await page.getByTestId('level-button').click();
+  await page.getByTestId(`level-${level}`).click();
+  await expect(page.getByTestId('level-button')).toHaveAttribute('data-level', level);
+}
+
 async function openFirstSpot(page: Page) {
   const marker = page.locator('[data-testid="spot-marker"]').first();
   await marker.waitFor({ state: 'attached', timeout: 45_000 });
@@ -237,7 +257,7 @@ test.describe('map and spot detail', () => {
     await page.goto('/');
     await openFirstSpot(page);
 
-    await expect(page.getByTestId('swell-height')).toHaveText('1.5m');
+    await expect(page.getByTestId('swell-height')).toHaveText('1.5 m');
     await expect(page.getByTestId('swell-direction')).toHaveText('NW');
     await expect(page.getByTestId('wind-reading')).toHaveText('18 km/h');
     await expect(page.getByTestId('wind-direction')).toHaveText('SE');
@@ -281,8 +301,8 @@ test.describe('spec: condition-rating', () => {
     await openFirstSpot(page);
 
     const badge = page.getByTestId('wind-badge');
-    await expect(badge).toHaveText('Off-shore');
-    await expect(badge).toHaveCSS('background-color', 'rgb(34, 197, 94)');
+    await expect(badge).toHaveText('Offshore');
+    await expect(badge).toHaveCSS('color', 'rgb(134, 239, 172)');
   });
 
   test('an onshore wind shows a grey On-shore badge', async ({ page }) => {
@@ -291,8 +311,8 @@ test.describe('spec: condition-rating', () => {
     await openFirstSpot(page);
 
     const badge = page.getByTestId('wind-badge');
-    await expect(badge).toHaveText('On-shore');
-    await expect(badge).toHaveCSS('background-color', 'rgb(113, 113, 122)');
+    await expect(badge).toHaveText('Onshore');
+    await expect(badge).toHaveCSS('color', 'rgb(212, 212, 216)');
   });
 
   test('no map marker is rendered in green', async ({ page }) => {
@@ -374,7 +394,7 @@ test.describe('spec: condition-rating', () => {
   test('a beginner over the limit sees a red alert explaining why', async ({ page }) => {
     await stubForecast(page, { dangerous: true, swellHeight: 2.4, stars: 2 });
     await page.goto('/');
-    await page.getByTestId('level-beginner').click();
+    await pickLevel(page, 'beginner');
     await openFirstSpot(page);
 
     const alert = page.getByTestId('danger-alert');
@@ -386,7 +406,7 @@ test.describe('spec: condition-rating', () => {
   test('a dangerous spot is flagged red on the map', async ({ page }) => {
     await stubForecast(page, { dangerous: true, stars: 2 });
     await page.goto('/');
-    await page.getByTestId('level-beginner').click();
+    await pickLevel(page, 'beginner');
 
     const marker = page.locator('[data-testid="spot-marker"][data-dangerous="true"]').first();
     await expect(marker).toBeAttached({ timeout: 45_000 });
@@ -481,7 +501,8 @@ test.describe('spec: region-selection', () => {
     await stubForecast(page);
     await page.goto('/');
 
-    const options = await page.getByTestId('region-select').locator('option').allTextContents();
+    await page.getByTestId('region-button').click();
+    const options = await page.getByTestId('region-option').allTextContents();
     expect(options.length).toBeGreaterThan(0);
     for (const option of options) {
       expect(option.toLowerCase()).not.toContain('all');
@@ -494,7 +515,7 @@ test.describe('spec: region-selection', () => {
     await stubForecast(page);
     await page.goto('/');
 
-    await expect(page.getByTestId('region-select')).toHaveValue('País Vasco', { timeout: 15_000 });
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'País Vasco', { timeout: 15_000 });
   });
 
   test('without geolocation the region falls back to the default', async ({ browser }) => {
@@ -506,7 +527,7 @@ test.describe('spec: region-selection', () => {
     // Asserted against the exported default rather than a hard-coded name, so
     // this stays a test of the fallback behaviour. That the default is
     // Cataluña is asserted in tests/unit/regions.spec.ts against the catalogue.
-    await expect(page.getByTestId('region-select')).toHaveValue(DEFAULT_REGION);
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', DEFAULT_REGION);
     await context.close();
   });
 
@@ -514,9 +535,9 @@ test.describe('spec: region-selection', () => {
     await stubForecast(page);
     await page.goto('/');
 
-    await page.getByTestId('region-select').selectOption('Galicia');
+    await pickRegion(page, 'Galicia');
     await page.waitForTimeout(2000);
-    await expect(page.getByTestId('region-select')).toHaveValue('Galicia');
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'Galicia');
   });
 });
 
@@ -610,7 +631,11 @@ test.describe('spec: responsive-layout', () => {
     await stubForecast(page);
     await page.goto('/');
 
-    await expect(page.getByTestId('region-select')).toBeInViewport();
+    await expect(page.getByTestId('region-button')).toBeInViewport();
+    for (const id of ['region-button', 'level-button', 'info-button', 'locate-button']) {
+      const box = (await page.getByTestId(id).boundingBox())!;
+      expect(box.height, `${id} is a comfortable touch target`).toBeGreaterThanOrEqual(44);
+    }
     await expect(page.getByLabel('Forecast hour')).toBeInViewport();
   });
 
@@ -639,13 +664,9 @@ test.describe('spec: region-selection / El mapa sigue a la región', () => {
 
     const before = await centreOf();
 
-    const select = page.getByTestId('region-select');
-    const options = await select.locator('option').allTextContents();
-    const current = await select.inputValue();
-    const other = options.find(o => o !== current);
-    test.skip(!other, 'catalogue has a single region');
-
-    await select.selectOption(other!);
+    const current = await page.getByTestId('region-button').getAttribute('data-region');
+    const other = current === 'Galicia' ? 'Asturias' : 'Galicia';
+    await pickRegion(page, other);
     await page.waitForTimeout(1500);
 
     await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached({
@@ -660,17 +681,15 @@ test.describe('spec: region-selection / El mapa sigue a la región', () => {
     await stubForecast(page);
     await page.goto('/');
 
-    const countries = await page.getByTestId('country-select').locator('option').allTextContents();
-    test.skip(countries.length < 2, 'catalogue has a single country');
+    await page.getByTestId('region-button').click();
+    await page.locator('[data-testid="country-tab"][data-country="France"]').click();
+    await expect(page.locator('[data-testid="country-tab"][data-country="France"]')).toHaveAttribute('aria-selected', 'true');
+    const regions = await page.getByTestId('region-option').evaluateAll(n => n.map(x => (x as HTMLElement).dataset.region));
+    expect(regions).toContain('Bretagne');
+    await page.locator('[data-testid="region-option"][data-region="Bretagne"]').click();
 
-    const current = await page.getByTestId('country-select').inputValue();
-    const other = countries.find(c => c !== current)!;
-
-    await page.getByTestId('country-select').selectOption(other);
-
-    const regions = await page.getByTestId('region-select').locator('option').allTextContents();
-    expect(regions.length).toBeGreaterThan(0);
-    expect(regions).toContain(await page.getByTestId('region-select').inputValue());
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'Bretagne');
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-country', 'France');
   });
 });
 
@@ -864,7 +883,7 @@ test.describe('spec: data-transparency', () => {
     await stubDataStatus(page);
     await page.goto('/');
 
-    const region = await page.getByTestId('region-select').inputValue();
+    const region = await page.getByTestId('region-button').getAttribute('data-region');
     await page.getByLabel('Forecast hour').fill('5');
     const time = await page.getByTestId('forecast-time').textContent();
 
@@ -873,7 +892,7 @@ test.describe('spec: data-transparency', () => {
     await page.keyboard.press('Escape');
     await expect(page.getByTestId('info-panel')).toHaveCount(0);
 
-    await expect(page.getByTestId('region-select')).toHaveValue(region);
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', region!);
     await expect(page.getByTestId('forecast-time')).toHaveText(time!);
   });
 
@@ -900,7 +919,7 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
   test('a large region is fully scored, with no unrated markers', async ({ page }) => {
     await stubForecast(page, { stars: 3 });
     await page.goto('/');
-    await page.getByTestId('region-select').selectOption('Cataluña');
+    await pickRegion(page, 'Cataluña');
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
     await page.waitForTimeout(3000);
 
@@ -926,9 +945,12 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
         body: JSON.stringify({
           region,
           chunk,
-          results: members.map((m, i) => ({
-            id: m.id, hasData: i % 2 === 0, stars: 3, swellStars: 3, unrated: i % 2 !== 0, isDangerous: false,
-          })),
+          start: new Date(Math.ceil(Date.now() / 3_600_000) * 3_600_000).toISOString().slice(0, 13) + ':00',
+          results: members.map((m, i) => {
+            const has = i % 2 === 0;
+            const fill = (v: number) => Array.from({ length: 169 }, () => (has ? v : -1));
+            return { id: m.id, hasData: has, stars: fill(3), swellStars: fill(3), height: fill(15), period: fill(9), danger: [] };
+          }),
         }),
       });
     });
@@ -936,7 +958,7 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
     await page.waitForTimeout(2500);
 
-    const region = await page.getByTestId('region-select').inputValue();
+    const region = (await page.getByTestId('region-button').getAttribute('data-region'))!;
     const withoutData = new Set(
       regionOrder(spotIndex, region).filter((_, i) => i % 50 % 2 !== 0).map(s => s.id)
     );
@@ -953,7 +975,7 @@ test.describe('spec: drawer-navigation / Línea temporal de pills', () => {
 
   test('a better day ahead shows up in the pills without navigating', async ({ page }) => {
     await page.clock.install({ time: CLOCK });
-    // Flat for the first two days, then a 5 from offset 57 (Fri 00:00 local).
+    // Flat until offset 57 (Saturday 00:00 local), then a 5.
     await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 ? 5 : 0) });
     await page.goto('/');
     await openFirstSpot(page);
@@ -1048,7 +1070,7 @@ test.describe('spec: drawer-navigation / Carga fiable del detalle', () => {
     await openFirstSpot(page);
 
     await expect(page.getByTestId('forecast-loading')).toBeVisible();
-    await expect(page.getByTestId('swell-height')).toContainText('1.5m', { timeout: 10_000 });
+    await expect(page.getByTestId('swell-height')).toContainText('1.5 m', { timeout: 10_000 });
     await expect(page.getByTestId('forecast-error')).toHaveCount(0);
   });
 
@@ -1062,7 +1084,7 @@ test.describe('spec: drawer-navigation / Carga fiable del detalle', () => {
     await expect(page.getByTestId('swell-height')).toHaveText('—');
 
     await page.getByTestId('forecast-retry').click();
-    await expect(page.getByTestId('swell-height')).toContainText('1.5m', { timeout: 10_000 });
+    await expect(page.getByTestId('swell-height')).toContainText('1.5 m', { timeout: 10_000 });
     await expect(page.getByTestId('forecast-error')).toHaveCount(0);
   });
 });
@@ -1082,5 +1104,160 @@ test.describe('spec: data-transparency / Panel fácil de leer', () => {
     await expect(page.getByTestId('info-safety')).toBeInViewport();
     await page.getByTestId('info-link-conditions').click();
     await expect(page.getByTestId('quality-legend')).toBeInViewport();
+  });
+});
+
+test.describe('spec: responsive-layout / ui-refresh', () => {
+  test('no text on the map screen or in the detail is smaller than 12 px', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+    await expect(page.getByTestId('swell-height')).toContainText('m');
+
+    const tooSmall = await page.evaluate(() => {
+      const out: string[] = [];
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const el = node.parentElement;
+        if (!el || !node.textContent?.trim()) continue;
+        if (el.closest('.mapboxgl-ctrl, .sr-only, [hidden]')) continue;
+        const style = getComputedStyle(el);
+        if (style.display === 'none' || style.visibility === 'hidden') continue;
+        const size = Number.parseFloat(style.fontSize);
+        if (size < 12) out.push(`${size}px "${node.textContent.trim().slice(0, 30)}"`);
+      }
+      return out;
+    });
+    expect(tooSmall).toEqual([]);
+  });
+});
+
+test.describe('spec: region-selection / Selector de región', () => {
+  test('searching finds a region in another country and choosing it switches both', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    await page.getByTestId('region-button').click();
+    await page.getByTestId('region-search').fill('cornw');
+    const options = page.getByTestId('region-option');
+    await expect(options).toHaveCount(1);
+    await expect(options.first()).toContainText('Cornwall');
+    await options.first().click();
+
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'Cornwall');
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-country', 'United Kingdom');
+  });
+
+  test('the current region is marked in the list', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await pickRegion(page, 'Galicia');
+
+    await page.getByTestId('region-button').click();
+    await expect(page.locator('[data-testid="region-option"][data-region="Galicia"]')).toHaveAttribute('aria-current', 'true');
+  });
+
+  test('the level picker explains that level only changes alerts', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.getByTestId('level-button').click();
+    await expect(page.getByTestId('level-picker')).toContainText('Scores are the same for everyone');
+    await page.getByTestId('level-expert').click();
+    await expect(page.getByTestId('level-button')).toHaveAttribute('data-level', 'expert');
+  });
+});
+
+test.describe('spec: region-selection / Mejores spots a la vista', () => {
+  const CLOCK = new Date('2026-09-16T12:20:00Z').getTime();
+
+  test('the best spots in view are listed and open at the hour they were ranked for', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 ? 5 : 1) });
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+
+    await page.getByLabel('Forecast hour').fill('60');
+    const best = page.getByTestId('best-spot');
+    await expect(best.first()).toBeVisible();
+    await expect(best.first()).toContainText('5');
+    expect(await best.count()).toBeLessThanOrEqual(3);
+
+    const time = await page.getByTestId('forecast-time').textContent();
+    await best.first().click();
+    await expect(page.getByTestId('spot-drawer')).toBeVisible();
+    await expect(page.getByTestId('forecast-time')).toHaveText(time!);
+  });
+
+  test('each day shows its best score, so the good day stands out', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    // Wed 15:00 anchor: offset 57 is Saturday 00:00 in Madrid. Saturday scores 5, the rest 0.
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 && h < 81 ? 5 : 0) });
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+
+    const chips = page.getByTestId('day-chip');
+    await expect(chips.nth(3)).toHaveAttribute('data-best', '5');
+    await expect(chips.first()).toHaveAttribute('data-best', '0');
+  });
+
+  test('moving the time slider does not request the map again', async ({ page }) => {
+    await stubForecast(page);
+    let batches = 0;
+    page.on('request', r => {
+      if (r.url().includes('/api/forecast/batch')) batches++;
+    });
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await expect(page.getByTestId('scoring-indicator')).toHaveCount(0, { timeout: 30_000 });
+    const before = batches;
+
+    for (const hour of ['10', '40', '100', '150']) {
+      await page.getByLabel('Forecast hour').fill(hour);
+      await page.waitForTimeout(300);
+    }
+    await expect(page.locator('[data-testid="spot-marker"]').first()).toBeAttached();
+    expect(batches).toBe(before);
+  });
+
+  test('back to now returns to the first hour', async ({ page }) => {
+    const CLOCK2 = CLOCK;
+    await page.clock.install({ time: CLOCK2 });
+    await stubForecast(page, { now: CLOCK2 });
+    await page.goto('/');
+    await expect(page.getByTestId('back-to-now')).toHaveCount(0);
+    await page.getByLabel('Forecast hour').fill('30');
+    await page.getByTestId('back-to-now').click();
+    await expect(page.getByTestId('forecast-time')).toHaveText('Today, 15:00');
+  });
+});
+
+test.describe('spec: drawer-navigation / Veredicto, marea y detalles', () => {
+  const CLOCK = new Date('2026-09-16T12:20:00Z').getTime();
+
+  test('the detail summarises the hour, shows the best window and the tide trend', async ({ page }) => {
+    await page.clock.install({ time: CLOCK });
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 2 && h < 5 ? 3 : 1) });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    await expect(page.getByTestId('spot-verdict')).toContainText('1.5 m groundswell at 12 s');
+    await expect(page.getByTestId('best-window')).toContainText('17:00–20:00');
+    // 15:00 shown; the stubbed tides put the next extreme at 15:00 high then 21:00 low.
+    await expect(page.getByTestId('tide-trend')).toContainText('low 21:00');
+  });
+
+  test('sea state details are folded until asked for', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const toggle = page.getByTestId('sea-state-toggle');
+    await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.getByTestId('breaking-height')).toBeHidden();
+    await toggle.click();
+    await expect(page.getByTestId('breaking-height')).toBeVisible();
+    await expect(page.getByTestId('go-to-spot')).toContainText('Directions');
   });
 });

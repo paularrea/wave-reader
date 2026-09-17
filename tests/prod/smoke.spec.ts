@@ -13,6 +13,7 @@ test('the deployed app serves a working forecast', async ({ page }) => {
   page.on('pageerror', e => errors.push(e.message.slice(0, 200)));
 
   await page.goto(PROD_URL);
+  await expect(page.getByTestId('region-button')).toBeVisible();
 
   const markers = page.locator('[data-testid="spot-marker"]');
   await expect(markers.first()).toBeAttached({ timeout: 45_000 });
@@ -27,6 +28,10 @@ test('the deployed app serves a working forecast', async ({ page }) => {
     expect(g, `marker rendered ${color}`).toBeLessThanOrEqual(r);
   }
 
+  // The bottom sheet ranks what is in view once scoring lands.
+  await expect(page.getByTestId('best-in-view')).toBeVisible();
+  await expect(page.getByTestId('rated-count')).toContainText('spots rated', { timeout: 45_000 });
+
   await markers.first().dispatchEvent('click');
   await expect(page.getByTestId('spot-drawer')).toBeVisible();
 
@@ -39,6 +44,7 @@ test('the deployed app serves a working forecast', async ({ page }) => {
   expect(wind).not.toBe('0 km/h');
 
   await expect(page.getByTestId('swell-height')).toContainText('m');
+  await expect(page.getByTestId('spot-verdict')).toBeVisible();
   // Present even where there is nothing to show: Mediterranean spots have
   // tides below the prominence floor and must say so rather than stay blank.
   await expect(page.getByTestId('tides-section')).toBeVisible();

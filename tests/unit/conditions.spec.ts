@@ -88,19 +88,21 @@ test.describe('spec: condition-rating / Badge de condición de viento', () => {
   test('wind aligned with the offshore angle is Off-shore green', () => {
     const badge = windBadge(forecast({ windDirection: 140, windSpeed: 15 }), SPOT)!;
     expect(badge.label).toBe('Off-shore');
-    expect(badge.background).toBe('#22C55E');
+    expect(badge.foreground).toBe('#86EFAC');
+    expect(badge.background).toContain('74,222,128');
   });
 
   test('wind opposite the offshore angle is On-shore grey', () => {
     const badge = windBadge(forecast({ windDirection: 320, windSpeed: 15 }), SPOT)!;
     expect(badge.label).toBe('On-shore');
-    expect(badge.background).toBe('#71717A');
+    expect(badge.foreground).toBe('#D4D4D8');
+    expect(badge.background).toContain('161,161,170');
   });
 
   test('sideshore wind is Cross-shore light green', () => {
     const badge = windBadge(forecast({ windDirection: 230, windSpeed: 15 }), SPOT)!;
     expect(badge.label).toBe('Cross-shore');
-    expect(badge.background).toBe('#86EFAC');
+    expect(badge.foreground).toBe('#D9F99D');
   });
 
   test('wind under 5 km/h is Glass regardless of direction', () => {
