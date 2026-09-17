@@ -108,7 +108,7 @@ function TideCard({
   if (points.length >= 2) {
     const min = Math.min(...points.map(p => p.level));
     const max = Math.max(...points.map(p => p.level));
-    const span = max - min || 1;
+    const range = max - min || 1;
     // Today's series starts at the current hour, so the curve is scaled to the
     // hours it actually has rather than to a whole day it cannot draw.
     const first = points[0].hour;
