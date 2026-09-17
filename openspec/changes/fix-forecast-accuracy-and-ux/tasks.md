@@ -61,8 +61,8 @@
 - [x] 8.1 `scripts/fetch-osm-beaches.mjs`: descarga por código ISO 3166-2 de todas las regiones costeras, con detección de respuestas parciales de Overpass y reanudación
 - [x] 8.2 Ampliar la consulta a bahías y guijarro en Irlanda, donde OSM etiqueta pocas playas
 - [x] 8.3 `scripts/derive-spot-config.mjs`: sondeo de elevación en 12 rumbos para determinar exposición al mar abierto y orientación, y derivar de ahí la ventana de swell y el ángulo offshore
-- [ ] 8.4 Regenerar `src/data/spots.json` a escala nacional España + Irlanda
-- [ ] 8.5 Verificar contra los specs: `spot-catalog`
+- [x] 8.4 Regenerar `src/data/spots.json` a escala nacional España + Irlanda
+- [x] 8.5 Verificar contra los specs: `spot-catalog`
 
 ## 9. Selección de país y región
 
