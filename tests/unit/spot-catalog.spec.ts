@@ -93,13 +93,25 @@ test.describe('spec: spot-catalog / Sin coordenadas duplicadas', () => {
     }
   });
 
-  test('coordinates carry at least 4 decimals of precision', () => {
-    for (const spot of catalogue) {
-      for (const axis of ['lat', 'lon'] as const) {
-        const decimals = String(spot.coordinates[axis]).split('.')[1]?.length ?? 0;
-        expect(decimals, `${spot.name} ${axis} is too coarse`).toBeGreaterThanOrEqual(4);
-      }
-    }
+  test('coordinates are not systematically rounded', () => {
+    // The original hand-written catalogue had every coordinate at 2 decimals,
+    // about 1 km of error. Real OSM coordinates occasionally end in zeros
+    // (-8.883 is -8.88300), so the invariant is that coarseness is incidental,
+    // not that every value prints four decimals.
+    const decimalsOf = (value: number) => String(value).split('.')[1]?.length ?? 0;
+
+    // Per-spot this cannot be asserted: a genuine OSM centroid may land on
+    // -8.90000, and a handful do. What the old catalogue failed was the
+    // distribution -- all 61 of its coordinates sat on a 0.01 grid.
+    const precise = catalogue.filter(
+      spot =>
+        decimalsOf(spot.coordinates.lat) >= 4 && decimalsOf(spot.coordinates.lon) >= 4
+    );
+
+    expect(
+      precise.length / catalogue.length,
+      'catalogue looks uniformly rounded to ~1 km'
+    ).toBeGreaterThan(0.95);
   });
 
   test('ids are unique', () => {

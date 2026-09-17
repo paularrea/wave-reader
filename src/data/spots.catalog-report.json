@@ -1,716 +1,2636 @@
 {
-  "generatedAt": "2026-09-16T20:00:41.772Z",
-  "kept": 47,
-  "dropped": [
-    {
-      "id": "matadeiro-beach",
-      "name": "Matadeiro",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Matadeiro, Galicia, España",
-          "outcome": "skipped place/neighbourhood: not a surfable feature"
-        },
-        {
-          "query": "Matadeiro, Galicia, España",
-          "outcome": "skipped place/locality: not a surfable feature"
-        },
-        {
-          "query": "Matadeiro, Galicia, España",
-          "outcome": "skipped place/locality: not a surfable feature"
-        },
-        {
-          "query": "Matadeiro, Galicia, España",
-          "outcome": "skipped place/square: not a surfable feature"
-        },
-        {
-          "query": "Matadeiro, Galicia, España",
-          "outcome": "skipped highway/residential: not a surfable feature"
-        },
-        {
-          "query": "Playa de Matadeiro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Matadeiro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Matadeiro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Matadeiro hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Matadeiro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Matadeiro, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "marosa-beach",
-      "name": "Playa da A Marosa",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa da A Marosa, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa de da A Marosa, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de da A Marosa, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de da A Marosa, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "da A Marosa hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia da A Marosa, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "da A Marosa, Galicia, España",
-          "outcome": "skipped place/locality: not a surfable feature"
-        }
-      ]
-    },
-    {
-      "id": "baldayo-laguna",
-      "name": "Playa de Baldayo - La Laguna",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa de Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Baldayo - La Laguna hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Baldayo - La Laguna, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "baleo-sandbar",
-      "name": "Playa de Baleo",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa de Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Praia de Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Platja de Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Baleo hondartza, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Playa Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Praia Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Baleo, Galicia, España",
-          "outcome": "skipped highway/trunk: not a surfable feature"
-        },
-        {
-          "query": "Baleo, Galicia, España",
-          "outcome": "skipped place/hamlet: not a surfable feature"
-        },
-        {
-          "query": "Baleo, Galicia, España",
-          "outcome": "skipped place/hamlet: not a surfable feature"
-        },
-        {
-          "query": "Baleo, Galicia, España",
-          "outcome": "skipped Praia de Figaredo, A Gabeira, Pantín, Valdoviño, F: name does not match \"Playa de Baleo\""
-        },
-        {
-          "query": "Baleo, Galicia, España",
-          "outcome": "skipped waterway/river: not a surfable feature"
-        }
-      ]
-    },
-    {
-      "id": "san-cibrao-beach",
-      "name": "Playa de San Cibrao",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Torno, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Limosa, A Aldea de Arriba, Lieiro, Cervo,: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Porto, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia de Cubelas, Pedrosa, Lieiro, Cervo, A Mariña: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Area Grosa, Lieiro, Cervo, A Mariña Occid: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Torno, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Limosa, A Aldea de Arriba, Lieiro, Cervo,: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Porto, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia de Cubelas, Pedrosa, Lieiro, Cervo, A Mariña: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Area Grosa, Lieiro, Cervo, A Mariña Occid: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Platja de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Torno, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Platja de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Limosa, A Aldea de Arriba, Lieiro, Cervo,: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Platja de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Porto, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Platja de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia de Cubelas, Pedrosa, Lieiro, Cervo, A Mariña: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Platja de San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Area Grosa, Lieiro, Cervo, A Mariña Occid: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "San Cibrao hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Torno, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Limosa, A Aldea de Arriba, Lieiro, Cervo,: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Porto, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa San Cibrao, Galicia, España",
-          "outcome": "skipped Praia de Cubelas, Pedrosa, Lieiro, Cervo, A Mariña: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Playa San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Area Grosa, Lieiro, Cervo, A Mariña Occid: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Torno, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Limosa, A Aldea de Arriba, Lieiro, Cervo,: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia San Cibrao, Galicia, España",
-          "outcome": "skipped Praia do Porto, A Aldea de Arriba, Lieiro, Cervo, : name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia San Cibrao, Galicia, España",
-          "outcome": "skipped Praia de Cubelas, Pedrosa, Lieiro, Cervo, A Mariña: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "Praia San Cibrao, Galicia, España",
-          "outcome": "skipped Praia da Caosa, Pedrosa, Lieiro, Cervo, A Mariña O: name does not match \"Playa de San Cibrao\""
-        },
-        {
-          "query": "San Cibrao, Galicia, España",
-          "outcome": "skipped railway/station: not a surfable feature"
-        },
-        {
-          "query": "San Cibrao, Galicia, España",
-          "outcome": "skipped railway/stop: not a surfable feature"
-        },
-        {
-          "query": "San Cibrao, Galicia, España",
-          "outcome": "skipped place/town: not a surfable feature"
-        },
-        {
-          "query": "San Cibrao, Galicia, España",
-          "outcome": "skipped natural/peak: not a surfable feature"
-        },
-        {
-          "query": "San Cibrao, Galicia, España",
-          "outcome": "skipped place/hamlet: not a surfable feature"
-        }
-      ]
-    },
-    {
-      "id": "sarrigal-beach",
-      "name": "Playa de Sarrigal",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa de Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Sarrigal hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Sarrigal, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "rostro-beach",
-      "name": "Playa do Rostro",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Playa do Rostro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa de do Rostro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de do Rostro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de do Rostro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "do Rostro hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia do Rostro, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "do Rostro, Galicia, España",
-          "outcome": "skipped natural/cliff: not a surfable feature"
-        },
-        {
-          "query": "do Rostro, Galicia, España",
-          "outcome": "skipped natural/cape: not a surfable feature"
-        },
-        {
-          "query": "do Rostro, Galicia, España",
-          "outcome": "skipped highway/unclassified: not a surfable feature"
-        }
-      ]
-    },
-    {
-      "id": "ria-foz-river",
-      "name": "Ria Foz",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Ria Foz, Galicia, España",
-          "outcome": "skipped Ría de Foz, San Cosme de Barreiros, San Cosme, Bar: name does not match \"Ria Foz\""
-        },
-        {
-          "query": "Ria Foz, Galicia, España",
-          "outcome": "skipped leisure/nature_reserve: not a surfable feature"
-        },
-        {
-          "query": "Ria Foz, Galicia, España",
-          "outcome": "skipped leisure/nature_reserve: not a surfable feature"
-        },
-        {
-          "query": "Ria Foz, Galicia, España",
-          "outcome": "skipped highway/residential: not a surfable feature"
-        },
-        {
-          "query": "Playa de Ria Foz, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Ria Foz, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Ria Foz, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Ria Foz hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Ria Foz, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Ria Foz, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "santa-maria-oia",
-      "name": "Santa Maria de Oia",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Santa Maria de Oia, Galicia, España",
-          "outcome": "skipped building/monastery: not a surfable feature"
-        },
-        {
-          "query": "Santa Maria de Oia, Galicia, España",
-          "outcome": "skipped amenity/place_of_worship: not a surfable feature"
-        },
-        {
-          "query": "Santa Maria de Oia, Galicia, España",
-          "outcome": "skipped leisure/pitch: not a surfable feature"
-        },
-        {
-          "query": "Santa Maria de Oia, Galicia, España",
-          "outcome": "skipped building/civic: not a surfable feature"
-        },
-        {
-          "query": "Playa de Santa Maria de Oia, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Santa Maria de Oia, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Santa Maria de Oia, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Santa Maria de Oia hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Santa Maria de Oia, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Santa Maria de Oia, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "serans-beach",
-      "name": "Serans",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Serans, Galicia, España",
-          "outcome": "skipped place/hamlet: not a surfable feature"
-        },
-        {
-          "query": "Playa de Serans, Galicia, España",
-          "outcome": "skipped Praia de Espiñeirido, As Barreiras, San Pedro de M: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia de Serans, Galicia, España",
-          "outcome": "skipped Praia de Espiñeirido, As Barreiras, San Pedro de M: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia de Serans, Galicia, España",
-          "outcome": "skipped Praia dos Regos, O Arruxo, San Pedro de Muro, O Po: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia de Serans, Galicia, España",
-          "outcome": "skipped highway/track: not a surfable feature"
-        },
-        {
-          "query": "Platja de Serans, Galicia, España",
-          "outcome": "skipped Praia de Espiñeirido, As Barreiras, San Pedro de M: name does not match \"Serans\""
-        },
-        {
-          "query": "Serans hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Serans, Galicia, España",
-          "outcome": "skipped Praia de Espiñeirido, As Barreiras, San Pedro de M: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia Serans, Galicia, España",
-          "outcome": "skipped Praia de Espiñeirido, As Barreiras, San Pedro de M: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia Serans, Galicia, España",
-          "outcome": "skipped Praia dos Regos, O Arruxo, San Pedro de Muro, O Po: name does not match \"Serans\""
-        },
-        {
-          "query": "Praia Serans, Galicia, España",
-          "outcome": "skipped highway/track: not a surfable feature"
-        }
-      ]
-    },
-    {
-      "id": "villarrube-beach",
-      "name": "Villarrube",
-      "community": "Galicia",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Villarrube, Galicia, España",
-          "outcome": "skipped highway/residential: not a surfable feature"
-        },
-        {
-          "query": "Villarrube, Galicia, España",
-          "outcome": "skipped highway/residential: not a surfable feature"
-        },
-        {
-          "query": "Playa de Villarrube, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Villarrube, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Villarrube, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Villarrube hondartza, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Villarrube, Galicia, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Villarrube, Galicia, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "mundaka-point",
-      "name": "Mundaka",
-      "community": "País Vasco",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Mundaka, País Vasco, España",
-          "outcome": "skipped boundary/administrative: not a surfable feature"
-        },
-        {
-          "query": "Playa de Mundaka, País Vasco, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de Mundaka, País Vasco, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Mundaka, País Vasco, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Mundaka hondartza, País Vasco, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Mundaka, País Vasco, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia Mundaka, País Vasco, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "famara-beach",
-      "name": "Famara",
-      "community": "Canarias",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "Famara, Canarias, España",
-          "outcome": "skipped highway/track: not a surfable feature"
-        },
-        {
-          "query": "Famara, Canarias, España",
-          "outcome": "skipped natural/cliff: not a surfable feature"
-        },
-        {
-          "query": "Playa de Famara, Canarias, España",
-          "outcome": "skipped amenity/parking: not a surfable feature"
-        },
-        {
-          "query": "Playa de Famara, Canarias, España",
-          "outcome": "skipped amenity/parking: not a surfable feature"
-        },
-        {
-          "query": "Praia de Famara, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de Famara, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Famara hondartza, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa Famara, Canarias, España",
-          "outcome": "skipped amenity/parking: not a surfable feature"
-        },
-        {
-          "query": "Playa Famara, Canarias, España",
-          "outcome": "skipped amenity/parking: not a surfable feature"
-        },
-        {
-          "query": "Praia Famara, Canarias, España",
-          "outcome": "no hits"
-        }
-      ]
-    },
-    {
-      "id": "el-quemao-reef",
-      "name": "El Quemao",
-      "community": "Canarias",
-      "ok": false,
-      "reason": "no candidate matched both feature type and community",
-      "attempts": [
-        {
-          "query": "El Quemao, Canarias, España",
-          "outcome": "skipped amenity/restaurant: not a surfable feature"
-        },
-        {
-          "query": "Playa de El Quemao, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia de El Quemao, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Platja de El Quemao, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "El Quemao hondartza, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Playa El Quemao, Canarias, España",
-          "outcome": "no hits"
-        },
-        {
-          "query": "Praia El Quemao, Canarias, España",
-          "outcome": "no hits"
-        }
-      ]
-    }
-  ]
+ "generatedAt": "2026-09-17T00:17:00.838Z",
+ "kept": 4343,
+ "dropped": [
+  {
+   "name": "Río A Pesqueira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia fluvial de Portomaior",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Cabalar",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Areeiros",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Concha",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Barra",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia dos Couláns",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Fontiña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "A Praíña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Espiñeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Fonte",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praíña do Palleiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Lanzadiña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Fontiña",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia das Saíñas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Praeira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia das Cuncheiras",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "A Praia Pequena da Cova da Lontra",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Banda do Norte",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Regato",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Rolo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Praia Vella",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praíña da Mina",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praíña do Fonteadouro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Entremuíños",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praíña de Debaixo da Costa",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Pico",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Norte da Atravesada",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Estralo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Carballal",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Areíño",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Areo do Medio",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Areo do Redondal",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Pousada",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Río do Porco",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Areo da Bichoa do Norte",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Ribeira do Forcado",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Ribeira da Devesa",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Goleta",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia dos Namorados",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Ladróns",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia das Sobreiras",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Laxe",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Redemuíños",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Artón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Andaio",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ciscada",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Xuncal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Grande de Ares",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "A Praíña dos Praceres",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praíña da Polbeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praíña de Avante Toda",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praíña de Avante",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praíña do Sur",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praíña de Entremedias",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Chandrexa",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Pedras Miúdas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Cercada",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Barxe",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Ver",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Madalena",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Cerrulo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Marín",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sopazos de Terra",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Barreiros",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Seselle",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Praia Grande",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Caranza",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia das Fontes",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Cocho",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Santa Baia",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Adro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Mourisca",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Portocelo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Mogor",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Mingotes",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Aguete",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ladeira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de San Pedro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Gandarío",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Bestarruza",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "A Barca",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Lapamán",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Coviña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Loira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Lorcheira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Boa Grande",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Pendón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Con",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Xunqueira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Santa Cristina",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Bastiagueiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Santa Cristina",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Matilde",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Muxeira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Medio",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Cova da Lontra",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Pociña",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Canaval",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia dos Alemáns",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Rodeira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Videira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Niño do Corvo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Nudista da Insua",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Suigrexas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Retorta",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Torre",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Carregueiros",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Santa Cruz",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Oza",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Nanîn",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Congorza",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Areamilla",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Ribeira do Medio",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Bouciña",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Portiño",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Medrón",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Sabadelle",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Concha",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Estorde",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Sacido",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Coído",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Río Sandeu",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Area Morta",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Carril",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Ríos",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Mondariz",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Punta",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Castañal",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Ares",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Graña",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Olmo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Gafa",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "O Areal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Cabeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Coira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Abrela",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Alegrín",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Area de Agra",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Raxó",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "A Area da Barca",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "A Area da Illa",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Chancelas Pequena",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Granxa",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Chancelas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Xiorto",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Laño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Caeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Pedra Alta",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Covelo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sinás",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Ouriceira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Arnela",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Pampaido",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "A Area do Santo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Santo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Lodeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Porrón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Quenxo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Tronco",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Perbes",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ribeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Celeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Seiramar",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Rol",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Ribeira de Barallobre",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Regueiro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Reimundes",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Pazo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Cova",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Nabal",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Lago",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Bornalle",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Liñares",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Ventín",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Restrelo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Almieiras",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Lago",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Cova da Hedra",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Area de Cabanas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Areeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Salgueirón",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Susolmos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Fornos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Maniños",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Chamoso",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Paredes",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Lérez",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Bidueiro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Eiras",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Ornanda",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Pozo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Laraño",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Porto",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Inquiau",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Barreira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Area Grande",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia das Maceiras",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Area das Vacas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Alameda",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Abeleira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Insua",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Bastiagueiriño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Santa Mariña",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Tanxil",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Padrón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Rualeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Mosqueira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Borna",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Barrosa",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Arealonga",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Penedos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Rande",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Urixeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sumiño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Morouzos",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Balouredo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Fradiño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sartaxéns",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Preguntoiro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Sobreira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Mouro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Río Castro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Fontán",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Punta Fondón",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Río da Ribeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "A Regueira",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "A Ribeira de Ramil",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Ribeiriña Pequena",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Fonte do Xelo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Almacén",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Ribeira da Comboa",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "O Areo do Esteiro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Ribeira do Norte",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Deilán",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Queixeira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Forno da Cal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ribeira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Fontenla",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Areíña do Medio",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Coído",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Cotarín",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Portosiavo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Bitureira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Prado das Vellas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Fonforrón",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Poza",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Batuda",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Telleira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Arnela",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Agro Covo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Arruxo",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Salgueiro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Area Triga",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Salto",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Concha",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Vilarello",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Praíña",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Area da Hedreira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Manguiña",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Lago",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Canteira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Queimado",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Baltar",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "A Area da Cova",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Cocho",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Nova do Latón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Entrepedras",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Area",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Covas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Centroña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Raso",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Estacas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Colado Grande",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Entrepedras",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Centeás",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Neixón",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Vaca",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Areas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia dos Mortos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Cabeceira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Polvorín",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Moscoso",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ribeira de Santa Mariña",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Cano",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Balea",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Areal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Os Remuiños",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Cruz",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Ribada",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sismundi",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Figueiras",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Posta",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Cuncheiro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Xunqueira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Sagrada",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Miranda",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Fábrica",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Mende",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Pilón",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praíña do Cubillón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia das Xuvias",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia dos Cristais",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Testal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Armenteiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Arnela Vella",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia das Fontiñas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia dos Lobos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Curro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praíña das Vellas",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Fluvial das Encrobas",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Moruxo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Pedra Redonda",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Cabalo",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Telleira Pequena",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Cabanas",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Goián",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Arnado",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Area Grosa",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Catoira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Becha",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia da Macarena",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Porto de Bois",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Piñeirón",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia dos Vimbios",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Corveira",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Playa fluvial de Calvelo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa Fluvial de A Xesteira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Pozo Negro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Coiñedo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia dos Franceses",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Seixal",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Sopazos de Mar",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Suasbarras",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Cura",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia Sartaxés",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Celeiro",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia das Bólas",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Coído",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Gurugú",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia dos Gatos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Barrosa",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia dos Curas",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Xunqueira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de entrepontes",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Areal de San Mauro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Suacasa",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Area Chica",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia canina A Seca",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Lago",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Moreira",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa Fluvial de Luneda",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Atalaia",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Ortecelo",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Arqueada",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Portiño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Rebordiño",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Boa Pequena",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Concharrao",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Concharrao",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia do Cruceiro",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia das Delicias",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Nova",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Morazón",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de A Barquiña",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Pedra Redonda",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Somorto",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia de Prameán",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Broña",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Freixa",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia dos Cabalos",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Seca do Pedrido",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Pedrido",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Cabana",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Regueiro",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Penarroxa",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia de Lourido",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Croieira de San Mamede",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Croieira de Amandi",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia Fluvial",
+   "community": "Galicia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Balarés",
+   "community": "Galicia",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Praia do Forte",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Praia da Punta",
+   "community": "Galicia",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Playa Fluvial del Dobra",
+   "community": "Asturias",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa de La Coaña",
+   "community": "Asturias",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa fluvial de Llano",
+   "community": "Asturias",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa artificial de Punta Parayas",
+   "community": "Cantabria",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa de El Rostro",
+   "community": "Cantabria",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa del Regatón",
+   "community": "Cantabria",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Abinagako hondartza",
+   "community": "País Vasco",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Areetako Hondartza",
+   "community": "País Vasco",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Playa de la Bola",
+   "community": "País Vasco",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Toñako hondartza",
+   "community": "País Vasco",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Solarium-Zona de Pesca Los Cargaderos",
+   "community": "País Vasco",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Moll sortida barques Raffting",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Zona de bany Darnius- Boadella",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "De la Morrera",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Platja de Miravet",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Platja dels Illons de Púello",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Platja dels Illons de Púello",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Platjeta de Bonmatí",
+   "community": "Cataluña",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tools Martinet",
+   "community": "Comunidad Valenciana",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa Fluvial de Bugarra",
+   "community": "Comunidad Valenciana",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Playeta",
+   "community": "Comunidad Valenciana",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa El Motor",
+   "community": "Comunidad Valenciana",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Zona de Baño \"El Arenal\"",
+   "community": "Murcia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Zona de Baño \"Las Escanales\"",
+   "community": "Murcia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa artificial de Coy",
+   "community": "Murcia",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa del Mojón",
+   "community": "Murcia",
+   "reason": "duplicate coordinate"
+  },
+  {
+   "name": "Playa de Valdearenas",
+   "community": "Andalucía",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "La Cachucha",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa de Levante",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa de la Ministra",
+   "community": "Andalucía",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Playa del Conchal",
+   "community": "Andalucía",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Playa de la Clica",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa de la Casería",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa fluvial embalse de Arcos de la Frontera",
+   "community": "Andalucía",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Playa de Puente Mayorga-Campamento",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa de Los Roncalillo",
+   "community": "Andalucía",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Playa de Freila",
+   "community": "Andalucía",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Cala Los Cocedores",
+   "community": "Andalucía",
+   "reason": "duplicate coordinate"
+  },
+  {
+   "name": "Playa del Risco",
+   "community": "Canarias",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Platja des Morer Vermell",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "platja dels Francesos",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Platja de Muro",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Platja de Can Cullerassa",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Es Clot",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Platja del Corral d'en Bennàssar",
+   "community": "Baleares",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Murvagh Beach",
+   "community": "Donegal",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Portsalon Beach",
+   "community": "Donegal",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Carricknaha",
+   "community": "Donegal",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Brown Shore",
+   "community": "Donegal",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Shipwreck beach",
+   "community": "Donegal",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Legganore Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Toberconnell Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Half Moon Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Annagh Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Aghamore Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Tobernalt Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bunowen Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Loughbrick Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Trawane Bay",
+   "community": "Sligo",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Enniscrone Beach",
+   "community": "Sligo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Rosses Point Beach",
+   "community": "Sligo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Rosses Point Beach",
+   "community": "Sligo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Lareen Bay",
+   "community": "Leitrim",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Rynn Beach",
+   "community": "Leitrim",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Uggool Beach",
+   "community": "Mayo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Rinnaveeloge",
+   "community": "Mayo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Trá na Sraithe",
+   "community": "Mayo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Trá Dhún Ibhir",
+   "community": "Mayo",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Coose Bay",
+   "community": "Galway",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Ballinduff Bay",
+   "community": "Galway",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Stonyisland Bay",
+   "community": "Galway",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Golden Bay",
+   "community": "Galway",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Dead Mans Beach",
+   "community": "Galway",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Mannin Bay Coral Strand",
+   "community": "Galway",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Lettergesh Beach",
+   "community": "Galway",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Trá na hAille Móire",
+   "community": "Galway",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Traught Beach",
+   "community": "Galway",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tinarana Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Aylevarroo Bay",
+   "community": "Clare",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Ballymacrinan Bay",
+   "community": "Clare",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Carrigaholt Bay",
+   "community": "Clare",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Clonderalaw Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Labasheeda Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Church Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Scarriff Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bunlahy Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Cloonoolia Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Carrowgar Bay",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "White Sands",
+   "community": "Clare",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Glasheen Beach",
+   "community": "Clare",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Shannon Estuary",
+   "community": "Clare",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Tarbet Bay",
+   "community": "Limerick",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Yurty's Couch",
+   "community": "Limerick",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Shannon Estuary",
+   "community": "Limerick",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Ballylongford Bay",
+   "community": "Kerry",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Glencloosagh Bay",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Newfoundland Bay",
+   "community": "Kerry",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Coss Strand",
+   "community": "Kerry",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Castlelough Bay",
+   "community": "Kerry",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Bog Bay",
+   "community": "Kerry",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Reen Beach",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "McRose Beach",
+   "community": "Kerry",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Reenrow Beach",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Littor Strand",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Beale Strand",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Coral Beach",
+   "community": "Kerry",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Shannon Estuary",
+   "community": "Kerry",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Glenmore Strand",
+   "community": "Cork",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Ballybrassil Beach",
+   "community": "Cork",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "2018 Drought Shoreline end",
+   "community": "Cork",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Stone Beach",
+   "community": "Cork",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Cuskinny",
+   "community": "Cork",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Lough Mahon",
+   "community": "Cork",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Rossmore Bay",
+   "community": "Cork",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Main Beach",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Trá Bhán",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Trá Bhán East",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Cúl Tráígh",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Trá na gCruach",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Trá Mhór",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Flaxfort Strand",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Traighín na mBó",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Glengarriff Bay",
+   "community": "Cork",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Snave Strand",
+   "community": "Cork",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "An Tráighín Álainn",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "The South Strand",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "The Coveen",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Cuas an Bháid",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Cuaisín 'Naomhóg",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Cuaisín na nÚbhall",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "The Sandy Cuaisíns",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "An Cuaisín",
+   "community": "Cork",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Dromina Strand",
+   "community": "Waterford",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Raheen Strand",
+   "community": "Waterford",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Woodstown Strand",
+   "community": "Waterford",
+   "reason": "open arc of only 45 degrees"
+  },
+  {
+   "name": "Fornaght Strand",
+   "community": "Waterford",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Catherine's Bay",
+   "community": "Wexford",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Nook Bay",
+   "community": "Wexford",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Booley Bay Beach",
+   "community": "Wexford",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Arthurstown Beach",
+   "community": "Wexford",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Duncannon",
+   "community": "Wexford",
+   "reason": "open arc of only 22.5 degrees"
+  },
+  {
+   "name": "Coon Beach",
+   "community": "Wicklow",
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Ross Bay",
+   "community": "Meath",
+   "reason": "open arc of only 0 degrees"
+  }
+ ]
 }

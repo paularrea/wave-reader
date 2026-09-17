@@ -39,9 +39,13 @@ const BEARINGS = 12;                   // 30 degrees apart
  */
 const PROBE_KM = [6];
 const MIN_OPEN_ARC = 3;                // >= 90 degrees of open water
+/**
+ * ETOPO1 returns bathymetry, so open water is genuinely negative rather than
+ * the ambiguous 0 a land-only model gives for anything at sea level.
+ */
 const SEA_LEVEL_M = 0;
-const BATCH_BEACHES = 8;               // 96 coords per request, under the 100 cap
-const REQUEST_PAUSE_MS = 1200;         // stays clear of the minutely limit
+const BATCH_BEACHES = 8;               // 96 locations per request, under the 100 cap
+const REQUEST_PAUSE_MS = 1100;         // the public instance allows 1 call/second
 
 const KM_PER_DEG_LAT = 110.574;
 
@@ -76,40 +80,50 @@ function probePoints(beach) {
   return points;
 }
 
+/**
+ * Elevation source: OpenTopoData's public ETOPO1 dataset.
+ *
+ * Not Open-Meteo's elevation endpoint, which this script originally used. That
+ * endpoint shares an account-wide daily quota with the forecast API the app
+ * itself depends on, and a single full run exhausted it for the rest of the
+ * day -- blocking both the catalogue build and local development.
+ *
+ * ETOPO1 is also the better dataset for the question being asked: it carries
+ * bathymetry, so open ocean reads as a large negative number rather than the
+ * ambiguous 0 that a land-only model returns for anything at sea level. Its
+ * 1 arc-minute resolution (~1.8 km) is well inside the 6 km probe distance.
+ *
+ * Public instance limits: 100 locations per call, 1 call/second, 1000/day.
+ */
+const ELEVATION_ENDPOINT = 'https://api.opentopodata.org/v1/etopo1';
+
 async function elevations(points, attempt = 0) {
-  const url =
-    `https://api.open-meteo.com/v1/elevation?latitude=${points.map(p => p.lat.toFixed(4)).join(',')}` +
-    `&longitude=${points.map(p => p.lon.toFixed(4)).join(',')}`;
+  const locations = points.map(p => `${p.lat.toFixed(4)},${p.lon.toFixed(4)}`).join('|');
 
   let res;
   try {
-    res = await fetch(url, { signal: AbortSignal.timeout(60_000) });
+    res = await fetch(`${ELEVATION_ENDPOINT}?locations=${locations}`, {
+      signal: AbortSignal.timeout(60_000),
+    });
   } catch (err) {
     if (attempt >= 8) throw new Error(`Elevation API unreachable: ${err.message}`);
     await sleep(5000);
     return elevations(points, attempt + 1);
   }
 
-  if (res.status === 429) {
-    if (attempt >= 10) throw new Error('Elevation API kept rate limiting');
-    // The limit is per minute, so waiting out the window beats hammering it.
-    const wait = Math.min(65_000, 15_000 * (attempt + 1));
-    log(`    rate limited, waiting ${Math.round(wait / 1000)}s`);
+  if (res.status === 429 || res.status === 503) {
+    if (attempt >= 10) throw new Error(`Elevation API kept returning ${res.status}`);
+    const wait = 5_000 * (attempt + 1);
+    log(`    ${res.status} from elevation API, waiting ${wait / 1000}s`);
     await sleep(wait);
     return elevations(points, attempt + 1);
   }
   if (!res.ok) throw new Error(`Elevation API ${res.status}`);
 
   const body = await res.json();
-  // A JSON error body still arrives with HTTP 200 on this endpoint.
-  if (body.error) {
-    if (attempt >= 10) throw new Error(`Elevation API: ${body.reason}`);
-    log(`    ${body.reason}, waiting 65s`);
-    await sleep(65_000);
-    return elevations(points, attempt + 1);
-  }
+  if (body.status !== 'OK') throw new Error(`Elevation API: ${body.error ?? body.status}`);
 
-  return body.elevation ?? [];
+  return (body.results ?? []).map(r => r.elevation);
 }
 
 /** Circular mean of a set of bearings, in degrees. */
