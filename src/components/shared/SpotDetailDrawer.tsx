@@ -109,8 +109,13 @@ function TideCard({
     const min = Math.min(...points.map(p => p.level));
     const max = Math.max(...points.map(p => p.level));
     const span = max - min || 1;
-    const x = (hour: number) => (hour / 23) * W;
-    const y = (level: number) => 4 + (1 - (level - min) / span) * (H - 8);
+    // Today's series starts at the current hour, so the curve is scaled to the
+    // hours it actually has rather than to a whole day it cannot draw.
+    const first = points[0].hour;
+    const last = points[points.length - 1].hour;
+    const span = Math.max(1, last - first);
+    const x = (hour: number) => ((hour - first) / span) * W;
+    const y = (level: number) => 4 + (1 - (level - min) / range) * (H - 8);
     path = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${x(p.hour).toFixed(1)} ${y(p.level).toFixed(1)}`).join(' ');
     const current = points.find(p => p.key === currentKey);
     if (current) marker = { x: x(current.hour), y: y(current.level) };
