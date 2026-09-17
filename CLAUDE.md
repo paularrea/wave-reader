@@ -140,6 +140,21 @@ hour, so do not raise the probe count without recalculating the request total.
 Anything unverifiable is dropped and recorded in `src/data/spots.catalog-report.json`
 with its reason.
 
+## Data transparency panel
+
+The info button in the header opens `DataInfoPanel`: sources, per-model freshness, the
+app's cache duration, how the rating works, the catalogue and known limitations.
+
+- Model freshness comes from Open-Meteo's real metadata at
+  `{marine-api|api}.open-meteo.com/data/{model}/static/meta.json`
+  (`last_run_availability_time`, `update_interval_seconds`), served by
+  `/api/data-status` with a 10-minute cache. Next update is *expected* at last
+  availability + interval; past that it reads "Due now", never a negative time.
+- Open-Meteo's best match does not say which model served a given spot, so the panel
+  lists candidate models instead of claiming one.
+- The explanatory copy mirrors `star-engine.ts` and the calibration numbers. **If the
+  rating changes, update the panel text in the same change.**
+
 ## Regions and loading
 
 There is no "all regions" view. It meant one forecast request per spot in the country

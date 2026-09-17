@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo, useSyncExternalStore } from 'react
 import { MarineMap } from '@/components/shared/MarineMap';
 import { SpotDetailDrawer, ForecastPayload } from '@/components/shared/SpotDetailDrawer';
 import { QualityLegend } from '@/components/shared/QualityLegend';
+import { DataInfoPanel } from '@/components/shared/DataInfoPanel';
 import { useStore } from '@/store/useStore';
 import { instantAt, dayLabel, compactDayLabel, MAX_FORECAST_HOURS } from '@/services/timeline';
 import { allCountries, regionsForCountry } from '@/services/regions';
@@ -130,7 +131,8 @@ export default function WaveReaderPage() {
             Marine Forecast
           </p>
         </div>
-        <div className="pointer-events-auto">
+        <div className="pointer-events-auto flex items-start gap-2">
+          <DataInfoPanel />
           <QualityLegend />
         </div>
       </header>

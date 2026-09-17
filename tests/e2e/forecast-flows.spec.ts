@@ -668,3 +668,119 @@ test.describe('spec: surf-rating / Detalle', () => {
     await expect(page.getByTestId('spot-potential')).toHaveCount(0);
   });
 });
+
+test.describe('spec: data-transparency', () => {
+  const NOW = new Date('2026-09-17T12:00:00Z').getTime();
+
+  async function stubDataStatus(page: Page, fail = false) {
+    await page.route('**/api/data-status', route =>
+      fail
+        ? route.fulfill({ status: 500, body: 'error' })
+        : route.fulfill({
+            status: 200,
+            contentType: 'application/json',
+            body: JSON.stringify({
+              generatedAt: NOW,
+              forecastCacheSeconds: 3600,
+              models: [
+                {
+                  id: 'ecmwf_wam', host: 'marine', role: 'waves', name: 'ECMWF WAM', provider: 'ECMWF',
+                  resolution: '9 km', coverage: 'Global', status: 'ok',
+                  lastRunInitialisedAt: NOW - 6 * 3_600_000, lastRunAvailableAt: NOW - 3 * 3_600_000,
+                  updateIntervalSeconds: 21_600, nextExpectedAt: NOW + (2 * 60 + 5) * 60_000,
+                },
+                {
+                  id: 'dwd_ewam', host: 'marine', role: 'waves', name: 'EWAM', provider: 'DWD',
+                  resolution: '5 km', coverage: 'Europe', status: 'unavailable',
+                  lastRunInitialisedAt: null, lastRunAvailableAt: null, updateIntervalSeconds: null, nextExpectedAt: null,
+                },
+                {
+                  id: 'dwd_icon', host: 'weather', role: 'wind', name: 'ICON', provider: 'DWD',
+                  resolution: '11 km', coverage: 'Global', status: 'ok',
+                  lastRunInitialisedAt: NOW - 5 * 3_600_000, lastRunAvailableAt: NOW - 4 * 3_600_000,
+                  updateIntervalSeconds: 10_800, nextExpectedAt: NOW - 30 * 60_000,
+                },
+              ],
+            }),
+          })
+    );
+  }
+
+  test('the info button opens a panel with sources, freshness and rating logic', async ({ page }) => {
+    await page.clock.install({ time: NOW });
+    await stubForecast(page);
+    await stubDataStatus(page);
+    await page.goto('/');
+
+    await page.getByTestId('info-button').click();
+    const panel = page.getByTestId('info-panel');
+    await expect(panel).toBeVisible();
+
+    await expect(page.getByTestId('info-sources')).toContainText('Open-Meteo Marine API');
+    await expect(page.locator('[data-model="ecmwf_wam"]')).toContainText('9 km');
+    await expect(page.locator('[data-model="ecmwf_wam"] [data-testid="model-next-update"]')).toHaveText('in 2h 5m');
+    await expect(page.locator('[data-model="ecmwf_wam"] [data-testid="model-last-run"]')).toHaveText('ran 3h ago');
+    await expect(page.getByTestId('info-cache-duration')).toHaveText('60 minutes');
+    await expect(page.getByTestId('info-calibration')).toContainText('surf-forecast');
+    await expect(page.getByTestId('info-calibration')).toContainText('0.5 stars');
+    await expect(page.getByTestId('info-limitations')).toContainText('tide');
+    await expect(page.getByTestId('info-next')).toContainText('models');
+  });
+
+  test('an overdue model says due now and a missing one says unavailable', async ({ page }) => {
+    await page.clock.install({ time: NOW });
+    await stubForecast(page);
+    await stubDataStatus(page);
+    await page.goto('/');
+    await page.getByTestId('info-button').click();
+
+    await expect(page.locator('[data-model="dwd_icon"] [data-testid="model-next-update"]')).toHaveText('Due now');
+    await expect(page.locator('[data-model="dwd_ewam"] [data-testid="model-next-update"]')).toHaveText('Status unavailable');
+  });
+
+  test('when the status endpoint fails the panel says so', async ({ page }) => {
+    await stubForecast(page);
+    await stubDataStatus(page, true);
+    await page.goto('/');
+    await page.getByTestId('info-button').click();
+
+    await expect(page.getByTestId('info-status-failed')).toBeVisible();
+    await expect(page.getByTestId('info-rating')).toBeVisible();
+  });
+
+  test('closing the panel keeps the selected region and hour', async ({ page }) => {
+    await page.clock.install({ time: NOW });
+    await stubForecast(page);
+    await stubDataStatus(page);
+    await page.goto('/');
+
+    const region = await page.getByTestId('region-select').inputValue();
+    await page.getByLabel('Forecast hour').fill('5');
+    const time = await page.getByTestId('forecast-time').textContent();
+
+    await page.getByTestId('info-button').click();
+    await expect(page.getByTestId('info-panel')).toBeVisible();
+    await page.keyboard.press('Escape');
+    await expect(page.getByTestId('info-panel')).toHaveCount(0);
+
+    await expect(page.getByTestId('region-select')).toHaveValue(region);
+    await expect(page.getByTestId('forecast-time')).toHaveText(time!);
+  });
+
+  test('on a phone the panel fits and scrolls', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page);
+    await stubDataStatus(page);
+    await page.goto('/');
+
+    await expect(page.getByTestId('info-button')).toBeInViewport();
+    await page.getByTestId('info-button').click();
+    const panel = page.getByTestId('info-panel');
+    await expect(panel).toBeVisible();
+
+    const box = (await panel.boundingBox())!;
+    expect(box.height).toBeLessThanOrEqual(844);
+    await page.getByTestId('info-next').scrollIntoViewIfNeeded();
+    await expect(page.getByTestId('info-next')).toBeInViewport();
+  });
+});
