@@ -136,7 +136,7 @@ export function RegionPicker() {
                 placeholder="Asturias, Bretagne, Cornwall…"
                 data-testid="region-search"
                 autoComplete="off"
-                className="flex-1 min-w-0 bg-transparent outline-none text-[15px] placeholder:text-ink-3"
+                className="flex-1 min-w-0 bg-transparent outline-none text-[16px] placeholder:text-ink-3"
               />
             </div>
 

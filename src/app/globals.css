@@ -46,6 +46,17 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
+/*
+ * iOS Safari zooms the page in whenever a focused field's text is under 16px,
+ * and never zooms back out. Fields stay at 16px rather than locking the
+ * viewport scale, which would also block the pinch-zoom people rely on.
+ */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 :focus-visible {
   outline: 2px solid #f4f4f5;
   outline-offset: 2px;

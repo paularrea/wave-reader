@@ -1206,6 +1206,34 @@ test.describe('spec: region-selection / Mejores spots a la vista', () => {
     await expect(page.getByTestId('forecast-time')).toHaveText(time!);
   });
 
+  test('with nothing surfable in view the section is dropped, not shown empty', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await stubForecast(page, { stars: 1 });
+    await page.goto('/');
+    await expect(page.getByTestId('best-spot').first()).toBeVisible({ timeout: 45_000 });
+    const withBest = (await page.getByLabel('Forecast controls').boundingBox())!.height;
+
+    await stubForecast(page, { stars: 0 });
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(2000);
+
+    await expect(page.getByTestId('best-in-view')).toHaveCount(0);
+    const flat = (await page.getByLabel('Forecast controls').boundingBox())!.height;
+    expect(flat).toBeLessThan(withBest);
+  });
+
+  test('a focused field is 16 px, so iOS does not zoom the page in', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.getByTestId('region-button').click();
+
+    const search = page.getByTestId('region-search');
+    await search.click();
+    const size = await search.evaluate(n => Number.parseFloat(getComputedStyle(n).fontSize));
+    expect(size).toBeGreaterThanOrEqual(16);
+  });
+
   test('each day shows its best score, so the good day stands out', async ({ page }) => {
     await page.clock.install({ time: CLOCK });
     // Wed 15:00 anchor: offset 57 is Saturday 00:00 in Madrid. Saturday scores 5, the rest 0.

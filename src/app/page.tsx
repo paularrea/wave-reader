@@ -109,59 +109,60 @@ export default function WaveReaderPage() {
         >
           <div className="w-9 h-1 rounded-full bg-zinc-700 self-center" aria-hidden />
 
-          <div className="flex flex-col gap-2.5" data-testid="best-in-view">
-            <div className="flex items-baseline justify-between px-5">
-              <h2 className="text-[15px] font-semibold">Best in view</h2>
-              <span className="text-[13px] text-ink-2 tabular-nums" data-testid="rated-count">
-                {mapSummary.rated > 0 ? `${mapSummary.rated.toLocaleString('en-GB')} spots rated` : ''}
-              </span>
-            </div>
-            {best.length > 0 ? (
-              <ul className="flex gap-2 px-5 overflow-x-auto no-scrollbar">
-                {best.map(spot => {
-                  const tier = qualityTier(spot.stars, { isDangerous: spot.isDangerous });
-                  const detail = [
-                    spot.heightM !== null ? `${spot.heightM.toFixed(1)} m` : null,
-                    spot.periodS !== null ? `${spot.periodS} s` : null,
-                  ]
-                    .filter(Boolean)
-                    .join(' · ');
-                  return (
-                    <li key={spot.id} className="shrink-0">
-                      <button
-                        type="button"
-                        data-testid="best-spot"
-                        data-spot-id={spot.id}
-                        // Ranked for this hour, so it opens at this hour.
-                        onClick={() => setSelectedSpot(spot.id, { keepHour: true })}
-                        className="h-14 flex items-center gap-2.5 pl-2 pr-3.5 rounded-2xl bg-card border border-line text-left hover:bg-raised transition-colors"
-                      >
-                        <span
-                          className={`w-10 h-10 rounded-xl flex items-center justify-center text-[17px] font-bold tabular-nums ${
-                            tier === 'danger' ? 'bg-alert text-white' : TIER_FILL[tier]
-                          }`}
+          {/* Only when there is something to go to: with nothing surfable the
+              section is dropped rather than shown empty, giving the map back
+              its height on a phone. */}
+          {best.length > 0 && (
+            <>
+              <div className="flex flex-col gap-2.5" data-testid="best-in-view">
+                <div className="flex items-baseline justify-between px-5">
+                  <h2 className="text-[15px] font-semibold">Best in view</h2>
+                  <span className="text-[13px] text-ink-2 tabular-nums" data-testid="rated-count">
+                    {mapSummary.rated > 0 ? `${mapSummary.rated.toLocaleString('en-GB')} spots rated` : ''}
+                  </span>
+                </div>
+                <ul className="flex gap-2 px-5 overflow-x-auto no-scrollbar">
+                  {best.map(spot => {
+                    const tier = qualityTier(spot.stars, { isDangerous: spot.isDangerous });
+                    const detail = [
+                      spot.heightM !== null ? `${spot.heightM.toFixed(1)} m` : null,
+                      spot.periodS !== null ? `${spot.periodS} s` : null,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ');
+                    return (
+                      <li key={spot.id} className="shrink-0">
+                        <button
+                          type="button"
+                          data-testid="best-spot"
+                          data-spot-id={spot.id}
+                          // Ranked for this hour, so it opens at this hour.
+                          onClick={() => setSelectedSpot(spot.id, { keepHour: true })}
+                          className="h-14 flex items-center gap-2.5 pl-2 pr-3.5 rounded-2xl bg-card border border-line text-left hover:bg-raised transition-colors"
                         >
-                          {spot.stars}
-                        </span>
-                        <span className="flex flex-col leading-tight">
-                          <span className="text-[14px] font-semibold whitespace-nowrap max-w-[150px] truncate">
-                            {spot.name}
+                          <span
+                            className={`w-10 h-10 rounded-xl flex items-center justify-center text-[17px] font-bold tabular-nums ${
+                              tier === 'danger' ? 'bg-alert text-white' : TIER_FILL[tier]
+                            }`}
+                          >
+                            {spot.stars}
                           </span>
-                          <span className="text-[12px] text-ink-2 whitespace-nowrap tabular-nums">{detail}</span>
-                        </span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              <p className="px-5 text-[14px] text-ink-2 h-14 flex items-center" data-testid="best-empty">
-                {mapSummary.rated > 0 ? 'Nothing surfable in view at this hour.' : 'Rating the spots in view…'}
-              </p>
-            )}
-          </div>
+                          <span className="flex flex-col leading-tight">
+                            <span className="text-[14px] font-semibold whitespace-nowrap max-w-[150px] truncate">
+                              {spot.name}
+                            </span>
+                            <span className="text-[12px] text-ink-2 whitespace-nowrap tabular-nums">{detail}</span>
+                          </span>
+                        </button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
 
-          <div className="h-px bg-line mx-5" />
+              <div className="h-px bg-line mx-5" />
+            </>
+          )}
 
           <div className="flex flex-col gap-2.5 px-5">
             <div className="flex items-center justify-between h-8">

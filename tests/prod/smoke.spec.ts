@@ -28,9 +28,9 @@ test('the deployed app serves a working forecast', async ({ page }) => {
     expect(g, `marker rendered ${color}`).toBeLessThanOrEqual(r);
   }
 
-  // The bottom sheet ranks what is in view once scoring lands.
-  await expect(page.getByTestId('best-in-view')).toBeVisible();
-  await expect(page.getByTestId('rated-count')).toContainText('spots rated', { timeout: 45_000 });
+  // Markers only exist once their spot has been scored, so this is the batch
+  // route working end to end. "Best in view" is only shown when something scores.
+  await expect(markers.first()).toHaveAttribute('data-stars', /\d/);
 
   await markers.first().dispatchEvent('click');
   await expect(page.getByTestId('spot-drawer')).toBeVisible();
