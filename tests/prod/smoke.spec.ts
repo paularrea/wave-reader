@@ -31,15 +31,22 @@ test('the deployed app serves a working forecast', async ({ page }) => {
   await expect(page.getByTestId('spot-drawer')).toBeVisible();
 
   // Real wind must arrive as a number with units, never the old "0km/h" that a
-  // null reading used to collapse into. "--" is the pre-fetch placeholder.
+  // null reading used to collapse into. An em dash is the pre-fetch placeholder.
   const windReading = page.getByTestId('wind-reading');
-  await expect(windReading).not.toHaveText('--', { timeout: 30_000 });
-  const wind = await windReading.textContent();
-  expect(wind).toMatch(/^\d+ km\/h [NSEW]{1,3}$|^No data$/);
+  await expect(windReading).toHaveText(/km\/h|No data/, { timeout: 30_000 });
+  const wind = (await windReading.textContent())!;
+  expect(wind).toMatch(/^\d+ km\/h$|^No data$/);
   expect(wind).not.toBe('0 km/h');
 
   await expect(page.getByTestId('swell-height')).toContainText('m');
+  // Present even where there is nothing to show: Mediterranean spots have
+  // tides below the prominence floor and must say so rather than stay blank.
   await expect(page.getByTestId('tides-section')).toBeVisible();
+
+  // Day navigation must work on the live site, not just against fixtures.
+  await expect(page.getByTestId('drawer-day-tab').first()).toBeVisible();
+  await page.getByTestId('hour-next').click();
+  await expect(page.getByTestId('drawer-time')).toBeVisible();
 
   expect(errors).toEqual([]);
 
