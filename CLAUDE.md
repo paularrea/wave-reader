@@ -230,6 +230,10 @@ selects; level only changes safety alerts. The spot detail leads with a one-line
 curve and folded sea-state details. `globals.css` once forced Arial over Geist; keep the
 body on `var(--font-sans)`.
 
+Mapbox's logo and attribution **must stay visible** (their terms), so they are tidied
+instead: one row in the bottom-left corner, lifted above the sheet on a phone by the
+`--sheet-height` variable the sheet publishes. Do not hide or cover them.
+
 The conditions legend lives as the first section of the info panel, not over the map. The
 panel is cards with quick links that scroll the panel itself; all content stays rendered.
 

@@ -1305,3 +1305,39 @@ test.describe('spec: drawer-navigation / Veredicto, marea y detalles', () => {
     await expect(page.getByTestId('go-to-spot')).toContainText('Directions');
   });
 });
+
+test.describe("spec: responsive-layout / Mapbox's own credits", () => {
+  // Mapbox's terms require the logo and the attribution to stay visible, so the
+  // app's job is to keep its own chrome off them rather than hide them.
+  for (const [name, width, height] of [['phone', 390, 844], ['desktop', 1280, 900]] as const) {
+    test(`the logo and credits are visible and clear of the sheet on ${name}`, async ({ page }) => {
+      await page.setViewportSize({ width, height });
+      await stubForecast(page);
+      await page.goto('/');
+      await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+      await page.waitForTimeout(1500);
+
+      const logo = page.locator('.mapboxgl-ctrl-logo');
+      const credits = page.locator('.mapboxgl-ctrl-attrib');
+      await expect(logo).toBeVisible();
+      await expect(credits).toBeVisible();
+
+      const sheet = (await page.getByTestId('forecast-sheet').boundingBox())!;
+      for (const box of [(await logo.boundingBox())!, (await credits.boundingBox())!]) {
+        // Clear of the sheet: above it, or beside it where the sheet is narrower
+        // than the window. And on screen either way.
+        const above = box.y + box.height <= sheet.y + 1;
+        const beside = box.x + box.width <= sheet.x + 1 || box.x >= sheet.x + sheet.width - 1;
+        expect(above || beside, 'the sheet covers the credits').toBe(true);
+        expect(box.y + box.height).toBeLessThanOrEqual(height);
+        expect(box.x).toBeGreaterThanOrEqual(0);
+      }
+
+      // One row in the corner, not a stack: same band, logo first.
+      const logoBox = (await logo.boundingBox())!;
+      const creditsBox = (await credits.boundingBox())!;
+      expect(Math.abs(logoBox.y - creditsBox.y)).toBeLessThan(logoBox.height);
+      expect(creditsBox.x).toBeGreaterThan(logoBox.x);
+    });
+  }
+});

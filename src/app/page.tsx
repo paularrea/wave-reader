@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useSyncExternalStore } from 'react';
+import React, { useEffect, useMemo, useRef, useSyncExternalStore } from 'react';
 import { MarineMap } from '@/components/shared/MarineMap';
 import { SpotDetailDrawer } from '@/components/shared/SpotDetailDrawer';
 import { DataInfoPanel } from '@/components/shared/DataInfoPanel';
@@ -76,6 +76,26 @@ export default function WaveReaderPage() {
     if (seriesOffset !== null) setSpotUtcOffsetSeconds(seriesOffset);
   }, [seriesOffset, setSpotUtcOffsetSeconds]);
 
+  /**
+   * The sheet's height, published to CSS so Mapbox's logo and credits can sit
+   * just above it. The sheet grows and shrinks with what it has to show, so a
+   * fixed offset would either cover them or float them in mid-air.
+   */
+  const sheetRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const sheet = sheetRef.current;
+    if (!sheet || typeof ResizeObserver === 'undefined') return;
+    const publish = () =>
+      document.documentElement.style.setProperty('--sheet-height', `${Math.round(sheet.offsetHeight)}px`);
+    publish();
+    const observer = new ResizeObserver(publish);
+    observer.observe(sheet);
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty('--sheet-height');
+    };
+  }, []);
+
   const daySegments = useDaySegments(spotUtcOffsetSeconds);
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
   const { label: currentDayLabel } = dayLabel(instant, spotUtcOffsetSeconds);
@@ -99,11 +119,10 @@ export default function WaveReaderPage() {
         </div>
       </header>
 
-      <section
-        aria-label="Forecast controls"
-        className="absolute bottom-0 left-0 right-0 z-20"
-      >
+      <section aria-label="Forecast controls" className="absolute bottom-0 left-0 right-0 z-20">
         <div
+          ref={sheetRef}
+          data-testid="forecast-sheet"
           className="mx-auto w-full max-w-md bg-sheet border-t border-x border-line rounded-t-3xl pt-2 flex flex-col gap-3.5"
           style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
         >

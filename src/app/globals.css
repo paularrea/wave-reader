@@ -110,9 +110,42 @@ input[type="range"].time-slider::-moz-range-thumb {
   display: none;
 }
 
-/* Mapbox's logo and credits sit under the top bar, clear of the controls and the sheet. */
-.mapboxgl-ctrl-top-left {
-  top: 64px !important;
+/*
+ * Mapbox's logo and credits. Their terms require both to be visible, so they
+ * are tidied rather than removed: one quiet row in the bottom-left corner,
+ * lifted above the forecast sheet on a phone, where the sheet spans the width.
+ */
+.mapboxgl-ctrl-bottom-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 0 0 6px 8px;
+  /* Mapbox's own stylesheet loads after this one, so the offset is forced. */
+  bottom: var(--sheet-height, 0px) !important;
+  transition: bottom 120ms ease-out;
+}
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+  margin: 0;
+  opacity: 0.55;
+}
+/* Mapbox appends the attribution first; the wordmark reads better leading. */
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl:has(.mapboxgl-ctrl-logo) {
+  order: -1;
+}
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl:hover,
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl:focus-within {
+  opacity: 1;
+}
+.mapboxgl-ctrl-logo {
+  transform: scale(0.85);
+  transform-origin: left center;
+}
+/* Past the sheet's own width the corner is free, so nothing needs lifting. */
+@media (min-width: 768px) {
+  .mapboxgl-ctrl-bottom-left {
+    bottom: 0 !important;
+  }
 }
 /* Mapbox's compact attribution, toned to the dark UI. */
 .mapboxgl-ctrl-attrib.mapboxgl-compact {

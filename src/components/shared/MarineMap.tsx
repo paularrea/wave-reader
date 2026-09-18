@@ -323,10 +323,11 @@ export function MarineMap() {
       center: userLocation ? [userLocation.lon, userLocation.lat] : SPAIN_CENTER,
       zoom: userLocation ? 8 : 5,
       attributionControl: false,
-      // The bottom sheet covers the default corner; the logo and credits must stay visible.
-      logoPosition: 'top-left',
+      // Mapbox's terms require the logo and credits to stay visible, so they sit
+      // in the quietest corner and the sheet is kept off them (see globals.css).
+      logoPosition: 'bottom-left',
     });
-    map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'top-left');
+    map.addControl(new mapboxgl.AttributionControl({ compact: true }), 'bottom-left');
 
     // No NavigationControl: the map is driven by pinch, scroll and double-tap.
     mapRef.current = map;
