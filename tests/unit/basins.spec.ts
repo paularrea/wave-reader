@@ -35,27 +35,39 @@ test.describe('spec: surf-rating / Clasificación por coordenadas', () => {
 });
 
 test.describe('spec: surf-rating / Escala propia del Mediterráneo', () => {
-  test('1 m @ 7 s glassy scores 2 to 3', () => {
-    const s = med(sea(1, 7));
-    expect(s).toBeGreaterThanOrEqual(2);
-    expect(s).toBeLessThanOrEqual(3);
+  test('0.8 m @ 7 s clean is worth paddling out for', () => {
+    expect(med(sea(0.8, 7, 5, 0))).toBeGreaterThanOrEqual(2);
   });
 
-  test('1 m @ 7 s with 15 km/h cross-offshore scores 2 to 3', () => {
+  test('1 m @ 7 s glassy scores 3 to 5', () => {
+    const s = med(sea(1, 7));
+    expect(s).toBeGreaterThanOrEqual(3);
+    expect(s).toBeLessThanOrEqual(5);
+  });
+
+  test('1 m @ 7 s with 15 km/h cross-offshore scores 2 to 4', () => {
     // Facing 180; wind from 45 degrees off the offshore bearing (0).
     const s = med(sea(1, 7, 15, 45));
     expect(s).toBeGreaterThanOrEqual(2);
-    expect(s).toBeLessThanOrEqual(3);
+    expect(s).toBeLessThanOrEqual(4);
   });
 
-  test('1.5 m @ 8 s glassy scores 5 to 6', () => {
+  test('1.5 m @ 8 s glassy scores 5 to 7', () => {
     const s = med(sea(1.5, 8));
     expect(s).toBeGreaterThanOrEqual(5);
-    expect(s).toBeLessThanOrEqual(6);
+    expect(s).toBeLessThanOrEqual(7);
   });
 
   test('0.3 m @ 4 s is flat', () => {
     expect(med(sea(0.3, 4))).toBe(0);
+  });
+
+  test('REGRESSION: Mediterranean chop under 5 s never scores', () => {
+    // Reported against production: 0.4 m at 4 s showed a star. There is no
+    // wave in 4-second chop, whatever its height.
+    for (const [h, t] of [[0.4, 4], [0.6, 4], [1, 4], [1.2, 3]]) {
+      expect(med(sea(h, t)), `${h}m @ ${t}s`).toBe(0);
+    }
   });
 
   test('the same sea scores higher in the Mediterranean than in the Atlantic', () => {

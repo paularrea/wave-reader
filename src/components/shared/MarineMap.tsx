@@ -7,7 +7,7 @@ import { Navigation } from 'lucide-react';
 import { useStore } from '@/store/useStore';
 // The slim index, not the full catalogue: surf config and provenance are
 // server-side concerns and would otherwise ship in the JS bundle.
-import spots from '@/data/spots.index.json';
+import { useCountryIndex, type IndexSpot } from '@/hooks/useCountryIndex';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
 import { locationDefaults, regionBounds } from '@/services/regions';
 import { chunkIndexById } from '@/services/spot-batches';
@@ -35,7 +35,7 @@ const MAX_MARKERS = 400;
 const VIEWPORT_MARGIN = 0.35; // fraction of the viewport span, added each side
 const MOVE_DEBOUNCE_MS = 400;
 
-type Spot = (typeof spots)[number];
+type Spot = IndexSpot;
 
 /** Runs `worker` over `items`, at most `limit` in flight at any moment. */
 async function mapWithLimit<T>(items: T[], limit: number, worker: (item: T) => Promise<void>) {
@@ -85,6 +85,7 @@ export function MarineMap() {
     userSkillLevel,
     currentHour,
     selectedRegion,
+    selectedCountry,
     selectedSpotId,
     resolveLocation,
     setSelectedCountry,
@@ -93,6 +94,9 @@ export function MarineMap() {
     setMapSummary,
     setRegionBestToday,
   } = useStore();
+
+  /** Only the selected country's spots are downloaded; the rest stay unfetched. */
+  const countrySpots = useCountryIndex(selectedCountry);
 
   const [loading, setLoading] = useState(true);
   /**
@@ -111,8 +115,8 @@ export function MarineMap() {
   });
 
   const regionSpots = useCallback(
-    (): Spot[] => spots.filter(spot => spot.community === selectedRegion),
-    [selectedRegion]
+    (): Spot[] => countrySpots.filter(spot => spot.community === selectedRegion),
+    [countrySpots, selectedRegion]
   );
 
   /** Spots within the viewport widened by `margin`, so panning does not reveal bare sea. */
@@ -245,7 +249,7 @@ export function MarineMap() {
     const generation = generationRef.current;
     const now = Date.now();
 
-    const chunkOf = chunkIndexById(spots, selectedRegion, BATCH_SIZE);
+    const chunkOf = chunkIndexById(countrySpots, selectedRegion, BATCH_SIZE);
     const needed = [
       ...new Set(nearViewport().map(s => chunkOf.get(s.id)).filter((c): c is number => c !== undefined)),
     ].filter(c => {
@@ -307,7 +311,7 @@ export function MarineMap() {
         setPending(p => (p.key === key ? { key, n: Math.max(0, p.n - 1) } : p));
       }
     });
-  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, selectedRegion, selectedSpotId, userSkillLevel, queryKey]);
+  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, countrySpots, selectedRegion, selectedSpotId, userSkillLevel, queryKey]);
 
   useEffect(() => {
     scoreVisibleRef.current = scoreVisible;

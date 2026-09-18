@@ -39,32 +39,46 @@ Rates **the surf, not how well it suits the viewer** — the way surf-forecast,
 Magicseaweed and Surfline all rate. Skill level only drives the safety alert; never
 reintroduce it into `stars`.
 
-**Two energy scales, by basin** (`src/services/basins.ts`, from coordinates): the
-Mediterranean never sees the long swells that score on an Atlantic scale, so it has its
-own, anchored to local expertise — 1 m @ 7 s clean is 2–3, 1.5 m @ 8 s glassy 5–6
-(flat under 5 kJ, 10 at 1,500 kJ, gamma 1.6, period ×0.6 under 5 s, ×0.85 under 6 s).
-Wind handling is shared across basins. Everything else uses the Atlantic scale below.
-The basin rule would need revisiting before adding Italy or the Adriatic.
+**The scale measures surfability, not a world ranking.** It used to be fitted to
+surf-forecast's stars (206 slots, 10 spots, mean error 0.50). That fit was accurate and
+answered the wrong question: their scale is global, so 1.4 m @ 10 s clean is a 0–2 in
+their own tables, and only the best spot on the planet in a given slot reaches 5+. This
+app answers "is today worth the drive to this beach". So the physics is unchanged and
+only the energy→score curve moved, to **explicit anchors per basin** interpolated in
+log energy (`SCALES` in `star-engine.ts`):
 
-**The Atlantic scale is calibrated to surf-forecast.** None of the services publishes a formula
-(Surfline's is a model trained on 35 years of private observations), so the structure
-follows what they publish and the constants are fitted to surf-forecast's real output:
-206 time slots at 10 spots, leave-one-spot-out validation, mean error 0.50 stars, 96%
-within one star (the previous hand-picked constants: 2.77 and 15%). Do not hand-tune
-the constants: refit with `node scripts/calibrate-rating.mjs` from the benchmark data
-in `.cache/benchmark/` (not versioned, third-party data collected by reading public
-pages; do not automate recurring extraction). Research and benchmark:
+| Atlantic (clean, no period penalty) | Score | | Mediterranean | Score |
+|---|---|---|---|---|
+| 0.6 m @ 10 s · 70 kJ | 1 | | 0.7 m @ 6.6 s · 41 kJ | 1 |
+| 0.8 m @ 10 s · 122 kJ | 3 | | 0.8 m @ 7 s · 60 kJ | 2.5 |
+| 1.0 m @ 10 s · 190 kJ | 5 | | 1.0 m @ 7 s · 93 kJ | 4 |
+| **1.4 m @ 10 s · 372 kJ** | **7** | | 1.5 m @ 8 s · 274 kJ | 6 |
+| 2.0 m @ 12 s · 1,094 kJ | 9 | | 2.0 m @ 9 s · 616 kJ | 8 |
+| 2.5 m @ 14 s · 2,400 kJ | 10 | | 2.5 m @ 10 s · 1,200 kJ | 10 |
+
+Under 45 kJ (Atlantic) or 20 kJ (Mediterranean) the sea is flat → 0. **The top
+saturates on purpose**: 2.5 m @ 14 s and 4 m @ 18 s are both a 10. That is the price of
+the 1.4 m anchor and it is the right trade for this product; do not "fix" it by
+stretching the top without moving the anchors too.
+
+To change the scale, move an anchor and say which real day it represents — never
+hand-tune a constant. `scripts/calibrate-rating.mjs` and the surf-forecast benchmark in
+`.cache/benchmark/` (not versioned, third-party data read from public pages; do not
+automate recurring extraction) still reproduce the old fit and stay as the record of it:
 `openspec/changes/archive/*-calibrate-rating-to-surf-forecast/design.md`.
 
-On this scale a clean 1.5 m @ 12 s is ~3, 2.5 m @ 14 s ~5, 4 m @ 18 s ~8. Scores of 5+
-are rare: in the benchmark only the best spot in the world per time slot reached them.
+**Two basins** (`src/services/basins.ts`, from coordinates): the Mediterranean never
+sees the long swells that score on Atlantic anchors, so it has its own, anchored to
+local expertise. Its period penalty is harsher — ×0.4 under 5 s, ×0.8 under 6 s — so
+4-second chop scores 0 whatever its height, which is what it is. Wind handling is shared
+across basins. The basin rule would need revisiting before adding Italy or the Adriatic.
 
 1. **Energy** per component (primary swell, secondary swell, wind waves):
-   `kJ = 1.9 · H² · T²` (surf-forecast's scale). Each weighted by direction against the
+   `kJ = 1.9 · H² · T²`. Each weighted by direction against the
    spot's swell window (×1 inside, fading to ×0.1 at 45° beyond the edge).
-2. **Base**: `10 · r^1.41`, `r = ln(E/51.27) / ln(31764/51.27)` clamped to [0,1]. Under
-   51 kJ is flat → 0. Monotonic: no closeout penalty, surf-forecast has none.
-3. **Period**: ×0.48 under 6 s, ×0.69 under 8 s, ×0.71 under 10 s.
+2. **Base**: linear interpolation between the basin's anchors in `ln(E)`. Monotonic:
+   no closeout penalty, a bigger sea never scores less.
+3. **Period** (Atlantic): ×0.48 under 6 s, ×0.69 under 8 s, ×0.71 under 10 s.
 4. **Wind**: effective speed `max(mean, gust / 1.77)` — 1.77 is the median coastal
    gust ratio measured in Open-Meteo, so normal gustiness keeps the calibration and only
    unusually gusty hours lose more (Magicseaweed: gusts matter more than the mean).
@@ -78,7 +92,7 @@ are rare: in the benchmark only the best spot in the world per time slot reached
 
 ### Conditions (`src/services/conditions.ts`)
 Single source of truth for colour. Both the map markers and the drawer read from here.
-- **Quality tiers** on the surf-forecast scale: `epic` (5-10), `good` (1-4), `poor` (0),
+- **Quality tiers** on the surfability scale: `epic` (6-10), `good` (1-5), `poor` (0),
   plus `danger` and
   `unrated`. Each tier differs in **fill, size, ring and glow at once** — not opacity
   alone. A single hue ramped only by alpha is unreadable on a dark map: 4 stars and 7
@@ -121,14 +135,37 @@ accurate to about +/- 30 min — the UI says so.
 
 ## Spot catalogue
 
-`src/data/spots.json` is **generated, not hand-edited**. Two stages, run manually; the
-output is committed so the Vercel build stays hermetic and offline.
+The published catalogue is `src/data/spots/<iso2>.json` (+ a light `.index.json` each)
+and `src/data/regions.json`. All of it is **generated, not hand-edited**; the output is
+committed so the Vercel build stays hermetic and offline.
 
 ```bash
 node scripts/fetch-osm-beaches.mjs        # stage 1: OSM -> osm-beaches.raw.json
 node scripts/derive-spot-config.mjs       # stage 2: exposure -> spots.json + index
 node scripts/filter-spots-with-data.mjs   # stage 3: drop spots the wave model has no data for
+node scripts/curate-spots.mjs             # stage 4: surf spots only, one file per country
 ```
+
+**Stage 4 is what makes it a surf catalogue rather than a list of beaches.** OSM tags
+every named beach, so stage 3 hands over 7,870 places — 600 in Catalunya, where
+surf-forecast lists 29. Three independent drops, each recorded with its reason in
+`spots.curation-report.json`: places that are not surf (marinas, quays, inland water),
+coves and beach sections, and **everything closer than the marine model's 5 km cell to a
+survivor**, because those share one forecast and showing both is fake precision. What
+survives is 1,417 spots. `src/data/surf-spots.curated.json` lists recognised breaks by
+region and carries **no coordinates on purpose** — it only decides which catalogued place
+represents a stretch of coast and rescues a named break with a narrow arc. Coordinates
+stay traceable to OSM; a curated name with no OSM match is reported, never invented.
+
+OSM names breaks in the local language ("Zarauzko hondartza" for Zarautz), so the match
+strips the genitive; even so, breaks OSM does not map at all (Mundaka, Famara, Hossegor,
+Lahinch) are simply absent, and no amount of filtering invents them.
+
+**Data structure**: one file per country, because a country is the unit of growth.
+`spot-catalogue.ts` is **server-only** (full configs, imported by the forecast routes);
+the browser gets `useCountryIndex` (dynamic import of the country in focus) plus
+`regions.json`, the only catalogue file always downloaded — countries, regions, counts,
+and one coarse point per spot so geolocation still resolves to the nearest *spot*.
 
 Coverage: Spain, Ireland, France (incl. overseas régions) and the United Kingdom.
 England is fetched once and split by ceremonial county with batched Overpass

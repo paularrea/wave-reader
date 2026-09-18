@@ -1,5 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
-import spotIndex from '../../src/data/spots.index.json';
+import { allSpots } from '../../src/services/spot-catalogue';
+
+const spotIndex = allSpots();
 import { regionOrder } from '../../src/services/spot-batches';
 import { DEFAULT_REGION } from '../../src/services/regions';
 
@@ -682,8 +684,14 @@ test.describe('spec: region-selection / El mapa sigue a la región', () => {
     await page.goto('/');
 
     await page.getByTestId('region-button').click();
-    await page.locator('[data-testid="country-tab"][data-country="France"]').click();
-    await expect(page.locator('[data-testid="country-tab"][data-country="France"]')).toHaveAttribute('aria-selected', 'true');
+    // Country is a dropdown, not a row of chips: the header must not change
+    // shape as the catalogue grows past four countries.
+    await expect(page.getByTestId('country-list')).toHaveCount(0);
+    await page.getByTestId('country-select').click();
+    await expect(page.getByTestId('country-list')).toBeVisible();
+    await page.locator('[data-testid="country-option"][data-country="France"]').click();
+    await expect(page.getByTestId('country-select')).toHaveAttribute('data-country', 'France');
+    await expect(page.getByTestId('country-list')).toHaveCount(0);
     const regions = await page.getByTestId('region-option').evaluateAll(n => n.map(x => (x as HTMLElement).dataset.region));
     expect(regions).toContain('Bretagne');
     await page.locator('[data-testid="region-option"][data-region="Bretagne"]').click();
@@ -850,8 +858,8 @@ test.describe('spec: data-transparency', () => {
     await expect(page.locator('[data-model="ecmwf_wam"] [data-testid="model-next-update"]')).toHaveText('in 2h 5m');
     await expect(page.locator('[data-model="ecmwf_wam"] [data-testid="model-last-run"]')).toHaveText('ran 3h ago');
     await expect(page.getByTestId('info-cache-duration')).toHaveText('60 minutes');
-    await expect(page.getByTestId('info-calibration')).toContainText('surf-forecast');
-    await expect(page.getByTestId('info-calibration')).toContainText('0.5 stars');
+    await expect(page.getByTestId('info-calibration')).toContainText('1.4 m at 10 s');
+    await expect(page.getByTestId('info-calibration')).toContainText('7');
     await expect(page.getByTestId('info-limitations')).toContainText('tide');
     await expect(page.getByTestId('info-next')).toContainText('models');
   });
@@ -926,8 +934,12 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
     const tiers = await page
       .locator('[data-testid="spot-marker"]')
       .evaluateAll(nodes => nodes.map(n => (n as HTMLElement).dataset.tier));
-    // The old per-viewport cap left most of Catalonia hollow for good.
-    expect(tiers.length).toBeGreaterThan(60);
+    // The old per-viewport cap left most of Catalonia hollow for good, so the
+    // check is against the region's real size rather than a fixed number: the
+    // curated catalogue is far smaller than the tagged-beach one it replaced.
+    const inRegion = spotIndex.filter(s => s.community === 'Cataluña').length;
+    expect(inRegion).toBeGreaterThan(20);
+    expect(tiers.length).toBeGreaterThan(inRegion / 2);
     expect(tiers.filter(t => t === 'unrated')).toHaveLength(0);
   });
 
@@ -1190,14 +1202,14 @@ test.describe('spec: region-selection / Mejores spots a la vista', () => {
 
   test('the best spots in view are listed and open at the hour they were ranked for', async ({ page }) => {
     await page.clock.install({ time: CLOCK });
-    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 ? 5 : 1) });
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 ? 7 : 1) });
     await page.goto('/');
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
 
     await page.getByLabel('Forecast hour').fill('60');
     const best = page.getByTestId('best-spot');
     await expect(best.first()).toBeVisible();
-    await expect(best.first()).toContainText('5');
+    await expect(best.first()).toContainText('7');
     expect(await best.count()).toBeLessThanOrEqual(3);
 
     const time = await page.getByTestId('forecast-time').textContent();
@@ -1236,13 +1248,13 @@ test.describe('spec: region-selection / Mejores spots a la vista', () => {
 
   test('each day shows its best score, so the good day stands out', async ({ page }) => {
     await page.clock.install({ time: CLOCK });
-    // Wed 15:00 anchor: offset 57 is Saturday 00:00 in Madrid. Saturday scores 5, the rest 0.
-    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 && h < 81 ? 5 : 0) });
+    // Wed 15:00 anchor: offset 57 is Saturday 00:00 in Madrid. Saturday scores 7, the rest 0.
+    await stubForecast(page, { now: CLOCK, starsAt: h => (h >= 57 && h < 81 ? 7 : 0) });
     await page.goto('/');
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
 
     const chips = page.getByTestId('day-chip');
-    await expect(chips.nth(3)).toHaveAttribute('data-best', '5');
+    await expect(chips.nth(3)).toHaveAttribute('data-best', '7');
     await expect(chips.first()).toHaveAttribute('data-best', '0');
   });
 

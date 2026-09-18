@@ -32,10 +32,10 @@ function forecast(overrides: Partial<MarineForecast> = {}): MarineForecast {
 }
 
 test.describe('spec: condition-rating / Escala de tres niveles legible', () => {
-  test('5 and above is epic, 1-4 is fair, 0 is poor (surf-forecast scale)', () => {
+  test('6 and above is epic, 1-5 is fair, 0 is poor', () => {
     expect(qualityTier(10)).toBe('epic');
-    expect(qualityTier(5)).toBe('epic');
-    expect(qualityTier(4)).toBe('good');
+    expect(qualityTier(6)).toBe('epic');
+    expect(qualityTier(5)).toBe('good');
     expect(qualityTier(1)).toBe('good');
     expect(qualityTier(0)).toBe('poor');
   });

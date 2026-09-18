@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { Drawer } from 'vaul';
 import { useStore } from '@/store/useStore';
-import spots from '@/data/spots.index.json';
+import { useCountryIndex } from '@/hooks/useCountryIndex';
 import { Navigation, AlertTriangle, ChevronLeft, ChevronRight, ChevronDown, RotateCw } from 'lucide-react';
 import { MarineForecast } from '@/services/marine-api';
 import { TideExtreme } from '@/services/tides';
@@ -177,8 +177,9 @@ function DetailRow({ term, testId, children }: { term: string; testId?: string; 
 }
 
 export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
-  const { selectedSpotId, setSelectedSpot, currentHour, setCurrentHour, spotUtcOffsetSeconds } = useStore();
-  const spot = spots.find(s => s.id === selectedSpotId);
+  const { selectedSpotId, setSelectedSpot, currentHour, setCurrentHour, spotUtcOffsetSeconds, selectedCountry } =
+    useStore();
+  const spot = useCountryIndex(selectedCountry).find(s => s.id === selectedSpotId);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);

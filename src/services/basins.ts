@@ -1,10 +1,10 @@
 /**
  * Which sea a spot faces, from its coordinates.
  *
- * The rating's energy scale is calibrated to surf-forecast, which is an
- * Atlantic scale: in the Mediterranean the long-period swells that score well
- * there simply do not happen, so a genuinely good Mediterranean day scored 0.
- * Spots are classified here and rated on the scale for their basin.
+ * The rating's energy anchors are Atlantic: in the Mediterranean the
+ * long-period swells that score well there simply do not happen, so a genuinely
+ * good Mediterranean day scored 0 on them. Spots are classified here and rated
+ * on the anchors for their basin.
  */
 export type Basin = 'atlantic' | 'mediterranean';
 

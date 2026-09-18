@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { edgeCacheHeaders } from '@/services/http-cache';
-import spots from '@/data/spots.json';
+import { allSpots } from '@/services/spot-catalogue';
 import { getMarineHorizonBatch, BATCH_SIZE } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
 import { basinOf } from '@/services/basins';
@@ -34,7 +34,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'region and chunk are required' }, { status: 400 });
   }
 
-  const members = regionOrder(spots, region).slice(chunk * BATCH_SIZE, (chunk + 1) * BATCH_SIZE);
+  const members = regionOrder(allSpots(), region).slice(chunk * BATCH_SIZE, (chunk + 1) * BATCH_SIZE);
 
   let batch;
   try {

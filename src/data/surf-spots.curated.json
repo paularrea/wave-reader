@@ -1,0 +1,194 @@
+{
+  "_readme": [
+    "Breaks recognised as surf spots, by country and region.",
+    "",
+    "This list carries NO coordinates on purpose. Coordinates stay traceable to",
+    "OpenStreetMap; this file only says which of the catalogued places is a surf",
+    "spot, so it decides two things and nothing else:",
+    "  1. a named break survives the filter even if its exposure arc is narrow",
+    "  2. inside a cluster of places that share the same forecast cell, the named",
+    "     break is the one that represents it",
+    "",
+    "Names are matched loosely against OpenStreetMap names within the same region",
+    "(accents, articles and the words beach/playa/platja/plage/praia ignored).",
+    "Entries with no match are reported by scripts/curate-spots.mjs and are simply",
+    "not in the catalogue: nothing is invented from this file."
+  ],
+  "Spain": {
+    "País Vasco": [
+      "Mundaka", "Bakio", "Sopelana", "Sopela", "Barinatxe", "La Salvaje", "Meñakoz",
+      "Zarautz", "Orrua", "Orio", "Zurriola", "Deba", "Saturraran", "Laga", "Laida",
+      "Ogeia", "Arrigunaga", "Ereaga", "Azkorri", "Plentzia", "Gorliz", "Ea",
+      "Karraspio", "Lekeitio", "Hondarribia", "Bakio", "Muriola", "Atxabiribil",
+      "Arrietara", "Ondarreta", "La Concha", "Itzurun"
+    ],
+    "Cantabria": [
+      "Somo", "Loredo", "Liencres", "Los Locos", "Suances", "Langre", "Valdearenas",
+      "El Sardinero", "Berria", "Laredo", "Cuberris", "Ajo", "Oyambre", "Merón",
+      "Santa Marina", "Gerra", "Comillas", "Tagle", "Canallave", "Arnía", "Galizano",
+      "Ris", "Noja", "Covachos", "Usgo", "Cóbreces", "Luaña", "Trengandín", "Helgueras"
+    ],
+    "Asturias": [
+      "Rodiles", "Salinas", "Xagó", "Verdicio", "Tapia", "Navia", "Frexulfe", "Otur",
+      "Cadavedo", "San Lorenzo", "Aguilar", "Vega", "Barro", "Peñarronda", "Serantes",
+      "Espasa", "La Ñora", "Bayas", "Arnao", "Concha de Artedo", "Xivares", "Rinlo",
+      "Torimbia", "Toró", "Ribadesella", "Santa Marina", "España"
+    ],
+    "Galicia": [
+      "Pantín", "Doniños", "San Jorge", "Valdoviño", "A Frouxeira", "Razo", "Baldaio",
+      "Caión", "Nemiña", "Lariño", "Carnota", "O Rostro", "Patos", "Area Maior",
+      "Ladeira", "Montalvo", "A Lanzada", "Foxos", "Louro", "Furnas", "Vilarrube",
+      "Esteiro", "Espasante", "Ponzos", "Traba", "Soesto", "Area Longa", "Barrañán",
+      "Bastiagueiro", "Riazor", "Orzán", "Sabón", "Nemiña", "Coído", "Praia do Vilar",
+      "Testal", "Ancoradoiro", "Rebordelo", "Arnela"
+    ],
+    "Andalucía": [
+      "El Palmar", "Los Caños de Meca", "Zahora", "Fuente del Gallo", "Cortadura",
+      "La Barrosa", "Bolonia", "Valdevaqueros", "Punta Paloma", "Tarifa", "Mazagón",
+      "Matalascañas", "Isla Canela", "La Victoria", "Camposoto", "Chullera",
+      "Zahara de los Atunes", "El Puerto", "Castilla", "Punta Umbría", "La Antilla"
+    ],
+    "Canarias": [
+      "El Confital", "Las Canteras", "La Cícer", "Pozo Izquierdo", "El Frontón",
+      "El Quemao", "La Santa", "San Juan", "Famara", "Caleta de Famara", "El Cotillo",
+      "Majanicho", "Corralejo", "El Socorro", "Almáciga", "Benijo", "Punta Blanca",
+      "Martiánez", "Bajamar", "Punta del Hidalgo", "La Pared", "Esquinzo",
+      "Las Américas", "El Médano", "Playa Blanca", "Sotavento", "Cruz Roja",
+      "Las Conchas", "Órzola", "Arrieta", "Jameos", "El Golfo", "La Tejita"
+    ],
+    "Cataluña": [
+      "Aiguadolç", "Arenys de Mar", "Barceloneta", "Bogatell", "Cabrera",
+      "Santa Cristina", "Tordera", "El Masnou", "Empuriabrava", "Garraf",
+      "Miami Platja", "Montgat", "Mar Bella", "Sant Pol", "Premià", "Sant Sebastià",
+      "Mataró", "Llavaneres", "Sant Martí d'Empúries", "Segur de Calafell",
+      "Vilassar de Mar", "Castelldefels", "Gavà", "Sitges", "Calafell", "Salou",
+      "Cambrils", "Torredembarra", "Badalona", "Malgrat", "Blanes", "Lloret",
+      "Sant Antoni de Calonge", "Pals", "Sant Pere Pescador", "Roses", "Llançà",
+      "Somorrostro", "Nova Icària", "Llevant", "Ocata", "Caldes d'Estrac"
+    ],
+    "Comunidad Valenciana": [
+      "El Puig", "Patacona", "Malvarrosa", "Pinedo", "El Saler", "Cullera", "Gandía",
+      "Oliva", "Les Deveses", "Arenal", "Benicàssim", "Peñíscola", "Vinaròs",
+      "El Perellonet", "Canet", "Sagunto", "Port Saplaya", "Almardà", "Moncofa",
+      "Xeraco", "Daimús", "Guardamar", "San Juan", "El Postiguet", "Tavernes"
+    ],
+    "Murcia": [
+      "Mazarrón", "Águilas", "Calblanque", "La Manga", "Bolnuevo", "Percheles",
+      "Calnegre", "Puntas de Calnegre", "Los Alcázares", "Mar de Cristal"
+    ],
+    "Baleares": [
+      "Cala Mesquida", "Son Serra", "Can Picafort", "Cala Millor", "Cala Agulla",
+      "Sa Canova", "Es Trenc", "Es Grau", "Arenal d'en Castell", "Cala en Porter",
+      "Son Bou", "Cala Galdana", "Playa de Palma", "Can Pastilla", "Es Cavallet",
+      "Ses Salines", "Cala Nova", "Aguas Blancas", "Sa Mesquida", "Binimel·là"
+    ]
+  },
+  "France": {
+    "Nouvelle-Aquitaine": [
+      "La Gravière", "La Nord", "La Sud", "Hossegor", "Capbreton", "Les Bourdaines",
+      "Les Estagnots", "Le Penon", "Seignosse", "Lacanau", "Le Porge", "Biscarrosse",
+      "Mimizan", "Cap Ferret", "Grande Plage", "Côte des Basques", "Milady",
+      "Chambre d'Amour", "Les Cavaliers", "Marinella", "Anglet", "Parlementia",
+      "Guéthary", "Bidart", "Lafitenia", "Hendaye", "Contis", "Vieux-Boucau",
+      "Moliets", "Messanges", "Soulac", "Montalivet", "Carcans", "Hourtin",
+      "La Salie", "Ondres", "Labenne", "Tarnos", "Saint-Girons", "Sainte-Barbe"
+    ],
+    "Bretagne": [
+      "La Torche", "Guidel", "Le Dossen", "La Palue", "Goulien", "Penhors",
+      "Pors Carn", "Lostmarc'h", "Les Sables Blancs", "Tronoën", "Donnant",
+      "Port Blanc", "Quiberon", "Plouharnel", "Erdeven", "Sainte-Barbe", "Crozon",
+      "Kerloc'h", "Trestraou", "Toulinguet", "Audierne", "Mousterlin", "Bénodet",
+      "Saint-Guénolé", "Kervel", "Pentrez", "Trez Bellec", "Fort Bloqué"
+    ],
+    "Pays de la Loire": [
+      "Sauveterre", "Tanchet", "Les Sables-d'Olonne", "La Sauzaie", "Bretignolles",
+      "Saint-Gilles-Croix-de-Vie", "Saint-Jean-de-Monts", "Notre-Dame-de-Monts",
+      "La Tranche-sur-Mer", "Longeville", "Le Veillon", "La Govelle", "Saint-Brevin",
+      "Pornichet", "Les Conches", "Bud-Bud", "La Terrière"
+    ],
+    "Normandie": [
+      "Siouville", "Vauville", "Hauteville", "Sciotot", "Surtainville", "Carolles",
+      "Étretat", "Dieppe", "Le Havre", "Quinéville", "Biville"
+    ],
+    "Hauts-de-France": ["Wissant", "Le Touquet", "Hardelot", "Wimereux", "Berck", "Ambleteuse"],
+    "Occitanie": [
+      "Leucate", "Gruissan", "Le Barcarès", "Canet", "Argelès", "Sète",
+      "Le Grau-du-Roi", "Palavas", "Valras", "Port-la-Nouvelle", "La Franqui",
+      "Saint-Cyprien", "Torreilles", "Marseillan", "Frontignan"
+    ],
+    "Provence-Alpes-Côte d'Azur": [
+      "Almanarre", "Beauduc", "Piémanson", "Carro", "Cap Couronne",
+      "Saintes-Maries-de-la-Mer", "Le Jaï", "Napoléon", "Faraman"
+    ],
+    "Corse": ["Algajola", "Lozari", "Arone", "Capo di Feno", "Ruppione", "Porticcio", "Calvi"],
+    "Guadeloupe": ["Le Moule", "Anse Bertrand", "Port-Louis", "Sainte-Anne", "Petit-Havre", "Anse à la Gourde"],
+    "Martinique": ["Tartane", "Anse Bonneville", "Anse Michel", "Le Diamant", "Cap Chevalier"],
+    "La Réunion": ["Saint-Leu", "Trois-Bassins", "Boucan Canot", "Saint-Gilles", "L'Hermitage"],
+    "Mayotte": [],
+    "Guyane": []
+  },
+  "United Kingdom": {
+    "Cornwall": [
+      "Fistral", "Watergate Bay", "Porthtowan", "Perranporth", "Sennen", "Praa Sands",
+      "Gwithian", "Godrevy", "Constantine Bay", "Harlyn", "Polzeath", "Widemouth",
+      "Summerleaze", "Crooklets", "Chapel Porth", "Portreath", "Mawgan Porth",
+      "Trevone", "Treyarnon", "Porthmeor", "Gwenver", "Porthleven", "Holywell Bay",
+      "Crantock", "Towan", "Whipsiderry", "Booby's Bay", "Tolcarne", "Lusty Glaze",
+      "Hayle", "Marazion", "Kennack Sands", "Poldhu", "Church Cove"
+    ],
+    "Devon": [
+      "Croyde", "Saunton", "Putsborough", "Woolacombe", "Bantham", "Bigbury",
+      "Challaborough", "Westward Ho!", "Thurlestone", "Sandymere", "Combesgate"
+    ],
+    "Wales": [
+      "Freshwater West", "Rest Bay", "Llangennith", "Langland", "Caswell",
+      "Whitesands", "Newgale", "Aberavon", "Porth Neigwl", "Hell's Mouth",
+      "Broad Haven", "Manorbier", "Marloes", "Aberdaron", "Harlech", "Barmouth",
+      "Porthcawl", "Freshwater East", "Tresaith", "Aberystwyth", "Traeth Llyfn"
+    ],
+    "Scotland": [
+      "Thurso East", "Brims Ness", "Sandside", "Melvich", "Machrihanish", "Pease Bay",
+      "Belhaven", "Fraserburgh", "Lossiemouth", "Balevullin", "Dunnet Bay",
+      "Coldingham", "Nairn", "Sandwood", "Strathy", "Farr Bay", "Torrisdale",
+      "Gairloch", "Tiree", "Stornoway", "Dalmore", "Europie", "Garry Beach"
+    ],
+    "Cumbria": ["St Bees", "Silecroft"],
+    "Merseyside": ["Crosby", "Formby", "Ainsdale"],
+    "Lancashire": ["Blackpool", "St Annes"],
+    "North Yorkshire": ["Cayton Bay", "Scarborough", "South Bay", "Filey", "Runswick Bay", "Whitby", "Sandsend"],
+    "East Riding of Yorkshire": ["Hornsea", "Withernsea", "Bridlington", "Fraisthorpe"],
+    "County Durham": ["Seaham", "Crimdon", "Blackhall"],
+    "Tyne and Wear": ["Longsands", "Tynemouth", "Whitley Bay", "Roker", "Seaburn", "South Shields"],
+    "Northern Ireland": [
+      "Portrush", "West Strand", "East Strand", "Castlerock", "Portstewart", "Benone",
+      "Magilligan", "White Rocks", "Whiterocks", "Ballycastle"
+    ],
+    "Dorset": ["Kimmeridge", "Chesil", "Bournemouth", "Branksome", "Highcliffe", "Boscombe"],
+    "East Sussex": ["Camber", "Birling Gap"],
+    "West Sussex": ["Bracklesham", "West Wittering", "Littlehampton"],
+    "Kent": ["Joss Bay", "Botany Bay", "Viking Bay", "Minnis Bay"],
+    "Hampshire": ["Milford on Sea", "Hayling Island"],
+    "Isle of Wight": ["Compton Bay", "Freshwater Bay", "Brook", "Shanklin", "Sandown"],
+    "Essex": ["Frinton", "Walton", "Clacton"],
+    "Somerset": ["Brean", "Minehead"]
+  },
+  "Ireland": {
+    "Clare": ["Lahinch", "Spanish Point", "Fanore", "Kilkee", "Doolin", "Doughmore"],
+    "Sligo": ["Strandhill", "Easkey", "Enniscrone", "Mullaghmore", "Dunmoran"],
+    "Donegal": [
+      "Bundoran", "Rossnowlagh", "Tullan Strand", "Marble Hill", "Culdaff",
+      "Falcarragh", "Dunfanaghy", "Portsalon", "Narin", "Carrickfinn", "Magheraroarty"
+    ],
+    "Kerry": [
+      "Inch", "Ballybunion", "Brandon Bay", "Castlegregory", "Banna", "Rossbeigh",
+      "Ballinskelligs", "Fermoyle", "Maharees", "Derrynane", "Ballyheigue"
+    ],
+    "Mayo": ["Keel", "Carrowniskey", "Bertra", "Dugort", "Cross Beach", "Doolough", "Mulranny"],
+    "Galway": ["Traught", "Silverstrand", "Lettergesh", "Trá Mór", "Salthill"],
+    "Cork": ["Garrettstown", "Inchydoney", "Barleycove", "Long Strand", "Owenahincha", "Red Strand", "Youghal"],
+    "Waterford": ["Tramore", "Bunmahon", "Annestown", "Kilfarrasy", "Dunmore East"],
+    "Wexford": ["Curracloe", "Rosslare", "Cullenstown", "Ballymoney", "Carne"],
+    "Wicklow": ["Brittas Bay", "Magheramore", "Greystones", "Silver Strand"],
+    "Dublin": ["Portmarnock", "Sutton", "Dollymount", "Donabate", "Balbriggan"]
+  }
+}

@@ -12,7 +12,6 @@ import {
   SkillLevel,
 } from '../../src/services/star-engine';
 import type { MarineForecast } from '../../src/services/marine-api';
-import anchors from '../fixtures/surf-forecast-anchors.json';
 
 /** A west-facing beach: offshore wind blows from the east (90). */
 const SPOT: SpotConfig = {
@@ -98,43 +97,37 @@ test.describe('spec: surf-rating / La energía es la base', () => {
   });
 });
 
-test.describe('spec: surf-rating / La escala reproduce la de surf-forecast', () => {
-  test('1.5 m @ 12 s with no wind scores 2 to 4', () => {
-    const r = rate(sea(1.5, 12, { windSpeed: 0 }));
-    expect(r.stars).toBeGreaterThanOrEqual(2);
-    expect(r.stars).toBeLessThanOrEqual(4);
+test.describe('spec: surf-rating / La escala mide la surfeabilidad del baño', () => {
+  test('1.4 m @ 10 s with light offshore is a good day, not a fair one', () => {
+    // The scale's defining anchor: surf-forecast calls this 0-2 on its global
+    // scale, which is not the question this app answers.
+    const r = rate(sea(1.4, 10, { windSpeed: 8, windDirection: OFFSHORE }));
+    expect(r.stars).toBeGreaterThanOrEqual(7);
   });
 
-  test('2.5 m @ 14 s with no wind scores 4 to 6', () => {
-    const r = rate(sea(2.5, 14, { windSpeed: 0 }));
+  test('1 m @ 10 s clean is a fun small day', () => {
+    const r = rate(sea(1, 10, { windSpeed: 0 }));
     expect(r.stars).toBeGreaterThanOrEqual(4);
     expect(r.stars).toBeLessThanOrEqual(6);
   });
 
-  test('at least 85% of surf-forecast reference cases land within one star', () => {
-    // surf-forecast labels wind rather than giving its angle to the spot.
-    const RELATIVE: Record<string, number> = { off: 0, 'cross-off': 45, cross: 90, 'cross-on': 135, on: 180, glassy: 0 };
-    const spot: SpotConfig = { ...SPOT, swellWindow: { minAngle: 0, maxAngle: 0 }, offshoreWindAngle: 0 };
+  test('1.5 m @ 12 s with no wind scores 7 to 9', () => {
+    const r = rate(sea(1.5, 12, { windSpeed: 0 }));
+    expect(r.stars).toBeGreaterThanOrEqual(7);
+    expect(r.stars).toBeLessThanOrEqual(9);
+  });
 
-    const misses: string[] = [];
-    for (const c of anchors.cases) {
-      const sorted = [...c.swells].sort((a, b) => energyKj(b[0], b[1]) - energyKj(a[0], a[1]));
-      const f = sea(sorted[0][0], sorted[0][1], {
-        swellDirection: null,
-        secondarySwellHeight: sorted[1]?.[0] ?? null,
-        secondarySwellPeriod: sorted[1]?.[1] ?? null,
-        windWaveHeight: sorted[2]?.[0] ?? null,
-        windWavePeriod: sorted[2]?.[1] ?? null,
-        windSpeed: c.windState === 'glassy' ? Math.min(c.windKmh ?? 0, 5) : c.windKmh,
-        // Wind *from* the spot's facing (180) is onshore; from its offshore angle (0) is offshore.
-        windDirection: RELATIVE[c.windState] ?? 90,
-      });
-      const ours = calculateStarRating(f, spot, 'intermediate').stars;
-      if (Math.abs(ours - c.rating) > 1) misses.push(`${c.spot} ${c.slot}: ours ${ours}, theirs ${c.rating}`);
+  test('the top of the scale saturates on purpose', () => {
+    const good = rate(sea(2.5, 14, { windSpeed: 0 })).stars;
+    const huge = rate(sea(4, 18, { windSpeed: 0 })).stars;
+    expect(good).toBeGreaterThanOrEqual(9);
+    expect(huge).toBeGreaterThanOrEqual(good);
+  });
+
+  test('the anchors are reproduced exactly', () => {
+    for (const [kj, score] of [[45, 0], [70, 1], [122, 3], [190, 5], [372, 7], [1094, 9], [2400, 10]]) {
+      expect(energyScore(kj), `${kj} kJ`).toBeCloseTo(score, 6);
     }
-
-    const hit = 1 - misses.length / anchors.cases.length;
-    expect(hit, misses.join('\n')).toBeGreaterThanOrEqual(0.85);
   });
 
   test('a bigger clean swell never scores lower', () => {

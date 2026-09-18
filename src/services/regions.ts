@@ -1,7 +1,7 @@
 // Relative rather than the "@/" alias: Playwright's TypeScript loader does not
 // apply tsconfig path mappings, and this module is imported directly by unit
 // tests.
-import spots from '../data/spots.index.json';
+import catalogue from '../data/regions.json';
 
 /**
  * Country and region selection.
@@ -9,37 +9,68 @@ import spots from '../data/spots.index.json';
  * There is no "all regions" option: rendering every spot at once means a
  * forecast request per spot and an undifferentiated cloud of dots. A surfer is
  * choosing between breaks they can drive to, so the region is always a real one.
+ *
+ * This module reads `regions.json`, the only catalogue file the client always
+ * downloads: the list of countries and their regions, plus one coarse point per
+ * spot. The spots themselves live one file per country and are fetched only for
+ * the country in focus. Keeping the points here is what lets geolocation resolve
+ * to the nearest *spot* rather than to a bounding box -- regions interlock along
+ * the coast, so a box drawn around Cantabria inevitably clips Asturias.
  */
 
 const PREFERRED_DEFAULT_COUNTRY = 'Spain';
 const PREFERRED_DEFAULT_REGION = 'Cataluña';
 
-interface CatalogueSpot {
-  country?: string;
-  community: string;
-  coordinates: { lat: number; lon: number };
+interface RegionEntry {
+  name: string;
+  spots: number;
+}
+interface CountryEntry {
+  name: string;
+  iso2: string;
+  regions: RegionEntry[];
 }
 
-const catalogue = spots as unknown as CatalogueSpot[];
+/** [latitude, longitude, index into countries, index into that country's regions] */
+type Point = [number, number, number, number];
 
-/** Older catalogue entries predate the country field; they are Spanish. */
-function countryOf(spot: CatalogueSpot): string {
-  return spot.country ?? 'Spain';
+const countries = catalogue.countries as CountryEntry[];
+const points = catalogue.points as Point[];
+
+function regionNameAt(point: Point): string {
+  return countries[point[2]].regions[point[3]].name;
 }
 
 export function allCountries(): string[] {
-  return [...new Set(catalogue.map(countryOf))].sort((a, b) => a.localeCompare(b, 'es'));
+  return countries.map(c => c.name).sort((a, b) => a.localeCompare(b, 'es'));
+}
+
+export function countryIso2(country: string): string | null {
+  return countries.find(c => c.name === country)?.iso2 ?? null;
 }
 
 export function regionsForCountry(country: string): string[] {
-  return [
-    ...new Set(catalogue.filter(s => countryOf(s) === country).map(s => s.community)),
-  ].sort((a, b) => a.localeCompare(b, 'es'));
+  const entry = countries.find(c => c.name === country);
+  return entry ? entry.regions.map(r => r.name).sort((a, b) => a.localeCompare(b, 'es')) : [];
 }
 
 /** Every region, regardless of country. */
 export function allRegions(): string[] {
-  return [...new Set(catalogue.map(s => s.community))].sort((a, b) => a.localeCompare(b, 'es'));
+  return countries.flatMap(c => c.regions.map(r => r.name)).sort((a, b) => a.localeCompare(b, 'es'));
+}
+
+/** How many spots a region publishes, for the selector's subtitle. */
+export function spotCount(region: string): number {
+  for (const country of countries) {
+    const match = country.regions.find(r => r.name === region);
+    if (match) return match.spots;
+  }
+  return 0;
+}
+
+/** Spots in the whole catalogue, for the transparency panel. */
+export function totalSpots(): number {
+  return countries.reduce((sum, c) => sum + c.regions.reduce((n, r) => n + r.spots, 0), 0);
 }
 
 export const DEFAULT_COUNTRY: string = allCountries().includes(PREFERRED_DEFAULT_COUNTRY)
@@ -60,8 +91,7 @@ export const DEFAULT_REGION: string = regionsForCountry(DEFAULT_COUNTRY).include
   : (regionsForCountry(DEFAULT_COUNTRY)[0] ?? PREFERRED_DEFAULT_REGION);
 
 export function countryOfRegion(region: string): string {
-  const match = catalogue.find(s => s.community === region);
-  return match ? countryOf(match) : DEFAULT_COUNTRY;
+  return countries.find(c => c.regions.some(r => r.name === region))?.name ?? DEFAULT_COUNTRY;
 }
 
 /** Great-circle distance in km. */
@@ -85,15 +115,14 @@ const MAX_SENSIBLE_KM = 250;
  *
  * Nearest-spot beats a bounding box: regions interlock along the coast and a
  * box drawn around Cantabria inevitably clips Asturias and the Basque Country.
- * It also needs no extra network call -- the catalogue is already loaded.
  */
 export function locationDefaults(lat: number, lon: number): { country: string; region: string } {
   let best: { country: string; region: string; km: number } | null = null;
 
-  for (const spot of catalogue) {
-    const km = haversineKm(lat, lon, spot.coordinates.lat, spot.coordinates.lon);
+  for (const point of points) {
+    const km = haversineKm(lat, lon, point[0], point[1]);
     if (!best || km < best.km) {
-      best = { country: countryOf(spot), region: spot.community, km };
+      best = { country: countries[point[2]].name, region: regionNameAt(point), km };
     }
   }
 
@@ -112,11 +141,11 @@ export function regionForLocation(lat: number, lon: number): string {
 export function regionBounds(
   region: string
 ): { west: number; south: number; east: number; north: number } | null {
-  const inRegion = catalogue.filter(s => s.community === region);
+  const inRegion = points.filter(p => regionNameAt(p) === region);
   if (inRegion.length === 0) return null;
 
-  const lats = inRegion.map(s => s.coordinates.lat);
-  const lons = inRegion.map(s => s.coordinates.lon);
+  const lats = inRegion.map(p => p[0]);
+  const lons = inRegion.map(p => p[1]);
   return {
     west: Math.min(...lons),
     south: Math.min(...lats),

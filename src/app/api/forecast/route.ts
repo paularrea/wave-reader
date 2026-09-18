@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getMarineForecast, SpotForecast } from '@/services/marine-api';
 import { calculateStarRating, SkillLevel, SpotConfig } from '@/services/star-engine';
-import spots from '@/data/spots.json';
+import { spotById } from '@/services/spot-catalogue';
 import { basinOf } from '@/services/basins';
 
 const VALID_LEVELS: SkillLevel[] = ['beginner', 'intermediate', 'expert'];
@@ -20,7 +20,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Invalid hour' }, { status: 400 });
   }
 
-  const spot = spots.find(s => s.id === spotId);
+  const spot = spotById(spotId);
   if (!spot) {
     return NextResponse.json({ error: 'Spot not found' }, { status: 404 });
   }

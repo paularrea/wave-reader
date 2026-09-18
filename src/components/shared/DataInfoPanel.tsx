@@ -15,7 +15,7 @@ import {
   Gauge,
 } from 'lucide-react';
 import { pillColour, pillHeightPx } from '@/services/forecast-series';
-import spots from '@/data/spots.index.json';
+import { allCountries, regionsForCountry, spotCount, totalSpots } from '@/services/regions';
 import { LEGEND_TIERS, legendEntry } from '@/services/conditions';
 import {
   ModelStatus,
@@ -157,12 +157,11 @@ export function DataInfoPanel() {
   }, [open]);
 
   const catalogue = useMemo(() => {
-    const byCountry = new Map<string, number>();
-    for (const spot of spots as Array<{ country?: string }>) {
-      const country = spot.country ?? 'Spain';
-      byCountry.set(country, (byCountry.get(country) ?? 0) + 1);
-    }
-    return { total: spots.length, byCountry: [...byCountry.entries()].sort((a, b) => b[1] - a[1]) };
+    const byCountry: Array<[string, number]> = allCountries().map(country => [
+      country,
+      regionsForCountry(country).reduce((sum, region) => sum + spotCount(region), 0),
+    ]);
+    return { total: totalSpots(), byCountry: byCountry.sort((a, b) => b[1] - a[1]) };
   }, []);
 
   const scroller = useRef<HTMLDivElement>(null);
@@ -303,8 +302,8 @@ export function DataInfoPanel() {
               </div>
 
               <p className="text-[13px] text-ink-2 mt-3">
-                Scores follow the surf-forecast scale. The Mediterranean has its own, tuned to what a good
-                day there looks like.
+                Scores say how good the surf is at that spot, not how it ranks against the rest of the
+                world. The Mediterranean has its own scale, tuned to what a good day there looks like.
               </p>
             </section>
 
@@ -394,8 +393,9 @@ export function DataInfoPanel() {
                     Atlantic
                   </div>
                   <p className="text-[12px] leading-snug">
-                    Calibrated against <span className="text-ink-0">surf-forecast</span>: 206 slots at 10
-                    spots, average error <span className="text-ink-0">0.5 stars</span>, 96% within one.
+                    Anchored to conditions you can picture: 1 m at 10 s scores{' '}
+                    <span className="text-ink-0">5</span>, 1.4 m at 10 s <span className="text-ink-0">7</span>,
+                    2 m at 12 s <span className="text-ink-0">9</span>.
                   </p>
                 </div>
                 <div
@@ -406,12 +406,15 @@ export function DataInfoPanel() {
                     Mediterranean
                   </div>
                   <p className="text-[12px] leading-snug">
-                    Its own scale: 1 m at 7 s with clean wind scores 2–3, and 1.5 m at 8 s scores 5–6.
+                    Its own anchors: 0.8 m at 7 s clean scores <span className="text-ink-0">2–3</span> and
+                    1.5 m at 8 s <span className="text-ink-0">6</span>. Under 5 s is chop and scores 0.
                   </p>
                 </div>
               </div>
               <p className="text-[12px] text-ink-2">
-                When wind spoils a good swell, the spot detail shows what the swell alone would score.
+                The score says how good the surf is here, not how this swell ranks worldwide, so it is
+                higher than a global scale would give. When wind spoils a good swell, the spot detail
+                shows what the swell alone would score.
               </p>
             </Section>
 
@@ -427,7 +430,9 @@ export function DataInfoPanel() {
             <Section id="catalogue" icon={<MapPin size={15} />} title="Spot catalogue" testId="info-catalogue">
               <p>
                 <span className="text-ink-0">{catalogue.total.toLocaleString('en-GB')} spots</span> from
-                named beaches in OpenStreetMap, kept only where the coast faces open water.
+                named beaches in OpenStreetMap, kept only where the coast faces open water. Harbours,
+                marinas and coves are dropped, and beaches closer together than the wave model&apos;s
+                5 km cell share one spot, because they share one forecast.
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {catalogue.byCountry.map(([country, n]) => (

@@ -15,7 +15,7 @@ export interface StarRatingResult {
   stars: number;
   /** What the swell alone would score if the wind were perfect. Never below `stars`. */
   swellStars: number;
-  /** Total wave energy in kJ, on surf-forecast's scale. Null when unrated. */
+  /** Total wave energy in kJ. Null when unrated. */
   energyKj: number | null;
   /** Estimated breaking wave height in metres. Null when unrated. */
   breakingHeightM: number | null;
@@ -36,15 +36,20 @@ export interface StarRatingResult {
  * with offshore wind 8/10 for an intermediate and 10/10 for a beginner -- the
  * same as 1.5 m at 12 s. Skill level now only drives the safety alert.
  *
- * Pipeline: wave energy per component (direction-weighted) -> log-scaled,
- * gamma-curved base -> period quality -> wind (gust-aware).
+ * Pipeline: wave energy per component (direction-weighted) -> anchored energy
+ * scale -> period quality -> wind (gust-aware).
  *
- * The structure follows what surf-forecast, Magicseaweed and Surfline publish
- * about their ratings. None of them publishes a formula, so the numbers are
- * fitted to surf-forecast's actual output: 206 time slots at 10 spots, with
- * leave-one-spot-out validation giving a mean error of 0.50 stars and 96% of
- * slots within one star. Re-run scripts/calibrate-rating.mjs to refit; the
- * benchmark is in openspec/changes/archive/*-calibrate-rating-to-surf-forecast.
+ * The scale measures **surfability**, and deliberately no longer reproduces
+ * surf-forecast's stars. Theirs is a global scale — it spreads 0-10 over every
+ * break on the planet, so 1.4 m at 10 s clean scores 0-2 in their own tables,
+ * and only the best spot in the world in a given slot reaches 5+. This app
+ * answers a different question: is today worth the drive to this beach. So the
+ * physics is unchanged and only the energy-to-score curve moved, to anchors a
+ * surfer recognises without a table (see SCALES). The previous fit to
+ * surf-forecast (206 slots, 10 spots, mean error 0.50 stars) and its benchmark
+ * live in openspec/changes/archive/*-calibrate-rating-to-surf-forecast, and
+ * scripts/calibrate-rating.mjs still reproduces it; neither defines the scale
+ * any more.
  */
 
 /**
@@ -54,12 +59,12 @@ export interface StarRatingResult {
 const ENERGY_COEFFICIENT = 1.9;
 
 interface EnergyScale {
-  /** Below this the sea is flat for surfing purposes. */
-  flatKj: number;
-  /** Energy that maps to a 10. */
-  topKj: number;
-  /** >1 compresses the low and middle of the scale. */
-  gamma: number;
+  /**
+   * Energy in kJ to score, ascending. Below the first entry the sea is flat;
+   * above the last it is a 10. Between them the score interpolates in the
+   * logarithm of the energy, which is where a surfer's sense of size is linear.
+   */
+  anchors: Array<readonly [kj: number, score: number]>;
   /** Multipliers for short periods, checked in ascending order of `under`. */
   period: Array<{ under: number; factor: number }>;
 }
@@ -67,16 +72,27 @@ interface EnergyScale {
 /**
  * Energy scales per basin. Wind handling is shared: the sea's energy changes
  * between basins, what wind does to a wave does not.
+ *
+ * Anchors are written for clean seas at a period that carries no penalty, so
+ * each anchor is the score those conditions actually get.
  */
 const SCALES: Record<Basin, EnergyScale> = {
   /**
-   * Fitted to surf-forecast's ratings (see header). Change only by refitting.
-   * Flat fitted at 51 kJ; their FAQ says ~100 kJ is "just about surfable".
+   * 0.6 m @ 10 s barely worth it, 1 m @ 10 s a fun small day, 1.4 m @ 10 s a
+   * good one, 2 m @ 12 s excellent. The top saturates on purpose: 2.5 m @ 14 s
+   * and 4 m @ 18 s are both a 10, because the question this app answers is
+   * whether today is worth the drive, not how this swell ranks worldwide.
    */
   atlantic: {
-    flatKj: 51.27,
-    topKj: 31764,
-    gamma: 1.41,
+    anchors: [
+      [45, 0],
+      [70, 1],
+      [122, 3],
+      [190, 5],
+      [372, 7],
+      [1094, 9],
+      [2400, 10],
+    ],
     period: [
       { under: 6, factor: 0.48 },
       { under: 8, factor: 0.69 },
@@ -85,17 +101,24 @@ const SCALES: Record<Basin, EnergyScale> = {
   },
   /**
    * No reference service rates the Mediterranean on its own terms, so this is
-   * anchored to local expertise: 1 m @ 7 s glassy or cross-off is a 2-3 day,
-   * 1.5 m @ 8 s glassy a 5-6 day. 5-8 s is the normal Mediterranean period, so
-   * only very short wind chop is penalised.
+   * anchored to local expertise: 0.8 m @ 7 s clean is worth paddling out for,
+   * 1 m @ 7 s a decent day, 1.5 m @ 8 s a good one. 5-8 s is the normal
+   * Mediterranean period; below 5 s it is chop with no wave in it, which the
+   * period factor kills outright.
    */
   mediterranean: {
-    flatKj: 5,
-    topKj: 1500,
-    gamma: 1.6,
+    anchors: [
+      [20, 0],
+      [41, 1],
+      [60, 2.5],
+      [93, 4],
+      [274, 6],
+      [616, 8],
+      [1200, 10],
+    ],
     period: [
-      { under: 5, factor: 0.6 },
-      { under: 6, factor: 0.85 },
+      { under: 5, factor: 0.4 },
+      { under: 6, factor: 0.8 },
     ],
   },
 };
@@ -193,15 +216,24 @@ export function periodFactor(periodS: number, basin: Basin = 'atlantic'): number
 }
 
 /**
- * Log-scaled, gamma-curved energy to 0-10. Monotonic: surf-forecast does not
- * mark big days down for closing out, so neither does this.
+ * Energy to 0-10, interpolated between the basin's anchors in log energy.
+ * Monotonic: a bigger sea never scores less, so a huge day is never marked
+ * down for closing out.
  */
 export function energyScore(energy: number, basin: Basin = 'atlantic'): number {
-  const { flatKj, topKj, gamma } = SCALES[basin];
-  if (energy < flatKj) return 0;
+  const { anchors } = SCALES[basin];
+  const [floorKj] = anchors[0];
+  const [ceilingKj, ceilingScore] = anchors[anchors.length - 1];
 
-  const ratio = Math.log(energy / flatKj) / Math.log(topKj / flatKj);
-  return 10 * Math.min(1, Math.max(0, ratio)) ** gamma;
+  if (energy <= floorKj) return 0;
+  if (energy >= ceilingKj) return ceilingScore;
+
+  const upper = anchors.findIndex(([kj]) => kj >= energy);
+  const [lowKj, lowScore] = anchors[upper - 1];
+  const [highKj, highScore] = anchors[upper];
+
+  const position = Math.log(energy / lowKj) / Math.log(highKj / lowKj);
+  return lowScore + position * (highScore - lowScore);
 }
 
 /**

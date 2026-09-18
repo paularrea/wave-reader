@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
-import spots from '../../src/data/spots.json';
+import { allSpots } from '../../src/services/spot-catalogue';
 import report from '../../src/data/spots.catalog-report.json';
+import curation from '../../src/data/spots.curation-report.json';
+import regions from '../../src/data/regions.json';
 
 /**
  * Guards the published catalogue. These are the checks the original
@@ -32,7 +34,7 @@ interface Spot {
   provenance: Provenance;
 }
 
-const catalogue = spots as unknown as Spot[];
+const catalogue = allSpots() as unknown as Spot[];
 
 test.describe('spec: spot-catalog / Coordenadas trazables', () => {
   test('every spot records where its coordinate came from', () => {
@@ -169,5 +171,79 @@ test.describe('spec: spot-catalog / Solo spots con datos de oleaje', () => {
     const dropped = report.dropped.filter(d => d.reason === 'no wave model data at these coordinates');
     const kept = new Set(catalogue.map(s => `${s.name}|${s.community}`));
     for (const d of dropped) expect(kept.has(`${d.name}|${d.community}`), `${d.name} kept without data`).toBe(false);
+  });
+});
+
+test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', () => {
+  const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|embarcader|\bdique\b|\bpiscina\b|\bdock\b|\bquay\b|\bjetty\b|\bharbour\b)/i;
+
+  test('harbour infrastructure and inland water are not in the catalogue', () => {
+    for (const spot of catalogue) {
+      expect(NOT_SURF.test(spot.name), `${spot.name} is not a surf spot`).toBe(false);
+    }
+  });
+
+  test('no two spots share a forecast cell', () => {
+    // Open-Meteo's marine models resolve about 5 km; two beaches closer than
+    // that are handed the same numbers, so publishing both is fake precision.
+    // One assertion at the end, not one per pair: 200,000 expect() calls took
+    // nine minutes of the unit suite.
+    const cell = curation.rules.modelCellKm;
+    const byRegion = new Map<string, Spot[]>();
+    for (const spot of catalogue) {
+      const key = `${spot.country}|${spot.community}`;
+      if (!byRegion.has(key)) byRegion.set(key, []);
+      byRegion.get(key)!.push(spot);
+    }
+
+    const rad = Math.PI / 180;
+    const tooClose: string[] = [];
+    for (const group of byRegion.values()) {
+      for (let i = 0; i < group.length; i++) {
+        for (let j = i + 1; j < group.length; j++) {
+          const a = group[i].coordinates;
+          const b = group[j].coordinates;
+          const km =
+            6371 *
+            Math.sqrt(
+              ((b.lat - a.lat) * rad) ** 2 +
+                (Math.cos(((a.lat + b.lat) / 2) * rad) * (b.lon - a.lon) * rad) ** 2
+            );
+          if (km < cell) tooClose.push(`${group[i].name} / ${group[j].name}: ${km.toFixed(2)} km`);
+        }
+      }
+    }
+
+    expect(tooClose.slice(0, 10).join('\n')).toBe('');
+  });
+
+  test('every place dropped by the curation says why', () => {
+    expect(curation.dropped.length).toBeGreaterThan(0);
+    for (const d of curation.dropped) expect(d.reason, `${d.name}`).toBeTruthy();
+  });
+
+  test('the curated catalogue is a fraction of the tagged beaches', () => {
+    expect(catalogue.length).toBe(curation.out);
+    expect(curation.out).toBeLessThan(curation.in / 3);
+  });
+});
+
+test.describe('spec: spot-catalog / Publicado por país', () => {
+  test('regions.json agrees with the per-country files', () => {
+    for (const country of regions.countries) {
+      for (const region of country.regions) {
+        const actual = catalogue.filter(s => s.country === country.name && s.community === region.name).length;
+        expect(actual, `${country.name} / ${region.name}`).toBe(region.spots);
+      }
+    }
+  });
+
+  test('every spot belongs to a region the selector offers', () => {
+    const known = new Set(
+      regions.countries.flatMap(c => c.regions.map(r => `${c.name}|${r.name}`))
+    );
+    for (const spot of catalogue) {
+      expect(known.has(`${spot.country}|${spot.community}`), `${spot.name}`).toBe(true);
+    }
   });
 });

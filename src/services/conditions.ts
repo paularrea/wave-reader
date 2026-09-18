@@ -40,12 +40,12 @@ export interface QualityStyle {
 export const MAX_STARS = 10;
 
 /**
- * On surf-forecast's scale, which the rating is calibrated to: one star is
- * already "good surf" in their own interface, and in the benchmark no ordinary
- * spot went above 4 -- scores of 5 to 9 only appeared at the best spot in the
- * world for each time slot.
+ * On the surfability scale (see star-engine): 1 m at 10 s clean is a 5, so
+ * "epic" has to start above that or every ordinary fun day paints the map
+ * yellow and the colour stops meaning anything. 6 is 1.2 m at 10 s clean, the
+ * point at which a surfer changes plans to go.
  */
-export const EPIC_THRESHOLD = 5;
+export const EPIC_THRESHOLD = 6;
 const GOOD_THRESHOLD = 1;
 
 const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {

@@ -2,22 +2,13 @@
 
 import React, { useMemo, useState } from 'react';
 import { Drawer } from 'vaul';
-import { Check, ChevronDown, MapPin, Navigation, Search } from 'lucide-react';
-import spots from '@/data/spots.index.json';
+import { Check, ChevronDown, Globe, MapPin, Navigation, Search } from 'lucide-react';
 import { useStore } from '@/store/useStore';
-import { allCountries, locationDefaults, regionsForCountry } from '@/services/regions';
+import { allCountries, locationDefaults, regionsForCountry, spotCount } from '@/services/regions';
 import { qualityTier } from '@/services/conditions';
 
-const SHORT_COUNTRY: Record<string, string> = { 'United Kingdom': 'UK' };
-
-/** Spots per region, counted once from the index. */
-function useRegionCounts() {
-  return useMemo(() => {
-    const counts = new Map<string, number>();
-    for (const spot of spots) counts.set(spot.community, (counts.get(spot.community) ?? 0) + 1);
-    return counts;
-  }, []);
-}
+/** Past this many countries a plain list is no longer scannable. */
+const SEARCHABLE_COUNTRIES = 8;
 
 function ScoreChip({ stars }: { stars: number }) {
   const tier = qualityTier(stars);
@@ -47,8 +38,14 @@ export function RegionPicker() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [country, setCountry] = useState(selectedCountry);
-  const counts = useRegionCounts();
+  const [countryOpen, setCountryOpen] = useState(false);
+  const [countryQuery, setCountryQuery] = useState('');
   const countries = allCountries();
+
+  const countryOptions = useMemo(() => {
+    const q = countryQuery.trim().toLocaleLowerCase('es');
+    return q ? countries.filter(c => c.toLocaleLowerCase('es').includes(q)) : countries;
+  }, [countries, countryQuery]);
 
   const regions = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('es');
@@ -88,6 +85,8 @@ export function RegionPicker() {
         if (next) {
           setCountry(selectedCountry);
           setQuery('');
+          setCountryOpen(false);
+          setCountryQuery('');
         }
       }}
     >
@@ -104,7 +103,7 @@ export function RegionPicker() {
           <span className="flex flex-col min-w-0 leading-tight">
             <span className="text-[15px] font-semibold truncate">{selectedRegion}</span>
             <span className="text-[12px] text-ink-2 truncate">
-              {selectedCountry} · {(counts.get(selectedRegion) ?? 0).toLocaleString('en-GB')} spots
+              {selectedCountry} · {spotCount(selectedRegion).toLocaleString('en-GB')} spots
             </span>
           </span>
           <ChevronDown size={16} className="text-ink-2 ml-auto shrink-0" />
@@ -154,26 +153,73 @@ export function RegionPicker() {
             </button>
 
             {!query && (
-              <div role="tablist" aria-label="Country" className="mt-4 flex gap-1.5 overflow-x-auto no-scrollbar">
-                {countries.map(c => {
-                  const active = c === country;
-                  return (
-                    <button
-                      key={c}
-                      type="button"
-                      role="tab"
-                      aria-selected={active}
-                      onClick={() => setCountry(c)}
-                      data-testid="country-tab"
-                      data-country={c}
-                      className={`shrink-0 h-9 px-3.5 rounded-full text-[14px] font-medium border transition-colors ${
-                        active ? 'bg-ink-0 text-ground border-ink-0' : 'border-line-strong text-ink-1 hover:text-white'
-                      }`}
-                    >
-                      {SHORT_COUNTRY[c] ?? c}
-                    </button>
-                  );
-                })}
+              <div className="mt-3">
+                <button
+                  type="button"
+                  onClick={() => setCountryOpen(o => !o)}
+                  aria-expanded={countryOpen}
+                  aria-controls="country-list"
+                  data-testid="country-select"
+                  data-country={country}
+                  className="w-full h-11 flex items-center gap-2.5 px-3.5 rounded-2xl bg-card border border-line text-left"
+                >
+                  <Globe size={16} className="text-ink-2 shrink-0" />
+                  <span className="text-[15px] font-medium flex-1 truncate">{country}</span>
+                  <ChevronDown
+                    size={16}
+                    className={`text-ink-2 shrink-0 transition-transform ${countryOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                {countryOpen && (
+                  <div
+                    id="country-list"
+                    data-testid="country-list"
+                    className="mt-1.5 rounded-2xl border border-line bg-card overflow-hidden"
+                  >
+                    {countries.length > SEARCHABLE_COUNTRIES && (
+                      <div className="h-11 flex items-center gap-2.5 px-3.5 border-b border-line">
+                        <Search size={15} className="text-ink-2 shrink-0" />
+                        <input
+                          type="search"
+                          value={countryQuery}
+                          onChange={e => setCountryQuery(e.target.value)}
+                          placeholder="Find a country"
+                          aria-label="Find a country"
+                          data-testid="country-search"
+                          autoComplete="off"
+                          className="flex-1 min-w-0 bg-transparent outline-none text-[16px] placeholder:text-ink-3"
+                        />
+                      </div>
+                    )}
+                    <ul className="max-h-56 overflow-y-auto overscroll-contain">
+                      {countryOptions.map(c => (
+                        <li key={c}>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setCountry(c);
+                              setCountryOpen(false);
+                              setCountryQuery('');
+                            }}
+                            aria-current={c === country ? 'true' : undefined}
+                            data-testid="country-option"
+                            data-country={c}
+                            className="w-full h-11 flex items-center gap-2.5 px-3.5 text-left hover:bg-raised transition-colors"
+                          >
+                            <span className={`flex-1 truncate text-[15px] ${c === country ? 'font-semibold' : ''}`}>
+                              {c}
+                            </span>
+                            {c === country && <Check size={16} strokeWidth={2.5} />}
+                          </button>
+                        </li>
+                      ))}
+                      {countryOptions.length === 0 && (
+                        <li className="py-6 text-center text-[14px] text-ink-2">No country matches.</li>
+                      )}
+                    </ul>
+                  </div>
+                )}
               </div>
             )}
 
@@ -206,7 +252,7 @@ export function RegionPicker() {
                       <span className={`text-[16px] truncate ${current ? 'font-semibold' : 'font-medium'}`}>{region}</span>
                       <span className="text-[13px] text-ink-2">
                         {query ? `${c} · ` : ''}
-                        {(counts.get(region) ?? 0).toLocaleString('en-GB')} spots
+                        {spotCount(region).toLocaleString('en-GB')} spots
                       </span>
                     </span>
                     {best !== undefined && <ScoreChip stars={best} />}
