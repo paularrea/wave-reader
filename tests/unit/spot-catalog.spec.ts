@@ -183,22 +183,29 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
     }
   });
 
-  test('no two spots share a forecast cell', () => {
-    // Open-Meteo's marine models resolve about 5 km; two beaches closer than
-    // that are handed the same numbers, so publishing both is fake precision.
-    // One assertion at the end, not one per pair: 200,000 expect() calls took
-    // nine minutes of the unit suite.
-    const cell = curation.rules.modelCellKm;
-    const byRegion = new Map<string, Spot[]>();
-    for (const spot of catalogue) {
-      const key = `${spot.country}|${spot.community}`;
-      if (!byRegion.has(key)) byRegion.set(key, []);
-      byRegion.get(key)!.push(spot);
-    }
+  test('the same place mapped twice in the source is published once', () => {
+    // OSM carries both "Ondres-Ocean" and "Plage Ondres-Ocean", and "Plage du
+    // Metro" three times along one kilometre. One assertion at the end, not one
+    // per pair: 200,000 expect() calls took nine minutes of the unit suite.
+    const key = (name: string) =>
+      name
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\b(praia|playa|platja|plage|beach|strand|de|del|du|des|la|le|les|el|els|a|o)\b/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
 
     const rad = Math.PI / 180;
-    const tooClose: string[] = [];
-    for (const group of byRegion.values()) {
+    const twins: string[] = [];
+    const byName = new Map<string, Spot[]>();
+    for (const spot of catalogue) {
+      const k = `${spot.country}|${spot.community}|${key(spot.name)}`;
+      if (!byName.has(k)) byName.set(k, []);
+      byName.get(k)!.push(spot);
+    }
+    for (const group of byName.values()) {
       for (let i = 0; i < group.length; i++) {
         for (let j = i + 1; j < group.length; j++) {
           const a = group[i].coordinates;
@@ -209,12 +216,44 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
               ((b.lat - a.lat) * rad) ** 2 +
                 (Math.cos(((a.lat + b.lat) / 2) * rad) * (b.lon - a.lon) * rad) ** 2
             );
-          if (km < cell) tooClose.push(`${group[i].name} / ${group[j].name}: ${km.toFixed(2)} km`);
+          if (km < 1.5) twins.push(`${group[i].name} / ${group[j].name}: ${km.toFixed(2)} km`);
         }
       }
     }
+    expect(twins.join('\n')).toBe('');
+  });
 
-    expect(tooClose.slice(0, 10).join('\n')).toBe('');
+  test('REGRESSION: named breaks survive even when they share a forecast cell', () => {
+    // Anglet's twelve peaks sit inside four kilometres; deduplicating by
+    // distance alone left one of them, and took La Graviere, Le Santocha and
+    // La Piste out of the Landes with it.
+    const names = catalogue
+      .filter(s => s.community === 'Nouvelle-Aquitaine')
+      .map(s => s.name.toLowerCase());
+
+    for (const break_ of [
+      'lafitenia',
+      'parlementia',
+      'gravière',
+      'santocha',
+      'la piste',
+      'cavaliers',
+      'estagnots',
+      'penon',
+      'marinella',
+      'milady',
+    ]) {
+      expect(
+        names.some(n => n.includes(break_)),
+        `${break_} is missing from Nouvelle-Aquitaine`
+      ).toBe(true);
+    }
+
+    // Four of Anglet's peaks, within 2 km of each other, all published.
+    const anglet = catalogue.filter(
+      s => s.coordinates.lat > 43.5 && s.coordinates.lat < 43.53 && s.coordinates.lon < -1.5
+    );
+    expect(anglet.length).toBeGreaterThanOrEqual(4);
   });
 
   test('every place dropped by the curation says why', () => {
@@ -225,6 +264,17 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
   test('the curated catalogue is a fraction of the tagged beaches', () => {
     expect(catalogue.length).toBe(curation.out);
     expect(curation.out).toBeLessThan(curation.in / 3);
+  });
+
+  test('a generic name does not pass itself off as a named break', () => {
+    // "Plage du Nord" matched the curated "La Cantine Nord" while containment
+    // ran both ways, and "La plage Blanche" matched "La Lette Blanche". Being
+    // treated as named exempted both from deduplication, so they survived
+    // beside the real break. They are only observable as drops.
+    for (const fragment of ['Plage du Nord', 'La plage Blanche']) {
+      const record = curation.dropped.find(d => d.name === fragment && d.region === 'Nouvelle-Aquitaine');
+      expect(record?.reason, `${fragment} was treated as a named break`).toContain('unnamed');
+    }
   });
 });
 

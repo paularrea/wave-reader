@@ -4,12 +4,20 @@
  *
  * OpenStreetMap tags every named beach, so stage 2 hands over 7,870 places for
  * four countries -- 600 of them in Catalunya, where surf-forecast lists 29.
- * Three independent reasons most of them must not be in a surf app:
+ * Reasons a place must not be in a surf app:
  *
  *   1. Nothing breaks there: harbour coves, marina basins, inner-ria beaches.
- *   2. It is the same sea: the marine model's cell is about 5 km, so two
- *      beaches 800 m apart share one forecast. Showing both is fake precision.
- *   3. It is not a surf place at all: docks, quays, jetties, inland water.
+ *   2. It is not a surf place at all: docks, quays, jetties, lakes, lagoons.
+ *   3. It is the same beach OSM already mapped under a slightly different name.
+ *   4. Nobody named it and it sits in the same model cell as somewhere that is
+ *      named -- OSM's unnamed fragments, which fill the map with noise.
+ *
+ * Point 4 never applies to a break on the curated list. Anglet's twelve peaks
+ * share one model cell to the decimal, but a surfer choosing between La Barre
+ * and Les Cavaliers is choosing between two banks and two crowds: spot identity
+ * is editorial, not a property of the wave model. An earlier pass deduplicated
+ * everything by distance and left Anglet with one spot and the Landes without
+ * La Gravière, Santocha or La Piste.
  *
  * The filter is deliberately explainable, and every drop is recorded with its
  * reason in spots.curation-report.json so the reduction can be audited and
@@ -40,11 +48,14 @@ const ISO2 = {
  */
 const MODEL_CELL_KM = 5;
 
+/** Two entries with one name this close apart are one beach mapped twice. */
+const SAME_PLACE_KM = 1.5;
+
 /** Swell needs an arc of open water to arrive through. */
 const MIN_EXPOSURE_DEG = 120;
 
 /** Places that are water but not surf: docks, marinas, inland water. */
-const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|club\s*(n[àa]utic|n[áa]utico|de\s*mar)|embarcader|\bdique\b|espig[oó]n|\bpiscina\b|\bestany\b|\blago\b|\bllac\b|embalse|albufera|\bcanal\b|\bdock\b|\bquay\b|\bjetty\b|slipway|\bharbour\b|\bharbor\b|zona dunar|\bmarisma)/i;
+const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|club\s*(n[àa]utic|n[áa]utico|de\s*mar)|embarcader|\bdique\b|espig[oó]n|\bpiscina\b|\bestany\b|\blago\b|\blac\b|\bllac\b|\blake\b|[ée]tang|embalse|albufera|\bcanal\b|\bdock\b|\bquay\b|\bjetty\b|slipway|\bharbour\b|\bharbor\b|zona dunar|\bmarisma)/i;
 
 /**
  * A cove is a pocket of water between headlands: sheltered from the side by
@@ -55,7 +66,7 @@ const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|club\s*(n[àa]utic
 const COVE = /(\bcala\b|\bcaleta\b|\bcalita\b|\bplatgeta\b|\brac[oó]\b|\bcova\b|\bensenada\b|\benseada\b|\bangra\b|\bcove\b)/i;
 
 /** Stretches of a beach set aside for something other than surfing. */
-const SECTION = /(naturista|nudista|gossos|\bperros\b|canina|infantil|surf\s*school)/i;
+const SECTION = /(naturist|nudist|gossos|\bperros\b|canina|infantil|surf\s*school|centre de vacances)/i;
 
 /** A port unless the name says it is the beach next to one. */
 const PORT = /(\bport\b|\bporto\b|\bpuerto\b|\bports\b)/i;
@@ -92,6 +103,10 @@ function tokensMatch(spotKey, curatedKey) {
   const curatedTokens = curatedKey.split(' ').filter(t => t.length >= 4);
   if (curatedTokens.length === 0) return false;
   const spotTokens = spotKey.split(' ');
+  // The stem rule is for inflection, not for a name buried in a longer one.
+  // Without this, "centrale" matched the "centre" inside "Plage naturiste du
+  // centre de vacances d'Arnaoutchot" and let a nudist campsite in as a break.
+  if (spotTokens.length > curatedTokens.length + 1) return false;
   return curatedTokens.every(c => spotTokens.some(s => sameToken(s, c)));
 }
 
@@ -129,9 +144,14 @@ function curatedMatch(spot) {
   const key = normalise(spot.name);
   if (!key) return null;
   // Exact first: "Sant Pol" must not claim "Sant Pol de Mar" while the real one waits.
+  //
+  // Containment runs one way only. Letting a short OSM name match a longer
+  // curated one made the generic fragments -- "Plage du Nord", "La plage
+  // Blanche" -- claim to be La Cantine Nord and La Lette Blanche, which both
+  // kept them out of the deduplication and stole the real break's rank.
   return (
     names.find(n => n.key === key) ??
-    names.find(n => n.key.length >= 4 && (key.includes(n.key) || n.key.includes(key))) ??
+    names.find(n => n.key.length >= 5 && key.includes(n.key)) ??
     names.find(n => tokensMatch(key, n.key)) ??
     null
   );
@@ -154,7 +174,9 @@ for (const spot of spots) {
     drop(spot, 'not a surf place: a port, not the beach beside one');
     continue;
   }
-  if (SECTION.test(spot.name) && !named) {
+  // Unconditional: "Saturraran naturista" is a stretch of Saturraran, not a
+  // second break, even though the curated list names Saturraran.
+  if (SECTION.test(spot.name)) {
     drop(spot, 'not a surf place: a section of a beach set aside for something else');
     continue;
   }
@@ -170,9 +192,16 @@ for (const spot of spots) {
   candidates.push({ spot, named });
 }
 
-// 3. One spot per stretch of coast that shares a forecast cell. A named break
-//    beats an unnamed neighbour; failing that, the more exposed one; failing
-//    that, the plainer name, because OSM's long names are the minor coves.
+// 3. Thin out the places nobody named, one per stretch of coast that shares a
+//    forecast cell.
+//
+//    Named breaks are exempt, and that is the whole point. Anglet's twelve
+//    peaks sit inside four kilometres and share a model cell to the decimal,
+//    but a surfer choosing between La Barre and Les Cavaliers is choosing
+//    between two different banks with two different crowds. Spot identity is
+//    editorial, not a property of the wave model. Deduplication exists to stop
+//    OSM's unnamed beach fragments filling the map, nothing more -- an earlier
+//    pass applied it to everything and left Anglet with a single spot.
 const byRegion = new Map();
 for (const c of candidates) {
   const key = `${c.spot.country}|${c.spot.community}`;
@@ -191,9 +220,23 @@ for (const group of byRegion.values()) {
   );
   const survivors = [];
   for (const c of group) {
+    // The same beach mapped twice: OSM has both "Ondres-Ocean" and "Plage
+    // Ondres-Ocean", and "Plage du Metro" three times along one kilometre.
+    // Same name and touching distance is one place, named or not.
+    const twin = survivors.find(
+      s => normalise(s.spot.name) === normalise(c.spot.name) && distanceKm(s.spot.coordinates, c.spot.coordinates) < SAME_PLACE_KM
+    );
+    if (twin) {
+      drop(c.spot, `the same place as ${twin.spot.name}, mapped twice in OpenStreetMap`);
+      continue;
+    }
+    if (c.named) {
+      survivors.push(c);
+      continue;
+    }
     const near = survivors.find(s => distanceKm(s.spot.coordinates, c.spot.coordinates) < MODEL_CELL_KM);
     if (near) {
-      drop(c.spot, `same forecast cell as ${near.spot.name} (${distanceKm(near.spot.coordinates, c.spot.coordinates).toFixed(1)} km)`);
+      drop(c.spot, `unnamed and in the same forecast cell as ${near.spot.name} (${distanceKm(near.spot.coordinates, c.spot.coordinates).toFixed(1)} km)`);
       continue;
     }
     survivors.push(c);

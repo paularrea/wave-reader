@@ -258,49 +258,6 @@
     }
   },
   {
-    "id": "alum-bay-beach",
-    "name": "Alum Bay Beach",
-    "community": "Isle of Wight",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 50.66903,
-      "lon": -1.56953
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 45,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 839024720,
-      "feature": "beach",
-      "facingDeg": 225,
-      "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "amelie-s-acre",
     "name": "Amelie's Acre",
     "community": "West Sussex",
@@ -425,6 +382,49 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "arlo-porth",
+    "name": "Arlo Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91655,
+      "lon": -6.3183
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1092391270,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -860,6 +860,49 @@
     }
   },
   {
+    "id": "bathinghouse-porth",
+    "name": "Bathinghouse Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.94212,
+      "lon": -6.33003
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 232474516,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "beach-costa-del-ceanfield",
     "name": "Beach - Costa del Ceanfield",
     "community": "Northern Ireland",
@@ -1118,6 +1161,49 @@
     }
   },
   {
+    "id": "bigbury-beach",
+    "name": "Bigbury Beach",
+    "community": "Devon",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.28098,
+      "lon": -3.89229
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 159897002,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "black-sands",
     "name": "Black Sands",
     "community": "Scotland",
@@ -1247,6 +1333,92 @@
     }
   },
   {
+    "id": "booby-s-bay",
+    "name": "Booby's Bay",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.53814,
+      "lon": -5.02699
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 44535295,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "boscombe-beach",
+    "name": "Boscombe Beach",
+    "community": "Dorset",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.71956,
+      "lon": -1.8393
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 13636179,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "bossiney-haven",
     "name": "Bossiney haven",
     "community": "Cornwall",
@@ -1328,6 +1500,92 @@
       "feature": "beach",
       "facingDeg": 0,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "botany-bay",
+    "name": "Botany Bay",
+    "community": "Kent",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.39051,
+      "lon": 1.43345
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 225,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 7838866,
+      "feature": "beach",
+      "facingDeg": 45,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "bournemouth-east-beach",
+    "name": "Bournemouth East Beach",
+    "community": "Dorset",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.71713,
+      "lon": -1.86459
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 761696998,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -1456,6 +1714,92 @@
       "osmId": 704673222,
       "feature": "beach",
       "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "branksome-chine-beach",
+    "name": "Branksome Chine Beach",
+    "community": "Dorset",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.70629,
+      "lon": -1.90847
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 315,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 761696990,
+      "feature": "beach",
+      "facingDeg": 135,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "branksome-dene-chine-beach",
+    "name": "Branksome Dene Chine Beach",
+    "community": "Dorset",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.7087,
+      "lon": -1.90231
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 761696995,
+      "feature": "beach",
+      "facingDeg": 150,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -2236,6 +2580,49 @@
     }
   },
   {
+    "id": "caswell-bay-beach",
+    "name": "Caswell Bay Beach",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.56778,
+      "lon": -4.03212
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1493808548,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "cata-sand",
     "name": "Cata Sand",
     "community": "Scotland",
@@ -2408,6 +2795,92 @@
     }
   },
   {
+    "id": "challaborough-beach",
+    "name": "Challaborough Beach",
+    "community": "Devon",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.28755,
+      "lon": -3.89835
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 165350458,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "chapel-porth-beach",
+    "name": "Chapel Porth Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.30025,
+      "lon": -5.23476
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 880115255,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "chesil-beach",
     "name": "Chesil Beach",
     "community": "Dorset",
@@ -2532,6 +3005,49 @@
       "feature": "beach",
       "facingDeg": 195,
       "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "church-cove",
+    "name": "Church Cove",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.03806,
+      "lon": -5.26778
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 221913963,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -2967,6 +3483,49 @@
     }
   },
   {
+    "id": "constantine-bay",
+    "name": "Constantine Bay",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.53384,
+      "lon": -5.02449
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 44535296,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "conwy-sands-1493661046",
     "name": "Conwy Sands",
     "community": "Wales",
@@ -3005,6 +3564,49 @@
       "feature": "beach",
       "facingDeg": 330,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "cook-s-porth",
+    "name": "Cook's Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.95867,
+      "lon": -6.32615
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458991,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -3134,6 +3736,92 @@
       "feature": "beach",
       "facingDeg": 60,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "cradle-porth",
+    "name": "Cradle Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.95747,
+      "lon": -6.32397
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 983560900,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "crantock-beach",
+    "name": "Crantock Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.40728,
+      "lon": -5.12165
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 65293312,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -3741,49 +4429,6 @@
     }
   },
   {
-    "id": "east-beach-19774262",
-    "name": "East Beach",
-    "community": "Scotland",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 57.71145,
-      "lon": -3.43011
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 225,
-        "maxAngle": 75
-      },
-      "offshoreWindAngle": 150,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 19774262,
-      "feature": "beach",
-      "facingDeg": 330,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "east-hoyle-bank",
     "name": "East Hoyle Bank",
     "community": "Merseyside",
@@ -3908,6 +4553,49 @@
       "feature": "beach",
       "facingDeg": 30,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "east-strand",
+    "name": "East Strand",
+    "community": "Northern Ireland",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.20653,
+      "lon": -6.63044
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 200831667,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -4343,6 +5031,92 @@
     }
   },
   {
+    "id": "freshwater-beach",
+    "name": "Freshwater Beach",
+    "community": "Isle of Wight",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.66957,
+      "lon": -1.5093
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 542206091,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "freshwater-east",
+    "name": "Freshwater East",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.64385,
+      "lon": -4.86134
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 187007958,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "freshwater-west",
     "name": "Freshwater West",
     "community": "Wales",
@@ -4472,6 +5246,49 @@
     }
   },
   {
+    "id": "gilbert-s-porth",
+    "name": "Gilbert's Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.9267,
+      "lon": -6.28122
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 270,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 191607823,
+      "feature": "beach",
+      "facingDeg": 90,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "greatstone-beach",
     "name": "Greatstone beach",
     "community": "Kent",
@@ -4510,6 +5327,49 @@
       "feature": "beach",
       "facingDeg": 90,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "green-porth",
+    "name": "Green Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.95898,
+      "lon": -6.3304
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458762,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 330,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -4730,6 +5590,49 @@
     }
   },
   {
+    "id": "halangy-porth",
+    "name": "Halangy Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.93244,
+      "lon": -6.30902
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458981,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "half-moon-bay",
     "name": "Half Moon Bay",
     "community": "Lancashire",
@@ -4811,6 +5714,49 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "harlyn-bay",
+    "name": "Harlyn Bay",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.54209,
+      "lon": -4.99977
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 44886075,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -5069,6 +6015,49 @@
       "feature": "beach",
       "facingDeg": 150,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "holywell-beach",
+    "name": "Holywell Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.39337,
+      "lon": -5.14878
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 102574214,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -5418,6 +6407,49 @@
     }
   },
   {
+    "id": "kennack-sands",
+    "name": "Kennack Sands",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.00613,
+      "lon": -5.15971
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 315,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 139627690,
+      "feature": "beach",
+      "facingDeg": 135,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "kilclief-beach",
     "name": "Kilclief Beach",
     "community": "Northern Ireland",
@@ -5671,6 +6703,49 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "kitchen-porth",
+    "name": "Kitchen Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.95786,
+      "lon": -6.35061
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 232450120,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -5972,6 +7047,49 @@
       "feature": "beach",
       "facingDeg": 150,
       "exposureDeg": 330,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "little-porth",
+    "name": "Little Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91336,
+      "lon": -6.31686
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 339813305,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -6536,6 +7654,49 @@
     }
   },
   {
+    "id": "lusty-glaze-beach",
+    "name": "Lusty Glaze Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.42319,
+      "lon": -5.06714
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 188659847,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "lyne-sands",
     "name": "Lyne Sands",
     "community": "Tyne and Wear",
@@ -6837,49 +7998,6 @@
     }
   },
   {
-    "id": "margate-main-sands",
-    "name": "Margate Main Sands",
-    "community": "Kent",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 51.38838,
-      "lon": 1.36618
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 255,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 180,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 93759701,
-      "feature": "beach",
-      "facingDeg": 0,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "marloes-sands",
     "name": "Marloes Sands",
     "community": "Wales",
@@ -6960,6 +8078,49 @@
       "osmId": 1493547696,
       "feature": "beach",
       "facingDeg": 150,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "mawgan-porth",
+    "name": "Mawgan Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.46871,
+      "lon": -5.03632
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 1015689,
+      "feature": "beach",
+      "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -7912,6 +9073,49 @@
     }
   },
   {
+    "id": "newgale-south",
+    "name": "Newgale South",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.84304,
+      "lon": -5.11785
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1326348642,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "north-bank",
     "name": "North Bank",
     "community": "Merseyside",
@@ -8122,49 +9326,6 @@
       "feature": "beach",
       "facingDeg": 135,
       "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "nudist-beach",
-    "name": "Nudist Beach",
-    "community": "Scotland",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 58.06478,
-      "lon": -3.77109
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 75,
-        "maxAngle": 225
-      },
-      "offshoreWindAngle": 330,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 13970665471,
-      "feature": "beach",
-      "facingDeg": 150,
-      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8385,49 +9546,6 @@
     }
   },
   {
-    "id": "pamflete-beach",
-    "name": "Pamflete Beach",
-    "community": "Devon",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 50.31604,
-      "lon": -3.94052
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 255
-      },
-      "offshoreWindAngle": 15,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 240389692,
-      "feature": "beach",
-      "facingDeg": 195,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "pathhead-sands",
     "name": "Pathhead Sands",
     "community": "Scotland",
@@ -8643,21 +9761,21 @@
     }
   },
   {
-    "id": "perran-beach",
+    "id": "perran-beach-2177117",
     "name": "Perran Beach",
     "community": "Cornwall",
     "country": "United Kingdom",
     "type": "Beach",
     "coordinates": {
-      "lat": 50.36223,
-      "lon": -5.15336
+      "lat": 50.34751,
+      "lon": -5.15797
     },
     "config": {
       "swellWindow": {
-        "minAngle": 225,
+        "minAngle": 255,
         "maxAngle": 15
       },
-      "offshoreWindAngle": 120,
+      "offshoreWindAngle": 135,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -8677,10 +9795,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "relation",
-      "osmId": 2177116,
+      "osmId": 2177117,
       "feature": "beach",
-      "facingDeg": 300,
-      "exposureDeg": 150,
+      "facingDeg": 315,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8944,6 +10062,221 @@
     }
   },
   {
+    "id": "porth-askin",
+    "name": "Porth Askin",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.88518,
+      "lon": -6.34222
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 15,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 203152955,
+      "feature": "beach",
+      "facingDeg": 195,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-beach",
+    "name": "Porth Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.42502,
+      "lon": -5.06041
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 1015668,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-cadlan",
+    "name": "Porth Cadlan",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.8023,
+      "lon": -4.67113
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1533189847,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-cadwaladr",
+    "name": "Porth Cadwaladr",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.17091,
+      "lon": -4.45339
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 310390340,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-castell",
+    "name": "Porth Castell",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.27161,
+      "lon": -4.62203
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1393358064,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "porth-ceiriad",
     "name": "Porth Ceiriad",
     "community": "Wales",
@@ -8987,6 +10320,49 @@
     }
   },
   {
+    "id": "porth-chapel",
+    "name": "Porth Chapel",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.03928,
+      "lon": -5.65776
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 15,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 180210920,
+      "feature": "beach",
+      "facingDeg": 195,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "porth-china",
     "name": "Porth China",
     "community": "Wales",
@@ -9025,6 +10401,49 @@
       "feature": "beach",
       "facingDeg": 240,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-coose",
+    "name": "Porth Coose",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.89596,
+      "lon": -6.34993
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 883613899,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9202,6 +10621,135 @@
     }
   },
   {
+    "id": "porth-ferin",
+    "name": "Porth Ferin",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.85433,
+      "lon": -4.71628
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1484042827,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-gro",
+    "name": "Porth Gro",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.15954,
+      "lon": -4.4412
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 335324343,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-hellick",
+    "name": "Porth Hellick",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91697,
+      "lon": -6.28509
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 342162397,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "porth-iago",
     "name": "Porth Iago",
     "community": "Wales",
@@ -9239,6 +10787,393 @@
       "osmId": 1266066534,
       "feature": "beach",
       "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-joke",
+    "name": "Porth Joke",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.40312,
+      "lon": -5.13839
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 1021928,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-kidney-sands",
+    "name": "Porth Kidney Sands",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.195,
+      "lon": -5.44452
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 304055818,
+      "feature": "beach",
+      "facingDeg": 0,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-llanllawen",
+    "name": "Porth Llanllawen",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.80525,
+      "lon": -4.75184
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 14145943129,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-llawenan",
+    "name": "Porth Llawenan",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.80362,
+      "lon": -4.65269
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1533189602,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-lleuog",
+    "name": "Porth Lleuog",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.85865,
+      "lon": -5.34216
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 309118762,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-mellon",
+    "name": "Porth Mellon",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91721,
+      "lon": -6.30895
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33459054,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-meudwy",
+    "name": "Porth Meudwy",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.79614,
+      "lon": -4.72552
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 311796675,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-minick",
+    "name": "Porth Minick",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91152,
+      "lon": -6.29714
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458867,
+      "feature": "beach",
+      "facingDeg": 165,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-nanven",
+    "name": "Porth Nanven",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.11939,
+      "lon": -5.70062
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1049578750,
+      "feature": "beach",
+      "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -9288,6 +11223,92 @@
     }
   },
   {
+    "id": "porth-nobla",
+    "name": "Porth Nobla",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.21272,
+      "lon": -4.5029
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 367145447,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-samddai",
+    "name": "Porth Samddai",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.80314,
+      "lon": -4.71761
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 27694924,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "porth-swtan",
     "name": "Porth Swtan",
     "community": "Wales",
@@ -9326,6 +11347,221 @@
       "feature": "beach",
       "facingDeg": 300,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-trecastell",
+    "name": "Porth Trecastell",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.20719,
+      "lon": -4.4978
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 332076210,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-trwyn",
+    "name": "Porth Trwyn",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.35931,
+      "lon": -4.56195
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 8441906507,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-wreck",
+    "name": "Porth Wreck",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91978,
+      "lon": -6.27871
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 270,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1313000270,
+      "feature": "beach",
+      "facingDeg": 90,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-ysgaden",
+    "name": "Porth Ysgaden",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.90482,
+      "lon": -4.64899
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1323736914,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porth-ysgo",
+    "name": "Porth Ysgo",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.80552,
+      "lon": -4.66009
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1266138656,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9498,6 +11734,135 @@
       "feature": "beach",
       "facingDeg": 300,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthcressa-beach",
+    "name": "Porthcressa Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.91332,
+      "lon": -6.31444
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458853,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthcurnick",
+    "name": "Porthcurnick",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.18566,
+      "lon": -4.97203
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 164638846,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthcurno",
+    "name": "Porthcurno",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.04285,
+      "lon": -5.65037
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 15,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 97955671,
+      "feature": "beach",
+      "facingDeg": 195,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9804,6 +12169,178 @@
     }
   },
   {
+    "id": "porthlysgi-bay",
+    "name": "Porthlysgi Bay",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.86525,
+      "lon": -5.29703
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 4111853,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthmeor-beach",
+    "name": "Porthmeor Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.21622,
+      "lon": -5.4834
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 182234673,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthminster-beach",
+    "name": "Porthminster Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.20906,
+      "lon": -5.4751
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 304190684,
+      "feature": "beach",
+      "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthor",
+    "name": "Porthor",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.83599,
+      "lon": -4.72364
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 27695241,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "porthpean-beach",
     "name": "Porthpean Beach",
     "community": "Cornwall",
@@ -9842,6 +12379,49 @@
       "feature": "beach",
       "facingDeg": 150,
       "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porthselau-beach",
+    "name": "Porthselau Beach",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.88651,
+      "lon": -5.30495
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1295418894,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 300,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9933,6 +12513,49 @@
     }
   },
   {
+    "id": "porthzennor-cove",
+    "name": "Porthzennor Cove",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.19855,
+      "lon": -5.57089
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 11478129,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "portpatrick-beach",
     "name": "Portpatrick Beach",
     "community": "Scotland",
@@ -9970,6 +12593,178 @@
       "osmId": 1127377342,
       "feature": "beach",
       "facingDeg": 225,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "portreath-beach",
+    "name": "Portreath Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.26196,
+      "lon": -5.29535
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 163584443,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "portstewart-strand",
+    "name": "Portstewart Strand",
+    "community": "Northern Ireland",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.16965,
+      "lon": -6.74807
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 305364153,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "praa-sands",
+    "name": "Praa Sands",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.10083,
+      "lon": -5.38601
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 60904403,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "putsborough-sands",
+    "name": "Putsborough Sands",
+    "community": "Devon",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.1485,
+      "lon": -4.22205
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1320452395,
+      "feature": "beach",
+      "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -10105,49 +12900,6 @@
     }
   },
   {
-    "id": "ramsgate-western-undercliffe",
-    "name": "Ramsgate Western Undercliffe",
-    "community": "Kent",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 51.32657,
-      "lon": 1.40718
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 45,
-        "maxAngle": 195
-      },
-      "offshoreWindAngle": 300,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 141790424,
-      "feature": "beach",
-      "facingDeg": 120,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "rane-beach",
     "name": "Rane Beach",
     "community": "Cornwall",
@@ -10186,6 +12938,49 @@
       "feature": "beach",
       "facingDeg": 270,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "raven-porth",
+    "name": "Raven Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.96075,
+      "lon": -6.3329
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458778,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 330,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -10621,21 +13416,21 @@
     }
   },
   {
-    "id": "ro-bach",
-    "name": "Ro Bach",
+    "id": "ro-fawr",
+    "name": "Ro Fawr",
     "community": "Wales",
     "country": "United Kingdom",
     "type": "Beach",
     "coordinates": {
-      "lat": 53.14461,
-      "lon": -4.40029
+      "lat": 53.13237,
+      "lon": -4.3585
     },
     "config": {
       "swellWindow": {
-        "minAngle": 105,
+        "minAngle": 165,
         "maxAngle": 285
       },
-      "offshoreWindAngle": 15,
+      "offshoreWindAngle": 45,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -10655,10 +13450,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 1376981831,
+      "osmId": 1376981835,
       "feature": "beach",
-      "facingDeg": 195,
-      "exposureDeg": 180,
+      "facingDeg": 225,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11089,6 +13884,49 @@
       "feature": "beach",
       "facingDeg": 30,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "rushy-porth",
+    "name": "Rushy Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.95503,
+      "lon": -6.32135
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33459016,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11648,6 +14486,49 @@
       "feature": "beach",
       "facingDeg": 0,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "saunton-sands",
+    "name": "Saunton Sands",
+    "community": "Devon",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.09199,
+      "lon": -4.21188
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 9452840,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -12599,49 +15480,6 @@
     }
   },
   {
-    "id": "south-gut",
-    "name": "South Gut",
-    "community": "Devon",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 51.06885,
-      "lon": -4.22228
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 225,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 3188399,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "south-sands",
     "name": "South Sands",
     "community": "Scotland",
@@ -12900,49 +15738,6 @@
     }
   },
   {
-    "id": "stem",
-    "name": "Stem",
-    "community": "Cornwall",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 50.45709,
-      "lon": -5.04162
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 225,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 65089019,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "stenness-beach",
     "name": "Stenness Beach",
     "community": "Scotland",
@@ -12980,6 +15775,49 @@
       "osmId": 384803809,
       "feature": "beach",
       "facingDeg": 240,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "stoney-porth",
+    "name": "Stoney Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.94567,
+      "lon": -6.35749
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 705829589,
+      "feature": "beach",
+      "facingDeg": 270,
       "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -13024,49 +15862,6 @@
       "feature": "beach",
       "facingDeg": 0,
       "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "studland-naturist-beach",
-    "name": "Studland Naturist Beach",
-    "community": "Dorset",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 50.66432,
-      "lon": -1.9474
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 45,
-        "maxAngle": 165
-      },
-      "offshoreWindAngle": 285,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 230388260,
-      "feature": "beach",
-      "facingDeg": 105,
-      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13153,6 +15948,49 @@
       "feature": "beach",
       "facingDeg": 90,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "summerleaze-beach",
+    "name": "Summerleaze Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.83093,
+      "lon": -4.55268
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 176873822,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13545,6 +16383,92 @@
     }
   },
   {
+    "id": "tolcarne-beach",
+    "name": "Tolcarne Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.41848,
+      "lon": -5.07496
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 188659846,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "toll-s-porth",
+    "name": "Toll's Porth",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.93076,
+      "lon": -6.30942
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 33458802,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "torrisdale-bay",
     "name": "Torrisdale Bay",
     "community": "Scotland",
@@ -13626,6 +16550,92 @@
       "feature": "beach",
       "facingDeg": 0,
       "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "towan",
+    "name": "Towan",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.15853,
+      "lon": -4.98263
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 164642077,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "towan-beach",
+    "name": "Towan Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.41679,
+      "lon": -5.08528
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 1015399,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13717,49 +16727,6 @@
     }
   },
   {
-    "id": "traeth-dolwen",
-    "name": "Traeth Dolwen",
-    "community": "Wales",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 52.13512,
-      "lon": -4.54708
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 285,
-        "maxAngle": 45
-      },
-      "offshoreWindAngle": 165,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 70110451,
-      "feature": "beach",
-      "facingDeg": 345,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "traeth-godir-coch",
     "name": "Traeth Godir-coch",
     "community": "Wales",
@@ -13803,21 +16770,21 @@
     }
   },
   {
-    "id": "traeth-llydan",
-    "name": "Traeth Llydan",
+    "id": "traeth-harlech",
+    "name": "Traeth Harlech",
     "community": "Wales",
     "country": "United Kingdom",
     "type": "Beach",
     "coordinates": {
-      "lat": 53.24611,
-      "lon": -4.5622
+      "lat": 52.87795,
+      "lon": -4.14282
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 285
+        "minAngle": 195,
+        "maxAngle": 315
       },
-      "offshoreWindAngle": 30,
+      "offshoreWindAngle": 75,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -13837,10 +16804,53 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 39666451,
+      "osmId": 125401103,
       "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 150,
+      "facingDeg": 255,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "traeth-harlech-1322354327",
+    "name": "Traeth Harlech",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.85375,
+      "lon": -4.12454
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1322354327,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -15867,6 +18877,49 @@
     }
   },
   {
+    "id": "tresaith",
+    "name": "Tresaith",
+    "community": "Wales",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.13614,
+      "lon": -4.51931
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 72474916,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "trevone-beach",
     "name": "Trevone Beach",
     "community": "Cornwall",
@@ -15905,6 +18958,49 @@
       "feature": "beach",
       "facingDeg": 300,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "treyarnon-beach",
+    "name": "Treyarnon Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.52697,
+      "lon": -5.02457
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 44535294,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -16125,6 +19221,49 @@
     }
   },
   {
+    "id": "viking-bay",
+    "name": "Viking Bay",
+    "community": "Kent",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.35777,
+      "lon": 1.44395
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 270,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 93661980,
+      "feature": "beach",
+      "facingDeg": 90,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "watch-house-beach",
     "name": "Watch House Beach",
     "community": "Wales",
@@ -16168,6 +19307,49 @@
     }
   },
   {
+    "id": "watergate-beach",
+    "name": "Watergate Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.44462,
+      "lon": -5.04652
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 1015688,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "wembury-beach",
     "name": "Wembury Beach",
     "community": "Devon",
@@ -16206,6 +19388,49 @@
       "feature": "beach",
       "facingDeg": 225,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "west-beach-1446271874",
+    "name": "West Beach",
+    "community": "Scotland",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 57.70973,
+      "lon": -3.43939
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1446271874,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -16421,6 +19646,49 @@
       "feature": "beach",
       "facingDeg": 120,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "whipsiderry-beach",
+    "name": "Whipsiderry Beach",
+    "community": "Cornwall",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 50.43075,
+      "lon": -5.05624
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 4114066,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -16770,6 +20038,49 @@
     }
   },
   {
+    "id": "whitley-sands",
+    "name": "Whitley Sands",
+    "community": "Tyne and Wear",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.05477,
+      "lon": -1.44675
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 255,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 185833458,
+      "feature": "beach",
+      "facingDeg": 75,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "widemouth-sands",
     "name": "Widemouth Sands",
     "community": "Cornwall",
@@ -16850,6 +20161,49 @@
       "osmId": 1464186211,
       "feature": "beach",
       "facingDeg": 45,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "woolacombe-sands",
+    "name": "Woolacombe Sands",
+    "community": "Devon",
+    "country": "United Kingdom",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.16235,
+      "lon": -4.2146
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 23121779,
+      "feature": "beach",
+      "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"

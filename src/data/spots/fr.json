@@ -1,48 +1,5 @@
 [
   {
-    "id": "acces-plage",
-    "name": "ACCES PLAGE",
-    "community": "Pays de la Loire",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.51313,
-      "lon": -1.81682
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 60,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 9502048528,
-      "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "ancienne-decharge",
     "name": "Ancienne Décharge",
     "community": "Bretagne",
@@ -946,6 +903,49 @@
     }
   },
   {
+    "id": "chef-de-baie",
+    "name": "Chef de Baie",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.14749,
+      "lon": -1.21044
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 135265574,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "chevanu",
     "name": "Chevanu",
     "community": "Corse",
@@ -1118,6 +1118,49 @@
     }
   },
   {
+    "id": "dieppe-plage-de-la-piscine",
+    "name": "Dieppe - plage de la piscine",
+    "community": "Normandie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.92497,
+      "lon": 1.06242
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 1723311345,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "el-cano",
     "name": "El Cano",
     "community": "Occitanie",
@@ -1198,6 +1241,92 @@
       "osmId": 40841434,
       "feature": "beach",
       "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "erretegia",
+    "name": "Erretegia",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.44663,
+      "lon": -1.58978
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 59512335,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "erromardie",
+    "name": "Erromardie",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.40653,
+      "lon": -1.64264
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 183132878,
+      "feature": "beach",
+      "facingDeg": 330,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -1328,6 +1457,49 @@
       "feature": "beach",
       "facingDeg": 225,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "grand-plage-122113061",
+    "name": "Grand'Plage",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.78786,
+      "lon": -1.41313
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 122113061,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -1548,6 +1720,49 @@
     }
   },
   {
+    "id": "grande-plage-89679914",
+    "name": "Grande Plage",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.98849,
+      "lon": -1.09936
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 89679914,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "grande-plage-de-gavres",
     "name": "Grande plage de Gâvres",
     "community": "Bretagne",
@@ -1586,6 +1801,49 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "grande-plage-des-sables-d-olonne",
+    "name": "Grande Plage des Sables d'Olonne",
+    "community": "Pays de la Loire",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.49237,
+      "lon": -1.78278
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 175723116,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -1720,6 +1978,49 @@
     }
   },
   {
+    "id": "greve-jaune",
+    "name": "Grève jaune",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.79271,
+      "lon": -4.29091
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 595613229,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "guarded-beach",
     "name": "Guarded beach",
     "community": "Corse",
@@ -1849,6 +2150,92 @@
     }
   },
   {
+    "id": "harotzen-kosta",
+    "name": "Harotzen Kosta",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.42549,
+      "lon": -1.61444
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 454703748,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "ilbarritz",
+    "name": "Ilbarritz",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.4592,
+      "lon": -1.57954
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 517323073,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "l-espiguette-432953386",
     "name": "L'Espiguette",
     "community": "Occitanie",
@@ -1930,49 +2317,6 @@
       "feature": "beach",
       "facingDeg": 120,
       "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "la-cible",
-    "name": "La Cible",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.20481,
-      "lon": -1.35449
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 285,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 195,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 121681979,
-      "feature": "beach",
-      "facingDeg": 15,
-      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -2451,6 +2795,49 @@
     }
   },
   {
+    "id": "la-plagette",
+    "name": "La Plagette",
+    "community": "Occitanie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.27457,
+      "lon": 3.51215
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 114813830,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "la-source",
     "name": "La Source",
     "community": "La Réunion",
@@ -2489,6 +2876,49 @@
       "feature": "beach",
       "facingDeg": 195,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "lafitenia",
+    "name": "Lafitenia",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.41393,
+      "lon": -1.62978
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 517323075,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -2709,49 +3139,6 @@
     }
   },
   {
-    "id": "le-phare",
-    "name": "Le Phare",
-    "community": "Pays de la Loire",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.34413,
-      "lon": -1.461
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 30,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 107576526,
-      "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "le-trayas",
     "name": "Le Trayas",
     "community": "Provence-Alpes-Côte d'Azur",
@@ -2924,6 +3311,49 @@
     }
   },
   {
+    "id": "les-flots-bleus",
+    "name": "Les Flots Bleus",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.39801,
+      "lon": -1.6614
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 18640915,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "les-hattes",
     "name": "Les Hattes",
     "community": "Guyane",
@@ -2962,6 +3392,49 @@
       "feature": "beach",
       "facingDeg": 15,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "maiarko",
+    "name": "Maiarko",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.41869,
+      "lon": -1.62551
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 118045185,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -3182,6 +3655,49 @@
     }
   },
   {
+    "id": "ondarraitz",
+    "name": "Ondarraitz",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.37453,
+      "lon": -1.77433
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 234073850,
+      "feature": "beach",
+      "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "ondres-ocean",
     "name": "Ondres-Océan",
     "community": "Nouvelle-Aquitaine",
@@ -3268,6 +3784,49 @@
     }
   },
   {
+    "id": "palavas-ouest",
+    "name": "Palavas Ouest",
+    "community": "Occitanie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.52219,
+      "lon": 3.92171
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 330,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 26203732,
+      "feature": "beach",
+      "facingDeg": 150,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "parlementia",
     "name": "Parlementia",
     "community": "Nouvelle-Aquitaine",
@@ -3303,6 +3862,49 @@
       "source": "openstreetmap-overpass",
       "osmType": "way",
       "osmId": 59575771,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "pavillon-royal",
+    "name": "Pavillon Royal",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.45364,
+      "lon": -1.58386
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 59512338,
       "feature": "beach",
       "facingDeg": 300,
       "exposureDeg": 150,
@@ -3569,6 +4171,92 @@
     }
   },
   {
+    "id": "plage-centrale-233344667",
+    "name": "Plage Centrale",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.65165,
+      "lon": -1.44601
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 233344667,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-centrale-373825572",
+    "name": "Plage Centrale",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.00159,
+      "lon": -1.2023
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 373825572,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-centrale-77594385",
     "name": "Plage Centrale",
     "community": "Provence-Alpes-Côte d'Azur",
@@ -3650,6 +4338,49 @@
       "feature": "beach",
       "facingDeg": 270,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-centrale-du-porge-le-gressier",
+    "name": "Plage centrale du Porge (Le Gressier)",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.89405,
+      "lon": -1.21802
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 5225013921,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -3908,6 +4639,49 @@
       "feature": "beach",
       "facingDeg": 315,
       "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-d-anse-crawen",
+    "name": "Plage d'Anse Crawen",
+    "community": "Guadeloupe",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 15.85777,
+      "lon": -61.60304
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 34,
+        "maxAngle": 34
+      },
+      "offshoreWindAngle": 34,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 55346040,
+      "feature": "beach",
+      "facingDeg": 214,
+      "exposureDeg": 360,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -4300,49 +5074,6 @@
     }
   },
   {
-    "id": "plage-d-eyrac",
-    "name": "Plage d'Eyrac",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 44.66291,
-      "lon": -1.15859
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 315,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 210,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 41959089,
-      "feature": "beach",
-      "facingDeg": 30,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-de-babin",
     "name": "Plage de Babin",
     "community": "Guadeloupe",
@@ -4515,6 +5246,92 @@
     }
   },
   {
+    "id": "plage-de-biville",
+    "name": "Plage de Biville",
+    "community": "Normandie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.59208,
+      "lon": -1.84254
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 1723311180,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-biville-1723311638",
+    "name": "Plage de Biville",
+    "community": "Normandie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 49.60959,
+      "lon": -1.8433
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 1723311638,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-bois-jolan",
     "name": "Plage de Bois Jolan",
     "community": "Guadeloupe",
@@ -4553,6 +5370,49 @@
       "feature": "beach",
       "facingDeg": 165,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-bombannes",
+    "name": "Plage de Bombannes",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.09822,
+      "lon": -1.14189
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 5322127479,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -4644,21 +5504,21 @@
     }
   },
   {
-    "id": "plage-de-bot-conan",
-    "name": "Plage de Bot Conan",
-    "community": "Bretagne",
+    "id": "plage-de-boucan-canot",
+    "name": "Plage de Boucan-Canot",
+    "community": "La Réunion",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 47.87231,
-      "lon": -3.98502
+      "lat": -21.02979,
+      "lon": 55.22387
     },
     "config": {
       "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 255
+        "minAngle": 165,
+        "maxAngle": 45
       },
-      "offshoreWindAngle": 0,
+      "offshoreWindAngle": 105,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -4677,11 +5537,11 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 615395595,
+      "osmType": "relation",
+      "osmId": 4055818,
       "feature": "beach",
-      "facingDeg": 180,
-      "exposureDeg": 150,
+      "facingDeg": 285,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -5117,6 +5977,92 @@
     }
   },
   {
+    "id": "plage-de-chaucre",
+    "name": "Plage de Chaucre",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.98311,
+      "lon": -1.39234
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 300037537,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-ciboure",
+    "name": "Plage de Ciboure",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.38785,
+      "lon": -1.67011
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 190721072,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-clugny",
     "name": "Plage de Clugny",
     "community": "Guadeloupe",
@@ -5241,6 +6187,49 @@
       "feature": "beach",
       "facingDeg": 345,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-domino",
+    "name": "Plage de Domino",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.9677,
+      "lon": -1.38886
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 298811213,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -6450,6 +7439,49 @@
     }
   },
   {
+    "id": "plage-de-kerveltrec",
+    "name": "Plage de Kerveltrec",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.8676,
+      "lon": -3.9856
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 314744448,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-l-aiglon",
     "name": "Plage de l'Aiglon",
     "community": "Provence-Alpes-Côte d'Azur",
@@ -6574,49 +7606,6 @@
       "feature": "beach",
       "facingDeg": 165,
       "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-de-l-anse-a-dos",
-    "name": "Plage de l'Anse à Dos",
-    "community": "Guadeloupe",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 15.85403,
-      "lon": -61.64703
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 75
-      },
-      "offshoreWindAngle": 90,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 474923791,
-      "feature": "beach",
-      "facingDeg": 270,
-      "exposureDeg": 330,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -7095,21 +8084,21 @@
     }
   },
   {
-    "id": "plage-de-l-etang-sale",
-    "name": "Plage de L'Étang-Salé",
-    "community": "La Réunion",
+    "id": "plage-de-l-ocean-183134274",
+    "name": "Plage de l'Océan",
+    "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": -21.26051,
-      "lon": 55.32769
+      "lat": 43.51436,
+      "lon": -1.53191
     },
     "config": {
       "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 315
+        "minAngle": 225,
+        "maxAngle": 15
       },
-      "offshoreWindAngle": 30,
+      "offshoreWindAngle": 120,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -7129,30 +8118,30 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 478030895,
+      "osmId": 183134274,
       "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 210,
+      "facingDeg": 300,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
   },
   {
-    "id": "plage-de-l-horizon",
-    "name": "Plage de l'Horizon",
+    "id": "plage-de-la-balise",
+    "name": "Plage de la Balise",
     "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 44.65492,
-      "lon": -1.25939
+      "lat": 43.85315,
+      "lon": -1.39255
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
+        "minAngle": 195,
         "maxAngle": 15
       },
-      "offshoreWindAngle": 75,
+      "offshoreWindAngle": 105,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -7171,11 +8160,11 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 4988113673,
+      "osmType": "way",
+      "osmId": 234222592,
       "feature": "beach",
-      "facingDeg": 255,
-      "exposureDeg": 240,
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -7262,49 +8251,6 @@
       "feature": "beach",
       "facingDeg": 135,
       "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-de-la-biroire",
-    "name": "Plage de la Biroire",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 45.93605,
-      "lon": -1.36308
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 60,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 522228485,
-      "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -7525,49 +8471,6 @@
     }
   },
   {
-    "id": "plage-de-la-concurrence",
-    "name": "Plage de la Concurrence",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.15494,
-      "lon": -1.16067
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 165,
-        "maxAngle": 285
-      },
-      "offshoreWindAngle": 45,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 39068226,
-      "feature": "beach",
-      "facingDeg": 225,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-de-la-cote-sauvage",
     "name": "Plage de la Côte Sauvage",
     "community": "Nouvelle-Aquitaine",
@@ -7692,6 +8595,49 @@
       "feature": "beach",
       "facingDeg": 180,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-digue",
+    "name": "Plage de la Digue",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.53872,
+      "lon": -1.51612
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 303968639,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -7869,6 +8815,49 @@
     }
   },
   {
+    "id": "plage-de-la-grande-conche",
+    "name": "Plage de la Grande Conche",
+    "community": "Pays de la Loire",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.6973,
+      "lon": -2.28817
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 285,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 2019612,
+      "feature": "beach",
+      "facingDeg": 105,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-la-grande-terre-des-salines",
     "name": "Plage de la Grande Terre des Salines",
     "community": "Martinique",
@@ -7955,6 +8944,49 @@
     }
   },
   {
+    "id": "plage-de-la-hume",
+    "name": "Plage de la Hume",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.64541,
+      "lon": -1.11429
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 195,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 172893400,
+      "feature": "beach",
+      "facingDeg": 15,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-la-marana",
     "name": "Plage de la Marana",
     "community": "Corse",
@@ -7993,6 +9025,49 @@
       "feature": "beach",
       "facingDeg": 60,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-marbellla",
+    "name": "Plage de la Marbellla",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.46782,
+      "lon": -1.57352
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 249245278,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8084,6 +9159,49 @@
     }
   },
   {
+    "id": "plage-de-la-milady",
+    "name": "Plage de la Milady",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.46419,
+      "lon": -1.57564
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 121832050,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-la-nau",
     "name": "Plage de la Nau",
     "community": "Occitanie",
@@ -8122,6 +9240,49 @@
       "feature": "beach",
       "facingDeg": 180,
       "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-palmyre",
+    "name": "Plage de la Palmyre",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.67946,
+      "lon": -1.1767
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 3188493,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8170,49 +9331,6 @@
     }
   },
   {
-    "id": "plage-de-la-perroche",
-    "name": "Plage de la Perroche",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 45.89919,
-      "lon": -1.29467
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 165,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 60,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 176499349,
-      "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-de-la-petite-anse",
     "name": "Plage de la Petite Anse",
     "community": "Guadeloupe",
@@ -8256,6 +9374,135 @@
     }
   },
   {
+    "id": "plage-de-la-petite-barre",
+    "name": "Plage de la Petite Barre",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.52803,
+      "lon": -1.52327
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058702,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-petite-chambre-d-amour",
+    "name": "Plage de la Petite Chambre d'Amour",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.49577,
+      "lon": -1.54658
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 23635506,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-piste",
+    "name": "Plage de la Piste",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.64177,
+      "lon": -1.44751
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2417680230,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-la-platere",
     "name": "Plage de la Platère",
     "community": "Nouvelle-Aquitaine",
@@ -8294,6 +9541,49 @@
       "feature": "beach",
       "facingDeg": 225,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-pointe-de-grignon",
+    "name": "Plage de la Pointe de Grignon",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.20446,
+      "lon": -1.53563
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 633248945,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8600,6 +9890,49 @@
     }
   },
   {
+    "id": "plage-de-la-terriere",
+    "name": "Plage de la Terriere",
+    "community": "Pays de la Loire",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.3611,
+      "lon": -1.47644
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 1723311736,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-la-torche",
     "name": "Plage de la Torche",
     "community": "Bretagne",
@@ -8638,6 +9971,49 @@
       "feature": "beach",
       "facingDeg": 255,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-la-torchere",
+    "name": "Plage de la Torchère",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.67574,
+      "lon": -1.25662
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 4988113669,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8729,6 +10105,92 @@
     }
   },
   {
+    "id": "plage-de-lanton",
+    "name": "Plage de Lanton",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.699,
+      "lon": -1.04503
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 540513072,
+      "feature": "beach",
+      "facingDeg": 255,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-legere",
+    "name": "Plage de Légère",
+    "community": "Pays de la Loire",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.41193,
+      "lon": -1.60341
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 15,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 26949613,
+      "feature": "beach",
+      "facingDeg": 195,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-leroux",
     "name": "Plage de Leroux",
     "community": "Guadeloupe",
@@ -8767,6 +10229,49 @@
       "feature": "beach",
       "facingDeg": 270,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-leucate-plage",
+    "name": "Plage de Leucate-Plage",
+    "community": "Occitanie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 42.89825,
+      "lon": 3.05462
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 285,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 41749055,
+      "feature": "beach",
+      "facingDeg": 105,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -8858,49 +10363,6 @@
     }
   },
   {
-    "id": "plage-de-maguelone",
-    "name": "Plage de Maguelone",
-    "community": "Occitanie",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 43.50472,
-      "lon": 3.88226
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 15,
-        "maxAngle": 255
-      },
-      "offshoreWindAngle": 315,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 389802445,
-      "feature": "beach",
-      "facingDeg": 135,
-      "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-de-malendure",
     "name": "Plage de Malendure",
     "community": "Guadeloupe",
@@ -8982,6 +10444,92 @@
       "feature": "beach",
       "facingDeg": 45,
       "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-marinella",
+    "name": "Plage de Marinella",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.5044,
+      "lon": -1.53961
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 183134275,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-matha",
+    "name": "Plage de Matha",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.90869,
+      "lon": -1.3162
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 143786011,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9073,92 +10621,6 @@
     }
   },
   {
-    "id": "plage-de-montamer",
-    "name": "Plage de Montamer",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.15015,
-      "lon": -1.33496
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 285
-      },
-      "offshoreWindAngle": 315,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 194912877,
-      "feature": "beach",
-      "facingDeg": 135,
-      "exposureDeg": 300,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-de-morpoigne",
-    "name": "Plage de Morpoigne",
-    "community": "Pays de la Loire",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.40892,
-      "lon": -1.57699
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 285
-      },
-      "offshoreWindAngle": 15,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 257035239,
-      "feature": "beach",
-      "facingDeg": 195,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-de-mousterlin",
     "name": "Plage de Mousterlin",
     "community": "Bretagne",
@@ -9240,6 +10702,49 @@
       "feature": "beach",
       "facingDeg": 90,
       "exposureDeg": 330,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-notre-dame",
+    "name": "Plage de Notre-Dame",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.65739,
+      "lon": -1.44602
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2418131833,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9589,6 +11094,49 @@
     }
   },
   {
+    "id": "plage-de-pontaillac",
+    "name": "Plage de Pontaillac",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.62545,
+      "lon": -1.05311
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 285355870,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-porcon",
     "name": "Plage de Porcon",
     "community": "Bretagne",
@@ -9627,6 +11175,49 @@
       "feature": "beach",
       "facingDeg": 75,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-pors-carn",
+    "name": "Plage de Pors-Carn",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.83149,
+      "lon": -4.35487
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 272711201,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -9847,6 +11438,49 @@
     }
   },
   {
+    "id": "plage-de-port-leucate",
+    "name": "Plage de Port-Leucate",
+    "community": "Occitanie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 42.85834,
+      "lon": 3.04604
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 315,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 1723741881,
+      "feature": "beach",
+      "facingDeg": 135,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-port-manes",
     "name": "plage de Port Manés",
     "community": "Pays de la Loire",
@@ -9928,6 +11562,49 @@
       "feature": "beach",
       "facingDeg": 60,
       "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-port-notre-dame",
+    "name": "Plage de Port Notre-Dame",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.14442,
+      "lon": -1.29575
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 193632751,
+      "feature": "beach",
+      "facingDeg": 180,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -10406,6 +12083,49 @@
     }
   },
   {
+    "id": "plage-de-saint-froult",
+    "name": "Plage de Saint-Froult",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.90586,
+      "lon": -1.07872
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 1006229739,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-saint-pabu",
     "name": "Plage de Saint-Pabu",
     "community": "Bretagne",
@@ -10750,6 +12470,49 @@
     }
   },
   {
+    "id": "plage-de-socoa",
+    "name": "Plage de Socoa",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.39015,
+      "lon": -1.68247
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 190721070,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-sohoa-keli-fassigny-sohoa-keli",
     "name": "Plage de Sohoa-Kéli / Fassigny Sohoa-Kéli",
     "community": "Mayotte",
@@ -10787,6 +12550,49 @@
       "osmId": 739511811,
       "feature": "beach",
       "facingDeg": 255,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-soustons",
+    "name": "Plage de Soustons",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.77526,
+      "lon": -1.41832
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 39237273,
+      "feature": "beach",
+      "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -11094,6 +12900,49 @@
     }
   },
   {
+    "id": "plage-de-trestrignel",
+    "name": "Plage de Trestrignel",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 48.82007,
+      "lon": -3.43232
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 121252496,
+      "feature": "beach",
+      "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-de-trevani",
     "name": "Plage de Trévani",
     "community": "Mayotte",
@@ -11132,6 +12981,49 @@
       "feature": "beach",
       "facingDeg": 30,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-tronoen",
+    "name": "Plage de Tronoën",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.85585,
+      "lon": -4.35079
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 636630602,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11261,6 +13153,49 @@
       "feature": "beach",
       "facingDeg": 15,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-de-vert-bois",
+    "name": "Plage de Vert bois",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.86596,
+      "lon": -1.26066
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 316981031,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11438,21 +13373,21 @@
     }
   },
   {
-    "id": "plage-des-anses",
-    "name": "Plage des Anses",
-    "community": "Nouvelle-Aquitaine",
+    "id": "plage-des-aresquiers",
+    "name": "Plage des Aresquiers",
+    "community": "Occitanie",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 45.94444,
-      "lon": -1.09982
+      "lat": 43.48505,
+      "lon": 3.85303
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 345
+        "minAngle": 15,
+        "maxAngle": 255
       },
-      "offshoreWindAngle": 60,
+      "offshoreWindAngle": 315,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -11472,10 +13407,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 207568223,
+      "osmId": 389802468,
       "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 210,
+      "facingDeg": 135,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11610,6 +13545,92 @@
     }
   },
   {
+    "id": "plage-des-chenes-lieges",
+    "name": "Plage des Chênes-Lièges",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.8424,
+      "lon": -1.39721
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 112619456,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-chenes-lieges-916301931",
+    "name": "Plage des Chènes Lièges",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.66462,
+      "lon": -1.43112
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 916301931,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-des-conches",
     "name": "Plage des Conches",
     "community": "Pays de la Loire",
@@ -11648,6 +13669,92 @@
       "feature": "beach",
       "facingDeg": 225,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-corsaires",
+    "name": "Plage des Corsaires",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.50745,
+      "lon": -1.53749
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058701,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-culs-nus",
+    "name": "Plage des Culs Nus",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.67986,
+      "lon": -1.44082
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 3053079147,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11696,19 +13803,62 @@
     }
   },
   {
-    "id": "plage-des-follies",
-    "name": "Plage des Follies",
+    "id": "plage-des-deux-jumeaux",
+    "name": "Plage des Deux Jumeaux",
     "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 46.1871,
-      "lon": -1.42014
+      "lat": 43.37838,
+      "lon": -1.75771
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
+        "minAngle": 285,
         "maxAngle": 75
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 513400420,
+      "feature": "beach",
+      "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-estagnots",
+    "name": "Plage des Estagnots",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.68731,
+      "lon": -1.4407
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
       },
       "offshoreWindAngle": 105,
       "windTolerance": 45,
@@ -11729,11 +13879,11 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 1377890175,
+      "osmType": "node",
+      "osmId": 3053079146,
       "feature": "beach",
       "facingDeg": 285,
-      "exposureDeg": 300,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -11820,6 +13970,49 @@
       "feature": "beach",
       "facingDeg": 45,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-gollandieres",
+    "name": "Plage des Gollandières",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.18038,
+      "lon": -1.40316
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 194912873,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 300,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -12169,6 +14362,49 @@
     }
   },
   {
+    "id": "plage-des-oceanides",
+    "name": "Plage des Océanides",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.63707,
+      "lon": -1.44978
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2417680226,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-des-pecheurs",
     "name": "Plage des pécheurs",
     "community": "Mayotte",
@@ -12384,6 +14620,49 @@
     }
   },
   {
+    "id": "plage-des-sableres",
+    "name": "Plage des Sablères",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.79298,
+      "lon": -1.41358
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 8344700353,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-des-sables-blancs",
     "name": "Plage des Sables Blancs",
     "community": "Bretagne",
@@ -12470,6 +14749,92 @@
     }
   },
   {
+    "id": "plage-des-sables-d-or-183134272",
+    "name": "Plage des Sables d'Or",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.50162,
+      "lon": -1.54188
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 183134272,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-sables-vignier",
+    "name": "Plage des Sables Vignier",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 45.95846,
+      "lon": -1.38732
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 298811215,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-des-surfeurs",
     "name": "Plage des Surfeurs",
     "community": "Martinique",
@@ -12508,6 +14873,49 @@
       "feature": "beach",
       "facingDeg": 45,
       "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-des-tonnelles",
+    "name": "Plage des Tonnelles",
+    "community": "Pays de la Loire",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.80587,
+      "lon": -2.12417
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 2982129,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -12594,6 +15002,92 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-betey",
+    "name": "Plage du Bétey",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.73343,
+      "lon": -1.0922
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 5229091848,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-boiteux",
+    "name": "Plage du Boîteux",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.67657,
+      "lon": -1.44142
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 9391578474,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -12900,21 +15394,21 @@
     }
   },
   {
-    "id": "plage-du-chay",
-    "name": "Plage du Chay",
+    "id": "plage-du-centre",
+    "name": "Plage du Centre",
     "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 45.6197,
-      "lon": -1.04323
+      "lat": 43.43739,
+      "lon": -1.59626
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 285
+        "minAngle": 225,
+        "maxAngle": 15
       },
-      "offshoreWindAngle": 30,
+      "offshoreWindAngle": 120,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -12934,9 +15428,52 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 44539000,
+      "osmId": 183132015,
       "feature": "beach",
-      "facingDeg": 210,
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-club",
+    "name": "Plage du Club",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.49928,
+      "lon": -1.54396
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 183134273,
+      "feature": "beach",
+      "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -13067,49 +15604,6 @@
       "feature": "beach",
       "facingDeg": 255,
       "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-du-domaine-residentiel-naturiste-la-jenny",
-    "name": "Plage du domaine résidentiel naturiste La Jenny",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 44.85592,
-      "lon": -1.22426
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 195,
-        "maxAngle": 15
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 1287007725,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13282,6 +15776,49 @@
       "feature": "beach",
       "facingDeg": 150,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-fort",
+    "name": "Plage du Fort",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.39592,
+      "lon": -1.68221
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 190721071,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13502,49 +16039,6 @@
     }
   },
   {
-    "id": "plage-du-grau-d-agde",
-    "name": "Plage du Grau d'Agde",
-    "community": "Occitanie",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 43.2781,
-      "lon": 3.46699
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 75,
-        "maxAngle": 285
-      },
-      "offshoreWindAngle": 0,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 37098727,
-      "feature": "beach",
-      "facingDeg": 180,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-du-grazel",
     "name": "Plage du Grazel",
     "community": "Occitanie",
@@ -13674,6 +16168,49 @@
     }
   },
   {
+    "id": "plage-du-grouin",
+    "name": "Plage du Grouin",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 46.22715,
+      "lon": -1.41364
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 195,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 260585644,
+      "feature": "beach",
+      "facingDeg": 15,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-du-guen",
     "name": "Plage du Guen",
     "community": "Bretagne",
@@ -13755,6 +16292,49 @@
       "feature": "beach",
       "facingDeg": 240,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-kerver",
+    "name": "Plage du Kerver",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.52868,
+      "lon": -2.86831
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 23021469,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -13889,21 +16469,21 @@
     }
   },
   {
-    "id": "plage-du-loc-h",
-    "name": "Plage du Loc'h",
-    "community": "Bretagne",
+    "id": "plage-du-lion-lacanau",
+    "name": "Plage du Lion (Lacanau)",
+    "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 47.75456,
-      "lon": -3.51441
+      "lat": 44.96213,
+      "lon": -1.20719
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 285
+        "minAngle": 195,
+        "maxAngle": 345
       },
-      "offshoreWindAngle": 30,
+      "offshoreWindAngle": 90,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -13923,53 +16503,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 23860684,
+      "osmId": 697650795,
       "feature": "beach",
-      "facingDeg": 210,
+      "facingDeg": 270,
       "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-du-logeo",
-    "name": "Plage du Logeo",
-    "community": "Bretagne",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 47.54384,
-      "lon": -2.83952
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 195,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 75,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 12155398091,
-      "feature": "beach",
-      "facingDeg": 255,
-      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14061,21 +16598,21 @@
     }
   },
   {
-    "id": "plage-du-martray",
-    "name": "Plage du Martray",
+    "id": "plage-du-metro-512630064",
+    "name": "Plage du Métro",
     "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 46.19775,
-      "lon": -1.49139
+      "lat": 43.5641,
+      "lon": -1.49745
     },
     "config": {
       "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 315
+        "minAngle": 195,
+        "maxAngle": 15
       },
-      "offshoreWindAngle": 30,
+      "offshoreWindAngle": 105,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -14095,10 +16632,53 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 483725750,
+      "osmId": 512630064,
       "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 210,
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-miramar-156866495",
+    "name": "Plage du Miramar",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.4883,
+      "lon": -1.55551
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 156866495,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14190,21 +16770,21 @@
     }
   },
   {
-    "id": "plage-du-pain-de-sucre",
-    "name": "Plage du Pain de Sucre",
-    "community": "Guadeloupe",
+    "id": "plage-du-moulleau",
+    "name": "Plage du Moulleau",
+    "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 15.86355,
-      "lon": -61.59887
+      "lat": 44.64221,
+      "lon": -1.20281
     },
     "config": {
       "swellWindow": {
-        "minAngle": 34,
-        "maxAngle": 34
+        "minAngle": 195,
+        "maxAngle": 315
       },
-      "offshoreWindAngle": 34,
+      "offshoreWindAngle": 75,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -14224,10 +16804,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 93659822,
+      "osmId": 41642437,
       "feature": "beach",
-      "facingDeg": 214,
-      "exposureDeg": 360,
+      "facingDeg": 255,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14271,6 +16851,49 @@
       "feature": "beach",
       "facingDeg": 165,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-penon",
+    "name": "Plage du Penon",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.70938,
+      "lon": -1.43664
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 10940297089,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14362,49 +16985,6 @@
     }
   },
   {
-    "id": "plage-du-plate",
-    "name": "Plage du platé",
-    "community": "Normandie",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 49.55786,
-      "lon": -1.85501
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 195,
-        "maxAngle": 15
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 210570710,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-du-porry",
     "name": "Plage du Porry",
     "community": "Bretagne",
@@ -14448,49 +17028,6 @@
     }
   },
   {
-    "id": "plage-du-port",
-    "name": "Plage du Port",
-    "community": "Guadeloupe",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 16.37862,
-      "lon": -61.4966
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 225,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 90,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 993164268,
-      "feature": "beach",
-      "facingDeg": 270,
-      "exposureDeg": 90,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-du-port-195820832",
     "name": "Plage du port",
     "community": "Bretagne",
@@ -14529,49 +17066,6 @@
       "feature": "beach",
       "facingDeg": 150,
       "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-du-port-24020608",
-    "name": "Plage du Port",
-    "community": "Bretagne",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 48.69361,
-      "lon": -1.92972
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 225,
-        "maxAngle": 75
-      },
-      "offshoreWindAngle": 150,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 24020608,
-      "feature": "beach",
-      "facingDeg": 330,
-      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14658,6 +17152,49 @@
       "feature": "beach",
       "facingDeg": 214,
       "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-du-port-vieux",
+    "name": "Plage du Port Vieux",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.48252,
+      "lon": -1.56792
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 156866444,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -14792,6 +17329,49 @@
     }
   },
   {
+    "id": "plage-du-prevent",
+    "name": "Plage du Prévent",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.64965,
+      "lon": -1.44597
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2417680217,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-du-ruppione",
     "name": "Plage du Ruppione",
     "community": "Corse",
@@ -14835,21 +17415,21 @@
     }
   },
   {
-    "id": "plage-du-sillon",
-    "name": "Plage du Sillon",
-    "community": "Bretagne",
+    "id": "plage-du-santocha",
+    "name": "Plage du Santocha",
+    "community": "Nouvelle-Aquitaine",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 48.65663,
-      "lon": -2.01333
+      "lat": 43.6458,
+      "lon": -1.44568
     },
     "config": {
       "swellWindow": {
-        "minAngle": 255,
-        "maxAngle": 45
+        "minAngle": 195,
+        "maxAngle": 15
       },
-      "offshoreWindAngle": 150,
+      "offshoreWindAngle": 105,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -14868,54 +17448,11 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 485330850,
+      "osmType": "node",
+      "osmId": 2417680233,
       "feature": "beach",
-      "facingDeg": 330,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-du-ster",
-    "name": "Plage du Ster",
-    "community": "Bretagne",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 47.79764,
-      "lon": -4.30554
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 30,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 43322347,
-      "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 210,
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -15050,21 +17587,21 @@
     }
   },
   {
-    "id": "plage-du-trez",
-    "name": "Plage du Trez",
+    "id": "plage-du-val",
+    "name": "Plage du Val",
     "community": "Bretagne",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 47.87075,
-      "lon": -4.1057
+      "lat": 48.68412,
+      "lon": -1.97375
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 225
+        "minAngle": 225,
+        "maxAngle": 75
       },
-      "offshoreWindAngle": 0,
+      "offshoreWindAngle": 150,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -15084,10 +17621,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 39594816,
+      "osmId": 141105511,
       "feature": "beach",
-      "facingDeg": 180,
-      "exposureDeg": 90,
+      "facingDeg": 330,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -15566,221 +18103,6 @@
     }
   },
   {
-    "id": "plage-naturiste-7999992252",
-    "name": "Plage naturiste",
-    "community": "Pays de la Loire",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.42487,
-      "lon": -1.65221
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 30,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 7999992252,
-      "feature": "beach",
-      "facingDeg": 210,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-naturiste-8003118125",
-    "name": "Plage naturiste",
-    "community": "Pays de la Loire",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.8132,
-      "lon": -2.13348
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 60,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 8003118125,
-      "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-naturiste-de-leucate",
-    "name": "Plage naturiste de Leucate",
-    "community": "Occitanie",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 42.8789,
-      "lon": 3.05016
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 255
-      },
-      "offshoreWindAngle": 300,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 41328855,
-      "feature": "beach",
-      "facingDeg": 120,
-      "exposureDeg": 270,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-naturiste-de-riva-bella",
-    "name": "Plage naturiste de Riva Bella",
-    "community": "Corse",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 42.15859,
-      "lon": 9.55423
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 15,
-        "maxAngle": 195
-      },
-      "offshoreWindAngle": 285,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 729356087,
-      "feature": "beach",
-      "facingDeg": 105,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-nord-123209213",
-    "name": "Plage Nord",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 43.81701,
-      "lon": -1.40561
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 195,
-        "maxAngle": 15
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 123209213,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-nord-123452418",
     "name": "Plage Nord",
     "community": "Nouvelle-Aquitaine",
@@ -15867,135 +18189,6 @@
     }
   },
   {
-    "id": "plage-nord-89679888",
-    "name": "Plage Nord",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 45.99304,
-      "lon": -1.09253
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 195,
-        "maxAngle": 285
-      },
-      "offshoreWindAngle": 60,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 89679888,
-      "feature": "beach",
-      "facingDeg": 240,
-      "exposureDeg": 90,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-nord-de-rivedoux-plage",
-    "name": "Plage nord de Rivedoux-plage",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 46.16275,
-      "lon": -1.26423
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 255
-      },
-      "offshoreWindAngle": 0,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 1497408059,
-      "feature": "beach",
-      "facingDeg": 180,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "plage-nord-de-taussat",
-    "name": "Plage Nord de Taussat",
-    "community": "Nouvelle-Aquitaine",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 44.7192,
-      "lon": -1.07434
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 135,
-        "maxAngle": 315
-      },
-      "offshoreWindAngle": 45,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 5229021528,
-      "feature": "beach",
-      "facingDeg": 225,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "plage-peno",
     "name": "Plage Peno",
     "community": "Provence-Alpes-Côte d'Azur",
@@ -16034,6 +18227,49 @@
       "feature": "beach",
       "facingDeg": 195,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-pereire",
+    "name": "Plage Péreire",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.65922,
+      "lon": -1.19369
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 225,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 41642430,
+      "feature": "beach",
+      "facingDeg": 45,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -16297,6 +18533,135 @@
     }
   },
   {
+    "id": "plage-sud-l-ecureuil-lacanau",
+    "name": "Plage Sud l'Ecureuil (Lacanau)",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 44.99368,
+      "lon": -1.20305
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 697650793,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-sud-point-d-or",
+    "name": "Plage Sud (Point d'Or)",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.66007,
+      "lon": -1.44483
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 916176499,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plage-sud-torreilles",
+    "name": "Plage Sud Torreilles",
+    "community": "Occitanie",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 42.75446,
+      "lon": 3.03777
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 270,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 3158968,
+      "feature": "beach",
+      "facingDeg": 90,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "plage-super-sud-lacanau",
     "name": "Plage Super Sud (Lacanau)",
     "community": "Nouvelle-Aquitaine",
@@ -16463,6 +18828,178 @@
       "osmId": 114959965,
       "feature": "beach",
       "facingDeg": 150,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plages-de-la-madrague",
+    "name": "Plages de la Madrague",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.51174,
+      "lon": -1.53402
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058698,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plages-de-la-petite-madrague",
+    "name": "Plages de la Petite Madrague",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.50979,
+      "lon": -1.5356
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058700,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plages-des-cavaliers",
+    "name": "Plages des Cavaliers",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.52205,
+      "lon": -1.52663
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058699,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "plages-des-dunes",
+    "name": "Plages des Dunes",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.51794,
+      "lon": -1.52898
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 741058697,
+      "feature": "beach",
+      "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
@@ -16636,6 +19173,49 @@
       "feature": "beach",
       "facingDeg": 214,
       "exposureDeg": 360,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "porgastel",
+    "name": "Porgastel",
+    "community": "Bretagne",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 47.7643,
+      "lon": -3.54308
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 30,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 27085733,
+      "feature": "beach",
+      "facingDeg": 210,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -17286,6 +19866,49 @@
     }
   },
   {
+    "id": "senix-cenitz",
+    "name": "Senix / Cenitz",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.42252,
+      "lon": -1.62012
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 773801627,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
     "id": "separella",
     "name": "Separella",
     "community": "Corse",
@@ -17458,49 +20081,6 @@
     }
   },
   {
-    "id": "ti-boucan",
-    "name": "Ti Boucan",
-    "community": "La Réunion",
-    "country": "France",
-    "type": "Beach",
-    "coordinates": {
-      "lat": -21.03208,
-      "lon": 55.22228
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 165,
-        "maxAngle": 45
-      },
-      "offshoreWindAngle": 105,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 4987059891,
-      "feature": "beach",
-      "facingDeg": 285,
-      "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
     "id": "tivella",
     "name": "Tivella",
     "community": "Corse",
@@ -17625,6 +20205,49 @@
       "feature": "beach",
       "facingDeg": 60,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-17"
+    }
+  },
+  {
+    "id": "uhabia",
+    "name": "Uhabia",
+    "community": "Nouvelle-Aquitaine",
+    "country": "France",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 43.43156,
+      "lon": -1.60015
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 172947079,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }

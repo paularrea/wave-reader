@@ -148,14 +148,34 @@ node scripts/curate-spots.mjs             # stage 4: surf spots only, one file p
 
 **Stage 4 is what makes it a surf catalogue rather than a list of beaches.** OSM tags
 every named beach, so stage 3 hands over 7,870 places — 600 in Catalunya, where
-surf-forecast lists 29. Three independent drops, each recorded with its reason in
-`spots.curation-report.json`: places that are not surf (marinas, quays, inland water),
-coves and beach sections, and **everything closer than the marine model's 5 km cell to a
-survivor**, because those share one forecast and showing both is fake precision. What
-survives is 1,417 spots. `src/data/surf-spots.curated.json` lists recognised breaks by
-region and carries **no coordinates on purpose** — it only decides which catalogued place
-represents a stretch of coast and rescues a named break with a narrow arc. Coordinates
-stay traceable to OSM; a curated name with no OSM match is reported, never invented.
+surf-forecast lists 29. Drops, each recorded with its reason in
+`spots.curation-report.json`: places that are not surf (marinas, quays, lakes, lagoons),
+coves and beach sections, the same place OSM mapped twice under two names, and finally
+**unnamed beaches inside the model's 5 km cell of somewhere already kept**. 1,690 spots
+survive.
+
+**Deduplication never applies to a named break**, and that is the point. Anglet's twelve
+peaks fit in four kilometres and share a model cell to the decimal, but choosing between
+La Barre and Les Cavaliers is choosing between two banks and two crowds: **spot identity
+is editorial, not a property of the wave model**. An earlier pass deduplicated everything
+by distance, left Anglet with one spot and took La Gravière, Le Santocha and La Piste out
+of the Landes. Deduplication is a noise filter for what nobody named, nothing more.
+
+`src/data/surf-spots.curated.json` lists recognised breaks by region and carries **no
+coordinates on purpose** — it only says which catalogued place is a break. Write names
+the way OSM spells them; the match is then exact rather than hopeful. Containment runs
+**one way only** (the OSM name must contain the curated one, ≥5 chars): the other
+direction let "Plage du Nord" pass itself off as "La Cantine Nord", which exempted the
+fragment from deduplication. The Basque/Galician genitive rule ("Zarauzko hondartza" →
+Zarautz) is capped at one extra token, or "centrale" matches the "centre" in a campsite's
+name. A curated name with no OSM match is reported in `curatedNamesWithoutMatch`, never
+invented.
+
+**Only Nouvelle-Aquitaine's list has been rewritten against real OSM names so far**;
+other regions still carry names written from memory, and their misses are the 235 entries
+in that report. OSM does not map Mundaka, Famara, Hossegor or Lahinch as named beaches at
+all, and `sport=surfing` in OSM is surf schools and shops, not peaks — those breaks stay
+absent until the catalogue accepts its own coordinates.
 
 OSM names breaks in the local language ("Zarauzko hondartza" for Zarautz), so the match
 strips the genitive; even so, breaks OSM does not map at all (Mundaka, Famara, Hossegor,
