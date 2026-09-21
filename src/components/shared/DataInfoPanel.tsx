@@ -74,8 +74,8 @@ function Fact({ term, children }: { term: string; children: React.ReactNode }) {
 }
 
 const TIER_MEANING: Record<string, string> = {
-  epic: 'Rare. Go.',
-  good: 'Surfable, worth a look',
+  epic: 'Worth the drive',
+  good: 'Worth a look',
   poor: 'Flat or blown out',
   danger: 'Beginners: breaking over 1.5 m',
   unrated: 'No forecast here',
@@ -380,8 +380,10 @@ export function DataInfoPanel() {
                   Energy arriving from outside the spot&apos;s open-water window counts for less.
                 </Fact>
                 <Fact term="Wind">
-                  Onshore and cross-shore wind take points away, strong gusts count against it and very
-                  strong wind from any direction scores 0. Light and offshore wind cost nothing.
+                  Rated on the mean wind, the one shown on each spot; gusts do not count. Under 10 km/h
+                  wind costs nothing from any direction. Above that, onshore and cross-shore wind take
+                  points away gradually, onshore faster, and very strong wind from any direction scores
+                  0. Offshore wind costs nothing.
                 </Fact>
               </ul>
               <div className="grid grid-cols-2 gap-2 pt-1">
@@ -413,8 +415,8 @@ export function DataInfoPanel() {
               </div>
               <p className="text-[12px] text-ink-2">
                 The score says how good the surf is here, not how this swell ranks worldwide, so it is
-                higher than a global scale would give. When wind spoils a good swell, the spot detail
-                shows what the swell alone would score.
+                higher than a global scale would give. When wind spoils a good swell, the verdict and
+                the wind badge on the spot detail say so.
               </p>
             </Section>
 

@@ -4,7 +4,8 @@
  */
 
 import type { MarineForecast } from './marine-api';
-import { EPIC_THRESHOLD, windBadge } from './conditions';
+import { qualityStyle, windBadge, windDirectionClass } from './conditions';
+import { CALM_WIND_KMH } from './star-engine';
 import type { SeriesHour } from './forecast-series';
 
 interface VerdictInput {
@@ -29,15 +30,10 @@ function windPhrase(forecast: MarineForecast, config: { offshoreWindAngle: numbe
   const badge = config ? windBadge(forecast, config) : null;
   if (badge?.label === 'Glass') return 'no wind';
   const speed = forecast.windSpeed;
-  const strength = speed < 12 ? 'light' : speed < 25 ? 'moderate' : 'strong';
-  const direction =
-    badge?.label === 'Off-shore'
-      ? 'offshore'
-      : badge?.label === 'Cross-shore'
-        ? 'cross-shore'
-        : badge?.label === 'On-shore'
-          ? 'onshore'
-          : null;
+  // "light" is exactly the range the rating does not charge for, so the phrase
+  // never calls a wind light while the score loses points to it.
+  const strength = speed < CALM_WIND_KMH ? 'light' : speed < 25 ? 'moderate' : 'strong';
+  const direction = config ? windDirectionClass(forecast.windDirection, config) : null;
   return direction ? `${strength} ${direction} wind` : `${strength} wind`;
 }
 
@@ -52,10 +48,11 @@ export function verdict(
   const kind = periodClass(forecast.swellPeriod) ?? 'swell';
   const wind = windPhrase(forecast, config);
 
+  // The tier's own name, so the score box and this line never call one level
+  // two things. Flat and Blown out are the two kinds of Poor worth naming.
   let quality: string;
   if (height < FLAT_M) quality = 'Flat';
-  else if (input.stars >= EPIC_THRESHOLD) quality = 'Excellent';
-  else if (input.stars >= 1) quality = 'Surfable';
+  else if (input.stars >= 1) quality = qualityStyle(input.stars).label;
   else if (input.swellStars > input.stars) quality = 'Blown out';
   else quality = 'Poor';
 

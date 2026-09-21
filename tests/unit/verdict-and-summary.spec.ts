@@ -29,15 +29,27 @@ function forecast(overrides: Partial<MarineForecast> = {}): MarineForecast {
 test.describe('spec: drawer-navigation / Veredicto y mejor franja', () => {
   test('light onshore wind on a 1.3 m swell is said in words', () => {
     const text = verdict({ stars: 1, swellStars: 2, unrated: false, forecast: forecast() }, CONFIG);
-    expect(text).toBe('Surfable: 1.3 m swell at 7 s, light onshore wind.');
+    expect(text).toBe('Fair: 1.3 m swell at 7 s, light onshore wind.');
   });
 
-  test('clean groundswell reads as excellent with no wind', () => {
+  test('clean groundswell reads as Epic with no wind', () => {
     const text = verdict(
       { stars: 6, swellStars: 6, unrated: false, forecast: forecast({ swellHeight: 2.1, swellPeriod: 12, windSpeed: 3 }) },
       CONFIG
     );
-    expect(text).toBe('Excellent: 2.1 m groundswell at 12 s, no wind.');
+    expect(text).toBe('Epic: 2.1 m groundswell at 12 s, no wind.');
+  });
+
+  test('"light" only below 10 km/h, where the wind costs nothing', () => {
+    const at = (windSpeed: number) =>
+      verdict({ stars: 5, swellStars: 7, unrated: false, forecast: forecast({ swellHeight: 1.4, swellPeriod: 12, windSpeed }) }, CONFIG);
+    expect(at(7)).toContain('light onshore wind');
+    expect(at(18)).toContain('moderate onshore wind');
+    expect(at(18)).not.toContain('light');
+  });
+
+  test('a 7 is called Epic, the same name as the score box', () => {
+    expect(verdict({ stars: 7, swellStars: 7, unrated: false, forecast: forecast({ swellHeight: 1.5 }) }, CONFIG)).toMatch(/^Epic: /);
   });
 
   test('wind that costs the whole score reads as blown out, a tiny sea as flat', () => {
@@ -51,7 +63,7 @@ test.describe('spec: drawer-navigation / Veredicto y mejor franja', () => {
 
   test('missing wind is left out rather than guessed, missing waves say so', () => {
     expect(verdict({ stars: 1, swellStars: 1, unrated: false, forecast: forecast({ windSpeed: null }) }, CONFIG)).toBe(
-      'Surfable: 1.3 m swell at 7 s.'
+      'Fair: 1.3 m swell at 7 s.'
     );
     expect(verdict({ stars: 0, swellStars: 0, unrated: true, forecast: forecast({ swellHeight: null }) }, CONFIG)).toBe(
       'No wave data for this hour.'

@@ -7,7 +7,6 @@ import {
   directionFactor,
   windFactor,
   breakingHeightM,
-  effectiveWindKmh,
   SpotConfig,
   SkillLevel,
 } from '../../src/services/star-engine';
@@ -182,6 +181,24 @@ test.describe('spec: surf-rating / El periodo corto penaliza', () => {
     expect(rate(sea(1.5, 12)).stars).toBeGreaterThan(rate(sea(3, 6)).stars);
   });
 
+  test('no jump around the anchor period: 2.2 m at 9.9 s and 10.1 s differ by at most 1', () => {
+    expect(Math.abs(rate(sea(2.2, 9.9)).stars - rate(sea(2.2, 10.1)).stars)).toBeLessThanOrEqual(1);
+  });
+
+  test('the anchor period carries no penalty', () => {
+    expect(periodFactor(10)).toBe(1);
+    expect(periodFactor(10, 'mediterranean')).toBe(1);
+    expect(periodFactor(6, 'mediterranean')).toBe(1);
+  });
+
+  test('the period factor is continuous: 0.1 s never moves it more than 0.05 (no steps)', () => {
+    for (const basin of ['atlantic', 'mediterranean'] as const) {
+      for (let t = 3; t < 16; t += 0.1) {
+        expect(Math.abs(periodFactor(t + 0.1, basin) - periodFactor(t, basin))).toBeLessThanOrEqual(0.05);
+      }
+    }
+  });
+
   test('the period factor is monotonic', () => {
     expect(periodFactor(4)).toBeLessThan(periodFactor(7));
     expect(periodFactor(7)).toBeLessThan(periodFactor(9));
@@ -253,24 +270,83 @@ test.describe('spec: surf-rating / El viento degrada', () => {
     expect(windFactor(6, FACING, OFFSHORE)).toBe(1);
   });
 
-  test('normally gusty wind scores exactly as mean wind', () => {
-    // 1.77 is the median gust ratio measured on the coast.
-    expect(effectiveWindKmh(20, 20 * 1.77)).toBeCloseTo(20, 5);
-    const calm = rate(sea(2, 13, { windSpeed: 12, windDirection: 0 }));
-    const gusty = rate(sea(2, 13, { windSpeed: 12, windDirection: 0, windGust: 12 * 1.77 }));
-    expect(gusty.stars).toBe(calm.stars);
+  test('light onshore wind costs nothing: 2, 5 and 10 km/h leave a 7 at 7', () => {
+    const seven = sea(1.4, 10, { windSpeed: 0 });
+    expect(rate(seven).stars).toBe(7);
+    for (const speed of [2, 5, 10]) {
+      expect(rate({ ...seven, windSpeed: speed, windDirection: FACING }).stars).toBe(7);
+    }
   });
 
-  test('unusually strong gusts score no higher than normal gusts', () => {
-    const normal = rate(sea(2, 13, { windSpeed: 10, windDirection: 0, windGust: 10 * 1.77 }));
-    const squally = rate(sea(2, 13, { windSpeed: 10, windDirection: 0, windGust: 40 }));
-    expect(squally.stars).toBeLessThanOrEqual(normal.stars);
-    expect(effectiveWindKmh(10, 40)).toBeGreaterThan(10);
+  test('onshore takes points progressively from the excess over calm', () => {
+    const on = (speed: number) => rate(sea(1.4, 10, { windSpeed: speed, windDirection: FACING })).stars;
+    expect(on(15)).toBe(5);
+    expect(on(20)).toBe(4);
+    expect(Math.abs(on(25) - 2)).toBeLessThanOrEqual(1);
+    expect(on(30)).toBe(0);
   });
 
-  test('missing gust falls back to mean wind', () => {
-    expect(effectiveWindKmh(15, null)).toBe(15);
+  test('pure onshore blows out at 30 km/h and pure cross-shore at 40 km/h', () => {
+    expect(windFactor(30, FACING, OFFSHORE)).toBe(0);
+    expect(windFactor(29, FACING, OFFSHORE)).toBeGreaterThan(0);
+    expect(windFactor(40, 0, OFFSHORE)).toBeCloseTo(0, 10);
+    expect(windFactor(39, 0, OFFSHORE)).toBeGreaterThan(0);
   });
+
+  test('no step at the calm threshold: 9 to 11 km/h onshore costs at most 1', () => {
+    const on = (speed: number) => rate(sea(1.4, 10, { windSpeed: speed, windDirection: FACING })).stars;
+    expect(on(9) - on(11)).toBeLessThanOrEqual(1);
+    expect(windFactor(10, FACING, OFFSHORE)).toBe(1);
+    expect(1 - windFactor(11, FACING, OFFSHORE)).toBeLessThanOrEqual(0.1);
+  });
+
+  test('the wind factor never moves more than 0.1 per km/h, in any direction', () => {
+    for (let dir = 0; dir < 360; dir += 15) {
+      for (let v = 0; v < 45; v++) {
+        expect(Math.abs(windFactor(v + 1, dir, OFFSHORE) - windFactor(v, dir, OFFSHORE))).toBeLessThanOrEqual(0.1);
+      }
+    }
+  });
+
+  test('REGRESSION: gusts never enter the score', () => {
+    // The old rule rated max(mean, gust / 1.77): near calm it turned 2 km/h
+    // into 15 and marked hours shown as Glass down by half.
+    for (const gust of [null, 2 * 1.77, 30, 60]) {
+      const r = rate(sea(1.7, 13, { windSpeed: 2, windDirection: FACING, windGust: gust }));
+      expect(r.stars).toBe(r.swellStars);
+    }
+    const normal = rate(sea(2, 13, { windSpeed: 18, windDirection: 0, windGust: 18 * 1.77 }));
+    const squally = rate(sea(2, 13, { windSpeed: 18, windDirection: 0, windGust: 60 }));
+    expect(squally.stars).toBe(normal.stars);
+  });
+});
+
+test.describe('spec: surf-rating / Entradas casi iguales dan notas casi iguales', () => {
+  // A step the surfer cannot tell apart on screen -- 0.1 m, 0.5 s, 3 km/h or
+  // 10 degrees of wind -- moves the score by at most 2 anywhere on the grid.
+  // Before this change, 0.2 s at 10 s or 3 km/h near 7 km/h cost up to 5.
+  const H = Array.from({ length: 28 }, (_, i) => Math.round((0.3 + 0.1 * i) * 10) / 10);
+  const T = Array.from({ length: 25 }, (_, i) => 4 + 0.5 * i);
+  const V = Array.from({ length: 14 }, (_, i) => i * 3);
+  const D = Array.from({ length: 36 }, (_, i) => i * 10);
+  const score = (h: number, t: number, v: number, d: number) =>
+    rate(sea(h, t, { windSpeed: v, windDirection: d })).stars;
+
+  for (const [name, step] of [
+    ['height +0.1 m', (h: number, t: number, v: number, d: number) => [Math.round((h + 0.1) * 10) / 10, t, v, d]],
+    ['period +0.5 s', (h: number, t: number, v: number, d: number) => [h, t + 0.5, v, d]],
+    ['wind +3 km/h', (h: number, t: number, v: number, d: number) => [h, t, v + 3, d]],
+    ['wind direction +10°', (h: number, t: number, v: number, d: number) => [h, t, v, (d + 10) % 360]],
+  ] as const) {
+    test(`${name} never moves the score by more than 2`, () => {
+      let worst = 0;
+      for (const h of H) for (const t of T) for (const v of V) for (const d of D) {
+        const [h2, t2, v2, d2] = step(h, t, v, d);
+        worst = Math.max(worst, Math.abs(score(h, t, v, d) - score(h2, t2, v2, d2)));
+      }
+      expect(worst).toBeLessThanOrEqual(2);
+    });
+  }
 });
 
 test.describe('spec: surf-rating / Puntuación potencial', () => {

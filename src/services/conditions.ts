@@ -7,6 +7,7 @@
  */
 
 import { MarineForecast } from './marine-api';
+import { CALM_WIND_KMH } from './star-engine';
 
 /**
  * Quality is encoded in several channels at once -- fill, size, ring and glow --
@@ -144,7 +145,7 @@ export function qualityColor(
   return qualityStyle(stars, options).background;
 }
 
-export type WindCategory = 'Glass' | 'Off-shore' | 'Cross-shore' | 'On-shore';
+export type WindCategory = 'Glass' | 'Light' | 'Offshore' | 'Cross-shore' | 'Onshore';
 
 export interface WindBadge {
   label: WindCategory;
@@ -156,12 +157,17 @@ export interface WindBadge {
 // Tinted, not filled: the wind qualifies the reading, it must not outshout the score.
 const WIND_BADGES: Record<WindCategory, Omit<WindBadge, 'label'>> = {
   'Glass': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
-  'Off-shore': { background: 'rgba(74,222,128,0.12)', foreground: '#86EFAC' },
+  // Same green as Glass on purpose: green means "the wind costs nothing".
+  'Light': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
+  'Offshore': { background: 'rgba(74,222,128,0.12)', foreground: '#86EFAC' },
   'Cross-shore': { background: 'rgba(190,242,100,0.10)', foreground: '#D9F99D' },
-  'On-shore': { background: 'rgba(161,161,170,0.14)', foreground: '#D4D4D8' },
+  'Onshore': { background: 'rgba(161,161,170,0.14)', foreground: '#D4D4D8' },
 };
 
-/** Wind below this is glass-off regardless of direction. */
+/**
+ * Wind below this is glass-off regardless of direction. Presentation only: it
+ * sits inside CALM_WIND_KMH, below which the rating ignores the wind anyway.
+ */
 const GLASS_THRESHOLD_KMH = 5;
 
 /** Shortest angular distance between two bearings, 0-180. */
@@ -173,6 +179,10 @@ function angularDistance(a: number, b: number): number {
 /**
  * Returns `null` when wind is unknown. A missing reading must not fall through
  * to `Glass`, which is what the old `null -> 0 km/h` coercion produced.
+ *
+ * Under CALM_WIND_KMH the badge is `Light` whatever the direction, because the
+ * rating does not charge for it: a grey `Onshore` on an hour that loses nothing
+ * to the wind was one of the contradictions that made the score untrustworthy.
  */
 export function windBadge(
   forecast: Pick<MarineForecast, 'windSpeed' | 'windDirection'>,
@@ -184,16 +194,28 @@ export function windBadge(
   if (windSpeed < GLASS_THRESHOLD_KMH) {
     return { label: 'Glass', ...WIND_BADGES['Glass'] };
   }
-  if (windDirection === null) return null;
+  if (windSpeed < CALM_WIND_KMH) {
+    return { label: 'Light', ...WIND_BADGES['Light'] };
+  }
+  const direction = windDirectionClass(windDirection, config);
+  if (direction === null) return null;
+  const label: WindCategory =
+    direction === 'offshore' ? 'Offshore' : direction === 'onshore' ? 'Onshore' : 'Cross-shore';
+  return { label, ...WIND_BADGES[label] };
+}
 
+export type WindDirectionClass = 'offshore' | 'cross-shore' | 'onshore';
+
+/** Where the wind blows from relative to the spot, whatever its strength. */
+export function windDirectionClass(
+  windDirection: number | null,
+  config: { offshoreWindAngle: number; windTolerance: number }
+): WindDirectionClass | null {
+  if (windDirection === null) return null;
   const offshoreDistance = angularDistance(windDirection, config.offshoreWindAngle);
-  if (offshoreDistance <= config.windTolerance) {
-    return { label: 'Off-shore', ...WIND_BADGES['Off-shore'] };
-  }
-  if (offshoreDistance > 180 - config.windTolerance) {
-    return { label: 'On-shore', ...WIND_BADGES['On-shore'] };
-  }
-  return { label: 'Cross-shore', ...WIND_BADGES['Cross-shore'] };
+  if (offshoreDistance <= config.windTolerance) return 'offshore';
+  if (offshoreDistance > 180 - config.windTolerance) return 'onshore';
+  return 'cross-shore';
 }
 
 /** Light blue for small surf through to dark blue for heavy surf. */

@@ -298,14 +298,6 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
                   <span className="text-ink-3"> · {bestSlot.stars}</span>
                 </span>
               )}
-              {/* The faded-stars idea from Magicseaweed and surf-forecast: say what
-                  the swell alone would score, so a low number caused by wind is
-                  not mistaken for no swell. */}
-              {forecastData && !forecastData.unrated && forecastData.swellStars > forecastData.stars && (
-                <span data-testid="spot-potential">
-                  Swell alone {forecastData.swellStars}/10 · wind costs {forecastData.swellStars - forecastData.stars}
-                </span>
-              )}
             </div>
           </div>
 
@@ -443,7 +435,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
                     className="inline-flex items-center h-5 px-1.5 rounded-md text-[12px] font-medium"
                     style={{ backgroundColor: badge.background, color: badge.foreground }}
                   >
-                    {badge.label === 'Cross-shore' ? badge.label : badge.label.replace('-', '')}
+                    {badge.label}
                   </span>
                 )}
               </MetricCard>

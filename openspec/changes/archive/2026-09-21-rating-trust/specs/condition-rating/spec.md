@@ -1,9 +1,4 @@
-# condition-rating Specification
-
-## Purpose
-Traduce la puntuación numérica de condiciones a señales visuales coherentes en toda la aplicación y avisa al surfista cuando las condiciones superan su nivel, que es la función de seguridad del producto.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Escala de calidad legible de un vistazo
 La calidad SHALL representarse en tres niveles claramente distinguibles, cada uno con un único nombre visible en toda la interfaz (marcadores, recuadro de la nota, veredicto y leyenda): **Epic** (6 a 10), **Fair** (1 a 5) y **Poor** (0). Los umbrales siguen la escala de surfeabilidad: 6 corresponde a 1,2 m a 10 s limpio, el punto en el que un surfista cambia de planes para ir. Los niveles SHALL diferenciarse por más de un canal visual a la vez — color, tamaño y realce — y NO SHALL distinguirse únicamente por la opacidad de un mismo color, que resulta indistinguible sobre un mapa oscuro. NO SHALL usarse verde en ninguna superficie que represente calidad.
@@ -28,17 +23,6 @@ La calidad SHALL representarse en tres niveles claramente distinguibles, cada un
 - **WHEN** un spot no tiene forecast disponible
 - **THEN** su marcador se dibuja hueco y se distingue de un spot con mala puntuación
 
-### Requirement: Leyenda de la escala
-La interfaz SHALL mostrar una leyenda que explique qué representa cada nivel de la escala y su rango de puntuación. La leyenda SHALL mostrarse como primera sección del panel de información y NO SHALL ocupar espacio permanente sobre el mapa.
-
-#### Scenario: Leyenda visible
-- **WHEN** el usuario abre el panel de información
-- **THEN** lo primero que ve es la leyenda con los niveles de calidad y el aviso de peligro
-
-#### Scenario: Mapa despejado
-- **WHEN** el usuario abre la aplicación en un móvil
-- **THEN** no hay leyenda superpuesta al mapa
-
 ### Requirement: Badge de condición de viento legible
 La condición de viento SHALL mostrarse como un badge con una de estas categorías y colores: `Glass` en verde por debajo de 5 km/h, `Light` en verde de 5 a 10 km/h en cualquier dirección y, a partir de 10 km/h, `Offshore` en verde, `Cross-shore` en verde claro u `Onshore` en gris según la dirección respecto al spot. Los badges `Glass` y `Light` SHALL significar que el viento no resta puntuación. El badge SHALL acompañarse siempre de la fuerza y la dirección del viento, y la fuerza mostrada SHALL ser la misma que usa la puntuación. La interfaz SHALL escribir siempre onshore, offshore y cross-shore, sin la variante con guion `On-shore` / `Off-shore`.
 
@@ -61,36 +45,3 @@ La condición de viento SHALL mostrarse como un badge con una de estas categorí
 #### Scenario: El badge verde no convive con pérdida por viento
 - **WHEN** se recorren todas las horas de un spot con badge `Glass` o `Light`
 - **THEN** en ninguna la puntuación es menor que la potencial
-
-### Requirement: Gradiente de altura de ola
-La altura de ola SHALL representarse con un gradiente de azul que va de claro a oscuro conforme aumenta la altura.
-
-#### Scenario: Olas pequeñas frente a grandes
-- **WHEN** se comparan un spot con olas pequeñas y otro con olas grandes
-- **THEN** el de olas pequeñas se representa en un azul más claro que el de olas grandes
-
-### Requirement: Alerta de seguridad para el nivel del surfista
-Cuando las condiciones excedan el rango seguro del nivel declarado por el surfista, el sistema SHALL mostrar una alerta en rojo que explique por qué esas condiciones son peligrosas en ese spot concreto, citando la magnitud que dispara el aviso y el límite superado. La magnitud evaluada SHALL ser la altura de rompiente estimada a partir de la altura y el periodo, no la altura en aguas profundas: a igual altura, un periodo largo rompe mucho más grande. La alerta SHALL ser visible tanto en el detalle del spot como en su marcador del mapa.
-
-#### Scenario: Principiante con olas fuera de rango
-- **WHEN** el surfista tiene nivel principiante y la altura de rompiente estimada supera el máximo seguro para ese nivel
-- **THEN** el detalle muestra una alerta roja que indica la altura de rompiente estimada, el límite para principiantes y el motivo del riesgo
-
-#### Scenario: El periodo largo dispara la alerta
-- **WHEN** el surfista es principiante y hay 1,2 m a 14 s
-- **THEN** se muestra la alerta, aunque 1,2 m no supere el límite en aguas profundas
-
-#### Scenario: La alerta llega al mapa
-- **WHEN** un spot está en condición peligrosa para el nivel declarado
-- **THEN** su marcador en el mapa se distingue en rojo del resto de marcadores
-
-#### Scenario: Nivel adecuado sin alerta
-- **WHEN** el surfista tiene nivel experto y la altura de rompiente está dentro de su rango
-- **THEN** no se muestra ninguna alerta de peligro
-
-### Requirement: Un solo acento de calidad
-El amarillo SHALL reservarse para la calidad del surf; las acciones SHALL usar blanco y neutros, y la interfaz no SHALL usar azul de marca.
-
-#### Scenario: Controles
-- **WHEN** se muestra el panel inferior
-- **THEN** el slider y los botones son blancos o neutros

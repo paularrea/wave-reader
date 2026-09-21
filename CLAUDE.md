@@ -69,7 +69,7 @@ automate recurring extraction) still reproduce the old fit and stay as the recor
 
 **Two basins** (`src/services/basins.ts`, from coordinates): the Mediterranean never
 sees the long swells that score on Atlantic anchors, so it has its own, anchored to
-local expertise. Its period penalty is harsher — ×0.4 under 5 s, ×0.8 under 6 s — so
+local expertise. Its period penalty is harsher — ×0.4 up to 4.5 s, rising to ×1 at 6 s — so
 4-second chop scores 0 whatever its height, which is what it is. Wind handling is shared
 across basins. The basin rule would need revisiting before adding Italy or the Adriatic.
 
@@ -78,14 +78,20 @@ across basins. The basin rule would need revisiting before adding Italy or the A
    spot's swell window (×1 inside, fading to ×0.1 at 45° beyond the edge).
 2. **Base**: linear interpolation between the basin's anchors in `ln(E)`. Monotonic:
    no closeout penalty, a bigger sea never scores less.
-3. **Period** (Atlantic): ×0.48 under 6 s, ×0.69 under 8 s, ×0.71 under 10 s.
-4. **Wind**: effective speed `max(mean, gust / 1.77)` — 1.77 is the median coastal
-   gust ratio measured in Open-Meteo, so normal gustiness keeps the calibration and only
-   unusually gusty hours lose more (Magicseaweed: gusts matter more than the mean).
-   With the spot facing `F = offshoreWindAngle + 180`:
-   `factor = 1 − onshore/19.28 − cross/30.1`, no effect under 7.08 km/h, and above
-   45 km/h also fading to 0 at 75 km/h from any direction.
-5. **`swellStars`** is the score without wind (the "faded stars"); `stars` never exceeds it.
+3. **Period**: a continuous curve, never steps — Atlantic through (5 s ×0.48),
+   (7 s ×0.69), (9 s ×0.71) to ×1 at 10 s, the period the anchors are written for.
+   Steps made 2.2 m @ 9.9 s a 6 and @ 10.1 s a 9, both shown as "10 s".
+4. **Wind**: the **mean** speed, the one the app shows — gusts do not count. Only the
+   excess over `CALM_WIND_KMH = 10` counts, so under 10 km/h wind costs nothing from any
+   direction and the factor starts falling from exactly 1. With the spot facing
+   `F = offshoreWindAngle + 180`: `factor = 1 − onshore/20 − cross/30` on that excess
+   (pure onshore blows out at 30 km/h, pure cross-shore at 40), and above 45 km/h also
+   fading to 0 at 75 km/h from any direction. The old gust-inflated wind and hard step near
+   7 km/h caused 95 % of 3-star jumps between hours that looked identical, and penalised a
+   third of the hours badged `Glass` (the ratio was measured only on winds ≥ 8 km/h).
+   `CALM_WIND_KMH` is shared with the wind badge and the verdict: never duplicate it.
+5. **`swellStars`** is the score without wind; `stars` never exceeds it. The map uses it;
+   the spot detail no longer prints it — the verdict and the wind badge explain the wind.
 6. **Unrated**: no component with both height and period → `unrated: true`, not 0.
 7. **Safety** uses breaking height (Komar–Gaughan, `Hb = 0.39·g^0.2·(T·H²)^0.4`), not
    deep-water height. Beginners are alerted above `max(idealHeight.beginner.max, 1.5 m)`.
@@ -93,6 +99,8 @@ across basins. The basin rule would need revisiting before adding Italy or the A
 ### Conditions (`src/services/conditions.ts`)
 Single source of truth for colour. Both the map markers and the drawer read from here.
 - **Quality tiers** on the surfability scale: `epic` (6-10), `good` (1-5), `poor` (0),
+  shown everywhere as **Epic / Fair / Poor** — the score box and the verdict use the same
+  name (`Flat` and `Blown out` are the two kinds of Poor the verdict names),
   plus `danger` and
   `unrated`. Each tier differs in **fill, size, ring and glow at once** — not opacity
   alone. A single hue ramped only by alpha is unreadable on a dark map: 4 stars and 7
@@ -101,9 +109,11 @@ Single source of truth for colour. Both the map markers and the drawer read from
   **No green anywhere on the quality scale.** Dangerous spots override to red `#EF4444`
   whatever they score; unrated markers are hollow so "no forecast" never reads as
   "bad forecast".
-- **Wind badges**: `Glass` < 5 km/h (green), `Off-shore` (green), `Cross-shore` (light green),
-  `On-shore` (grey). Returns `null` when wind is unknown — a missing reading must never
-  fall through to `Glass`.
+- **Wind badges**: `Glass` < 5 km/h and `Light` 5–10 km/h (green, any direction), then
+  `Offshore` (green), `Cross-shore` (light green), `Onshore` (grey). `Glass` and `Light`
+  mean the wind costs nothing, so they can never sit on an hour that loses points to it.
+  Spelled onshore/offshore everywhere, no hyphen. Returns `null` when wind is unknown — a
+  missing reading must never fall through to `Glass`.
 - **Swell gradient**: light blue (small) -> dark blue (heavy).
 
 ### Tides (`src/services/tides.ts`)

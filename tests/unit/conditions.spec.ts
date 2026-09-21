@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { calculateStarRating } from '../../src/services/star-engine';
 import {
   qualityColor,
   qualityTier,
@@ -85,16 +86,16 @@ test.describe('spec: condition-rating / Escala de tres niveles legible', () => {
 });
 
 test.describe('spec: condition-rating / Badge de condición de viento', () => {
-  test('wind aligned with the offshore angle is Off-shore green', () => {
+  test('wind aligned with the offshore angle is Offshore green', () => {
     const badge = windBadge(forecast({ windDirection: 140, windSpeed: 15 }), SPOT)!;
-    expect(badge.label).toBe('Off-shore');
+    expect(badge.label).toBe('Offshore');
     expect(badge.foreground).toBe('#86EFAC');
     expect(badge.background).toContain('74,222,128');
   });
 
-  test('wind opposite the offshore angle is On-shore grey', () => {
+  test('wind opposite the offshore angle is Onshore grey', () => {
     const badge = windBadge(forecast({ windDirection: 320, windSpeed: 15 }), SPOT)!;
-    expect(badge.label).toBe('On-shore');
+    expect(badge.label).toBe('Onshore');
     expect(badge.foreground).toBe('#D4D4D8');
     expect(badge.background).toContain('161,161,170');
   });
@@ -108,6 +109,36 @@ test.describe('spec: condition-rating / Badge de condición de viento', () => {
   test('wind under 5 km/h is Glass regardless of direction', () => {
     const badge = windBadge(forecast({ windSpeed: 3, windDirection: 320 }), SPOT)!;
     expect(badge.label).toBe('Glass');
+  });
+
+  test('wind from 5 to 10 km/h is Light green whatever its direction', () => {
+    for (const windDirection of [140, 230, 320]) {
+      const badge = windBadge(forecast({ windSpeed: 7, windDirection }), SPOT)!;
+      expect(badge.label).toBe('Light');
+      expect(badge.foreground).toBe('#86EFAC');
+    }
+  });
+
+  test('from 10 km/h the badge names the direction', () => {
+    expect(windBadge(forecast({ windSpeed: 12, windDirection: 320 }), SPOT)!.label).toBe('Onshore');
+    expect(windBadge(forecast({ windSpeed: 12, windDirection: 140 }), SPOT)!.label).toBe('Offshore');
+  });
+
+  test('a Glass or Light badge never sits on an hour that loses points to the wind', () => {
+    const rated = { swellWindow: { minAngle: 200, maxAngle: 340 }, offshoreWindAngle: 140, windTolerance: 30,
+      idealHeight: { beginner: { min: 0.3, max: 1 }, intermediate: { min: 0.5, max: 2 }, expert: { min: 1, max: 4 } } };
+    let checked = 0;
+    for (let windSpeed = 0; windSpeed <= 40; windSpeed += 0.5) {
+      for (let windDirection = 0; windDirection < 360; windDirection += 10) {
+        const f = forecast({ windSpeed, windDirection, swellHeight: 1.6, swellPeriod: 12 });
+        const label = windBadge(f, SPOT)?.label;
+        if (label !== 'Glass' && label !== 'Light') continue;
+        const r = calculateStarRating(f, rated, 'intermediate');
+        expect(r.stars).toBe(r.swellStars);
+        checked++;
+      }
+    }
+    expect(checked).toBeGreaterThan(0);
   });
 
   test('REGRESSION: missing wind yields no badge, never Glass', () => {

@@ -11,7 +11,8 @@
     "test:unit": "playwright test --project=unit",
     "test": "playwright test --project=unit --project=e2e",
     "build:catalog": "node scripts/build-spot-catalog.mjs",
-    "test:prod": "playwright test --project=prod"
+    "test:prod": "playwright test --project=prod",
+    "test:measure": "playwright test --project=measure"
   },
   "dependencies": {
     "@types/mapbox-gl": "^3.4.1",

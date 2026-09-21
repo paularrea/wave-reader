@@ -50,6 +50,10 @@ export default defineConfig({
       testMatch: /tests\/prod\/.*\.spec\.ts/,
       use: { ...devices['Desktop Chrome'], baseURL: undefined },
     },
+    // Opt-in: rates five regions over the whole horizon against today's real
+    // forecast and checks the stability and coherence targets of the rating.
+    // Upstream responses are cached in .cache/rating-trust, so repeats are free.
+    { name: 'measure', testMatch: /tests\/measure\/.*\.spec\.ts/ },
   ],
 
   webServer: {

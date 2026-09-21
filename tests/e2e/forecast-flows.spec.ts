@@ -297,7 +297,7 @@ test.describe('map and spot detail', () => {
 });
 
 test.describe('spec: condition-rating', () => {
-  test('an offshore wind shows a green Off-shore badge', async ({ page }) => {
+  test('an offshore wind shows a green Offshore badge', async ({ page }) => {
     await stubForecast(page, { windSpeed: 18, windDirection: 140 });
     await page.goto('/');
     await openFirstSpot(page);
@@ -307,7 +307,7 @@ test.describe('spec: condition-rating', () => {
     await expect(badge).toHaveCSS('color', 'rgb(134, 239, 172)');
   });
 
-  test('an onshore wind shows a grey On-shore badge', async ({ page }) => {
+  test('an onshore wind shows a grey Onshore badge', async ({ page }) => {
     await stubForecast(page, { windSpeed: 18, windDirection: 320 });
     await page.goto('/');
     await openFirstSpot(page);
@@ -315,6 +315,32 @@ test.describe('spec: condition-rating', () => {
     const badge = page.getByTestId('wind-badge');
     await expect(badge).toHaveText('Onshore');
     await expect(badge).toHaveCSS('color', 'rgb(212, 212, 216)');
+  });
+
+  test('a light onshore wind shows a green Light badge, not Onshore', async ({ page }) => {
+    await stubForecast(page, { windSpeed: 7, windDirection: 320 });
+    await page.goto('/');
+    await openFirstSpot(page);
+
+    const badge = page.getByTestId('wind-badge');
+    await expect(badge).toHaveText('Light');
+    await expect(badge).toHaveCSS('color', 'rgb(134, 239, 172)');
+    await expect(page.getByTestId('spot-verdict')).toContainText('light onshore wind');
+  });
+
+  test('no visible text uses the retired spellings or level names', async ({ page }) => {
+    await stubForecast(page, { windSpeed: 18, windDirection: 320, stars: 7, swellStars: 9 });
+    await page.goto('/');
+    await openFirstSpot(page);
+    const drawer = await page.getByTestId('spot-drawer').innerText();
+    await page.keyboard.press('Escape');
+    await page.getByTestId('info-button').click();
+    const panel = await page.getByTestId('info-panel').innerText();
+
+    for (const retired of ['On-shore', 'Off-shore', 'Excellent', 'Surfable']) {
+      expect(drawer).not.toContain(retired);
+      expect(panel).not.toContain(retired);
+    }
   });
 
   test('no map marker is rendered in green', async ({ page }) => {
@@ -787,13 +813,15 @@ test.describe('spec: surf-rating / Detalle', () => {
     await expect(page.getByTestId('breaking-height')).toContainText('1.9m');
   });
 
-  test('wind-ruined surf says what the swell alone would score', async ({ page }) => {
-    await stubForecast(page, { stars: 2, swellStars: 7 });
+  test('wind-ruined surf shows no potential line: the verdict and the badge explain it', async ({ page }) => {
+    await stubForecast(page, { stars: 2, swellStars: 7, windSpeed: 22, windDirection: 320 });
     await page.goto('/');
     await openFirstSpot(page);
 
-    await expect(page.getByTestId('spot-potential')).toContainText('7/10');
-    await expect(page.getByTestId('spot-potential')).toContainText('wind costs 5');
+    await expect(page.getByTestId('spot-quality')).toBeVisible();
+    await expect(page.getByTestId('spot-potential')).toHaveCount(0);
+    await expect(page.getByTestId('spot-verdict')).toContainText('onshore');
+    await expect(page.getByTestId('wind-badge')).toHaveText('Onshore');
   });
 
   test('clean surf shows no potential line', async ({ page }) => {
@@ -873,6 +901,24 @@ test.describe('spec: data-transparency', () => {
 
     await expect(page.locator('[data-model="dwd_icon"] [data-testid="model-next-update"]')).toHaveText('Due now');
     await expect(page.locator('[data-model="dwd_ewam"] [data-testid="model-next-update"]')).toHaveText('Status unavailable');
+  });
+
+  test('the rating section explains the wind the way it is scored', async ({ page }) => {
+    await stubForecast(page);
+    await stubDataStatus(page);
+    await page.goto('/');
+    await page.getByTestId('info-button').click();
+
+    const rating = page.getByTestId('info-rating');
+    await expect(rating).toContainText('gusts do not count');
+    await expect(rating).toContainText('Under 10 km/h');
+    await expect(rating).not.toContainText(/calibrat/i);
+    await expect(rating).not.toContainText('swell alone');
+
+    // Both basins' anchors, each with the score it gets.
+    await expect(page.getByTestId('info-calibration')).toContainText('1.4 m at 10 s 7');
+    await expect(rating).toContainText('Mediterranean');
+    await expect(rating).toContainText('1.5 m at 8 s 6');
   });
 
   test('when the status endpoint fails the panel says so', async ({ page }) => {

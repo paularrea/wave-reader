@@ -37,7 +37,7 @@ export interface StarRatingResult {
  * same as 1.5 m at 12 s. Skill level now only drives the safety alert.
  *
  * Pipeline: wave energy per component (direction-weighted) -> anchored energy
- * scale -> period quality -> wind (gust-aware).
+ * scale -> period quality -> wind (mean speed, continuous above calm).
  *
  * The scale measures **surfability**, and deliberately no longer reproduces
  * surf-forecast's stars. Theirs is a global scale — it spreads 0-10 over every
@@ -65,8 +65,12 @@ interface EnergyScale {
    * logarithm of the energy, which is where a surfer's sense of size is linear.
    */
   anchors: Array<readonly [kj: number, score: number]>;
-  /** Multipliers for short periods, checked in ascending order of `under`. */
-  period: Array<{ under: number; factor: number }>;
+  /**
+   * Short-period multiplier as points [periodS, factor], ascending, joined by
+   * straight lines and held flat beyond both ends. The last point sits at the
+   * period the anchors are written for, so an anchor scores what it declares.
+   */
+  period: Array<readonly [periodS: number, factor: number]>;
 }
 
 /**
@@ -93,10 +97,13 @@ const SCALES: Record<Basin, EnergyScale> = {
       [1094, 9],
       [2400, 10],
     ],
+    // Each point sits mid-way along the step it replaced: a 0.2 s difference
+    // at 10 s used to be worth three stars.
     period: [
-      { under: 6, factor: 0.48 },
-      { under: 8, factor: 0.69 },
-      { under: 10, factor: 0.71 },
+      [5, 0.48],
+      [7, 0.69],
+      [9, 0.71],
+      [10, 1],
     ],
   },
   /**
@@ -104,7 +111,7 @@ const SCALES: Record<Basin, EnergyScale> = {
    * anchored to local expertise: 0.8 m @ 7 s clean is worth paddling out for,
    * 1 m @ 7 s a decent day, 1.5 m @ 8 s a good one. 5-8 s is the normal
    * Mediterranean period; below 5 s it is chop with no wave in it, which the
-   * period factor kills outright.
+   * period factor cuts to 0.4 -- enough to keep 1 m of 4-second chop at 0.
    */
   mediterranean: {
     anchors: [
@@ -117,8 +124,9 @@ const SCALES: Record<Basin, EnergyScale> = {
       [1200, 10],
     ],
     period: [
-      { under: 5, factor: 0.4 },
-      { under: 6, factor: 0.8 },
+      [4.5, 0.4],
+      [5.5, 0.8],
+      [6, 1],
     ],
   },
 };
@@ -127,19 +135,16 @@ const SCALES: Record<Basin, EnergyScale> = {
 const OFF_WINDOW_FLOOR = 0.1;
 const OFF_WINDOW_FADE_DEG = 45;
 
-/** Below this, wind has no effect in any direction. */
-const LIGHT_WIND_KMH = 7.08;
-/** Onshore wind speed at which the sea is blown out. */
-const ONSHORE_BLOWOUT_KMH = 19.28;
-/** Cross-shore wind speed at which the sea is blown out. */
-const CROSS_BLOWOUT_KMH = 30.1;
 /**
- * Median gust-to-mean ratio on the coast, measured in Open-Meteo at 7 points
- * over 7 days (IQR 1.65-1.91). Dividing gusts by it means a normally gusty hour
- * scores exactly as calibrated on mean wind, and only unusually gusty hours
- * lose more -- Magicseaweed's point that gusts matter more than the mean.
+ * Below this mean wind the sea is effectively glassy for surfing, whatever the
+ * direction: 2 km/h onshore does not spoil a wave. The wind badge and the
+ * verdict read the same constant, so the three can never disagree again.
  */
-const TYPICAL_GUST_RATIO = 1.77;
+export const CALM_WIND_KMH = 10;
+/** Onshore wind this far above calm blows the sea out (30 km/h). */
+const ONSHORE_BLOWOUT_EXCESS_KMH = 20;
+/** Cross-shore wind this far above calm blows the sea out (40 km/h). */
+const CROSS_BLOWOUT_EXCESS_KMH = 30;
 /** Above this, wind degrades the surf whatever its direction... */
 const STRONG_WIND_KMH = 45;
 /** ...reaching zero this many km/h later. */
@@ -207,12 +212,19 @@ export function directionFactor(
   return 1 - (1 - OFF_WINDOW_FLOOR) * (beyond / OFF_WINDOW_FADE_DEG);
 }
 
-/** Short-period sea is disorganised, not just weaker. Cut-offs depend on the basin. */
+/** Short-period sea is disorganised, not just weaker. Continuous in the period. */
 export function periodFactor(periodS: number, basin: Basin = 'atlantic'): number {
-  for (const { under, factor } of SCALES[basin].period) {
-    if (periodS < under) return factor;
+  const points = SCALES[basin].period;
+  const [firstS, firstFactor] = points[0];
+  if (periodS <= firstS) return firstFactor;
+  for (let i = 1; i < points.length; i++) {
+    const [highS, highFactor] = points[i];
+    if (periodS <= highS) {
+      const [lowS, lowFactor] = points[i - 1];
+      return lowFactor + ((periodS - lowS) / (highS - lowS)) * (highFactor - lowFactor);
+    }
   }
-  return 1;
+  return points[points.length - 1][1];
 }
 
 /**
@@ -237,35 +249,33 @@ export function energyScore(energy: number, basin: Basin = 'atlantic'): number {
 }
 
 /**
- * 1 when wind does no harm, 0 when it blows the surf out. Onshore wind hurts
- * far more than cross-shore; offshore of moderate strength does not hurt at all.
- * No bonus for offshore: 10 is already the ceiling, and multiplying a saturated
- * score was part of the original bug.
+ * 1 when wind does no harm, 0 when it blows the surf out. Rated on the mean
+ * wind -- the one the app shows -- because gusts never entered a rating the
+ * surfer could check: the old max(mean, gust / 1.77) rule was measured only on
+ * winds of 8 km/h and more, and near calm it inflated 2 km/h into 15.
+ *
+ * Only the excess over calm counts, so the factor starts at exactly 1 and falls
+ * continuously: no step at the threshold. Onshore hurts more than cross-shore;
+ * offshore of moderate strength does not hurt at all. No bonus for offshore:
+ * 10 is already the ceiling.
  */
-/** Mean wind, raised only when gusts run above their usual ratio to it. */
-export function effectiveWindKmh(meanKmh: number | null, gustKmh: number | null): number | null {
-  if (meanKmh === null) return null;
-  if (gustKmh === null) return meanKmh;
-  return Math.max(meanKmh, gustKmh / TYPICAL_GUST_RATIO);
-}
-
 export function windFactor(
   speedKmh: number | null,
   fromDeg: number | null,
   offshoreWindAngle: number
 ): number {
   if (speedKmh === null || fromDeg === null) return 1;
-  if (speedKmh < LIGHT_WIND_KMH) return 1;
 
+  const excess = Math.max(0, speedKmh - CALM_WIND_KMH);
   // The spot faces the reciprocal of its offshore direction. Wind *from* that
   // bearing comes off the sea: onshore.
   const facing = (offshoreWindAngle + 180) % 360;
   const rad = ((fromDeg - facing) * Math.PI) / 180;
 
-  const onshore = speedKmh * Math.max(0, Math.cos(rad));
-  const cross = speedKmh * Math.abs(Math.sin(rad));
+  const onshore = excess * Math.max(0, Math.cos(rad));
+  const cross = excess * Math.abs(Math.sin(rad));
 
-  let factor = 1 - onshore / ONSHORE_BLOWOUT_KMH - cross / CROSS_BLOWOUT_KMH;
+  let factor = 1 - onshore / ONSHORE_BLOWOUT_EXCESS_KMH - cross / CROSS_BLOWOUT_EXCESS_KMH;
 
   if (speedKmh > STRONG_WIND_KMH) {
     factor *= Math.max(0, 1 - (speedKmh - STRONG_WIND_KMH) / STRONG_WIND_SPAN_KMH);
@@ -312,11 +322,7 @@ export function calculateStarRating(
   const combinedHeight = Math.sqrt(components.reduce((sum, c) => sum + c.heightM ** 2, 0));
 
   const swellScore = energyScore(deliveredEnergy, basin) * periodFactor(weightedPeriod, basin);
-  const wind = windFactor(
-    effectiveWindKmh(forecast.windSpeed, forecast.windGust ?? null),
-    forecast.windDirection,
-    config.offshoreWindAngle
-  );
+  const wind = windFactor(forecast.windSpeed, forecast.windDirection, config.offshoreWindAngle);
 
   const swellStars = Math.round(swellScore);
   // Round the product rather than the parts, then never exceed the potential.
