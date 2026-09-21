@@ -11,6 +11,7 @@
 import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { appendFileSync } from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
+import { overpass, setOverpassLogger } from './lib/overpass.mjs';
 
 const OUT_DIR = new URL('../src/data/', import.meta.url);
 const OUT_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
@@ -22,13 +23,6 @@ const EMPTY_PATH = new URL('../src/data/osm-empty-regions.json', import.meta.url
  */
 const FETCHED_PATH = new URL('../src/data/osm-fetched-regions.json', import.meta.url);
 
-const ENDPOINTS = [
-  'https://overpass-api.de/api/interpreter',
-  'https://overpass.kumi.systems/api/interpreter',
-  'https://overpass.osm.jp/api/interpreter',
-];
-
-const USER_AGENT = 'wave-reader-catalog/1.0 (https://github.com/paularrea/wave-reader)';
 const LOG_PATH = process.env.CATALOG_LOG;
 
 /** Unbuffered, so a long Overpass run can be watched while it happens. */
@@ -37,6 +31,7 @@ function log(line) {
   console.log(stamped);
   if (LOG_PATH) appendFileSync(LOG_PATH, stamped + '\n');
 }
+setOverpassLogger(log);
 
 /**
  * Coastal regions, keyed by ISO 3166-2 code.
@@ -152,52 +147,6 @@ ${clauses}
 );
 out center tags;
 `.trim();
-}
-
-async function overpass(query, attempt = 0) {
-  const endpoint = ENDPOINTS[attempt % ENDPOINTS.length];
-
-  let res;
-  try {
-    res = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'User-Agent': USER_AGENT, 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ data: query }),
-      signal: AbortSignal.timeout(240_000),
-    });
-  } catch (err) {
-    if (attempt >= 8) throw new Error(`Overpass unreachable: ${err.message}`);
-    log(`    ${endpoint.split('/')[2]} failed (${err.message}), retrying`);
-    await sleep(10_000);
-    return overpass(query, attempt + 1);
-  }
-
-  if (res.status === 429 || res.status === 504) {
-    if (attempt >= 8) throw new Error(`Overpass kept returning ${res.status}`);
-    const wait = 12_000 + attempt * 8_000;
-    log(`    ${res.status} from ${endpoint.split('/')[2]}, retrying in ${wait / 1000}s`);
-    await sleep(wait);
-    return overpass(query, attempt + 1);
-  }
-  if (!res.ok) throw new Error(`Overpass ${res.status}: ${(await res.text()).slice(0, 160)}`);
-
-  const body = await res.json();
-
-  /**
-   * Overpass answers a timed-out or memory-capped query with HTTP 200, a
-   * partial element list and a `remark`. Taking that at face value is how
-   * County Donegal went from 15 beaches to 2 between runs -- silent data loss
-   * dressed up as success.
-   */
-  if (typeof body.remark === 'string' && /timed out|out of memory|error/i.test(body.remark)) {
-    if (attempt >= 8) throw new Error(`Overpass kept returning partial data: ${body.remark}`);
-    const wait = 20_000 + attempt * 10_000;
-    log(`    partial result ("${body.remark.slice(0, 60)}"), retrying in ${wait / 1000}s`);
-    await sleep(wait);
-    return overpass(query, attempt + 1);
-  }
-
-  return body;
 }
 
 /** Beaches are nodes, ways or relations; `out center` gives all three a point. */

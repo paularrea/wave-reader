@@ -3,6 +3,8 @@ import { allSpots } from '../../src/services/spot-catalogue';
 import report from '../../src/data/spots.catalog-report.json';
 import curation from '../../src/data/spots.curation-report.json';
 import regions from '../../src/data/regions.json';
+import attested from '../../src/data/surf-spots.attested.json';
+import coordinateCheck from '../../src/data/spots.coordinate-check.json';
 
 /**
  * Guards the published catalogue. These are the checks the original
@@ -175,7 +177,10 @@ test.describe('spec: spot-catalog / Solo spots con datos de oleaje', () => {
 });
 
 test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', () => {
-  const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|embarcader|\bdique\b|\bpiscina\b|\bdock\b|\bquay\b|\bjetty\b|\bharbour\b)/i;
+  // "Marina" and "harbour" are not on this list: Playa de Santa Marina,
+  // Son Serra de Marina and St Ives' Harbour Beach are breaks both surf
+  // references list. Attestation, not a name pattern, decides what is surf.
+  const NOT_SURF = /(d[àa]rsena|\bmoll\b|\bmuelle\b|embarcader|\bdique\b|\bpiscina\b|\bdock\b|\bquay\b|\bjetty\b)/i;
 
   test('harbour infrastructure and inland water are not in the catalogue', () => {
     for (const spot of catalogue) {
@@ -226,7 +231,8 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
   test('REGRESSION: named breaks survive even when they share a forecast cell', () => {
     // Anglet's twelve peaks sit inside four kilometres; deduplicating by
     // distance alone left one of them, and took La Graviere, Le Santocha and
-    // La Piste out of the Landes with it.
+    // La Piste out of the Landes with it. (La Milady is not here: neither
+    // surf reference lists it, so it is not attested.)
     const names = catalogue
       .filter(s => s.community === 'Nouvelle-Aquitaine')
       .map(s => s.name.toLowerCase());
@@ -241,7 +247,6 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
       'estagnots',
       'penon',
       'marinella',
-      'milady',
     ]) {
       expect(
         names.some(n => n.includes(break_)),
@@ -271,9 +276,9 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
     // ran both ways, and "La plage Blanche" matched "La Lette Blanche". Being
     // treated as named exempted both from deduplication, so they survived
     // beside the real break. They are only observable as drops.
+    const published = new Set(catalogue.filter(s => s.community === 'Nouvelle-Aquitaine').map(s => s.name));
     for (const fragment of ['Plage du Nord', 'La plage Blanche']) {
-      const record = curation.dropped.find(d => d.name === fragment && d.region === 'Nouvelle-Aquitaine');
-      expect(record?.reason, `${fragment} was treated as a named break`).toContain('unnamed');
+      expect(published.has(fragment), `${fragment} was treated as a named break`).toBe(false);
     }
   });
 });
@@ -295,5 +300,50 @@ test.describe('spec: spot-catalog / Publicado por país', () => {
     for (const spot of catalogue) {
       expect(known.has(`${spot.country}|${spot.community}`), `${spot.name}`).toBe(true);
     }
+  });
+});
+
+test.describe('spec: spot-catalog / Solo spots atestiguados', () => {
+  const attestedIds = new Map(attested.spots.map(a => [a.id, a]));
+  const checks = coordinateCheck.spots as Record<string, { ok: boolean; reason: string | null; waterName?: string | null }>;
+
+  test('every published spot is attested by a surf reference', () => {
+    // An exposed beach is not a surf spot. Publishing every exposed OSM beach
+    // shipped 1,690 places where the references list a few hundred.
+    const unattested = catalogue.filter(s => !attestedIds.has(s.id)).map(s => `${s.name} (${s.community})`);
+    expect(unattested.join('\n')).toBe('');
+  });
+
+  test('every attestation names the reference it came from', () => {
+    for (const s of catalogue) {
+      const a = attestedIds.get(s.id)!;
+      expect(a.sources.length, s.name).toBeGreaterThan(0);
+      expect(a.attestedAs.length, s.name).toBeGreaterThan(0);
+    }
+  });
+
+  test('every published coordinate passed the coastline check', () => {
+    const failed = catalogue
+      .filter(s => !checks[s.id]?.ok)
+      .map(s => `${s.name}: ${checks[s.id]?.reason ?? 'never checked'}`);
+    expect(failed.join('\n')).toBe('');
+  });
+
+  test('REGRESSION: no published spot faces the Mar Menor or another closed sea', () => {
+    // OSM draws natural=coastline around the Mar Menor too, so the lagoon
+    // shore passed a plain coastline check. Its beaches face water five metres
+    // deep that never sees swell.
+    for (const id of ['playa-de-punta-brava', 'playa-de-mar-de-cristal']) {
+      expect(catalogue.some(s => s.id === id), id).toBe(false);
+    }
+    const lagoon = catalogue.filter(s => /Mar Menor|[ÉE]tang|Albufera/i.test(checks[s.id]?.reason ?? ''));
+    expect(lagoon.map(s => s.name).join('\n')).toBe('');
+  });
+
+  test('REGRESSION: a reference is not pinned on the wrong beach by proximity alone', () => {
+    // Mundaka's reference coordinate is 460 m from an OSM cove called
+    // Basamortu kala. Matching by nearest place attested the cove as Mundaka.
+    const cove = catalogue.find(s => s.name === 'Basamortu kala');
+    expect(cove ? attestedIds.get(cove.id)!.attestedAs : []).not.toContain('Mundaka');
   });
 });

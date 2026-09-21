@@ -431,10 +431,11 @@ export function DataInfoPanel() {
 
             <Section id="catalogue" icon={<MapPin size={15} />} title="Spot catalogue" testId="info-catalogue">
               <p>
-                <span className="text-ink-0">{catalogue.total.toLocaleString('en-GB')} spots</span> from
-                named beaches in OpenStreetMap, kept only where the coast faces open water. Harbours,
-                marinas and coves are dropped, and beaches closer together than the wave model&apos;s
-                5 km cell share one spot, because they share one forecast.
+                <span className="text-ink-0">{catalogue.total.toLocaleString('en-GB')} spots</span>. A
+                beach is listed only when public surf-spot listings name a break there, so an exposed
+                beach nobody surfs is not a spot. Names and coordinates come from OpenStreetMap, and
+                every coordinate is checked to sit on the open-sea shore: a beach facing a lagoon
+                such as the Mar Menor is left out.
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {catalogue.byCountry.map(([country, n]) => (
@@ -455,6 +456,10 @@ export function DataInfoPanel() {
               testId="info-limitations"
             >
               <ul className="space-y-2">
+                <Fact term="Missing breaks">
+                  A break OpenStreetMap does not map as a named beach is not listed yet, however well
+                  known: reef and point breaks, and much of Scotland and the west of Ireland.
+                </Fact>
                 <Fact term="Tides">
                   Times come from modelled sea level, which is less accurate on the coast. Not for
                   navigation.

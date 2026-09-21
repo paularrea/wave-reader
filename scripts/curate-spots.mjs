@@ -1,39 +1,36 @@
 /**
- * Stage 4: turn the catalogue of OSM shore features into a catalogue of surf
- * spots, and publish it one file per country.
+ * Stage 4: publish the surf spots, one file per country.
  *
- * OpenStreetMap tags every named beach, so stage 2 hands over 7,870 places for
- * four countries -- 600 of them in Catalunya, where surf-forecast lists 29.
- * Reasons a place must not be in a surf app:
+ * A place is published only when two things hold:
  *
- *   1. Nothing breaks there: harbour coves, marina basins, inner-ria beaches.
- *   2. It is not a surf place at all: docks, quays, jetties, lakes, lagoons.
- *   3. It is the same beach OSM already mapped under a slightly different name.
- *   4. Nobody named it and it sits in the same model cell as somewhere that is
- *      named -- OSM's unnamed fragments, which fill the map with noise.
+ *   1. It is attested as a surf spot (stage 3.5, src/data/surf-spots.attested.json):
+ *      a published surf reference names it, and the name resolves to this
+ *      exact OSM place. An exposed beach is not a surf spot; this used to
+ *      publish every one of them -- 1,690 places, 1,048 of which no reference
+ *      knew, including the shore of the Mar Menor lagoon.
+ *   2. Its coordinate passed the check in spots.coordinate-check.json: it is on
+ *      the open-sea coastline and not beside a lake or lagoon.
  *
- * Point 4 never applies to a break on the curated list. Anglet's twelve peaks
- * share one model cell to the decimal, but a surfer choosing between La Barre
- * and Les Cavaliers is choosing between two banks and two crowds: spot identity
- * is editorial, not a property of the wave model. An earlier pass deduplicated
- * everything by distance and left Anglet with one spot and the Landes without
- * La Gravière, Santocha or La Piste.
+ * What remains here is the housekeeping OSM needs whatever the reference says:
+ * a stretch of beach set aside for something else (naturist, dogs) is not a
+ * break, inland water never has swell, and one beach mapped twice is one spot.
  *
- * The filter is deliberately explainable, and every drop is recorded with its
- * reason in spots.curation-report.json so the reduction can be audited and
- * reversed.
+ * Every drop is recorded with its reason in spots.curation-report.json so the
+ * reduction can be audited and reversed.
  *
  *   node scripts/curate-spots.mjs           # write the catalogue
  *   node scripts/curate-spots.mjs --dry-run # counts only, writes nothing
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { normalise, curatedMatch, curatedNames } from './lib/curated.mjs';
 
 const IN_PATH = new URL('../src/data/spots.json', import.meta.url);
-const CURATED_PATH = new URL('../src/data/surf-spots.curated.json', import.meta.url);
 const OUT_DIR = new URL('../src/data/spots/', import.meta.url);
 const REGIONS_PATH = new URL('../src/data/regions.json', import.meta.url);
 const REPORT_PATH = new URL('../src/data/spots.curation-report.json', import.meta.url);
+const ATTESTED_PATH = new URL('../src/data/surf-spots.attested.json', import.meta.url);
+const COORDINATE_CHECK_PATH = new URL('../src/data/spots.coordinate-check.json', import.meta.url);
 
 const ISO2 = {
   Spain: 'es',
@@ -42,73 +39,17 @@ const ISO2 = {
   Ireland: 'ie',
 };
 
-/**
- * Open-Meteo's marine models run at roughly this resolution, so places closer
- * than this to each other are served the same forecast.
- */
-const MODEL_CELL_KM = 5;
-
 /** Two entries with one name this close apart are one beach mapped twice. */
 const SAME_PLACE_KM = 1.5;
 
-/** Swell needs an arc of open water to arrive through. */
-const MIN_EXPOSURE_DEG = 120;
-
-/** Places that are water but not surf: docks, marinas, inland water. */
-const NOT_SURF = /(\bmarina\b|d[àa]rsena|\bmoll\b|\bmuelle\b|club\s*(n[àa]utic|n[áa]utico|de\s*mar)|embarcader|\bdique\b|espig[oó]n|\bpiscina\b|\bestany\b|\blago\b|\blac\b|\bllac\b|\blake\b|[ée]tang|embalse|albufera|\bcanal\b|\bdock\b|\bquay\b|\bjetty\b|slipway|\bharbour\b|\bharbor\b|zona dunar|\bmarisma)/i;
-
 /**
- * A cove is a pocket of water between headlands: sheltered from the side by
- * definition, and small enough that nobody drives to it to surf. OSM maps
- * hundreds of them, especially on the Mediterranean. A cove that is a known
- * break survives through the curated list.
+ * Inland water. No reference makes a lake or a lagoon surfable, so a name that
+ * says it is one is dropped even when a reference pointed near it.
  */
-const COVE = /(\bcala\b|\bcaleta\b|\bcalita\b|\bplatgeta\b|\brac[oó]\b|\bcova\b|\bensenada\b|\benseada\b|\bangra\b|\bcove\b)/i;
+const INLAND = /(\bestany\b|\blago\b|\blac\b|\bllac\b|\blake\b|\bloch\b|\blough\b|[ée]tang|embalse|pantano|albufera|\blaguna\b|\bmarisma|mar menor)/i;
 
 /** Stretches of a beach set aside for something other than surfing. */
 const SECTION = /(naturist|nudist|gossos|\bperros\b|canina|infantil|surf\s*school|centre de vacances)/i;
-
-/** A port unless the name says it is the beach next to one. */
-const PORT = /(\bport\b|\bporto\b|\bpuerto\b|\bports\b)/i;
-const BEACH = /(\bpraia\b|\bplaya\b|\bplatja\b|\bplage\b|\bbeach\b|\bstrand\b|\barea\b|\bcala\b|\banse\b|\btr[áa]\b|\btraeth\b|\bhondartza\b)/i;
-
-function normalise(name) {
-  return name
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\b(praia|playa|platja|plage|beach|strand|traeth|hondartza|sands|cala|caleta|anse|de|del|dels|des|du|da|do|das|dos|la|le|les|los|el|els|s|sa|a|o|of|the)\b/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-/**
- * Basque, Galician and Welsh OSM names carry a genitive the curated name does
- * not: Zarautz is mapped as "Zarauzko hondartza", Orio as "Orioko hondartza".
- * Two tokens are the same place when one is the other's stem, or when they
- * share a long enough stem that only the inflection differs.
- */
-function sameToken(a, b) {
-  if (a === b) return true;
-  const [short, long] = a.length <= b.length ? [a, b] : [b, a];
-  if (short.length >= 4 && long.startsWith(short) && long.length - short.length <= 3) return true;
-  if (short.length < 5 || long.length - short.length > 4) return false;
-  let common = 0;
-  while (common < short.length && short[common] === long[common]) common++;
-  return common >= 5;
-}
-
-function tokensMatch(spotKey, curatedKey) {
-  const curatedTokens = curatedKey.split(' ').filter(t => t.length >= 4);
-  if (curatedTokens.length === 0) return false;
-  const spotTokens = spotKey.split(' ');
-  // The stem rule is for inflection, not for a name buried in a longer one.
-  // Without this, "centrale" matched the "centre" inside "Plage naturiste du
-  // centre de vacances d'Arnaoutchot" and let a nudist campsite in as a break.
-  if (spotTokens.length > curatedTokens.length + 1) return false;
-  return curatedTokens.every(c => spotTokens.some(s => sameToken(s, c)));
-}
 
 /** Flat-earth distance: at these separations the error is under a metre. */
 function distanceKm(a, b) {
@@ -121,87 +62,54 @@ function distanceKm(a, b) {
 }
 
 const spots = JSON.parse(readFileSync(IN_PATH));
-const curated = JSON.parse(readFileSync(CURATED_PATH));
-
-/** Curated names per "country|region", normalised once. */
-const curatedIndex = new Map();
-for (const [country, regions] of Object.entries(curated)) {
-  if (country.startsWith('_')) continue;
-  for (const [region, names] of Object.entries(regions)) {
-    // The order in the file is editorial: when two named breaks share a
-    // forecast cell, the one listed first is the one surfers would name.
-    curatedIndex.set(
-      `${country}|${region}`,
-      names.map((n, rank) => ({ raw: n, key: normalise(n), rank }))
-    );
-  }
-}
-
-/** The curated name this place answers to, or null. */
-function curatedMatch(spot) {
-  const names = curatedIndex.get(`${spot.country}|${spot.community}`);
-  if (!names) return null;
-  const key = normalise(spot.name);
-  if (!key) return null;
-  // Exact first: "Sant Pol" must not claim "Sant Pol de Mar" while the real one waits.
-  //
-  // Containment runs one way only. Letting a short OSM name match a longer
-  // curated one made the generic fragments -- "Plage du Nord", "La plage
-  // Blanche" -- claim to be La Cantine Nord and La Lette Blanche, which both
-  // kept them out of the deduplication and stole the real break's rank.
-  return (
-    names.find(n => n.key === key) ??
-    names.find(n => n.key.length >= 5 && key.includes(n.key)) ??
-    names.find(n => tokensMatch(key, n.key)) ??
-    null
-  );
-}
+const attested = new Map(JSON.parse(readFileSync(ATTESTED_PATH)).spots.map(a => [a.id, a]));
+const coordinateCheck = JSON.parse(readFileSync(COORDINATE_CHECK_PATH)).spots;
 
 const dropped = [];
 function drop(spot, reason) {
   dropped.push({ id: spot.id, name: spot.name, country: spot.country, region: spot.community, reason });
 }
 
-// 1. Places that are not surf spots at all.
 const candidates = [];
 for (const spot of spots) {
-  const named = curatedMatch(spot);
-  if (NOT_SURF.test(spot.name)) {
-    drop(spot, 'not a surf place: harbour infrastructure or inland water');
+  if (!attested.has(spot.id)) {
+    drop(spot, 'not attested: no surf reference names this place');
     continue;
   }
-  if (PORT.test(spot.name) && !BEACH.test(spot.name) && !named) {
-    drop(spot, 'not a surf place: a port, not the beach beside one');
+  if (INLAND.test(spot.name)) {
+    drop(spot, 'not a surf place: inland water');
     continue;
   }
-  // Unconditional: "Saturraran naturista" is a stretch of Saturraran, not a
-  // second break, even though the curated list names Saturraran.
+  // "Saturraran naturista" is a stretch of Saturraran, not a second break.
   if (SECTION.test(spot.name)) {
     drop(spot, 'not a surf place: a section of a beach set aside for something else');
     continue;
   }
-  if (COVE.test(spot.name) && !named) {
-    drop(spot, 'a cove: sheltered from the side and too small to be a break');
+  const check = coordinateCheck[spot.id];
+  if (!check) {
+    drop(spot, 'coordinate not checked: run scripts/verify-spot-coordinates.mjs');
     continue;
   }
-  // 2. No arc of open water for swell to arrive through.
-  if ((spot.provenance?.exposureDeg ?? 0) < MIN_EXPOSURE_DEG && !named) {
-    drop(spot, `sheltered: swell window of ${spot.provenance?.exposureDeg ?? 0}deg is under ${MIN_EXPOSURE_DEG}deg`);
+  if (!check.ok) {
+    drop(spot, `coordinate rejected: ${check.reason}`);
     continue;
   }
-  candidates.push({ spot, named });
+  // A long beach's centroid sits in the dunes; the check moved it to the
+  // shoreline. The original stays in the provenance so the move can be read.
+  const published = check.snapped
+    ? {
+        ...spot,
+        coordinates: { lat: check.snapped.lat, lon: check.snapped.lon },
+        provenance: { ...spot.provenance, centroid: spot.coordinates, movedToShoreM: check.snapped.movedM },
+      }
+    : spot;
+  candidates.push({ spot: published, named: curatedMatch(spot) });
 }
 
-// 3. Thin out the places nobody named, one per stretch of coast that shares a
-//    forecast cell.
-//
-//    Named breaks are exempt, and that is the whole point. Anglet's twelve
-//    peaks sit inside four kilometres and share a model cell to the decimal,
-//    but a surfer choosing between La Barre and Les Cavaliers is choosing
-//    between two different banks with two different crowds. Spot identity is
-//    editorial, not a property of the wave model. Deduplication exists to stop
-//    OSM's unnamed beach fragments filling the map, nothing more -- an earlier
-//    pass applied it to everything and left Anglet with a single spot.
+// One beach mapped twice ("Ondres-Ocean" and "Plage Ondres-Ocean", "Plage du
+// Metro" three times along a kilometre) is one spot. Distinct names are never
+// merged, however close: Anglet's peaks share a model cell to the decimal, but
+// La Barre and Les Cavaliers are two banks and two crowds.
 const byRegion = new Map();
 for (const c of candidates) {
   const key = `${c.spot.country}|${c.spot.community}`;
@@ -215,28 +123,16 @@ for (const group of byRegion.values()) {
     (a, b) =>
       Number(Boolean(b.named)) - Number(Boolean(a.named)) ||
       (a.named?.rank ?? 0) - (b.named?.rank ?? 0) ||
-      (b.spot.provenance?.exposureDeg ?? 0) - (a.spot.provenance?.exposureDeg ?? 0) ||
+      attested.get(b.spot.id).sources.length - attested.get(a.spot.id).sources.length ||
       a.spot.name.length - b.spot.name.length
   );
   const survivors = [];
   for (const c of group) {
-    // The same beach mapped twice: OSM has both "Ondres-Ocean" and "Plage
-    // Ondres-Ocean", and "Plage du Metro" three times along one kilometre.
-    // Same name and touching distance is one place, named or not.
     const twin = survivors.find(
       s => normalise(s.spot.name) === normalise(c.spot.name) && distanceKm(s.spot.coordinates, c.spot.coordinates) < SAME_PLACE_KM
     );
     if (twin) {
       drop(c.spot, `the same place as ${twin.spot.name}, mapped twice in OpenStreetMap`);
-      continue;
-    }
-    if (c.named) {
-      survivors.push(c);
-      continue;
-    }
-    const near = survivors.find(s => distanceKm(s.spot.coordinates, c.spot.coordinates) < MODEL_CELL_KM);
-    if (near) {
-      drop(c.spot, `unnamed and in the same forecast cell as ${near.spot.name} (${distanceKm(near.spot.coordinates, c.spot.coordinates).toFixed(1)} km)`);
       continue;
     }
     survivors.push(c);
@@ -248,12 +144,7 @@ kept.sort((a, b) => a.spot.id.localeCompare(b.spot.id));
 
 // Curated names nothing answered to: reported, never invented.
 const matchedNames = new Set(kept.filter(k => k.named).map(k => `${k.spot.country}|${k.spot.community}|${k.named.raw}`));
-const unmatched = [];
-for (const [key, names] of curatedIndex) {
-  for (const n of names) {
-    if (!matchedNames.has(`${key}|${n.raw}`)) unmatched.push(`${key}|${n.raw}`);
-  }
-}
+const unmatched = curatedNames().filter(name => !matchedNames.has(name));
 
 // --- Report ------------------------------------------------------------
 const perRegion = new Map();
@@ -332,8 +223,8 @@ writeFileSync(
     {
       generatedAt: new Date().toISOString().slice(0, 10),
       rules: {
-        modelCellKm: MODEL_CELL_KM,
-        minExposureDeg: MIN_EXPOSURE_DEG,
+        gate: 'attested by a surf reference, and coordinate verified on the open-sea coastline',
+        samePlaceKm: SAME_PLACE_KM,
       },
       in: spots.length,
       out: kept.length,
