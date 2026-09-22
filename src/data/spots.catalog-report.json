@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-22T09:52:52.866Z",
- "kept": 8536,
+ "generatedAt": "2026-09-22T19:47:51.331Z",
+ "kept": 9054,
  "dropped": [
   {
    "name": "Río A Pesqueira",
@@ -4852,18 +4852,18 @@
    "reason": "open arc of only 22.5 degrees"
   },
   {
+   "name": "Lackeen Point",
+   "community": "Kerry",
+   "country": "Ireland",
+   "osmId": 28770776,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
    "name": "Bullogfane Bay",
    "community": "Donegal",
    "country": "Ireland",
    "osmId": 52229984,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "An Crompán",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 52256107,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Glenmore Strand",
@@ -4880,6 +4880,13 @@
    "reason": "open arc of only 0 degrees"
   },
   {
+   "name": "Aughinish Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 490278617,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
    "name": "Coose Bay",
    "community": "Galway",
    "country": "Ireland",
@@ -4887,32 +4894,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Roaring-Water Bay",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 559828605,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Tinarana Bay",
    "community": "Clare",
    "country": "Ireland",
    "osmId": 602811627,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Bannow Bay",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 765253970,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Booley Bay",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 794567277,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Legganore Bay",
@@ -4943,20 +4929,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Clifden Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 1588737934,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuan na Beirtrí Buí",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 1588739370,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Cashel Bay",
    "community": "Galway",
    "country": "Ireland",
@@ -4964,95 +4936,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Little Killary Harbour",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 1807916251,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuan Chamais",
+   "name": "Cregg Point",
    "community": "Galway",
    "country": "Ireland",
-   "osmId": 1996287001,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Roundstone Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 1996287031,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Dunbulcaun Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 2000655562,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Kinvara Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 2000655567,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Oranmore Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 2000655573,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Tyrone Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 2000655577,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Aylevarroo Bay",
-   "community": "Clare",
-   "country": "Ireland",
-   "osmId": 2000679928,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Ballylongford Bay",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2000679931,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Ballymacrinan Bay",
-   "community": "Clare",
-   "country": "Ireland",
-   "osmId": 2000679933,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Bunaclugga Bay",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2000679948,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Carrigaholt Bay",
-   "community": "Clare",
-   "country": "Ireland",
-   "osmId": 2000679951,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Castlemaine Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2000679954,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 1974157333,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Clonderalaw Bay",
@@ -5062,46 +4950,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Glencloosagh Bay",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2000679979,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Labasheeda Bay",
    "community": "Clare",
    "country": "Ireland",
    "osmId": 2000679983,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Ardgroom Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2001359985,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cleanderry Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2001359990,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Coongar Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2001359991,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Kilmakilloge Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2001359996,
-   "reason": "open arc of only 45 degrees"
   },
   {
    "name": "Lehid Harbour",
@@ -5111,95 +4964,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Coolieragh Harbour",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 2001375427,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Broomhill Bay",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 2001641842,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Cork Harbour",
    "community": "Cork",
    "country": "Ireland",
    "osmId": 2001641845,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Creadan Bay",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 2001641846,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Ardbear Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 2002362201,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Newport Bay",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 2002362218,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Westport Bay",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 2002362221,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Fintragh Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002389352,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Killybegs Harbour",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002389354,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuan na Trá Móire",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 2002389362,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Ballymastocker Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002511186,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Carrick Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002511189,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Clonmass Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002511193,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Devlin Bay",
@@ -5251,27 +5020,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Owenamara Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002511215,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "The Cul Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 2002511220,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "King's Bay",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 2523113606,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Catherine's Bay",
    "community": "Wexford",
    "country": "Ireland",
@@ -5284,34 +5032,6 @@
    "country": "Ireland",
    "osmId": 2523177977,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Glenwater Bay",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 2553644680,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Cotton Hole",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 2585198376,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Philip's Hole",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 2585198378,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Lareen Bay",
-   "community": "Leitrim",
-   "country": "Ireland",
-   "osmId": 2720049503,
-   "reason": "open arc of only 45 degrees"
   },
   {
    "name": "Aghamore Bay",
@@ -5356,20 +5076,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Monkstown Creek",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 3459568132,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Lough Beg",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 3461834604,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Cuskinny Bay",
    "community": "Cork",
    "country": "Ireland",
@@ -5377,39 +5083,46 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Courtmacsherry Harbour",
-   "community": "Cork",
+   "name": "Boatman's Point",
+   "community": "Clare",
    "country": "Ireland",
-   "osmId": 3540129365,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 3548126185,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Poulgorm Bay",
-   "community": "Cork",
+   "name": "Killanna Point",
+   "community": "Clare",
    "country": "Ireland",
-   "osmId": 3552268678,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 3548126187,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Rincolisky Bay",
-   "community": "Cork",
+   "name": "Labasheeda Point",
+   "community": "Clare",
    "country": "Ireland",
-   "osmId": 3611144157,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 3548126188,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Rockfleet Bay",
-   "community": "Mayo",
+   "name": "Redcap Point",
+   "community": "Clare",
    "country": "Ireland",
-   "osmId": 3819023413,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 3548126190,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Béal an Chreachaire",
-   "community": "Mayo",
+   "name": "Inishcronan Point",
+   "community": "Clare",
    "country": "Ireland",
-   "osmId": 3819793926,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 3613393069,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Farran Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 3701907169,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Sruwaddacon Bay",
@@ -5419,34 +5132,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Ballydehob Bay",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 3946805714,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Bá Mhaigh Raithin",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 3986177934,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Pallas Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 4290459593,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cove Harbour",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 4306617647,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Tarbet Bay",
    "community": "Limerick",
    "country": "Ireland",
@@ -5454,32 +5139,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Port an Churaigh",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 4318060499,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Béal an Bhulláin",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 4318060500,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Achill Sound",
    "community": "Mayo",
    "country": "Ireland",
    "osmId": 4453778304,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Cuan Bhun an Churraigh",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 4453778305,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Trawane Bay",
@@ -5510,10 +5174,24 @@
    "reason": "open arc of only 0 degrees"
   },
   {
+   "name": "Farrahill Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 5341117194,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
    "name": "Bunlahy Bay",
    "community": "Clare",
    "country": "Ireland",
    "osmId": 5341118028,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Rinbarra Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 5341142055,
    "reason": "open arc of only 0 degrees"
   },
   {
@@ -5524,6 +5202,13 @@
    "reason": "open arc of only 0 degrees"
   },
   {
+   "name": "Rinnaman Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 5341273719,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
    "name": "Carrowgar Bay",
    "community": "Clare",
    "country": "Ireland",
@@ -5531,18 +5216,18 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Trawenagh Bay",
-   "community": "Donegal",
+   "name": "Rose Point",
+   "community": "Sligo",
    "country": "Ireland",
-   "osmId": 5807012606,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 6239793445,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "White Bay",
-   "community": "Donegal",
+   "name": "Castle Point",
+   "community": "Sligo",
    "country": "Ireland",
-   "osmId": 6164253911,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 6239793446,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "2018 Drought Shoreline end",
@@ -5559,11 +5244,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Sáile",
-   "community": "Mayo",
+   "name": "Eagle Point",
+   "community": "Cork",
    "country": "Ireland",
-   "osmId": 6731691031,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 6589998172,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Caraidh Sháile",
@@ -5578,20 +5263,6 @@
    "country": "Ireland",
    "osmId": 7090913639,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Back Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7640122553,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Matman's Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7640122554,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Trabreaga Bay",
@@ -5615,39 +5286,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Drumnacraig Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7794558342,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Boat Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7794558343,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Sliddery Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7794558344,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Boathill Bay",
    "community": "Donegal",
    "country": "Ireland",
    "osmId": 7794558345,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Crooban Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7794558346,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Tirloughan Bay",
@@ -5657,13 +5300,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Meadow Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7794558375,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Doocarrick Bay",
    "community": "Donegal",
    "country": "Ireland",
@@ -5671,18 +5307,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Horse Park Bay",
-   "community": "Donegal",
+   "name": "An Plaosc",
+   "community": "Kerry",
    "country": "Ireland",
-   "osmId": 7795314455,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Lagmore Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 7795314456,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 8475102855,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Golden Bay",
@@ -5692,27 +5321,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Dunmanus Harbour",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 8883447244,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Murvagh Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 9126911109,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Shell Beach",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 9198385790,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Newfoundland Bay",
    "community": "Kerry",
    "country": "Ireland",
@@ -5720,36 +5328,8 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Trá na h Úine",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 9497548957,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cúl Cluthar Na Léima",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 9608398074,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Dromina Strand",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 9956997757,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Raheen Strand",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 9956997758,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
    "name": "Killary Harbour",
-   "community": "Mayo",
+   "community": "Galway",
    "country": "Ireland",
    "osmId": 10582653038,
    "reason": "open arc of only 0 degrees"
@@ -5769,11 +5349,18 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Loughaun",
+   "name": "Carrigrenan Point",
    "community": "Cork",
    "country": "Ireland",
-   "osmId": 11679047436,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 11608545231,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Marino Point",
+   "community": "Cork",
+   "country": "Ireland",
+   "osmId": 11611611499,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Castlelough Bay",
@@ -5790,6 +5377,13 @@
    "reason": "open arc of only 0 degrees"
   },
   {
+   "name": "Muckinish Point",
+   "community": "Limerick",
+   "country": "Ireland",
+   "osmId": 11835270029,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
    "name": "Bog Bay",
    "community": "Kerry",
    "country": "Ireland",
@@ -5797,81 +5391,74 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Cuan Chladhnach",
-   "community": "Galway",
+   "name": "Cheek Point",
+   "community": "Waterford",
    "country": "Ireland",
-   "osmId": 12051898896,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 11992635659,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Tra Mór",
-   "community": "Donegal",
+   "name": "Long Point",
+   "community": "Galway",
    "country": "Ireland",
-   "osmId": 12118369929,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 12070510672,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Barnaderg Bay",
-   "community": "Mayo",
+   "community": "Galway",
    "country": "Ireland",
    "osmId": 12154405455,
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Streamstown Bay",
-   "community": "Galway",
+   "name": "Gubcormongan",
+   "community": "Leitrim",
    "country": "Ireland",
-   "osmId": 12187064854,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 12259452356,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Cuas na Bioraí",
-   "community": "Kerry",
+   "name": "Ross Point",
+   "community": "Leitrim",
    "country": "Ireland",
-   "osmId": 12282692024,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 12277039171,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "An Cuas Gorm",
-   "community": "Kerry",
+   "name": "Rosfriar Point",
+   "community": "Leitrim",
    "country": "Ireland",
-   "osmId": 12282692025,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 12277039172,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Cuan an Bháid",
-   "community": "Kerry",
+   "name": "Rinphilip Point",
+   "community": "Mayo",
    "country": "Ireland",
-   "osmId": 12282692027,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 12319475449,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Cuan Chill Chiaráin",
-   "community": "Galway",
+   "name": "Kiltoom Point",
+   "community": "Mayo",
    "country": "Ireland",
-   "osmId": 13336621410,
-   "reason": "open arc of only 45 degrees"
+   "osmId": 12563198926,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Caladh Laoi",
-   "community": "Galway",
+   "name": "Rinnatalleen",
+   "community": "Sligo",
    "country": "Ireland",
-   "osmId": 13336621411,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 12585824670,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Caladh na Sliogán",
-   "community": "Galway",
+   "name": "Muldarry Point",
+   "community": "Meath",
    "country": "Ireland",
-   "osmId": 13336621412,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Cuan Chamais",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 13338342447,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 13243146819,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "Cuan an Tuairín",
@@ -5881,32 +5468,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "An Crompán Cam",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 13436659329,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "An Crompán Mór",
    "community": "Galway",
    "country": "Ireland",
    "osmId": 13436659330,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Cuan na Muice",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 13436659346,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Inbhear Beag",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 13584840423,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Cuan hAille Bhuí",
@@ -5930,60 +5496,18 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Rossmore Bay",
-   "community": "Cork",
+   "name": "Harvey's Point",
+   "community": "Donegal",
    "country": "Ireland",
-   "osmId": 13656710346,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 14118641911,
+   "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Bá Thulacháin",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 13727740623,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "An Crompán Mór",
+   "name": "Cor na dTráchta",
    "community": "Galway",
    "country": "Ireland",
-   "osmId": 14132873108,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Cuan na hAille Buí",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 14142383004,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Lahinch Beach",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 24547527,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Woodstown Strand",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 35220855,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Fornaght Strand",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 35220857,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Booley Bay Beach",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 64776140,
-   "reason": "open arc of only 22.5 degrees"
+   "osmId": 14131535990,
+   "reason": "open arc of only 0 degrees"
   },
   {
    "name": "White Sands",
@@ -5993,102 +5517,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Enniscrone Beach",
-   "community": "Sligo",
-   "country": "Ireland",
-   "osmId": 87255228,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Glassilaun Beach",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 103892233,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Coon Beach",
    "community": "Wicklow",
    "country": "Ireland",
    "osmId": 123449475,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Reen Beach",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 133729134,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Dead Mans Beach",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 162430168,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Inny Strand",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 175620683,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Main Beach",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 190629030,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "An Trá Bhán",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 191128697,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "An Trá Bhán East",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 191128698,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "An Cúl Tráígh",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 191128699,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Trá na gCruach",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 191128700,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "An Trá Mhór",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 191144243,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Marble Hill Strand",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 203805140,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Stragill Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 218655460,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Buncrana Beach",
@@ -6098,53 +5531,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Rosses Point Beach",
-   "community": "Sligo",
-   "country": "Ireland",
-   "osmId": 222889923,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Uggool Beach",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 232179174,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "McRose Beach",
    "community": "Kerry",
    "country": "Ireland",
    "osmId": 245106567,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Arthurstown Beach",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 248603493,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Flaxfort Strand",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 257004037,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Portsalon Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 259070813,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Lisfannon Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 282472586,
-   "reason": "open arc of only 45 degrees"
   },
   {
    "name": "Porthaw Beach",
@@ -6154,151 +5545,11 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Dunree Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 282483526,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Mannin Bay Coral Strand",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 291799742,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Maghera Strand",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 303447470,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Lettergesh Beach",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 312574893,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Duncannon",
-   "community": "Wexford",
-   "country": "Ireland",
-   "osmId": 331379359,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Glasheen Beach",
-   "community": "Clare",
-   "country": "Ireland",
-   "osmId": 367614619,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Reenrow Beach",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 431190156,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Littor Strand",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 431506389,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Five Finger Strand",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 431711691,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Carricknaha",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 438153280,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Gobby Beach",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 523121079,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Rinnaveeloge",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 713700842,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Trá Ghob na hAirde",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 717245963,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Millybay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 816835497,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Back Bay",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 816835508,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Brown Shore",
    "community": "Donegal",
    "country": "Ireland",
    "osmId": 817295062,
    "reason": "open arc of only 0 degrees"
-  },
-  {
-   "name": "Mullanadee Shore",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 817643715,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Traighín na mBó",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 851292210,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Merrion Strand",
-   "community": "Dublin",
-   "country": "Ireland",
-   "osmId": 891119048,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Glengarriff Bay",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1035579977,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Snave Strand",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1146801473,
-   "reason": "open arc of only 22.5 degrees"
   },
   {
    "name": "Rynn Beach",
@@ -6308,104 +5559,6 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "An Tráighín Álainn",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458707336,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "The South Strand",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458707338,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuas an Chapaill",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458707758,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "The Coveen",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458708326,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuas an Bháid",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458716044,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Cuaisín 'Naomhóg",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458717567,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuas an Uisce",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458719933,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuaisín na nÚbhall",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458728069,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "The Sandy Cuaisíns",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458728070,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "An Cuaisín",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1458728071,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Near beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 1463545174,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Shipwreck beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 1463545179,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Trá na hAille Móire",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 1464958656,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Trá na Sraithe",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 1475082466,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
    "name": "Ballylickey Bay",
    "community": "Cork",
    "country": "Ireland",
@@ -6413,171 +5566,24 @@
    "reason": "open arc of only 0 degrees"
   },
   {
-   "name": "Snave Bay",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 1479869413,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Cromane Beach",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 1525555888,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Rosses Point Beach",
-   "community": "Sligo",
-   "country": "Ireland",
-   "osmId": 2371153,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Inch Beach",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2789155,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Beale Strand",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 2872217,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Waterford Harbour",
-   "community": "Waterford",
-   "country": "Ireland",
-   "osmId": 3679068,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Brew's Bridge Beach",
+   "name": "Bell Harbour",
    "community": "Clare",
    "country": "Ireland",
-   "osmId": 4202889,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Fintra Beach",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 4255261,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Traught Beach",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 4524837,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Coral Beach",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 6913427,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Trá na Brád",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 6928064,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Àn Trá Mor",
-   "community": "Donegal",
-   "country": "Ireland",
-   "osmId": 6957233,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Bantry Bay - Bá Bheanntraí",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 9064254,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Dunmanus Bay",
-   "community": "Cork",
-   "country": "Ireland",
-   "osmId": 9066809,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Kenmare River",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 9067354,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Bá na Scealg",
-   "community": "Kerry",
-   "country": "Ireland",
-   "osmId": 9067356,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Mannin Bay",
-   "community": "Galway",
-   "country": "Ireland",
-   "osmId": 9069416,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Cuan an Fhóid Duibh",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 9070356,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Ballysadare Bay",
-   "community": "Sligo",
-   "country": "Ireland",
-   "osmId": 9072618,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Shannon Estuary",
-   "community": "Limerick",
-   "country": "Ireland",
-   "osmId": 13081669,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Trá Dhún Ibhir",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 20267536,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Trá na nAscaill",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 20443397,
-   "reason": "open arc of only 22.5 degrees"
-  },
-  {
-   "name": "Sruth Fada Con",
-   "community": "Mayo",
-   "country": "Ireland",
-   "osmId": 20585687,
-   "reason": "open arc of only 45 degrees"
-  },
-  {
-   "name": "Bell Harbour",
-   "community": "Galway",
-   "country": "Ireland",
    "osmId": 3310182115,
+   "reason": "no wave model data at these coordinates"
+  },
+  {
+   "name": "Rinealon Point",
+   "community": "Clare",
+   "country": "Ireland",
+   "osmId": 11902052147,
+   "reason": "no wave model data at these coordinates"
+  },
+  {
+   "name": "Rabbit Point",
+   "community": "Mayo",
+   "country": "Ireland",
+   "osmId": 12319475447,
    "reason": "no wave model data at these coordinates"
   }
  ]

@@ -8,8 +8,8 @@
   "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna",
   "referenceKm": 5
  },
- "checked": 948,
- "ok": 946,
+ "checked": 974,
+ "ok": 971,
  "spots": {
   "aberavon-beach": {
    "lat": 51.59428,
@@ -65,6 +65,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.52
+  },
+  "an-tra-mor-6957233": {
+   "lat": 55.16612,
+   "lon": -7.83869,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.69,
+   "snapped": {
+    "lat": 55.16355,
+    "lon": -7.83025,
+    "movedM": 607
+   }
   },
   "annagh-strand": {
    "lat": 53.99946,
@@ -166,15 +181,20 @@
    "reason": null,
    "referenceKm": 0.43
   },
-  "ballinskelligs-beach": {
-   "lat": 51.82138,
-   "lon": -10.2696,
-   "coastM": 81,
+  "ballinskelligs-bay": {
+   "lat": 51.81915,
+   "lon": -10.22631,
+   "coastM": 0,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 4.88
+   "referenceKm": 2.17,
+   "snapped": {
+    "lat": 51.83158,
+    "lon": -10.25418,
+    "movedM": 2359
+   }
   },
   "ballybunion-bay": {
    "lat": 52.51364,
@@ -235,6 +255,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.28
+  },
+  "ballymastocker-bay": {
+   "lat": 55.19737,
+   "lon": -7.60738,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.94,
+   "snapped": {
+    "lat": 55.19365,
+    "lon": -7.61657,
+    "movedM": 714
+   }
   },
   "banna-strand": {
    "lat": 52.33347,
@@ -591,6 +626,16 @@
    "reason": null,
    "referenceKm": 0.81
   },
+  "bunlough-strand": {
+   "lat": 53.70383,
+   "lon": -9.91248,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.46
+  },
   "bunmahon-strand": {
    "lat": 52.13831,
    "lon": -7.36662,
@@ -780,6 +825,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.39
+  },
+  "camport-bay": {
+   "lat": 53.91923,
+   "lon": -10.02009,
+   "coastM": 91,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.65
   },
   "canet": {
    "lat": 42.71294,
@@ -981,6 +1036,16 @@
    "reason": null,
    "referenceKm": 0.2
   },
+  "clonmass-bay": {
+   "lat": 55.16989,
+   "lon": -7.8662,
+   "coastM": 251,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.88
+  },
   "coatham-sands": {
    "lat": 54.6325,
    "lon": -1.09774,
@@ -1110,6 +1175,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.39
+  },
+  "cream-point": {
+   "lat": 52.86686,
+   "lon": -9.44065,
+   "coastM": 103,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.35
   },
   "crooklets-beach": {
    "lat": 50.83579,
@@ -1276,6 +1351,16 @@
    "reason": null,
    "referenceKm": 0.52
   },
+  "doolin-point": {
+   "lat": 53.01891,
+   "lon": -9.40833,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.47
+  },
   "doonbeg-bay": {
    "lat": 52.74271,
    "lon": -9.53483,
@@ -1285,6 +1370,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.46
+  },
+  "dooniver-strand": {
+   "lat": 53.99999,
+   "lon": -9.93436,
+   "coastM": 97,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.23
+  },
+  "doonlaughaun-bay": {
+   "lat": 53.44482,
+   "lon": -10.14467,
+   "coastM": 124,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.62
   },
   "doughmore-beach": {
    "lat": 52.75708,
@@ -1371,6 +1476,16 @@
    "reason": null,
    "referenceKm": 0.24
   },
+  "dunree-beach": {
+   "lat": 55.20247,
+   "lon": -7.54278,
+   "coastM": 142,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.02
+  },
   "durdle-door": {
    "lat": 50.6222,
    "lon": -2.28338,
@@ -1456,6 +1571,16 @@
     "movedM": 459
    }
   },
+  "enniscrone-beach": {
+   "lat": 54.20915,
+   "lon": -9.11517,
+   "coastM": 160,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.35
+  },
   "erdiko-ura": {
    "lat": 43.38103,
    "lon": -1.75407,
@@ -1516,6 +1641,16 @@
    "reason": null,
    "referenceKm": 2.74
   },
+  "fanad-head": {
+   "lat": 55.27644,
+   "lon": -7.63037,
+   "coastM": 29,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.73
+  },
   "fanore-beach": {
    "lat": 53.1191,
    "lon": -9.28923,
@@ -1545,6 +1680,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.24
+  },
+  "five-finger-strand": {
+   "lat": 55.31909,
+   "lon": -7.33503,
+   "coastM": 201,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.95
   },
   "frainslake-sands": {
    "lat": 51.64192,
@@ -1615,6 +1760,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.06
+  },
+  "garrywilliam-point": {
+   "lat": 52.30663,
+   "lon": -10.05968,
+   "coastM": 53,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.38
   },
   "gaztetape-hondartza": {
    "lat": 43.30387,
@@ -1720,6 +1875,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.4
+  },
+  "gubnahardia-strand": {
+   "lat": 54.02295,
+   "lon": -9.97944,
+   "coastM": 92,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
   },
   "gullane-bents": {
    "lat": 56.04472,
@@ -1875,6 +2040,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.11
+  },
+  "inch-beach": {
+   "lat": 52.124,
+   "lon": -9.95708,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.49,
+   "snapped": {
+    "lat": 52.12197,
+    "lon": -9.96556,
+    "movedM": 622
+   }
   },
   "inchydoney-beach-5939079": {
    "lat": 51.59893,
@@ -2136,6 +2316,21 @@
    "reason": null,
    "referenceKm": 1.34
   },
+  "lacken-bay": {
+   "lat": 54.28783,
+   "lon": -9.23735,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.54,
+   "snapped": {
+    "lat": 54.2894,
+    "lon": -9.24951,
+    "movedM": 809
+   }
+  },
   "lafitenia": {
    "lat": 43.41393,
    "lon": -1.62978,
@@ -2155,6 +2350,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "lahinch-beach": {
+   "lat": 52.93749,
+   "lon": -9.35622,
+   "coastM": 83,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.93
   },
   "laida": {
    "lat": 43.4003,
@@ -2421,6 +2626,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "maghera-strand": {
+   "lat": 54.76702,
+   "lon": -8.51767,
+   "coastM": 78,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.47
+  },
   "magheramore-beach": {
    "lat": 52.93106,
    "lon": -6.0217,
@@ -2491,6 +2706,16 @@
    "reason": null,
    "referenceKm": 0.39
   },
+  "malin-head": {
+   "lat": 55.37479,
+   "lon": -7.39985,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": false,
+   "reason": "the reference puts this break 5.98 km away",
+   "referenceKm": 5.98
+  },
   "manorbier-beach": {
    "lat": 51.64249,
    "lon": -4.80601,
@@ -2500,6 +2725,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.05
+  },
+  "marble-hill-strand": {
+   "lat": 55.17627,
+   "lon": -7.89546,
+   "coastM": 259,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.78
   },
   "marchamalo-barco-perdido": {
    "lat": 37.64791,
@@ -2556,6 +2791,16 @@
    "reason": null,
    "referenceKm": 0.2
   },
+  "merrion-strand": {
+   "lat": 53.31657,
+   "lon": -6.20424,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.65
+  },
   "millendreath-beach": {
    "lat": 50.36097,
    "lon": -4.43621,
@@ -2595,6 +2840,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.3
+  },
+  "muckros-head": {
+   "lat": 54.60883,
+   "lon": -8.59256,
+   "coastM": 27,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.82
   },
   "murkle-bay": {
    "lat": 58.60457,
@@ -2735,6 +2990,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.42
+  },
+  "ownahincha-strand-west": {
+   "lat": 51.56641,
+   "lon": -9.00051,
+   "coastM": 75,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.55
   },
   "oxwich-beach": {
    "lat": 51.56094,
@@ -7836,6 +8101,21 @@
    "reason": null,
    "referenceKm": 0.15
   },
+  "portsalon-beach": {
+   "lat": 55.19611,
+   "lon": -7.61122,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.71,
+   "snapped": {
+    "lat": 55.19378,
+    "lon": -7.61674,
+    "movedM": 435
+   }
+  },
   "portslade": {
    "lat": 50.82811,
    "lon": -0.22225,
@@ -8496,6 +8776,16 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "reenrow-beach": {
+   "lat": 51.84499,
+   "lon": -10.22002,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.01
+  },
   "rest-bay": {
    "lat": 51.49001,
    "lon": -3.73134,
@@ -8951,15 +9241,15 @@
    "reason": null,
    "referenceKm": 2.59
   },
-  "spanish-point-beach": {
-   "lat": 52.83859,
-   "lon": -9.43374,
-   "coastM": 104,
+  "spanish-point": {
+   "lat": 52.84911,
+   "lon": -9.45014,
+   "coastM": 77,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.9
+   "referenceKm": 0.1
   },
   "spittal-beach": {
    "lat": 55.75747,
@@ -9135,16 +9425,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.89
-  },
-  "trabane": {
-   "lat": 54.61373,
-   "lon": -8.57721,
-   "coastM": 46,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.45
   },
   "traeth-aberdaron": {
    "lat": 52.80062,
@@ -9560,6 +9840,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.64
+  },
+  "white-strand-4225157": {
+   "lat": 52.74751,
+   "lon": -9.54935,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.28
   },
   "whitesands-beach": {
    "lat": 51.89412,

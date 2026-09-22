@@ -59,8 +59,23 @@ test.describe('spec: spot-catalog / Exposición al mar abierto', () => {
   test('every spot has a swell window wide enough to break', () => {
     // A cove inside a ría has water in front of it but no swell window; this
     // is what separates it from a surfable beach.
+    //
+    // Ireland is the exception: its breaks sit at the head of bays and face the
+    // mouth, which spans one or two bearings 6 km out (Lahinch in Liscannor
+    // Bay, Inch in Dingle Bay). A surf reference has to name the place before
+    // it is published, so there the window only has to exist.
     for (const spot of catalogue) {
-      expect(spot.provenance.exposureDeg, `${spot.name} is sheltered`).toBeGreaterThanOrEqual(90);
+      const floor = spot.country === 'Ireland' ? 30 : 90;
+      expect(spot.provenance.exposureDeg, `${spot.name} is sheltered`).toBeGreaterThanOrEqual(floor);
+    }
+  });
+
+  test('a window narrower than 90 degrees is only ever a named Irish break', () => {
+    const names = new Set(attested.spots.map(a => a.id));
+    for (const spot of catalogue) {
+      if (spot.provenance.exposureDeg >= 90) continue;
+      expect(spot.country, `${spot.name} is sheltered outside Ireland`).toBe('Ireland');
+      expect(names.has(spot.id), `${spot.name} is sheltered and unnamed`).toBe(true);
     }
   });
 

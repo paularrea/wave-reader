@@ -135,6 +135,15 @@ const FEATURE_TAGS = {
     ['natural', 'beach'],
     ['natural', 'shingle'],
     ['natural', 'bay'],
+    /**
+     * Headlands and reefs, because a third of Ireland's published breaks are
+     * not beaches at all: Doolin Point, Fanad Head, Cream Point, Garywilliam
+     * Point. OSM maps them as capes, which is a coordinate on the shore like
+     * any other -- the reference still only contributes the name, and stage 3.5
+     * still has to name it before anything is published.
+     */
+    ['natural', 'cape'],
+    ['natural', 'reef'],
   ],
 };
 
@@ -178,6 +187,43 @@ function englishName(tags, country) {
 }
 
 const SUBDIVISION_BATCH = 250;
+
+const NOMINATIM = 'https://nominatim.openstreetmap.org/lookup';
+const NOMINATIM_BATCH = 50; // the most ids /lookup takes per request
+const USER_AGENT = 'wave-reader-catalog/1.0 (https://github.com/paularrea/wave-reader)';
+
+/**
+ * The county of each beach no county polygon contains, from the address
+ * Nominatim computes for the OSM object itself. Nearest resolved beach was the
+ * fallback before, and with three in four Irish beaches outside every polygon
+ * it guessed wrong at the borders: Fanore went to Galway, Lacken to Sligo.
+ * Nominatim places both in the right county; what it cannot place still falls
+ * back to the nearest neighbour. One request a second, per its usage policy.
+ */
+async function assignByNominatim(beaches, names, parentName) {
+  const todo = beaches.filter(b => b.community === parentName);
+  for (let start = 0; start < todo.length; start += NOMINATIM_BATCH) {
+    const batch = todo.slice(start, start + NOMINATIM_BATCH);
+    const ids = batch.map(b => `${b.osmType[0].toUpperCase()}${b.osmId}`).join(',');
+    let places = [];
+    try {
+      const res = await fetch(`${NOMINATIM}?osm_ids=${ids}&format=json&addressdetails=1`, {
+        headers: { 'User-Agent': USER_AGENT },
+        signal: AbortSignal.timeout(60_000),
+      });
+      if (res.ok) places = await res.json();
+      else log(`    Nominatim ${res.status}; leaving ${batch.length} to nearest neighbour`);
+    } catch (err) {
+      log(`    Nominatim failed (${err.message}); leaving ${batch.length} to nearest neighbour`);
+    }
+    for (const place of places) {
+      const code = place.address?.['ISO3166-2-lvl6'];
+      const beach = batch.find(b => b.osmId === Number(place.osm_id) && b.osmType === place.osm_type);
+      if (beach && code) beach.community = names[code] ?? code;
+    }
+    await sleep(1100);
+  }
+}
 
 /**
  * Sets each beach's `community` to the subdivision containing it, using
@@ -232,6 +278,12 @@ async function assignSubdivisions(beaches, { filter, names, within }, parentName
     const outside = beaches.length - inside.size;
     beaches = beaches.filter(b => inside.has(b));
     log(`    ${parentName}: ${outside} outside ${within} dropped`);
+  }
+  if (names) {
+    const before = beaches.filter(b => b.community === parentName).length;
+    await assignByNominatim(beaches, names, parentName);
+    const after = beaches.filter(b => b.community === parentName).length;
+    log(`    ${parentName}: ${before - after} more by Nominatim address`);
   }
   const resolved = beaches.filter(b => b.community !== parentName);
   const unresolved = beaches.filter(b => b.community === parentName);

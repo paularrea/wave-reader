@@ -43,6 +43,54 @@
     }
   },
   {
+    "id": "an-tra-mor-6957233",
+    "name": "Àn Trá Mor",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.16355,
+      "lon": -7.83025
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 6957233,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 55.16612,
+        "lon": -7.83869
+      },
+      "movedToShoreM": 607
+    }
+  },
+  {
     "id": "annagh-strand",
     "name": "Annagh Strand",
     "community": "Mayo",
@@ -172,21 +220,21 @@
     }
   },
   {
-    "id": "ballinskelligs-beach",
-    "name": "Ballinskelligs Beach",
+    "id": "ballinskelligs-bay",
+    "name": "Ballinskelligs Bay",
     "community": "Kerry",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
-      "lat": 51.82138,
-      "lon": -10.2696
+      "lat": 51.83158,
+      "lon": -10.25418
     },
     "config": {
       "swellWindow": {
-        "minAngle": 135,
+        "minAngle": 165,
         "maxAngle": 225
       },
-      "offshoreWindAngle": 0,
+      "offshoreWindAngle": 15,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -205,14 +253,19 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 136986187,
-      "feature": "beach",
-      "osmName": "Trá Bhaile an Sceilge",
-      "facingDeg": 180,
-      "exposureDeg": 90,
+      "osmType": "relation",
+      "osmId": 9067356,
+      "feature": "bay",
+      "osmName": "Bá na Scealg",
+      "facingDeg": 195,
+      "exposureDeg": 60,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 51.81915,
+        "lon": -10.22631
+      },
+      "movedToShoreM": 2359
     }
   },
   {
@@ -395,6 +448,54 @@
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "ballymastocker-bay",
+    "name": "Ballymastocker Bay",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.19365,
+      "lon": -7.61657
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 210,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2002511186,
+      "feature": "bay",
+      "facingDeg": 30,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 55.19737,
+        "lon": -7.60738
+      },
+      "movedToShoreM": 714
     }
   },
   {
@@ -702,7 +803,7 @@
   {
     "id": "bunatrahir-bay",
     "name": "Bunatrahir Bay",
-    "community": "Sligo",
+    "community": "Mayo",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -791,6 +892,49 @@
     }
   },
   {
+    "id": "bunlough-strand",
+    "name": "Bunlough Strand",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.70383,
+      "lon": -9.91248
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 666328691,
+      "feature": "beach",
+      "facingDeg": 270,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "bunmahon-strand",
     "name": "Bunmahon Strand",
     "community": "Waterford",
@@ -829,6 +973,50 @@
       "feature": "beach",
       "facingDeg": 180,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "camport-bay",
+    "name": "Camport Bay",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.91923,
+      "lon": -10.02009
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 4453778302,
+      "feature": "bay",
+      "osmName": "Bá Champoirt",
+      "facingDeg": 255,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -1049,6 +1237,49 @@
     }
   },
   {
+    "id": "clonmass-bay",
+    "name": "Clonmass Bay",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.16989,
+      "lon": -7.8662
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2002511193,
+      "feature": "bay",
+      "facingDeg": 330,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "coumeenoole-bay",
     "name": "Coumeenoole Bay",
     "community": "Kerry",
@@ -1136,6 +1367,49 @@
       "feature": "bay",
       "facingDeg": 90,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "cream-point",
+    "name": "Cream Point",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Point",
+    "coordinates": {
+      "lat": 52.86686,
+      "lon": -9.44065
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 3220384162,
+      "feature": "cape",
+      "facingDeg": 285,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -1534,6 +1808,49 @@
     }
   },
   {
+    "id": "doolin-point",
+    "name": "Doolin Point",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Point",
+    "coordinates": {
+      "lat": 53.01891,
+      "lon": -9.40833
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 3268911818,
+      "feature": "cape",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "doonbeg-bay",
     "name": "Doonbeg Bay",
     "community": "Clare",
@@ -1572,6 +1889,93 @@
       "feature": "bay",
       "facingDeg": 315,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "dooniver-strand",
+    "name": "Dooniver Strand",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.99999,
+      "lon": -9.93436
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 20267536,
+      "feature": "beach",
+      "osmName": "Trá Dhún Ibhir",
+      "facingDeg": 315,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "doonlaughaun-bay",
+    "name": "Doonlaughaun Bay",
+    "community": "Galway",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.44482,
+      "lon": -10.14467
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 135,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2000614402,
+      "feature": "bay",
+      "facingDeg": 240,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -1755,6 +2159,49 @@
     }
   },
   {
+    "id": "dunree-beach",
+    "name": "Dunree Beach",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.20247,
+      "lon": -7.54278
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 282483526,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "elly-strand",
     "name": "Elly Strand",
     "community": "Mayo",
@@ -1804,9 +2251,96 @@
     }
   },
   {
+    "id": "enniscrone-beach",
+    "name": "Enniscrone Beach",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 54.20915,
+      "lon": -9.11517
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 87255228,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "fanad-head",
+    "name": "Fanad Head",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Point",
+    "coordinates": {
+      "lat": 55.27644,
+      "lon": -7.63037
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 210,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 4311073209,
+      "feature": "cape",
+      "osmName": "Cionn Fhánada",
+      "facingDeg": 30,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "fanore-beach",
     "name": "Fanore Beach",
-    "community": "Galway",
+    "community": "Clare",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1842,6 +2376,49 @@
       "feature": "beach",
       "facingDeg": 315,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "five-finger-strand",
+    "name": "Five Finger Strand",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.31909,
+      "lon": -7.33503
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 431711691,
+      "feature": "beach",
+      "facingDeg": 285,
+      "exposureDeg": 60,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -1890,6 +2467,93 @@
     }
   },
   {
+    "id": "garrywilliam-point",
+    "name": "Garrywilliam Point",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Point",
+    "coordinates": {
+      "lat": 52.30663,
+      "lon": -10.05968
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 8518513086,
+      "feature": "cape",
+      "facingDeg": 345,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "gubnahardia-strand",
+    "name": "Gubnahardia Strand",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 54.02295,
+      "lon": -9.97944
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 717245963,
+      "feature": "beach",
+      "osmName": "Trá Ghob na hAirde",
+      "facingDeg": 315,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "inch",
     "name": "Inch",
     "community": "Cork",
@@ -1930,6 +2594,54 @@
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "inch-beach",
+    "name": "Inch Beach",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.12197,
+      "lon": -9.96556
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 2789155,
+      "feature": "beach",
+      "facingDeg": 225,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 52.124,
+        "lon": -9.95708
+      },
+      "movedToShoreM": 622
     }
   },
   {
@@ -2239,6 +2951,97 @@
     }
   },
   {
+    "id": "lacken-bay",
+    "name": "Lacken Bay",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 54.2894,
+      "lon": -9.24951
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 240,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2002389355,
+      "feature": "bay",
+      "facingDeg": 60,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 54.28783,
+        "lon": -9.23735
+      },
+      "movedToShoreM": 809
+    }
+  },
+  {
+    "id": "lahinch-beach",
+    "name": "Lahinch Beach",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.93749,
+      "lon": -9.35622
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 60,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 24547527,
+      "feature": "beach",
+      "facingDeg": 240,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "leamore-strand",
     "name": "Leamore Strand",
     "community": "Wicklow",
@@ -2320,6 +3123,49 @@
       "feature": "bay",
       "facingDeg": 330,
       "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "maghera-strand",
+    "name": "Maghera Strand",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 54.76702,
+      "lon": -8.51767
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 303447470,
+      "feature": "beach",
+      "facingDeg": 315,
+      "exposureDeg": 60,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -2504,6 +3350,136 @@
     }
   },
   {
+    "id": "marble-hill-strand",
+    "name": "Marble Hill Strand",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.17627,
+      "lon": -7.89546
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 203805140,
+      "feature": "beach",
+      "facingDeg": 345,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "merrion-strand",
+    "name": "Merrion Strand",
+    "community": "Dublin",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 53.31657,
+      "lon": -6.20424
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 255,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 891119048,
+      "feature": "beach",
+      "facingDeg": 75,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "muckros-head",
+    "name": "Muckros Head",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Point",
+    "coordinates": {
+      "lat": 54.60883,
+      "lon": -8.59256
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 4526795852,
+      "feature": "cape",
+      "osmName": "Cionn Mhucrois",
+      "facingDeg": 180,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "old-head-beach",
     "name": "Old Head Beach",
     "community": "Mayo",
@@ -2541,6 +3517,49 @@
       "osmId": 499548181,
       "feature": "beach",
       "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "ownahincha-strand-west",
+    "name": "Ownahincha Strand (West)",
+    "community": "Cork",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.56641,
+      "lon": -9.00051
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 256859657,
+      "feature": "beach",
+      "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
@@ -2724,6 +3743,54 @@
     }
   },
   {
+    "id": "portsalon-beach",
+    "name": "Portsalon Beach",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.19378,
+      "lon": -7.61674
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 15,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 210,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 259070813,
+      "feature": "beach",
+      "facingDeg": 30,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 55.19611,
+        "lon": -7.61122
+      },
+      "movedToShoreM": 435
+    }
+  },
+  {
     "id": "red-strand",
     "name": "Red Strand",
     "community": "Cork",
@@ -2762,6 +3829,49 @@
       "feature": "beach",
       "facingDeg": 165,
       "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "reenrow-beach",
+    "name": "Reenrow Beach",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 51.84499,
+      "lon": -10.22002
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 15,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "way",
+      "osmId": 431190156,
+      "feature": "beach",
+      "facingDeg": 195,
+      "exposureDeg": 60,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -3079,14 +4189,14 @@
     }
   },
   {
-    "id": "spanish-point-beach",
-    "name": "Spanish Point Beach",
+    "id": "spanish-point",
+    "name": "Spanish Point",
     "community": "Clare",
     "country": "Ireland",
-    "type": "Beach",
+    "type": "Point",
     "coordinates": {
-      "lat": 52.83859,
-      "lon": -9.43374
+      "lat": 52.84911,
+      "lon": -9.45014
     },
     "config": {
       "swellWindow": {
@@ -3112,9 +4222,9 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 4250072,
-      "feature": "beach",
+      "osmType": "node",
+      "osmId": 3219987130,
+      "feature": "cape",
       "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
@@ -3332,50 +4442,6 @@
       "osmId": 6905943,
       "feature": "beach",
       "facingDeg": 300,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "trabane",
-    "name": "Trabane",
-    "community": "Donegal",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 54.61373,
-      "lon": -8.57721
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 255
-      },
-      "offshoreWindAngle": 0,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 316171997,
-      "feature": "beach",
-      "osmName": "Trá Bán",
-      "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
@@ -3822,6 +4888,49 @@
       "feature": "beach",
       "facingDeg": 165,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "white-strand-4225157",
+    "name": "White Strand",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.74751,
+      "lon": -9.54935
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 4225157,
+      "feature": "beach",
+      "facingDeg": 330,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }

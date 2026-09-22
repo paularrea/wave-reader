@@ -201,10 +201,13 @@ original as `provenance.centroid`. Overpass mirrors go down often;
 `OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
 
 **Known gaps (phase 2):** coverage is 93-96% of Surfline in Asturias, Cantabria and País
-Vasco, 40-55% in Donegal and Kerry, 30% in Scotland and 14% in Galway, because OSM does
-not map those breaks as named beaches (Lahinch, Rossnowlagh, most reefs and points), or
-because the stage-2 90° arc drops beaches deep in a bay (Portsalon, Marble Hill, Five
-Finger Strand, Maghera). They stay absent until
+Vasco, and 87 of surf-forecast's 135 Irish breaks, but 30% in Scotland. What is left in
+Ireland is of three kinds: a break OSM maps under a different name from the reference's
+(Easky Left is beside Carrickadda Point, Strandhill beside Culleenamore — never matched
+on proximity alone, see stage 3.5); several named peaks on one strand, which share a
+forecast cell with the one published (Brandon Bay's Dumps, Mossies, Stoney Gap); and
+places OSM maps only as a village, with no shore feature at all (Rossnowlagh, Strandhill,
+Mullaghmore, Lislary). A village centre is not a break, so those stay absent. They stay absent until
 the catalogue accepts break coordinates of its own; do not loosen the matching to fill
 them.
 
@@ -215,6 +218,11 @@ the browser gets `useCountryIndex` (dynamic import of the country in focus) plus
 and one coarse point per spot so geolocation still resolves to the nearest *spot*.
 
 Coverage: Spain, Ireland, France (incl. overseas régions) and the United Kingdom.
+Ireland is also queried for **headlands and reefs** (`natural=cape`, `natural=reef`):
+a third of its published breaks are point and reef breaks OSM maps as capes (Doolin
+Point, Fanad Head, Cream Point, Garywilliam Point). They are OSM coordinates like any
+other and still have to be named by a reference; the spot detail calls them Point or
+Reef rather than Beach.
 England is fetched once and split by ceremonial county with batched Overpass
 `is_in(lat,lon)` lookups (nearest resolved beach for centroids on the waterline).
 Only **named** `natural=beach` features are used, so counties whose beaches are mapped
@@ -234,12 +242,15 @@ region fetch is therefore checked against `out count` and retried until it match
 well as beaches, because OSM maps Irish beaches sparsely: County Clare, the home of
 Irish surfing, has four tagged `natural=beach`.
 
-**Ireland is one bounding-box query, split by county** (`is_in`, then nearest resolved
-beach), never one query per county: Irish county polygons stop at the high-water line,
+**Ireland is one bounding-box query, split by county** (`is_in`, then the county in the
+address Nominatim computes for the OSM object, then nearest resolved beach), never one
+query per county: Irish county polygons stop at the high-water line,
 so a beach mapped on the foreshore is in no county. Queried county by county, Donegal
 returned 15 of its 178 named shore features and published 2 spots; only 258 of Ireland's
 1,254 fall inside a county polygon. The country polygon itself times out on every
-mirror, hence the box, with `is_in` dropping what lies outside Ireland. Irish features
+mirror, hence the box, with `is_in` dropping what lies outside Ireland. Nearest
+neighbour alone put Fanore in Galway and Lacken in Sligo, so Nominatim is asked first
+for everything no polygon contains. Irish features
 also keep OSM's `name:en` (`nameEn`, published as the name, OSM's own kept as
 `provenance.osmName`): Gaeltacht beaches are named in Irish in OSM ("Trá Mhachaire
 Rabhartaigh") and in English by surfers and the references (Magheroarty).
@@ -252,7 +263,13 @@ re-derives just those countries and leaves every other spot byte-identical.
 
 Stage 2 decides which features actually face open ocean. It probes elevation along
 12 bearings 6 km out; a bearing is open water when the sample is at or below sea level,
-and a spot needs a contiguous arc of at least 90° to qualify. That arc becomes the swell
+and a spot needs a contiguous arc of at least 90° to qualify — **except in Ireland, where
+one open bearing (30°) is enough** (`MIN_OPEN_ARC_BY_COUNTRY`). Irish breaks sit at the
+head of a bay facing its mouth, which at 6 km spans one or two bearings: the 90° rule
+dropped Lahinch, Inch, Enniscrone, Portsalon and Marble Hill, all of them Atlantic beach
+breaks. Since stage 3.5 publishes only what a surf reference names, this stage no longer
+has to keep ría coves out by itself. The other countries keep 90° until someone
+re-derives them on purpose, so their catalogues do not move by accident. That arc becomes the swell
 window, its bisector the facing direction, and the reciprocal the offshore wind angle.
 A cove inside a ría has water in front of it but no arc, which is what separates it from
 a surfable beach without anyone judging spots by hand.

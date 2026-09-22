@@ -40,6 +40,16 @@ const BEARINGS = 12;                   // 30 degrees apart
 const PROBE_KM = [6];
 const MIN_OPEN_ARC = 3;                // >= 90 degrees of open water
 /**
+ * Ireland's surf beaches sit at the head of bays facing the mouth: Lahinch in
+ * Liscannor Bay, Inch in Dingle Bay, Enniscrone in Killala Bay, Portsalon in
+ * Lough Swilly. 6 km out, the mouth spans only one or two bearings, so the 90
+ * degree rule dropped all of them. Since stage 3.5 publishes only places a surf
+ * reference names, this stage no longer has to keep ría coves out by itself;
+ * for Ireland one open bearing is enough, and it still measures the window.
+ * Other countries keep 90 degrees until they are re-derived on purpose.
+ */
+const MIN_OPEN_ARC_BY_COUNTRY = { Ireland: 1 };
+/**
  * ETOPO1 returns bathymetry, so open water is genuinely negative rather than
  * the ambiguous 0 a land-only model gives for anything at sea level.
  */
@@ -123,8 +133,8 @@ function analyse(beach, values) {
   }
 
   const arc = longestOpenArc(isOpen);
-  if (arc.length < MIN_OPEN_ARC) {
-    return { surfable: false, reason: `open arc of only ${arc.length * 22.5} degrees` };
+  if (arc.length < (MIN_OPEN_ARC_BY_COUNTRY[beach.country] ?? MIN_OPEN_ARC)) {
+    return { surfable: false, reason: `open arc of only ${arc.length * (360 / BEARINGS)} degrees` };
   }
 
   const facing = Math.round(meanBearing(arc.bearings));
@@ -152,6 +162,9 @@ function slugify(name) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 }
+
+/** What the spot detail calls the place. A cape is a point break, not a beach. */
+const TYPE_OF_FEATURE = { cape: 'Point', reef: 'Reef' };
 
 /**
  * Generic ranges by skill level. OSM knows nothing about how a given bank
@@ -245,7 +258,7 @@ async function main() {
       name,
       community: beach.community,
       country,
-      type: 'Beach',
+      type: TYPE_OF_FEATURE[beach.feature] ?? 'Beach',
       coordinates: { lat: beach.lat, lon: beach.lon },
       config: {
         swellWindow: result.swellWindow,

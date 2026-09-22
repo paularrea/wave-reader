@@ -84410,6 +84410,173 @@
  },
  {
   "osmType": "node",
+  "osmId": 28482578,
+  "name": "Lonehort Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.64714,
+  "lon": -9.78166,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28487756,
+  "name": "Myross Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.57028,
+  "lon": -9.13923,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28487829,
+  "name": "Long Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.55242,
+  "lon": -9.11334,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28594050,
+  "name": "Malin Head",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.37479,
+  "lon": -7.39985,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28625594,
+  "name": "Ceann Ros Eoghain",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.70535,
+  "lon": -8.7964,
+  "feature": "cape",
+  "nameEn": "Rossan Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28650950,
+  "name": "Cooanmore Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.29306,
+  "lon": -8.93117,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28717926,
+  "name": "Cora na gCúg",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.31271,
+  "lon": -9.73031,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28720242,
+  "name": "Cora Chláir",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.34618,
+  "lon": -9.57773,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28725557,
+  "name": "An Tóin Dubh",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.22721,
+  "lon": -9.75554,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28728280,
+  "name": "Cora an Chaisleáin",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.22681,
+  "lon": -9.47293,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28751423,
+  "name": "Loop Head",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.55952,
+  "lon": -9.93811,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28756068,
+  "name": "Rough Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.3167,
+  "lon": -10.01627,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28759224,
+  "name": "Pointe an Dúinín",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.12133,
+  "lon": -10.33693,
+  "feature": "cape",
+  "nameEn": "Ballymore Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28770776,
+  "name": "Lackeen Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84856,
+  "lon": -9.74284,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 28774266,
+  "name": "Pointe na Reanna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84499,
+  "lon": -10.35979,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 52229984,
   "name": "Bullogfane Bay",
   "community": "Donegal",
@@ -84477,6 +84644,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 490278617,
+  "name": "Aughinish Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.89618,
+  "lon": -8.42304,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 512082083,
   "name": "Coose Bay",
   "community": "Galway",
@@ -84521,6 +84699,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 600449481,
+  "name": "Gob Thóin an Chnoic",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.25018,
+  "lon": -9.55673,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 602811627,
   "name": "Tinarana Bay",
   "community": "Clare",
@@ -84528,6 +84717,18 @@
   "lat": 52.85798,
   "lon": -8.45892,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 662461649,
+  "name": "Ceann Sléibhe",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.09809,
+  "lon": -10.4553,
+  "feature": "cape",
+  "nameEn": "Slea Head",
   "parentRegion": "Ireland"
  },
  {
@@ -84562,6 +84763,18 @@
   "lat": 52.20223,
   "lon": -6.34729,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 764338824,
+  "name": "Srón Bhroin",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.2877,
+  "lon": -10.15733,
+  "feature": "cape",
+  "nameEn": "Brandon Point",
   "parentRegion": "Ireland"
  },
  {
@@ -84744,7 +84957,7 @@
   "osmType": "node",
   "osmId": 1588734409,
   "name": "Ballynakill Harbour",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.57006,
   "lon": -10.00484,
@@ -84837,7 +85050,7 @@
   "osmType": "node",
   "osmId": 1807916251,
   "name": "Little Killary Harbour",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.61509,
   "lon": -9.85944,
@@ -84853,6 +85066,28 @@
   "lat": 52.1372,
   "lon": -7.29801,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 1829034614,
+  "name": "Cape Clear",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.4199,
+  "lon": -9.51405,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 1974157333,
+  "name": "Cregg Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.04845,
+  "lon": -8.29122,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -84994,7 +85229,7 @@
   "osmType": "node",
   "osmId": 2000655557,
   "name": "Ballyvaughan Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.14324,
   "lon": -9.15623,
@@ -85106,7 +85341,7 @@
   "osmType": "node",
   "osmId": 2000655571,
   "name": "Muckinish Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.13975,
   "lon": -9.0955,
@@ -85406,7 +85641,7 @@
   "osmType": "node",
   "osmId": 2001359987,
   "name": "Ballycrovane Harbour",
-  "community": "Kerry",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.70954,
   "lon": -9.96531,
@@ -85439,7 +85674,7 @@
   "osmType": "node",
   "osmId": 2001359990,
   "name": "Cleanderry Harbour",
-  "community": "Kerry",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.74217,
   "lon": -9.93222,
@@ -85461,7 +85696,7 @@
   "osmType": "node",
   "osmId": 2001359992,
   "name": "Coulagh Bay",
-  "community": "Kerry",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.69606,
   "lon": -9.99276,
@@ -86202,7 +86437,7 @@
   "osmType": "node",
   "osmId": 2002389347,
   "name": "Bunatrahir Bay",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.30104,
   "lon": -9.38082,
@@ -86213,7 +86448,7 @@
   "osmType": "node",
   "osmId": 2002389348,
   "name": "Classybaun Harbour",
-  "community": "Sligo",
+  "community": "Donegal",
   "country": "Ireland",
   "lat": 54.46573,
   "lon": -8.44113,
@@ -86292,7 +86527,7 @@
   "osmType": "node",
   "osmId": 2002389355,
   "name": "Lacken Bay",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.28783,
   "lon": -9.23735,
@@ -86337,7 +86572,7 @@
   "osmType": "node",
   "osmId": 2002389359,
   "name": "Rathfran Bay",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.25073,
   "lon": -9.20122,
@@ -86804,11 +87039,91 @@
   "osmType": "node",
   "osmId": 2004615642,
   "name": "Dundalk Bay",
-  "community": "Dublin",
+  "community": "Louth",
   "country": "Ireland",
   "lat": 53.95739,
   "lon": -6.28097,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2004794445,
+  "name": "Ceann na Faochana",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.04905,
+  "lon": -9.55617,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2098562288,
+  "name": "Saddle Head",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.0141,
+  "lon": -10.19059,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2098562340,
+  "name": "Gob an Iomaire",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.03098,
+  "lon": -9.97835,
+  "feature": "cape",
+  "nameEn": "Ridge Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2132484798,
+  "name": "Pointe na Páirce",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10788,
+  "lon": -10.34734,
+  "feature": "cape",
+  "nameEn": "Parkmore Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2192583661,
+  "name": "Ceann an Droma",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.15639,
+  "lon": -10.46513,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2192637900,
+  "name": "Ceann an Dúna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.17211,
+  "lon": -10.46185,
+  "feature": "cape",
+  "nameEn": "Doon Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2198934587,
+  "name": "Mall Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61823,
+  "lon": -9.51204,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -86820,6 +87135,39 @@
   "lat": 53.967,
   "lon": -10.19024,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2420958089,
+  "name": "Quigley's Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.12497,
+  "lon": -7.18938,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2508149753,
+  "name": "Gubanillaun",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.62943,
+  "lon": -9.88364,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2508864327,
+  "name": "Rinvyle Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.60969,
+  "lon": -10.04798,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -86881,7 +87229,7 @@
   "osmType": "node",
   "osmId": 2580679625,
   "name": "Poulnaclogh Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.13471,
   "lon": -9.07981,
@@ -86941,6 +87289,17 @@
   "lat": 52.18168,
   "lon": -6.90434,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2585892039,
+  "name": "Baginbun Head",
+  "community": "Wexford",
+  "country": "Ireland",
+  "lat": 52.1735,
+  "lon": -6.8289,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87275,6 +87634,51 @@
  },
  {
   "osmType": "node",
+  "osmId": 2868662572,
+  "name": "Rinn na Leanbh",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.0201,
+  "lon": -9.98988,
+  "feature": "cape",
+  "nameEn": "Caraun Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 2897567898,
+  "name": "Mizen Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.4501,
+  "lon": -9.81976,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3068470004,
+  "name": "Dunagree Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.22682,
+  "lon": -6.9248,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3139306380,
+  "name": "Breaghy Head",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.19076,
+  "lon": -7.91343,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3139306382,
   "name": "Scoltaroddan Bay",
   "community": "Donegal",
@@ -87308,6 +87712,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 3170303297,
+  "name": "Foohagh Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.67079,
+  "lon": -9.69644,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3170303298,
+  "name": "George's Head",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69248,
+  "lon": -9.6593,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3170303299,
   "name": "Intrinsic Bay",
   "community": "Clare",
@@ -87315,6 +87741,17 @@
   "lat": 52.67778,
   "lon": -9.67635,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3170303300,
+  "name": "Knockroe Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.68027,
+  "lon": -9.67754,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87352,6 +87789,18 @@
  },
  {
   "osmType": "node",
+  "osmId": 3184417547,
+  "name": "An Mhaoil Dheasachta",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.16964,
+  "lon": -8.17885,
+  "feature": "cape",
+  "nameEn": "Moylegasaghty Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3184417552,
   "name": "Trá Thobar Glasáin",
   "community": "Donegal",
@@ -87372,6 +87821,110 @@
   "lon": -8.18076,
   "feature": "bay",
   "nameEn": "Erroonagh Bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186672648,
+  "name": "Pointe an Dúin",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.70832,
+  "lon": -8.76302,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186672657,
+  "name": "Pointe na Rón",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.70306,
+  "lon": -8.79819,
+  "feature": "cape",
+  "nameEn": "Salk Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675785,
+  "name": "An Pointe Creagach",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.69816,
+  "lon": -8.80585,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675788,
+  "name": "Ceann Ghlinne",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.72333,
+  "lon": -8.75212,
+  "feature": "cape",
+  "nameEn": "Glen Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675800,
+  "name": "Malaidh na Cainte",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.72789,
+  "lon": -8.75132,
+  "feature": "cape",
+  "nameEn": "Mullaghtan",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675802,
+  "name": "Fothair Chaorach",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.70566,
+  "lon": -8.78829,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675808,
+  "name": "An Storral",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.73772,
+  "lon": -8.74647,
+  "feature": "cape",
+  "nameEn": "Sturrall",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186675822,
+  "name": "Pointe na Fuiseoige",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.69236,
+  "lon": -8.80014,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3186695293,
+  "name": "Pointe an Duáin",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.9742,
+  "lon": -8.46655,
+  "feature": "cape",
+  "nameEn": "Hook Point",
   "parentRegion": "Ireland"
  },
  {
@@ -87423,6 +87976,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3191307365,
+  "name": "Baurnahard Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.63191,
+  "lon": -9.52955,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3191416393,
   "name": "Abbey Bay",
   "community": "Donegal",
@@ -87445,6 +88009,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 3195400875,
+  "name": "Donegal Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.72836,
+  "lon": -9.63374,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3198474346,
+  "name": "Carrichnacleara",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.74246,
+  "lon": -9.61229,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3204627578,
   "name": "The Horse Shoe",
   "community": "Clare",
@@ -87452,6 +88038,83 @@
   "lat": 52.7331,
   "lon": -9.62075,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3205830473,
+  "name": "Magrath's Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.74521,
+  "lon": -9.52816,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3215926152,
+  "name": "Carrowmore Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.7696,
+  "lon": -9.50221,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3216080584,
+  "name": "Caherrush Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.83331,
+  "lon": -9.45388,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3219987130,
+  "name": "Spanish Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.84911,
+  "lon": -9.45014,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3220384162,
+  "name": "Cream Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.86686,
+  "lon": -9.44065,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3220396805,
+  "name": "Freagh Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.87625,
+  "lon": -9.4369,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3220451993,
+  "name": "Cusheen Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61624,
+  "lon": -9.5242,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87468,13 +88131,101 @@
  },
  {
   "osmType": "node",
+  "osmId": 3228417079,
+  "name": "An Srón Liath",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.20913,
+  "lon": -10.40766,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3235032748,
+  "name": "Finavarra Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.14971,
+  "lon": -9.13722,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3244597482,
+  "name": "Battery Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.62204,
+  "lon": -9.12324,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3268911817,
+  "name": "Ballaghaline Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.01451,
+  "lon": -9.40815,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3268911818,
+  "name": "Doolin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.01891,
+  "lon": -9.40833,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3270158149,
+  "name": "Black Head",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.1542,
+  "lon": -9.26423,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3270231660,
+  "name": "Rine Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.13171,
+  "lon": -9.16186,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3310182115,
   "name": "Bell Harbour",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.12387,
   "lon": -9.07325,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3310182116,
+  "name": "Muckinish Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.14348,
+  "lon": -9.09406,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87512,6 +88263,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 3358776506,
+  "name": "Kiln Point",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.48573,
+  "lon": -6.0051,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3358776517,
+  "name": "Kelly's Point",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.49836,
+  "lon": -6.00575,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3358776525,
   "name": "Carnoon Bay",
   "community": "Dublin",
@@ -87523,6 +88296,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3358776527,
+  "name": "Gauge Point",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.49692,
+  "lon": -6.0228,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3358776546,
   "name": "Freshwater Bay",
   "community": "Dublin",
@@ -87530,6 +88314,28 @@
   "lat": 53.49618,
   "lon": -6.00088,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3358776547,
+  "name": "Black Point",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.48291,
+  "lon": -6.02298,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3358776554,
+  "name": "Scotch Point",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.49915,
+  "lon": -6.02682,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87578,6 +88384,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3358776576,
+  "name": "The Nose",
+  "community": "Dublin",
+  "country": "Ireland",
+  "lat": 53.49414,
+  "lon": -5.99433,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3358776580,
   "name": "Saltpan Bay",
   "community": "Dublin",
@@ -87585,6 +88402,17 @@
   "lat": 53.49575,
   "lon": -6.01989,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3395207336,
+  "name": "Brow Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.44775,
+  "lon": -9.77406,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87820,6 +88648,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3529349006,
+  "name": "Dunworly Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.57013,
+  "lon": -8.74974,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3529349025,
   "name": "Broadstrand Bay",
   "community": "Cork",
@@ -87827,6 +88666,17 @@
   "lat": 51.61832,
   "lon": -8.69635,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3529349036,
+  "name": "Barry's Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.60876,
+  "lon": -8.67675,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -87952,6 +88802,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3539695299,
+  "name": "Gokane Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.48397,
+  "lon": -9.27097,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3539745897,
   "name": "Barry's Cove",
   "community": "Cork",
@@ -88018,6 +88879,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 3545568938,
+  "name": "Sheep's Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.54089,
+  "lon": -9.85161,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3545591553,
   "name": "Black Ball Harbour",
   "community": "Cork",
@@ -88025,6 +88897,83 @@
   "lat": 51.59528,
   "lon": -10.04021,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548004450,
+  "name": "Ballyrisode Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.49968,
+  "lon": -9.66543,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548004467,
+  "name": "Skull Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.51043,
+  "lon": -9.54431,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548126185,
+  "name": "Boatman's Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6202,
+  "lon": -9.24168,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548126187,
+  "name": "Killanna Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6137,
+  "lon": -9.25549,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548126188,
+  "name": "Labasheeda Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61944,
+  "lon": -9.24753,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548126189,
+  "name": "Mountshannon Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.60271,
+  "lon": -9.26182,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548126190,
+  "name": "Redcap Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.60738,
+  "lon": -9.25852,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88047,6 +88996,17 @@
   "lat": 51.52673,
   "lon": -9.47086,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3548174614,
+  "name": "Coosheen Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.51304,
+  "lon": -9.52962,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88128,6 +89088,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 3569185893,
+  "name": "Ballynacragga Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.65926,
+  "lon": -9.10326,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3575375931,
+  "name": "Ing Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.75479,
+  "lon": -8.97674,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3578380704,
   "name": "Coosnageana",
   "community": "Cork",
@@ -88161,6 +89143,39 @@
  },
  {
   "osmType": "node",
+  "osmId": 3579026857,
+  "name": "Rine Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.7311,
+  "lon": -8.95622,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3586366199,
+  "name": "Knockbeagh Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.68755,
+  "lon": -8.91398,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3586366200,
+  "name": "Lurga Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.70242,
+  "lon": -9.02507,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 3611144157,
   "name": "Rincolisky Bay",
   "community": "Cork",
@@ -88168,6 +89183,171 @@
   "lat": 51.50687,
   "lon": -9.41824,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3611157000,
+  "name": "Dursey Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.57986,
+  "lon": -10.23591,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3611157002,
+  "name": "Mealbeg Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.58299,
+  "lon": -10.23809,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3611465833,
+  "name": "Illaunagowan Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69733,
+  "lon": -8.87848,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3611465834,
+  "name": "Illaundconeen Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69854,
+  "lon": -8.88549,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3611465835,
+  "name": "Tullyglass Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69421,
+  "lon": -8.88916,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393064,
+  "name": "Drummin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69387,
+  "lon": -8.84874,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393065,
+  "name": "Illaunbeg Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.68556,
+  "lon": -8.82595,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393066,
+  "name": "Illauninanagh Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69711,
+  "lon": -8.86799,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393067,
+  "name": "Illaunmore Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6888,
+  "lon": -8.82118,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393068,
+  "name": "Inishbonane Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.68594,
+  "lon": -8.83488,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393069,
+  "name": "Inishcronan Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6903,
+  "lon": -8.84254,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393071,
+  "name": "Inishcullin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69242,
+  "lon": -8.85739,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3613393072,
+  "name": "Tullyvarraga Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.69425,
+  "lon": -8.87055,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3635010183,
+  "name": "Bolus Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.79263,
+  "lon": -10.34805,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3635013895,
+  "name": "Ducalla Head",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.79723,
+  "lon": -10.3539,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88180,6 +89360,28 @@
   "lon": -10.14907,
   "feature": "bay",
   "nameEn": "Derrynane Harbour",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3655875511,
+  "name": "Whiddy Point West",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.67884,
+  "lon": -9.53512,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 3701907169,
+  "name": "Farran Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.87791,
+  "lon": -8.42881,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88252,6 +89454,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 4031176849,
+  "name": "Saint John's Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.56854,
+  "lon": -8.46385,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 4038287833,
   "name": "Port Durlainne",
   "community": "Mayo",
@@ -88260,6 +89473,39 @@
   "lon": -9.70966,
   "feature": "bay",
   "nameEn": "Porturlin",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4159246434,
+  "name": "Fawley's Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61116,
+  "lon": -9.513,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4161035794,
+  "name": "Dooneen Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.57064,
+  "lon": -9.64625,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4161046057,
+  "name": "Beal Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.58095,
+  "lon": -9.61679,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88308,6 +89554,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 4303142516,
+  "name": "Canglass Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.99156,
+  "lon": -10.25593,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4303157154,
+  "name": "Maoláin Mhór",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.7997,
+  "lon": -10.3466,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 4306617647,
   "name": "Cove Harbour",
   "community": "Kerry",
@@ -88327,6 +89595,18 @@
   "lon": -10.21265,
   "feature": "bay",
   "nameEn": "Trabeg",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4306696347,
+  "name": "An Dún Mór",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10865,
+  "lon": -10.47964,
+  "feature": "cape",
+  "nameEn": "Dunmore Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88353,6 +89633,42 @@
  },
  {
   "osmType": "node",
+  "osmId": 4308042922,
+  "name": "An Ceann Dubh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.07246,
+  "lon": -10.58114,
+  "feature": "cape",
+  "nameEn": "Canduff",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4308051072,
+  "name": "Ceann Cnoic",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.09766,
+  "lon": -10.51375,
+  "feature": "cape",
+  "nameEn": "Canknock",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4308069785,
+  "name": "Gob Chorráin an Fhiaigh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.18008,
+  "lon": -10.47337,
+  "feature": "cape",
+  "nameEn": "Sybil Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 4308074197,
   "name": "An Sás",
   "community": "Kerry",
@@ -88361,6 +89677,42 @@
   "lon": -10.2148,
   "feature": "bay",
   "nameEn": "Sauce Creek",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4308074200,
+  "name": "Duílic",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.29093,
+  "lon": -10.17783,
+  "feature": "cape",
+  "nameEn": "Deelick Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4308074201,
+  "name": "Pointe an Choma Dhóite",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.27572,
+  "lon": -10.24296,
+  "feature": "cape",
+  "nameEn": "Brandon Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4308703328,
+  "name": "Ceann Ghólaim",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.2298,
+  "lon": -9.77251,
+  "feature": "cape",
+  "nameEn": "Golam Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88409,6 +89761,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 4308750223,
+  "name": "Slyne Head",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.40045,
+  "lon": -10.23605,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 4308750435,
   "name": "Blind Sound",
   "community": "Galway",
@@ -88434,11 +89797,22 @@
   "osmType": "node",
   "osmId": 4309009400,
   "name": "Boat Harbour",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.30835,
   "lon": -9.36299,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4309009403,
+  "name": "Downpatrick Head",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.32775,
+  "lon": -9.34532,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88450,6 +89824,18 @@
   "lat": 53.61178,
   "lon": -10.21272,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4311073209,
+  "name": "Cionn Fhánada",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.27644,
+  "lon": -7.63037,
+  "feature": "cape",
+  "nameEn": "Fanad Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88499,6 +89885,18 @@
  },
  {
   "osmType": "node",
+  "osmId": 4312332437,
+  "name": "Ceann Mhása",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.32527,
+  "lon": -9.90675,
+  "feature": "cape",
+  "nameEn": "Mace Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 4312490411,
   "name": "Traillaun Harbour",
   "community": "Cork",
@@ -88506,6 +89904,18 @@
   "lat": 51.63869,
   "lon": -9.92364,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4312653547,
+  "name": "Ceann Heilbhic",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.05299,
+  "lon": -7.53654,
+  "feature": "cape",
+  "nameEn": "Helvick Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88563,6 +89973,17 @@
   "lat": 53.22208,
   "lon": -8.99104,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4336355928,
+  "name": "Ardfry Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.23256,
+  "lon": -9.00642,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88632,6 +90053,40 @@
   "lat": 54.01378,
   "lon": -10.02597,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4526795852,
+  "name": "Cionn Mhucrois",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.60883,
+  "lon": -8.59256,
+  "feature": "cape",
+  "nameEn": "Muckros Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4716762754,
+  "name": "Carrowcally Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.8168,
+  "lon": -9.6222,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 4794306332,
+  "name": "Rams Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.80854,
+  "lon": -8.2739,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88773,6 +90228,66 @@
  },
  {
   "osmType": "node",
+  "osmId": 5012030781,
+  "name": "Pointe na bhFaoileann",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.77464,
+  "lon": -10.53626,
+  "feature": "cape",
+  "nameEn": "Pointaweelaun",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145355233,
+  "name": "Rinn an Ghleanna",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.31745,
+  "lon": -9.8609,
+  "feature": "cape",
+  "nameEn": "Rinnaglana",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145355256,
+  "name": "An Dúna",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.3439,
+  "lon": -9.78786,
+  "feature": "cape",
+  "nameEn": "Doonvinalla",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145386456,
+  "name": "Ceann Iorrais",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.30878,
+  "lon": -9.99721,
+  "feature": "cape",
+  "nameEn": "Erris Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145418173,
+  "name": "Gob na Croise",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.21101,
+  "lon": -10.08967,
+  "feature": "cape",
+  "nameEn": "Cross Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5145418197,
   "name": "Port na bhFrancach",
   "community": "Mayo",
@@ -88781,6 +90296,30 @@
   "lon": -10.08334,
   "feature": "bay",
   "nameEn": "Portnafrankagh",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145418219,
+  "name": "Gob an Chorráin",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.19941,
+  "lon": -10.09696,
+  "feature": "cape",
+  "nameEn": "Corraun Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5145422325,
+  "name": "Ceann an Eanaigh",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.24222,
+  "lon": -10.10857,
+  "feature": "cape",
+  "nameEn": "Annagh Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88797,6 +90336,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 5172571616,
+  "name": "Cromwell Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.93402,
+  "lon": -10.32168,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5260182538,
   "name": "Church Bay",
   "community": "Clare",
@@ -88804,6 +90354,18 @@
   "lat": 52.93042,
   "lon": -8.35594,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5326318315,
+  "name": "Ceann Bhaile Dháith",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.22839,
+  "lon": -10.36783,
+  "feature": "cape",
+  "nameEn": "Ballydavid Head",
   "parentRegion": "Ireland"
  },
  {
@@ -88830,6 +90392,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 5341117194,
+  "name": "Farrahill Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.92535,
+  "lon": -8.34669,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5341118028,
   "name": "Bunlahy Bay",
   "community": "Clare",
@@ -88837,6 +90410,17 @@
   "lat": 52.93507,
   "lon": -8.33914,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5341142055,
+  "name": "Rinbarra Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.98338,
+  "lon": -8.33972,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88852,6 +90436,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 5341273719,
+  "name": "Rinnaman Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.83818,
+  "lon": -8.46067,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5341551257,
   "name": "Carrowgar Bay",
   "community": "Clare",
@@ -88859,6 +90454,17 @@
   "lat": 52.87444,
   "lon": -8.43211,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5344866235,
+  "name": "Beennakryraka Head",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.91008,
+  "lon": -10.4107,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -88918,6 +90524,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 5557085280,
+  "name": "Dog's Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.76363,
+  "lon": -9.88155,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5565264014,
   "name": "Bank Harbour",
   "community": "Cork",
@@ -88929,6 +90546,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 5773293955,
+  "name": "Screech Island",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.6351,
+  "lon": -8.54174,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 5807012606,
   "name": "Trawenagh Bay",
   "community": "Donegal",
@@ -88936,6 +90564,28 @@
   "lat": 54.89725,
   "lon": -8.35251,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5881327607,
+  "name": "Mweel Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50711,
+  "lon": -9.51676,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 5881327723,
+  "name": "Amsterdam Rock",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.49588,
+  "lon": -9.66302,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -88969,6 +90619,39 @@
   "lat": 51.64461,
   "lon": -8.55046,
   "feature": "beach",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6076069874,
+  "name": "Farmer Rock",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.68314,
+  "lon": -8.50352,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6076069876,
+  "name": "Bulman Rock",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.66893,
+  "lon": -8.49565,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6076099443,
+  "name": "Long Rock",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.67393,
+  "lon": -8.52108,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -89083,6 +90766,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 6239793445,
+  "name": "Rose Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 53.93611,
+  "lon": -8.43596,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6239793446,
+  "name": "Castle Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 53.94714,
+  "lon": -8.43859,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 6372563062,
   "name": "Doonbeg Bay",
   "community": "Clare",
@@ -89096,7 +90801,7 @@
   "osmType": "node",
   "osmId": 6417127504,
   "name": "Pouldoody Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.12933,
   "lon": -9.07781,
@@ -89149,6 +90854,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 6567828768,
+  "name": "Rahis Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.67832,
+  "lon": -10.03056,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 6586274238,
   "name": "The Sound",
   "community": "Kerry",
@@ -89156,6 +90872,72 @@
   "lat": 51.87382,
   "lon": -9.57773,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998172,
+  "name": "Eagle Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.71563,
+  "lon": -9.46177,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998173,
+  "name": "Reenagough Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.71654,
+  "lon": -9.50208,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998174,
+  "name": "Big Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.72397,
+  "lon": -9.54335,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998177,
+  "name": "Four Heads Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.71305,
+  "lon": -9.54957,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998178,
+  "name": "Crowdy Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.72185,
+  "lon": -9.54277,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6589998179,
+  "name": "Ardnamanagh Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.71397,
+  "lon": -9.49011,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89171,13 +90953,92 @@
  },
  {
   "osmType": "node",
+  "osmId": 6661016452,
+  "name": "Gobán",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.88001,
+  "lon": -9.81036,
+  "feature": "cape",
+  "nameEn": "Gubbaun Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 6707616158,
   "name": "Little Harbour",
-  "community": "Dublin",
+  "community": "Louth",
   "country": "Ireland",
   "lat": 53.7881,
   "lon": -6.23034,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6710224554,
+  "name": "Gubnahooeycam",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.01072,
+  "lon": -10.09508,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6710264831,
+  "name": "Gob na Dumhcha",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.00359,
+  "lon": -9.88446,
+  "feature": "cape",
+  "nameEn": "Gubnadoogha",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6722944061,
+  "name": "Feagher Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.00256,
+  "lon": -10.11653,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6723048849,
+  "name": "Bleanroenacoragh",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.0101,
+  "lon": -10.1887,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6723048851,
+  "name": "Garraunbaun",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.98139,
+  "lon": -10.24128,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 6723048856,
+  "name": "Askilgubroenacoragh",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.01322,
+  "lon": -10.18033,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89262,6 +91123,18 @@
  },
  {
   "osmType": "node",
+  "osmId": 7274193809,
+  "name": "Cora an Ghréasaí",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.37617,
+  "lon": -9.60278,
+  "feature": "cape",
+  "nameEn": "Cora an Ghréasaí-",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 7532097465,
   "name": "Philibeen Bay",
   "community": "Wexford",
@@ -89269,6 +91142,17 @@
   "lat": 52.13776,
   "lon": -6.92844,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 7532097466,
+  "name": "Doornoge",
+  "community": "Wexford",
+  "country": "Ireland",
+  "lat": 52.13041,
+  "lon": -6.93519,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89423,6 +91307,28 @@
   "lat": 54.62627,
   "lon": -8.6314,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 7786455487,
+  "name": "Drumanoo Head",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.60472,
+  "lon": -8.48363,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 7786496232,
+  "name": "Carntullagh Head",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.61366,
+  "lon": -8.43754,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89726,11 +91632,91 @@
   "osmType": "node",
   "osmId": 7855632947,
   "name": "Glenawilling Beach",
-  "community": "Waterford",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.87854,
   "lon": -7.88946,
   "feature": "beach",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 7930859061,
+  "name": "Bunmahon Head",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.13346,
+  "lon": -7.37494,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8019318779,
+  "name": "Gob an Loingsigh",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.95813,
+  "lon": -9.86043,
+  "feature": "cape",
+  "nameEn": "Gubalinchy",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8019318780,
+  "name": "Gob na Carraige Móire",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.9582,
+  "lon": -9.85156,
+  "feature": "cape",
+  "nameEn": "Gubnacarrickmore",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8148500796,
+  "name": "Cooley Point",
+  "community": "Louth",
+  "country": "Ireland",
+  "lat": 53.98093,
+  "lon": -6.1406,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8223204185,
+  "name": "Inshaboy Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.44592,
+  "lon": -9.79613,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8261614634,
+  "name": "Brown’s Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.08446,
+  "lon": -7.49026,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8436272054,
+  "name": "Pointe Lic an Teampaill",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.78283,
+  "lon": -10.2161,
+  "feature": "cape",
+  "nameEn": "Pointalickatemple",
   "parentRegion": "Ireland"
  },
  {
@@ -89743,6 +91729,17 @@
   "lon": -10.20838,
   "feature": "bay",
   "nameEn": "Daniel's Cove",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8475102855,
+  "name": "An Plaosc",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.82509,
+  "lon": -10.09306,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89770,6 +91767,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 8518513085,
+  "name": "Tóin na Reanna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.30549,
+  "lon": -10.06217,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8518513086,
+  "name": "Garrywilliam Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.30663,
+  "lon": -10.05968,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 8518513087,
   "name": "An Góilín",
   "community": "Kerry",
@@ -89777,6 +91796,17 @@
   "lat": 52.3101,
   "lon": -10.05819,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8518513088,
+  "name": "Poinnte Góilín",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.31023,
+  "lon": -10.0583,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -89814,6 +91844,18 @@
  },
  {
   "osmType": "node",
+  "osmId": 8761068287,
+  "name": "Ceann Muice",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.78304,
+  "lon": -10.22699,
+  "feature": "cape",
+  "nameEn": "Hog's Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 8865767944,
   "name": "An Poll Gorm",
   "community": "Cork",
@@ -89843,6 +91885,17 @@
   "lat": 51.54234,
   "lon": -9.6636,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 8883447245,
+  "name": "Dunmanus Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.54455,
+  "lon": -9.6666,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -90078,6 +92131,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 9023069102,
+  "name": "Steillthún",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.4807,
+  "lon": -9.22965,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9023105761,
   "name": "Lochán na gCleas",
   "community": "Cork",
@@ -90122,6 +92186,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 9031798654,
+  "name": "Poinnté Ár nÉan",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50775,
+  "lon": -9.19779,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9047915648,
   "name": "Cuas Thiar",
   "community": "Cork",
@@ -90152,6 +92227,17 @@
   "lon": -9.2123,
   "feature": "bay",
   "nameEn": "Cuasdergadoona",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9057989214,
+  "name": "An Goibín",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.49274,
+  "lon": -9.23956,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -90422,6 +92508,29 @@
  },
  {
   "osmType": "node",
+  "osmId": 9493697340,
+  "name": "Ceann Bhólais",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.78385,
+  "lon": -10.34329,
+  "feature": "cape",
+  "nameEn": "Bolus Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9494700230,
+  "name": "Boilig a' Dá Cheann/ Two Headed Reef.",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.79777,
+  "lon": -10.3552,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9497480163,
   "name": "Trá Phraisce",
   "community": "Kerry",
@@ -90543,6 +92652,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 9497769133,
+  "name": "Maoláin Bheag",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.80049,
+  "lon": -10.34285,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9497788112,
   "name": "Cuas a'tSeabhaic",
   "community": "Kerry",
@@ -90565,6 +92685,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 9497825698,
+  "name": "Na Buaitisí",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.79412,
+  "lon": -10.31018,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9498042309,
+  "name": "Boilgí a' Bhealaigh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84331,
+  "lon": -10.39847,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9498055498,
   "name": "Cuas a' Chlodraigh",
   "community": "Kerry",
@@ -90572,6 +92714,29 @@
   "lat": 51.83655,
   "lon": -10.40581,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9498059549,
+  "name": "An Ceann Dubh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.83184,
+  "lon": -10.41493,
+  "feature": "cape",
+  "nameEn": "Canduff",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9498074347,
+  "name": "Léime",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.83242,
+  "lon": -10.41204,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -90598,6 +92763,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 9498084065,
+  "name": "Boilg na Cruaiche",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.83879,
+  "lon": -10.41268,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9500666237,
   "name": "Cuas Maghognaí",
   "community": "Kerry",
@@ -90605,6 +92781,29 @@
   "lat": 51.82179,
   "lon": -10.33185,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9500766553,
+  "name": "Rinn na Cille",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84456,
+  "lon": -10.34239,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9501564039,
+  "name": "Na Mná",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.76485,
+  "lon": -10.54693,
+  "feature": "reef",
+  "nameEn": "Washerwoman Rock",
   "parentRegion": "Ireland"
  },
  {
@@ -90677,7 +92876,7 @@
   "osmType": "node",
   "osmId": 9566621841,
   "name": "Youghal Harbour",
-  "community": "Waterford",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.92189,
   "lon": -7.81892,
@@ -90730,6 +92929,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 9652035159,
+  "name": "Boilg Thomáis/Tomás's Reef",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.78527,
+  "lon": -10.33716,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9652056871,
+  "name": "Pointe na Leacacha/Point of the Flagstones.",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.78845,
+  "lon": -10.32555,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9652102925,
   "name": "Bun an tSrutha/Base of the Stream",
   "community": "Kerry",
@@ -90763,6 +92984,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 9652339432,
+  "name": "Dúna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84493,
+  "lon": -10.34798,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9652356993,
   "name": "Bun na h Abhann",
   "community": "Kerry",
@@ -90770,6 +93002,17 @@
   "lat": 51.84322,
   "lon": -10.39079,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9652358919,
+  "name": "Cuas na Teorann",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84559,
+  "lon": -10.34311,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -90796,6 +93039,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 9833225082,
+  "name": "Simon's Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.5699,
+  "lon": -9.13877,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9956997755,
+  "name": "Newtown Head",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.2084,
+  "lon": -6.97084,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 9956997757,
   "name": "Dromina Strand",
   "community": "Waterford",
@@ -90814,6 +93079,17 @@
   "lat": 52.21368,
   "lon": -6.97655,
   "feature": "beach",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 9961636490,
+  "name": "Knockavelish Head",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.18455,
+  "lon": -6.97327,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -91096,7 +93372,7 @@
   "osmType": "node",
   "osmId": 10582647276,
   "name": "Bealach na Finnise",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.04183,
   "lon": -9.44481,
@@ -91156,7 +93432,7 @@
   "osmType": "node",
   "osmId": 10582653038,
   "name": "Killary Harbour",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.59948,
   "lon": -9.78195,
@@ -91188,6 +93464,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 10891574535,
+  "name": "Carrickadda",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.15664,
+  "lon": -9.12309,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 10921902833,
   "name": "Teach an tSalainn",
   "community": "Galway",
@@ -91201,7 +93488,7 @@
   "osmType": "node",
   "osmId": 10968261957,
   "name": "Poulavaud",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.08673,
   "lon": -9.32609,
@@ -91243,6 +93530,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 11580208536,
+  "name": "Cunnigar Point",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.08521,
+  "lon": -7.61086,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11580291343,
   "name": "An Mheá",
   "community": "Waterford",
@@ -91262,6 +93560,94 @@
   "lat": 51.94047,
   "lon": -7.82367,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11586798509,
+  "name": "Cabin Point",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 51.94228,
+  "lon": -7.79566,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11586876744,
+  "name": "Long Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.83459,
+  "lon": -8.24259,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11586876745,
+  "name": "Roche's Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.793,
+  "lon": -8.25508,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11608545231,
+  "name": "Carrigrenan Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.88554,
+  "lon": -8.33831,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11611611499,
+  "name": "Marino Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.87831,
+  "lon": -8.33137,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11611837262,
+  "name": "Curraghbinny Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.81002,
+  "lon": -8.29282,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11663466005,
+  "name": "Scullane Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.48731,
+  "lon": -9.20997,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11663628582,
+  "name": "Sherkin Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.46187,
+  "lon": -9.43875,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -91288,6 +93674,105 @@
  },
  {
   "osmType": "node",
+  "osmId": 11679047437,
+  "name": "League Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.65484,
+  "lon": -9.56508,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11679047438,
+  "name": "Reen Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.6516,
+  "lon": -9.57477,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11679094845,
+  "name": "Reenrour Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.68312,
+  "lon": -9.46093,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11679094846,
+  "name": "Reenbeg Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.68877,
+  "lon": -9.45986,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11679097668,
+  "name": "Relane Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.66896,
+  "lon": -9.50875,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11685080215,
+  "name": "Mehal Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.67323,
+  "lon": -9.65041,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11685080216,
+  "name": "Shot Head",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.67009,
+  "lon": -9.67561,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11685240109,
+  "name": "Ardaturrish Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.72094,
+  "lon": -9.50574,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11685276922,
+  "name": "Whiddy Point East",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.70649,
+  "lon": -9.47953,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11753846298,
   "name": "Castlelough Bay",
   "community": "Kerry",
@@ -91310,6 +93795,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 11758759369,
+  "name": "Foileye",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.02929,
+  "lon": -10.13125,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11758819930,
   "name": "Kells Bay",
   "community": "Kerry",
@@ -91317,6 +93813,191 @@
   "lat": 52.02731,
   "lon": -10.10446,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11758839780,
+  "name": "Feaklecally",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.04042,
+  "lon": -10.05584,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11761029302,
+  "name": "Cromane Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.13905,
+  "lon": -9.89884,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11774397513,
+  "name": "Ardmore Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.58462,
+  "lon": -9.43055,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11778597444,
+  "name": "Acres Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.12348,
+  "lon": -10.09515,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11778875460,
+  "name": "Gob Reanna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.11433,
+  "lon": -10.12949,
+  "feature": "cape",
+  "nameEn": "Gubranna",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11778875461,
+  "name": "Ceann na Mine Airde",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.11277,
+  "lon": -10.14804,
+  "feature": "cape",
+  "nameEn": "Minard Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11778875462,
+  "name": "Pointe an Chloiginn",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10875,
+  "lon": -10.1993,
+  "feature": "cape",
+  "nameEn": "Bull's Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11779110099,
+  "name": "Pointe na Reanna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.11611,
+  "lon": -10.26328,
+  "feature": "cape",
+  "nameEn": "Reenbeg Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11784769363,
+  "name": "Rinn Chuas an Éin",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.03983,
+  "lon": -10.60365,
+  "feature": "cape",
+  "nameEn": "Reenacusheen",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11793966392,
+  "name": "An Scoth",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.11518,
+  "lon": -10.36252,
+  "feature": "cape",
+  "nameEn": "Pointanskoh",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11794277925,
+  "name": "Pointe an Ghiorria",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.23452,
+  "lon": -10.35146,
+  "feature": "cape",
+  "nameEn": "Pointagare",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11796230639,
+  "name": "Pointe na Reanna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.27674,
+  "lon": -10.15606,
+  "feature": "cape",
+  "nameEn": "Ballymore Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11799922987,
+  "name": "Pointe na Cathrach",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.26195,
+  "lon": -10.14613,
+  "feature": "cape",
+  "nameEn": "Caher Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11808057866,
+  "name": "Leck Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.54588,
+  "lon": -9.67849,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11808057867,
+  "name": "Kilconly Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.56168,
+  "lon": -9.66322,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11808093097,
+  "name": "Doon Point",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.52994,
+  "lon": -9.68189,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -91332,6 +94013,171 @@
  },
  {
   "osmType": "node",
+  "osmId": 11820072828,
+  "name": "Gammarel Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.61799,
+  "lon": -9.10281,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11820090428,
+  "name": "Aughinish Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.63715,
+  "lon": -9.06145,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11826316184,
+  "name": "Courtbrown Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.63847,
+  "lon": -8.99873,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11835242073,
+  "name": "Rinekirk Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.66877,
+  "lon": -8.81478,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11835242074,
+  "name": "Mellon Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.6723,
+  "lon": -8.83577,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11835270029,
+  "name": "Muckinish Point",
+  "community": "Limerick",
+  "country": "Ireland",
+  "lat": 52.67084,
+  "lon": -8.71978,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879697493,
+  "name": "Tullig Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61486,
+  "lon": -9.80569,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879714482,
+  "name": "Dunmore Head",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.55474,
+  "lon": -9.89185,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879746911,
+  "name": "Kilcloher Head",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.56515,
+  "lon": -9.81332,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879746913,
+  "name": "Cloonconeen Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.58349,
+  "lon": -9.72735,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879746914,
+  "name": "Rinevella Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.58029,
+  "lon": -9.74189,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879746915,
+  "name": "Kilcredaun Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.58424,
+  "lon": -9.69638,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879863592,
+  "name": "Querrin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.62761,
+  "lon": -9.58578,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11879863593,
+  "name": "Corlis Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.61819,
+  "lon": -9.60379,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11882360213,
+  "name": "Money Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6035,
+  "lon": -9.40374,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11884969397,
   "name": "Doughmore Bay",
   "community": "Clare",
@@ -91343,6 +94189,72 @@
  },
  {
   "osmType": "node",
+  "osmId": 11885002562,
+  "name": "Rinnamryall",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.75185,
+  "lon": -9.54732,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11885052109,
+  "name": "Emlagh Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.82345,
+  "lon": -9.45642,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11885070921,
+  "name": "Lurga Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.80899,
+  "lon": -9.49252,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11898363269,
+  "name": "Colman's Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.58762,
+  "lon": -9.30242,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11898363270,
+  "name": "Kilkerin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.59953,
+  "lon": -9.33845,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11902052147,
+  "name": "Rinealon Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.6186,
+  "lon": -9.16752,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11903894370,
   "name": "A;n Chis",
   "community": "Kerry",
@@ -91350,6 +94262,17 @@
   "lat": 51.84146,
   "lon": -10.40164,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11903943313,
+  "name": "Carraig na Cise",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84165,
+  "lon": -10.40055,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -91387,6 +94310,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 11904072920,
+  "name": "Na  Beara Buí",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.83211,
+  "lon": -10.41599,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11904076780,
+  "name": "Leac Mhór",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84284,
+  "lon": -10.4044,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11904079176,
   "name": "Cuas na Rónta",
   "community": "Kerry",
@@ -91409,6 +94354,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 11904086206,
+  "name": "Cuas a 'Bhodaigh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.84263,
+  "lon": -10.40564,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11904088591,
+  "name": "Boilg a 'Chinn",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.83234,
+  "lon": -10.41577,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11904096642,
   "name": "Cuas Thaidhg Mheirgeach",
   "community": "Kerry",
@@ -91427,6 +94394,17 @@
   "lat": 51.84588,
   "lon": -10.39322,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11904130056,
+  "name": "Oileáinín Fhaill na n Eigh",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.85158,
+  "lon": -10.39134,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -91728,6 +94706,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 11904548060,
+  "name": "Dún Aonair",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 51.82583,
+  "lon": -10.33629,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11904548071,
   "name": "Cuas Éibhlíse",
   "community": "Kerry",
@@ -91772,6 +94761,40 @@
  },
  {
   "osmType": "node",
+  "osmId": 11923592398,
+  "name": "Drumquin Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.76271,
+  "lon": -9.00681,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11931714765,
+  "name": "Aughinish Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 53.16393,
+  "lon": -9.0867,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11937909518,
+  "name": "Rinn Ramhrois",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.01506,
+  "lon": -8.56153,
+  "feature": "cape",
+  "nameEn": "Rinrawros Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11944697110,
   "name": "Bog Bay",
   "community": "Kerry",
@@ -91779,6 +94802,39 @@
   "lat": 52.00825,
   "lon": -9.54397,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11949778225,
+  "name": "Altar Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.70535,
+  "lon": -8.97971,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11949778226,
+  "name": "Feenish Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.70864,
+  "lon": -8.98021,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11949790071,
+  "name": "Rineanna Point",
+  "community": "Clare",
+  "country": "Ireland",
+  "lat": 52.68613,
+  "lon": -8.9674,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -91794,6 +94850,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 11988654557,
+  "name": "Black Point",
+  "community": "Wexford",
+  "country": "Ireland",
+  "lat": 52.19786,
+  "lon": -6.90419,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 11988654558,
   "name": "Templetown Bay",
   "community": "Wexford",
@@ -91805,6 +94872,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 11992635659,
+  "name": "Cheek Point",
+  "community": "Waterford",
+  "country": "Ireland",
+  "lat": 52.27041,
+  "lon": -6.98958,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 11992712211,
+  "name": "Ballymadder Point",
+  "community": "Wexford",
+  "country": "Ireland",
+  "lat": 52.21185,
+  "lon": -6.74051,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12017554888,
   "name": "Cuas na gColúr",
   "community": "Kerry",
@@ -91812,6 +94901,41 @@
   "lat": 51.86292,
   "lon": -10.3863,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12021326562,
+  "name": "Mweenish Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.20414,
+  "lon": -8.96891,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12044154914,
+  "name": "Cora na hAirde Móire",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.29199,
+  "lon": -9.77343,
+  "feature": "cape",
+  "nameEn": "Ardmore Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12051602308,
+  "name": "Gob na Trá Báine",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.22896,
+  "lon": -9.64744,
+  "feature": "cape",
+  "nameEn": "Trawbaun Point",
   "parentRegion": "Ireland"
  },
  {
@@ -91828,6 +94952,30 @@
  },
  {
   "osmType": "node",
+  "osmId": 12051868963,
+  "name": "Aill an Chlogáis",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.23758,
+  "lon": -9.58473,
+  "feature": "cape",
+  "nameEn": "Aillecluggish Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12051898874,
+  "name": "Tóin na hAirde",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.28071,
+  "lon": -9.54903,
+  "feature": "cape",
+  "nameEn": "Tonahardia",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12051898896,
   "name": "Cuan Chladhnach",
   "community": "Galway",
@@ -91836,6 +94984,53 @@
   "lon": -9.54723,
   "feature": "bay",
   "nameEn": "Clynagh Bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12056088619,
+  "name": "Dumhaigh Léireabháin",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.23335,
+  "lon": -9.42378,
+  "feature": "cape",
+  "nameEn": "Cornarona Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12061943258,
+  "name": "Ros Dúgáin",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.33167,
+  "lon": -9.71298,
+  "feature": "cape",
+  "nameEn": "Rossduggan Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12061943259,
+  "name": "Ros Cam",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.34092,
+  "lon": -9.707,
+  "feature": "cape",
+  "nameEn": "Roscom Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12070510672,
+  "name": "Long Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.18542,
+  "lon": -8.56357,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -91914,6 +95109,17 @@
   "lat": 53.62185,
   "lon": -10.23328,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12122990149,
+  "name": "Na hAdhartaí Gorma",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.15803,
+  "lon": -10.46557,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92007,6 +95213,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 12125023520,
+  "name": "Mionnán an Dúna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10829,
+  "lon": -10.47164,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12125026009,
+  "name": "Gob an Bhranda",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10793,
+  "lon": -10.46174,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12125026011,
   "name": "Cuas Bló",
   "community": "Kerry",
@@ -92014,6 +95242,17 @@
   "lat": 52.11227,
   "lon": -10.47355,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12125029727,
+  "name": "An Rinnín",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.10467,
+  "lon": -10.45705,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92063,6 +95302,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 12125059339,
+  "name": "Dún Binne",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.12425,
+  "lon": -10.46316,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12125062688,
   "name": "Fothar na Sionach",
   "community": "Kerry",
@@ -92107,6 +95357,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 12125075933,
+  "name": "Scairbh na bhFear",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.13665,
+  "lon": -10.47023,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12125080182,
   "name": "Cuas na nGéann",
   "community": "Kerry",
@@ -92129,6 +95390,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 12125083800,
+  "name": "Glúin an Chinn",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.14556,
+  "lon": -10.47226,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12125164072,
   "name": "Cuas an Bháid",
   "community": "Kerry",
@@ -92136,6 +95408,17 @@
   "lat": 52.18847,
   "lon": -10.41148,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12125167139,
+  "name": "Na Fochaisí",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.2039,
+  "lon": -10.42321,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -92174,6 +95457,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 12135647067,
+  "name": "An Bhinn Bháin",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.19239,
+  "lon": -10.44744,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12135680270,
+  "name": "Log na nGabhar",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.20135,
+  "lon": -10.40694,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12135728085,
   "name": "Góilín Ifrinn",
   "community": "Kerry",
@@ -92187,11 +95492,46 @@
   "osmType": "node",
   "osmId": 12154405455,
   "name": "Barnaderg Bay",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.55534,
   "lon": -9.96886,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12165024175,
+  "name": "Fochais Ceann An Dúna",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.17239,
+  "lon": -10.46435,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12181005047,
+  "name": "Gob na Cora",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.05605,
+  "lon": -9.50148,
+  "feature": "cape",
+  "nameEn": "Trawkeera Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12181005048,
+  "name": "Fárdoras",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.04522,
+  "lon": -9.52659,
+  "feature": "cape",
+  "nameEn": "Fardurris Point",
   "parentRegion": "Ireland"
  },
  {
@@ -92207,6 +95547,160 @@
  },
  {
   "osmType": "node",
+  "osmId": 12194855491,
+  "name": "Drowlaun Point",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.4762,
+  "lon": -9.43455,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522435,
+  "name": "Rosmore Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.88308,
+  "lon": -9.60052,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522436,
+  "name": "Rossow Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.8623,
+  "lon": -9.57696,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522437,
+  "name": "Garvillaun Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.80304,
+  "lon": -9.55413,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522438,
+  "name": "Tonaknick Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.85514,
+  "lon": -9.57296,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522439,
+  "name": "Ross Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.85168,
+  "lon": -9.60097,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522440,
+  "name": "Rossanrubble Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.86589,
+  "lon": -9.60168,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522441,
+  "name": "Roscahill Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.83305,
+  "lon": -9.6204,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522442,
+  "name": "Gubnahinneora Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.00808,
+  "lon": -10.1455,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12209522443,
+  "name": "Gubacregganmore",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.02498,
+  "lon": -10.04793,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12259452356,
+  "name": "Gubcormongan",
+  "community": "Leitrim",
+  "country": "Ireland",
+  "lat": 54.09917,
+  "lon": -8.0424,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12277039171,
+  "name": "Ross Point",
+  "community": "Leitrim",
+  "country": "Ireland",
+  "lat": 54.40273,
+  "lon": -8.11476,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12277039172,
+  "name": "Rosfriar Point",
+  "community": "Leitrim",
+  "country": "Ireland",
+  "lat": 54.44842,
+  "lon": -8.22826,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12277424460,
+  "name": "Rashenny Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.62139,
+  "lon": -8.43767,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12277424461,
   "name": "Richie's Bay",
   "community": "Donegal",
@@ -92214,6 +95708,18 @@
   "lat": 54.61805,
   "lon": -8.43149,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12279723235,
+  "name": "Pointe an Dúin",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.61847,
+  "lon": -8.62127,
+  "feature": "cape",
+  "nameEn": "Dundawoona Point",
   "parentRegion": "Ireland"
  },
  {
@@ -92266,6 +95772,41 @@
  },
  {
   "osmType": "node",
+  "osmId": 12288669184,
+  "name": "Tor an Éidigh",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.02272,
+  "lon": -8.54202,
+  "feature": "cape",
+  "nameEn": "Torneady Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12290448155,
+  "name": "Na Reanna Liatha",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.04366,
+  "lon": -8.39443,
+  "feature": "cape",
+  "nameEn": "Rinnalea Point",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12308307825,
+  "name": "Dunree Head",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.19749,
+  "lon": -7.55474,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12312748410,
   "name": "An Camas Mór",
   "community": "Donegal",
@@ -92274,6 +95815,50 @@
   "lon": -8.22618,
   "feature": "bay",
   "nameEn": "Camusmore Bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12319475447,
+  "name": "Rabbit Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.1593,
+  "lon": -9.14121,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12319475449,
+  "name": "Rinphilip Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.15482,
+  "lon": -9.14206,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12383202605,
+  "name": "Greenore Point",
+  "community": "Louth",
+  "country": "Ireland",
+  "lat": 54.0348,
+  "lon": -6.1323,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12392082859,
+  "name": "Soldiers' Point",
+  "community": "Louth",
+  "country": "Ireland",
+  "lat": 54.00754,
+  "lon": -6.34795,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92296,6 +95881,17 @@
   "lat": 53.61414,
   "lon": -10.16234,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12420960352,
+  "name": "Lyon Head",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.61202,
+  "lon": -10.15852,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92498,6 +96094,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 12421008042,
+  "name": "Barrack Point",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.6107,
+  "lon": -10.21683,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 12421008043,
   "name": "Ooghnalee",
   "community": "Galway",
@@ -92527,6 +96134,17 @@
   "lat": 53.6199,
   "lon": -10.25791,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12421008058,
+  "name": "Alladoon",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.62041,
+  "lon": -10.25862,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92575,6 +96193,226 @@
  },
  {
   "osmType": "node",
+  "osmId": 12563198926,
+  "name": "Kiltoom Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 53.70552,
+  "lon": -9.22848,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12565832393,
+  "name": "Derinch Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.22329,
+  "lon": -8.59045,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12565832394,
+  "name": "Ballinlig Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.24527,
+  "lon": -8.62783,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12565832395,
+  "name": "Portavaud Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.24784,
+  "lon": -8.62861,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12565832396,
+  "name": "Derkmore Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.27081,
+  "lon": -8.65717,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12566098861,
+  "name": "Aughris Head",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.27688,
+  "lon": -8.77265,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12566098863,
+  "name": "Donagh",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.26604,
+  "lon": -8.85578,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12566098864,
+  "name": "Bunowna Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.29337,
+  "lon": -8.96135,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12566098865,
+  "name": "Carrickadda Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.29564,
+  "lon": -8.98252,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12566098867,
+  "name": "Rathlee Head",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.2801,
+  "lon": -9.05845,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12579573961,
+  "name": "Rinnachurry Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.18283,
+  "lon": -9.14287,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12579573962,
+  "name": "Gortabradawn Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.19306,
+  "lon": -9.16117,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12579573963,
+  "name": "Barnasock Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.20191,
+  "lon": -9.16186,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12579639988,
+  "name": "Rinnaun Point",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.22431,
+  "lon": -9.20717,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12585824670,
+  "name": "Rinnatalleen",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.21672,
+  "lon": -8.57724,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12585933608,
+  "name": "Finned Point",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.33254,
+  "lon": -8.54989,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12964927197,
+  "name": "Carricknacranny",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.25852,
+  "lon": -8.80887,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12964927198,
+  "name": "Pollnagappul",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.25838,
+  "lon": -8.81162,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12964927199,
+  "name": "Bennanea",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.25655,
+  "lon": -8.81587,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 12964927200,
+  "name": "Pollbrean",
+  "community": "Sligo",
+  "country": "Ireland",
+  "lat": 54.25446,
+  "lon": -8.82936,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 13098800365,
   "name": "Port Nola",
   "community": "Donegal",
@@ -92582,6 +96420,18 @@
   "lat": 55.21659,
   "lon": -6.94254,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13184799075,
+  "name": "Cúinne an Mhionnáin",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.23599,
+  "lon": -10.3562,
+  "feature": "cape",
+  "nameEn": "Pointanaminnaun",
   "parentRegion": "Ireland"
  },
  {
@@ -92594,6 +96444,42 @@
   "lon": -10.35392,
   "feature": "bay",
   "nameEn": "Fuiheranoughta",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13184836115,
+  "name": "Faill an Airse",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.19418,
+  "lon": -10.41394,
+  "feature": "cape",
+  "nameEn": "Foilanarsha",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13184836116,
+  "name": "Faill an Tí Dhóite",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.19218,
+  "lon": -10.41425,
+  "feature": "cape",
+  "nameEn": "Foilateevedotia",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13184846834,
+  "name": "Faill an Fhíona",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.17512,
+  "lon": -10.44971,
+  "feature": "cape",
+  "nameEn": "Coonakeel",
   "parentRegion": "Ireland"
  },
  {
@@ -92670,6 +96556,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 13243146819,
+  "name": "Muldarry Point",
+  "community": "Meath",
+  "country": "Ireland",
+  "lat": 53.79684,
+  "lon": -7.31184,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 13318270471,
   "name": "An Dólainn",
   "community": "Galway",
@@ -92735,6 +96632,17 @@
   "lon": -9.5978,
   "feature": "bay",
   "nameEn": "Camus Bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13346861294,
+  "name": "Cora na Ronna",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.23121,
+  "lon": -9.6133,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92852,7 +96760,7 @@
   "osmType": "node",
   "osmId": 13593473669,
   "name": "Galway Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.18066,
   "lon": -9.30722,
@@ -92905,6 +96813,18 @@
  },
  {
   "osmType": "node",
+  "osmId": 13714739247,
+  "name": "An Ceann Ramhar",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.0622,
+  "lon": -9.97002,
+  "feature": "cape",
+  "nameEn": "Doohooma Head",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 13727740623,
   "name": "Bá Thulacháin",
   "community": "Mayo",
@@ -92912,6 +96832,17 @@
   "lat": 54.08983,
   "lon": -9.86954,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13727740624,
+  "name": "Rinn Inis Potaire",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.08517,
+  "lon": -9.89245,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92938,6 +96869,28 @@
  },
  {
   "osmType": "node",
+  "osmId": 13727740645,
+  "name": "Ceann Fionnalta",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.10297,
+  "lon": -9.99074,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 13746254263,
+  "name": "Gob an Chloiginn",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.18251,
+  "lon": -9.98458,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 13945513329,
   "name": "Crompán na nUaimíní",
   "community": "Galway",
@@ -92945,6 +96898,17 @@
   "lat": 53.26754,
   "lon": -9.7005,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14088724230,
+  "name": "An Bhinn Bhuí",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.68335,
+  "lon": -8.78759,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -92982,6 +96946,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 14089404317,
+  "name": "Rinn Allt",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.66144,
+  "lon": -8.82916,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 14089404341,
   "name": "Bun Chroimghlinne",
   "community": "Donegal",
@@ -92989,6 +96964,50 @@
   "lat": 54.67469,
   "lon": -8.78601,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14089404342,
+  "name": "An Dún",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.66004,
+  "lon": -8.77964,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14089404343,
+  "name": "Gob Rinn Fheadalaí",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.67556,
+  "lon": -8.79039,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14089404344,
+  "name": "Pointe Ros Fhearaíl",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.65707,
+  "lon": -8.77446,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14089404346,
+  "name": "An Tearrál",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.66015,
+  "lon": -8.78846,
+  "feature": "cape",
   "parentRegion": "Ireland"
  },
  {
@@ -93004,6 +97023,94 @@
  },
  {
   "osmType": "node",
+  "osmId": 14099067416,
+  "name": "Gob Rinn an Treoraic",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.17674,
+  "lon": -8.18967,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14099067418,
+  "name": "Carraig an Ghlasáin",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.17934,
+  "lon": -8.16731,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14099067426,
+  "name": "Tóin na Maoile Móire",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 55.18481,
+  "lon": -8.18139,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14118641911,
+  "name": "Harvey's Point",
+  "community": "Donegal",
+  "country": "Ireland",
+  "lat": 54.69569,
+  "lon": -8.05238,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14131535986,
+  "name": "Barr na Cora",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.34649,
+  "lon": -9.56993,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14131535988,
+  "name": "Cora na Gaoithe",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.33906,
+  "lon": -9.57346,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14131535990,
+  "name": "Cor na dTráchta",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.31269,
+  "lon": -9.62852,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
+  "osmId": 14132873107,
+  "name": "Croiminne",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.30239,
+  "lon": -9.63979,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 14132873108,
   "name": "An Crompán Mór",
   "community": "Galway",
@@ -93015,6 +97122,17 @@
  },
  {
   "osmType": "node",
+  "osmId": 14132873109,
+  "name": "Gob Leitir Móir",
+  "community": "Galway",
+  "country": "Ireland",
+  "lat": 53.28829,
+  "lon": -9.64923,
+  "feature": "cape",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "node",
   "osmId": 14142383004,
   "name": "Cuan na hAille Buí",
   "community": "Galway",
@@ -93022,6 +97140,18 @@
   "lat": 53.34632,
   "lon": -9.63604,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
+  "osmId": 4564034,
+  "name": "An Feo Mór",
+  "community": "Kerry",
+  "country": "Ireland",
+  "lat": 52.02424,
+  "lon": -10.68868,
+  "feature": "reef",
+  "nameEn": "Great Foze Rock",
   "parentRegion": "Ireland"
  },
  {
@@ -93072,7 +97202,7 @@
   "osmType": "way",
   "osmId": 24547527,
   "name": "Lahinch Beach",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 52.93749,
   "lon": -9.35622,
@@ -93677,7 +97807,7 @@
   "osmType": "way",
   "osmId": 103892233,
   "name": "Glassilaun Beach",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.61546,
   "lon": -9.88192,
@@ -93831,7 +97961,7 @@
   "osmType": "way",
   "osmId": 135187906,
   "name": "South Beach",
-  "community": "Wexford",
+  "community": "Wicklow",
   "country": "Ireland",
   "lat": 52.78733,
   "lon": -6.14203,
@@ -93842,7 +97972,7 @@
   "osmType": "way",
   "osmId": 135187908,
   "name": "The Cove",
-  "community": "Wexford",
+  "community": "Wicklow",
   "country": "Ireland",
   "lat": 52.78044,
   "lon": -6.14517,
@@ -94076,7 +98206,7 @@
   "osmType": "way",
   "osmId": 173058480,
   "name": "Renvyle Beach",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.60718,
   "lon": -9.98438,
@@ -94885,7 +99015,7 @@
   "osmType": "way",
   "osmId": 312574893,
   "name": "Lettergesh Beach",
-  "community": "Mayo",
+  "community": "Galway",
   "country": "Ireland",
   "lat": 53.60695,
   "lon": -9.90244,
@@ -95487,7 +99617,7 @@
   "osmType": "way",
   "osmId": 581005988,
   "name": "Trabane",
-  "community": "Kerry",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.71516,
   "lon": -9.98572,
@@ -95562,6 +99692,17 @@
  },
  {
   "osmType": "way",
+  "osmId": 643464702,
+  "name": "Bream Rock",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.60991,
+  "lon": -8.52698,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
   "osmId": 653038857,
   "name": "Donegal Bay",
   "community": "Donegal",
@@ -95619,11 +99760,22 @@
   "osmType": "way",
   "osmId": 684882883,
   "name": "Fanore Beach",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.1191,
   "lon": -9.28923,
   "feature": "beach",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
+  "osmId": 687665040,
+  "name": "Carrigeenmore",
+  "community": "Mayo",
+  "country": "Ireland",
+  "lat": 54.20128,
+  "lon": -9.15761,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -96406,7 +100558,7 @@
   "osmType": "way",
   "osmId": 1039811366,
   "name": "Youghal Harbour",
-  "community": "Waterford",
+  "community": "Cork",
   "country": "Ireland",
   "lat": 51.91542,
   "lon": -7.82466,
@@ -96549,7 +100701,7 @@
   "osmType": "way",
   "osmId": 1172836663,
   "name": "Trawee",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 53.09272,
   "lon": -9.31096,
@@ -96604,7 +100756,7 @@
   "osmType": "way",
   "osmId": 1323883239,
   "name": "Clogga Strand",
-  "community": "Wexford",
+  "community": "Wicklow",
   "country": "Ireland",
   "lat": 52.76575,
   "lon": -6.14655,
@@ -96712,6 +100864,17 @@
  },
  {
   "osmType": "way",
+  "osmId": 1458707757,
+  "name": "Leath Oileán",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50132,
+  "lon": -9.45854,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
   "osmId": 1458707758,
   "name": "Cuas an Chapaill",
   "community": "Cork",
@@ -96756,6 +100919,17 @@
  },
  {
   "osmType": "way",
+  "osmId": 1458719608,
+  "name": "Carraig a' tSiúnta",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.5053,
+  "lon": -9.45284,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
   "osmId": 1458719933,
   "name": "Cuas an Uisce",
   "community": "Cork",
@@ -96796,6 +100970,39 @@
   "lat": 51.50707,
   "lon": -9.44662,
   "feature": "bay",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
+  "osmId": 1458729550,
+  "name": "Na Carraigíní Buí",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50196,
+  "lon": -9.44173,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
+  "osmId": 1458744115,
+  "name": "An Rabha Mór",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50537,
+  "lon": -9.46533,
+  "feature": "reef",
+  "parentRegion": "Ireland"
+ },
+ {
+  "osmType": "way",
+  "osmId": 1458744787,
+  "name": "An Rabha Biora",
+  "community": "Cork",
+  "country": "Ireland",
+  "lat": 51.50251,
+  "lon": -9.4643,
+  "feature": "reef",
   "parentRegion": "Ireland"
  },
  {
@@ -96958,7 +101165,7 @@
   "osmType": "relation",
   "osmId": 2235896,
   "name": "Ballycastle Beach",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.29517,
   "lon": -9.38209,
@@ -96980,7 +101187,7 @@
   "osmType": "relation",
   "osmId": 2605384,
   "name": "Lacken Strand",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.27887,
   "lon": -9.24467,
@@ -97137,7 +101344,7 @@
   "osmType": "relation",
   "osmId": 3209901,
   "name": "Nuns Beach",
-  "community": "Wexford",
+  "community": "Wicklow",
   "country": "Ireland",
   "lat": 52.77238,
   "lon": -6.14403,
@@ -97148,7 +101355,7 @@
   "osmType": "relation",
   "osmId": 3209902,
   "name": "Hanging Rock Beach",
-  "community": "Wexford",
+  "community": "Wicklow",
   "country": "Ireland",
   "lat": 52.77406,
   "lon": -6.14233,
@@ -97269,7 +101476,7 @@
   "osmType": "relation",
   "osmId": 4250166,
   "name": "White Strand",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 52.86748,
   "lon": -9.42796,
@@ -97291,7 +101498,7 @@
   "osmType": "relation",
   "osmId": 4259740,
   "name": "Trabaun",
-  "community": "Sligo",
+  "community": "Mayo",
   "country": "Ireland",
   "lat": 54.2597,
   "lon": -9.21513,
@@ -97850,7 +102057,7 @@
   "osmType": "relation",
   "osmId": 9069398,
   "name": "Liscannor Bay",
-  "community": "Galway",
+  "community": "Clare",
   "country": "Ireland",
   "lat": 52.9093,
   "lon": -9.40732,

@@ -4,13 +4,13 @@
     "gate": "attested by a surf reference, and coordinate verified on the open-sea coastline",
     "samePlaceKm": 1.5
   },
-  "in": 8536,
-  "out": 935,
+  "in": 9054,
+  "out": 960,
   "perRegion": {
     "United Kingdom|Wales": 55,
     "United Kingdom|Scotland": 33,
-    "Ireland|Donegal": 22,
-    "Ireland|Mayo": 12,
+    "Ireland|Donegal": 31,
+    "Ireland|Mayo": 18,
     "Ireland|Waterford": 7,
     "Ireland|Sligo": 7,
     "France|Corse": 14,
@@ -18,9 +18,9 @@
     "Spain|País Vasco": 23,
     "United Kingdom|Dorset": 13,
     "Spain|Canarias": 78,
-    "Ireland|Kerry": 11,
+    "Ireland|Kerry": 14,
     "United Kingdom|Northern Ireland": 8,
-    "Ireland|Cork": 11,
+    "Ireland|Cork": 12,
     "United Kingdom|Devon": 27,
     "United Kingdom|Cornwall": 63,
     "France|Provence-Alpes-Côte d'Azur": 31,
@@ -39,11 +39,11 @@
     "United Kingdom|Isle of Wight": 4,
     "Spain|Asturias": 44,
     "France|Nouvelle-Aquitaine": 81,
+    "Ireland|Clare": 8,
     "United Kingdom|Tyne and Wear": 8,
-    "Ireland|Dublin": 8,
-    "Ireland|Clare": 3,
-    "Spain|Ceuta": 5,
+    "Ireland|Dublin": 9,
     "Ireland|Galway": 1,
+    "Spain|Ceuta": 5,
     "United Kingdom|East Riding of Yorkshire": 3,
     "France|Bretagne": 49,
     "France|Pays de la Loire": 14,
@@ -148,18 +148,14 @@
     "France|Provence-Alpes-Côte d'Azur|Napoléon",
     "France|Provence-Alpes-Côte d'Azur|Piémanson",
     "France|Provence-Alpes-Côte d'Azur|Saintes-Maries-de-la-Mer",
-    "Ireland|Clare|Doolin",
-    "Ireland|Clare|Fanore",
     "Ireland|Clare|Kilkee",
-    "Ireland|Clare|Lahinch",
     "Ireland|Cork|Owenahincha",
     "Ireland|Cork|Youghal",
     "Ireland|Donegal|Dunfanaghy",
     "Ireland|Donegal|Falcarragh",
-    "Ireland|Donegal|Marble Hill",
     "Ireland|Donegal|Narin",
-    "Ireland|Donegal|Portsalon",
     "Ireland|Donegal|Rossnowlagh",
+    "Ireland|Donegal|Trabane",
     "Ireland|Dublin|Balbriggan",
     "Ireland|Dublin|Sutton",
     "Ireland|Galway|Lettergesh",
@@ -171,13 +167,11 @@
     "Ireland|Kerry|Brandon Bay",
     "Ireland|Kerry|Castlegregory",
     "Ireland|Kerry|Fermoyle",
-    "Ireland|Kerry|Inch",
     "Ireland|Kerry|Maharees",
     "Ireland|Mayo|Doolough",
     "Ireland|Mayo|Dugort",
     "Ireland|Mayo|Mulranny",
     "Ireland|Sligo|Easkey",
-    "Ireland|Sligo|Enniscrone",
     "Ireland|Sligo|Mullaghmore",
     "Ireland|Sligo|Strandhill",
     "Ireland|Waterford|Dunmore East",
@@ -47312,6 +47306,111 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "lonehort-point",
+      "name": "Lonehort Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "myross-point",
+      "name": "Myross Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "long-point",
+      "name": "Long Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "malin-head",
+      "name": "Malin Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "coordinate rejected: the reference puts this break 5.98 km away"
+    },
+    {
+      "id": "rossan-point",
+      "name": "Rossan Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cooanmore-point",
+      "name": "Cooanmore Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cora-na-gcug",
+      "name": "Cora na gCúg",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cora-chlair",
+      "name": "Cora Chláir",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-toin-dubh",
+      "name": "An Tóin Dubh",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cora-an-chaisleain",
+      "name": "Cora an Chaisleáin",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "loop-head",
+      "name": "Loop Head",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rough-point",
+      "name": "Rough Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballymore-point",
+      "name": "Ballymore Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointe-na-reanna",
+      "name": "Pointe na Reanna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "crumpaun",
+      "name": "Crumpaun",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "newtown-cove",
       "name": "Newtown Cove",
       "country": "Ireland",
@@ -47333,6 +47432,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "roaring-water-bay",
+      "name": "Roaring-Water Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-thoin-an-chnoic",
+      "name": "Gob Thóin an Chnoic",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "slea-head",
+      "name": "Slea Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "dingle-harbour",
       "name": "Dingle Harbour",
       "country": "Ireland",
@@ -47349,6 +47469,20 @@
     {
       "id": "saint-margaret-s-bay",
       "name": "Saint Margaret's Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "brandon-point",
+      "name": "Brandon Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bannow-bay",
+      "name": "Bannow Bay",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -47377,6 +47511,13 @@
     {
       "id": "dollar-bay",
       "name": "Dollar Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "booley-bay",
+      "name": "Booley Bay",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -47427,7 +47568,14 @@
       "id": "ballynakill-harbour",
       "name": "Ballynakill Harbour",
       "country": "Ireland",
-      "region": "Mayo",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "clifden-bay",
+      "name": "Clifden Bay",
+      "country": "Ireland",
+      "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -47440,6 +47588,13 @@
     {
       "id": "gorteen-bay",
       "name": "Gorteen Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bertraghboy-bay",
+      "name": "Bertraghboy Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47459,6 +47614,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "little-killary-harbour",
+      "name": "Little Killary Harbour",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "dunabrattin-bay",
       "name": "Dunabrattin Bay",
       "country": "Ireland",
@@ -47466,8 +47628,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cape-clear",
+      "name": "Cape Clear",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "ballyconneely-bay",
       "name": "Ballyconneely Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "camus-bay",
+      "name": "Camus Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47482,6 +47658,13 @@
     {
       "id": "greatman-s-bay",
       "name": "Greatman's Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "roundstone-bay",
+      "name": "Roundstone Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47503,13 +47686,6 @@
     {
       "id": "bunowen-bay",
       "name": "Bunowen Bay",
-      "country": "Ireland",
-      "region": "Galway",
-      "reason": "not attested: no surf reference names this place"
-    },
-    {
-      "id": "doonlaughaun-bay",
-      "name": "Doonlaughaun Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47539,7 +47715,7 @@
       "id": "ballyvaughan-bay",
       "name": "Ballyvaughan Bay",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -47552,6 +47728,13 @@
     {
       "id": "corranroo-bay",
       "name": "Corranroo Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunbulcaun-bay",
+      "name": "Dunbulcaun Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47585,6 +47768,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "kinvara-bay",
+      "name": "Kinvara Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "mal-bay",
       "name": "Mal Bay",
       "country": "Ireland",
@@ -47595,12 +47785,19 @@
       "id": "muckinish-bay",
       "name": "Muckinish Bay",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "mweeloon-bay",
       "name": "Mweeloon Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "oranmore-bay",
+      "name": "Oranmore Bay",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -47624,6 +47821,62 @@
       "name": "Ross Bay",
       "country": "Ireland",
       "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tyrone-bay",
+      "name": "Tyrone Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "aylevarroo-bay",
+      "name": "Aylevarroo Bay",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballylongford-bay",
+      "name": "Ballylongford Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballymacrinan-bay",
+      "name": "Ballymacrinan Bay",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bunaclugga-bay",
+      "name": "Bunaclugga Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrigaholt-bay",
+      "name": "Carrigaholt Bay",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "castlemaine-harbour",
+      "name": "Castlemaine Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "glencloosagh-bay",
+      "name": "Glencloosagh Bay",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -47669,10 +47922,17 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "ardgroom-harbour",
+      "name": "Ardgroom Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "ballycrovane-harbour",
       "name": "Ballycrovane Harbour",
       "country": "Ireland",
-      "region": "Kerry",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -47690,10 +47950,24 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cleanderry-harbour",
+      "name": "Cleanderry Harbour",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coongar-harbour",
+      "name": "Coongar Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "coulagh-bay",
       "name": "Coulagh Bay",
       "country": "Ireland",
-      "region": "Kerry",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -47713,6 +47987,20 @@
     {
       "id": "garinish-bay",
       "name": "Garinish Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kilmakilloge-harbour",
+      "name": "Kilmakilloge Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coolieragh-harbour",
+      "name": "Coolieragh Harbour",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -47907,6 +48195,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "broomhill-bay",
+      "name": "Broomhill Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "bunmahon-bay",
       "name": "Bunmahon Bay",
       "country": "Ireland",
@@ -47916,6 +48211,13 @@
     {
       "id": "clonea-bay",
       "name": "Clonea Bay",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "creadan-bay",
+      "name": "Creadan Bay",
       "country": "Ireland",
       "region": "Waterford",
       "reason": "not attested: no surf reference names this place"
@@ -48005,6 +48307,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "ardbear-bay",
+      "name": "Ardbear Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cleggan-bay",
       "name": "Cleggan Bay",
       "country": "Ireland",
@@ -48040,6 +48349,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "newport-bay",
+      "name": "Newport Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "sellarna-bay",
       "name": "Sellarna Bay",
       "country": "Ireland",
@@ -48054,6 +48370,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "westport-bay",
+      "name": "Westport Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "belderg-harbour",
       "name": "Belderg Harbour",
       "country": "Ireland",
@@ -48064,7 +48387,7 @@
       "id": "classybaun-harbour",
       "name": "Classybaun Harbour",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48089,6 +48412,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "fintragh-bay",
+      "name": "Fintragh Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "inver-bay",
       "name": "Inver Bay",
       "country": "Ireland",
@@ -48096,10 +48426,10 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "lacken-bay",
-      "name": "Lacken Bay",
+      "id": "killybegs-harbour",
+      "name": "Killybegs Harbour",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48120,7 +48450,7 @@
       "id": "rathfran-bay",
       "name": "Rathfran Bay",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48138,8 +48468,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "trawmore-bay",
+      "name": "Trawmore Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "breasty-bay",
       "name": "Breasty Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrick-bay",
+      "name": "Carrick Bay",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -48222,6 +48566,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "owenamara-bay",
+      "name": "Owenamara Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "rockstown-bay",
       "name": "Rockstown Bay",
       "country": "Ireland",
@@ -48238,6 +48589,13 @@
     {
       "id": "sheephaven-bay",
       "name": "Sheephaven Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "the-cul-bay",
+      "name": "The Cul Bay",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -48281,7 +48639,56 @@
       "id": "dundalk-bay",
       "name": "Dundalk Bay",
       "country": "Ireland",
-      "region": "Dublin",
+      "region": "Louth",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ceann-na-faochana",
+      "name": "Ceann na Faochana",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "saddle-head",
+      "name": "Saddle Head",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ridge-point",
+      "name": "Ridge Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "parkmore-point",
+      "name": "Parkmore Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ceann-an-droma",
+      "name": "Ceann an Droma",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "doon-point",
+      "name": "Doon Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mall-point",
+      "name": "Mall Point",
+      "country": "Ireland",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48289,6 +48696,41 @@
       "name": "Keem Bay",
       "country": "Ireland",
       "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "quigley-s-point",
+      "name": "Quigley's Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubanillaun",
+      "name": "Gubanillaun",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinvyle-point",
+      "name": "Rinvyle Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "king-s-bay",
+      "name": "King's Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "glenwater-bay",
+      "name": "Glenwater Bay",
+      "country": "Ireland",
+      "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48302,12 +48744,26 @@
       "id": "poulnaclogh-bay",
       "name": "Poulnaclogh Bay",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cotton-hole",
+      "name": "Cotton Hole",
+      "country": "Ireland",
+      "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "hell-hole",
       "name": "Hell Hole",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "philip-s-hole",
+      "name": "Philip's Hole",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -48322,6 +48778,13 @@
     {
       "id": "stonewall-bay",
       "name": "Stonewall Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "baginbun-head",
+      "name": "Baginbun Head",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -48509,6 +48972,41 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "lareen-bay",
+      "name": "Lareen Bay",
+      "country": "Ireland",
+      "region": "Leitrim",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "caraun-point",
+      "name": "Caraun Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mizen-head",
+      "name": "Mizen Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunagree-point",
+      "name": "Dunagree Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "breaghy-head",
+      "name": "Breaghy Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "scoltaroddan-bay",
       "name": "Scoltaroddan Bay",
       "country": "Ireland",
@@ -48530,8 +49028,29 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "foohagh-point",
+      "name": "Foohagh Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "george-s-head",
+      "name": "George's Head",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "intrinsic-bay",
       "name": "Intrinsic Bay",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "knockroe-point",
+      "name": "Knockroe Point",
       "country": "Ireland",
       "region": "Clare",
       "reason": "not attested: no surf reference names this place"
@@ -48558,6 +49077,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "moylegasaghty-head",
+      "name": "Moylegasaghty Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "toberglassan-bay",
       "name": "Toberglassan Bay",
       "country": "Ireland",
@@ -48567,6 +49093,69 @@
     {
       "id": "erroonagh-bay",
       "name": "Erroonagh Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointe-an-duin",
+      "name": "Pointe an Dúin",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "salk-point",
+      "name": "Salk Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-pointe-creagach",
+      "name": "An Pointe Creagach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "glen-head",
+      "name": "Glen Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mullaghtan",
+      "name": "Mullaghtan",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fothair-chaorach",
+      "name": "Fothair Chaorach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "sturrall",
+      "name": "Sturrall",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointe-na-fuiseoige",
+      "name": "Pointe na Fuiseoige",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "hook-point",
+      "name": "Hook Point",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -48593,6 +49182,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "baurnahard-point",
+      "name": "Baurnahard Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "abbey-bay",
       "name": "Abbey Bay",
       "country": "Ireland",
@@ -48607,8 +49203,57 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "donegal-point",
+      "name": "Donegal Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrichnacleara",
+      "name": "Carrichnacleara",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "the-horse-shoe",
       "name": "The Horse Shoe",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "magrath-s-point",
+      "name": "Magrath's Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrowmore-point",
+      "name": "Carrowmore Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "caherrush-point",
+      "name": "Caherrush Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "freagh-point",
+      "name": "Freagh Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cusheen-point",
+      "name": "Cusheen Point",
       "country": "Ireland",
       "region": "Clare",
       "reason": "not attested: no surf reference names this place"
@@ -48618,6 +49263,55 @@
       "name": "Salk Cove",
       "country": "Ireland",
       "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-sron-liath",
+      "name": "An Srón Liath",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "finavarra-point",
+      "name": "Finavarra Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "battery-point",
+      "name": "Battery Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballaghaline-point",
+      "name": "Ballaghaline Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "black-head",
+      "name": "Black Head",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rine-point",
+      "name": "Rine Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "muckinish-point",
+      "name": "Muckinish Point",
+      "country": "Ireland",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48635,6 +49329,20 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "kiln-point",
+      "name": "Kiln Point",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kelly-s-point",
+      "name": "Kelly's Point",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "carnoon-bay",
       "name": "Carnoon Bay",
       "country": "Ireland",
@@ -48642,8 +49350,29 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "gauge-point",
+      "name": "Gauge Point",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "freshwater-bay",
       "name": "Freshwater Bay",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "black-point",
+      "name": "Black Point",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "scotch-point",
+      "name": "Scotch Point",
       "country": "Ireland",
       "region": "Dublin",
       "reason": "not attested: no surf reference names this place"
@@ -48677,10 +49406,38 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "the-nose",
+      "name": "The Nose",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "saltpan-bay",
       "name": "Saltpan Bay",
       "country": "Ireland",
       "region": "Dublin",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "brow-head",
+      "name": "Brow Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "monkstown-creek",
+      "name": "Monkstown Creek",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lough-beg",
+      "name": "Lough Beg",
+      "country": "Ireland",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48796,8 +49553,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dunworly-point",
+      "name": "Dunworly Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "broadstrand-bay",
       "name": "Broadstrand Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barry-s-point",
+      "name": "Barry's Point",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -48880,6 +49651,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "gokane-point",
+      "name": "Gokane Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "barry-s-cove",
       "name": "Barry's Cove",
       "country": "Ireland",
@@ -48901,6 +49679,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "courtmacsherry-harbour",
+      "name": "Courtmacsherry Harbour",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "coolmain-bay",
       "name": "Coolmain Bay",
       "country": "Ireland",
@@ -48915,10 +49700,38 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "sheep-s-head",
+      "name": "Sheep's Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "black-ball-harbour",
       "name": "Black Ball Harbour",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballyrisode-point",
+      "name": "Ballyrisode Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "skull-point",
+      "name": "Skull Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mountshannon-point",
+      "name": "Mountshannon Point",
+      "country": "Ireland",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -48931,6 +49744,20 @@
     {
       "id": "rossbrin-cove",
       "name": "Rossbrin Cove",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coosheen-point",
+      "name": "Coosheen Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "poulgorm-bay",
+      "name": "Poulgorm Bay",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -48978,6 +49805,20 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "ballynacragga-point",
+      "name": "Ballynacragga Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ing-point",
+      "name": "Ing Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "coosnageana",
       "name": "Coosnageana",
       "country": "Ireland",
@@ -48999,6 +49840,139 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rine-point-3579026857",
+      "name": "Rine Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "knockbeagh-point",
+      "name": "Knockbeagh Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lurga-point",
+      "name": "Lurga Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rincolisky-bay",
+      "name": "Rincolisky Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dursey-head",
+      "name": "Dursey Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mealbeg-point",
+      "name": "Mealbeg Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "illaunagowan-point",
+      "name": "Illaunagowan Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "illaundconeen-point",
+      "name": "Illaundconeen Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tullyglass-point",
+      "name": "Tullyglass Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "drummin-point",
+      "name": "Drummin Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "illaunbeg-point",
+      "name": "Illaunbeg Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "illauninanagh-point",
+      "name": "Illauninanagh Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "illaunmore-point",
+      "name": "Illaunmore Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "inishbonane-point",
+      "name": "Inishbonane Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "inishcullin-point",
+      "name": "Inishcullin Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tullyvarraga-point",
+      "name": "Tullyvarraga Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bolus-point",
+      "name": "Bolus Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ducalla-head",
+      "name": "Ducalla Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "whiddy-point-west",
+      "name": "Whiddy Point West",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "poulnasherry-bay",
       "name": "Poulnasherry Bay",
       "country": "Ireland",
@@ -49006,10 +49980,73 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rockfleet-bay",
+      "name": "Rockfleet Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bellacragher-bay",
+      "name": "Bellacragher Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballydehob-bay",
+      "name": "Ballydehob Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "moyrahan-bay",
+      "name": "Moyrahan Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "saint-john-s-point",
+      "name": "Saint John's Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "porturlin",
       "name": "Porturlin",
       "country": "Ireland",
       "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fawley-s-point",
+      "name": "Fawley's Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dooneen-point",
+      "name": "Dooneen Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "beal-point",
+      "name": "Beal Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pallas-harbour",
+      "name": "Pallas Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49034,8 +50071,36 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "canglass-point",
+      "name": "Canglass Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "maolain-mhor",
+      "name": "Maoláin Mhór",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cove-harbour",
+      "name": "Cove Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "trabeg",
       "name": "Trabeg",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunmore-head",
+      "name": "Dunmore Head",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -49048,10 +50113,52 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "canduff",
+      "name": "Canduff",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "canknock",
+      "name": "Canknock",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "sybil-point",
+      "name": "Sybil Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "sauce-creek",
       "name": "Sauce Creek",
       "country": "Ireland",
       "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "deelick-point",
+      "name": "Deelick Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "brandon-head",
+      "name": "Brandon Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "golam-head",
+      "name": "Golam Head",
+      "country": "Ireland",
+      "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49083,6 +50190,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "slyne-head",
+      "name": "Slyne Head",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "blind-sound",
       "name": "Blind Sound",
       "country": "Ireland",
@@ -49100,7 +50214,14 @@
       "id": "boat-harbour",
       "name": "Boat Harbour",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "downpatrick-head",
+      "name": "Downpatrick Head",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49139,10 +50260,38 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "mace-head",
+      "name": "Mace Head",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "traillaun-harbour",
       "name": "Traillaun Harbour",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "helvick-head",
+      "name": "Helvick Head",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "portaghurra-harbour",
+      "name": "Portaghurra Harbour",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bulls-mouth",
+      "name": "Bulls Mouth",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49160,17 +50309,17 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "ardfry-point",
+      "name": "Ardfry Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "ronan-s-bay",
       "name": "Ronan's Bay",
       "country": "Ireland",
       "region": "Waterford",
-      "reason": "not attested: no surf reference names this place"
-    },
-    {
-      "id": "camport-bay",
-      "name": "Camport Bay",
-      "country": "Ireland",
-      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49181,10 +50330,31 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "bunacurry-harbour",
+      "name": "Bunacurry Harbour",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "pollawaddy",
       "name": "Pollawaddy",
       "country": "Ireland",
       "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrowcally-point",
+      "name": "Carrowcally Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rams-head",
+      "name": "Rams Head",
+      "country": "Ireland",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49265,8 +50435,57 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "pointaweelaun",
+      "name": "Pointaweelaun",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinnaglana",
+      "name": "Rinnaglana",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "doonvinalla",
+      "name": "Doonvinalla",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "erris-head",
+      "name": "Erris Head",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cross-point",
+      "name": "Cross Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "portnafrankagh",
       "name": "Portnafrankagh",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "corraun-point",
+      "name": "Corraun Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "annagh-head",
+      "name": "Annagh Head",
       "country": "Ireland",
       "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
@@ -49276,6 +50495,27 @@
       "name": "Portnakilly",
       "country": "Ireland",
       "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cromwell-point",
+      "name": "Cromwell Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballydavid-head",
+      "name": "Ballydavid Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "beennakryraka-head",
+      "name": "Beennakryraka Head",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49314,8 +50554,43 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dog-s-point",
+      "name": "Dog's Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "bank-harbour",
       "name": "Bank Harbour",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "screech-island",
+      "name": "Screech Island",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "trawenagh-bay",
+      "name": "Trawenagh Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mweel-point",
+      "name": "Mweel Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "amsterdam-rock",
+      "name": "Amsterdam Rock",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -49337,6 +50612,27 @@
     {
       "id": "kilcolman-strand",
       "name": "Kilcolman Strand",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "farmer-rock",
+      "name": "Farmer Rock",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bulman-rock",
+      "name": "Bulman Rock",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "long-rock",
+      "name": "Long Rock",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -49398,6 +50694,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "white-bay-6164253911",
+      "name": "White Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "portnocker",
       "name": "Portnocker",
       "country": "Ireland",
@@ -49408,7 +50711,7 @@
       "id": "pouldoody-bay",
       "name": "Pouldoody Bay",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49426,6 +50729,48 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rahis-point",
+      "name": "Rahis Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reenagough-point",
+      "name": "Reenagough Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "big-point",
+      "name": "Big Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "four-heads-point",
+      "name": "Four Heads Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "crowdy-point",
+      "name": "Crowdy Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ardnamanagh-point",
+      "name": "Ardnamanagh Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "mill-cove-6591062169",
       "name": "Mill Cove",
       "country": "Ireland",
@@ -49433,10 +50778,66 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "gubbaun-point",
+      "name": "Gubbaun Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "little-harbour",
       "name": "Little Harbour",
       "country": "Ireland",
-      "region": "Dublin",
+      "region": "Louth",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubnahooeycam",
+      "name": "Gubnahooeycam",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubnadoogha",
+      "name": "Gubnadoogha",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "feagher-point",
+      "name": "Feagher Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bleanroenacoragh",
+      "name": "Bleanroenacoragh",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "garraunbaun",
+      "name": "Garraunbaun",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "askilgubroenacoragh",
+      "name": "Askilgubroenacoragh",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "salia-bay",
+      "name": "Salia Bay",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49468,8 +50869,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cora-an-ghreasai",
+      "name": "Cora an Ghréasaí-",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "philibeen-bay",
       "name": "Philibeen Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "doornoge",
+      "name": "Doornoge",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -49545,8 +50960,36 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "back-bay",
+      "name": "Back Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "matman-s-bay",
+      "name": "Matman's Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuan-theilinn",
       "name": "Cuan Theilinn",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "drumanoo-head",
+      "name": "Drumanoo Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carntullagh-head",
+      "name": "Carntullagh Head",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -49636,8 +51079,57 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "drumnacraig-bay",
+      "name": "Drumnacraig Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "boat-bay-7794558343",
+      "name": "Boat Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "sliddery-bay",
+      "name": "Sliddery Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "crooban-bay",
+      "name": "Crooban Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "meadow-bay",
+      "name": "Meadow Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "white-bay-7794558376",
       "name": "White Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "horse-park-bay",
+      "name": "Horse Park Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lagmore-bay",
+      "name": "Lagmore Bay",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -49653,7 +51145,56 @@
       "id": "glenawilling-beach",
       "name": "Glenawilling Beach",
       "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bunmahon-head",
+      "name": "Bunmahon Head",
+      "country": "Ireland",
       "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubalinchy",
+      "name": "Gubalinchy",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubnacarrickmore",
+      "name": "Gubnacarrickmore",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cooley-point",
+      "name": "Cooley Point",
+      "country": "Ireland",
+      "region": "Louth",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "inshaboy-point",
+      "name": "Inshaboy Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "brown-s-point",
+      "name": "Brown’s Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointalickatemple",
+      "name": "Pointalickatemple",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -49678,8 +51219,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "toin-na-reanna",
+      "name": "Tóin na Reanna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "an-goilin",
       "name": "An Góilín",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "poinnte-goilin",
+      "name": "Poinnte Góilín",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -49699,6 +51254,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "hog-s-head",
+      "name": "Hog's Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "an-poll-gorm",
       "name": "An Poll Gorm",
       "country": "Ireland",
@@ -49708,6 +51270,20 @@
     {
       "id": "cuas-na-gcolur",
       "name": "Cuas na gColúr",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunmanus-harbour",
+      "name": "Dunmanus Harbour",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunmanus-point",
+      "name": "Dunmanus Point",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -49860,6 +51436,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "steillthun",
+      "name": "Steillthún",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "lochan-na-gcleas",
       "name": "Lochán na gCleas",
       "country": "Ireland",
@@ -49888,6 +51471,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "poinnte-ar-nean",
+      "name": "Poinnté Ár nÉan",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-thiar",
       "name": "Cuas Thiar",
       "country": "Ireland",
@@ -49904,6 +51494,13 @@
     {
       "id": "cuasdergadoona",
       "name": "Cuasdergadoona",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-goibin",
+      "name": "An Goibín",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -49951,10 +51548,24 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "murvagh-beach",
+      "name": "Murvagh Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "colvin-s-chan",
       "name": "Colvin's Chan",
       "country": "Ireland",
       "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "shell-beach-9198385790",
+      "name": "Shell Beach",
+      "country": "Ireland",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50056,6 +51667,20 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "bolus-head",
+      "name": "Bolus Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "boilig-a-da-cheann-two-headed-reef",
+      "name": "Boilig a' Dá Cheann/ Two Headed Reef.",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "tra-phraisce",
       "name": "Trá Phraisce",
       "country": "Ireland",
@@ -50072,6 +51697,13 @@
     {
       "id": "tra-an-ghleanntain",
       "name": "Trá an Ghleanntáin",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tra-na-h-uine",
+      "name": "Trá na h Úine",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50126,6 +51758,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "maolain-bheag",
+      "name": "Maoláin Bheag",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-a-tseabhaic",
       "name": "Cuas a'tSeabhaic",
       "country": "Ireland",
@@ -50140,8 +51779,36 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "na-buaitisi",
+      "name": "Na Buaitisí",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "boilgi-a-bhealaigh",
+      "name": "Boilgí a' Bhealaigh",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-a-chlodraigh",
       "name": "Cuas a' Chlodraigh",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "canduff-9498059549",
+      "name": "Canduff",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "leime",
+      "name": "Léime",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50161,8 +51828,29 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "boilg-na-cruaiche",
+      "name": "Boilg na Cruaiche",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-maghognai",
       "name": "Cuas Maghognaí",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinn-na-cille",
+      "name": "Rinn na Cille",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "washerwoman-rock",
+      "name": "Washerwoman Rock",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50213,12 +51901,19 @@
       "id": "youghal-harbour-9566621841",
       "name": "Youghal Harbour",
       "country": "Ireland",
-      "region": "Waterford",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "cuaisin-an-ghainimh",
       "name": "Cuaisín an Ghainimh",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cul-cluthar-na-leima",
+      "name": "Cúl Cluthar Na Léima",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -50233,6 +51928,20 @@
     {
       "id": "cuas-a-che",
       "name": "Cuas a' Ché",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "boilg-thomais-tomas-s-reef",
+      "name": "Boilg Thomáis/Tomás's Reef",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointe-na-leacacha-point-of-the-flagstones",
+      "name": "Pointe na Leacacha/Point of the Flagstones.",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50259,8 +51968,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "duna",
+      "name": "Dúna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "bun-na-h-abhann",
       "name": "Bun na h Abhann",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuas-na-teorann-9652358919",
+      "name": "Cuas na Teorann",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50277,6 +52000,41 @@
       "name": "Cuas an tSrutháin/Cove of the Stream",
       "country": "Ireland",
       "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "simon-s-point",
+      "name": "Simon's Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "newtown-head",
+      "name": "Newtown Head",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dromina-strand",
+      "name": "Dromina Strand",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "raheen-strand",
+      "name": "Raheen Strand",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "knockavelish-head",
+      "name": "Knockavelish Head",
+      "country": "Ireland",
+      "region": "Waterford",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50458,7 +52216,7 @@
       "id": "south-sound",
       "name": "South Sound",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50497,6 +52255,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "carrickadda",
+      "name": "Carrickadda",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "teach-an-tsalainn",
       "name": "Teach an tSalainn",
       "country": "Ireland",
@@ -50507,7 +52272,7 @@
       "id": "poulavaud",
       "name": "Poulavaud",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50525,6 +52290,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cunnigar-point",
+      "name": "Cunnigar Point",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "muggort-s-bay",
       "name": "Muggort's Bay",
       "country": "Ireland",
@@ -50539,8 +52311,120 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cabin-point",
+      "name": "Cabin Point",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "long-point-11586876744",
+      "name": "Long Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "roche-s-point",
+      "name": "Roche's Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "curraghbinny-point",
+      "name": "Curraghbinny Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "scullane-point",
+      "name": "Scullane Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "sherkin-point",
+      "name": "Sherkin Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "crook-haven",
       "name": "Crook Haven",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "loughaun",
+      "name": "Loughaun",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "league-point",
+      "name": "League Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reen-point",
+      "name": "Reen Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reenrour-point",
+      "name": "Reenrour Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reenbeg-point",
+      "name": "Reenbeg Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "relane-point",
+      "name": "Relane Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mehal-head",
+      "name": "Mehal Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "shot-head",
+      "name": "Shot Head",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ardaturrish-point",
+      "name": "Ardaturrish Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "whiddy-point-east",
+      "name": "Whiddy Point East",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -50553,10 +52437,227 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "foileye",
+      "name": "Foileye",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "kells-bay",
       "name": "Kells Bay",
       "country": "Ireland",
       "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "feaklecally",
+      "name": "Feaklecally",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cromane-point",
+      "name": "Cromane Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ardmore-point",
+      "name": "Ardmore Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "acres-point",
+      "name": "Acres Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubranna",
+      "name": "Gubranna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "minard-head",
+      "name": "Minard Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bull-s-head",
+      "name": "Bull's Head",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reenbeg-point-11779110099",
+      "name": "Reenbeg Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "reenacusheen",
+      "name": "Reenacusheen",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointanskoh",
+      "name": "Pointanskoh",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointagare",
+      "name": "Pointagare",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballymore-point-11796230639",
+      "name": "Ballymore Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "caher-point",
+      "name": "Caher Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "leck-point",
+      "name": "Leck Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kilconly-point",
+      "name": "Kilconly Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "doon-point-11808093097",
+      "name": "Doon Point",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gammarel-point",
+      "name": "Gammarel Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "aughinish-point",
+      "name": "Aughinish Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "courtbrown-point",
+      "name": "Courtbrown Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinekirk-point",
+      "name": "Rinekirk Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mellon-point",
+      "name": "Mellon Point",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tullig-point",
+      "name": "Tullig Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunmore-head-11879714482",
+      "name": "Dunmore Head",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kilcloher-head",
+      "name": "Kilcloher Head",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cloonconeen-point",
+      "name": "Cloonconeen Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinevella-point",
+      "name": "Rinevella Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kilcredaun-point",
+      "name": "Kilcredaun Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "querrin-point",
+      "name": "Querrin Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "corlis-point",
+      "name": "Corlis Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "money-point",
+      "name": "Money Point",
+      "country": "Ireland",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50567,8 +52668,50 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rinnamryall",
+      "name": "Rinnamryall",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "emlagh-point",
+      "name": "Emlagh Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lurga-point-11885070921",
+      "name": "Lurga Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "colman-s-point",
+      "name": "Colman's Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kilkerin-point",
+      "name": "Kilkerin Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "a-n-chis",
       "name": "A;n Chis",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carraig-na-cise",
+      "name": "Carraig na Cise",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50595,6 +52738,20 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "na-beara-bui",
+      "name": "Na  Beara Buí",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "leac-mhor",
+      "name": "Leac Mhór",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-na-ronta",
       "name": "Cuas na Rónta",
       "country": "Ireland",
@@ -50609,6 +52766,20 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "cuas-a-bhodaigh",
+      "name": "Cuas a 'Bhodaigh",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "boilg-a-chinn",
+      "name": "Boilg a 'Chinn",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-thaidhg-mheirgeach",
       "name": "Cuas Thaidhg Mheirgeach",
       "country": "Ireland",
@@ -50618,6 +52789,13 @@
     {
       "id": "cuas-na-muice",
       "name": "Cuas na Muice",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "oileainin-fhaill-na-n-eigh",
+      "name": "Oileáinín Fhaill na n Eigh",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -50812,6 +52990,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dun-aonair",
+      "name": "Dún Aonair",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-eibhlise",
       "name": "Cuas Éibhlíse",
       "country": "Ireland",
@@ -50840,6 +53025,48 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "drumquin-point",
+      "name": "Drumquin Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "aughinish-point-11931714765",
+      "name": "Aughinish Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinrawros-point",
+      "name": "Rinrawros Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "altar-point",
+      "name": "Altar Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "feenish-point",
+      "name": "Feenish Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rineanna-point",
+      "name": "Rineanna Point",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "coonanna-harbour",
       "name": "Coonanna Harbour",
       "country": "Ireland",
@@ -50847,8 +53074,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "black-point-11988654557",
+      "name": "Black Point",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "templetown-bay-11988654558",
       "name": "Templetown Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballymadder-point",
+      "name": "Ballymadder Point",
       "country": "Ireland",
       "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
@@ -50861,8 +53102,71 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "mweenish-point",
+      "name": "Mweenish Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ardmore-point-12044154914",
+      "name": "Ardmore Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "trawbaun-point",
+      "name": "Trawbaun Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cooankeel",
       "name": "Cooankeel",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "aillecluggish-point",
+      "name": "Aillecluggish Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tonahardia",
+      "name": "Tonahardia",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "clynagh-bay",
+      "name": "Clynagh Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cornarona-point",
+      "name": "Cornarona Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rossduggan-point",
+      "name": "Rossduggan Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "roscom-point",
+      "name": "Roscom Point",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -50877,6 +53181,13 @@
     {
       "id": "tra-na-rossan",
       "name": "Tra na Rossan",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tra-mor",
+      "name": "Tra Mór",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -50907,6 +53218,13 @@
       "name": "North Beach Bay",
       "country": "Ireland",
       "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "na-hadhartai-gorma",
+      "name": "Na hAdhartaí Gorma",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -50966,8 +53284,29 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "mionnan-an-duna",
+      "name": "Mionnán an Dúna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-an-bhranda",
+      "name": "Gob an Bhranda",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-blo",
       "name": "Cuas Bló",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-rinnin",
+      "name": "An Rinnín",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -51001,6 +53340,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dun-binne",
+      "name": "Dún Binne",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "fothar-na-sionach",
       "name": "Fothar na Sionach",
       "country": "Ireland",
@@ -51029,6 +53375,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "scairbh-na-bhfear",
+      "name": "Scairbh na bhFear",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-na-ngeann",
       "name": "Cuas na nGéann",
       "country": "Ireland",
@@ -51043,8 +53396,22 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "gluin-an-chinn",
+      "name": "Glúin an Chinn",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cuas-an-bhaid",
       "name": "Cuas an Bháid",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "na-fochaisi",
+      "name": "Na Fochaisí",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -51071,10 +53438,129 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "an-bhinn-bhain",
+      "name": "An Bhinn Bháin",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "log-na-ngabhar",
+      "name": "Log na nGabhar",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "goilin-ifrinn",
       "name": "Góilín Ifrinn",
       "country": "Ireland",
       "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fochais-ceann-an-duna",
+      "name": "Fochais Ceann An Dúna",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "trawkeera-point",
+      "name": "Trawkeera Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fardurris-point",
+      "name": "Fardurris Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "streamstown-bay",
+      "name": "Streamstown Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "drowlaun-point",
+      "name": "Drowlaun Point",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rosmore-point",
+      "name": "Rosmore Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rossow-point",
+      "name": "Rossow Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "garvillaun-point",
+      "name": "Garvillaun Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tonaknick-point",
+      "name": "Tonaknick Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ross-point",
+      "name": "Ross Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rossanrubble-point",
+      "name": "Rossanrubble Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "roscahill-point",
+      "name": "Roscahill Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubnahinneora-point",
+      "name": "Gubnahinneora Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gubacregganmore",
+      "name": "Gubacregganmore",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rashenny-point",
+      "name": "Rashenny Point",
+      "country": "Ireland",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51085,6 +53571,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dundawoona-point",
+      "name": "Dundawoona Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coosnaberee",
+      "name": "Coosnaberee",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coosgorm",
+      "name": "Coosgorm",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "coosnamucka",
       "name": "Coosnamucka",
       "country": "Ireland",
@@ -51092,10 +53599,52 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "coosawaud",
+      "name": "Coosawaud",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "torneady-point",
+      "name": "Torneady Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinnalea-point",
+      "name": "Rinnalea Point",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunree-head",
+      "name": "Dunree Head",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "camusmore-bay",
       "name": "Camusmore Bay",
       "country": "Ireland",
       "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "greenore-point",
+      "name": "Greenore Point",
+      "country": "Ireland",
+      "region": "Louth",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "soldiers-point",
+      "name": "Soldiers' Point",
+      "country": "Ireland",
+      "region": "Louth",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51108,6 +53657,13 @@
     {
       "id": "clement-s-cove",
       "name": "Clement's Cove",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lyon-head",
+      "name": "Lyon Head",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -51239,6 +53795,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "barrack-point",
+      "name": "Barrack Point",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "ooghnalee",
       "name": "Ooghnalee",
       "country": "Ireland",
@@ -51255,6 +53818,13 @@
     {
       "id": "doonmore",
       "name": "Doonmore",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "alladoon",
+      "name": "Alladoon",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -51288,6 +53858,132 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "derinch-point",
+      "name": "Derinch Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballinlig-point",
+      "name": "Ballinlig Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "portavaud-point",
+      "name": "Portavaud Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "derkmore-point",
+      "name": "Derkmore Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "aughris-head",
+      "name": "Aughris Head",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "donagh",
+      "name": "Donagh",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bunowna-point",
+      "name": "Bunowna Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrickadda-point",
+      "name": "Carrickadda Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rathlee-head",
+      "name": "Rathlee Head",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinnachurry-point",
+      "name": "Rinnachurry Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gortabradawn-point",
+      "name": "Gortabradawn Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barnasock-point",
+      "name": "Barnasock Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinnaun-point",
+      "name": "Rinnaun Point",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "finned-point",
+      "name": "Finned Point",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carricknacranny",
+      "name": "Carricknacranny",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pollnagappul",
+      "name": "Pollnagappul",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bennanea",
+      "name": "Bennanea",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pollbrean",
+      "name": "Pollbrean",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "port-nola",
       "name": "Port Nola",
       "country": "Ireland",
@@ -51295,8 +53991,36 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "pointanaminnaun",
+      "name": "Pointanaminnaun",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "fuiheranoughta",
       "name": "Fuiheranoughta",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "foilanarsha",
+      "name": "Foilanarsha",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "foilateevedotia",
+      "name": "Foilateevedotia",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "coonakeel",
+      "name": "Coonakeel",
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
@@ -51358,6 +54082,55 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "kilkieran-bay",
+      "name": "Kilkieran Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "caladh-laoi",
+      "name": "Caladh Laoi",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "caladh-na-sliogan",
+      "name": "Caladh na Sliogán",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "camus-bay-13338342447",
+      "name": "Camus Bay",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cora-na-ronna",
+      "name": "Cora na Ronna",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-crompan-cam",
+      "name": "An Crompán Cam",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuan-na-muice",
+      "name": "Cuan na Muice",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "an-taircin",
       "name": "An tAircín",
       "country": "Ireland",
@@ -51379,10 +54152,17 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "inbhear-beag",
+      "name": "Inbhear Beag",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "galway-bay-13593473669",
       "name": "Galway Bay",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51393,10 +54173,38 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rossmore-bay",
+      "name": "Rossmore Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "hodder-s-cove",
       "name": "Hodder's Cove",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "doohooma-head",
+      "name": "Doohooma Head",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ba-thulachain",
+      "name": "Bá Thulacháin",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinn-inis-potaire",
+      "name": "Rinn Inis Potaire",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51414,10 +54222,31 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "ceann-fionnalta",
+      "name": "Ceann Fionnalta",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-an-chloiginn",
+      "name": "Gob an Chloiginn",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "crompan-na-nuaimini",
       "name": "Crompán na nUaimíní",
       "country": "Ireland",
       "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-bhinn-bhui",
+      "name": "An Bhinn Bhuí",
+      "country": "Ireland",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51442,8 +54271,43 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rinn-allt",
+      "name": "Rinn Allt",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "bun-chroimghlinne",
       "name": "Bun Chroimghlinne",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-dun",
+      "name": "An Dún",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-rinn-fheadalai",
+      "name": "Gob Rinn Fheadalaí",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pointe-ros-fhearail",
+      "name": "Pointe Ros Fhearaíl",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-tearral",
+      "name": "An Tearrál",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -51453,6 +54317,76 @@
       "name": "Úig Mhálanna Bige",
       "country": "Ireland",
       "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-rinn-an-treoraic",
+      "name": "Gob Rinn an Treoraic",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carraig-an-ghlasain",
+      "name": "Carraig an Ghlasáin",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "toin-na-maoile-moire",
+      "name": "Tóin na Maoile Móire",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barr-na-cora",
+      "name": "Barr na Cora",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cora-na-gaoithe",
+      "name": "Cora na Gaoithe",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "croiminne",
+      "name": "Croiminne",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-crompan-mor",
+      "name": "An Crompán Mór",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "gob-leitir-moir",
+      "name": "Gob Leitir Móir",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuan-na-haille-bui",
+      "name": "Cuan na hAille Buí",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "great-foze-rock",
+      "name": "Great Foze Rock",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51516,6 +54450,20 @@
       "name": "Lár na Trá",
       "country": "Ireland",
       "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "woodstown-strand",
+      "name": "Woodstown Strand",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fornaght-strand",
+      "name": "Fornaght Strand",
+      "country": "Ireland",
+      "region": "Waterford",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51708,6 +54656,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "booley-bay-beach",
+      "name": "Booley Bay Beach",
+      "country": "Ireland",
+      "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "lambay-harbour",
       "name": "Lambay Harbour",
       "country": "Ireland",
@@ -51747,6 +54702,13 @@
       "name": "Rocky Bay",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "glassilaun-beach",
+      "name": "Glassilaun Beach",
+      "country": "Ireland",
+      "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51806,17 +54768,31 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "reen-beach",
+      "name": "Reen Beach",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "south-beach-135187906",
       "name": "South Beach",
       "country": "Ireland",
-      "region": "Wexford",
+      "region": "Wicklow",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "the-cove-135187908",
       "name": "The Cove",
       "country": "Ireland",
-      "region": "Wexford",
+      "region": "Wicklow",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballinskelligs-beach",
+      "name": "Ballinskelligs Beach",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51864,6 +54840,13 @@
     {
       "id": "ladies-beach",
       "name": "Ladies Beach",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dead-mans-beach",
+      "name": "Dead Mans Beach",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -51921,7 +54904,7 @@
       "id": "renvyle-beach",
       "name": "Renvyle Beach",
       "country": "Ireland",
-      "region": "Mayo",
+      "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51936,6 +54919,13 @@
       "name": "Tralispean",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "inny-strand",
+      "name": "Inny Strand",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -51988,6 +54978,48 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "main-beach",
+      "name": "Main Beach",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-tra-bhan-191128697",
+      "name": "An Trá Bhán",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-tra-bhan-east",
+      "name": "An Trá Bhán East",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-cul-traigh",
+      "name": "An Cúl Tráígh",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tra-na-gcruach",
+      "name": "Trá na gCruach",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-tra-mhor",
+      "name": "An Trá Mhór",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "tra-na-tismeaine",
       "name": "Trá na Tismeáine",
       "country": "Ireland",
@@ -52030,6 +55062,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "stragill-beach",
+      "name": "Stragill Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "adrigole-harbour",
       "name": "Adrigole Harbour",
       "country": "Ireland",
@@ -52041,6 +55080,13 @@
       "name": "Pallas Strand",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rosses-point-beach",
+      "name": "Rosses Point Beach",
+      "country": "Ireland",
+      "region": "Sligo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52086,10 +55132,24 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "uggool-beach",
+      "name": "Uggool Beach",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "brnabaun-beach",
       "name": "Brnabaun Beach",
       "country": "Ireland",
       "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "arthurstown-beach",
+      "name": "Arthurstown Beach",
+      "country": "Ireland",
+      "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52114,13 +55174,6 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "ownahincha-strand-west",
-      "name": "Ownahincha Strand (West)",
-      "country": "Ireland",
-      "region": "Cork",
-      "reason": "not attested: no surf reference names this place"
-    },
-    {
       "id": "little-island-strand",
       "name": "Little Island Strand",
       "country": "Ireland",
@@ -52135,10 +55188,24 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "flaxfort-strand",
+      "name": "Flaxfort Strand",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "hole-of-the-forlorn",
       "name": "Hole of the Forlorn",
       "country": "Ireland",
       "region": "Wexford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lisfannon-beach",
+      "name": "Lisfannon Beach",
+      "country": "Ireland",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52151,6 +55218,13 @@
     {
       "id": "blackrock-beach",
       "name": "Blackrock Beach",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mannin-bay-coral-strand",
+      "name": "Mannin Bay Coral Strand",
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
@@ -52186,6 +55260,20 @@
     {
       "id": "an-tra-liona",
       "name": "An Trá Líona",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lettergesh-beach",
+      "name": "Lettergesh Beach",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "trabane",
+      "name": "Trabane",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -52230,6 +55318,13 @@
       "name": "mens pool",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "duncannon",
+      "name": "Duncannon",
+      "country": "Ireland",
+      "region": "Wexford",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52303,6 +55398,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "glasheen-beach",
+      "name": "Glasheen Beach",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "traigh-na-ndabhcha",
       "name": "Tráigh na nDabhcha",
       "country": "Ireland",
@@ -52345,6 +55447,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "littor-strand",
+      "name": "Littor Strand",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "aughris-beach",
       "name": "Aughris Beach",
       "country": "Ireland",
@@ -52363,6 +55472,13 @@
       "name": "Goat Island beach",
       "country": "Ireland",
       "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carricknaha",
+      "name": "Carricknaha",
+      "country": "Ireland",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52422,6 +55538,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "gobby-beach",
+      "name": "Gobby Beach",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "cahermore-2nd-pebbled-beach",
       "name": "Cahermore 2nd pebbled beach",
       "country": "Ireland",
@@ -52432,7 +55555,7 @@
       "id": "trabane-581005988",
       "name": "Trabane",
       "country": "Ireland",
-      "region": "Kerry",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52478,6 +55601,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "bream-rock",
+      "name": "Bream Rock",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "donegal-bay",
       "name": "Donegal Bay",
       "country": "Ireland",
@@ -52492,13 +55622,6 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "bunlough-strand",
-      "name": "Bunlough Strand",
-      "country": "Ireland",
-      "region": "Mayo",
-      "reason": "not attested: no surf reference names this place"
-    },
-    {
       "id": "turloughbeg-strand",
       "name": "Turloughbeg Strand",
       "country": "Ireland",
@@ -52510,6 +55633,13 @@
       "name": "Councillors Strand",
       "country": "Ireland",
       "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carrigeenmore",
+      "name": "Carrigeenmore",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52531,6 +55661,13 @@
       "name": "Cahermore 1st pebbled beach",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rinnaveeloge",
+      "name": "Rinnaveeloge",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52583,6 +55720,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "millybay",
+      "name": "Millybay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "back-bay-816835508",
+      "name": "Back Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mullanadee-shore",
+      "name": "Mullanadee Shore",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "tra-na-marbh",
       "name": "Trá na Marbh",
       "country": "Ireland",
@@ -52599,6 +55757,13 @@
     {
       "id": "chimney-cove",
       "name": "Chimney Cove",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "traighin-na-mbo",
+      "name": "Traighín na mBó",
       "country": "Ireland",
       "region": "Cork",
       "reason": "not attested: no surf reference names this place"
@@ -52723,7 +55888,7 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "an-cul-traigh",
+      "id": "an-cul-traigh-983603155",
       "name": "An Cúl Tráigh",
       "country": "Ireland",
       "region": "Cork",
@@ -52919,10 +56084,17 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "glengarriff-bay",
+      "name": "Glengarriff Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "youghal-harbour-1039811366",
       "name": "Youghal Harbour",
       "country": "Ireland",
-      "region": "Waterford",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -52996,6 +56168,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "snave-strand",
+      "name": "Snave Strand",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "schull-harbour",
       "name": "Schull Harbour",
       "country": "Ireland",
@@ -53006,7 +56185,7 @@
       "id": "trawee",
       "name": "Trawee",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53041,7 +56220,7 @@
       "id": "clogga-strand",
       "name": "Clogga Strand",
       "country": "Ireland",
-      "region": "Wexford",
+      "region": "Wicklow",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53080,10 +56259,143 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "an-traighin-alainn",
+      "name": "An Tráighín Álainn",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "the-south-strand",
+      "name": "The South Strand",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "leath-oilean",
+      "name": "Leath Oileán",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuas-an-chapaill",
+      "name": "Cuas an Chapaill",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "the-coveen",
+      "name": "The Coveen",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuas-an-bhaid-1458716044",
+      "name": "Cuas an Bháid",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuaisin-naomhog",
+      "name": "Cuaisín 'Naomhóg",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "carraig-a-tsiunta",
+      "name": "Carraig a' tSiúnta",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuas-an-uisce",
+      "name": "Cuas an Uisce",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cuaisin-na-nubhall",
+      "name": "Cuaisín na nÚbhall",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "the-sandy-cuaisins",
+      "name": "The Sandy Cuaisíns",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-cuaisin",
+      "name": "An Cuaisín",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "na-carraigini-bui",
+      "name": "Na Carraigíní Buí",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-rabha-mor",
+      "name": "An Rabha Mór",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "an-rabha-biora",
+      "name": "An Rabha Biora",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "near-beach",
+      "name": "Near beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "bottom-beach",
       "name": "Bottom beach",
       "country": "Ireland",
       "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "shipwreck-beach",
+      "name": "Shipwreck beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "tra-na-haille-moire",
+      "name": "Trá na hAille Móire",
+      "country": "Ireland",
+      "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "srah-beach",
+      "name": "Srah Beach",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53094,10 +56406,17 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "an-tra-mhor",
+      "id": "an-tra-mhor-1476540673",
       "name": "An Trá Mhór",
       "country": "Ireland",
       "region": "Galway",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "snave-bay",
+      "name": "Snave Bay",
+      "country": "Ireland",
+      "region": "Cork",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53112,6 +56431,13 @@
       "name": "Scullane Bay",
       "country": "Ireland",
       "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cromane-beach",
+      "name": "Cromane Beach",
+      "country": "Ireland",
+      "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53132,6 +56458,13 @@
       "id": "ballycastle-beach-2235896",
       "name": "Ballycastle Beach",
       "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rosses-point-beach-2371153",
+      "name": "Rosses Point Beach",
+      "country": "Ireland",
       "region": "Sligo",
       "reason": "not attested: no surf reference names this place"
     },
@@ -53139,7 +56472,7 @@
       "id": "lacken-strand",
       "name": "Lacken Strand",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53185,6 +56518,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "beale-strand",
+      "name": "Beale Strand",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "maghermore-beach",
       "name": "Maghermore Beach",
       "country": "Ireland",
@@ -53216,14 +56556,14 @@
       "id": "nuns-beach-3209901",
       "name": "Nuns Beach",
       "country": "Ireland",
-      "region": "Wexford",
+      "region": "Wicklow",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "hanging-rock-beach",
       "name": "Hanging Rock Beach",
       "country": "Ireland",
-      "region": "Wexford",
+      "region": "Wicklow",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53241,8 +56581,15 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "white-strand-4225157",
-      "name": "White Strand",
+      "id": "waterford-harbour",
+      "name": "Waterford Harbour",
+      "country": "Ireland",
+      "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "brew-s-bridge-beach",
+      "name": "Brew's Bridge Beach",
       "country": "Ireland",
       "region": "Clare",
       "reason": "not attested: no surf reference names this place"
@@ -53262,17 +56609,38 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "spanish-point-beach",
+      "name": "Spanish Point Beach",
+      "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "white-strand-4250166",
       "name": "White Strand",
       "country": "Ireland",
-      "region": "Galway",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fintra-beach",
+      "name": "Fintra Beach",
+      "country": "Ireland",
+      "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "trabaun",
       "name": "Trabaun",
       "country": "Ireland",
-      "region": "Sligo",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "traught-beach",
+      "name": "Traught Beach",
+      "country": "Ireland",
+      "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
@@ -53353,6 +56721,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "coral-beach",
+      "name": "Coral Beach",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "tracashel",
       "name": "Tracashel",
       "country": "Ireland",
@@ -53369,6 +56744,13 @@
     {
       "id": "an-tra-mor",
       "name": "An Trá Mór",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "braade-strand",
+      "name": "Braade Strand",
       "country": "Ireland",
       "region": "Donegal",
       "reason": "not attested: no surf reference names this place"
@@ -53465,6 +56847,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "bantry-bay",
+      "name": "Bantry Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "dunmanus-bay",
+      "name": "Dunmanus Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kenmare-river",
+      "name": "Kenmare River",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "dingle-bay",
       "name": "Dingle Bay",
       "country": "Ireland",
@@ -53482,12 +56885,26 @@
       "id": "liscannor-bay",
       "name": "Liscannor Bay",
       "country": "Ireland",
+      "region": "Clare",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "mannin-bay",
+      "name": "Mannin Bay",
+      "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
     },
     {
       "id": "clew-bay",
       "name": "Clew Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "blacksod-bay",
+      "name": "Blacksod Bay",
       "country": "Ireland",
       "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
@@ -53509,6 +56926,13 @@
     {
       "id": "drumcliff-bay",
       "name": "Drumcliff Bay",
+      "country": "Ireland",
+      "region": "Sligo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ballysadare-bay",
+      "name": "Ballysadare Bay",
       "country": "Ireland",
       "region": "Sligo",
       "reason": "not attested: no surf reference names this place"
@@ -53549,6 +56973,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "shannon-estuary",
+      "name": "Shannon Estuary",
+      "country": "Ireland",
+      "region": "Limerick",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "castlehaven-strand",
       "name": "Castlehaven Strand",
       "country": "Ireland",
@@ -53560,6 +56991,20 @@
       "name": "Portally Cove",
       "country": "Ireland",
       "region": "Waterford",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "trawnanaskil",
+      "name": "Trawnanaskil",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "sruwaddacon-bay",
+      "name": "Sruwaddacon Bay",
+      "country": "Ireland",
+      "region": "Mayo",
       "reason": "not attested: no surf reference names this place"
     },
     {
