@@ -8,8 +8,8 @@
   "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna",
   "referenceKm": 5
  },
- "checked": 974,
- "ok": 971,
+ "checked": 994,
+ "ok": 991,
  "spots": {
   "aberavon-beach": {
    "lat": 51.59428,
@@ -181,6 +181,16 @@
    "reason": null,
    "referenceKm": 0.43
   },
+  "balbriggan": {
+   "lat": 53.60853,
+   "lon": -6.18291,
+   "coastM": 299,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.59
+  },
   "ballinskelligs-bay": {
    "lat": 51.81915,
    "lon": -10.22631,
@@ -230,6 +240,16 @@
     "lon": -7.9856,
     "movedM": 1543
    }
+  },
+  "ballydavid": {
+   "lat": 52.19057,
+   "lon": -10.37479,
+   "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.11
   },
   "ballyheige-bay": {
    "lat": 52.38295,
@@ -325,6 +345,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.07
+  },
+  "barnageeragh": {
+   "lat": 53.58365,
+   "lon": -6.14356,
+   "coastM": 245,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.5
   },
   "barricane-beach-sssi": {
    "lat": 51.17627,
@@ -1496,6 +1526,21 @@
    "reason": null,
    "referenceKm": 0.32
   },
+  "easky": {
+   "lat": 54.28537,
+   "lon": -8.95994,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.83,
+   "snapped": {
+    "lat": 54.29153,
+    "lon": -8.95877,
+    "movedM": 686
+   }
+  },
   "east-sands": {
    "lat": 56.33596,
    "lon": -2.77895,
@@ -1760,6 +1805,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.06
+  },
+  "garrettstown": {
+   "lat": 51.64962,
+   "lon": -8.59965,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.77,
+   "snapped": {
+    "lat": 51.64159,
+    "lon": -8.59796,
+    "movedM": 895
+   }
   },
   "garrywilliam-point": {
    "lat": 52.30663,
@@ -2041,6 +2101,16 @@
    "reason": null,
    "referenceKm": 0.11
   },
+  "inch-52262525": {
+   "lat": 52.1429,
+   "lon": -9.98231,
+   "coastM": 88,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.73
+  },
   "inch-beach": {
    "lat": 52.124,
    "lon": -9.95708,
@@ -2160,6 +2230,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.83
+  },
+  "kilcummin": {
+   "lat": 54.27778,
+   "lon": -9.21694,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.32,
+   "snapped": {
+    "lat": 54.27742,
+    "lon": -9.20845,
+    "movedM": 553
+   }
+  },
+  "kilcummin-52258606": {
+   "lat": 52.23972,
+   "lon": -10.11083,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.73,
+   "snapped": {
+    "lat": 52.24385,
+    "lon": -10.11134,
+    "movedM": 458
+   }
   },
   "killahoey-beach": {
    "lat": 55.18637,
@@ -2316,20 +2416,15 @@
    "reason": null,
    "referenceKm": 1.34
   },
-  "lacken-bay": {
-   "lat": 54.28783,
-   "lon": -9.23735,
-   "coastM": 0,
+  "lacken-strand": {
+   "lat": 54.27887,
+   "lon": -9.24467,
+   "coastM": 84,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.54,
-   "snapped": {
-    "lat": 54.2894,
-    "lon": -9.24951,
-    "movedM": 809
-   }
+   "referenceKm": 0.33
   },
   "lafitenia": {
    "lat": 43.41393,
@@ -2460,6 +2555,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.4
+  },
+  "leenan-fort": {
+   "lat": 55.24668,
+   "lon": -7.53095,
+   "coastM": 111,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.95
   },
   "les-amiets": {
    "lat": 48.69402,
@@ -2646,15 +2751,15 @@
    "reason": null,
    "referenceKm": 0.15
   },
-  "magheroarty-beach": {
-   "lat": 55.15524,
-   "lon": -8.15104,
-   "coastM": 51,
+  "magheraroarty": {
+   "lat": 55.14111,
+   "lon": -8.17283,
+   "coastM": 190,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.24
+   "referenceKm": 1.09
   },
   "maghery-bay": {
    "lat": 54.92971,
@@ -2850,6 +2955,41 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.82
+  },
+  "mullaghderg": {
+   "lat": 55.03513,
+   "lon": -8.38211,
+   "coastM": 102,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.56
+  },
+  "mullaghmore": {
+   "lat": 54.46639,
+   "lon": -8.44861,
+   "coastM": 46,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.72
+  },
+  "mulranny": {
+   "lat": 53.90741,
+   "lon": -9.77011,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.05,
+   "snapped": {
+    "lat": 53.90546,
+    "lon": -9.77455,
+    "movedM": 362
+   }
   },
   "murkle-bay": {
    "lat": 58.60457,
@@ -8831,6 +8971,16 @@
    "reason": null,
    "referenceKm": 0.5
   },
+  "rosapenna": {
+   "lat": 55.18603,
+   "lon": -7.82452,
+   "coastM": 345,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.78
+  },
   "rossbeigh-beach": {
    "lat": 52.06775,
    "lon": -9.9735,
@@ -8840,6 +8990,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.51
+  },
+  "rosslare-harbour": {
+   "lat": 52.24973,
+   "lon": -6.34012,
+   "coastM": 336,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.37
+  },
+  "rossnowlagh": {
+   "lat": 54.55435,
+   "lon": -8.20978,
+   "coastM": 207,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.55
   },
   "runswick-sands": {
    "lat": 54.53066,
@@ -9281,6 +9451,21 @@
    "reason": null,
    "referenceKm": 0.25
   },
+  "strandhill": {
+   "lat": 54.26995,
+   "lon": -8.5943,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.5,
+   "snapped": {
+    "lat": 54.27291,
+    "lon": -8.60758,
+    "movedM": 923
+   }
+  },
   "strath-bay-beach": {
    "lat": 58.56572,
    "lon": -3.99928,
@@ -9301,6 +9486,21 @@
    "reason": null,
    "referenceKm": 0.77
   },
+  "stroove": {
+   "lat": 55.2387,
+   "lon": -6.94352,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.87,
+   "snapped": {
+    "lat": 55.24032,
+    "lon": -6.93366,
+    "movedM": 651
+   }
+  },
   "summerleaze-beach": {
    "lat": 50.83093,
    "lon": -4.55268,
@@ -9310,6 +9510,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.14
+  },
+  "sutton-cross": {
+   "lat": 53.38945,
+   "lon": -6.11026,
+   "coastM": 210,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.57
   },
   "swanage-beach": {
    "lat": 50.61879,
@@ -9701,6 +9911,16 @@
     "movedM": 409
    }
   },
+  "tullaghan": {
+   "lat": 54.46905,
+   "lon": -8.32943,
+   "coastM": 319,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.11
+  },
   "tullan-strand": {
    "lat": 54.5018,
    "lon": -8.24711,
@@ -9790,6 +10010,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.03
+  },
+  "westport-harbour": {
+   "lat": 53.80007,
+   "lon": -9.54702,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.41
   },
   "whipsiderry-beach": {
    "lat": 50.43075,

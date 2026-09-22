@@ -220,6 +220,49 @@
     }
   },
   {
+    "id": "balbriggan",
+    "name": "Balbriggan",
+    "community": "Dublin",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.60853,
+      "lon": -6.18291
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 225,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52263471,
+      "feature": "town",
+      "facingDeg": 45,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "ballinskelligs-bay",
     "name": "Ballinskelligs Bay",
     "community": "Kerry",
@@ -357,6 +400,50 @@
         "lon": -7.98164
       },
       "movedToShoreM": 1543
+    }
+  },
+  {
+    "id": "ballydavid",
+    "name": "Ballydavid",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.19057,
+      "lon": -10.37479
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52231327,
+      "feature": "village",
+      "osmName": "Baile na nGall",
+      "facingDeg": 330,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
     }
   },
   {
@@ -580,6 +667,49 @@
       "feature": "beach",
       "facingDeg": 210,
       "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "barnageeragh",
+    "name": "Barnageeragh",
+    "community": "Dublin",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.58365,
+      "lon": -6.14356
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 225,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 5419317,
+      "feature": "locality",
+      "facingDeg": 45,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -2202,6 +2332,54 @@
     }
   },
   {
+    "id": "easky",
+    "name": "Easky",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.29153,
+      "lon": -8.95877
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 195,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52222837,
+      "feature": "village",
+      "facingDeg": 15,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 54.28537,
+        "lon": -8.95994
+      },
+      "movedToShoreM": 686
+    }
+  },
+  {
     "id": "elly-strand",
     "name": "Elly Strand",
     "community": "Mayo",
@@ -2464,6 +2642,54 @@
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "garrettstown",
+    "name": "Garrettstown",
+    "community": "Cork",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 51.64159,
+      "lon": -8.59796
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 5149980,
+      "feature": "locality",
+      "facingDeg": 165,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 51.64962,
+        "lon": -8.59965
+      },
+      "movedToShoreM": 895
     }
   },
   {
@@ -2779,6 +3005,102 @@
     }
   },
   {
+    "id": "kilcummin",
+    "name": "Kilcummin",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.27742,
+      "lon": -9.20845
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 240,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52249795,
+      "feature": "locality",
+      "facingDeg": 60,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 54.27778,
+        "lon": -9.21694
+      },
+      "movedToShoreM": 553
+    }
+  },
+  {
+    "id": "kilcummin-52258606",
+    "name": "Kilcummin",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.24385,
+      "lon": -10.11134
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 195,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52258606,
+      "feature": "locality",
+      "facingDeg": 15,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 52.23972,
+        "lon": -10.11083
+      },
+      "movedToShoreM": 458
+    }
+  },
+  {
     "id": "killahoey-beach",
     "name": "Killahoey Beach",
     "community": "Donegal",
@@ -2951,21 +3273,21 @@
     }
   },
   {
-    "id": "lacken-bay",
-    "name": "Lacken Bay",
+    "id": "lacken-strand",
+    "name": "Lacken Strand",
     "community": "Mayo",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
-      "lat": 54.2894,
-      "lon": -9.24951
+      "lat": 54.27887,
+      "lon": -9.24467
     },
     "config": {
       "swellWindow": {
         "minAngle": 315,
-        "maxAngle": 165
+        "maxAngle": 135
       },
-      "offshoreWindAngle": 240,
+      "offshoreWindAngle": 225,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -2984,18 +3306,13 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 2002389355,
-      "feature": "bay",
-      "facingDeg": 60,
-      "exposureDeg": 210,
+      "osmType": "relation",
+      "osmId": 2605384,
+      "feature": "beach",
+      "facingDeg": 45,
+      "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22",
-      "centroid": {
-        "lat": 54.28783,
-        "lon": -9.23735
-      },
-      "movedToShoreM": 809
+      "retrievedAt": "2026-09-22"
     }
   },
   {
@@ -3080,6 +3397,49 @@
       "feature": "beach",
       "facingDeg": 90,
       "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "leenan-fort",
+    "name": "Leenan Fort",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.24668,
+      "lon": -7.53095
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2912764838,
+      "feature": "hamlet",
+      "facingDeg": 345,
+      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -3214,14 +3574,14 @@
     }
   },
   {
-    "id": "magheroarty-beach",
-    "name": "Magheroarty Beach",
+    "id": "magheraroarty",
+    "name": "Magheraroarty",
     "community": "Donegal",
     "country": "Ireland",
-    "type": "Beach",
+    "type": "Break",
     "coordinates": {
-      "lat": 55.15524,
-      "lon": -8.15104
+      "lat": 55.14111,
+      "lon": -8.17283
     },
     "config": {
       "swellWindow": {
@@ -3247,10 +3607,10 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 203632755,
-      "feature": "beach",
-      "osmName": "Trá Mhachaire Rabhartaigh",
+      "osmType": "node",
+      "osmId": 1382850517,
+      "feature": "hamlet",
+      "osmName": "Machaire Rabhartaigh",
       "facingDeg": 0,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
@@ -3477,6 +3837,140 @@
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "mullaghderg",
+    "name": "Mullaghderg",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.03513,
+      "lon": -8.38211
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 5592675,
+      "feature": "locality",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "mullaghmore",
+    "name": "Mullaghmore",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.46639,
+      "lon": -8.44861
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52263936,
+      "feature": "village",
+      "facingDeg": 330,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "mulranny",
+    "name": "Mulranny",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.90546,
+      "lon": -9.77455
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52262288,
+      "feature": "town",
+      "facingDeg": 165,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 53.90741,
+        "lon": -9.77011
+      },
+      "movedToShoreM": 362
     }
   },
   {
@@ -3877,6 +4371,49 @@
     }
   },
   {
+    "id": "rosapenna",
+    "name": "Rosapenna",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.18603,
+      "lon": -7.82452
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 345
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52223207,
+      "feature": "locality",
+      "facingDeg": 315,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "rossbeigh-beach",
     "name": "Rossbeigh Beach",
     "community": "Kerry",
@@ -3914,6 +4451,92 @@
       "osmId": 225253340,
       "feature": "beach",
       "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "rosslare-harbour",
+    "name": "Rosslare Harbour",
+    "community": "Wexford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.24973,
+      "lon": -6.34012
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 255,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 31078662,
+      "feature": "village",
+      "facingDeg": 75,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "rossnowlagh",
+    "name": "Rossnowlagh",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.55435,
+      "lon": -8.20978
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 2349484921,
+      "feature": "village",
+      "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
@@ -4276,6 +4899,54 @@
     }
   },
   {
+    "id": "strandhill",
+    "name": "Strandhill",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.27291,
+      "lon": -8.60758
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52220248,
+      "feature": "town",
+      "facingDeg": 330,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 54.26995,
+        "lon": -8.5943
+      },
+      "movedToShoreM": 923
+    }
+  },
+  {
     "id": "streedagh-beach",
     "name": "Streedagh Beach",
     "community": "Sligo",
@@ -4314,6 +4985,97 @@
       "feature": "beach",
       "facingDeg": 315,
       "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "stroove",
+    "name": "Stroove",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.24032,
+      "lon": -6.93366
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 240,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 4025222,
+      "feature": "locality",
+      "facingDeg": 60,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 55.2387,
+        "lon": -6.94352
+      },
+      "movedToShoreM": 651
+    }
+  },
+  {
+    "id": "sutton-cross",
+    "name": "Sutton Cross",
+    "community": "Dublin",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.38945,
+      "lon": -6.11026
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 285,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 4795248378,
+      "feature": "locality",
+      "facingDeg": 105,
+      "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -4764,6 +5526,49 @@
     }
   },
   {
+    "id": "tullaghan",
+    "name": "Tullaghan",
+    "community": "Leitrim",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.46905,
+      "lon": -8.32943
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 52257060,
+      "feature": "village",
+      "facingDeg": 330,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
     "id": "tullan-strand",
     "name": "Tullan Strand",
     "community": "Donegal",
@@ -4802,6 +5607,49 @@
       "feature": "beach",
       "facingDeg": 315,
       "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "westport-harbour",
+    "name": "Westport Harbour",
+    "community": "Mayo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.80007,
+      "lon": -9.54702
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 5518859476,
+      "feature": "suburb",
+      "facingDeg": 270,
+      "exposureDeg": 30,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }

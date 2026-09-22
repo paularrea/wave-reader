@@ -4,23 +4,24 @@
     "gate": "attested by a surf reference, and coordinate verified on the open-sea coastline",
     "samePlaceKm": 1.5
   },
-  "in": 9054,
-  "out": 960,
+  "in": 9078,
+  "out": 979,
   "perRegion": {
     "United Kingdom|Wales": 55,
     "United Kingdom|Scotland": 33,
-    "Ireland|Donegal": 31,
-    "Ireland|Mayo": 18,
+    "Ireland|Donegal": 36,
+    "Ireland|Mayo": 21,
     "Ireland|Waterford": 7,
-    "Ireland|Sligo": 7,
+    "Ireland|Sligo": 10,
     "France|Corse": 14,
     "Spain|Baleares": 26,
     "Spain|País Vasco": 23,
     "United Kingdom|Dorset": 13,
     "Spain|Canarias": 78,
-    "Ireland|Kerry": 14,
+    "Ireland|Dublin": 12,
+    "Ireland|Kerry": 16,
     "United Kingdom|Northern Ireland": 8,
-    "Ireland|Cork": 12,
+    "Ireland|Cork": 13,
     "United Kingdom|Devon": 27,
     "United Kingdom|Cornwall": 63,
     "France|Provence-Alpes-Côte d'Azur": 31,
@@ -32,7 +33,7 @@
     "Spain|Murcia": 12,
     "France|Occitanie": 9,
     "France|La Réunion": 5,
-    "Ireland|Wexford": 3,
+    "Ireland|Wexford": 4,
     "France|Normandie": 11,
     "United Kingdom|North Yorkshire": 4,
     "United Kingdom|County Durham": 1,
@@ -41,7 +42,6 @@
     "France|Nouvelle-Aquitaine": 81,
     "Ireland|Clare": 8,
     "United Kingdom|Tyne and Wear": 8,
-    "Ireland|Dublin": 9,
     "Ireland|Galway": 1,
     "Spain|Ceuta": 5,
     "United Kingdom|East Riding of Yorkshire": 3,
@@ -55,7 +55,8 @@
     "Spain|Cantabria": 32,
     "Spain|Andalucía": 50,
     "Spain|Melilla": 1,
-    "United Kingdom|Essex": 1
+    "United Kingdom|Essex": 1,
+    "Ireland|Leitrim": 1
   },
   "curatedNamesWithoutMatch": [
     "France|Bretagne|Audierne",
@@ -154,10 +155,7 @@
     "Ireland|Donegal|Dunfanaghy",
     "Ireland|Donegal|Falcarragh",
     "Ireland|Donegal|Narin",
-    "Ireland|Donegal|Rossnowlagh",
     "Ireland|Donegal|Trabane",
-    "Ireland|Dublin|Balbriggan",
-    "Ireland|Dublin|Sutton",
     "Ireland|Galway|Lettergesh",
     "Ireland|Galway|Salthill",
     "Ireland|Galway|Silverstrand",
@@ -170,15 +168,11 @@
     "Ireland|Kerry|Maharees",
     "Ireland|Mayo|Doolough",
     "Ireland|Mayo|Dugort",
-    "Ireland|Mayo|Mulranny",
     "Ireland|Sligo|Easkey",
-    "Ireland|Sligo|Mullaghmore",
-    "Ireland|Sligo|Strandhill",
     "Ireland|Waterford|Dunmore East",
     "Ireland|Waterford|Kilfarrasy",
     "Ireland|Wexford|Ballymoney",
     "Ireland|Wexford|Cullenstown",
-    "Ireland|Wexford|Rosslare",
     "Ireland|Wicklow|Greystones",
     "Ireland|Wicklow|Silver Strand",
     "Spain|Andalucía|Chullera",
@@ -48433,6 +48427,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "lacken-bay",
+      "name": "Lacken Bay",
+      "country": "Ireland",
+      "region": "Mayo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "mcswynes-bay",
       "name": "McSwynes Bay",
       "country": "Ireland",
@@ -55020,6 +55021,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "magheroarty-beach",
+      "name": "Magheroarty Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "tra-na-tismeaine",
       "name": "Trá na Tismeáine",
       "country": "Ireland",
@@ -56469,13 +56477,6 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
-      "id": "lacken-strand",
-      "name": "Lacken Strand",
-      "country": "Ireland",
-      "region": "Mayo",
-      "reason": "not attested: no surf reference names this place"
-    },
-    {
       "id": "men-s-beach",
       "name": "Men's Beach",
       "country": "Ireland",
@@ -57008,6 +57009,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "brinlack",
+      "name": "Brinlack",
+      "country": "Ireland",
+      "region": "Donegal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "annascaul",
+      "name": "Annascaul",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "inch-west",
+      "name": "Inch West",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
       "id": "platja-de-son-bou",
       "name": "Platja de Son Bou",
       "country": "Spain",
@@ -57034,6 +57056,13 @@
       "country": "United Kingdom",
       "region": "West Sussex",
       "reason": "the same place as Lancing Beach, mapped twice in OpenStreetMap"
+    },
+    {
+      "id": "inch-52262525",
+      "name": "Inch",
+      "country": "Ireland",
+      "region": "Kerry",
+      "reason": "the same place as Inch Beach, mapped twice in OpenStreetMap"
     },
     {
       "id": "barley-cove",

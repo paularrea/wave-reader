@@ -47,8 +47,15 @@ const SAME_PLACE_KM = 1.5;
  * second beach polygon would: Barley Cove the bay and Barley Cove the beach are
  * 1.8 km apart. Only Ireland is fetched with bays.
  */
-const SAME_BAY_KM = 3;
-const isBay = c => c.spot.provenance?.feature === 'bay';
+const SAME_BAY_KM = 4;
+/**
+ * A place whose coordinate stands for a stretch of coast rather than the sand
+ * itself: the bay's water, or the village stage 1.5 resolved a break to. Two of
+ * those under one name are one break -- "Inch" the village and "Inch Beach" are
+ * 3.2 km apart -- and when a real beach carries the name, it wins.
+ */
+const COARSE = new Set(['bay', 'village', 'town', 'hamlet', 'locality', 'suburb', 'island', 'islet']);
+const isBay = c => COARSE.has(c.spot.provenance?.feature);
 
 /**
  * Inland water. No reference makes a lake or a lagoon surfable, so a name that

@@ -163,8 +163,22 @@ function slugify(name) {
     .replace(/^-|-$/g, '');
 }
 
-/** What the spot detail calls the place. A cape is a point break, not a beach. */
-const TYPE_OF_FEATURE = { cape: 'Point', reef: 'Reef' };
+/**
+ * What the spot detail calls the place. A cape is a point break, not a beach,
+ * and a break stage 1.5 could only resolve to the village behind it is neither
+ * -- calling Mullaghmore a beach would be a claim OSM never made.
+ */
+const TYPE_OF_FEATURE = {
+  cape: 'Point',
+  reef: 'Reef',
+  island: 'Island',
+  islet: 'Island',
+  village: 'Break',
+  town: 'Break',
+  hamlet: 'Break',
+  locality: 'Break',
+  suburb: 'Break',
+};
 
 /**
  * Generic ranges by skill level. OSM knows nothing about how a given bank

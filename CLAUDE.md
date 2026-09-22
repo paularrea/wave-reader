@@ -151,6 +151,7 @@ committed so the Vercel build stays hermetic and offline.
 
 ```bash
 node scripts/fetch-osm-beaches.mjs        # stage 1: OSM -> osm-beaches.raw.json
+node scripts/resolve-break-names.mjs      # stage 1.5: an OSM coordinate for the breaks stage 1 missed
 node scripts/derive-spot-config.mjs       # stage 2: exposure -> spots.json + index
 node scripts/filter-spots-with-data.mjs   # stage 3: drop spots the wave model has no data for
 node scripts/attest-surf-spots.mjs        # stage 3.5: which places surf references name -> surf-spots.attested.json
@@ -164,6 +165,27 @@ passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
 Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 935,
 some unreferenced (long beaches whose reference sits past 2 km on the same sand).
+
+**Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
+and reef; stage 3.5 then checks which of them a reference names. That finds nothing
+when OSM never mapped the break as one of those — Mullaghmore, Rossnowlagh, Strandhill
+and Easky have a village and nothing else where the wave is. So stage 1.5 turns the
+question around: it takes each unresolved reference **name** and asks OSM for anything
+of that name within 3 km, accepting villages, hamlets and localities as a last resort,
+best feature first (beach, then headland, then village). The coordinate written is
+always an OSM object, with its type and id; `resolvedFrom` records which name found it,
+and the spot detail calls such a place a **Break**, never a Beach. The reference's own
+coordinate only says where to look, as in stage 3.5.
+
+Its rules, each from a wrong answer it gave: "island", "rock" and the like are
+qualifiers, not names (searching "Crab Island" for *island* matched Edward's Island),
+a name left with only a generic word is not searched ("White Rocks" → *white* matched
+White Shoulder), and a place Nominatim puts outside the regions covered is dropped —
+surf-forecast files Northern Ireland under Ireland, and the nearest-neighbour fallback
+filed Bangor and Newcastle, both County Down, under Louth across the sea. Islands are
+not accepted at all: "Achill Island" resolved to the whole island, whose centroid is a
+mountain. A case-insensitive regex on `name` cannot use Overpass's index and times out,
+so the query asks for everything named around the point and filters here.
 
 **Stage 3.5 (attestation).** The references are Surfline's spot list and surf-forecast's
 break list with the coordinate each break page prints, read once by hand into
@@ -201,13 +223,13 @@ original as `provenance.centroid`. Overpass mirrors go down often;
 `OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
 
 **Known gaps (phase 2):** coverage is 93-96% of Surfline in Asturias, Cantabria and País
-Vasco, and 87 of surf-forecast's 135 Irish breaks, but 30% in Scotland. What is left in
-Ireland is of three kinds: a break OSM maps under a different name from the reference's
-(Easky Left is beside Carrickadda Point, Strandhill beside Culleenamore — never matched
-on proximity alone, see stage 3.5); several named peaks on one strand, which share a
-forecast cell with the one published (Brandon Bay's Dumps, Mossies, Stoney Gap); and
-places OSM maps only as a village, with no shore feature at all (Rossnowlagh, Strandhill,
-Mullaghmore, Lislary). A village centre is not a break, so those stay absent. They stay absent until
+Vasco, and 102 of surf-forecast's 135 Irish breaks, but 30% in Scotland. What is left in
+Ireland is of two kinds, and neither can be closed without inventing a coordinate:
+**surfers' nicknames** OSM has never heard of — Aileen's, The Peak, Shit Creek, Dumps,
+Mossies, The Bar, Lighthouse, Incredible Wave — and **peaks on a strand already
+published**, which share its forecast cell (Brandon Bay's Stoney Gap, Gweebarra's two
+heads). Both would need break coordinates from a source that is not OpenStreetMap, which
+is the one thing this catalogue does not do. They stay absent until
 the catalogue accepts break coordinates of its own; do not loosen the matching to fill
 them.
 
