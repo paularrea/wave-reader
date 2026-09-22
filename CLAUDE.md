@@ -351,3 +351,21 @@ npm run test:prod   # smoke test against the live deployment; hits real APIs
 
 E2E runs against `next build && next start`, not the dev server: that is what Vercel
 serves, and the dev server's HMR channel does not hydrate reliably under Playwright.
+
+## Deploying to production
+
+**Production deploys from GitHub.** The Vercel project `wave-reader` is connected to
+`github.com/paularrea/wave-reader`, and every push to `main` builds and publishes
+production at https://wave-reader-theta.vercel.app. Do not deploy with
+`vercel deploy --prod` from a laptop: it ships whatever is in the working tree, uncommitted
+or not, and leaves `origin/main` behind what is live.
+
+```bash
+npm test                    # unit + e2e must pass before pushing
+git push origin main        # Vercel starts the production build
+vercel ls wave-reader       # wait for the new deployment to read Ready (~30 s)
+npm run test:prod           # smoke test the live site
+```
+
+The Vercel CLI is only needed to watch the build. It is installed under nvm's Node 18
+(`~/.nvm/versions/node/v18.20.8/bin/vercel`), so it is not on `PATH` under the project's Node 20.
