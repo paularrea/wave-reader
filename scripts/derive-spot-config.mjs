@@ -233,13 +233,16 @@ async function main() {
     }
     usedCoords.add(coordKey);
 
-    let id = slugify(beach.name);
+    // Stage 1 keeps an English name only where OSM's own is Irish (Gaeltacht
+    // beaches); it is the name surfers and the surf references use.
+    const name = beach.nameEn ?? beach.name;
+    let id = slugify(name);
     if (!id || usedIds.has(id)) id = `${id || 'spot'}-${beach.osmId}`;
     usedIds.add(id);
 
     spots.push({
       id,
-      name: beach.name,
+      name,
       community: beach.community,
       country,
       type: 'Beach',
@@ -255,6 +258,7 @@ async function main() {
         osmType: beach.osmType,
         osmId: beach.osmId,
         feature: beach.feature ?? 'beach',
+        ...(beach.nameEn ? { osmName: beach.name } : {}),
         facingDeg: result.facing,
         exposureDeg: result.exposureDeg,
         elevationSource: 'etopo1-erddap-bilinear',

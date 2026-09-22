@@ -59,24 +59,33 @@ const REGIONS = [
   { iso: 'ES-CE', name: 'Ceuta', country: 'Spain', level: 4 },
   { iso: 'ES-ML', name: 'Melilla', country: 'Spain', level: 4 },
 
-  // Ireland: counties, admin_level 6. Counties rather than the four provinces:
-  // Irish surfers name breaks by county, and Donegal alone spans more coast
-  // than several Spanish communities.
-  { iso: 'IE-DL', name: 'Donegal', country: 'Ireland', level: 6 },
-  { iso: 'IE-SO', name: 'Sligo', country: 'Ireland', level: 6 },
-  { iso: 'IE-LM', name: 'Leitrim', country: 'Ireland', level: 6 },
-  { iso: 'IE-MO', name: 'Mayo', country: 'Ireland', level: 6 },
-  { iso: 'IE-G', name: 'Galway', country: 'Ireland', level: 6 },
-  { iso: 'IE-CE', name: 'Clare', country: 'Ireland', level: 6 },
-  { iso: 'IE-LK', name: 'Limerick', country: 'Ireland', level: 6 },
-  { iso: 'IE-KY', name: 'Kerry', country: 'Ireland', level: 6 },
-  { iso: 'IE-CO', name: 'Cork', country: 'Ireland', level: 6 },
-  { iso: 'IE-WD', name: 'Waterford', country: 'Ireland', level: 6 },
-  { iso: 'IE-WX', name: 'Wexford', country: 'Ireland', level: 6 },
-  { iso: 'IE-WW', name: 'Wicklow', country: 'Ireland', level: 6 },
-  { iso: 'IE-D', name: 'Dublin', country: 'Ireland', level: 6 },
-  { iso: 'IE-MH', name: 'Meath', country: 'Ireland', level: 6 },
-  { iso: 'IE-LH', name: 'Louth', country: 'Ireland', level: 6 },
+  /**
+   * Ireland: one country query, split by county (admin_level 6). Counties
+   * rather than the four provinces: Irish surfers name breaks by county, and
+   * Donegal alone spans more coast than several Spanish communities.
+   *
+   * Not one query per county: Irish county polygons stop at the high-water
+   * line, and a beach mapped on the foreshore lies outside all of them. Queried
+   * county by county, Donegal returned 15 named beaches of the 60 OSM has --
+   * Carrickfinn, Rossnowlagh's Tullan, Magheroarty and Tramore among the
+   * missing.
+   *
+   * Nor one query over the country polygon, which does run out to sea: an area
+   * that size and shape times out on every public mirror. The island's bounding
+   * box answers in seconds; is_in then keeps what lies inside Ireland, so
+   * Northern Irish beaches in the box are dropped rather than handed to
+   * Donegal or Louth by nearest neighbour.
+   */
+  { iso: 'IE', name: 'Ireland', country: 'Ireland', level: 2, bbox: '51.3,-10.8,55.5,-5.8', subdivide: {
+    filter: '["boundary"="administrative"]["admin_level"="6"]',
+    within: 'IE',
+    names: {
+      'IE-DL': 'Donegal', 'IE-SO': 'Sligo', 'IE-LM': 'Leitrim', 'IE-MO': 'Mayo',
+      'IE-G': 'Galway', 'IE-CE': 'Clare', 'IE-LK': 'Limerick', 'IE-KY': 'Kerry',
+      'IE-CO': 'Cork', 'IE-WD': 'Waterford', 'IE-WX': 'Wexford', 'IE-WW': 'Wicklow',
+      'IE-D': 'Dublin', 'IE-MH': 'Meath', 'IE-LH': 'Louth',
+    },
+  } },
 
   // France: régions, admin_level 4, named as OSM names them. Metropolitan
   // coast first, then the overseas régions -- La Réunion, Guadeloupe and
@@ -108,7 +117,7 @@ const REGIONS = [
    * returning 504s is not viable, so each beach is assigned its county with
    * batched is_in lookups instead.
    */
-  { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: 'ceremonial' },
+  { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: { filter: '["boundary"="ceremonial"]' } },
 ];
 
 /**
@@ -129,19 +138,19 @@ const FEATURE_TAGS = {
   ],
 };
 
-function queryFor(iso, level, country) {
+function queryFor(iso, level, country, bbox) {
   const tags = FEATURE_TAGS[country] ?? FEATURE_TAGS.Spain;
   const clauses = tags
     .flatMap(([key, value]) =>
       ['node', 'way', 'relation'].map(
-        kind => `  ${kind}["${key}"="${value}"]["name"](area.region);`
+        kind => `  ${kind}["${key}"="${value}"]["name"](${bbox ?? 'area.region'});`
       )
     )
     .join('\n');
 
   return `
 [out:json][timeout:180];
-area["ISO3166-2"="${iso}"]["admin_level"="${level}"]->.region;
+${bbox ? '' : `area["ISO3166-2"="${iso}"]["admin_level"="${level}"]->.region;`}
 (
 ${clauses}
 );
@@ -156,6 +165,18 @@ function pointOf(element) {
   return null;
 }
 
+/**
+ * In the Gaeltacht, OSM's `name` is the Irish one -- "Trá Mhachaire
+ * Rabhartaigh" for Magheroarty, "Trá na Brád" for Braade -- and no surf
+ * reference, and few surfers, call those beaches that. The English name OSM
+ * carries alongside is kept for Irish features only: elsewhere `name:en` is a
+ * translation for tourists ("La Concha Beach"), not the name used locally.
+ */
+function englishName(tags, country) {
+  const en = tags['name:en'];
+  return country === 'Ireland' && en && en !== tags.name ? { nameEn: en } : {};
+}
+
 const SUBDIVISION_BATCH = 250;
 
 /**
@@ -166,15 +187,22 @@ const SUBDIVISION_BATCH = 250;
  * Beach centroids often sit on the waterline, just outside a county polygon
  * drawn to the high-water line; those take the county of the nearest beach
  * that did resolve, rather than being dumped into a catch-all region.
+ *
+ * `names` maps ISO 3166-2 codes to the region names the app uses. When given,
+ * it is also the list of subdivisions kept: a country query returns lake
+ * beaches in inland counties too, and those are dropped here. `within` (an
+ * ISO 3166-1 code) drops whatever a bounding-box query caught across a border.
  */
-async function assignSubdivisions(beaches, boundary, parentName) {
+async function assignSubdivisions(beaches, { filter, names, within }, parentName) {
+  const inside = new Set();
   for (let start = 0; start < beaches.length; start += SUBDIVISION_BATCH) {
     const batch = beaches.slice(start, start + SUBDIVISION_BATCH);
     const statements = batch
       .map(
         (b, i) =>
           `make marker idx="${i}"; out; ` +
-          `is_in(${b.lat},${b.lon})->.a; area.a["boundary"="${boundary}"]; out tags;`
+          `is_in(${b.lat},${b.lon})->.a; area.a${filter}; out tags;` +
+          (within ? ` area.a["ISO3166-1"="${within}"]["admin_level"="2"]; out tags;` : '')
       )
       .join('\n');
 
@@ -186,7 +214,11 @@ async function assignSubdivisions(beaches, boundary, parentName) {
         current = Number(element.tags?.idx);
         continue;
       }
-      const name = element.tags?.name;
+      if (within && current >= 0 && element.tags?.['ISO3166-1'] === within) {
+        inside.add(batch[current]);
+        continue;
+      }
+      const name = names ? names[element.tags?.['ISO3166-2']] ?? element.tags?.['ISO3166-2'] : element.tags?.name;
       if (current >= 0 && name && batch[current].community === parentName) {
         batch[current].community = name;
       }
@@ -196,6 +228,11 @@ async function assignSubdivisions(beaches, boundary, parentName) {
     await sleep(4000);
   }
 
+  if (within) {
+    const outside = beaches.length - inside.size;
+    beaches = beaches.filter(b => inside.has(b));
+    log(`    ${parentName}: ${outside} outside ${within} dropped`);
+  }
   const resolved = beaches.filter(b => b.community !== parentName);
   const unresolved = beaches.filter(b => b.community === parentName);
   for (const beach of unresolved) {
@@ -207,6 +244,12 @@ async function assignSubdivisions(beaches, boundary, parentName) {
     if (best) beach.community = best.community;
   }
   log(`    ${parentName}: ${resolved.length} by polygon, ${unresolved.length} by nearest neighbour`);
+  if (!names) return beaches;
+
+  const listed = new Set(Object.values(names));
+  const kept = beaches.filter(b => listed.has(b.community));
+  log(`    ${parentName}: ${beaches.length - kept.length} outside the listed subdivisions dropped`);
+  return kept;
 }
 
 /**
@@ -224,13 +267,13 @@ async function assignSubdivisions(beaches, boundary, parentName) {
  * missing elements, and no `remark` says so: a re-fetch of Andalucía came back
  * with 150 of its 507 beaches. Only comparing against a count catches that.
  */
-async function fetchComplete(iso, level, country, name, attempt = 0) {
-  const data = await overpass(queryFor(iso, level, country));
+async function fetchComplete(iso, level, country, name, bbox, attempt = 0) {
+  const data = await overpass(queryFor(iso, level, country, bbox));
   const have = (data.elements ?? []).length;
 
   let expected = null;
   try {
-    const counted = await overpass(queryFor(iso, level, country).replace('out center tags;', 'out count;'));
+    const counted = await overpass(queryFor(iso, level, country, bbox).replace('out center tags;', 'out count;'));
     expected = Number(counted.elements?.[0]?.tags?.total ?? NaN);
   } catch (err) {
     log(`    ${name}: could not count (${err.message}); accepting ${have} unverified`);
@@ -242,7 +285,7 @@ async function fetchComplete(iso, level, country, name, attempt = 0) {
 
   log(`    ${name}: got ${have} of ${expected}, retrying`);
   await sleep(15_000);
-  return fetchComplete(iso, level, country, name, attempt + 1);
+  return fetchComplete(iso, level, country, name, bbox, attempt + 1);
 }
 
 async function verify() {
@@ -256,6 +299,12 @@ async function verify() {
 
   const short = [];
   for (const { iso, name, country, level, subdivide } of REGIONS) {
+    // Ireland's country query also counts lake beaches in inland counties,
+    // which the split drops, so its count is checked at fetch time only.
+    if (subdivide?.names) {
+      log(`  ${name}: count-checked when fetched, skipping`);
+      continue;
+    }
     const countQuery = queryFor(iso, level, country).replace('out center tags;', 'out count;');
     let expected;
     try {
@@ -339,7 +388,7 @@ async function main() {
     ? new Set(process.env.ONLY_REGIONS.split(',').map(r => r.trim()))
     : null;
 
-  for (const { iso, name: community, country, level, subdivide } of REGIONS) {
+  for (const { iso, name: community, country, level, subdivide, bbox } of REGIONS) {
     if (onlyRegions && !onlyRegions.has(community)) continue;
     if (alreadyFetched.has(community)) {
       log(`${community}: already fetched, skipping`);
@@ -349,7 +398,7 @@ async function main() {
 
     let data;
     try {
-      data = await fetchComplete(iso, level, country, community);
+      data = await fetchComplete(iso, level, country, community, bbox);
     } catch (err) {
       log(`    ${community} FAILED: ${err.message}`);
       continue;
@@ -371,6 +420,7 @@ async function main() {
         lat: Number(point.lat.toFixed(5)),
         lon: Number(point.lon.toFixed(5)),
         feature: element.tags.natural ?? 'beach',
+        ...englishName(element.tags, country),
       });
       kept++;
     }
@@ -378,7 +428,8 @@ async function main() {
     if (subdivide && fromThisRegion.length > 0) {
       fromThisRegion.forEach(b => (b.parentRegion = community));
       try {
-        await assignSubdivisions(fromThisRegion, subdivide, community);
+        const assigned = await assignSubdivisions(fromThisRegion, subdivide, community);
+        fromThisRegion.splice(0, fromThisRegion.length, ...assigned);
       } catch (err) {
         log(`    ${community} subdivision FAILED: ${err.message} -- not saved, rerun with RESUME=1`);
         continue;
@@ -386,7 +437,7 @@ async function main() {
     }
     beaches.push(...fromThisRegion);
 
-    log(`${community}: ${kept} beaches (running total ${beaches.length})`);
+    log(`${community}: ${fromThisRegion.length} beaches (running total ${beaches.length})`);
     if (kept === 0) {
       log(`    ${community} returned nothing -- recorded so RESUME skips it`);
       emptyRegions.add(community);

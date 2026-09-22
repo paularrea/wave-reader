@@ -162,8 +162,8 @@ node scripts/benchmark-catalogue.mjs      # compare with the references, region 
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 891,
-15 unreferenced (long beaches whose reference sits past 2 km on the same sand).
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 935,
+some unreferenced (long beaches whose reference sits past 2 km on the same sand).
 
 **Stage 3.5 (attestation).** The references are Surfline's spot list and surf-forecast's
 break list with the coordinate each break page prints, read once by hand into
@@ -201,8 +201,10 @@ original as `provenance.centroid`. Overpass mirrors go down often;
 `OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
 
 **Known gaps (phase 2):** coverage is 93-96% of Surfline in Asturias, Cantabria and País
-Vasco, but 30% in Scotland and under 25% in Donegal and Kerry, because OSM does not map
-those breaks as named beaches (Lahinch, most reefs and points). They stay absent until
+Vasco, 40-55% in Donegal and Kerry, 30% in Scotland and 14% in Galway, because OSM does
+not map those breaks as named beaches (Lahinch, Rossnowlagh, most reefs and points), or
+because the stage-2 90° arc drops beaches deep in a bay (Portsalon, Marble Hill, Five
+Finger Strand, Maghera). They stay absent until
 the catalogue accepts break coordinates of its own; do not loosen the matching to fill
 them.
 
@@ -231,6 +233,16 @@ region fetch is therefore checked against `out count` and retried until it match
 `VERIFY=1` re-checks the whole raw file, `ONLY_REGIONS=a,b` limits a run. Ireland is queried for bays and shingle as
 well as beaches, because OSM maps Irish beaches sparsely: County Clare, the home of
 Irish surfing, has four tagged `natural=beach`.
+
+**Ireland is one bounding-box query, split by county** (`is_in`, then nearest resolved
+beach), never one query per county: Irish county polygons stop at the high-water line,
+so a beach mapped on the foreshore is in no county. Queried county by county, Donegal
+returned 15 of its 178 named shore features and published 2 spots; only 258 of Ireland's
+1,254 fall inside a county polygon. The country polygon itself times out on every
+mirror, hence the box, with `is_in` dropping what lies outside Ireland. Irish features
+also keep OSM's `name:en` (`nameEn`, published as the name, OSM's own kept as
+`provenance.osmName`): Gaeltacht beaches are named in Irish in OSM ("Trá Mhachaire
+Rabhartaigh") and in English by surfers and the references (Magheroarty).
 
 **Stage 2** probes bathymetry **locally**: `scripts/lib/bathymetry.mjs` downloads NOAA
 ETOPO1 tiles from ERDDAP once into `.cache/etopo/` and interpolates bilinearly (which

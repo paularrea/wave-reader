@@ -9,8 +9,8 @@
     "",
     "Stage 4 publishes a place only if it appears here."
   ],
-  "generatedAt": "2026-09-21",
-  "count": 902,
+  "generatedAt": "2026-09-22",
+  "count": 948,
   "spots": [
     {
       "id": "aberavon-beach",
@@ -67,6 +67,19 @@
         "Abermawr"
       ],
       "referenceKm": 0.35
+    },
+    {
+      "id": "an-tra-bhan",
+      "name": "An Trá Bhán",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Silver Strand (Malin Beg)"
+      ],
+      "referenceKm": 0.52
     },
     {
       "id": "annagh-strand",
@@ -209,6 +222,33 @@
       "referenceKm": 0.43
     },
     {
+      "id": "ballinskelligs-beach",
+      "name": "Ballinskelligs Beach",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ballinskelligs Bay"
+      ],
+      "referenceKm": 4.88
+    },
+    {
+      "id": "ballybunion-bay",
+      "name": "Ballybunion Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ballybunion"
+      ],
+      "referenceKm": 0.1
+    },
+    {
       "id": "ballycastle-beach",
       "name": "Ballycastle Beach",
       "country": "United Kingdom",
@@ -221,6 +261,46 @@
         "Ballycastle"
       ],
       "referenceKm": 0.13
+    },
+    {
+      "id": "ballycotton-bay",
+      "name": "Ballycotton Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ballycotton"
+      ],
+      "referenceKm": 2.64
+    },
+    {
+      "id": "ballyheige-bay",
+      "name": "Ballyheige Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ballyheigue"
+      ],
+      "referenceKm": 0.97
+    },
+    {
+      "id": "ballyhiernan-bay",
+      "name": "Ballyhiernan Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ballyhiernan Bay"
+      ],
+      "referenceKm": 0.28
     },
     {
       "id": "banna-strand",
@@ -266,6 +346,32 @@
         "Playa de Aizkorri"
       ],
       "referenceKm": 0.08
+    },
+    {
+      "id": "barley-cove",
+      "name": "Barley Cove",
+      "country": "Ireland",
+      "region": "Cork",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barley Cove"
+      ],
+      "referenceKm": 1.31
+    },
+    {
+      "id": "barley-cove-5957120",
+      "name": "Barley Cove",
+      "country": "Ireland",
+      "region": "Cork",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Barleycove Beach"
+      ],
+      "referenceKm": 0.07
     },
     {
       "id": "barricane-beach-sssi",
@@ -320,6 +426,19 @@
       "referenceKm": 0.51
     },
     {
+      "id": "belderra-strand",
+      "name": "Belderra Strand",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Belderra Strand"
+      ],
+      "referenceKm": 0.14
+    },
+    {
       "id": "benllech-sands",
       "name": "Benllech Sands",
       "country": "United Kingdom",
@@ -344,6 +463,20 @@
         "Berck Sur Mer"
       ],
       "referenceKm": 0.61
+    },
+    {
+      "id": "bertra-beach",
+      "name": "Bertra Beach",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Bertra Beach",
+        "Bertra Beach (Murrisk)"
+      ],
+      "referenceKm": 0.38
     },
     {
       "id": "bigbury-beach",
@@ -444,6 +577,37 @@
       "referenceKm": 1.74
     },
     {
+      "id": "boyeegther-bay",
+      "name": "Boyeegther Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Murder Hole Beach"
+      ],
+      "referenceKm": 0.12
+    },
+    {
+      "id": "brandon-bay",
+      "name": "Brandon Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ballinknockane (Brandon Bay)",
+        "Brandon Bay",
+        "Dumps (Brandon Bay)",
+        "Mossies (Brandon Bay)",
+        "Stoney Gap (Brandon Bay)"
+      ],
+      "referenceKm": 0.31
+    },
+    {
       "id": "branksome-chine-beach",
       "name": "Branksome Chine Beach",
       "country": "United Kingdom",
@@ -510,7 +674,7 @@
       "referenceKm": 0.12
     },
     {
-      "id": "brittas-bay",
+      "id": "brittas-bay-16313794",
       "name": "Brittas Bay",
       "country": "Ireland",
       "region": "Wicklow",
@@ -579,6 +743,19 @@
       "referenceKm": 2.22
     },
     {
+      "id": "bunatrahir-bay",
+      "name": "Bunatrahir Bay",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bunatrahir Bay"
+      ],
+      "referenceKm": 1.36
+    },
+    {
       "id": "bundoran-beach",
       "name": "Bundoran beach",
       "country": "Ireland",
@@ -599,7 +776,6 @@
       "country": "Ireland",
       "region": "Waterford",
       "sources": [
-        "surf-forecast",
         "surfline"
       ],
       "attestedAs": [
@@ -959,6 +1135,33 @@
       "referenceKm": 0.45
     },
     {
+      "id": "carrickfinn-beach",
+      "name": "Carrickfinn Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Carrickfinn"
+      ],
+      "referenceKm": 0.47
+    },
+    {
+      "id": "carrowmore-beach",
+      "name": "Carrowmore Beach",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Carrowmore"
+      ],
+      "referenceKm": 0.34
+    },
+    {
       "id": "carrownisky-beach",
       "name": "Carrownisky Beach",
       "country": "Ireland",
@@ -1081,6 +1284,19 @@
         "Church Cove"
       ],
       "referenceKm": 0.27
+    },
+    {
+      "id": "clonea-strand",
+      "name": "Clonea Strand",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Clonea Strand"
+      ],
+      "referenceKm": 0.2
     },
     {
       "id": "coatham-sands",
@@ -1208,6 +1424,32 @@
       "referenceKm": 0.41
     },
     {
+      "id": "coumeenoole-bay",
+      "name": "Coumeenoole Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Coumeenole"
+      ],
+      "referenceKm": 0.73
+    },
+    {
+      "id": "courtown-bay",
+      "name": "Courtown Bay",
+      "country": "Ireland",
+      "region": "Wexford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Courtown"
+      ],
+      "referenceKm": 0.55
+    },
+    {
       "id": "crantock-beach",
       "name": "Crantock Beach",
       "country": "United Kingdom",
@@ -1265,6 +1507,20 @@
         "Downend Point"
       ],
       "referenceKm": 0.02
+    },
+    {
+      "id": "culdaff-bay",
+      "name": "Culdaff Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Culdaff"
+      ],
+      "referenceKm": 0.63
     },
     {
       "id": "cullercoats-bay",
@@ -1349,8 +1605,8 @@
       "referenceKm": 0.62
     },
     {
-      "id": "derrynane-bay-beach-tra-bha-doire-fhionain",
-      "name": "Derrynane Bay Beach / Trá Bhá Doire Fhionáin",
+      "id": "derrynane-harbour",
+      "name": "Derrynane Harbour",
       "country": "Ireland",
       "region": "Kerry",
       "sources": [
@@ -1359,7 +1615,20 @@
       "attestedAs": [
         "Derrynane"
       ],
-      "referenceKm": 1.97
+      "referenceKm": 1.46
+    },
+    {
+      "id": "dirk-bay",
+      "name": "Dirk Bay",
+      "country": "Ireland",
+      "region": "Cork",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Red Strand (Dirk Bay)"
+      ],
+      "referenceKm": 0.85
     },
     {
       "id": "dollymount-strand",
@@ -1418,6 +1687,32 @@
       "referenceKm": 0.52
     },
     {
+      "id": "doonbeg-bay",
+      "name": "Doonbeg Bay",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Doonbeg Castle"
+      ],
+      "referenceKm": 0.46
+    },
+    {
+      "id": "doughmore-beach",
+      "name": "Doughmore Beach",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Doughmore Bay Beach"
+      ],
+      "referenceKm": 0.62
+    },
+    {
       "id": "downderry-beach",
       "name": "Downderry Beach",
       "country": "United Kingdom",
@@ -1429,6 +1724,32 @@
         "Downderry"
       ],
       "referenceKm": 0.37
+    },
+    {
+      "id": "drumnacraig-beach",
+      "name": "Drumnacraig Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Drumnacraig Beach"
+      ],
+      "referenceKm": 0.46
+    },
+    {
+      "id": "drumnatinney-beach",
+      "name": "Drumnatinney Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Falcarragh Beach"
+      ],
+      "referenceKm": 0.48
     },
     {
       "id": "duckpool",
@@ -1587,6 +1908,19 @@
       "referenceKm": 0.54
     },
     {
+      "id": "elly-strand",
+      "name": "Elly Strand",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Elly Bay West"
+      ],
+      "referenceKm": 1.32
+    },
+    {
       "id": "erdiko-ura",
       "name": "Erdiko Ura",
       "country": "France",
@@ -1672,7 +2006,7 @@
       "id": "fanore-beach",
       "name": "Fanore Beach",
       "country": "Ireland",
-      "region": "Clare",
+      "region": "Galway",
       "sources": [
         "surf-forecast",
         "surfline"
@@ -2051,19 +2385,6 @@
       "referenceKm": 0.31
     },
     {
-      "id": "hawk-cliff-whiterock-beach",
-      "name": "Hawk Cliff/Whiterock Beach",
-      "country": "Ireland",
-      "region": "Dublin",
-      "sources": [
-        "surfline"
-      ],
-      "attestedAs": [
-        "Whiterock"
-      ],
-      "referenceKm": 0.84
-    },
-    {
       "id": "hayle-bay",
       "name": "Hayle Bay",
       "country": "United Kingdom",
@@ -2312,6 +2633,19 @@
       "referenceKm": 0.83
     },
     {
+      "id": "killahoey-beach",
+      "name": "Killahoey Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dunfanaghy (Killahoey Beach)"
+      ],
+      "referenceKm": 0.54
+    },
+    {
       "id": "killiney-beach",
       "name": "Killiney Beach",
       "country": "Ireland",
@@ -2322,7 +2656,7 @@
       "attestedAs": [
         "Killiney Bay"
       ],
-      "referenceKm": 0.22
+      "referenceKm": 0.21
     },
     {
       "id": "kilmurrin-cove",
@@ -2376,7 +2710,7 @@
       "attestedAs": [
         "Kinnagoe Bay"
       ],
-      "referenceKm": 0.36
+      "referenceKm": 0.03
     },
     {
       "id": "kontxa-hondartza",
@@ -2809,6 +3143,19 @@
       "referenceKm": 0.27
     },
     {
+      "id": "loughros-beg-bay",
+      "name": "Loughros Beg Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Loughros Beg"
+      ],
+      "referenceKm": 3.08
+    },
+    {
       "id": "lulworth-cove",
       "name": "Lulworth Cove",
       "country": "United Kingdom",
@@ -2895,6 +3242,34 @@
       "referenceKm": 0.15
     },
     {
+      "id": "magheroarty-beach",
+      "name": "Magheroarty Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Magheraroarty Beach",
+        "Magheraroarty Strand"
+      ],
+      "referenceKm": 0.24
+    },
+    {
+      "id": "maghery-bay",
+      "name": "Maghery Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Maghery"
+      ],
+      "referenceKm": 1.11
+    },
+    {
       "id": "magilligan-benone-strand",
       "name": "Magilligan - Benone Strand",
       "country": "United Kingdom",
@@ -2921,6 +3296,19 @@
         "Plage de Mayarko"
       ],
       "referenceKm": 0.2
+    },
+    {
+      "id": "malin-bay",
+      "name": "Malin Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Malin Mor Left"
+      ],
+      "referenceKm": 0.39
     },
     {
       "id": "manorbier-beach",
@@ -3003,19 +3391,6 @@
         "Menakoz"
       ],
       "referenceKm": 0.2
-    },
-    {
-      "id": "merrion-strand",
-      "name": "Merrion Strand",
-      "country": "Ireland",
-      "region": "Dublin",
-      "sources": [
-        "surfline"
-      ],
-      "attestedAs": [
-        "Merrion Strand"
-      ],
-      "referenceKm": 0.65
     },
     {
       "id": "millendreath-beach",
@@ -3273,6 +3648,19 @@
         "Oxwich Point"
       ],
       "referenceKm": 0.18
+    },
+    {
+      "id": "oyster-haven",
+      "name": "Oyster Haven",
+      "country": "Ireland",
+      "region": "Cork",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Oysterhaven"
+      ],
+      "referenceKm": 0.66
     },
     {
       "id": "paignton-sands",
@@ -9715,6 +10103,34 @@
       "referenceKm": 0.2
     },
     {
+      "id": "pollacheeny-harbour",
+      "name": "Pollacheeny Harbour",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Pollacheeny Harbour"
+      ],
+      "referenceKm": 0.31
+    },
+    {
+      "id": "pollan-bay",
+      "name": "Pollan Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Pollan Bay"
+      ],
+      "referenceKm": 0.41
+    },
+    {
       "id": "poppit-sands",
       "name": "Poppit Sands",
       "country": "United Kingdom",
@@ -11028,12 +11444,10 @@
       "country": "Ireland",
       "region": "Cork",
       "sources": [
-        "surf-forecast",
         "surfline"
       ],
       "attestedAs": [
-        "Red Strand",
-        "Red Strand (Dirk Bay)"
+        "Red Strand"
       ],
       "referenceKm": 0.07
     },
@@ -11118,6 +11532,19 @@
         "Runswick Bay"
       ],
       "referenceKm": 0.37
+    },
+    {
+      "id": "rush-south-beach",
+      "name": "Rush South Beach",
+      "country": "Ireland",
+      "region": "Dublin",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Rush South Beach"
+      ],
+      "referenceKm": 0.78
     },
     {
       "id": "s-arenalet-fornells",
@@ -11435,6 +11862,19 @@
       "referenceKm": 0.12
     },
     {
+      "id": "seraggane-bay",
+      "name": "Seraggane Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Scraggane Bay"
+      ],
+      "referenceKm": 0.96
+    },
+    {
       "id": "silver-sands",
       "name": "Silver Sands",
       "country": "United Kingdom",
@@ -11514,6 +11954,19 @@
       "referenceKm": 0.57
     },
     {
+      "id": "smerwick-harbour",
+      "name": "Smerwick Harbour",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Smerwick Harbour"
+      ],
+      "referenceKm": 1.78
+    },
+    {
       "id": "son-bou-168680340",
       "name": "Son Bou",
       "country": "Spain",
@@ -11582,6 +12035,21 @@
       "referenceKm": 2.59
     },
     {
+      "id": "spanish-point-beach",
+      "name": "Spanish Point Beach",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Spanish Point",
+        "Spanish Point Reefs"
+      ],
+      "referenceKm": 0.9
+    },
+    {
       "id": "spittal-beach",
       "name": "Spittal Beach",
       "country": "United Kingdom",
@@ -11593,6 +12061,19 @@
         "Spittal Beach"
       ],
       "referenceKm": 0.15
+    },
+    {
+      "id": "st-finians-bay-beach",
+      "name": "St Finians Bay Beach",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "St. Finian's Bay"
+      ],
+      "referenceKm": 0.05
     },
     {
       "id": "stonehaven-beach",
@@ -11794,6 +12275,32 @@
       "referenceKm": 0.18
     },
     {
+      "id": "tra-an-ghleanna",
+      "name": "Trá an Ghleanna",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Glencolumbkille"
+      ],
+      "referenceKm": 0.89
+    },
+    {
+      "id": "trabane",
+      "name": "Trabane",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Muckros"
+      ],
+      "referenceKm": 0.45
+    },
+    {
       "id": "traeth-aberdaron",
       "name": "Traeth Aberdaron",
       "country": "United Kingdom",
@@ -11952,8 +12459,8 @@
       "referenceKm": 0.26
     },
     {
-      "id": "tramore-strand",
-      "name": "Tramore Strand",
+      "id": "tramore-bay",
+      "name": "Tramore Bay",
       "country": "Ireland",
       "region": "Waterford",
       "sources": [
@@ -11962,10 +12469,48 @@
       ],
       "attestedAs": [
         "Tramore",
-        "Tramore Left",
         "Tramore Strand"
       ],
-      "referenceKm": 0.66
+      "referenceKm": 0.28
+    },
+    {
+      "id": "tramore-strand",
+      "name": "Tramore Strand",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tramore Left"
+      ],
+      "referenceKm": 2.13
+    },
+    {
+      "id": "tramore-strand-5524974",
+      "name": "Tramore Strand",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tramore (Dunfanaghy)"
+      ],
+      "referenceKm": 0.46
+    },
+    {
+      "id": "tranarossan-bay",
+      "name": "Tranarossan Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Trá Na Rosan"
+      ],
+      "referenceKm": 0.16
     },
     {
       "id": "trawalua-strand",
@@ -12006,6 +12551,19 @@
         "Tregardock"
       ],
       "referenceKm": 3
+    },
+    {
+      "id": "tremone-bay-6171963",
+      "name": "Tremone Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tremone Strand"
+      ],
+      "referenceKm": 0.25
     },
     {
       "id": "trevaunance-cove",
@@ -12074,6 +12632,34 @@
         "Plage de Mesperleuc (Le Grand)"
       ],
       "referenceKm": 0.15
+    },
+    {
+      "id": "tullagh-bay-beach",
+      "name": "Tullagh Bay Beach",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Tullagh Bay"
+      ],
+      "referenceKm": 0.38
+    },
+    {
+      "id": "tullan-strand",
+      "name": "Tullan Strand",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Tullan Strand"
+      ],
+      "referenceKm": 1.49
     },
     {
       "id": "vardiola",
@@ -12229,7 +12815,20 @@
       "referenceKm": 0.58
     },
     {
-      "id": "white-strand-130920959",
+      "id": "white-rock-beach",
+      "name": "White Rock Beach",
+      "country": "Ireland",
+      "region": "Dublin",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Whiterock"
+      ],
+      "referenceKm": 0.09
+    },
+    {
+      "id": "white-strand",
       "name": "White Strand",
       "country": "Ireland",
       "region": "Cork",
@@ -12255,6 +12854,19 @@
         "Whitesands"
       ],
       "referenceKm": 0.22
+    },
+    {
+      "id": "whiting-bay-437209156",
+      "name": "Whiting Bay",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Whiting Bay"
+      ],
+      "referenceKm": 0.32
     },
     {
       "id": "whitley-sands",

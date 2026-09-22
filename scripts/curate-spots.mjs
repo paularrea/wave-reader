@@ -43,6 +43,14 @@ const ISO2 = {
 const SAME_PLACE_KM = 1.5;
 
 /**
+ * A bay's centroid sits out in its water, further from its own beach than a
+ * second beach polygon would: Barley Cove the bay and Barley Cove the beach are
+ * 1.8 km apart. Only Ireland is fetched with bays.
+ */
+const SAME_BAY_KM = 3;
+const isBay = c => c.spot.provenance?.feature === 'bay';
+
+/**
  * Inland water. No reference makes a lake or a lagoon surfable, so a name that
  * says it is one is dropped even when a reference pointed near it.
  */
@@ -124,12 +132,15 @@ for (const group of byRegion.values()) {
       Number(Boolean(b.named)) - Number(Boolean(a.named)) ||
       (a.named?.rank ?? 0) - (b.named?.rank ?? 0) ||
       attested.get(b.spot.id).sources.length - attested.get(a.spot.id).sources.length ||
+      Number(isBay(a)) - Number(isBay(b)) ||
       a.spot.name.length - b.spot.name.length
   );
   const survivors = [];
   for (const c of group) {
     const twin = survivors.find(
-      s => normalise(s.spot.name) === normalise(c.spot.name) && distanceKm(s.spot.coordinates, c.spot.coordinates) < SAME_PLACE_KM
+      s =>
+        normalise(s.spot.name) === normalise(c.spot.name) &&
+        distanceKm(s.spot.coordinates, c.spot.coordinates) < (isBay(s) || isBay(c) ? SAME_BAY_KM : SAME_PLACE_KM)
     );
     if (twin) {
       drop(c.spot, `the same place as ${twin.spot.name}, mapped twice in OpenStreetMap`);
