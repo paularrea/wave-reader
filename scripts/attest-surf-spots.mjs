@@ -304,10 +304,10 @@ function near(point, km) {
 }
 
 const evidence = new Map(); // place id -> [{source, name}]
-function attest(place, source, name, ref = null) {
+function attest(place, source, name, ref = null, referenceRegion = null) {
   if (!evidence.has(place.id)) evidence.set(place.id, []);
   const list = evidence.get(place.id);
-  if (!list.some(e => e.source === source && e.name === name)) list.push({ source, name, ref });
+  if (!list.some(e => e.source === source && e.name === name)) list.push({ source, name, ref, referenceRegion });
 }
 
 const misses = { surfline: [], 'surf-forecast': [] };
@@ -328,7 +328,7 @@ const unconfirmed = [];
  * attested a place. `slackKm` widens the anchored radius for references that
  * round their coordinates (surf-forecast prints two decimals, +/- 600 m).
  */
-function resolveAnchored(source, name, point, country, slackKm = 0) {
+function resolveAnchored(source, name, point, country, slackKm = 0, referenceRegion = null) {
   const key = normalise(name);
   // "Rodiles - Main Beach", "Paguera - Mallorca": the qualifier is not the break.
   const keys = [key, ...name.split(/\s+[-\/]\s+|\s*\(|\)/).map(normalise)].filter(Boolean);
@@ -349,7 +349,7 @@ function resolveAnchored(source, name, point, country, slackKm = 0) {
   ];
   if (named.length) {
     named.sort((a, b) => distanceKm(point, a.coordinates) - distanceKm(point, b.coordinates));
-    attest(named[0], source, name, point);
+    attest(named[0], source, name, point, referenceRegion);
     return true;
   }
   // Two independent signals that agree. The reference says a break is here;
@@ -360,7 +360,7 @@ function resolveAnchored(source, name, point, country, slackKm = 0) {
     .filter(c => curatedMatch(c))
     .sort((a, b) => distanceKm(point, a.coordinates) - distanceKm(point, b.coordinates))[0];
   if (vouched) {
-    attest(vouched, source, name, point);
+    attest(vouched, source, name, point, referenceRegion);
     return true;
   }
   const closest = near(point, SAME_BREAK_KM).sort(
@@ -416,7 +416,7 @@ for (const [file, regions] of Object.entries(forecast)) {
     for (const [rawName, slug] of breaks) {
       const at = forecastCoords[slug];
       if (Array.isArray(at)) {
-        resolveAnchored('surf-forecast', rawName, { lat: at[0], lon: at[1] }, country, FORECAST_ROUNDING_KM);
+        resolveAnchored('surf-forecast', rawName, { lat: at[0], lon: at[1] }, country, FORECAST_ROUNDING_KM, region);
         continue;
       }
       // "Rodiles - Main Beach" and "Marbella - Playa del Cable": the reference
@@ -441,7 +441,7 @@ for (const [file, regions] of Object.entries(forecast)) {
         const best = loose.filter(p => p._key === v);
         if (best.length === 1) { hit = best[0]; break; }
       }
-      if (hit) attest(hit, 'surf-forecast', rawName);
+      if (hit) attest(hit, 'surf-forecast', rawName, null, region);
       else misses['surf-forecast'].push({ name: rawName, country, region });
     }
   }
@@ -501,6 +501,12 @@ const attested = [...evidence.entries()]
       region: p.community,
       sources: [...new Set(ev.map(e => e.source))].sort(),
       attestedAs: [...new Set(ev.map(e => e.name))].sort(),
+      /**
+       * The region surf-forecast files this break under, which is not always
+       * the county it stands in: Tullaghan is in Leitrim and they list it in
+       * Donegal. Stage 4 publishes Irish spots under this name.
+       */
+      referenceRegion: ev.find(e => e.referenceRegion)?.referenceRegion ?? null,
       // How far OSM's point is from where the reference puts the break. Not
       // published; stage 4's coordinate check reads it.
       referenceKm: ev.some(e => e.ref)

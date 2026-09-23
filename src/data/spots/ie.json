@@ -93,7 +93,7 @@
   {
     "id": "annagh-strand",
     "name": "Annagh Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -215,49 +215,6 @@
       "feature": "beach",
       "facingDeg": 270,
       "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "balbriggan",
-    "name": "Balbriggan",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Break",
-    "coordinates": {
-      "lat": 53.60853,
-      "lon": -6.18291
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 225,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 52263471,
-      "feature": "town",
-      "facingDeg": 45,
-      "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -672,52 +629,9 @@
     }
   },
   {
-    "id": "barnageeragh",
-    "name": "Barnageeragh",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Break",
-    "coordinates": {
-      "lat": 53.58365,
-      "lon": -6.14356
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 315,
-        "maxAngle": 135
-      },
-      "offshoreWindAngle": 225,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 5419317,
-      "feature": "locality",
-      "facingDeg": 45,
-      "exposureDeg": 180,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "belderra-strand",
     "name": "Belderra Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -761,7 +675,7 @@
   {
     "id": "bertra-beach",
     "name": "Bertra Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -845,95 +759,9 @@
     }
   },
   {
-    "id": "bray-beach",
-    "name": "Bray Beach",
-    "community": "Wicklow",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.2023,
-      "lon": -6.09586
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 15,
-        "maxAngle": 165
-      },
-      "offshoreWindAngle": 270,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 24592907,
-      "feature": "beach",
-      "facingDeg": 90,
-      "exposureDeg": 150,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "brittas-bay-16313794",
-    "name": "Brittas Bay",
-    "community": "Wicklow",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 52.88333,
-      "lon": -6.05328
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 15,
-        "maxAngle": 225
-      },
-      "offshoreWindAngle": 300,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 16313794,
-      "feature": "beach",
-      "facingDeg": 120,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "bunatrahir-bay",
     "name": "Bunatrahir Bay",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1024,7 +852,7 @@
   {
     "id": "bunlough-strand",
     "name": "Bunlough Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1110,7 +938,7 @@
   {
     "id": "camport-bay",
     "name": "Camport Bay",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1240,7 +1068,7 @@
   {
     "id": "carrowmore-beach",
     "name": "Carrowmore Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1283,7 +1111,7 @@
   {
     "id": "carrownisky-beach",
     "name": "Carrownisky Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1547,7 +1375,7 @@
   {
     "id": "cross-strand",
     "name": "Cross Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1766,52 +1594,9 @@
     }
   },
   {
-    "id": "dollymount-strand",
-    "name": "Dollymount Strand",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.367,
-      "lon": -6.13938
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 105,
-        "maxAngle": 225
-      },
-      "offshoreWindAngle": 345,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 16137892,
-      "feature": "beach",
-      "facingDeg": 165,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "donabate-beach",
     "name": "Donabate Beach",
-    "community": "Dublin",
+    "community": "Wexford",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1854,7 +1639,7 @@
   {
     "id": "dooagh-strand",
     "name": "Dooagh Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -1897,7 +1682,7 @@
   {
     "id": "doogort-beach",
     "name": "Doogort Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2026,7 +1811,7 @@
   {
     "id": "dooniver-strand",
     "name": "Dooniver Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2070,7 +1855,7 @@
   {
     "id": "doonlaughaun-bay",
     "name": "Doonlaughaun Bay",
-    "community": "Galway",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2382,7 +2167,7 @@
   {
     "id": "elly-strand",
     "name": "Elly Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2738,7 +2523,7 @@
   {
     "id": "gubnahardia-strand",
     "name": "Gubnahardia Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2916,7 +2701,7 @@
   {
     "id": "keel-beach",
     "name": "Keel Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -2964,7 +2749,7 @@
   {
     "id": "keem-beach",
     "name": "Keem Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -3007,7 +2792,7 @@
   {
     "id": "kilcummin",
     "name": "Kilcummin",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Break",
     "coordinates": {
@@ -3146,7 +2931,7 @@
   {
     "id": "killiney-beach",
     "name": "Killiney Beach",
-    "community": "Dublin",
+    "community": "Wexford",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -3275,7 +3060,7 @@
   {
     "id": "lacken-strand",
     "name": "Lacken Strand",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -3354,49 +3139,6 @@
       "feature": "beach",
       "facingDeg": 240,
       "exposureDeg": 30,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "leamore-strand",
-    "name": "Leamore Strand",
-    "community": "Wicklow",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.08254,
-      "lon": -6.03626
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 195
-      },
-      "offshoreWindAngle": 270,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 48961161,
-      "feature": "beach",
-      "facingDeg": 90,
-      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -3533,7 +3275,7 @@
   {
     "id": "magheramore-beach",
     "name": "Magheramore Beach",
-    "community": "Wicklow",
+    "community": "Wexford",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -3753,49 +3495,6 @@
     }
   },
   {
-    "id": "merrion-strand",
-    "name": "Merrion Strand",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.31657,
-      "lon": -6.20424
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 45,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 255,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 891119048,
-      "feature": "beach",
-      "facingDeg": 75,
-      "exposureDeg": 60,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "muckros-head",
     "name": "Muckros Head",
     "community": "Donegal",
@@ -3928,7 +3627,7 @@
   {
     "id": "mulranny",
     "name": "Mulranny",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Break",
     "coordinates": {
@@ -3976,7 +3675,7 @@
   {
     "id": "old-head-beach",
     "name": "Old Head Beach",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -4191,49 +3890,6 @@
         "lon": -7.38626
       },
       "movedToShoreM": 620
-    }
-  },
-  {
-    "id": "portmarnock-beach",
-    "name": "Portmarnock Beach",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.41588,
-      "lon": -6.11757
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 225,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 363359614,
-      "feature": "beach",
-      "facingDeg": 45,
-      "exposureDeg": 120,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
     }
   },
   {
@@ -4543,49 +4199,6 @@
     }
   },
   {
-    "id": "rush-south-beach",
-    "name": "Rush South Beach",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.51207,
-      "lon": -6.10446
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 15,
-        "maxAngle": 105
-      },
-      "offshoreWindAngle": 240,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 6499065,
-      "feature": "beach",
-      "facingDeg": 60,
-      "exposureDeg": 90,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "sandy-bay-beach",
     "name": "Sandy Bay Beach",
     "community": "Kerry",
@@ -4624,49 +4237,6 @@
       "feature": "beach",
       "facingDeg": 0,
       "exposureDeg": 270,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "sandymount-strand-746942791",
-    "name": "Sandymount Strand",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.32809,
-      "lon": -6.20842
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 45,
-        "maxAngle": 135
-      },
-      "offshoreWindAngle": 270,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 746942791,
-      "feature": "beach",
-      "facingDeg": 90,
-      "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -5038,49 +4608,6 @@
     }
   },
   {
-    "id": "sutton-cross",
-    "name": "Sutton Cross",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Break",
-    "coordinates": {
-      "lat": 53.38945,
-      "lon": -6.11026
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 225
-      },
-      "offshoreWindAngle": 285,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 4795248378,
-      "feature": "locality",
-      "facingDeg": 105,
-      "exposureDeg": 240,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "the-long-strand",
     "name": "The Long Strand",
     "community": "Cork",
@@ -5126,7 +4653,7 @@
   {
     "id": "tower-bay-beach",
     "name": "Tower Bay Beach",
-    "community": "Dublin",
+    "community": "Wexford",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
@@ -5528,7 +5055,7 @@
   {
     "id": "tullaghan",
     "name": "Tullaghan",
-    "community": "Leitrim",
+    "community": "Donegal",
     "country": "Ireland",
     "type": "Break",
     "coordinates": {
@@ -5614,7 +5141,7 @@
   {
     "id": "westport-harbour",
     "name": "Westport Harbour",
-    "community": "Mayo",
+    "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Break",
     "coordinates": {
@@ -5650,49 +5177,6 @@
       "feature": "suburb",
       "facingDeg": 270,
       "exposureDeg": 30,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
-    "id": "white-rock-beach",
-    "name": "White Rock Beach",
-    "community": "Dublin",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 53.26514,
-      "lon": -6.10676
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 315,
-        "maxAngle": 165
-      },
-      "offshoreWindAngle": 240,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 164365171,
-      "feature": "beach",
-      "facingDeg": 60,
-      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }

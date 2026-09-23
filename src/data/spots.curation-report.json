@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-23",
   "rules": {
     "gate": "attested by a surf reference, and coordinate verified on the open-sea coastline",
     "samePlaceKm": 1.5
   },
   "in": 9078,
-  "out": 979,
+  "out": 967,
   "perRegion": {
     "United Kingdom|Wales": 55,
     "United Kingdom|Scotland": 33,
-    "Ireland|Donegal": 36,
-    "Ireland|Mayo": 21,
+    "Ireland|Donegal": 37,
+    "Ireland|Mayo and Achill Island": 22,
     "Ireland|Waterford": 7,
     "Ireland|Sligo": 10,
     "France|Corse": 14,
@@ -18,7 +18,6 @@
     "Spain|País Vasco": 23,
     "United Kingdom|Dorset": 13,
     "Spain|Canarias": 78,
-    "Ireland|Dublin": 12,
     "Ireland|Kerry": 16,
     "United Kingdom|Northern Ireland": 8,
     "Ireland|Cork": 13,
@@ -26,14 +25,13 @@
     "United Kingdom|Cornwall": 63,
     "France|Provence-Alpes-Côte d'Azur": 31,
     "France|Hauts-de-France": 3,
-    "Ireland|Wicklow": 4,
     "United Kingdom|East Sussex": 3,
     "Spain|Comunidad Valenciana": 27,
     "Spain|Cataluña": 32,
     "Spain|Murcia": 12,
     "France|Occitanie": 9,
     "France|La Réunion": 5,
-    "Ireland|Wexford": 4,
+    "Ireland|Wexford": 8,
     "France|Normandie": 11,
     "United Kingdom|North Yorkshire": 4,
     "United Kingdom|County Durham": 1,
@@ -42,7 +40,6 @@
     "France|Nouvelle-Aquitaine": 81,
     "Ireland|Clare": 8,
     "United Kingdom|Tyne and Wear": 8,
-    "Ireland|Galway": 1,
     "Spain|Ceuta": 5,
     "United Kingdom|East Riding of Yorkshire": 3,
     "France|Bretagne": 49,
@@ -55,8 +52,7 @@
     "Spain|Cantabria": 32,
     "Spain|Andalucía": 50,
     "Spain|Melilla": 1,
-    "United Kingdom|Essex": 1,
-    "Ireland|Leitrim": 1
+    "United Kingdom|Essex": 1
   },
   "curatedNamesWithoutMatch": [
     "France|Bretagne|Audierne",
@@ -156,6 +152,12 @@
     "Ireland|Donegal|Falcarragh",
     "Ireland|Donegal|Narin",
     "Ireland|Donegal|Trabane",
+    "Ireland|Dublin|Balbriggan",
+    "Ireland|Dublin|Dollymount",
+    "Ireland|Dublin|Donabate",
+    "Ireland|Dublin|Portmarnock",
+    "Ireland|Dublin|Sutton",
+    "Ireland|Galway|Doonlaughaun Bay",
     "Ireland|Galway|Lettergesh",
     "Ireland|Galway|Salthill",
     "Ireland|Galway|Silverstrand",
@@ -166,14 +168,24 @@
     "Ireland|Kerry|Castlegregory",
     "Ireland|Kerry|Fermoyle",
     "Ireland|Kerry|Maharees",
+    "Ireland|Mayo|Bertra",
+    "Ireland|Mayo|Bunlough Strand",
+    "Ireland|Mayo|Camport Bay",
+    "Ireland|Mayo|Carrowniskey",
+    "Ireland|Mayo|Cross Beach",
     "Ireland|Mayo|Doolough",
     "Ireland|Mayo|Dugort",
+    "Ireland|Mayo|Keel",
+    "Ireland|Mayo|Lacken Strand",
+    "Ireland|Mayo|Mulranny",
     "Ireland|Sligo|Easkey",
     "Ireland|Waterford|Dunmore East",
     "Ireland|Waterford|Kilfarrasy",
     "Ireland|Wexford|Ballymoney",
     "Ireland|Wexford|Cullenstown",
+    "Ireland|Wicklow|Brittas Bay",
     "Ireland|Wicklow|Greystones",
+    "Ireland|Wicklow|Magheramore",
     "Ireland|Wicklow|Silver Strand",
     "Spain|Andalucía|Chullera",
     "Spain|Andalucía|La Antilla",
@@ -54391,6 +54403,27 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "dollymount-strand",
+      "name": "Dollymount Strand",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
+      "id": "brittas-bay-16313794",
+      "name": "Brittas Bay",
+      "country": "Ireland",
+      "region": "Wicklow",
+      "reason": "not in a region surf-forecast lists: Wicklow"
+    },
+    {
+      "id": "bray-beach",
+      "name": "Bray Beach",
+      "country": "Ireland",
+      "region": "Wicklow",
+      "reason": "not in a region surf-forecast lists: Wicklow"
+    },
+    {
       "id": "burrow-beach",
       "name": "Burrow Beach",
       "country": "Ireland",
@@ -54536,6 +54569,13 @@
       "country": "Ireland",
       "region": "Waterford",
       "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "leamore-strand",
+      "name": "Leamore Strand",
+      "country": "Ireland",
+      "region": "Wicklow",
+      "reason": "not in a region surf-forecast lists: Wicklow"
     },
     {
       "id": "naran-strand",
@@ -54858,6 +54898,13 @@
       "country": "Ireland",
       "region": "Galway",
       "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "white-rock-beach",
+      "name": "White Rock Beach",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
     },
     {
       "id": "furbo-beach",
@@ -55406,6 +55453,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "portmarnock-beach",
+      "name": "Portmarnock Beach",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
       "id": "glasheen-beach",
       "name": "Glasheen Beach",
       "country": "Ireland",
@@ -55686,6 +55740,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "sandymount-strand-746942791",
+      "name": "Sandymount Strand",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
       "id": "ladies-cove",
       "name": "Ladies Cove",
       "country": "Ireland",
@@ -55782,6 +55843,13 @@
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "merrion-strand",
+      "name": "Merrion Strand",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
     },
     {
       "id": "derrynane-bay-beach",
@@ -56701,6 +56769,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "rush-south-beach",
+      "name": "Rush South Beach",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
       "id": "tramore-strand-6908820",
       "name": "Tramore Strand",
       "country": "Ireland",
@@ -57009,6 +57084,13 @@
       "reason": "not attested: no surf reference names this place"
     },
     {
+      "id": "sutton-cross",
+      "name": "Sutton Cross",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
       "id": "brinlack",
       "name": "Brinlack",
       "country": "Ireland",
@@ -57021,6 +57103,20 @@
       "country": "Ireland",
       "region": "Kerry",
       "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barnageeragh",
+      "name": "Barnageeragh",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
+    },
+    {
+      "id": "balbriggan",
+      "name": "Balbriggan",
+      "country": "Ireland",
+      "region": "Dublin",
+      "reason": "not in a region surf-forecast lists: Dublin"
     },
     {
       "id": "inch-west",

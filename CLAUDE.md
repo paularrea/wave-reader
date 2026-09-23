@@ -223,7 +223,8 @@ original as `provenance.centroid`. Overpass mirrors go down often;
 `OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
 
 **Known gaps (phase 2):** coverage is 93-96% of Surfline in Asturias, Cantabria and País
-Vasco, and 102 of surf-forecast's 135 Irish breaks, but 30% in Scotland. What is left in
+Vasco, and 102 of surf-forecast's 135 Irish breaks (the count includes their Dublin and
+Wicklow breaks, which are no longer published), but 30% in Scotland. What is left in
 Ireland is of two kinds, and neither can be closed without inventing a coordinate:
 **surfers' nicknames** OSM has never heard of — Aileen's, The Peak, Shit Creek, Dumps,
 Mossies, The Bar, Lighthouse, Incredible Wave — and **peaks on a strand already
@@ -232,6 +233,16 @@ heads). Both would need break coordinates from a source that is not OpenStreetMa
 is the one thing this catalogue does not do. They stay absent until
 the catalogue accepts break coordinates of its own; do not loosen the matching to fill
 them.
+
+**Ireland is published under surf-forecast's regions, not its counties** (stage 4,
+`IRISH_REGION_OF_COUNTY`): that is the list Irish surfers read. They file Tullaghan,
+which stands in Leitrim, under Donegal, and call Mayo "Mayo and Achill Island", so a
+break they name carries their region and anything else falls back to its county. The
+four counties they do not list — Dublin, Wicklow, Galway, Leitrim — are not published,
+which is a decision about the product, not about the data: those 18 places stay in
+`spots.json` and are recorded in the curation report. Northern Ireland's breaks are on
+their Ireland page but in the United Kingdom's catalogue, and stay under Northern
+Ireland. Every other country is published by its own regions.
 
 **Data structure**: one file per country, because a country is the unit of growth.
 `spot-catalogue.ts` is **server-only** (full configs, imported by the forecast routes);

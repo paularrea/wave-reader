@@ -63,6 +63,33 @@ const isBay = c => COARSE.has(c.spot.provenance?.feature);
  */
 const INLAND = /(\bestany\b|\blago\b|\blac\b|\bllac\b|\blake\b|\bloch\b|\blough\b|[ée]tang|embalse|pantano|albufera|\blaguna\b|\bmarisma|mar menor)/i;
 
+/**
+ * Ireland is published under surf-forecast's own regions, not its counties,
+ * because that is the list Irish surfers read: they file Tullaghan, which
+ * stands in Leitrim, under Donegal, and call Mayo "Mayo and Achill Island".
+ * A break they name carries their region; anything else falls back to its
+ * county, and a county they do not list is not published.
+ *
+ * Only Ireland. Northern Ireland's breaks are on their Ireland page but in the
+ * United Kingdom's catalogue, and are left under Northern Ireland.
+ */
+const IRISH_REGION_OF_COUNTY = {
+  Clare: 'Clare',
+  Cork: 'Cork',
+  Donegal: 'Donegal',
+  Kerry: 'Kerry',
+  Mayo: 'Mayo and Achill Island',
+  Sligo: 'Sligo',
+  Waterford: 'Waterford',
+  Wexford: 'Wexford',
+};
+
+function irishRegion(spot, attestation) {
+  const theirs = attestation?.referenceRegion;
+  if (theirs && theirs !== 'Ireland Wavefinder') return theirs;
+  return IRISH_REGION_OF_COUNTY[spot.community] ?? null;
+}
+
 /** Stretches of a beach set aside for something other than surfing. */
 const SECTION = /(naturist|nudist|gossos|\bperros\b|canina|infantil|surf\s*school|centre de vacances)/i;
 
@@ -108,6 +135,14 @@ for (const spot of spots) {
   if (!check.ok) {
     drop(spot, `coordinate rejected: ${check.reason}`);
     continue;
+  }
+  if (spot.country === 'Ireland') {
+    const region = irishRegion(spot, attested.get(spot.id));
+    if (!region) {
+      drop(spot, `not in a region surf-forecast lists: ${spot.community}`);
+      continue;
+    }
+    spot.community = region;
   }
   // A long beach's centroid sits in the dunes; the check moved it to the
   // shoreline. The original stays in the provenance so the move can be read.

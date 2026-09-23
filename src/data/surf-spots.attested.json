@@ -9,7 +9,7 @@
     "",
     "Stage 4 publishes a place only if it appears here."
   ],
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-23",
   "count": 994,
   "spots": [
     {
@@ -24,6 +24,7 @@
       "attestedAs": [
         "Aberavon"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.92
     },
     {
@@ -39,6 +40,7 @@
         "Aberdeen",
         "Aberdeen Beach"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.75
     },
     {
@@ -53,6 +55,7 @@
       "attestedAs": [
         "Abereiddy"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.09
     },
     {
@@ -66,6 +69,7 @@
       "attestedAs": [
         "Abermawr"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.35
     },
     {
@@ -79,6 +83,7 @@
       "attestedAs": [
         "Silver Strand (Malin Beg)"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.52
     },
     {
@@ -92,6 +97,7 @@
       "attestedAs": [
         "Trá Mór (Sheephaven Bay)"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.69
     },
     {
@@ -105,6 +111,7 @@
       "attestedAs": [
         "Annagh Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.27
     },
     {
@@ -122,6 +129,7 @@
         "Perfect Wave",
         "The Perfect Wave"
       ],
+      "referenceRegion": "Waterford",
       "referenceKm": 0.05
     },
     {
@@ -135,6 +143,7 @@
       "attestedAs": [
         "Ardtermon Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -149,6 +158,7 @@
       "attestedAs": [
         "Algajola"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.05
     },
     {
@@ -162,6 +172,7 @@
       "attestedAs": [
         "Sa Rapita"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.3
     },
     {
@@ -177,6 +188,7 @@
         "Playa de Arrietara",
         "Sopelana"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.31
     },
     {
@@ -191,6 +203,7 @@
         "Playa de Arrigunaga",
         "Punta Galea"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.47
     },
     {
@@ -204,6 +217,7 @@
       "attestedAs": [
         "Avon Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.17
     },
     {
@@ -217,6 +231,7 @@
       "attestedAs": [
         "Bajo el Medio"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.15
     },
     {
@@ -232,6 +247,7 @@
         "Bakio",
         "Pena Roja"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.43
     },
     {
@@ -245,6 +261,7 @@
       "attestedAs": [
         "Balbriggan"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.59
     },
     {
@@ -258,6 +275,7 @@
       "attestedAs": [
         "Ballinskelligs Bay"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 2.17
     },
     {
@@ -272,6 +290,7 @@
       "attestedAs": [
         "Ballybunion"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.1
     },
     {
@@ -286,6 +305,7 @@
       "attestedAs": [
         "Ballycastle"
       ],
+      "referenceRegion": "Antrim",
       "referenceKm": 0.13
     },
     {
@@ -299,6 +319,7 @@
       "attestedAs": [
         "Ballycotton"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 2.64
     },
     {
@@ -312,6 +333,7 @@
       "attestedAs": [
         "Ballydavid"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 1.11
     },
     {
@@ -325,6 +347,7 @@
       "attestedAs": [
         "Ballyheigue"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.97
     },
     {
@@ -339,6 +362,7 @@
       "attestedAs": [
         "Ballyhiernan Bay"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.28
     },
     {
@@ -352,6 +376,7 @@
       "attestedAs": [
         "Ballymastocker"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.94
     },
     {
@@ -367,6 +392,7 @@
         "Banna Beach",
         "Banna Strand"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.62
     },
     {
@@ -381,6 +407,7 @@
       "attestedAs": [
         "Bantham"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.29
     },
     {
@@ -397,6 +424,7 @@
         "Playa Barinatxe",
         "Playa de Aizkorri"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.08
     },
     {
@@ -410,6 +438,7 @@
       "attestedAs": [
         "Barley Cove"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 1.31
     },
     {
@@ -423,6 +452,7 @@
       "attestedAs": [
         "Barleycove Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -436,6 +466,7 @@
       "attestedAs": [
         "Barnageeragh Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.5
     },
     {
@@ -449,6 +480,7 @@
       "attestedAs": [
         "Barricane"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.48
     },
     {
@@ -462,6 +494,7 @@
       "attestedAs": [
         "Playa de Barrika"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.82
     },
     {
@@ -475,6 +508,7 @@
       "attestedAs": [
         "Beacon Cove"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 1.32
     },
     {
@@ -488,6 +522,7 @@
       "attestedAs": [
         "Nice"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.51
     },
     {
@@ -501,6 +536,7 @@
       "attestedAs": [
         "Belderra Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -514,6 +550,7 @@
       "attestedAs": [
         "Benllech Bay"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 1.22
     },
     {
@@ -527,6 +564,7 @@
       "attestedAs": [
         "Berck Sur Mer"
       ],
+      "referenceRegion": "Nord - Pas de Calais",
       "referenceKm": 0.61
     },
     {
@@ -541,6 +579,7 @@
         "Bertra Beach",
         "Bertra Beach (Murrisk)"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.38
     },
     {
@@ -556,6 +595,7 @@
         "Bigbury",
         "Bigbury Bay"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.1
     },
     {
@@ -569,6 +609,7 @@
       "attestedAs": [
         "Blackpool Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -583,6 +624,7 @@
         "Boobys",
         "Mother Ivey s Spot M"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.94
     },
     {
@@ -598,6 +640,7 @@
         "Boscombe",
         "Boscombe Pier"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.07
     },
     {
@@ -611,6 +654,7 @@
       "attestedAs": [
         "Bossiney Haven"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.23
     },
     {
@@ -626,6 +670,7 @@
         "Bournemouth",
         "Bournemouth Pier"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.38
     },
     {
@@ -639,6 +684,7 @@
       "attestedAs": [
         "Bovisand Bay"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 1.74
     },
     {
@@ -652,6 +698,7 @@
       "attestedAs": [
         "Murder Hole Beach"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.12
     },
     {
@@ -670,6 +717,7 @@
         "Mossies (Brandon Bay)",
         "Stoney Gap (Brandon Bay)"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.31
     },
     {
@@ -683,6 +731,7 @@
       "attestedAs": [
         "Branksome Dene Chine"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -696,6 +745,7 @@
       "attestedAs": [
         "Branscombe Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.4
     },
     {
@@ -709,6 +759,7 @@
       "attestedAs": [
         "Bray"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -722,6 +773,7 @@
       "attestedAs": [
         "Breckon"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.19
     },
     {
@@ -736,6 +788,7 @@
         "Brighton",
         "Brighton West Pier"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -749,6 +802,7 @@
       "attestedAs": [
         "Brittas Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -764,6 +818,7 @@
         "Broad Haven",
         "Broadhaven"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.32
     },
     {
@@ -778,6 +833,7 @@
       "attestedAs": [
         "Broadhaven South"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.11
     },
     {
@@ -792,6 +848,7 @@
       "attestedAs": [
         "Bucks Mills"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.1
     },
     {
@@ -805,6 +862,7 @@
       "attestedAs": [
         "Budleigh Salterton"
       ],
+      "referenceRegion": null,
       "referenceKm": 2.22
     },
     {
@@ -818,6 +876,7 @@
       "attestedAs": [
         "Bunatrahir Bay"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 1.36
     },
     {
@@ -833,6 +892,7 @@
         "Bundoran",
         "The Peak"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.81
     },
     {
@@ -846,6 +906,7 @@
       "attestedAs": [
         "Killadoon"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.46
     },
     {
@@ -859,6 +920,7 @@
       "attestedAs": [
         "Bunmahon"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.18
     },
     {
@@ -872,6 +934,7 @@
       "attestedAs": [
         "Burntisland"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -885,6 +948,7 @@
       "attestedAs": [
         "Caerfai Bay"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.39
     },
     {
@@ -898,6 +962,7 @@
       "attestedAs": [
         "Cala Agulla"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -911,6 +976,7 @@
       "attestedAs": [
         "Cala d'Alcaufar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -924,6 +990,7 @@
       "attestedAs": [
         "Cala Cantalar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.01
     },
     {
@@ -938,6 +1005,7 @@
       "attestedAs": [
         "Port Ginesta"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.9
     },
     {
@@ -951,6 +1019,7 @@
       "attestedAs": [
         "Playa del Descargador"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.2
     },
     {
@@ -964,6 +1033,7 @@
       "attestedAs": [
         "Cala Jondal"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -977,6 +1047,7 @@
       "attestedAs": [
         "Cala'n Forcat"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -990,6 +1061,7 @@
       "attestedAs": [
         "Cala Magre"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -1005,6 +1077,7 @@
         "Cala Mesquida",
         "Mallorca - Cala Mesquida"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.06
     },
     {
@@ -1020,6 +1093,7 @@
         "Cala Nova",
         "Ibiza - Cala Nova"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.08
     },
     {
@@ -1033,6 +1107,7 @@
       "attestedAs": [
         "Ibiza - Punta Xarraca"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 1.14
     },
     {
@@ -1048,6 +1123,7 @@
         "Caleta de Caballo",
         "Caleta de Cabello"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.27
     },
     {
@@ -1062,6 +1138,7 @@
       "attestedAs": [
         "Cotillo"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.42
     },
     {
@@ -1076,6 +1153,7 @@
       "attestedAs": [
         "Camber Sands"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.37
     },
     {
@@ -1089,6 +1167,7 @@
       "attestedAs": [
         "Cambo Sands"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.63
     },
     {
@@ -1102,6 +1181,7 @@
       "attestedAs": [
         "Campo dell Oro"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.39
     },
     {
@@ -1115,6 +1195,7 @@
       "attestedAs": [
         "Dooega"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.65
     },
     {
@@ -1130,6 +1211,7 @@
         "Canet Plage",
         "Canet Plage - Pont des Basses"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 1.44
     },
     {
@@ -1143,6 +1225,7 @@
       "attestedAs": [
         "Cap Blanc Nez"
       ],
+      "referenceRegion": "Nord - Pas de Calais",
       "referenceKm": 0.46
     },
     {
@@ -1156,6 +1239,7 @@
       "attestedAs": [
         "Cap Howard"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 1.72
     },
     {
@@ -1170,6 +1254,7 @@
       "attestedAs": [
         "Carbis Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.14
     },
     {
@@ -1184,6 +1269,7 @@
       "attestedAs": [
         "Pendower Beach"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.42
     },
     {
@@ -1197,6 +1283,7 @@
       "attestedAs": [
         "Carne Beach"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 0.14
     },
     {
@@ -1210,6 +1297,7 @@
       "attestedAs": [
         "Carnon"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.71
     },
     {
@@ -1223,6 +1311,7 @@
       "attestedAs": [
         "Carolles"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.45
     },
     {
@@ -1236,6 +1325,7 @@
       "attestedAs": [
         "Carrickfinn"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.47
     },
     {
@@ -1250,6 +1340,7 @@
       "attestedAs": [
         "Carrowmore"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.34
     },
     {
@@ -1263,6 +1354,7 @@
       "attestedAs": [
         "Carrownisky"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.87
     },
     {
@@ -1276,6 +1368,7 @@
       "attestedAs": [
         "Carskiey Bay"
       ],
+      "referenceRegion": "Kintyre",
       "referenceKm": 0.61
     },
     {
@@ -1289,6 +1382,7 @@
       "attestedAs": [
         "Castlerock"
       ],
+      "referenceRegion": "Londonderry",
       "referenceKm": 0.24
     },
     {
@@ -1303,6 +1397,7 @@
       "attestedAs": [
         "Caswell Bay"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.32
     },
     {
@@ -1320,6 +1415,7 @@
         "Cayton Bay Point",
         "Cayton Bay Pumphouse"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.18
     },
     {
@@ -1334,6 +1430,7 @@
       "attestedAs": [
         "Challaborough"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.36
     },
     {
@@ -1348,6 +1445,7 @@
       "attestedAs": [
         "Chapel Porth"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.32
     },
     {
@@ -1361,6 +1459,7 @@
       "attestedAs": [
         "Chesil Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.83
     },
     {
@@ -1374,6 +1473,7 @@
       "attestedAs": [
         "Church Cove"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.27
     },
     {
@@ -1387,6 +1487,7 @@
       "attestedAs": [
         "Clonea Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.2
     },
     {
@@ -1400,6 +1501,7 @@
       "attestedAs": [
         "Clonmass Bay (Ards)"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.88
     },
     {
@@ -1413,6 +1515,7 @@
       "attestedAs": [
         "Coatham Sands"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 1.48
     },
     {
@@ -1427,6 +1530,7 @@
       "attestedAs": [
         "Coldingham Bay"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.06
     },
     {
@@ -1440,6 +1544,7 @@
       "attestedAs": [
         "Combe Martin"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.31
     },
     {
@@ -1455,6 +1560,7 @@
         "Combesgate",
         "Coombesgate Beach"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.17
     },
     {
@@ -1470,6 +1576,7 @@
         "Compton",
         "Compton Bay"
       ],
+      "referenceRegion": "Isle of Wight",
       "referenceKm": 0.36
     },
     {
@@ -1483,6 +1590,7 @@
       "attestedAs": [
         "Concha de Artedo"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.46
     },
     {
@@ -1496,6 +1604,7 @@
       "attestedAs": [
         "Nauzan"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 1.02
     },
     {
@@ -1510,6 +1619,7 @@
       "attestedAs": [
         "Coney Beach"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.29
     },
     {
@@ -1525,6 +1635,7 @@
         "Constantine",
         "Constantine Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.41
     },
     {
@@ -1538,6 +1649,7 @@
       "attestedAs": [
         "Coumeenole"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.73
     },
     {
@@ -1551,6 +1663,7 @@
       "attestedAs": [
         "Courtown"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 0.55
     },
     {
@@ -1565,6 +1678,7 @@
       "attestedAs": [
         "Crantock"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.39
     },
     {
@@ -1578,6 +1692,7 @@
       "attestedAs": [
         "Green Point (Cream Point)"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.35
     },
     {
@@ -1593,6 +1708,7 @@
         "Bude Crooklets",
         "Crooklets-Bude"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.02
     },
     {
@@ -1607,6 +1723,7 @@
         "Carrowinskey",
         "Carrowniskey"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.42
     },
     {
@@ -1623,6 +1740,7 @@
         "Croyde Reef",
         "Downend Point"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.02
     },
     {
@@ -1637,6 +1755,7 @@
       "attestedAs": [
         "Culdaff"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.63
     },
     {
@@ -1650,6 +1769,7 @@
       "attestedAs": [
         "Cullercoats"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -1663,6 +1783,7 @@
       "attestedAs": [
         "Curracloe"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.34
     },
     {
@@ -1676,6 +1797,7 @@
       "attestedAs": [
         "Dawlish"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.5
     },
     {
@@ -1690,6 +1812,7 @@
       "attestedAs": [
         "Dawlish Warren"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.97
     },
     {
@@ -1705,6 +1828,7 @@
         "Daymer Bay",
         "Daymer Point"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.05
     },
     {
@@ -1719,6 +1843,7 @@
       "attestedAs": [
         "Deba"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.62
     },
     {
@@ -1732,6 +1857,7 @@
       "attestedAs": [
         "Derrynane"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 1.46
     },
     {
@@ -1745,6 +1871,7 @@
       "attestedAs": [
         "Red Strand (Dirk Bay)"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.85
     },
     {
@@ -1758,6 +1885,7 @@
       "attestedAs": [
         "Dublin Area"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.39
     },
     {
@@ -1773,6 +1901,7 @@
         "Donabate",
         "Donabate beach"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 1.11
     },
     {
@@ -1788,6 +1917,7 @@
         "Dooagh",
         "Dooagh Strand"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.1
     },
     {
@@ -1801,6 +1931,7 @@
       "attestedAs": [
         "Doogort"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.52
     },
     {
@@ -1816,6 +1947,7 @@
         "Crab Island",
         "Doolin Point"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.47
     },
     {
@@ -1829,6 +1961,7 @@
       "attestedAs": [
         "Doonbeg Castle"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.46
     },
     {
@@ -1842,6 +1975,7 @@
       "attestedAs": [
         "Dooniver"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.23
     },
     {
@@ -1855,6 +1989,7 @@
       "attestedAs": [
         "Doonloughan"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.62
     },
     {
@@ -1868,6 +2003,7 @@
       "attestedAs": [
         "Doughmore Bay Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.62
     },
     {
@@ -1881,6 +2017,7 @@
       "attestedAs": [
         "Downderry"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.37
     },
     {
@@ -1894,6 +2031,7 @@
       "attestedAs": [
         "Drumnacraig Beach"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.46
     },
     {
@@ -1907,6 +2045,7 @@
       "attestedAs": [
         "Falcarragh Beach"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.48
     },
     {
@@ -1922,6 +2061,7 @@
         "Duckpool",
         "Duckpool Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.06
     },
     {
@@ -1936,6 +2076,7 @@
         "Corralejo Beach",
         "Flag Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.88
     },
     {
@@ -1951,6 +2092,7 @@
         "Dunaverty",
         "Dunaverty Bay"
       ],
+      "referenceRegion": "Kintyre",
       "referenceKm": 0.71
     },
     {
@@ -1966,6 +2108,7 @@
         "Dunmoran",
         "Dunmoran Strand"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.24
     },
     {
@@ -1979,6 +2122,7 @@
       "attestedAs": [
         "Dunree Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -1992,6 +2136,7 @@
       "attestedAs": [
         "Durdle Door"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.32
     },
     {
@@ -2006,6 +2151,7 @@
         "Easky Left",
         "Easky Right"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.83
     },
     {
@@ -2019,6 +2165,7 @@
       "attestedAs": [
         "East Sands Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -2034,6 +2181,7 @@
         "Portrush East Strand",
         "Portrush-East Strand"
       ],
+      "referenceRegion": "Antrim",
       "referenceKm": 0.88
     },
     {
@@ -2049,6 +2197,7 @@
         "El Burro",
         "El Burro (Glasbeach)"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.28
     },
     {
@@ -2064,6 +2213,7 @@
         "Hierro",
         "The Bubble (Hierro Right)"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.65
     },
     {
@@ -2077,6 +2227,7 @@
       "attestedAs": [
         "Playa del Tarajal"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -2090,6 +2241,7 @@
       "attestedAs": [
         "Playa del Torres"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.54
     },
     {
@@ -2103,6 +2255,7 @@
       "attestedAs": [
         "Elly Bay West"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.32
     },
     {
@@ -2118,6 +2271,7 @@
         "Enniscrone",
         "Inishcrone"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.35
     },
     {
@@ -2131,6 +2285,7 @@
       "attestedAs": [
         "Vanthrax"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 1.05
     },
     {
@@ -2146,6 +2301,7 @@
         "Ereaga",
         "Playa de Ereaga"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.02
     },
     {
@@ -2159,6 +2315,7 @@
       "attestedAs": [
         "Erretegia"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.46
     },
     {
@@ -2173,6 +2330,7 @@
       "attestedAs": [
         "Erromardie"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.2
     },
     {
@@ -2186,6 +2344,7 @@
       "attestedAs": [
         "Exmouth"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.72
     },
     {
@@ -2200,6 +2359,7 @@
       "attestedAs": [
         "Fairlight"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 2.74
     },
     {
@@ -2213,6 +2373,7 @@
       "attestedAs": [
         "Fanad Head Reef"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.73
     },
     {
@@ -2228,6 +2389,7 @@
         "Fanore",
         "Fanore Beach"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.09
     },
     {
@@ -2243,6 +2405,7 @@
         "Filey",
         "Filey Bay"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.38
     },
     {
@@ -2263,6 +2426,7 @@
         "South Fistral Beach",
         "The Cribber"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.24
     },
     {
@@ -2276,6 +2440,7 @@
       "attestedAs": [
         "Five Finger Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.95
     },
     {
@@ -2289,6 +2454,7 @@
       "attestedAs": [
         "Frainslake Sands"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.5
     },
     {
@@ -2302,6 +2468,7 @@
       "attestedAs": [
         "Fraisthorpe"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 1.11
     },
     {
@@ -2315,6 +2482,7 @@
       "attestedAs": [
         "Fréjus"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.31
     },
     {
@@ -2330,6 +2498,7 @@
         "Freshwater",
         "Freshwater Bay"
       ],
+      "referenceRegion": "Isle of Wight",
       "referenceKm": 0.07
     },
     {
@@ -2345,6 +2514,7 @@
         "Freshwater East",
         "Freshwater east"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.25
     },
     {
@@ -2359,6 +2529,7 @@
       "attestedAs": [
         "Freshwater West"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.37
     },
     {
@@ -2372,6 +2543,7 @@
       "attestedAs": [
         "Garretstown"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -2385,6 +2557,7 @@
       "attestedAs": [
         "Garrettstown"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 1.77
     },
     {
@@ -2400,6 +2573,7 @@
         "Garrywilliam Point",
         "Garywilliam Point"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.38
     },
     {
@@ -2413,6 +2587,7 @@
       "attestedAs": [
         "Playa de Gaztetape"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.75
     },
     {
@@ -2427,6 +2602,7 @@
       "attestedAs": [
         "Generosa"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.86
     },
     {
@@ -2440,6 +2616,7 @@
       "attestedAs": [
         "Gorrondatxa"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -2455,6 +2632,7 @@
         "Biarritz",
         "Biarritz - Grande Plage"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.11
     },
     {
@@ -2468,6 +2646,7 @@
       "attestedAs": [
         "Gavres"
       ],
+      "referenceRegion": null,
       "referenceKm": 3.11
     },
     {
@@ -2483,6 +2662,7 @@
         "La Baie Des Sables",
         "Les Sables-D'Olonne"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.22
     },
     {
@@ -2496,6 +2676,7 @@
       "attestedAs": [
         "Le Lavandou"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.55
     },
     {
@@ -2509,6 +2690,7 @@
       "attestedAs": [
         "Great Western"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -2522,6 +2704,7 @@
       "attestedAs": [
         "Deolen"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 1.52
     },
     {
@@ -2535,6 +2718,7 @@
       "attestedAs": [
         "Grunta Beach"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.4
     },
     {
@@ -2548,6 +2732,7 @@
       "attestedAs": [
         "Gubnahardia Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.24
     },
     {
@@ -2563,6 +2748,7 @@
         "Gullane",
         "Gullane Bay"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.5
     },
     {
@@ -2579,6 +2765,7 @@
         "Gwendrez Left",
         "Plage de Gwendrez"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.08
     },
     {
@@ -2592,6 +2779,7 @@
       "attestedAs": [
         "Gwenver"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -2605,6 +2793,7 @@
       "attestedAs": [
         "Gyllyngvase Beach"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.7
     },
     {
@@ -2618,6 +2807,7 @@
       "attestedAs": [
         "St Ives Harbour Wall"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.4
     },
     {
@@ -2633,6 +2823,7 @@
         "Harlyn",
         "Newtrain Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.22
     },
     {
@@ -2649,6 +2840,7 @@
         "Guethary - Les Alcyons/Avalanche",
         "Les Alcyons"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.31
     },
     {
@@ -2663,6 +2855,7 @@
       "attestedAs": [
         "Polzeath"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.31
     },
     {
@@ -2676,6 +2869,7 @@
       "attestedAs": [
         "Hele Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -2689,6 +2883,7 @@
       "attestedAs": [
         "Herne Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.93
     },
     {
@@ -2702,6 +2897,7 @@
       "attestedAs": [
         "Hive Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -2717,6 +2913,7 @@
         "Holywell Bay",
         "Penhale"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.07
     },
     {
@@ -2731,6 +2928,7 @@
       "attestedAs": [
         "Hornsea"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.33
     },
     {
@@ -2748,6 +2946,7 @@
         "Ilbaritz - Bora Bora",
         "Ilbaritz - Edouard VII"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.7
     },
     {
@@ -2763,6 +2962,7 @@
         "Inch (Whitegate)",
         "Inch Beach"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.11
     },
     {
@@ -2778,6 +2978,7 @@
         "Inch Reef",
         "Inch Reefs"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.73
     },
     {
@@ -2792,6 +2993,7 @@
       "attestedAs": [
         "Inch Strand"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.49
     },
     {
@@ -2805,6 +3007,7 @@
       "attestedAs": [
         "Inchydoney"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.58
     },
     {
@@ -2818,6 +3021,7 @@
       "attestedAs": [
         "Zumaya (Playa de Itxurun)"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.07
     },
     {
@@ -2832,6 +3036,7 @@
       "attestedAs": [
         "Joss Bay"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.13
     },
     {
@@ -2845,6 +3050,7 @@
       "attestedAs": [
         "Karramarro"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 1.21
     },
     {
@@ -2858,6 +3064,7 @@
       "attestedAs": [
         "Playa de karraspio"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 1.21
     },
     {
@@ -2873,6 +3080,7 @@
         "Keel",
         "Keel Beach"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.53
     },
     {
@@ -2886,6 +3094,7 @@
       "attestedAs": [
         "Keem Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -2899,6 +3108,7 @@
       "attestedAs": [
         "Kenfig Sands"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.23
     },
     {
@@ -2913,6 +3123,7 @@
       "attestedAs": [
         "Kennack Sands"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.3
     },
     {
@@ -2926,6 +3137,7 @@
       "attestedAs": [
         "Kenneggy Cove"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.83
     },
     {
@@ -2940,6 +3152,7 @@
       "attestedAs": [
         "Kilcummin Harbour"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.32
     },
     {
@@ -2953,6 +3166,7 @@
       "attestedAs": [
         "Kilcummin"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 1.73
     },
     {
@@ -2966,6 +3180,7 @@
       "attestedAs": [
         "Dunfanaghy (Killahoey Beach)"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.54
     },
     {
@@ -2979,6 +3194,7 @@
       "attestedAs": [
         "Killiney Bay"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 0.21
     },
     {
@@ -2994,6 +3210,7 @@
         "Kilmurren",
         "Kilmurren Cove"
       ],
+      "referenceRegion": "Waterford",
       "referenceKm": 0.07
     },
     {
@@ -3007,6 +3224,7 @@
       "attestedAs": [
         "King Edwards Bay"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.07
     },
     {
@@ -3020,6 +3238,7 @@
       "attestedAs": [
         "Kinghorn"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.16
     },
     {
@@ -3033,6 +3252,7 @@
       "attestedAs": [
         "Kinnagoe Bay"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.03
     },
     {
@@ -3046,6 +3266,7 @@
       "attestedAs": [
         "Kontxa / La Concha"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -3061,6 +3282,7 @@
         "Caravelle",
         "La Caravelle"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.28
     },
     {
@@ -3074,6 +3296,7 @@
       "attestedAs": [
         "Spew Pits"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.77
     },
     {
@@ -3087,6 +3310,7 @@
       "attestedAs": [
         "La Courance"
       ],
+      "referenceRegion": "Loire Atlantique",
       "referenceKm": 0.6
     },
     {
@@ -3100,6 +3324,7 @@
       "attestedAs": [
         "Derecha de los Alemanes"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 1.18
     },
     {
@@ -3113,6 +3338,7 @@
       "attestedAs": [
         "La Grande Cote"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.94
     },
     {
@@ -3126,6 +3352,7 @@
       "attestedAs": [
         "Ile d'Oleron - St Trojan"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 1.05
     },
     {
@@ -3141,6 +3368,7 @@
         "La Lette Blanche (Vieille Saint Girons)",
         "Messanges"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.17
     },
     {
@@ -3154,6 +3382,7 @@
       "attestedAs": [
         "La Machacona"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 1.34
     },
     {
@@ -3167,6 +3396,7 @@
       "attestedAs": [
         "Lackan Bay"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.33
     },
     {
@@ -3181,6 +3411,7 @@
       "attestedAs": [
         "Lafitenia"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.27
     },
     {
@@ -3196,6 +3427,7 @@
         "Laga",
         "Playa de Laga"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.09
     },
     {
@@ -3212,6 +3444,7 @@
         "Lahinch Left",
         "Lahinch Strand"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.93
     },
     {
@@ -3225,6 +3458,7 @@
       "attestedAs": [
         "Playa de Laida"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.4
     },
     {
@@ -3238,6 +3472,7 @@
       "attestedAs": [
         "Mundaka"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.59
     },
     {
@@ -3251,6 +3486,7 @@
       "attestedAs": [
         "Lancing Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -3264,6 +3500,7 @@
       "attestedAs": [
         "South Lancing"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.19
     },
     {
@@ -3281,6 +3518,7 @@
         "Langland Point",
         "The Boiler"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.23
     },
     {
@@ -3295,6 +3533,7 @@
       "attestedAs": [
         "Le Gurp"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.18
     },
     {
@@ -3308,6 +3547,7 @@
       "attestedAs": [
         "Le Liouquet"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.32
     },
     {
@@ -3321,6 +3561,7 @@
       "attestedAs": [
         "Le Phare du Groin du Cou"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.47
     },
     {
@@ -3334,6 +3575,7 @@
       "attestedAs": [
         "Biscarosse Plage"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.41
     },
     {
@@ -3347,6 +3589,7 @@
       "attestedAs": [
         "Leamore Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.4
     },
     {
@@ -3360,6 +3603,7 @@
       "attestedAs": [
         "Leenan Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.95
     },
     {
@@ -3373,6 +3617,7 @@
       "attestedAs": [
         "Les Amiets"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.23
     },
     {
@@ -3388,6 +3633,7 @@
         "Sainte Barbe",
         "St Jean de Luz - Sainte Barbe"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.25
     },
     {
@@ -3403,6 +3649,7 @@
         "Roches Noires",
         "Roches-Noires"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 0.77
     },
     {
@@ -3417,6 +3664,7 @@
       "attestedAs": [
         "Littlehampton"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.06
     },
     {
@@ -3434,6 +3682,7 @@
         "Llangennith",
         "Sheeps Jaw"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.43
     },
     {
@@ -3448,6 +3697,7 @@
       "attestedAs": [
         "Llangrannog"
       ],
+      "referenceRegion": "Mid Wales",
       "referenceKm": 0.02
     },
     {
@@ -3461,6 +3711,7 @@
       "attestedAs": [
         "Traeth Lligwy"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 0.19
     },
     {
@@ -3477,6 +3728,7 @@
         "Longsands Bay",
         "Tynemouth Longsands"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.25
     },
     {
@@ -3490,6 +3742,7 @@
       "attestedAs": [
         "Lossiemouth"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.34
     },
     {
@@ -3505,6 +3758,7 @@
         "Lossit Bay",
         "Lossit Bay (Islay)"
       ],
+      "referenceRegion": "Inner Hebrides",
       "referenceKm": 0.27
     },
     {
@@ -3518,6 +3772,7 @@
       "attestedAs": [
         "Loughros Beg"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 3.08
     },
     {
@@ -3531,6 +3786,7 @@
       "attestedAs": [
         "Lulworth Cove"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -3545,6 +3801,7 @@
       "attestedAs": [
         "Lunan Bay"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.36
     },
     {
@@ -3559,6 +3816,7 @@
       "attestedAs": [
         "Lusty Glaze"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.17
     },
     {
@@ -3574,6 +3832,7 @@
         "Machrihanish",
         "Westport"
       ],
+      "referenceRegion": "Kintyre",
       "referenceKm": 1.22
     },
     {
@@ -3589,6 +3848,7 @@
         "Maenporth",
         "Maenporth Beach"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.29
     },
     {
@@ -3602,6 +3862,7 @@
       "attestedAs": [
         "Maghera Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 1.47
     },
     {
@@ -3617,6 +3878,7 @@
         "Magheramore Beach",
         "Maghermore"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 0.15
     },
     {
@@ -3633,6 +3895,7 @@
         "Magheraroarty Reef",
         "Magheraroarty Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 1.09
     },
     {
@@ -3646,6 +3909,7 @@
       "attestedAs": [
         "Maghery"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 1.11
     },
     {
@@ -3659,6 +3923,7 @@
       "attestedAs": [
         "Benone Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 3.46
     },
     {
@@ -3674,6 +3939,7 @@
         "Plage de Mayarco",
         "Plage de Mayarko"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.2
     },
     {
@@ -3687,6 +3953,7 @@
       "attestedAs": [
         "Malin Mor Left"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.39
     },
     {
@@ -3700,6 +3967,7 @@
       "attestedAs": [
         "North Malin"
       ],
+      "referenceRegion": null,
       "referenceKm": 5.98
     },
     {
@@ -3714,6 +3982,7 @@
       "attestedAs": [
         "Manorbier"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.05
     },
     {
@@ -3727,6 +3996,7 @@
       "attestedAs": [
         "Marble Hill Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.78
     },
     {
@@ -3740,6 +4010,7 @@
       "attestedAs": [
         "Playa del Barco Perdido"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.64
     },
     {
@@ -3753,6 +4024,7 @@
       "attestedAs": [
         "Main Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.75
     },
     {
@@ -3767,6 +4039,7 @@
       "attestedAs": [
         "Marloes Sands"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.21
     },
     {
@@ -3781,6 +4054,7 @@
       "attestedAs": [
         "Mawgan Porth"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.18
     },
     {
@@ -3795,6 +4069,7 @@
       "attestedAs": [
         "Menakoz"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.2
     },
     {
@@ -3808,6 +4083,7 @@
       "attestedAs": [
         "Merrion Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.65
     },
     {
@@ -3822,6 +4098,7 @@
       "attestedAs": [
         "Millendreath"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.02
     },
     {
@@ -3835,6 +4112,7 @@
       "attestedAs": [
         "Playa de Montalbo"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 2.18
     },
     {
@@ -3848,6 +4126,7 @@
       "attestedAs": [
         "Montrose"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 2.15
     },
     {
@@ -3862,6 +4141,7 @@
       "attestedAs": [
         "Mothecombe"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.3
     },
     {
@@ -3875,6 +4155,7 @@
       "attestedAs": [
         "Muckros"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.82
     },
     {
@@ -3888,6 +4169,7 @@
       "attestedAs": [
         "Mullaghderg Beach"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.56
     },
     {
@@ -3903,6 +4185,7 @@
         "Mullaghmore",
         "Mullaghmore Strand"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.72
     },
     {
@@ -3917,6 +4200,7 @@
         "Mullranny Pier",
         "Mulranny - Pink Rock"
       ],
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 1.05
     },
     {
@@ -3931,6 +4215,7 @@
       "attestedAs": [
         "Murkle Point"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.5
     },
     {
@@ -3944,6 +4229,7 @@
       "attestedAs": [
         "Church Point-Newbiggin"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.64
     },
     {
@@ -3957,6 +4243,7 @@
       "attestedAs": [
         "Newburgh"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 1.19
     },
     {
@@ -3971,6 +4258,7 @@
       "attestedAs": [
         "Newgale"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.48
     },
     {
@@ -3985,6 +4273,7 @@
       "attestedAs": [
         "Newport"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.37
     },
     {
@@ -3998,6 +4287,7 @@
       "attestedAs": [
         "Tenby (North Beach)"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.46
     },
     {
@@ -4013,6 +4303,7 @@
         "Northcott",
         "Northcott Mouth"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.04
     },
     {
@@ -4026,6 +4317,7 @@
       "attestedAs": [
         "Playa de Sabon"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.62
     },
     {
@@ -4039,6 +4331,7 @@
       "attestedAs": [
         "Playa Ojo de Garza"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.08
     },
     {
@@ -4052,6 +4345,7 @@
       "attestedAs": [
         "Oldhead"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.33
     },
     {
@@ -4065,6 +4359,7 @@
       "attestedAs": [
         "Oldshoremore"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.22
     },
     {
@@ -4078,6 +4373,7 @@
       "attestedAs": [
         "Ondarreta"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.26
     },
     {
@@ -4092,6 +4388,7 @@
         "Labenne Ocean",
         "Ondres Plage"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.32
     },
     {
@@ -4105,6 +4402,7 @@
       "attestedAs": [
         "Orio"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 1.42
     },
     {
@@ -4120,6 +4418,7 @@
         "Ownachincha",
         "Ownahincha"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.55
     },
     {
@@ -4135,6 +4434,7 @@
         "Oxwich Bay",
         "Oxwich Point"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.18
     },
     {
@@ -4148,6 +4448,7 @@
       "attestedAs": [
         "Oysterhaven"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.66
     },
     {
@@ -4162,6 +4463,7 @@
       "attestedAs": [
         "Paignton"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.16
     },
     {
@@ -4175,6 +4477,7 @@
       "attestedAs": [
         "Palavas - La Mairie"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 1.02
     },
     {
@@ -4188,6 +4491,7 @@
       "attestedAs": [
         "Palavas les Flots"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 0.71
     },
     {
@@ -4201,6 +4505,7 @@
       "attestedAs": [
         "Par Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -4216,6 +4521,7 @@
         "Guethary - Parlementia",
         "Parlementia"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.31
     },
     {
@@ -4230,6 +4536,7 @@
       "attestedAs": [
         "Pease Bay"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.07
     },
     {
@@ -4243,6 +4550,7 @@
       "attestedAs": [
         "Pendine"
       ],
+      "referenceRegion": null,
       "referenceKm": 4.2
     },
     {
@@ -4257,6 +4565,7 @@
       "attestedAs": [
         "Penfoul"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.42
     },
     {
@@ -4271,6 +4580,7 @@
       "attestedAs": [
         "Pentewan"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.15
     },
     {
@@ -4285,6 +4595,7 @@
       "attestedAs": [
         "Perran Sands"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.54
     },
     {
@@ -4299,6 +4610,7 @@
       "attestedAs": [
         "Perranuthnoe"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.11
     },
     {
@@ -4312,6 +4624,7 @@
       "attestedAs": [
         "Pettycur"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -4325,6 +4638,7 @@
       "attestedAs": [
         "Phingask"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 1.42
     },
     {
@@ -4339,6 +4653,7 @@
       "attestedAs": [
         "Pinarellu"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.77
     },
     {
@@ -4352,6 +4667,7 @@
       "attestedAs": [
         "L'Escale Borely"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.81
     },
     {
@@ -4367,6 +4683,7 @@
         "Carcans",
         "Carcans Plage"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.9
     },
     {
@@ -4380,6 +4697,7 @@
       "attestedAs": [
         "L'Estacade"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.15
     },
     {
@@ -4395,6 +4713,7 @@
         "Lacanau",
         "Lacanau Ocean"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.07
     },
     {
@@ -4408,6 +4727,7 @@
       "attestedAs": [
         "Hossegor - La Centrale"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.56
     },
     {
@@ -4421,6 +4741,7 @@
       "attestedAs": [
         "Hourtin Plage"
       ],
+      "referenceRegion": null,
       "referenceKm": 4.92
     },
     {
@@ -4435,6 +4756,7 @@
       "attestedAs": [
         "Le Porge"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.31
     },
     {
@@ -4450,6 +4772,7 @@
         "Agosta",
         "Plage d'Agosta"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.38
     },
     {
@@ -4463,6 +4786,7 @@
       "attestedAs": [
         "Anse Cafard"
       ],
+      "referenceRegion": "Martinique",
       "referenceKm": 1.11
     },
     {
@@ -4476,6 +4800,7 @@
       "attestedAs": [
         "Antigues Cape"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.56
     },
     {
@@ -4489,6 +4814,7 @@
       "attestedAs": [
         "L'Arene Cros"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.17
     },
     {
@@ -4502,6 +4828,7 @@
       "attestedAs": [
         "Argelès-Sur-Mer"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 0.47
     },
     {
@@ -4515,6 +4842,7 @@
       "attestedAs": [
         "Arone"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.31
     },
     {
@@ -4528,6 +4856,7 @@
       "attestedAs": [
         "Audreselles"
       ],
+      "referenceRegion": "Nord - Pas de Calais",
       "referenceKm": 0.27
     },
     {
@@ -4542,6 +4871,7 @@
       "attestedAs": [
         "Biville"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.24
     },
     {
@@ -4562,6 +4892,7 @@
         "Les Aigrettes Right",
         "Three Rocks"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 0.18
     },
     {
@@ -4575,6 +4906,7 @@
       "attestedAs": [
         "Boutrouilles"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.69
     },
     {
@@ -4590,6 +4922,7 @@
         "Bretteville",
         "Plage de Bretteville"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.37
     },
     {
@@ -4605,6 +4938,7 @@
         "L'Arquet",
         "La Couronne"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.33
     },
     {
@@ -4619,6 +4953,7 @@
         "Le Port",
         "St Jean de Luz - Ciboure"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.24
     },
     {
@@ -4632,6 +4967,7 @@
       "attestedAs": [
         "Deauville"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.42
     },
     {
@@ -4648,6 +4984,7 @@
         "Belle Ile - Les Donnants",
         "Donnant"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.46
     },
     {
@@ -4662,6 +4999,7 @@
       "attestedAs": [
         "Fabregas"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.01
     },
     {
@@ -4675,6 +5013,7 @@
       "attestedAs": [
         "Farinole"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.18
     },
     {
@@ -4689,6 +5028,7 @@
       "attestedAs": [
         "Gigaro"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.03
     },
     {
@@ -4703,6 +5043,7 @@
         "Goulien",
         "Kersiguenno"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.64
     },
     {
@@ -4716,6 +5057,7 @@
       "attestedAs": [
         "Kerhillio"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.47
     },
     {
@@ -4729,6 +5071,7 @@
       "attestedAs": [
         "Baie de Douarnenez"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.79
     },
     {
@@ -4742,6 +5085,7 @@
       "attestedAs": [
         "Plage L'Aber"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.36
     },
     {
@@ -4756,6 +5100,7 @@
         "Almanarre",
         "Almanarre - Le Petit Port"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.94
     },
     {
@@ -4769,6 +5114,7 @@
       "attestedAs": [
         "Anse A La Barque"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.63
     },
     {
@@ -4783,6 +5129,7 @@
       "attestedAs": [
         "Ceron"
       ],
+      "referenceRegion": "Martinique",
       "referenceKm": 0.26
     },
     {
@@ -4798,6 +5145,7 @@
         "Anse Couleuvre",
         "Anse couleuvre"
       ],
+      "referenceRegion": "Martinique",
       "referenceKm": 0.35
     },
     {
@@ -4814,6 +5162,7 @@
         "Le Rozel",
         "Sciotot"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.37
     },
     {
@@ -4827,6 +5176,7 @@
       "attestedAs": [
         "Anse Trabaud"
       ],
+      "referenceRegion": "Martinique",
       "referenceKm": 0.19
     },
     {
@@ -4840,6 +5190,7 @@
       "attestedAs": [
         "Cassis - Plage de l'Arène"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.23
     },
     {
@@ -4855,6 +5206,7 @@
         "L' Aubraie",
         "L'Aubraie"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.27
     },
     {
@@ -4870,6 +5222,7 @@
         "L'Ermitage",
         "St Brevin l'Ermitage"
       ],
+      "referenceRegion": "Loire Atlantique",
       "referenceKm": 0.35
     },
     {
@@ -4883,6 +5236,7 @@
       "attestedAs": [
         "Lespecier-Plage"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.24
     },
     {
@@ -4898,6 +5252,7 @@
         "Etang-Sale",
         "Etang-Sale-les-Bains"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 0.56
     },
     {
@@ -4911,6 +5266,7 @@
       "attestedAs": [
         "L'Hippodrome"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.8
     },
     {
@@ -4924,6 +5280,7 @@
       "attestedAs": [
         "L'Horizon"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.89
     },
     {
@@ -4939,6 +5296,7 @@
         "Anglet",
         "Anglet - L'Ocean"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.16
     },
     {
@@ -4954,6 +5312,7 @@
         "L'Ostriconi",
         "Ostriconi"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.26
     },
     {
@@ -4967,6 +5326,7 @@
       "attestedAs": [
         "Moliets-Plage"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.57
     },
     {
@@ -4980,6 +5340,7 @@
       "attestedAs": [
         "La Barre"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.4
     },
     {
@@ -4993,6 +5354,7 @@
       "attestedAs": [
         "La Chambrette"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.18
     },
     {
@@ -5006,6 +5368,7 @@
       "attestedAs": [
         "La Coudoulière"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.49
     },
     {
@@ -5019,6 +5382,7 @@
       "attestedAs": [
         "Tarnos - La Digue"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.34
     },
     {
@@ -5032,6 +5396,7 @@
       "attestedAs": [
         "La Faviere"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.11
     },
     {
@@ -5045,6 +5410,7 @@
       "attestedAs": [
         "Galiote"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.56
     },
     {
@@ -5058,6 +5424,7 @@
       "attestedAs": [
         "La Garde Guerin"
       ],
+      "referenceRegion": "Ile et Vilaine - Brittany",
       "referenceKm": 1.31
     },
     {
@@ -5071,6 +5438,7 @@
       "attestedAs": [
         "La Garonne"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.55
     },
     {
@@ -5084,6 +5452,7 @@
       "attestedAs": [
         "La Garonne"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.77
     },
     {
@@ -5098,6 +5467,7 @@
       "attestedAs": [
         "La Govelle"
       ],
+      "referenceRegion": "Loire Atlantique",
       "referenceKm": 0.1
     },
     {
@@ -5113,6 +5483,7 @@
         "Hossegor - La Graviere",
         "La Graviere"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.84
     },
     {
@@ -5126,6 +5497,7 @@
       "attestedAs": [
         "Plouharnel La Guerite Tata Beach"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.71
     },
     {
@@ -5139,6 +5511,7 @@
       "attestedAs": [
         "La Lagune"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 4.01
     },
     {
@@ -5152,6 +5525,7 @@
       "attestedAs": [
         "Ilbaritz - Marbella"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.37
     },
     {
@@ -5165,6 +5539,7 @@
       "attestedAs": [
         "La Nartelle"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.42
     },
     {
@@ -5179,6 +5554,7 @@
       "attestedAs": [
         "La Palue"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.16
     },
     {
@@ -5192,6 +5568,7 @@
       "attestedAs": [
         "La Perle"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.14
     },
     {
@@ -5208,6 +5585,7 @@
         "Anglet - Le Furoncle",
         "Boucau"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.34
     },
     {
@@ -5224,6 +5602,7 @@
         "Chambre d'Amour",
         "Le VVF"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.12
     },
     {
@@ -5240,6 +5619,7 @@
         "Capbreton - La Piste",
         "Mongrels"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.14
     },
     {
@@ -5253,6 +5633,7 @@
       "attestedAs": [
         "La Pointe du Grignon"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -5266,6 +5647,7 @@
       "attestedAs": [
         "La Cote Sauvage - La Pointe Espagnole"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 1.08
     },
     {
@@ -5281,6 +5663,7 @@
         "Dead Zone",
         "La Salie"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.57
     },
     {
@@ -5295,6 +5678,7 @@
       "attestedAs": [
         "La Sauzaie"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.8
     },
     {
@@ -5308,6 +5692,7 @@
       "attestedAs": [
         "La Terriere"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.17
     },
     {
@@ -5322,6 +5707,7 @@
       "attestedAs": [
         "La Torche"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.36
     },
     {
@@ -5335,6 +5721,7 @@
       "attestedAs": [
         "La Torchere"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.54
     },
     {
@@ -5349,6 +5736,7 @@
       "attestedAs": [
         "Longchamps"
       ],
+      "referenceRegion": "Ile et Vilaine - Brittany",
       "referenceKm": 0.39
     },
     {
@@ -5362,6 +5750,7 @@
       "attestedAs": [
         "Lostmarc'h"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.45
     },
     {
@@ -5375,6 +5764,7 @@
       "attestedAs": [
         "Lozari Beach"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.53
     },
     {
@@ -5388,6 +5778,7 @@
       "attestedAs": [
         "La Marina"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.34
     },
     {
@@ -5403,6 +5794,7 @@
         "Anglet - Marinella",
         "Marinella"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.18
     },
     {
@@ -5416,6 +5808,7 @@
       "attestedAs": [
         "Paulilles"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.44
     },
     {
@@ -5432,6 +5825,7 @@
         "Anse de Pen-Hat",
         "Pen-Hat"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.47
     },
     {
@@ -5445,6 +5839,7 @@
       "attestedAs": [
         "Penhors"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.46
     },
     {
@@ -5458,6 +5853,7 @@
       "attestedAs": [
         "Pentrez Plage"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 1.34
     },
     {
@@ -5473,6 +5869,7 @@
         "Petit Havre",
         "Petit havre"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.2
     },
     {
@@ -5487,6 +5884,7 @@
       "attestedAs": [
         "Pontaillac"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.09
     },
     {
@@ -5502,6 +5900,7 @@
         "Pors Ar Vag",
         "Pors ar Vag"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.51
     },
     {
@@ -5516,6 +5915,7 @@
       "attestedAs": [
         "Pors Carn"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.06
     },
     {
@@ -5529,6 +5929,7 @@
       "attestedAs": [
         "Plage de Pors Peron"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.41
     },
     {
@@ -5543,6 +5944,7 @@
       "attestedAs": [
         "Porsmilin"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.2
     },
     {
@@ -5556,6 +5958,7 @@
       "attestedAs": [
         "Portissol"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.52
     },
     {
@@ -5570,6 +5973,7 @@
       "attestedAs": [
         "Pors Theolen"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.19
     },
     {
@@ -5583,6 +5987,7 @@
       "attestedAs": [
         "Poul Rodou"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 3.13
     },
     {
@@ -5597,6 +6002,7 @@
       "attestedAs": [
         "Sagone"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.42
     },
     {
@@ -5610,6 +6016,7 @@
       "attestedAs": [
         "Eze"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.88
     },
     {
@@ -5623,6 +6030,7 @@
       "attestedAs": [
         "Saint-Paul"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 1.56
     },
     {
@@ -5637,6 +6045,7 @@
       "attestedAs": [
         "Saint-Pierre"
       ],
+      "referenceRegion": "Réunion Island",
       "referenceKm": 2.47
     },
     {
@@ -5652,6 +6061,7 @@
         "Les Crevettes Ste Barbe",
         "Ste Barbe"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.29
     },
     {
@@ -5665,6 +6075,7 @@
       "attestedAs": [
         "Bananier"
       ],
+      "referenceRegion": "Guadeloupe - Grande Terre",
       "referenceKm": 0.3
     },
     {
@@ -5680,6 +6091,7 @@
         "Les Dunes",
         "Sauveterre"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.43
     },
     {
@@ -5695,6 +6107,7 @@
         "Ciboure Socoa",
         "St Jean de Luz - Socoa"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.2
     },
     {
@@ -5708,6 +6121,7 @@
       "attestedAs": [
         "Suzac"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.79
     },
     {
@@ -5721,6 +6135,7 @@
       "attestedAs": [
         "Tanchet"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.21
     },
     {
@@ -5734,6 +6149,7 @@
       "attestedAs": [
         "Toulhars"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.16
     },
     {
@@ -5747,6 +6163,7 @@
       "attestedAs": [
         "Tregana"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.42
     },
     {
@@ -5762,6 +6179,7 @@
         "Pors Nevez",
         "Trestraou"
       ],
+      "referenceRegion": "Cote d'Armor - Brittany",
       "referenceKm": 0.08
     },
     {
@@ -5775,6 +6193,7 @@
       "attestedAs": [
         "Trestrignel"
       ],
+      "referenceRegion": "Cote d'Armor - Brittany",
       "referenceKm": 0.17
     },
     {
@@ -5788,6 +6207,7 @@
       "attestedAs": [
         "Tronoen"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.65
     },
     {
@@ -5802,6 +6222,7 @@
       "attestedAs": [
         "Trouville"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.67
     },
     {
@@ -5816,6 +6237,7 @@
       "attestedAs": [
         "Vaucottes"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.06
     },
     {
@@ -5829,6 +6251,7 @@
       "attestedAs": [
         "Anse de Vauville"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 2.33
     },
     {
@@ -5845,6 +6268,7 @@
         "Ile d'Oleron - Vert Bois/Les Allassins",
         "Les Allassins"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.45
     },
     {
@@ -5858,6 +6282,7 @@
       "attestedAs": [
         "Les Ayguades"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 1.58
     },
     {
@@ -5873,6 +6298,7 @@
         "Blancs Sablons",
         "Les Blancs Sablons"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.09
     },
     {
@@ -5888,6 +6314,7 @@
         "Ile d'Oleron - Les Boulassiers",
         "Les Boulassiers"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.15
     },
     {
@@ -5903,6 +6330,7 @@
         "Les Casernes",
         "Seignosse - Les Casernes"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.3
     },
     {
@@ -5918,6 +6346,7 @@
         "Bud Bud",
         "Les Conches"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 0.41
     },
     {
@@ -5933,6 +6362,7 @@
         "Anglet - Corsaires",
         "Les Corsaires"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.19
     },
     {
@@ -5948,6 +6378,7 @@
         "Hossegor - Les Culs Nuls",
         "Les Culs Nus"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.27
     },
     {
@@ -5961,6 +6392,7 @@
       "attestedAs": [
         "Hendaye"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.51
     },
     {
@@ -5974,6 +6406,7 @@
       "attestedAs": [
         "Les Dunes"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.01
     },
     {
@@ -5987,6 +6420,7 @@
       "attestedAs": [
         "Esclamandes"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.42
     },
     {
@@ -6003,6 +6437,7 @@
         "Seignosse - Les Estagnots",
         "West Peak"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.3
     },
     {
@@ -6016,6 +6451,7 @@
       "attestedAs": [
         "Ile de Re - Le Gouyot"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 1.54
     },
     {
@@ -6029,6 +6465,7 @@
       "attestedAs": [
         "Plage Des Granges"
       ],
+      "referenceRegion": "Vendee",
       "referenceKm": 1.08
     },
     {
@@ -6042,6 +6479,7 @@
       "attestedAs": [
         "Ile de Re - Les Grenettes"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.32
     },
     {
@@ -6058,6 +6496,7 @@
         "Ile d'Oleron - Les Trois Pierres",
         "Les Huttes"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.38
     },
     {
@@ -6072,6 +6511,7 @@
       "attestedAs": [
         "Les Laurons"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.34
     },
     {
@@ -6085,6 +6525,7 @@
       "attestedAs": [
         "Les Lecques"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.68
     },
     {
@@ -6098,6 +6539,7 @@
       "attestedAs": [
         "Plage des Nonnes"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -6111,6 +6553,7 @@
       "attestedAs": [
         "Capbreton - La Pointe"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 1.14
     },
     {
@@ -6124,6 +6567,7 @@
       "attestedAs": [
         "Petites Dalles"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -6138,6 +6582,7 @@
       "attestedAs": [
         "Vieux Boucau"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.3
     },
     {
@@ -6152,6 +6597,7 @@
       "attestedAs": [
         "Lesconil"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.43
     },
     {
@@ -6168,6 +6614,7 @@
         "Les Roches Blanches",
         "Rocher de Coulinec"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.78
     },
     {
@@ -6184,6 +6631,7 @@
         "Anglet - Les Sables d'Or",
         "Sables D'or"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.18
     },
     {
@@ -6197,6 +6645,7 @@
       "attestedAs": [
         "Plage des Sables Vigniers"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.39
     },
     {
@@ -6211,6 +6660,7 @@
       "attestedAs": [
         "Les Sablettes"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.21
     },
     {
@@ -6225,6 +6675,7 @@
       "attestedAs": [
         "Plage des Surfeurs"
       ],
+      "referenceRegion": "Martinique",
       "referenceKm": 0.16
     },
     {
@@ -6239,6 +6690,7 @@
       "attestedAs": [
         "Baie des Trepasses"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.06
     },
     {
@@ -6254,6 +6706,7 @@
         "Cap de l'Homy",
         "Cap de l'Homy-Plage"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.15
     },
     {
@@ -6268,6 +6721,7 @@
       "attestedAs": [
         "Bidart"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.23
     },
     {
@@ -6284,6 +6738,7 @@
         "Anglet - VVF",
         "Le Club"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.18
     },
     {
@@ -6298,6 +6753,7 @@
       "attestedAs": [
         "La Jenny"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.32
     },
     {
@@ -6313,6 +6769,7 @@
         "Dossen",
         "Le Dossen"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.58
     },
     {
@@ -6326,6 +6783,7 @@
       "attestedAs": [
         "St Jean de Luz - La Bougie"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.49
     },
     {
@@ -6339,6 +6797,7 @@
       "attestedAs": [
         "Antibes - Fort Carre"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.82
     },
     {
@@ -6353,6 +6812,7 @@
       "attestedAs": [
         "Le Gouerou"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.19
     },
     {
@@ -6367,6 +6827,7 @@
       "attestedAs": [
         "Le Grand Crohot"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.29
     },
     {
@@ -6382,6 +6843,7 @@
         "Le Havre Beach",
         "Sainte Adresse"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.09
     },
     {
@@ -6396,6 +6858,7 @@
       "attestedAs": [
         "Le Kerou"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.09
     },
     {
@@ -6409,6 +6872,7 @@
       "attestedAs": [
         "Le Lido"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.52
     },
     {
@@ -6424,6 +6888,7 @@
         "Ile de Re - Le lizay",
         "Le Lizay"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.1
     },
     {
@@ -6437,6 +6902,7 @@
       "attestedAs": [
         "Tarnos-Plage"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -6451,6 +6917,7 @@
       "attestedAs": [
         "Le Petit Minou"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.32
     },
     {
@@ -6467,6 +6934,7 @@
         "Seignosse - Le Penon",
         "Seignosse - Les Bourdaines"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.28
     },
     {
@@ -6480,6 +6948,7 @@
       "attestedAs": [
         "Ile de Re - Petit Bec"
       ],
+      "referenceRegion": "Charente Maritime",
       "referenceKm": 0.88
     },
     {
@@ -6493,6 +6962,7 @@
       "attestedAs": [
         "Port Goret Treveneuc"
       ],
+      "referenceRegion": "Cote d'Armor - Brittany",
       "referenceKm": 0.39
     },
     {
@@ -6508,6 +6978,7 @@
         "Biarritz - Cote des Basques",
         "La Cote des Basques"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.33
     },
     {
@@ -6523,6 +6994,7 @@
         "Capbreton - Le Prevent",
         "Le Prevent"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.17
     },
     {
@@ -6536,6 +7008,7 @@
       "attestedAs": [
         "Le Racou"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 0.37
     },
     {
@@ -6549,6 +7022,7 @@
       "attestedAs": [
         "Plage du Ricanto"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.68
     },
     {
@@ -6562,6 +7036,7 @@
       "attestedAs": [
         "Le Ris"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.75
     },
     {
@@ -6575,6 +7050,7 @@
       "attestedAs": [
         "Le Rouet"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -6588,6 +7064,7 @@
       "attestedAs": [
         "Le Ruppione"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -6603,6 +7080,7 @@
         "Capbreton - Le Santocha",
         "Le Santocha"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.24
     },
     {
@@ -6617,6 +7095,7 @@
       "attestedAs": [
         "Le Sillon"
       ],
+      "referenceRegion": "Ile et Vilaine - Brittany",
       "referenceKm": 1.61
     },
     {
@@ -6630,6 +7109,7 @@
       "attestedAs": [
         "Trez Hir"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.11
     },
     {
@@ -6643,6 +7123,7 @@
       "attestedAs": [
         "Plage du Verdon"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.24
     },
     {
@@ -6656,6 +7137,7 @@
       "attestedAs": [
         "Le Veryac'h"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.29
     },
     {
@@ -6669,6 +7151,7 @@
       "attestedAs": [
         "Antibes - Plage Keller"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.55
     },
     {
@@ -6682,6 +7165,7 @@
       "attestedAs": [
         "Maguelone"
       ],
+      "referenceRegion": "Languedoc-Roussillon",
       "referenceKm": 1.14
     },
     {
@@ -6696,6 +7180,7 @@
       "attestedAs": [
         "Kaolins"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.34
     },
     {
@@ -6711,6 +7196,7 @@
         "Hossegor - La Nord",
         "La Nord"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 1.36
     },
     {
@@ -6724,6 +7210,7 @@
       "attestedAs": [
         "Les Douaniers"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.35
     },
     {
@@ -6737,6 +7224,7 @@
       "attestedAs": [
         "Lacanau - Supersud"
       ],
+      "referenceRegion": "Gironde",
       "referenceKm": 0.68
     },
     {
@@ -6753,6 +7241,7 @@
         "L'Epi Nord",
         "La Sud"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.17
     },
     {
@@ -6766,6 +7255,7 @@
       "attestedAs": [
         "Plage Du Trottel"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -6779,6 +7269,7 @@
       "attestedAs": [
         "Plage Valentin"
       ],
+      "referenceRegion": "Loire Atlantique",
       "referenceKm": 0.22
     },
     {
@@ -6794,6 +7285,7 @@
         "Anglet - La Madrague",
         "La Madrague"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.21
     },
     {
@@ -6807,6 +7299,7 @@
       "attestedAs": [
         "Anglet - La Petite Madrague"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.36
     },
     {
@@ -6822,6 +7315,7 @@
         "Anglet - Les Cavaliers",
         "Les Cavaliers"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.08
     },
     {
@@ -6835,6 +7329,7 @@
       "attestedAs": [
         "Anglet - Les Dunes"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.24
     },
     {
@@ -6850,6 +7345,7 @@
         "Le Prado",
         "Marseille - Le Prado"
       ],
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0.31
     },
     {
@@ -6863,6 +7359,7 @@
       "attestedAs": [
         "Aiguadolc"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.73
     },
     {
@@ -6876,6 +7373,7 @@
       "attestedAs": [
         "Aucanada"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.59
     },
     {
@@ -6889,6 +7387,7 @@
       "attestedAs": [
         "Playa Atalis"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.66
     },
     {
@@ -6902,6 +7401,7 @@
       "attestedAs": [
         "Empuriabrava"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 1.32
     },
     {
@@ -6915,6 +7415,7 @@
       "attestedAs": [
         "Platja d'en Bossa"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.32
     },
     {
@@ -6930,6 +7431,7 @@
         "Mallorca - Es Trenc",
         "Playa de es Trenc"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.26
     },
     {
@@ -6943,6 +7445,7 @@
       "attestedAs": [
         "Playa de Bellreguart"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -6958,6 +7461,7 @@
         "Cala Major",
         "Mallorca - Cala Major"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.05
     },
     {
@@ -6971,6 +7475,7 @@
       "attestedAs": [
         "Canyamel"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -6984,6 +7489,7 @@
       "attestedAs": [
         "Platja de Canyelles"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -6997,6 +7503,7 @@
       "attestedAs": [
         "Platja de Cavalleria"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -7010,6 +7517,7 @@
       "attestedAs": [
         "Playa de Creixell"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.88
     },
     {
@@ -7023,6 +7531,7 @@
       "attestedAs": [
         "Platja de Fenals"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -7036,6 +7545,7 @@
       "attestedAs": [
         "Garraf"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.65
     },
     {
@@ -7049,6 +7559,7 @@
       "attestedAs": [
         "Playa de la Albufereta"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -7062,6 +7573,7 @@
       "attestedAs": [
         "Moraira - Platja de l'Ampolla"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.33
     },
     {
@@ -7077,6 +7589,7 @@
         "Platja de l'Arenal",
         "The Box"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.08
     },
     {
@@ -7091,6 +7604,7 @@
         "El Jucar",
         "Jucar"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.46
     },
     {
@@ -7105,6 +7619,7 @@
       "attestedAs": [
         "Barceloneta"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.29
     },
     {
@@ -7118,6 +7633,7 @@
       "attestedAs": [
         "La Fosca"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -7133,6 +7649,7 @@
         "Malva Rosa",
         "Malvarrosa Beach"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.53
     },
     {
@@ -7146,6 +7663,7 @@
       "attestedAs": [
         "Nova Mar Bella"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.29
     },
     {
@@ -7159,6 +7677,7 @@
       "attestedAs": [
         "Platja de la Pineda"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -7172,6 +7691,7 @@
       "attestedAs": [
         "Desembocadura del Tordera"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.67
     },
     {
@@ -7185,6 +7705,7 @@
       "attestedAs": [
         "Playa Romana"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -7198,6 +7719,7 @@
       "attestedAs": [
         "Platja de Lloret"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.28
     },
     {
@@ -7213,6 +7735,7 @@
         "Formentera - Playa des Mitgjorn",
         "Platja Migjorn"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.72
     },
     {
@@ -7226,6 +7749,7 @@
       "attestedAs": [
         "Platja de Miramar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.26
     },
     {
@@ -7239,6 +7763,7 @@
       "attestedAs": [
         "Platja de Pals"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -7252,6 +7777,7 @@
       "attestedAs": [
         "Playa de Ponent"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -7265,6 +7791,7 @@
       "attestedAs": [
         "Port Saplaya"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.41
     },
     {
@@ -7278,6 +7805,7 @@
       "attestedAs": [
         "Punta Prima"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -7293,6 +7821,7 @@
         "Platja de Sant Pol",
         "S'agaró"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.01
     },
     {
@@ -7306,6 +7835,7 @@
       "attestedAs": [
         "Sant Pol de Mar"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.13
     },
     {
@@ -7321,6 +7851,7 @@
         "Latigo",
         "Platja de Sant Salvador"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.46
     },
     {
@@ -7334,6 +7865,7 @@
       "attestedAs": [
         "Playa de Sant Sebastia"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.94
     },
     {
@@ -7347,6 +7879,7 @@
       "attestedAs": [
         "Sitges"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -7360,6 +7893,7 @@
       "attestedAs": [
         "Playa de Sant Simó"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -7373,6 +7907,7 @@
       "attestedAs": [
         "Sant Tomas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.67
     },
     {
@@ -7388,6 +7923,7 @@
         "Cala de Santa Cristina",
         "Platja de Santa Cistina"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.06
     },
     {
@@ -7401,6 +7937,7 @@
       "attestedAs": [
         "Peyo's"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.22
     },
     {
@@ -7416,6 +7953,7 @@
         "Platja de Segur",
         "Segur de Calafell"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.21
     },
     {
@@ -7429,6 +7967,7 @@
       "attestedAs": [
         "Son Bou"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.35
     },
     {
@@ -7442,6 +7981,7 @@
       "attestedAs": [
         "Playa Son Caliu"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.42
     },
     {
@@ -7456,6 +7996,7 @@
         "Mallorca - Son Serra Nova",
         "Mallorca - Son Serra de Marina"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 1.57
     },
     {
@@ -7469,6 +8010,7 @@
       "attestedAs": [
         "Platja de Xeraco"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -7483,6 +8025,7 @@
       "attestedAs": [
         "Bogatell"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.04
     },
     {
@@ -7496,6 +8039,7 @@
       "attestedAs": [
         "Playa del Callao"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.01
     },
     {
@@ -7509,6 +8053,7 @@
       "attestedAs": [
         "El Cantal Roig"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 1.28
     },
     {
@@ -7522,6 +8067,7 @@
       "attestedAs": [
         "Carregador"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -7535,6 +8081,7 @@
       "attestedAs": [
         "Platja del Fortí"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -7548,6 +8095,7 @@
       "attestedAs": [
         "Platja del Fòrum"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -7561,6 +8109,7 @@
       "attestedAs": [
         "Platja del Marjal"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.86
     },
     {
@@ -7577,6 +8126,7 @@
         "La Rotonda",
         "Masnou"
       ],
+      "referenceRegion": "Catalunia",
       "referenceKm": 0.29
     },
     {
@@ -7590,6 +8140,7 @@
       "attestedAs": [
         "Playa El Miracle"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.15
     },
     {
@@ -7603,6 +8154,7 @@
       "attestedAs": [
         "Playa del Moro"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -7616,6 +8168,7 @@
       "attestedAs": [
         "El Perello"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.74
     },
     {
@@ -7629,6 +8182,7 @@
       "attestedAs": [
         "Sagunto"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -7642,6 +8196,7 @@
       "attestedAs": [
         "Playa del Postiguet"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.24
     },
     {
@@ -7655,6 +8210,7 @@
       "attestedAs": [
         "Playa del Saladar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.61
     },
     {
@@ -7668,6 +8224,7 @@
       "attestedAs": [
         "El Saler"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.37
     },
     {
@@ -7681,6 +8238,7 @@
       "attestedAs": [
         "Playa del Varador"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -7694,6 +8252,7 @@
       "attestedAs": [
         "Es Codolar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.16
     },
     {
@@ -7707,6 +8266,7 @@
       "attestedAs": [
         "Platja des Figueral"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -7720,6 +8280,7 @@
       "attestedAs": [
         "Platja Sa Tuna"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.01
     },
     {
@@ -7733,6 +8294,7 @@
       "attestedAs": [
         "Peniscola"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.54
     },
     {
@@ -7746,6 +8308,7 @@
       "attestedAs": [
         "Voramar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -7759,6 +8322,7 @@
       "attestedAs": [
         "Arenal Castell"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -7772,6 +8336,7 @@
       "attestedAs": [
         "Arenal de Moris"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -7785,6 +8350,7 @@
       "attestedAs": [
         "Playa Bahinas"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 2.8
     },
     {
@@ -7798,6 +8364,7 @@
       "attestedAs": [
         "Baja del Ganado - La-Graciosa"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.74
     },
     {
@@ -7811,6 +8378,7 @@
       "attestedAs": [
         "Playa Barchinas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -7824,6 +8392,7 @@
       "attestedAs": [
         "Playa Barlovento"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.44
     },
     {
@@ -7837,6 +8406,7 @@
       "attestedAs": [
         "Playa Bastián (Costa Teguise)"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.5
     },
     {
@@ -7850,6 +8420,7 @@
       "attestedAs": [
         "Playa de Brazomar"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.64
     },
     {
@@ -7863,6 +8434,7 @@
       "attestedAs": [
         "Cala Cerrada"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -7879,6 +8451,7 @@
         "Playa de Entremares",
         "Playa de Levante"
       ],
+      "referenceRegion": "Murcia",
       "referenceKm": 0.79
     },
     {
@@ -7892,6 +8465,7 @@
       "attestedAs": [
         "Playa la Carihuela"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.42
     },
     {
@@ -7905,6 +8479,7 @@
       "attestedAs": [
         "Playa Central"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.13
     },
     {
@@ -7918,6 +8493,7 @@
       "attestedAs": [
         "Playa de Cuarezo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.24
     },
     {
@@ -7931,6 +8507,7 @@
       "attestedAs": [
         "Cueva del Lobo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.68
     },
     {
@@ -7944,6 +8521,7 @@
       "attestedAs": [
         "Playa de la Atalaya y Cazanera"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.53
     },
     {
@@ -7957,6 +8535,7 @@
       "attestedAs": [
         "EL Chalet (Alcala)"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.21
     },
     {
@@ -7970,6 +8549,7 @@
       "attestedAs": [
         "Playa de Andrin"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.45
     },
     {
@@ -7983,6 +8563,7 @@
       "attestedAs": [
         "Playa de Arenillas"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.7
     },
     {
@@ -7996,6 +8577,7 @@
       "attestedAs": [
         "Arinaga"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.98
     },
     {
@@ -8009,6 +8591,7 @@
       "attestedAs": [
         "Playa de Arnao"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.77
     },
     {
@@ -8022,6 +8605,7 @@
       "attestedAs": [
         "Playa de Arenillas"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.74
     },
     {
@@ -8041,6 +8625,7 @@
         "El Charco (Bajamar)",
         "Fuero de la Bajeta"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.22
     },
     {
@@ -8054,6 +8639,7 @@
       "attestedAs": [
         "Playa de Bayas"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.07
     },
     {
@@ -8070,6 +8656,7 @@
         "La Derecha de Almaciga",
         "Playa de Benijo"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.07
     },
     {
@@ -8083,6 +8670,7 @@
       "attestedAs": [
         "Playa de Benitez"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -8098,6 +8686,7 @@
         "Berria",
         "Playa de Berria"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.3
     },
     {
@@ -8113,6 +8702,7 @@
         "Bocabarranco",
         "Bocabarranco - Gran Canaria"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.05
     },
     {
@@ -8126,6 +8716,7 @@
       "attestedAs": [
         "Playa de Bolnuevo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -8139,6 +8730,7 @@
       "attestedAs": [
         "Bolonia"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.49
     },
     {
@@ -8154,6 +8746,7 @@
         "Cabopino",
         "Puerto Cabopino"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.21
     },
     {
@@ -8167,6 +8760,7 @@
       "attestedAs": [
         "Calahonda"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.41
     },
     {
@@ -8180,6 +8774,7 @@
       "attestedAs": [
         "Playa de Cal-Blanque"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.93
     },
     {
@@ -8194,6 +8789,7 @@
       "attestedAs": [
         "Playa de Camposoto"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.27
     },
     {
@@ -8210,6 +8806,7 @@
         "El Arenal",
         "Liencres"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.32
     },
     {
@@ -8223,6 +8820,7 @@
       "attestedAs": [
         "Mazagon"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.41
     },
     {
@@ -8238,6 +8836,7 @@
         "Cofete",
         "Playa de Cofete"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.67
     },
     {
@@ -8253,6 +8852,7 @@
         "Ajo",
         "Playa de Cuberris"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.27
     },
     {
@@ -8266,6 +8866,7 @@
       "attestedAs": [
         "Playa de Cueva"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.52
     },
     {
@@ -8280,6 +8881,7 @@
       "attestedAs": [
         "El Brusco"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 1.23
     },
     {
@@ -8293,6 +8895,7 @@
       "attestedAs": [
         "Playa del Dedo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -8306,6 +8909,7 @@
       "attestedAs": [
         "Playa del Gorguel"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -8320,6 +8924,7 @@
       "attestedAs": [
         "El Medano"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.44
     },
     {
@@ -8335,6 +8940,7 @@
         "El Palmar",
         "Playa El Palmar"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.96
     },
     {
@@ -8348,6 +8954,7 @@
       "attestedAs": [
         "Playa de Portus"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.16
     },
     {
@@ -8361,6 +8968,7 @@
       "attestedAs": [
         "Playa de Esquinzo"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.62
     },
     {
@@ -8374,6 +8982,7 @@
       "attestedAs": [
         "Playa de Fatares"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.24
     },
     {
@@ -8389,6 +8998,7 @@
         "Frejulfe",
         "Playa de Frexulfe"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.06
     },
     {
@@ -8402,6 +9012,7 @@
       "attestedAs": [
         "Playa de Galizano"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 1.32
     },
     {
@@ -8417,6 +9028,7 @@
         "Gerra",
         "Playa de Gerra"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.35
     },
     {
@@ -8432,6 +9044,7 @@
         "Getares",
         "Playa de Getares"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.3
     },
     {
@@ -8445,6 +9058,7 @@
       "attestedAs": [
         "Guacimeta - Playa Honda"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.46
     },
     {
@@ -8458,6 +9072,7 @@
       "attestedAs": [
         "Guadalmar"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.47
     },
     {
@@ -8471,6 +9086,7 @@
       "attestedAs": [
         "Horcas Coloradas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -8484,6 +9100,7 @@
       "attestedAs": [
         "Igueste de San Andres"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 1.53
     },
     {
@@ -8497,6 +9114,7 @@
       "attestedAs": [
         "Playa de Ijuana"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -8510,6 +9128,7 @@
       "attestedAs": [
         "Isla Canela"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.61
     },
     {
@@ -8525,6 +9144,7 @@
         "Playa de Janubio",
         "Playa del Janubio"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.32
     },
     {
@@ -8538,6 +9158,7 @@
       "attestedAs": [
         "Playa Jarugo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -8552,6 +9173,7 @@
       "attestedAs": [
         "La Arena"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.28
     },
     {
@@ -8565,6 +9187,7 @@
       "attestedAs": [
         "Playa de la Arena"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -8580,6 +9203,7 @@
         "La Barrosa",
         "Playa de la Barrosa"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 2.41
     },
     {
@@ -8593,6 +9217,7 @@
       "attestedAs": [
         "Playa de la Canaleta"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.64
     },
     {
@@ -8608,6 +9233,7 @@
         "Playa de Orzola",
         "Playa de la Canteria"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.18
     },
     {
@@ -8621,6 +9247,7 @@
       "attestedAs": [
         "Playa de la Carihuela"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.36
     },
     {
@@ -8634,6 +9261,7 @@
       "attestedAs": [
         "Playa de la Cera - Playa Blanca"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.53
     },
     {
@@ -8647,6 +9275,7 @@
       "attestedAs": [
         "Playa de La Chapineta"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.86
     },
     {
@@ -8660,6 +9289,7 @@
       "attestedAs": [
         "Playa de la Concha"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.48
     },
     {
@@ -8673,6 +9303,7 @@
       "attestedAs": [
         "Playa de la Concha"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -8686,6 +9317,7 @@
       "attestedAs": [
         "La Cabanita"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.33
     },
     {
@@ -8699,6 +9331,7 @@
       "attestedAs": [
         "Playa de la Entrada"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -8712,6 +9345,7 @@
       "attestedAs": [
         "Playa Fajana"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.2
     },
     {
@@ -8725,6 +9359,7 @@
       "attestedAs": [
         "Playa de la Garita"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 1.84
     },
     {
@@ -8738,6 +9373,7 @@
       "attestedAs": [
         "Playa de la Griega"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.86
     },
     {
@@ -8752,6 +9388,7 @@
       "attestedAs": [
         "La Herradura"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.41
     },
     {
@@ -8765,6 +9402,7 @@
       "attestedAs": [
         "Playa de Hierbabuena"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 2.56
     },
     {
@@ -8778,6 +9416,7 @@
       "attestedAs": [
         "La Laja"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.13
     },
     {
@@ -8791,6 +9430,7 @@
       "attestedAs": [
         "Arguineguin"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -8804,6 +9444,7 @@
       "attestedAs": [
         "Playa Lambra - La Graciosa"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.21
     },
     {
@@ -8818,6 +9459,7 @@
       "attestedAs": [
         "La Mata"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.77
     },
     {
@@ -8831,6 +9473,7 @@
       "attestedAs": [
         "La Misericordia"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.6
     },
     {
@@ -8844,6 +9487,7 @@
       "attestedAs": [
         "La Muralla"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.27
     },
     {
@@ -8859,6 +9503,7 @@
         "La Nora",
         "Playa De La Ñora"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.1
     },
     {
@@ -8872,6 +9517,7 @@
       "attestedAs": [
         "La Paloma"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.88
     },
     {
@@ -8885,6 +9531,7 @@
       "attestedAs": [
         "Playa de la Parajola"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -8900,6 +9547,7 @@
         "La Pared",
         "Playa de Pared"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 0.6
     },
     {
@@ -8913,6 +9561,7 @@
       "attestedAs": [
         "Playa de la Ribera"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -8928,6 +9577,7 @@
         "Las Caracolas",
         "Playa de la Victoria"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.13
     },
     {
@@ -8943,6 +9593,7 @@
         "Langre",
         "Playa de Langre"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.12
     },
     {
@@ -8956,6 +9607,7 @@
       "attestedAs": [
         "Playa de las Alberquillas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.23
     },
     {
@@ -8976,6 +9628,7 @@
         "La Izquierda",
         "Playa de las Americas"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.47
     },
     {
@@ -8991,6 +9644,7 @@
         "La Barra",
         "La Barra - Las Canteras"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.05
     },
     {
@@ -9004,6 +9658,7 @@
       "attestedAs": [
         "Playa de las Conchas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -9019,6 +9674,7 @@
         "Las Cucharas (Costa Teguise)",
         "Playa de las Cucharas"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.1
     },
     {
@@ -9033,6 +9689,7 @@
       "attestedAs": [
         "Las Galletas"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.67
     },
     {
@@ -9048,6 +9705,7 @@
         "Las Gaviotas",
         "Playa de las Gaviotas"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.5
     },
     {
@@ -9061,6 +9719,7 @@
       "attestedAs": [
         "Playa de las Mujeres"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.38
     },
     {
@@ -9074,6 +9733,7 @@
       "attestedAs": [
         "Playa de las Pilas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -9087,6 +9747,7 @@
       "attestedAs": [
         "Playa de las Teresitas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.17
     },
     {
@@ -9100,6 +9761,7 @@
       "attestedAs": [
         "Playa de Tres Piedras"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.63
     },
     {
@@ -9113,6 +9775,7 @@
       "attestedAs": [
         "Playa de los Valdivias"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -9126,6 +9789,7 @@
       "attestedAs": [
         "Playa de Llumeres"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.22
     },
     {
@@ -9140,6 +9804,7 @@
         "Isla de Santa Marina",
         "Santa Marina"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.74
     },
     {
@@ -9153,6 +9818,7 @@
       "attestedAs": [
         "Los Alamos"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.59
     },
     {
@@ -9166,6 +9832,7 @@
       "attestedAs": [
         "Playa de los Barcos"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.7
     },
     {
@@ -9179,6 +9846,7 @@
       "attestedAs": [
         "Playa de los Caballos"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -9195,6 +9863,7 @@
         "Los Caños",
         "Yerbabuena"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.57
     },
     {
@@ -9208,6 +9877,7 @@
       "attestedAs": [
         "Los Charcos (Costa-Teguise)"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.2
     },
     {
@@ -9221,6 +9891,7 @@
       "attestedAs": [
         "Los Genoveses"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -9234,6 +9905,7 @@
       "attestedAs": [
         "Playa de los James"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.22
     },
     {
@@ -9249,6 +9921,7 @@
         "Los Lances",
         "Playa de los Lances"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.22
     },
     {
@@ -9264,6 +9937,7 @@
         "El Huerto",
         "Los Locos"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.05
     },
     {
@@ -9277,6 +9951,7 @@
       "attestedAs": [
         "Los Monteros"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.2
     },
     {
@@ -9290,6 +9965,7 @@
       "attestedAs": [
         "Playa Los Peligros"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -9303,6 +9979,7 @@
       "attestedAs": [
         "Playa El Troche"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.28
     },
     {
@@ -9316,6 +9993,7 @@
       "attestedAs": [
         "Playa de Luanco"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.94
     },
     {
@@ -9329,6 +10007,7 @@
       "attestedAs": [
         "Los Platos-La Orrotava"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.63
     },
     {
@@ -9342,6 +10021,7 @@
       "attestedAs": [
         "Maspalomas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -9355,6 +10035,7 @@
       "attestedAs": [
         "Matalascañas"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.39
     },
     {
@@ -9370,6 +10051,7 @@
         "Playa de Mendia",
         "Playas de Mendia"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.12
     },
     {
@@ -9383,6 +10065,7 @@
       "attestedAs": [
         "Cala De Meron"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.82
     },
     {
@@ -9398,6 +10081,7 @@
         "Playa de Meron",
         "San Vicente"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.56
     },
     {
@@ -9411,6 +10095,7 @@
       "attestedAs": [
         "Playa de Navia"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.54
     },
     {
@@ -9424,6 +10109,7 @@
       "attestedAs": [
         "Playa de Nogales"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.04
     },
     {
@@ -9437,6 +10123,7 @@
       "attestedAs": [
         "El rio (Almeria)"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.01
     },
     {
@@ -9450,6 +10137,7 @@
       "attestedAs": [
         "Playa de Oleiros"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.63
     },
     {
@@ -9465,6 +10153,7 @@
         "Oriñón",
         "Playa de Orinon"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.15
     },
     {
@@ -9480,6 +10169,7 @@
         "Oyambre",
         "Playa de Oyambre"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.2
     },
     {
@@ -9493,6 +10183,7 @@
       "attestedAs": [
         "Papagayo - Playa Blanca"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.32
     },
     {
@@ -9508,6 +10199,7 @@
         "Peñarronda",
         "Playa de Penarronda"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.16
     },
     {
@@ -9523,6 +10215,7 @@
         "Peñarrubia",
         "Playa de Penarrubia"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.06
     },
     {
@@ -9536,6 +10229,7 @@
       "attestedAs": [
         "Playa de Percheles"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -9549,6 +10243,7 @@
       "attestedAs": [
         "Playa Quintana"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -9562,6 +10257,7 @@
       "attestedAs": [
         "Playa de Poniente"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -9575,6 +10271,7 @@
       "attestedAs": [
         "Playa de Puerto Rey"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.58
     },
     {
@@ -9588,6 +10285,7 @@
       "attestedAs": [
         "Playa Puerto Rico"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -9603,6 +10301,7 @@
         "Punta Blanca",
         "Punta Blanca - k16"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.16
     },
     {
@@ -9616,6 +10315,7 @@
       "attestedAs": [
         "Punta del Moral"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.25
     },
     {
@@ -9629,6 +10329,7 @@
       "attestedAs": [
         "Playa de Regla"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.13
     },
     {
@@ -9642,6 +10343,7 @@
       "attestedAs": [
         "Playa de Ris"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.51
     },
     {
@@ -9655,6 +10357,7 @@
       "attestedAs": [
         "Playa de Robayera"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.78
     },
     {
@@ -9670,6 +10373,7 @@
         "Playa de San Antolin",
         "San Antolin"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.14
     },
     {
@@ -9683,6 +10387,7 @@
       "attestedAs": [
         "Playa de San Antonio del Mar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.01
     },
     {
@@ -9696,6 +10401,7 @@
       "attestedAs": [
         "Playa San Julián"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.01
     },
     {
@@ -9713,6 +10419,7 @@
         "Playa de San Lorenzo",
         "San Lorenzo"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.09
     },
     {
@@ -9726,6 +10433,7 @@
       "attestedAs": [
         "Playa de Santa Justa"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.49
     },
     {
@@ -9739,6 +10447,7 @@
       "attestedAs": [
         "Playa Santa Maria del Mar"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 2.54
     },
     {
@@ -9754,6 +10463,7 @@
         "Playa de Santa Marina",
         "Ribadesella"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.09
     },
     {
@@ -9767,6 +10477,7 @@
       "attestedAs": [
         "Tapia de Casariego"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.33
     },
     {
@@ -9781,6 +10492,7 @@
       "attestedAs": [
         "Playa de Somo"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 1.15
     },
     {
@@ -9794,6 +10506,7 @@
       "attestedAs": [
         "Punta de Sonabia"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.29
     },
     {
@@ -9807,6 +10520,7 @@
       "attestedAs": [
         "Tauro"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.51
     },
     {
@@ -9822,6 +10536,7 @@
         "Playa de San Martin",
         "Playa los Frailes"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.45
     },
     {
@@ -9835,6 +10550,7 @@
       "attestedAs": [
         "Torre Gorda"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.57
     },
     {
@@ -9848,6 +10564,7 @@
       "attestedAs": [
         "Playa de Valdearnas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.69
     },
     {
@@ -9861,6 +10578,7 @@
       "attestedAs": [
         "Playa de Valdegrana"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.17
     },
     {
@@ -9876,6 +10594,7 @@
         "Playa Vega",
         "Playa de Vega"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.19
     },
     {
@@ -9889,6 +10608,7 @@
       "attestedAs": [
         "Playa de Veneguera"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -9902,6 +10622,7 @@
       "attestedAs": [
         "Verdicio"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.16
     },
     {
@@ -9915,6 +10636,7 @@
       "attestedAs": [
         "Playa de Vidiago"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.23
     },
     {
@@ -9931,6 +10653,7 @@
         "Playa de Xago",
         "Xago"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.3
     },
     {
@@ -9944,6 +10667,7 @@
       "attestedAs": [
         "Zahara"
       ],
+      "referenceRegion": null,
       "referenceKm": 3.93
     },
     {
@@ -9957,6 +10681,7 @@
       "attestedAs": [
         "Marbella - Playa del Cable"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.45
     },
     {
@@ -9970,6 +10695,7 @@
       "attestedAs": [
         "El Cable - Playa Honda"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.71
     },
     {
@@ -9983,6 +10709,7 @@
       "attestedAs": [
         "Playa del Camello"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -9997,6 +10724,7 @@
       "attestedAs": [
         "Fuengirola"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.44
     },
     {
@@ -10012,6 +10740,7 @@
         "Playa de Cervigon",
         "Playa del Cervigón"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.02
     },
     {
@@ -10025,6 +10754,7 @@
       "attestedAs": [
         "Playa del Chorrillo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -10040,6 +10770,7 @@
         "El Confital",
         "Las Monjas"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.17
     },
     {
@@ -10053,6 +10784,7 @@
       "attestedAs": [
         "Playa del Cura"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -10066,6 +10798,7 @@
       "attestedAs": [
         "Faro de Calaburra - Andalucia"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.71
     },
     {
@@ -10080,6 +10813,7 @@
       "attestedAs": [
         "Playa del Hombre"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.06
     },
     {
@@ -10094,6 +10828,7 @@
       "attestedAs": [
         "Playa del Ingles"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.41
     },
     {
@@ -10107,6 +10842,7 @@
       "attestedAs": [
         "Playa del Llano"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -10121,6 +10857,7 @@
       "attestedAs": [
         "Majanicho"
       ],
+      "referenceRegion": "Fuerteventura",
       "referenceKm": 1.2
     },
     {
@@ -10134,6 +10871,7 @@
       "attestedAs": [
         "Playa del Moro"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 2.97
     },
     {
@@ -10147,6 +10885,7 @@
       "attestedAs": [
         "Playa del Moro"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.18
     },
     {
@@ -10160,6 +10899,7 @@
       "attestedAs": [
         "Playa del Muerto"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -10174,6 +10914,7 @@
       "attestedAs": [
         "Playa del Socorro"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.19
     },
     {
@@ -10187,6 +10928,7 @@
       "attestedAs": [
         "Playa de Tranqueru"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.56
     },
     {
@@ -10200,6 +10942,7 @@
       "attestedAs": [
         "El Agujero"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.16
     },
     {
@@ -10213,6 +10956,7 @@
       "attestedAs": [
         "Playa el Bombo"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.55
     },
     {
@@ -10226,6 +10970,7 @@
       "attestedAs": [
         "Playa El Poris"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.27
     },
     {
@@ -10239,6 +10984,7 @@
       "attestedAs": [
         "Playa De Salon"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -10254,6 +11000,7 @@
         "Playa España",
         "Playa de Espana"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.08
     },
     {
@@ -10267,6 +11014,7 @@
       "attestedAs": [
         "Playa de Viso"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.65
     },
     {
@@ -10280,6 +11028,7 @@
       "attestedAs": [
         "Faro de Trafalgar"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.67
     },
     {
@@ -10294,6 +11043,7 @@
         "Conil",
         "Conil de la Frontera"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 1.12
     },
     {
@@ -10307,6 +11057,7 @@
       "attestedAs": [
         "Poris de Abona (Playa Grande)"
       ],
+      "referenceRegion": "Tenerife",
       "referenceKm": 0.33
     },
     {
@@ -10321,6 +11072,7 @@
         "Playa Aguilera",
         "Playa Tenrero"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.66
     },
     {
@@ -10334,6 +11086,7 @@
       "attestedAs": [
         "Playa de la Cagonera"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.32
     },
     {
@@ -10349,6 +11102,7 @@
         "La Concha Left - Playa Honda",
         "La Concha Right - Playa-Honda"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.4
     },
     {
@@ -10362,6 +11116,7 @@
       "attestedAs": [
         "Playa de la Nea"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.08
     },
     {
@@ -10375,6 +11130,7 @@
       "attestedAs": [
         "Malapesquera"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.13
     },
     {
@@ -10388,6 +11144,7 @@
       "attestedAs": [
         "Playa Martianez"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -10401,6 +11158,7 @@
       "attestedAs": [
         "Matagorda Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.39
     },
     {
@@ -10414,6 +11172,7 @@
       "attestedAs": [
         "Meloneras"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.37
     },
     {
@@ -10427,6 +11186,7 @@
       "attestedAs": [
         "Almerimar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.39
     },
     {
@@ -10441,6 +11201,7 @@
       "attestedAs": [
         "Islares"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.15
     },
     {
@@ -10454,6 +11215,7 @@
       "attestedAs": [
         "Punta del Río"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.5
     },
     {
@@ -10467,6 +11229,7 @@
       "attestedAs": [
         "Punta Prima"
       ],
+      "referenceRegion": "Valencia",
       "referenceKm": 0.99
     },
     {
@@ -10481,6 +11244,7 @@
       "attestedAs": [
         "San Juan"
       ],
+      "referenceRegion": "Lanzarote",
       "referenceKm": 0.21
     },
     {
@@ -10494,6 +11258,7 @@
       "attestedAs": [
         "Playa Serena"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.91
     },
     {
@@ -10507,6 +11272,7 @@
       "attestedAs": [
         "Punta Umbria (Playa Camarón)"
       ],
+      "referenceRegion": "Andalucia",
       "referenceKm": 0.97
     },
     {
@@ -10520,6 +11286,7 @@
       "attestedAs": [
         "El Tajo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.92
     },
     {
@@ -10534,6 +11301,7 @@
         "Rodiles",
         "Rodiles - Main Beach"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.4
     },
     {
@@ -10547,6 +11315,7 @@
       "attestedAs": [
         "Playón de Bayas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.71
     },
     {
@@ -10561,6 +11330,7 @@
       "attestedAs": [
         "Plentzia"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.3
     },
     {
@@ -10574,6 +11344,7 @@
       "attestedAs": [
         "Pobbles Beach"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.24
     },
     {
@@ -10588,6 +11359,7 @@
       "attestedAs": [
         "Poldhu Cove"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.2
     },
     {
@@ -10602,6 +11374,7 @@
       "attestedAs": [
         "Pollacheeny Harbour"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.31
     },
     {
@@ -10616,6 +11389,7 @@
       "attestedAs": [
         "Pollan Bay"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.41
     },
     {
@@ -10629,6 +11403,7 @@
       "attestedAs": [
         "Poppit Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.6
     },
     {
@@ -10642,6 +11417,7 @@
       "attestedAs": [
         "Port Bara"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 2.69
     },
     {
@@ -10657,6 +11433,7 @@
         "Cote Sauvage",
         "Port Blanc"
       ],
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.12
     },
     {
@@ -10671,6 +11448,7 @@
       "attestedAs": [
         "Portballintrae"
       ],
+      "referenceRegion": "Antrim",
       "referenceKm": 0.58
     },
     {
@@ -10686,6 +11464,7 @@
         "Porth",
         "Porth Beach"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.5
     },
     {
@@ -10699,6 +11478,7 @@
       "attestedAs": [
         "Aberffraw"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 1.1
     },
     {
@@ -10715,6 +11495,7 @@
         "Treaddur bay",
         "Trearddur Bay (Holy Island)"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 0.83
     },
     {
@@ -10730,6 +11511,7 @@
         "Porth Ceiriad",
         "Porth Ceriad"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.07
     },
     {
@@ -10743,6 +11525,7 @@
       "attestedAs": [
         "Porthjoke"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.37
     },
     {
@@ -10758,6 +11541,7 @@
         "Hayle",
         "Porthkidney Beach"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.4
     },
     {
@@ -10771,6 +11555,7 @@
       "attestedAs": [
         "Priests Cove"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 1.36
     },
     {
@@ -10786,6 +11571,7 @@
         "Hells Mouth (Porth Neigwl)",
         "Porth Neigwl (Hells Mouth)"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.95
     },
     {
@@ -10799,6 +11585,7 @@
       "attestedAs": [
         "Porth Nobla"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 2.64
     },
     {
@@ -10812,6 +11599,7 @@
       "attestedAs": [
         "Church Bay"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 0.51
     },
     {
@@ -10827,6 +11615,7 @@
         "Cable Bay (Porth Trecastell)",
         "Porth Trecastell"
       ],
+      "referenceRegion": "Anglesy",
       "referenceKm": 0.02
     },
     {
@@ -10840,6 +11629,7 @@
       "attestedAs": [
         "Coverack"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.96
     },
     {
@@ -10853,6 +11643,7 @@
       "attestedAs": [
         "Porthcothan Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.35
     },
     {
@@ -10867,6 +11658,7 @@
       "attestedAs": [
         "Porthcurno"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.07
     },
     {
@@ -10882,6 +11674,7 @@
         "Porthgwidden Beach",
         "The Breakwater-St Ives"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.04
     },
     {
@@ -10896,6 +11689,7 @@
       "attestedAs": [
         "Porthleven"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.44
     },
     {
@@ -10909,6 +11703,7 @@
       "attestedAs": [
         "Caerhays"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.91
     },
     {
@@ -10923,6 +11718,7 @@
       "attestedAs": [
         "Porthmeor"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.05
     },
     {
@@ -10938,6 +11734,7 @@
         "Hawkes Point",
         "Porthminster Beach"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.05
     },
     {
@@ -10951,6 +11748,7 @@
       "attestedAs": [
         "Whistling Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.06
     },
     {
@@ -10964,6 +11762,7 @@
       "attestedAs": [
         "Whistling Sands (Porth Oer)"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.6
     },
     {
@@ -10977,6 +11776,7 @@
       "attestedAs": [
         "Porthpean"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -10991,6 +11791,7 @@
       "attestedAs": [
         "Porthtowan"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.35
     },
     {
@@ -11004,6 +11805,7 @@
       "attestedAs": [
         "Velvet Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.65
     },
     {
@@ -11017,6 +11819,7 @@
       "attestedAs": [
         "Portobello Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.31
     },
     {
@@ -11033,6 +11836,7 @@
         "Portreath Beach",
         "Portreath Harbour Wall"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.15
     },
     {
@@ -11046,6 +11850,7 @@
       "attestedAs": [
         "Portsalon Beach"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.71
     },
     {
@@ -11059,6 +11864,7 @@
       "attestedAs": [
         "Portslade"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 1.26
     },
     {
@@ -11073,6 +11879,7 @@
       "attestedAs": [
         "Portstewart Strand"
       ],
+      "referenceRegion": "Londonderry",
       "referenceKm": 0.09
     },
     {
@@ -11087,6 +11894,7 @@
         "Mosca Point",
         "Pozo Izquierdo"
       ],
+      "referenceRegion": "Gran Canaria",
       "referenceKm": 0.61
     },
     {
@@ -11101,6 +11909,7 @@
       "attestedAs": [
         "Praa Sands"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.23
     },
     {
@@ -11114,6 +11923,7 @@
       "attestedAs": [
         "Praia América"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.37
     },
     {
@@ -11129,6 +11939,7 @@
         "Playa Aguieira",
         "Praia de Aguieira"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.24
     },
     {
@@ -11142,6 +11953,7 @@
       "attestedAs": [
         "Playa de Baleo"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.21
     },
     {
@@ -11155,6 +11967,7 @@
       "attestedAs": [
         "Playa de Area"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.77
     },
     {
@@ -11170,6 +11983,7 @@
         "Playa de Fonforron",
         "Praia de Fonforrón"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.63
     },
     {
@@ -11183,6 +11997,7 @@
       "attestedAs": [
         "Caion"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.43
     },
     {
@@ -11196,6 +12011,7 @@
       "attestedAs": [
         "Playa de A Concha"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -11209,6 +12025,7 @@
       "attestedAs": [
         "Playa de Nerga"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 5.59
     },
     {
@@ -11225,6 +12042,7 @@
         "Valdovino",
         "Valdoviño"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.51
     },
     {
@@ -11240,6 +12058,7 @@
         "Playa de Ladeira",
         "Praia da Ladeira"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.26
     },
     {
@@ -11253,6 +12072,7 @@
       "attestedAs": [
         "Playa de Langosteira"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.45
     },
     {
@@ -11268,6 +12088,7 @@
         "La Lanzada",
         "Playa de Lanzada"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.28
     },
     {
@@ -11281,6 +12102,7 @@
       "attestedAs": [
         "Playa de Madorra"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.82
     },
     {
@@ -11294,6 +12116,7 @@
       "attestedAs": [
         "Playa da A Marosa"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.61
     },
     {
@@ -11307,6 +12130,7 @@
       "attestedAs": [
         "Pedra do Sal"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.27
     },
     {
@@ -11320,6 +12144,7 @@
       "attestedAs": [
         "Playa Rapadoira"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.33
     },
     {
@@ -11333,6 +12158,7 @@
       "attestedAs": [
         "Praia das Illas"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.02
     },
     {
@@ -11346,6 +12172,7 @@
       "attestedAs": [
         "Playa de Barona"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.21
     },
     {
@@ -11361,6 +12188,7 @@
         "Louro",
         "Louro (Playa Area Maior)"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.08
     },
     {
@@ -11376,6 +12204,7 @@
         "Malpica",
         "Playa de Malpica"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.1
     },
     {
@@ -11389,6 +12218,7 @@
       "attestedAs": [
         "Playa de Baldayo - La Laguna"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.1
     },
     {
@@ -11402,6 +12232,7 @@
       "attestedAs": [
         "Praia de Bares"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.27
     },
     {
@@ -11417,6 +12248,7 @@
         "Barrañan",
         "Playa de Barranan"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.48
     },
     {
@@ -11430,6 +12262,7 @@
       "attestedAs": [
         "Playa de Carnota"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.73
     },
     {
@@ -11445,6 +12278,7 @@
         "Doniños",
         "Playa de Doninos"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.3
     },
     {
@@ -11458,6 +12292,7 @@
       "attestedAs": [
         "Playa de Esteiro"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.18
     },
     {
@@ -11471,6 +12306,7 @@
       "attestedAs": [
         "Playa de Esteiro"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 4.48
     },
     {
@@ -11484,6 +12320,7 @@
       "attestedAs": [
         "Playa de Larino"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.61
     },
     {
@@ -11497,6 +12334,7 @@
       "attestedAs": [
         "Playa de Melide"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.31
     },
     {
@@ -11512,6 +12350,7 @@
         "Nemina",
         "Nemiña"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.3
     },
     {
@@ -11526,6 +12365,7 @@
       "attestedAs": [
         "Pantin"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.25
     },
     {
@@ -11542,6 +12382,7 @@
         "Playa Abra",
         "Playa de Patos (El Pico)"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.34
     },
     {
@@ -11555,6 +12396,7 @@
       "attestedAs": [
         "Praia de Peizás"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -11569,6 +12411,7 @@
       "attestedAs": [
         "Ponzos"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.15
     },
     {
@@ -11584,6 +12427,7 @@
         "Playa de Razo",
         "Razo"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.12
     },
     {
@@ -11597,6 +12441,7 @@
       "attestedAs": [
         "Praia de Riazor"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -11610,6 +12455,7 @@
       "attestedAs": [
         "Playa do Rostro"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.45
     },
     {
@@ -11623,6 +12469,7 @@
       "attestedAs": [
         "Playa de San Roman"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.3
     },
     {
@@ -11636,6 +12483,7 @@
       "attestedAs": [
         "Playa de San Xurxo"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.34
     },
     {
@@ -11651,6 +12499,7 @@
         "Praia de Santa Comba",
         "Santa Comba"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.04
     },
     {
@@ -11664,6 +12513,7 @@
       "attestedAs": [
         "Playa de Seaia"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.28
     },
     {
@@ -11677,6 +12527,7 @@
       "attestedAs": [
         "Playa de Soesto"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.59
     },
     {
@@ -11691,6 +12542,7 @@
       "attestedAs": [
         "Playa de Traba"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.13
     },
     {
@@ -11704,6 +12556,7 @@
       "attestedAs": [
         "Villarrube"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.97
     },
     {
@@ -11717,6 +12570,7 @@
       "attestedAs": [
         "Playa do Carreiro"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 1.39
     },
     {
@@ -11730,6 +12584,7 @@
       "attestedAs": [
         "Playa de Castro"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 2.4
     },
     {
@@ -11745,6 +12600,7 @@
         "Matadeiro",
         "Playa do Matadeiro"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0
     },
     {
@@ -11760,6 +12616,7 @@
         "Playa del Orzán",
         "Playa do Orzan"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.04
     },
     {
@@ -11773,6 +12630,7 @@
       "attestedAs": [
         "Praia do Riás"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -11788,6 +12646,7 @@
         "Playa de Rio Sieira / As Furnas",
         "Rio Siera"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.1
     },
     {
@@ -11801,6 +12660,7 @@
       "attestedAs": [
         "Playa de Rodo"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.43
     },
     {
@@ -11816,6 +12676,7 @@
         "Playa de Sarrigal",
         "Praia Sarridal"
       ],
+      "referenceRegion": "Galicia",
       "referenceKm": 0.06
     },
     {
@@ -11829,6 +12690,7 @@
       "attestedAs": [
         "San Xorxe"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.81
     },
     {
@@ -11842,6 +12704,7 @@
       "attestedAs": [
         "Praia do Vilar"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.45
     },
     {
@@ -11855,6 +12718,7 @@
       "attestedAs": [
         "Preston Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -11870,6 +12734,7 @@
         "El Sardinero - Segunda",
         "Santander (El Sardinero)"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.37
     },
     {
@@ -11883,6 +12748,7 @@
       "attestedAs": [
         "Playa Punta Blanca"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.43
     },
     {
@@ -11897,6 +12763,7 @@
       "attestedAs": [
         "Putsborough"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 0.22
     },
     {
@@ -11910,6 +12777,7 @@
       "attestedAs": [
         "Pwlldu Point"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.52
     },
     {
@@ -11923,6 +12791,7 @@
       "attestedAs": [
         "Ramsgate Main Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.96
     },
     {
@@ -11937,6 +12806,7 @@
         "Ramsgate",
         "Ramsgate (The Wall)"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.97
     },
     {
@@ -11950,6 +12820,7 @@
       "attestedAs": [
         "Red Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -11963,6 +12834,7 @@
       "attestedAs": [
         "Reenroe Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.01
     },
     {
@@ -11977,6 +12849,7 @@
       "attestedAs": [
         "Rest Bay"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.09
     },
     {
@@ -11991,6 +12864,7 @@
       "attestedAs": [
         "Rhossili"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 1.73
     },
     {
@@ -12004,6 +12878,7 @@
       "attestedAs": [
         "Ringstead Bay"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.2
     },
     {
@@ -12017,6 +12892,7 @@
       "attestedAs": [
         "Roker Beach"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.5
     },
     {
@@ -12030,6 +12906,7 @@
       "attestedAs": [
         "Rosapenna"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.78
     },
     {
@@ -12045,6 +12922,7 @@
         "Rossbeigh",
         "Rossbeigh Strand"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.51
     },
     {
@@ -12058,6 +12936,7 @@
       "attestedAs": [
         "Rosslare"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 1.37
     },
     {
@@ -12072,6 +12951,7 @@
       "attestedAs": [
         "Rossnowlagh"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.55
     },
     {
@@ -12085,6 +12965,7 @@
       "attestedAs": [
         "Runswick Bay"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.37
     },
     {
@@ -12098,6 +12979,7 @@
       "attestedAs": [
         "Rush South Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.78
     },
     {
@@ -12111,6 +12993,7 @@
       "attestedAs": [
         "Playas de Fornells"
       ],
+      "referenceRegion": null,
       "referenceKm": 2.88
     },
     {
@@ -12124,6 +13007,7 @@
       "attestedAs": [
         "Playa S'Argamassa"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -12139,6 +13023,7 @@
         "Moliets Plage",
         "Saint-Girons-Plage"
       ],
+      "referenceRegion": "Landes",
       "referenceKm": 0.52
     },
     {
@@ -12152,6 +13037,7 @@
       "attestedAs": [
         "Sainte Restitude"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.33
     },
     {
@@ -12167,6 +13053,7 @@
         "Saltburn",
         "Saltburn-by-Sea"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.33
     },
     {
@@ -12180,6 +13067,7 @@
       "attestedAs": [
         "Saltdean"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.14
     },
     {
@@ -12193,6 +13081,7 @@
       "attestedAs": [
         "Playa de San Amaro"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.03
     },
     {
@@ -12206,6 +13095,7 @@
       "attestedAs": [
         "Sandbanks Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.11
     },
     {
@@ -12220,6 +13110,7 @@
       "attestedAs": [
         "Sandwood Bay"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.38
     },
     {
@@ -12233,6 +13124,7 @@
       "attestedAs": [
         "Sandy Bay"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 2.19
     },
     {
@@ -12248,6 +13140,7 @@
         "Sandy Mouth",
         "Sandymouth"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.3
     },
     {
@@ -12261,6 +13154,7 @@
       "attestedAs": [
         "Sandymount Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.72
     },
     {
@@ -12275,6 +13169,7 @@
       "attestedAs": [
         "Sango Bay"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.07
     },
     {
@@ -12288,6 +13183,7 @@
       "attestedAs": [
         "Saundersfoot"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -12302,6 +13198,7 @@
       "attestedAs": [
         "Saunton"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 2.08
     },
     {
@@ -12315,6 +13212,7 @@
       "attestedAs": [
         "Saviskaill Bay"
       ],
+      "referenceRegion": "Orkney Islands",
       "referenceKm": 2.27
     },
     {
@@ -12328,6 +13226,7 @@
       "attestedAs": [
         "Seacliff"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.37
     },
     {
@@ -12341,6 +13240,7 @@
       "attestedAs": [
         "Seaton"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.07
     },
     {
@@ -12356,6 +13256,7 @@
         "Seaton",
         "Seaton Beach"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.07
     },
     {
@@ -12369,6 +13270,7 @@
       "attestedAs": [
         "Seatown"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -12382,6 +13284,7 @@
       "attestedAs": [
         "El Sardinero - Primera"
       ],
+      "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.57
     },
     {
@@ -12397,6 +13300,7 @@
         "Guethary",
         "Guethary - Cenitz"
       ],
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.03
     },
     {
@@ -12413,6 +13317,7 @@
         "Sennen",
         "Sennen Cove"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.12
     },
     {
@@ -12426,6 +13331,7 @@
       "attestedAs": [
         "Scraggane Bay"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 0.96
     },
     {
@@ -12439,6 +13345,7 @@
       "attestedAs": [
         "Silver Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.12
     },
     {
@@ -12452,6 +13359,7 @@
       "attestedAs": [
         "Sherkin Island - Silver Strand"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.53
     },
     {
@@ -12466,6 +13374,7 @@
       "attestedAs": [
         "Sker"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.69
     },
     {
@@ -12479,6 +13388,7 @@
       "attestedAs": [
         "Slade Bay/Boot Reef"
       ],
+      "referenceRegion": "Gower",
       "referenceKm": 0.95
     },
     {
@@ -12492,6 +13402,7 @@
       "attestedAs": [
         "Slapton Sands"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.47
     },
     {
@@ -12505,6 +13416,7 @@
       "attestedAs": [
         "Shanklin (Hope Beach)"
       ],
+      "referenceRegion": "Isle of Wight",
       "referenceKm": 0.57
     },
     {
@@ -12518,6 +13430,7 @@
       "attestedAs": [
         "Smerwick Harbour"
       ],
+      "referenceRegion": "Kerry",
       "referenceKm": 1.78
     },
     {
@@ -12531,6 +13444,7 @@
       "attestedAs": [
         "Menorca - Son Bou"
       ],
+      "referenceRegion": "Balearic Islands (Islas Baleares)",
       "referenceKm": 0.22
     },
     {
@@ -12546,6 +13460,7 @@
         "South Beach (Tenby)",
         "Tenby (South Beach)"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 1.06
     },
     {
@@ -12560,6 +13475,7 @@
       "attestedAs": [
         "Southbourne"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.32
     },
     {
@@ -12573,6 +13489,7 @@
       "attestedAs": [
         "Southend on Sea"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.25
     },
     {
@@ -12586,6 +13503,7 @@
       "attestedAs": [
         "Southsea"
       ],
+      "referenceRegion": null,
       "referenceKm": 2.59
     },
     {
@@ -12601,6 +13519,7 @@
         "Spanish Point",
         "Spanish Point Reefs"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.1
     },
     {
@@ -12614,6 +13533,7 @@
       "attestedAs": [
         "Spittal Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.15
     },
     {
@@ -12627,6 +13547,7 @@
       "attestedAs": [
         "St. Finian's Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.05
     },
     {
@@ -12641,6 +13562,7 @@
       "attestedAs": [
         "Stonehaven"
       ],
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.25
     },
     {
@@ -12655,6 +13577,7 @@
       "attestedAs": [
         "Strandhill"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.5
     },
     {
@@ -12670,6 +13593,7 @@
         "Strathy",
         "Strathy Bay"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.43
     },
     {
@@ -12684,6 +13608,7 @@
       "attestedAs": [
         "Streedagh Strand"
       ],
+      "referenceRegion": "Sligo",
       "referenceKm": 0.77
     },
     {
@@ -12697,6 +13622,7 @@
       "attestedAs": [
         "Stroove"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.87
     },
     {
@@ -12712,6 +13638,7 @@
         "Bude",
         "Bude Summerleaze"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.14
     },
     {
@@ -12725,6 +13652,7 @@
       "attestedAs": [
         "Sutton Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.57
     },
     {
@@ -12739,6 +13667,7 @@
       "attestedAs": [
         "Swanage"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.73
     },
     {
@@ -12754,6 +13683,7 @@
         "Falmouth - Swanpool",
         "Swanpool"
       ],
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0.06
     },
     {
@@ -12767,6 +13697,7 @@
       "attestedAs": [
         "Swansea Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.82
     },
     {
@@ -12781,6 +13712,7 @@
       "attestedAs": [
         "Teignmouth"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.51
     },
     {
@@ -12796,6 +13728,7 @@
         "Long Strand",
         "Long Strand-Castlefreke"
       ],
+      "referenceRegion": "Cork",
       "referenceKm": 0.21
     },
     {
@@ -12811,6 +13744,7 @@
         "Newquay Town Beach",
         "Tolcarne"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.06
     },
     {
@@ -12824,6 +13758,7 @@
       "attestedAs": [
         "Playa de Torimbia"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 1.5
     },
     {
@@ -12839,6 +13774,7 @@
         "Torrisdale",
         "Torrisdale Bay"
       ],
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.95
     },
     {
@@ -12853,6 +13789,7 @@
       "attestedAs": [
         "Towan"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.09
     },
     {
@@ -12866,6 +13803,7 @@
       "attestedAs": [
         "Tower Bay"
       ],
+      "referenceRegion": "Wexford",
       "referenceKm": 0.18
     },
     {
@@ -12879,6 +13817,7 @@
       "attestedAs": [
         "Glencolumbkille"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.89
     },
     {
@@ -12893,6 +13832,7 @@
       "attestedAs": [
         "Aberdaron"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.15
     },
     {
@@ -12906,6 +13846,7 @@
       "attestedAs": [
         "Abersoch"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.76
     },
     {
@@ -12919,6 +13860,7 @@
       "attestedAs": [
         "Treath Bychan"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.27
     },
     {
@@ -12932,6 +13874,7 @@
       "attestedAs": [
         "Traeth Crigyll"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.45
     },
     {
@@ -12945,6 +13888,7 @@
       "attestedAs": [
         "Harlech"
       ],
+      "referenceRegion": "Mid Wales",
       "referenceKm": 1.56
     },
     {
@@ -12958,6 +13902,7 @@
       "attestedAs": [
         "Llandanwg"
       ],
+      "referenceRegion": "Mid Wales",
       "referenceKm": 0.45
     },
     {
@@ -12971,6 +13916,7 @@
       "attestedAs": [
         "Traeth Llydan"
       ],
+      "referenceRegion": null,
       "referenceKm": 4.24
     },
     {
@@ -12985,6 +13931,7 @@
       "attestedAs": [
         "Porth Nefyn"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.31
     },
     {
@@ -12998,6 +13945,7 @@
       "attestedAs": [
         "Porth Towyn"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.44
     },
     {
@@ -13011,6 +13959,7 @@
       "attestedAs": [
         "Trefor"
       ],
+      "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.24
     },
     {
@@ -13024,6 +13973,7 @@
       "attestedAs": [
         "Feall Bay (Coll)"
       ],
+      "referenceRegion": "Inner Hebrides",
       "referenceKm": 0.42
     },
     {
@@ -13037,6 +13987,7 @@
       "attestedAs": [
         "Hogh Bay (Coll)"
       ],
+      "referenceRegion": "Inner Hebrides",
       "referenceKm": 0.26
     },
     {
@@ -13052,6 +14003,7 @@
         "Tramore",
         "Tramore Strand"
       ],
+      "referenceRegion": "Waterford",
       "referenceKm": 0.28
     },
     {
@@ -13065,6 +14017,7 @@
       "attestedAs": [
         "Tramore Left"
       ],
+      "referenceRegion": "Waterford",
       "referenceKm": 2.13
     },
     {
@@ -13078,6 +14031,7 @@
       "attestedAs": [
         "Tramore (Dunfanaghy)"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.46
     },
     {
@@ -13091,6 +14045,7 @@
       "attestedAs": [
         "Trá Na Rosan"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.16
     },
     {
@@ -13104,6 +14059,7 @@
       "attestedAs": [
         "Trawalua Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.3
     },
     {
@@ -13118,6 +14074,7 @@
       "attestedAs": [
         "Trecco Bay"
       ],
+      "referenceRegion": "South East",
       "referenceKm": 0.12
     },
     {
@@ -13131,6 +14088,7 @@
       "attestedAs": [
         "Tregardock"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 3
     },
     {
@@ -13144,6 +14102,7 @@
       "attestedAs": [
         "Tremone Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.25
     },
     {
@@ -13157,6 +14116,7 @@
       "attestedAs": [
         "Trevaunance Cove"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.1
     },
     {
@@ -13172,6 +14132,7 @@
         "Trevone",
         "Trevone Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.16
     },
     {
@@ -13186,6 +14147,7 @@
       "attestedAs": [
         "Treyarnon"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.33
     },
     {
@@ -13199,6 +14161,7 @@
       "attestedAs": [
         "Trez Bellec Plage"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.82
     },
     {
@@ -13212,6 +14175,7 @@
       "attestedAs": [
         "Plage de Mesperleuc (Le Grand)"
       ],
+      "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.15
     },
     {
@@ -13226,6 +14190,7 @@
       "attestedAs": [
         "Tullagh Bay"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.38
     },
     {
@@ -13242,6 +14207,7 @@
         "Tullaghan Left",
         "Tullaghan Right"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 0.11
     },
     {
@@ -13256,6 +14222,7 @@
       "attestedAs": [
         "Tullan Strand"
       ],
+      "referenceRegion": "Donegal",
       "referenceKm": 1.49
     },
     {
@@ -13269,6 +14236,7 @@
       "attestedAs": [
         "Vardiolla"
       ],
+      "referenceRegion": "Corsica",
       "referenceKm": 0.27
     },
     {
@@ -13283,6 +14251,7 @@
       "attestedAs": [
         "Ventnor"
       ],
+      "referenceRegion": "Isle of Wight",
       "referenceKm": 0.03
     },
     {
@@ -13298,6 +14267,7 @@
         "Broadstairs",
         "Viking Bay"
       ],
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0.13
     },
     {
@@ -13312,6 +14282,7 @@
       "attestedAs": [
         "Watergate Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.02
     },
     {
@@ -13326,6 +14297,7 @@
       "attestedAs": [
         "Wembury"
       ],
+      "referenceRegion": "South Devon",
       "referenceKm": 0.31
     },
     {
@@ -13339,6 +14311,7 @@
       "attestedAs": [
         "West Sands Beach"
       ],
+      "referenceRegion": null,
       "referenceKm": 1.36
     },
     {
@@ -13355,6 +14328,7 @@
         "Portrush West Strand",
         "Portrush-West Strand"
       ],
+      "referenceRegion": "Antrim",
       "referenceKm": 0.31
     },
     {
@@ -13370,6 +14344,7 @@
         "West Dale",
         "Westdale"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.03
     },
     {
@@ -13383,6 +14358,7 @@
       "attestedAs": [
         "Westport"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.41
     },
     {
@@ -13396,6 +14372,7 @@
       "attestedAs": [
         "Whipsiderry"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 1.06
     },
     {
@@ -13409,6 +14386,7 @@
       "attestedAs": [
         "Razor Blades (Whitburn)"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 1.57
     },
     {
@@ -13422,6 +14400,7 @@
       "attestedAs": [
         "White Park Bay"
       ],
+      "referenceRegion": "Antrim",
       "referenceKm": 0.58
     },
     {
@@ -13435,6 +14414,7 @@
       "attestedAs": [
         "Whiterock"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.09
     },
     {
@@ -13448,6 +14428,7 @@
       "attestedAs": [
         "White Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.64
     },
     {
@@ -13461,6 +14442,7 @@
       "attestedAs": [
         "Killard"
       ],
+      "referenceRegion": "Clare",
       "referenceKm": 0.28
     },
     {
@@ -13476,6 +14458,7 @@
         "Whitesand Bay",
         "Whitesands"
       ],
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.22
     },
     {
@@ -13489,6 +14472,7 @@
       "attestedAs": [
         "Whiting Bay"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.32
     },
     {
@@ -13504,6 +14488,7 @@
         "Hartley Reef",
         "Whitley Bay"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.62
     },
     {
@@ -13518,6 +14503,7 @@
       "attestedAs": [
         "Widemouth Bay"
       ],
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0.1
     },
     {
@@ -13533,6 +14519,7 @@
         "Skerrys",
         "Withernsea"
       ],
+      "referenceRegion": "North East England",
       "referenceKm": 0.21
     },
     {
@@ -13548,6 +14535,7 @@
         "Woolacombe",
         "Woolacombe Bay"
       ],
+      "referenceRegion": "North Devon",
       "referenceKm": 1.1
     },
     {
@@ -13561,6 +14549,7 @@
       "attestedAs": [
         "Worthing"
       ],
+      "referenceRegion": null,
       "referenceKm": 2.73
     },
     {
@@ -13575,6 +14564,7 @@
       "attestedAs": [
         "Xivares"
       ],
+      "referenceRegion": "Asturias",
       "referenceKm": 0.04
     },
     {
@@ -13588,6 +14578,7 @@
       "attestedAs": [
         "Yellow Strand"
       ],
+      "referenceRegion": null,
       "referenceKm": 0.32
     },
     {
@@ -13602,6 +14593,7 @@
       "attestedAs": [
         "Yport"
       ],
+      "referenceRegion": "Normandy",
       "referenceKm": 0.22
     },
     {
@@ -13616,6 +14608,7 @@
       "attestedAs": [
         "Zarautz"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.37
     },
     {
@@ -13631,6 +14624,7 @@
         "La Zurriola",
         "Zurriola hondartza"
       ],
+      "referenceRegion": "Pais Vasco",
       "referenceKm": 0.23
     }
   ]
