@@ -153,19 +153,29 @@ committed so the Vercel build stays hermetic and offline.
 ```bash
 node scripts/fetch-osm-beaches.mjs        # stage 1: OSM -> osm-beaches.raw.json
 node scripts/resolve-break-names.mjs      # stage 1.5: an OSM coordinate for the breaks stage 1 missed
+node scripts/add-reviewed-places.mjs      # stage 1.6: the OSM objects hand-reviewed decisions name
 node scripts/derive-spot-config.mjs       # stage 2: exposure -> spots.json + index
 node scripts/filter-spots-with-data.mjs   # stage 3: drop spots the wave model has no data for
 node scripts/attest-surf-spots.mjs        # stage 3.5: which places surf references name -> surf-spots.attested.json
+node scripts/add-reference-breaks.mjs     # stage 3.5b: surf-forecast breaks with no OSM place, at their coordinate
 node scripts/verify-spot-coordinates.mjs  # stage 3.6: coordinate on the open-sea shore -> spots.coordinate-check.json
 node scripts/curate-spots.mjs             # stage 4: publish attested + verified spots, one file per country
 node scripts/benchmark-catalogue.mjs      # compare with the references, region by region
 ```
 
+**The target is surf-forecast's break list: every break they list is published** (decided
+2026-09-28), at an OSM place when one answers to its name and at the coordinate their page
+prints when none does (stage 3.5b). Spain is done this way; France, the United Kingdom,
+Ireland and Portugal follow, one country per deploy (`FULL_LIST_COUNTRIES` in
+`scripts/lib/references.mjs`, read by stages 3.5b and 4).
+Surfline-only places are still published beside them.
+
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 935,
-some unreferenced (long beaches whose reference sits past 2 km on the same sand).
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,144,
+564 of them in Spain, where 423 of surf-forecast's 427 breaks have a marker of their own and
+the other four share one with a same-name neighbour (Salinas and Playa de Salinas).
 
 **Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
 and reef; stage 3.5 then checks which of them a reference names. That finds nothing
@@ -186,13 +196,16 @@ surf-forecast files Northern Ireland under Ireland, and the nearest-neighbour fa
 filed Bangor and Newcastle, both County Down, under Louth across the sea. Islands are
 not accepted at all: "Achill Island" resolved to the whole island, whose centroid is a
 mountain. A case-insensitive regex on `name` cannot use Overpass's index and times out,
-so the query asks for everything named around the point and filters here.
+so the query asks for everything named around the point and filters here. Villages and
+named water stand for a break only in Ireland (`SETTLEMENTS_STAND_FOR_BREAKS`): in Spain
+"Quintanilla" found a reservoir. Spanish addresses from Nominatim often lack the region
+code, so a find with none takes the region of the nearest raw place within 15 km.
 
 **Stage 3.5 (attestation).** The references are Surfline's spot list and surf-forecast's
 break list with the coordinate each break page prints, read once by hand into
 `.cache/benchmark/` (**not versioned**, third-party data; never automate recurring
-extraction). They contribute **names only**: coordinates and config stay OpenStreetMap's,
-the only source this catalogue redistributes. `surf-spots.attested.json` records, per OSM
+extraction). In this stage they contribute **names only**: a place attested here keeps
+OpenStreetMap's coordinate and config. `surf-spots.attested.json` records, per OSM
 place, which reference name vouched for it. The matching rules each exist because the
 looser version published a wrong beach:
 
@@ -210,9 +223,41 @@ looser version published a wrong beach:
   standing on another mapped beach (Playa Finestrat is not Cala de Finestrat).
 - One break resolves to one place: when two references resolve Mundaka to Laidatxu and
   to Hondartzape, the better-supported one is kept.
-- Everything unresolved is recorded in `.cache/benchmark/attestation-report.json`: 734
-  references whose nearby OSM beach has another name (the review queue for phase 2),
-  and references with no OSM place at all.
+- One place holds one surf-forecast break. They list peaks, not beaches (Las Canteras is
+  El Lloret, La Cicer, El Circo and Vagabundo); the place keeps the break that best fits it
+  (named as the place is, then reviewed, then nearest) and the others go to stage 3.5b.
+- The curated list vouches for beaches only: a headland shares a word with the beach
+  beside it (Punta de Tarifa and Tarifa), so a cape is attested only by name.
+- **Hand-reviewed decisions** (`surf-spots.reviewed.json`, see its `_readme`) override the
+  rules for one reference: the OSM object that is the break (stage 1.6 fetches it if
+  stage 1 did not), or `absent`. A decision can be keyed by region when a country has two
+  breaks of one name (Calita in Cádiz and in Alicante).
+- A reviewed decision is not applied to a reference more than 25 km from its place: the
+  same name there is another break (Playa de San Juan is in Alicante and in Asturias).
+- A section of a beach (dogs, naturists) is never a candidate: "Playa de Bayas - Zona para
+  perros" took surf-forecast's Playa de Bayas.
+- Stage 4 publishes a place under **surf-forecast's name** when OSM's says something else
+  (La Concha is mapped as Kontxa hondartza, La Playita as Playa de Santa María del Mar);
+  OSM's stays in `provenance.osmName`. Only in `FULL_LIST_COUNTRIES`. A stage 3.5b point
+  that ends on an OSM place's own point after the shore check is one marker under both
+  names (Punta Usaje / Jameos del Agua).
+- Everything unresolved is recorded in `.cache/benchmark/attestation-report.json`, with
+  `forecastBreaks`: every surf-forecast break and the place it ended on, which stage 3.5b
+  reads.
+
+**Stage 3.5b (reference breaks).** Every surf-forecast break stage 3.5 left without an
+OSM place is published at the coordinate its page prints, under its name, with the page
+in `provenance.reference` and `type: 'Break'`: reef and peak nicknames OSM has never
+mapped (El Quemao, Shooting Gallery, Pico de la Autopista) and second peaks on one beach.
+The swell window comes from the same bathymetry rule as stage 2 (`scripts/lib/exposure.mjs`),
+with one open bearing as the floor in every country (their list, not the arc, says it is a
+break), and the wave-model check from stage 3 (`scripts/lib/marine.mjs`). Their pages print two
+decimals (about 500 m), so two breaks can share a point: they become one marker under both
+names ("El Lloret / La Cicer"). A break whose name an already-published neighbour carries
+within 1.5 km is that place and is not added twice; one Surfline names the same (their
+Mundaka is OSM's Laidatxu) takes the break and surf-forecast's name. The attestation entry says
+`coordinate: 'surf-forecast'`; stage 3.5 never treats these as candidates, so a break OSM
+maps later moves back to OSM's coordinate on the next run. Run stage 3.6 again afterwards.
 
 **Stage 3.6 (coordinates).** Against OSM: `natural=coastline` within 350 m, the nearest
 shore is not a closed sea, and the reference is not more than 5 km away. OSM draws
@@ -220,20 +265,19 @@ coastline around the Mar Menor, the étangs and the Ebro delta bays too, so the 
 uses the enclosed waters inside `LAGOON_ZONES` (add a box before adding a coast with a
 lagoon). Long beaches (Pendine, La Barrosa, Saunton) have polygon centroids in the dunes;
 those are moved to the nearest coastline point (up to 2.5 km) and stage 4 keeps the
-original as `provenance.centroid`. Overpass mirrors go down often;
+original as `provenance.centroid`. A stage 3.5b point is moved the same way, and also when
+it lands beside a lagoon (their rounding put Pico de el Errizo on La Manga's Mar Menor
+side), always to open-sea shore. A reviewed place is exempt from the 5 km rule: the person
+who checked it records why the reference's point is off. Overpass mirrors go down often;
 `OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
 
-**Known gaps (phase 2):** coverage is 93-96% of Surfline in Asturias, Cantabria and País
-Vasco, and 102 of surf-forecast's 135 Irish breaks (the count includes their Dublin and
-Wicklow breaks, which are no longer published), but 30% in Scotland. What is left in
-Ireland is of two kinds, and neither can be closed without inventing a coordinate:
-**surfers' nicknames** OSM has never heard of — Aileen's, The Peak, Shit Creek, Dumps,
-Mossies, The Bar, Lighthouse, Incredible Wave — and **peaks on a strand already
-published**, which share its forecast cell (Brandon Bay's Stoney Gap, Gweebarra's two
-heads). Both would need break coordinates from a source that is not OpenStreetMap, which
-is the one thing this catalogue does not do. They stay absent until
-the catalogue accepts break coordinates of its own; do not loosen the matching to fill
-them.
+**Known gaps:** until stage 3.5b is run for them, France, the United Kingdom and Ireland
+only list the breaks OSM maps under their name: 102 of surf-forecast's 135 Irish breaks,
+30% in Scotland. What is missing there is **surfers' nicknames** OSM has never heard of
+(Aileen's, The Peak, Shit Creek) and **peaks on a strand already published** (Brandon
+Bay's Stoney Gap) — exactly what stage 3.5b adds. Do not loosen the name matching to
+fill them: a loose match puts a break on the wrong beach, where stage 3.5b puts it where
+the reference does.
 
 **Ireland is published under surf-forecast's regions, not its counties** (stage 4,
 `IRISH_REGION_OF_COUNTY`): that is the list Irish surfers read. They file Tullaghan,
@@ -252,9 +296,10 @@ the browser gets `useCountryIndexes` (dynamic import of each country the map rea
 and one coarse point per spot so geolocation still resolves to the nearest *spot*.
 
 Coverage: Spain, Ireland, France (incl. overseas régions) and the United Kingdom.
-Ireland is also queried for **headlands and reefs** (`natural=cape`, `natural=reef`):
-a third of its published breaks are point and reef breaks OSM maps as capes (Doolin
-Point, Fanad Head, Cream Point, Garywilliam Point). They are OSM coordinates like any
+Ireland and Spain are also queried for **headlands and reefs** (`natural=cape`, `natural=reef`):
+a third of Ireland's published breaks are point and reef breaks OSM maps as capes (Doolin
+Point, Fanad Head, Cream Point, Garywilliam Point), and Spain has Cabo Lastres and Punta
+de la Raja. They are OSM coordinates like any
 other and still have to be named by a reference; the spot detail calls them Point or
 Reef rather than Beach.
 England is fetched once and split by ceremonial county with batched Overpass
@@ -297,11 +342,11 @@ re-derives just those countries and leaves every other spot byte-identical.
 
 Stage 2 decides which features actually face open ocean. It probes elevation along
 12 bearings 6 km out; a bearing is open water when the sample is at or below sea level,
-and a spot needs a contiguous arc of at least 90° to qualify — **except in Ireland, where
-one open bearing (30°) is enough** (`MIN_OPEN_ARC_BY_COUNTRY`). Irish breaks sit at the
+and a spot needs a contiguous arc of at least 90° to qualify — **except in Ireland and
+Spain, where one open bearing (30°) is enough** (`MIN_OPEN_ARC_BY_COUNTRY`). Irish breaks sit at the
 head of a bay facing its mouth, which at 6 km spans one or two bearings: the 90° rule
 dropped Lahinch, Inch, Enniscrone, Portsalon and Marble Hill, all of them Atlantic beach
-breaks. Since stage 3.5 publishes only what a surf reference names, this stage no longer
+breaks; in Spain, Bastiagueiro in the ría of A Coruña and La Concha in Donostia's bay. Since stage 3.5 publishes only what a surf reference names, this stage no longer
 has to keep ría coves out by itself. The other countries keep 90° until someone
 re-derives them on purpose, so their catalogues do not move by accident. That arc becomes the swell
 window, its bisector the facing direction, and the reciprocal the offshore wind angle.

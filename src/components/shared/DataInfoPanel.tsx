@@ -479,9 +479,12 @@ export function DataInfoPanel() {
               <p>
                 <span className="text-ink-0">{catalogue.total.toLocaleString('en-GB')} spots</span>. A
                 beach is listed only when public surf-spot listings name a break there, so an exposed
-                beach nobody surfs is not a spot. Names and coordinates come from OpenStreetMap, and
-                every coordinate is checked to sit on the open-sea shore: a beach facing a lagoon
-                such as the Mar Menor is left out.
+                beach nobody surfs is not a spot. Where OpenStreetMap maps the break, its coordinate
+                comes from there; a break it does not map, such as a reef or a peak known by a
+                nickname, stands at the coordinate its{' '}
+                <span className="text-ink-0">surf-forecast.com</span> page gives. Every coordinate is
+                checked to sit on the open-sea shore: a beach facing a lagoon such as the Mar Menor is
+                left out.
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {catalogue.byCountry.map(([country, n]) => (
@@ -503,8 +506,13 @@ export function DataInfoPanel() {
             >
               <ul className="space-y-2">
                 <Fact term="Missing breaks">
-                  A break OpenStreetMap does not map as a named beach is not listed yet, however well
-                  known: reef and point breaks, and much of Scotland and the west of Ireland.
+                  Outside Spain, a break OpenStreetMap does not map under its name is not listed yet,
+                  however well known: reef and point breaks, and much of Scotland and the west of
+                  Ireland.
+                </Fact>
+                <Fact term="Break positions">
+                  A break placed from surf-forecast.com is accurate to about half a kilometre, the
+                  precision its page prints.
                 </Fact>
                 <Fact term="Tides">
                   Times come from modelled sea level, which is less accurate on the coast. Not for

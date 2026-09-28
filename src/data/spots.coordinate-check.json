@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-22",
+ "generatedAt": "2026-09-28",
  "rules": {
   "coastM": 350,
   "snapM": 2500,
@@ -8,8 +8,8 @@
   "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna",
   "referenceKm": 5
  },
- "checked": 994,
- "ok": 991,
+ "checked": 1171,
+ "ok": 1169,
  "spots": {
   "aberavon-beach": {
    "lat": 51.59428,
@@ -56,6 +56,16 @@
    "reason": null,
    "referenceKm": 0.35
   },
+  "aiguaoliva": {
+   "lat": 40.42,
+   "lon": 0.44,
+   "coastM": 218,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "an-tra-bhan": {
    "lat": 54.66388,
    "lon": -8.77536,
@@ -65,21 +75,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.52
-  },
-  "an-tra-mor-6957233": {
-   "lat": 55.16612,
-   "lon": -7.83869,
-   "coastM": 0,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.69,
-   "snapped": {
-    "lat": 55.16355,
-    "lon": -7.83025,
-    "movedM": 607
-   }
   },
   "annagh-strand": {
    "lat": 53.99946,
@@ -111,6 +106,16 @@
    "reason": null,
    "referenceKm": 0.22
   },
+  "area-da-basteira": {
+   "lat": 43.73227,
+   "lon": -7.87189,
+   "coastM": 51,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.29
+  },
   "aregno-plage-algajola": {
    "lat": 42.61062,
    "lon": 8.87092,
@@ -131,6 +136,16 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "arrieta": {
+   "lat": 29.13,
+   "lon": -13.46,
+   "coastM": 136,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "arrietara": {
    "lat": 43.38819,
    "lon": -2.99703,
@@ -149,7 +164,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.47
+   "referenceKm": 0.65
   },
   "avon-beach": {
    "lat": 50.72825,
@@ -311,6 +326,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "barcarola-puerto-del-carmen": {
+   "lat": 28.92,
+   "lon": -13.65,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "barinatxe": {
    "lat": 43.38378,
    "lon": -3.00708,
@@ -461,6 +486,26 @@
    "reason": null,
    "referenceKm": 0.1
   },
+  "boca-de-abajo": {
+   "lat": 29.12234,
+   "lon": -13.65275,
+   "coastM": 53,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.75
+  },
+  "bolonia": {
+   "lat": 36.16,
+   "lon": -5.88,
+   "coastM": 193,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "booby-s-bay": {
    "lat": 50.53814,
    "lon": -5.02699,
@@ -470,6 +515,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.94
+  },
+  "boquines": {
+   "lat": 28.14,
+   "lon": -15.55,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14612,
+    "lon": -15.55115,
+    "movedM": 686
+   }
   },
   "boscombe-beach": {
    "lat": 50.71956,
@@ -531,15 +591,15 @@
    "reason": "no sea coastline within 500 m",
    "referenceKm": 0.31
   },
-  "branksome-chine-beach": {
-   "lat": 50.70629,
-   "lon": -1.90847,
-   "coastM": 24,
+  "branksome-dene-chine-beach": {
+   "lat": 50.7087,
+   "lon": -1.90231,
+   "coastM": 13,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.08
+   "referenceKm": 0.57
   },
   "branscombe-beach": {
    "lat": 50.68702,
@@ -686,6 +746,56 @@
    "reason": null,
    "referenceKm": 0.06
   },
+  "burumendi-hondartza": {
+   "lat": 43.31136,
+   "lon": -2.38014,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.15
+  },
+  "cabo-de-las-huertas": {
+   "lat": 38.36,
+   "lon": -0.41,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cabo-de-san-cibrao": {
+   "lat": 43.70091,
+   "lon": -7.43721,
+   "coastM": 23,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.82
+  },
+  "cabo-lastres": {
+   "lat": 43.53456,
+   "lon": -5.29925,
+   "coastM": 82,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.51
+  },
+  "cabo-roche": {
+   "lat": 36.31,
+   "lon": -6.15,
+   "coastM": 210,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "caerfai-beach": {
    "lat": 51.87247,
    "lon": -5.25401,
@@ -725,6 +835,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.01
+  },
+  "cala-de-finestrat": {
+   "lat": 38.52429,
+   "lon": -0.16695,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 4.07
   },
   "cala-de-la-ginesta": {
    "lat": 41.25778,
@@ -826,6 +946,46 @@
    "reason": null,
    "referenceKm": 0.42
   },
+  "calita": {
+   "lat": 36.69,
+   "lon": -6.43,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 36.69259,
+    "lon": -6.42408,
+    "movedM": 602
+   }
+  },
+  "calita-valencia": {
+   "lat": 38.35,
+   "lon": -0.43,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.3534,
+    "lon": -0.42612,
+    "movedM": 507
+   }
+  },
+  "calp": {
+   "lat": 38.65,
+   "lon": 0.08,
+   "coastM": 148,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "camber-sands": {
    "lat": 50.93211,
    "lon": 0.79095,
@@ -885,6 +1045,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.46
+  },
+  "cap-de-l-horta": {
+   "lat": 38.35288,
+   "lon": -0.40297,
+   "coastM": 18,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1
   },
   "cap-homard": {
    "lat": -21.03311,
@@ -985,6 +1155,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.61
+  },
+  "castillo-del-rubicon-playa-blanca": {
+   "lat": 28.86,
+   "lon": -13.81,
+   "coastM": 341,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "castlerock-beach": {
    "lat": 55.16837,
@@ -1161,6 +1341,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "conil": {
+   "lat": 36.28,
+   "lon": -6.1,
+   "coastM": 67,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "constantine-bay": {
    "lat": 50.53384,
    "lon": -5.02449,
@@ -1170,6 +1360,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.41
+  },
+  "copacabana": {
+   "lat": 43.46,
+   "lon": -3.95,
+   "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "coumeenoole-bay": {
    "lat": 52.10397,
@@ -1246,6 +1446,21 @@
    "reason": null,
    "referenceKm": 0.02
   },
+  "cruz-roja": {
+   "lat": 28.04,
+   "lon": -14.33,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.04395,
+    "lon": -14.33156,
+    "movedM": 463
+   }
+  },
   "culdaff-bay": {
    "lat": 55.30013,
    "lon": -7.14765,
@@ -1316,15 +1531,50 @@
    "reason": null,
    "referenceKm": 0.62
   },
-  "derrynane-harbour": {
-   "lat": 51.76217,
-   "lon": -10.14907,
-   "coastM": 107,
+  "deiland-left-playa-honda": {
+   "lat": 28.95,
+   "lon": -13.59,
+   "coastM": 47,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.46
+   "referenceKm": 0
+  },
+  "derecha-de-la-cala": {
+   "lat": 38.53,
+   "lon": -0.16,
+   "coastM": 18,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "derecha-de-la-caleta": {
+   "lat": 28.38,
+   "lon": -16.79,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.37541,
+    "lon": -16.78814,
+    "movedM": 539
+   }
+  },
+  "derrynane-bay-beach": {
+   "lat": 51.75963,
+   "lon": -10.14135,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.97
   },
   "dirk-bay": {
    "lat": 51.54279,
@@ -1389,7 +1639,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.47
+   "referenceKm": 1
   },
   "doonbeg-bay": {
    "lat": 52.74271,
@@ -1561,7 +1811,22 @@
    "reason": null,
    "referenceKm": 0.88
   },
-  "el-burro": {
+  "el-balneario": {
+   "lat": 36.02,
+   "lon": -5.61,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 36.01721,
+    "lon": -5.61544,
+    "movedM": 578
+   }
+  },
+  "el-burro-180138174": {
    "lat": 28.68842,
    "lon": -13.8322,
    "coastM": 80,
@@ -1570,6 +1835,116 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.28
+  },
+  "el-cano-de-la-culata": {
+   "lat": 37.21,
+   "lon": -7.06,
+   "coastM": 193,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-castillo": {
+   "lat": 36.38,
+   "lon": -6.22,
+   "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-charco-bajamar": {
+   "lat": 28.55,
+   "lon": -16.34,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.55643,
+    "lon": -16.34104,
+    "movedM": 718
+   }
+  },
+  "el-charco-de-bristol": {
+   "lat": 28.74551,
+   "lon": -13.87183,
+   "coastM": 120,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.41
+  },
+  "el-circo": {
+   "lat": 28.14,
+   "lon": -15.59,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14596,
+    "lon": -15.59161,
+    "movedM": 678
+   }
+  },
+  "el-conquistador": {
+   "lat": 28.05,
+   "lon": -16.73,
+   "coastM": 128,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-corral-la-graciosa": {
+   "lat": 29.24,
+   "lon": -13.53,
+   "coastM": 11,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-fronton": {
+   "lat": 28.17,
+   "lon": -15.65,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.16673,
+    "lon": -15.64872,
+    "movedM": 382
+   }
+  },
+  "el-golfo": {
+   "lat": 28.97,
+   "lon": -13.83,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.97059,
+    "lon": -13.83359,
+    "movedM": 356
+   }
   },
   "el-hierro": {
    "lat": 28.73906,
@@ -1581,6 +1956,96 @@
    "reason": null,
    "referenceKm": 0.65
   },
+  "el-huerto": {
+   "lat": 43.44,
+   "lon": -4.06,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.43549,
+    "lon": -4.0542,
+    "movedM": 685
+   }
+  },
+  "el-lloret": {
+   "lat": 28.13,
+   "lon": -15.47,
+   "coastM": 108,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-mongol": {
+   "lat": 43.54,
+   "lon": -5.67,
+   "coastM": 338,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "el-muelle": {
+   "lat": 28.75,
+   "lon": -13.86,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.74572,
+    "lon": -13.86501,
+    "movedM": 680
+   }
+  },
+  "el-paso": {
+   "lat": 28.15,
+   "lon": -15.58,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14524,
+    "lon": -15.58284,
+    "movedM": 595
+   }
+  },
+  "el-roque-gran-canaria": {
+   "lat": 28.14,
+   "lon": -15.57,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14439,
+    "lon": -15.57076,
+    "movedM": 491
+   }
+  },
+  "el-roque-taganana": {
+   "lat": 28.57,
+   "lon": -16.21,
+   "coastM": 106,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "el-tarajal": {
    "lat": 35.87183,
    "lon": -5.3434,
@@ -1590,6 +2055,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.02
+  },
+  "el-tiburon-playa-honda": {
+   "lat": 28.94,
+   "lon": -13.6,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.94323,
+    "lon": -13.60368,
+    "movedM": 506
+   }
   },
   "el-torres": {
    "lat": 38.51464,
@@ -1675,16 +2155,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.72
-  },
-  "fairlight-glen-naturist-beach": {
-   "lat": 50.86521,
-   "lon": 0.63166,
-   "coastM": 13,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 2.74
   },
   "fanad-head": {
    "lat": 55.27644,
@@ -1796,6 +2266,16 @@
    "reason": null,
    "referenceKm": 0.37
   },
+  "fuero-de-la-bajeta": {
+   "lat": 28.56,
+   "lon": -16.33,
+   "coastM": 295,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "garretstown-strand": {
    "lat": 51.6434,
    "lon": -8.58089,
@@ -1850,6 +2330,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.86
+  },
+  "glass-beach": {
+   "lat": 28.66,
+   "lon": -13.83,
+   "coastM": 128,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "gorrondatxe-azkorri": {
    "lat": 43.38051,
@@ -1945,6 +2435,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.24
+  },
+  "guibeleco": {
+   "lat": 43.43,
+   "lon": -2.74,
+   "coastM": 68,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "gullane-bents": {
    "lat": 56.04472,
@@ -2071,6 +2571,21 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "hondarribia": {
+   "lat": 43.39,
+   "lon": -1.82,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.3864,
+    "lon": -1.81762,
+    "movedM": 442
+   }
+  },
   "hornsea-sands": {
    "lat": 53.91558,
    "lon": -0.16228,
@@ -2136,6 +2651,16 @@
    "reason": null,
    "referenceKm": 0.58
   },
+  "isla-de-izaro": {
+   "lat": 43.43,
+   "lon": -2.69,
+   "coastM": 315,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "itzurun-hondartza": {
    "lat": 43.30021,
    "lon": -2.26088,
@@ -2146,6 +2671,21 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "jameos-del-agua": {
+   "lat": 29.15,
+   "lon": -13.43,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 29.15389,
+    "lon": -13.42956,
+    "movedM": 432
+   }
+  },
   "joss-bay": {
    "lat": 51.37951,
    "lon": 1.44726,
@@ -2155,6 +2695,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.13
+  },
+  "jucar": {
+   "lat": 39.15,
+   "lon": -0.24,
+   "coastM": 93,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "karramarro": {
    "lat": 43.29221,
@@ -2331,6 +2881,31 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "la-barossa": {
+   "lat": 36.36,
+   "lon": -6.18,
+   "coastM": 303,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-caleta-lanzarote": {
+   "lat": 29.12,
+   "lon": -13.56,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 29.11816,
+    "lon": -13.56352,
+    "movedM": 398
+   }
+  },
   "la-caravelle": {
    "lat": 16.21809,
    "lon": -61.39651,
@@ -2341,6 +2916,21 @@
    "reason": null,
    "referenceKm": 0.28
   },
+  "la-chucha": {
+   "lat": 36.7,
+   "lon": -3.46,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 36.69636,
+    "lon": -3.46046,
+    "movedM": 405
+   }
+  },
   "la-concha": {
    "lat": 28.69388,
    "lon": -14.01629,
@@ -2350,6 +2940,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.77
+  },
+  "la-concha-right-playa-honda": {
+   "lat": 28.95,
+   "lon": -13.58,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.95306,
+    "lon": -13.57846,
+    "movedM": 370
+   }
   },
   "la-courance": {
    "lat": 47.23932,
@@ -2370,6 +2975,46 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.18
+  },
+  "la-derecha-de-almaciga": {
+   "lat": 28.57,
+   "lon": -16.19,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.57297,
+    "lon": -16.19161,
+    "movedM": 364
+   }
+  },
+  "la-derecha-del-cartel": {
+   "lat": 28.06,
+   "lon": -16.73,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.06308,
+    "lon": -16.7333,
+    "movedM": 470
+   }
+  },
+  "la-fitenia": {
+   "lat": 28.05,
+   "lon": -16.71,
+   "coastM": 323,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "la-grande-cote": {
    "lat": 45.66417,
@@ -2396,6 +3041,21 @@
     "movedM": 610
    }
   },
+  "la-guancha": {
+   "lat": 28.16,
+   "lon": -15.65,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.16465,
+    "lon": -15.64812,
+    "movedM": 546
+   }
+  },
   "la-lette-blanche-vielle": {
    "lat": 43.90116,
    "lon": -1.37863,
@@ -2406,6 +3066,61 @@
    "reason": null,
    "referenceKm": 0.17
   },
+  "la-manga": {
+   "lat": 37.71,
+   "lon": -0.74,
+   "coastM": 75,
+   "waterM": 354,
+   "waterName": "Mar Menor",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-rotonda": {
+   "lat": 41.47,
+   "lon": 2.3,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.47277,
+    "lon": 2.29794,
+    "movedM": 351
+   }
+  },
+  "la-santa-el-quemao": {
+   "lat": 29.11,
+   "lon": -13.67,
+   "coastM": 164,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-santa-the-slab": {
+   "lat": 29.11,
+   "lon": -13.66,
+   "coastM": 239,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-siesta": {
+   "lat": 38.79,
+   "lon": 0.18,
+   "coastM": 194,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-tejita": {
    "lat": 28.03107,
    "lon": -16.55642,
@@ -2415,6 +3130,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.34
+  },
+  "la-yerbabuena": {
+   "lat": 36.18,
+   "lon": -5.97,
+   "coastM": 104,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "lacken-strand": {
    "lat": 54.27887,
@@ -2506,6 +3231,86 @@
    "reason": null,
    "referenceKm": 0.23
   },
+  "largos": {
+   "lat": 36.46,
+   "lon": -5,
+   "coastM": 316,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "las-bajas": {
+   "lat": 29.13,
+   "lon": -13.54,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 29.12751,
+    "lon": -13.536,
+    "movedM": 476
+   }
+  },
+  "las-conchas": {
+   "lat": 28.23,
+   "lon": -16.84,
+   "coastM": 117,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "las-monjas": {
+   "lat": 28.16,
+   "lon": -15.44,
+   "coastM": 160,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "las-piscinas": {
+   "lat": 28.14,
+   "lon": -15.56,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14565,
+    "lon": -15.56178,
+    "movedM": 649
+   }
+  },
+  "las-redes": {
+   "lat": 36.61,
+   "lon": -6.29,
+   "coastM": 161,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "las-salinas-fuerteventura": {
+   "lat": 28.06,
+   "lon": -14.41,
+   "coastM": 91,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "le-gurp": {
    "lat": 45.43399,
    "lon": -1.15364,
@@ -2596,6 +3401,16 @@
    "reason": null,
    "referenceKm": 0.77
   },
+  "liencres": {
+   "lat": 43.47,
+   "lon": -3.95,
+   "coastM": 167,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "littlehampton-east-beach": {
    "lat": 50.80213,
    "lon": -0.53236,
@@ -2614,7 +3429,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.43
+   "referenceKm": 2.35
   },
   "llangrannog-beach": {
    "lat": 52.16112,
@@ -2645,6 +3460,46 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.25
+  },
+  "los-dos-hermanos": {
+   "lat": 28.57,
+   "lon": -16.31,
+   "coastM": 174,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "los-enanos": {
+   "lat": 28.15,
+   "lon": -15.54,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "los-gigantes": {
+   "lat": 28.25,
+   "lon": -16.84,
+   "coastM": 65,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "los-lobos": {
+   "lat": 28.74,
+   "lon": -13.83,
+   "coastM": 60,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "lossiemouth-east-beach": {
    "lat": 57.71288,
@@ -2714,7 +3569,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.22,
+   "referenceKm": 2.13,
    "snapped": {
     "lat": 55.44843,
     "lon": -5.71515,
@@ -2759,7 +3614,17 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.09
+   "referenceKm": 1.76
+  },
+  "maghermore-beach": {
+   "lat": 52.9314,
+   "lon": -6.02164,
+   "coastM": 43,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.19
   },
   "maghery-bay": {
    "lat": 54.92971,
@@ -2820,6 +3685,21 @@
    "ok": false,
    "reason": "the reference puts this break 5.98 km away",
    "referenceKm": 5.98
+  },
+  "mallorca-malpas": {
+   "lat": 39.86,
+   "lon": 3.14,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 39.86469,
+    "lon": 3.14114,
+    "movedM": 528
+   }
   },
   "manorbier-beach": {
    "lat": 51.64249,
@@ -2886,6 +3766,26 @@
    "reason": null,
    "referenceKm": 0.18
   },
+  "mechihonas": {
+   "lat": 28.75,
+   "lon": -13.92,
+   "coastM": 84,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "mejillones": {
+   "lat": 28.75,
+   "lon": -13.91,
+   "coastM": 135,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "menakoz": {
    "lat": 43.39522,
    "lon": -2.98607,
@@ -2916,15 +3816,30 @@
    "reason": null,
    "referenceKm": 0.02
   },
-  "montalvo": {
-   "lat": 42.39756,
-   "lon": -8.84943,
-   "coastM": 12,
+  "molino-de-papel": {
+   "lat": 36.75,
+   "lon": -3.82,
+   "coastM": 185,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 2.18
+   "referenceKm": 0
+  },
+  "montgo-di-bongo": {
+   "lat": 38.79,
+   "lon": 0.19,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.7947,
+    "lon": 0.18724,
+    "movedM": 572
+   }
   },
   "montrose-beach": {
    "lat": 56.71179,
@@ -2935,6 +3850,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.15
+  },
+  "moraira": {
+   "lat": 38.69,
+   "lon": 0.13,
+   "coastM": 349,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "morro-negro": {
+   "lat": 29.12043,
+   "lon": -13.66142,
+   "coastM": 37,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.42
+  },
+  "mosca-point": {
+   "lat": 27.83,
+   "lon": -15.42,
+   "coastM": 249,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "mothecombe-beach": {
    "lat": 50.30807,
@@ -2984,11 +3929,26 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.05,
+   "referenceKm": 2.75,
    "snapped": {
     "lat": 53.90546,
     "lon": -9.77455,
     "movedM": 362
+   }
+  },
+  "mundaka": {
+   "lat": 43.42,
+   "lon": -2.7,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.41648,
+    "lon": -2.70265,
+    "movedM": 444
    }
   },
   "murkle-bay": {
@@ -3041,6 +4001,16 @@
    "reason": null,
    "referenceKm": 0.37
   },
+  "noja": {
+   "lat": 43.47,
+   "lon": -3.5,
+   "coastM": 226,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "north-beach-413399591": {
    "lat": 51.6759,
    "lon": -4.70054,
@@ -3070,6 +4040,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.62
+  },
+  "ogella-hondartza": {
+   "lat": 43.37296,
+   "lon": -2.54499,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.52
   },
   "ojos-de-garza": {
    "lat": 27.95037,
@@ -3101,6 +4081,16 @@
    "reason": null,
    "referenceKm": 0.22
   },
+  "oliva-beach": {
+   "lat": 38.93,
+   "lon": -0.1,
+   "coastM": 341,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "ondarreta": {
    "lat": 43.31693,
    "lon": -2.00151,
@@ -3130,6 +4120,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.42
+  },
+  "orrua": {
+   "lat": 43.31,
+   "lon": -2.22,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "outside-reef": {
+   "lat": 29.12,
+   "lon": -13.63,
+   "coastM": 181,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "ownahincha-strand-west": {
    "lat": 51.56641,
@@ -3226,6 +4236,26 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "pedro-barba-la-graciosa": {
+   "lat": 29.26,
+   "lon": -13.48,
+   "coastM": 70,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pena-roja": {
+   "lat": 43.44,
+   "lon": -2.8,
+   "coastM": 285,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "pendine": {
    "lat": 51.72789,
    "lon": -4.48866,
@@ -3300,6 +4330,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.42
+  },
+  "pico-de-el-errizo": {
+   "lat": 37.74,
+   "lon": -0.74,
+   "coastM": 0,
+   "waterM": 238,
+   "waterName": "Mar Menor",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.74331,
+    "lon": -0.74102,
+    "movedM": 377
+   }
+  },
+  "pico-de-el-puerto": {
+   "lat": 36.76,
+   "lon": -2.1,
+   "coastM": 268,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pico-de-la-autopista": {
+   "lat": 37.75,
+   "lon": -0.73,
+   "coastM": 111,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pico-madrid": {
+   "lat": 38.07,
+   "lon": -0.64,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.0708,
+    "lon": -0.64803,
+    "movedM": 709
+   }
   },
   "pinarellu": {
    "lat": 41.6745,
@@ -3569,17 +4649,17 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.64
+   "referenceKm": 0.7
   },
-  "plage-de-kerhilio": {
-   "lat": 47.60985,
-   "lon": -3.16632,
-   "coastM": 81,
+  "plage-de-kerhillio": {
+   "lat": 47.61075,
+   "lon": -3.16753,
+   "coastM": 93,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.47
+   "referenceKm": 0.57
   },
   "plage-de-kervel": {
    "lat": 48.1163,
@@ -3649,7 +4729,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.37
+   "referenceKm": 0.75
   },
   "plage-de-l-anse-trabaud": {
    "lat": 14.41013,
@@ -4284,7 +5364,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.43
+   "referenceKm": 1.82
   },
   "plage-de-socoa": {
    "lat": 43.39015,
@@ -4404,17 +5484,17 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.45
+   "referenceKm": 0.73
   },
-  "plage-des-ayguades-poste-de-secours-n-5": {
-   "lat": 43.12809,
-   "lon": 3.13935,
-   "coastM": 30,
-   "waterM": 450,
-   "waterName": "Étang de Mateille",
+  "plage-des-ayguades": {
+   "lat": 43.12232,
+   "lon": 3.13505,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.58
+   "referenceKm": 2.31
   },
   "plage-des-blancs-sablons": {
    "lat": 48.37084,
@@ -4459,7 +5539,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.41
+   "referenceKm": 0.67
   },
   "plage-des-corsaires": {
    "lat": 43.50745,
@@ -4720,16 +5800,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.18
-  },
-  "plage-du-domaine-residentiel-naturiste-la-jenny": {
-   "lat": 44.85592,
-   "lon": -1.22426,
-   "coastM": 32,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.32
   },
   "plage-du-dossen": {
    "lat": 48.69477,
@@ -5011,16 +6081,6 @@
    "reason": null,
    "referenceKm": 1.14
   },
-  "plage-naturiste-des-kaolins": {
-   "lat": 47.72282,
-   "lon": -3.4888,
-   "coastM": 67,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.34
-  },
   "plage-nord": {
    "lat": 43.68042,
    "lon": -1.44106,
@@ -5281,6 +6341,16 @@
    "reason": null,
    "referenceKm": 0.04
   },
+  "platja-de-l-almadrava": {
+   "lat": 41.50594,
+   "lon": 2.40158,
+   "coastM": 22,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.83
+  },
   "platja-de-l-ampolla": {
    "lat": 38.68705,
    "lon": 0.13044,
@@ -5341,15 +6411,45 @@
    "reason": null,
    "referenceKm": 0.53
   },
-  "platja-de-la-mar-bella": {
-   "lat": 41.39804,
-   "lon": 2.21224,
-   "coastM": 1,
+  "platja-de-la-morera": {
+   "lat": 41.46443,
+   "lon": 2.27726,
+   "coastM": 8,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.29
+   "referenceKm": 0.32
+  },
+  "platja-de-la-nova-mar-bella": {
+   "lat": 41.40174,
+   "lon": 2.21539,
+   "coastM": 10,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.49
+  },
+  "platja-de-la-paella": {
+   "lat": 41.13948,
+   "lon": 1.40523,
+   "coastM": 43,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.4
+  },
+  "platja-de-la-picordia-19286107": {
+   "lat": 41.57781,
+   "lon": 2.55295,
+   "coastM": 24,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.35
   },
   "platja-de-la-pineda": {
    "lat": 41.07621,
@@ -5370,6 +6470,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.67
+  },
+  "platja-de-la-punta-del-riu": {
+   "lat": 40.99091,
+   "lon": 0.93084,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.12
   },
   "platja-de-la-romana": {
    "lat": 40.23437,
@@ -5421,6 +6531,21 @@
    "reason": null,
    "referenceKm": 0.03
   },
+  "platja-de-ponent-25092651": {
+   "lat": 38.53205,
+   "lon": -0.14753,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.31,
+   "snapped": {
+    "lat": 38.53573,
+    "lon": -0.14867,
+    "movedM": 419
+   }
+  },
   "platja-de-ponent-282953033": {
    "lat": 41.52899,
    "lon": 2.441,
@@ -5450,6 +6575,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "platja-de-sant-joan": {
+   "lat": 38.37051,
+   "lon": -0.40919,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.31
   },
   "platja-de-sant-pol": {
    "lat": 41.78958,
@@ -5571,6 +6706,16 @@
    "reason": null,
    "referenceKm": 0.42
   },
+  "platja-de-son-serra": {
+   "lat": 39.73164,
+   "lon": 3.23737,
+   "coastM": 25,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.75
+  },
   "platja-de-son-serra-de-marina-305265667": {
    "lat": 39.7322,
    "lon": 3.23532,
@@ -5600,6 +6745,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.04
+  },
+  "platja-del-cabanyal": {
+   "lat": 39.46881,
+   "lon": -0.32189,
+   "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.21
   },
   "platja-del-callao": {
    "lat": 41.53906,
@@ -5650,6 +6805,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "platja-del-mal-pas": {
+   "lat": 38.53435,
+   "lon": -0.13187,
+   "coastM": 11,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.95
   },
   "platja-del-marjal": {
    "lat": 40.54279,
@@ -5751,6 +6916,26 @@
    "reason": null,
    "referenceKm": 0.04
   },
+  "platja-dels-pescadors": {
+   "lat": 41.49944,
+   "lon": 2.38838,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.15
+  },
+  "platja-dels-pescadors-2154298": {
+   "lat": 41.44798,
+   "lon": 2.25244,
+   "coastM": 17,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.3
+  },
   "platja-des-codolar": {
    "lat": 38.86521,
    "lon": 1.35236,
@@ -5771,6 +6956,16 @@
    "reason": null,
    "referenceKm": 0.05
   },
+  "platja-gran-de-tora": {
+   "lat": 39.53472,
+   "lon": 2.45612,
+   "coastM": 3,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.62
+  },
   "platja-sa-tuna": {
    "lat": 41.96043,
    "lon": 3.2297,
@@ -5790,6 +6985,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.54
+  },
+  "platja-torre-de-sant-vicent": {
+   "lat": 40.0485,
+   "lon": 0.07139,
+   "coastM": 38,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.2
   },
   "platja-voramar": {
    "lat": 40.05579,
@@ -5891,6 +7096,16 @@
    "reason": null,
    "referenceKm": 0.02
   },
+  "playa-cala-estaca": {
+   "lat": 37.92943,
+   "lon": -0.72087,
+   "coastM": 27,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
   "playa-calnegre": {
    "lat": 37.6673,
    "lon": -0.72598,
@@ -5900,16 +7115,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.79
-  },
-  "playa-campo-de-golf-489761200": {
-   "lat": 36.6508,
-   "lon": -4.4715,
-   "coastM": 23,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 1.42
   },
   "playa-central": {
    "lat": 37.19691,
@@ -5941,6 +7146,16 @@
    "reason": null,
    "referenceKm": 0.68
   },
+  "playa-d-outur": {
+   "lat": 43.55328,
+   "lon": -6.59683,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.79
+  },
   "playa-de-aguilar": {
    "lat": 43.5553,
    "lon": -6.1192,
@@ -5950,6 +7165,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.53
+  },
+  "playa-de-aizkorri": {
+   "lat": 43.38,
+   "lon": -3.01,
+   "coastM": 216,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "playa-de-alcala": {
    "lat": 28.19969,
@@ -5980,6 +7205,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.7
+  },
+  "playa-de-arguineguin": {
+   "lat": 27.7563,
+   "lon": -15.68104,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.71
   },
   "playa-de-arinaga": {
    "lat": 27.85483,
@@ -6021,15 +7256,25 @@
    "reason": null,
    "referenceKm": 0.22
   },
-  "playa-de-bayas-zona-para-perros": {
-   "lat": 43.57279,
-   "lon": -6.0488,
-   "coastM": 11,
+  "playa-de-barayu": {
+   "lat": 43.56098,
+   "lon": -6.61485,
+   "coastM": 7,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 1.07
+   "referenceKm": 1.2
+  },
+  "playa-de-barra": {
+   "lat": 42.26,
+   "lon": -8.81,
+   "coastM": 190,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "playa-de-benijo": {
    "lat": 28.57625,
@@ -6106,15 +7351,25 @@
    "reason": null,
    "referenceKm": 0.21
   },
-  "playa-de-calahonda-riviera": {
-   "lat": 36.48901,
-   "lon": -4.70739,
-   "coastM": 27,
+  "playa-de-cadavedo": {
+   "lat": 43.56,
+   "lon": -6.42,
+   "coastM": 338,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.41
+   "referenceKm": 0
+  },
+  "playa-de-calahonda": {
+   "lat": 36.48562,
+   "lon": -4.73575,
+   "coastM": 15,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.16
   },
   "playa-de-calblanque": {
    "lat": 37.60371,
@@ -6125,6 +7380,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.93
+  },
+  "playa-de-campelo": {
+   "lat": 43.61,
+   "lon": -8.19,
+   "coastM": 175,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "playa-de-camposoto": {
    "lat": 36.41129,
@@ -6186,6 +7451,16 @@
    "reason": null,
    "referenceKm": 0.52
   },
+  "playa-de-dicido": {
+   "lat": 43.36374,
+   "lon": -3.19401,
+   "coastM": 24,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.53
+  },
   "playa-de-el-brusco": {
    "lat": 43.47132,
    "lon": -3.49514,
@@ -6205,6 +7480,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.07
+  },
+  "playa-de-el-espartal": {
+   "lat": 43.58429,
+   "lon": -5.95359,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.56,
+   "snapped": {
+    "lat": 43.58107,
+    "lon": -5.95112,
+    "movedM": 408
+   }
   },
   "playa-de-el-gorguel": {
    "lat": 37.57731,
@@ -6227,14 +7517,14 @@
    "referenceKm": 0.44
   },
   "playa-de-el-palmar": {
-   "lat": 36.22452,
-   "lon": -6.06675,
-   "coastM": 65,
+   "lat": 36.22464,
+   "lon": -6.06635,
+   "coastM": 27,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.96
+   "referenceKm": 0.98
   },
   "playa-de-el-portus": {
    "lat": 37.58416,
@@ -6246,6 +7536,31 @@
    "reason": null,
    "referenceKm": 0.16
   },
+  "playa-de-el-tostadero": {
+   "lat": 43.38702,
+   "lon": -4.38733,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.4,
+   "snapped": {
+    "lat": 43.39173,
+    "lon": -4.38444,
+    "movedM": 571
+   }
+  },
+  "playa-de-entremares": {
+   "lat": 37.68,
+   "lon": -0.73,
+   "coastM": 169,
+   "waterM": 442,
+   "waterName": "Mar Menor",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-de-esquinzo": {
    "lat": 28.63489,
    "lon": -14.02755,
@@ -6255,6 +7570,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.62
+  },
+  "playa-de-famara": {
+   "lat": 29.11729,
+   "lon": -13.55409,
+   "coastM": 107,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.38
   },
   "playa-de-fatares": {
    "lat": 37.57949,
@@ -6305,6 +7630,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.3
+  },
+  "playa-de-gros": {
+   "lat": 43.32,
+   "lon": -2.03,
+   "coastM": 79,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "playa-de-guacimeta": {
    "lat": 28.94873,
@@ -6385,16 +7720,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.04
-  },
-  "playa-de-la-arena-159040670": {
-   "lat": 43.34851,
-   "lon": -3.11727,
-   "coastM": 22,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.28
   },
   "playa-de-la-arena-28578719": {
    "lat": 28.2297,
@@ -6571,16 +7896,6 @@
    "reason": null,
    "referenceKm": 0.13
   },
-  "playa-de-la-lajilla-arguineguin": {
-   "lat": 27.76166,
-   "lon": -15.68452,
-   "coastM": 4,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.22
-  },
   "playa-de-la-lambra": {
    "lat": 29.27811,
    "lon": -13.49037,
@@ -6662,14 +7977,29 @@
    "referenceKm": 0.6
   },
   "playa-de-la-ribera-363351253": {
-   "lat": 35.88678,
-   "lon": -5.31498,
-   "coastM": 17,
+   "lat": 35.88682,
+   "lon": -5.31518,
+   "coastM": 14,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.08
+   "referenceKm": 0.06
+  },
+  "playa-de-la-salve": {
+   "lat": 43.42309,
+   "lon": -3.43447,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.51,
+   "snapped": {
+    "lat": 43.42016,
+    "lon": -3.43953,
+    "movedM": 522
+   }
   },
   "playa-de-la-victoria": {
    "lat": 36.50623,
@@ -6680,6 +8010,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.13
+  },
+  "playa-de-lagos": {
+   "lat": 36.75,
+   "lon": -4.05,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 36.74519,
+    "lon": -4.05219,
+    "movedM": 566
+   }
   },
   "playa-de-langre": {
    "lat": 43.47569,
@@ -6710,6 +8055,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.47
+  },
+  "playa-de-las-canteras-1377576138": {
+   "lat": 36.73935,
+   "lon": -6.44069,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
   },
   "playa-de-las-canteras-30598416": {
    "lat": 28.13955,
@@ -6781,6 +8136,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "playa-de-las-salinas": {
+   "lat": 28.07707,
+   "lon": -14.47657,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.08
+  },
   "playa-de-las-teresitas": {
    "lat": 28.50796,
    "lon": -16.18434,
@@ -6811,6 +8176,26 @@
    "reason": null,
    "referenceKm": 0.11
   },
+  "playa-de-las-verdas": {
+   "lat": 36.58406,
+   "lon": -4.53376,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.56
+  },
+  "playa-de-lastres": {
+   "lat": 43.53,
+   "lon": -5.28,
+   "coastM": 328,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-de-llumeres": {
    "lat": 43.63994,
    "lon": -5.82729,
@@ -6832,14 +8217,14 @@
    "referenceKm": 0.74
   },
   "playa-de-los-alamos": {
-   "lat": 36.63787,
-   "lon": -4.48221,
-   "coastM": 9,
+   "lat": 36.64569,
+   "lon": -4.47618,
+   "coastM": 28,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.59
+   "referenceKm": 0.44
   },
   "playa-de-los-barcos-437341777": {
    "lat": 43.49585,
@@ -6862,14 +8247,14 @@
    "referenceKm": 0.07
   },
   "playa-de-los-canos-de-meca": {
-   "lat": 36.18435,
-   "lon": -6.01635,
-   "coastM": 101,
+   "lat": 36.18484,
+   "lon": -6.01802,
+   "coastM": 103,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.57
+   "referenceKm": 0.73
   },
   "playa-de-los-charcos": {
    "lat": 29.00133,
@@ -6882,14 +8267,14 @@
    "referenceKm": 0.2
   },
   "playa-de-los-genoveses": {
-   "lat": 36.74403,
-   "lon": -2.12044,
+   "lat": 36.74395,
+   "lon": -2.12045,
    "coastM": 109,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.11
+   "referenceKm": 0.12
   },
   "playa-de-los-james": {
    "lat": 28.24017,
@@ -6940,6 +8325,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "playa-de-los-quebrantos": {
+   "lat": 43.56517,
+   "lon": -6.06941,
+   "coastM": 43,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.54
   },
   "playa-de-los-troches": {
    "lat": 28.57143,
@@ -7019,7 +8414,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.56
+   "referenceKm": 1.18
   },
   "playa-de-navia": {
    "lat": 43.55539,
@@ -7030,6 +8425,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.54
+  },
+  "playa-de-nerga": {
+   "lat": 42.26,
+   "lon": -8.77,
+   "coastM": 133,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "playa-de-niembro": {
+   "lat": 43.43,
+   "lon": -4.76,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.42577,
+    "lon": -4.75946,
+    "movedM": 470
+   }
   },
   "playa-de-nogales": {
    "lat": 28.76006,
@@ -7061,6 +8481,16 @@
    "reason": null,
    "referenceKm": 1.63
   },
+  "playa-de-ondarreta-pico-del-tenis": {
+   "lat": 43.31,
+   "lon": -2.08,
+   "coastM": 187,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-de-orinon": {
    "lat": 43.4009,
    "lon": -3.32166,
@@ -7080,6 +8510,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.2
+  },
+  "playa-de-palombina": {
+   "lat": 43.43295,
+   "lon": -4.80941,
+   "coastM": 20,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 5.01
   },
   "playa-de-papagayo": {
    "lat": 28.84246,
@@ -7169,7 +8609,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.16
+   "referenceKm": 0.76
   },
   "playa-de-punta-del-moral": {
    "lat": 37.18162,
@@ -7211,6 +8651,26 @@
    "reason": null,
    "referenceKm": 0.78
   },
+  "playa-de-rodiles": {
+   "lat": 43.53393,
+   "lon": -5.38021,
+   "coastM": 29,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.44
+  },
+  "playa-de-sabon": {
+   "lat": 43.36,
+   "lon": -8.46,
+   "coastM": 6,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-de-san-antolin-de-bedon": {
    "lat": 43.44272,
    "lon": -4.86954,
@@ -7230,6 +8690,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.01
+  },
+  "playa-de-san-jose": {
+   "lat": 36.76122,
+   "lon": -2.10674,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.32
+  },
+  "playa-de-san-juan-asturias": {
+   "lat": 43.6,
+   "lon": -5.94,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "playa-de-san-julian": {
    "lat": 43.41278,
@@ -7251,6 +8731,51 @@
    "reason": null,
    "referenceKm": 0.09
   },
+  "playa-de-san-martin": {
+   "lat": 43.43104,
+   "lon": -4.79217,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 4.39
+  },
+  "playa-de-san-miguel-de-reinante": {
+   "lat": 43.57,
+   "lon": -7.21,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.5637,
+    "lon": -7.21148,
+    "movedM": 706
+   }
+  },
+  "playa-de-san-pedro-asturias": {
+   "lat": 43.58,
+   "lon": -6.25,
+   "coastM": 97,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "playa-de-sancti-petri": {
+   "lat": 36.38578,
+   "lon": -6.20383,
+   "coastM": 227,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.72
+  },
   "playa-de-santa-justa": {
    "lat": 43.42468,
    "lon": -4.0985,
@@ -7270,6 +8795,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.54
+  },
+  "playa-de-santa-maria-del-mar-156887753": {
+   "lat": 36.52019,
+   "lon": -6.28737,
+   "coastM": 32,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
   },
   "playa-de-santa-marina": {
    "lat": 43.46669,
@@ -7311,6 +8846,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "playa-de-tapia": {
+   "lat": 43.57,
+   "lon": -6.94,
+   "coastM": 78,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-de-tauro": {
    "lat": 27.79551,
    "lon": -15.7277,
@@ -7329,7 +8874,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.45
+   "referenceKm": 0.63
   },
   "playa-de-torregorda-766653860": {
    "lat": 36.46067,
@@ -7401,6 +8946,16 @@
    "reason": null,
    "referenceKm": 0.23
   },
+  "playa-de-vista-de-los-angeles": {
+   "lat": 37.12924,
+   "lon": -1.83052,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
   "playa-de-xago": {
    "lat": 43.60394,
    "lon": -5.92089,
@@ -7412,14 +8967,14 @@
    "referenceKm": 0.3
   },
   "playa-de-zahara": {
-   "lat": 36.15386,
+   "lat": 36.1542,
    "lon": -5.87434,
-   "coastM": 324,
+   "coastM": 299,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 3.93
+   "referenceKm": 3.96
   },
   "playa-del-cable": {
    "lat": 36.50741,
@@ -7450,6 +9005,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.03
+  },
+  "playa-del-carmen": {
+   "lat": 36.18362,
+   "lon": -5.91655,
+   "coastM": 165,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.71
   },
   "playa-del-castillo": {
    "lat": 36.52995,
@@ -7501,6 +9066,16 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "playa-del-dosel": {
+   "lat": 39.19,
+   "lon": -0.22,
+   "coastM": 218,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "playa-del-faro-el-faro": {
    "lat": 36.51166,
    "lon": -4.63495,
@@ -7510,6 +9085,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.71
+  },
+  "playa-del-hipodromo": {
+   "lat": 35.27797,
+   "lon": -2.93486,
+   "coastM": 17,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.5
   },
   "playa-del-hombre": {
    "lat": 27.99677,
@@ -7636,6 +9221,16 @@
    "reason": null,
    "referenceKm": 1.27
   },
+  "playa-el-sable": {
+   "lat": 43.42782,
+   "lon": -4.09411,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.53
+  },
   "playa-el-salon": {
    "lat": 36.74381,
    "lon": -3.87764,
@@ -7667,14 +9262,14 @@
    "referenceKm": 0.65
   },
   "playa-faro-de-trafalgar": {
-   "lat": 36.18148,
-   "lon": -6.03275,
-   "coastM": 17,
+   "lat": 36.18153,
+   "lon": -6.03292,
+   "coastM": 22,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.67
+   "referenceKm": 0.66
   },
   "playa-fuente-del-gallo": {
    "lat": 36.29003,
@@ -7704,7 +9299,17 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.66
+   "referenceKm": 1.55
+  },
+  "playa-la-arena-1252793237": {
+   "lat": 43.34796,
+   "lon": -3.11826,
+   "coastM": 45,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
   },
   "playa-la-cagonera": {
    "lat": 43.54912,
@@ -7836,6 +9441,21 @@
    "reason": null,
    "referenceKm": 0.91
   },
+  "playa-tenrero": {
+   "lat": 43.62,
+   "lon": -5.88,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.62348,
+    "lon": -5.8817,
+    "movedM": 408
+   }
+  },
   "playa-urbana-de-punta-umbria": {
    "lat": 37.17801,
    "lon": -6.96931,
@@ -7855,21 +9475,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.92
-  },
-  "playina-de-rodiles": {
-   "lat": 43.52948,
-   "lon": -5.38495,
-   "coastM": 0,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.4,
-   "snapped": {
-    "lat": 43.53396,
-    "lon": -5.38539,
-    "movedM": 497
-   }
   },
   "playon-de-bayas-el-sablon": {
    "lat": 43.57287,
@@ -8326,26 +9931,6 @@
    "reason": null,
    "referenceKm": 1.21
   },
-  "praia-da-arnela-259815809": {
-   "lat": 43.69689,
-   "lon": -7.57913,
-   "coastM": 8,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.77
-  },
-  "praia-da-arnela-2682873": {
-   "lat": 42.71002,
-   "lon": -9.01231,
-   "coastM": 43,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.63
-  },
   "praia-da-arnela-grande": {
    "lat": 43.31964,
    "lon": -8.60713,
@@ -8356,7 +9941,7 @@
    "reason": null,
    "referenceKm": 0.43
   },
-  "praia-da-concha": {
+  "praia-da-concha-90818804": {
    "lat": 43.7192,
    "lon": -7.80953,
    "coastM": 92,
@@ -8365,16 +9950,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.07
-  },
-  "praia-da-folla-de-nerga": {
-   "lat": 42.25758,
-   "lon": -8.83787,
-   "coastM": 45,
-   "waterM": null,
-   "waterName": null,
-   "ok": false,
-   "reason": "the reference puts this break 5.59 km away",
-   "referenceKm": 5.59
   },
   "praia-da-frouxeira": {
    "lat": 43.61247,
@@ -8386,7 +9961,7 @@
    "reason": null,
    "referenceKm": 0.51
   },
-  "praia-da-ladeira": {
+  "praia-da-ladeira-85572857": {
    "lat": 42.57554,
    "lon": -9.05523,
    "coastM": 153,
@@ -8466,6 +10041,16 @@
    "reason": null,
    "referenceKm": 0.02
   },
+  "praia-de-area": {
+   "lat": 43.69165,
+   "lon": -7.57979,
+   "coastM": 101,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.18
+  },
   "praia-de-area-longa": {
    "lat": 42.69077,
    "lon": -9.02817,
@@ -8526,6 +10111,16 @@
    "reason": null,
    "referenceKm": 0.48
   },
+  "praia-de-bastiagueiro": {
+   "lat": 43.34099,
+   "lon": -8.36275,
+   "coastM": 29,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.25
+  },
   "praia-de-carnota": {
    "lat": 42.82453,
    "lon": -9.1084,
@@ -8546,25 +10141,15 @@
    "reason": null,
    "referenceKm": 0.3
   },
-  "praia-de-esteiro": {
-   "lat": 43.71117,
-   "lon": -7.55946,
-   "coastM": 19,
+  "praia-de-fonforron": {
+   "lat": 42.71468,
+   "lon": -9.00929,
+   "coastM": 4,
    "waterM": null,
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.18
-  },
-  "praia-de-esteiro-231911099": {
-   "lat": 43.74843,
-   "lon": -7.72467,
-   "coastM": 28,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 4.48
+   "referenceKm": 0.29
   },
   "praia-de-larino": {
    "lat": 42.76464,
@@ -8576,6 +10161,16 @@
    "reason": null,
    "referenceKm": 0.61
   },
+  "praia-de-llas": {
+   "lat": 43.58002,
+   "lon": -7.26042,
+   "coastM": 45,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
+  },
   "praia-de-melide": {
    "lat": 42.2514,
    "lon": -8.86678,
@@ -8585,6 +10180,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.31
+  },
+  "praia-de-montalbo": {
+   "lat": 42.39638,
+   "lon": -8.85048,
+   "coastM": 143,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.21
   },
   "praia-de-nemina": {
    "lat": 43.00731,
@@ -8696,6 +10301,16 @@
    "reason": null,
    "referenceKm": 0.04
   },
+  "praia-de-santo-anton": {
+   "lat": 43.72199,
+   "lon": -7.80302,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.33
+  },
   "praia-de-seaia": {
    "lat": 43.32824,
    "lon": -8.82758,
@@ -8755,6 +10370,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.4
+  },
+  "praia-do-esteiro": {
+   "lat": 43.74843,
+   "lon": -7.72467,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 4.48
   },
   "praia-do-matadoiro": {
    "lat": 43.37549,
@@ -8856,7 +10481,27 @@
    "reason": null,
    "referenceKm": 0.37
   },
+  "puerto-de-vega": {
+   "lat": 43.57,
+   "lon": -6.64,
+   "coastM": 109,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "punta-blanca": {
+   "lat": 28.2126,
+   "lon": -16.83818,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "punta-blanca-180137663": {
    "lat": 28.71656,
    "lon": -14.00108,
    "coastM": 94,
@@ -8865,6 +10510,106 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.43
+  },
+  "punta-de-campelo-10651742858": {
+   "lat": 43.58546,
+   "lon": -8.21843,
+   "coastM": 22,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.92
+  },
+  "punta-de-carchuna": {
+   "lat": 36.69437,
+   "lon": -3.41935,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.63
+  },
+  "punta-de-la-raja": {
+   "lat": 37.76,
+   "lon": -0.74,
+   "coastM": 0,
+   "waterM": 196,
+   "waterName": "Mar Menor",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.75814,
+    "lon": -0.74459,
+    "movedM": 453
+   }
+  },
+  "punta-de-mujeres": {
+   "lat": 29.14,
+   "lon": -13.45,
+   "coastM": 175,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "punta-de-sopico": {
+   "lat": 43.43606,
+   "lon": -4.05216,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.35
+  },
+  "punta-del-hidalgo": {
+   "lat": 28.57704,
+   "lon": -16.32963,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.28
+  },
+  "punta-del-tigre": {
+   "lat": 28.06,
+   "lon": -14.5,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.06558,
+    "lon": -14.5066,
+    "movedM": 895
+   }
+  },
+  "punta-galea": {
+   "lat": 43.36,
+   "lon": -3.02,
+   "coastM": 121,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "punta-usaje": {
+   "lat": 29.15389,
+   "lon": -13.42956,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.43
   },
   "putsborough-sands": {
    "lat": 51.1485,
@@ -8886,6 +10631,21 @@
    "reason": null,
    "referenceKm": 0.52
   },
+  "quintanilla": {
+   "lat": 28.15,
+   "lon": -15.53,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.15253,
+    "lon": -15.53267,
+    "movedM": 383
+   }
+  },
   "ramsgate-sands": {
    "lat": 51.33932,
    "lon": 1.4319,
@@ -8895,16 +10655,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.96
-  },
-  "ramsgate-western-undercliffe": {
-   "lat": 51.32657,
-   "lon": 1.40718,
-   "coastM": 4,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 0.97
   },
   "red-strand": {
    "lat": 51.5472,
@@ -8951,6 +10701,16 @@
     "movedM": 622
    }
   },
+  "ria-de-foz": {
+   "lat": 43.5593,
+   "lon": -7.25144,
+   "coastM": 320,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.27
+  },
   "ringstead-beach": {
    "lat": 50.63136,
    "lon": -2.34192,
@@ -8960,6 +10720,41 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.2
+  },
+  "roc-san-cayetano": {
+   "lat": 41.17,
+   "lon": 1.48,
+   "coastM": 190,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "roca-puta": {
+   "lat": 43.31,
+   "lon": -2.23,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "rodiles-main-beach": {
+   "lat": 43.53,
+   "lon": -5.38,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.53416,
+    "lon": -5.38063,
+    "movedM": 463
+   }
   },
   "roker-beach": {
    "lat": 54.92642,
@@ -9051,6 +10846,31 @@
    "reason": null,
    "referenceKm": 0.05
   },
+  "sablera-palmera": {
+   "lat": 43.58789,
+   "lon": -5.76153,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
+  },
+  "saint-andreu-de-llavaneres": {
+   "lat": 41.55,
+   "lon": 2.5,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.5535,
+    "lon": 2.49598,
+    "movedM": 512
+   }
+  },
   "saint-girons-plage": {
    "lat": 43.95166,
    "lon": -1.36464,
@@ -9070,6 +10890,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.33
+  },
+  "salinas": {
+   "lat": 43.58,
+   "lon": -5.95,
+   "coastM": 147,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "saltburn-sands": {
    "lat": 54.58761,
@@ -9100,6 +10930,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.03
+  },
+  "san-vicente": {
+   "lat": 43.39,
+   "lon": -4.37,
+   "coastM": 341,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "sandbanks-beach": {
    "lat": 50.68849,
@@ -9160,6 +11000,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.07
+  },
+  "sant-marti-d-empuries": {
+   "lat": 42.14,
+   "lon": 3.12,
+   "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "santa-maria-de-oia": {
+   "lat": 42,
+   "lon": -8.89,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.99749,
+    "lon": -8.88244,
+    "movedM": 685
+   }
   },
   "saundersfoot-beach": {
    "lat": 51.71211,
@@ -9281,6 +11146,41 @@
     "movedM": 434
    }
   },
+  "serans": {
+   "lat": 42.61,
+   "lon": -9.06,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "shooting-gallery": {
+   "lat": 28.75,
+   "lon": -13.87,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.74856,
+    "lon": -13.87352,
+    "movedM": 379
+   }
+  },
+  "sierra-de-irta": {
+   "lat": 40.3,
+   "lon": 0.35,
+   "coastM": 53,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "silver-sands": {
    "lat": 56.05396,
    "lon": -3.28339,
@@ -9371,6 +11271,41 @@
    "reason": null,
    "referenceKm": 0.22
   },
+  "son-moll": {
+   "lat": 39.70512,
+   "lon": 3.45648,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.64
+  },
+  "sopelana": {
+   "lat": 43.39,
+   "lon": -2.99,
+   "coastM": 166,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "sotavento": {
+   "lat": 28.07,
+   "lon": -14.3,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.07192,
+    "lon": -14.30345,
+    "movedM": 400
+   }
+  },
   "south-beach-603668668": {
    "lat": 51.66177,
    "lon": -4.70786,
@@ -9400,16 +11335,6 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.25
-  },
-  "southsea-nudist-beach": {
-   "lat": 50.78618,
-   "lon": -1.0378,
-   "coastM": 44,
-   "waterM": null,
-   "waterName": null,
-   "ok": true,
-   "reason": null,
-   "referenceKm": 2.59
   },
   "spanish-point": {
    "lat": 52.84911,
@@ -9501,6 +11426,21 @@
     "movedM": 651
    }
   },
+  "suicides": {
+   "lat": 28.76,
+   "lon": -13.9,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.75362,
+    "lon": -13.90016,
+    "movedM": 705
+   }
+  },
   "summerleaze-beach": {
    "lat": 50.83093,
    "lon": -4.55268,
@@ -9565,6 +11505,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.51
+  },
+  "the-bubble": {
+   "lat": 28.75,
+   "lon": -13.95,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.74341,
+    "lon": -13.94722,
+    "movedM": 777
+   }
+  },
+  "the-bunker-playa-honda": {
+   "lat": 28.95,
+   "lon": -13.6,
+   "coastM": 275,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "the-long-strand": {
    "lat": 51.55539,
@@ -9635,6 +11600,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.89
+  },
+  "tra-mor": {
+   "lat": 55.17332,
+   "lon": -7.82662,
+   "coastM": 60,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.71
   },
   "traeth-aberdaron": {
    "lat": 52.80062,
@@ -9931,6 +11906,21 @@
    "reason": null,
    "referenceKm": 1.49
   },
+  "vagabundo": {
+   "lat": 28.15,
+   "lon": -15.6,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.14735,
+    "lon": -15.60227,
+    "movedM": 368
+   }
+  },
   "vardiola": {
    "lat": 41.6901,
    "lon": 9.38674,
@@ -10109,7 +12099,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.62
+   "referenceKm": 0.68
   },
   "widemouth-sands": {
    "lat": 50.79026,
@@ -10129,7 +12119,7 @@
    "waterName": null,
    "ok": true,
    "reason": null,
-   "referenceKm": 0.21
+   "referenceKm": 0.26
   },
   "woolacombe-sands": {
    "lat": 51.16235,
@@ -10161,6 +12151,21 @@
    "reason": null,
    "referenceKm": 0.04
   },
+  "yarro": {
+   "lat": 28.73,
+   "lon": -13.96,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 28.7341,
+    "lon": -13.96208,
+    "movedM": 497
+   }
+  },
   "yellow-strand": {
    "lat": 54.34034,
    "lon": -8.65792,
@@ -10180,6 +12185,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.22
+  },
+  "zahara-de-los-atunes": {
+   "lat": 36.13,
+   "lon": -5.85,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 36.13214,
+    "lon": -5.84642,
+    "movedM": 399
+   }
   },
   "zarauzko-hondartza": {
    "lat": 43.28914,

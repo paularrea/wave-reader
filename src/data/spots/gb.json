@@ -741,21 +741,21 @@
     }
   },
   {
-    "id": "branksome-chine-beach",
-    "name": "Branksome Chine Beach",
+    "id": "branksome-dene-chine-beach",
+    "name": "Branksome Dene Chine Beach",
     "community": "Dorset",
     "country": "United Kingdom",
     "type": "Beach",
     "coordinates": {
-      "lat": 50.70629,
-      "lon": -1.90847
+      "lat": 50.7087,
+      "lon": -1.90231
     },
     "config": {
       "swellWindow": {
         "minAngle": 75,
-        "maxAngle": 195
+        "maxAngle": 225
       },
-      "offshoreWindAngle": 315,
+      "offshoreWindAngle": 330,
       "windTolerance": 45,
       "idealHeight": {
         "beginner": {
@@ -775,10 +775,10 @@
     "provenance": {
       "source": "openstreetmap-overpass",
       "osmType": "way",
-      "osmId": 761696990,
+      "osmId": 761696995,
       "feature": "beach",
-      "facingDeg": 135,
-      "exposureDeg": 120,
+      "facingDeg": 150,
+      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }
@@ -6968,49 +6968,6 @@
       "feature": "beach",
       "facingDeg": 120,
       "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-17"
-    }
-  },
-  {
-    "id": "ramsgate-western-undercliffe",
-    "name": "Ramsgate Western Undercliffe",
-    "community": "Kent",
-    "country": "United Kingdom",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 51.32657,
-      "lon": 1.40718
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 45,
-        "maxAngle": 195
-      },
-      "offshoreWindAngle": 300,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 141790424,
-      "feature": "beach",
-      "facingDeg": 120,
-      "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-17"
     }

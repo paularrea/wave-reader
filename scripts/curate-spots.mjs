@@ -23,7 +23,8 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { normalise, curatedMatch, curatedNames } from './lib/curated.mjs';
+import { normalise, curatedMatch, curatedNames, SECTION } from './lib/curated.mjs';
+import { FULL_LIST_COUNTRIES, normalise as referenceKey, namesAgree, spellingDrift } from './lib/references.mjs';
 
 const IN_PATH = new URL('../src/data/spots.json', import.meta.url);
 const OUT_DIR = new URL('../src/data/spots/', import.meta.url);
@@ -90,8 +91,23 @@ function irishRegion(spot, attestation) {
   return IRISH_REGION_OF_COUNTY[spot.community] ?? null;
 }
 
-/** Stretches of a beach set aside for something other than surfing. */
-const SECTION = /(naturist|nudist|gossos|\bperros\b|canina|infantil|surf\s*school|centre de vacances)/i;
+/**
+ * The name the spot is published under. The catalogue lists surf-forecast's
+ * breaks, so a place that is one of them carries their name when OSM's says
+ * something else: a local or older name (La Playita is Playa de Santa María del
+ * Mar), another language (La Concha is Kontxa hondartza), or the beach a peak
+ * breaks off (Pico de el Puerto on Playa de San José). Where the two agree,
+ * OSM's fuller name stays; OSM's is always kept as `provenance.osmName`. Only
+ * in FULL_LIST_COUNTRIES, so a country changes over in its own deploy.
+ */
+function publishedName(spot, attestation) {
+  const theirs = attestation?.forecastName;
+  if (!theirs || attestation.coordinate === 'surf-forecast' || !FULL_LIST_COUNTRIES.includes(spot.country)) return spot.name;
+  const place = referenceKey(spot.name);
+  const keys = [theirs, ...theirs.split(/\s+[-\/]\s+|\s*\(|\)/)].map(referenceKey).filter(Boolean);
+  return keys.some(k => namesAgree(place, k, true) || spellingDrift(place, k)) ? spot.name : theirs;
+}
+
 
 /** Flat-earth distance: at these separations the error is under a metre. */
 function distanceKm(a, b) {
@@ -113,7 +129,8 @@ function drop(spot, reason) {
 }
 
 const candidates = [];
-for (const spot of spots) {
+const candidateAt = new Map(); // "lat,lon" -> candidate
+for (let spot of spots) {
   if (!attested.has(spot.id)) {
     drop(spot, 'not attested: no surf reference names this place');
     continue;
@@ -144,6 +161,8 @@ for (const spot of spots) {
     }
     spot.community = region;
   }
+  const name = publishedName(spot, attested.get(spot.id));
+  if (name !== spot.name) spot = { ...spot, name, provenance: { ...spot.provenance, osmName: spot.provenance?.osmName ?? spot.name } };
   // A long beach's centroid sits in the dunes; the check moved it to the
   // shoreline. The original stays in the provenance so the move can be read.
   const published = check.snapped
@@ -153,7 +172,18 @@ for (const spot of spots) {
         provenance: { ...spot.provenance, centroid: spot.coordinates, movedToShoreM: check.snapped.movedM },
       }
     : spot;
+  // A surf-forecast point moved to the shore can land on an OSM place's own
+  // point: Jameos del Agua on Punta Usaje, where Surfline puts Jameos too. One
+  // point is one marker, listed under both names, as stage 3.5b does.
+  const coordKey = `${published.coordinates.lat},${published.coordinates.lon}`;
+  const standing = candidateAt.get(coordKey);
+  if (standing && published.provenance?.source === 'surf-forecast') {
+    standing.spot = { ...standing.spot, name: `${standing.spot.name} / ${published.name}` };
+    drop(spot, `stands where ${standing.spot.name} stands; listed under both names`);
+    continue;
+  }
   candidates.push({ spot: published, named: curatedMatch(spot) });
+  candidateAt.set(coordKey, candidates.at(-1));
 }
 
 // One beach mapped twice ("Ondres-Ocean" and "Plage Ondres-Ocean", "Plage du

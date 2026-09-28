@@ -15,8 +15,9 @@ import coordinateCheck from '../../src/data/spots.coordinate-check.json';
 
 interface Provenance {
   source: string;
-  osmType: string;
-  osmId: number;
+  osmType?: string;
+  osmId?: number;
+  reference?: string;
   facingDeg: number;
   exposureDeg: number;
 }
@@ -38,13 +39,31 @@ interface Spot {
 
 const catalogue = allSpots() as unknown as Spot[];
 
+/** Countries derived with one open bearing as the floor (stage 2, MIN_OPEN_ARC_BY_COUNTRY). */
+const NARROW_WINDOW_COUNTRIES = ['Ireland', 'Spain'];
+
 test.describe('spec: spot-catalog / Coordenadas trazables', () => {
   test('every spot records where its coordinate came from', () => {
+    // An OSM object, or -- for a surf-forecast break OSM has no place for --
+    // the surf-forecast page whose coordinate it is.
     for (const spot of catalogue) {
       expect(spot.provenance, `${spot.name} has no provenance`).toBeTruthy();
+      if (spot.provenance.source === 'surf-forecast') {
+        expect(spot.provenance.reference, spot.name).toMatch(/^https:\/\/www\.surf-forecast\.com\/breaks\//);
+        continue;
+      }
       expect(spot.provenance.source).toContain('openstreetmap');
       expect(spot.provenance.osmId).toBeTruthy();
       expect(spot.provenance.osmType).toBeTruthy();
+    }
+  });
+
+  test('a coordinate from surf-forecast is only ever one of their breaks', () => {
+    const attestedById = new Map(attested.spots.map(a => [a.id, a]));
+    for (const spot of catalogue.filter(s => s.provenance.source === 'surf-forecast')) {
+      const a = attestedById.get(spot.id) as { sources: string[]; coordinate?: string } | undefined;
+      expect(a?.sources, spot.name).toEqual(['surf-forecast']);
+      expect(a?.coordinate, spot.name).toBe('surf-forecast');
     }
   });
 
@@ -60,21 +79,25 @@ test.describe('spec: spot-catalog / Exposición al mar abierto', () => {
     // A cove inside a ría has water in front of it but no swell window; this
     // is what separates it from a surfable beach.
     //
-    // Ireland is the exception: its breaks sit at the head of bays and face the
-    // mouth, which spans one or two bearings 6 km out (Lahinch in Liscannor
-    // Bay, Inch in Dingle Bay). A surf reference has to name the place before
-    // it is published, so there the window only has to exist.
+    // Ireland and Spain are the exception: their breaks sit at the head of
+    // bays and rías and face the mouth, which spans one or two bearings 6 km out
+    // (Lahinch in Liscannor Bay, Bastiagueiro in the ría of A Coruña). A surf
+    // reference has to name the place before it is published, so there the
+    // window only has to exist.
+    // A surf-forecast break placed at their coordinate (stage 3.5b) has the same
+    // floor: their list, not the arc, says it is a break.
     for (const spot of catalogue) {
-      const floor = spot.country === 'Ireland' ? 30 : 90;
+      const narrow = NARROW_WINDOW_COUNTRIES.includes(spot.country) || spot.provenance.source === 'surf-forecast';
+      const floor = narrow ? 30 : 90;
       expect(spot.provenance.exposureDeg, `${spot.name} is sheltered`).toBeGreaterThanOrEqual(floor);
     }
   });
 
-  test('a window narrower than 90 degrees is only ever a named Irish break', () => {
+  test('a window narrower than 90 degrees is only ever a named break in Ireland or Spain, or a surf-forecast break', () => {
     const names = new Set(attested.spots.map(a => a.id));
     for (const spot of catalogue) {
-      if (spot.provenance.exposureDeg >= 90) continue;
-      expect(spot.country, `${spot.name} is sheltered outside Ireland`).toBe('Ireland');
+      if (spot.provenance.exposureDeg >= 90 || spot.provenance.source === 'surf-forecast') continue;
+      expect(NARROW_WINDOW_COUNTRIES, `${spot.name} is sheltered in ${spot.country}`).toContain(spot.country);
       expect(names.has(spot.id), `${spot.name} is sheltered and unnamed`).toBe(true);
     }
   });
@@ -121,14 +144,17 @@ test.describe('spec: spot-catalog / Sin coordenadas duplicadas', () => {
 
     // Per-spot this cannot be asserted: a genuine OSM centroid may land on
     // -8.90000, and a handful do. What the old catalogue failed was the
-    // distribution -- all 61 of its coordinates sat on a 0.01 grid.
-    const precise = catalogue.filter(
+    // distribution -- all 61 of its coordinates sat on a 0.01 grid. A break at
+    // surf-forecast's coordinate is on their two-decimal grid by construction,
+    // and says so in its provenance; the rule is about OSM's.
+    const fromOsm = catalogue.filter(spot => spot.provenance.source !== 'surf-forecast');
+    const precise = fromOsm.filter(
       spot =>
         decimalsOf(spot.coordinates.lat) >= 4 && decimalsOf(spot.coordinates.lon) >= 4
     );
 
     expect(
-      precise.length / catalogue.length,
+      precise.length / fromOsm.length,
       'catalogue looks uniformly rounded to ~1 km'
     ).toBeGreaterThan(0.95);
   });
@@ -198,7 +224,9 @@ test.describe('spec: spot-catalog / Spots de surf, no toda playa etiquetada', ()
   const NOT_SURF = /(d[àa]rsena|\bmoll\b|\bmuelle\b|embarcader|\bdique\b|\bpiscina\b|\bdock\b|\bquay\b|\bjetty\b)/i;
 
   test('harbour infrastructure and inland water are not in the catalogue', () => {
-    for (const spot of catalogue) {
+    // OSM's names. A break surf-forecast lists by its harbour wall -- El Muelle
+    // in Corralejo -- is a break; their list is what says so.
+    for (const spot of catalogue.filter(s => s.provenance.source !== 'surf-forecast')) {
       expect(NOT_SURF.test(spot.name), `${spot.name} is not a surf spot`).toBe(false);
     }
   });

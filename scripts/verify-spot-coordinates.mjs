@@ -122,6 +122,23 @@ function nearestPoint(p, lines) {
   return best;
 }
 
+/**
+ * The nearest point of `lines` that is open-sea shore: OSM's coastline also
+ * runs round the Mar Menor, so the nearest point of it can be the lagoon's.
+ */
+function nearestOpenShore(p, lines) {
+  // Segment by segment: one clipped way can round the end of a sandbar.
+  const options = lines
+    .flatMap(line => line.slice(1).map((b, i) => nearestPoint(p, [[line[i], b]])))
+    .filter(o => Number.isFinite(o.m))
+    .sort((a, b) => a.m - b.m);
+  const open = options.find(o => {
+    const water = nearestEnclosed({ coordinates: { lat: o.lat, lon: o.lon } });
+    return water.waterM === null || water.waterM > SAME_SHORE_M;
+  });
+  return open ?? { m: Infinity, lat: null, lon: null };
+}
+
 // --- Query ----------------------------------------------------------------
 function bbox({ lat, lon }, metres) {
   const dLat = metres / 110_540;
@@ -247,7 +264,10 @@ function judge(r, a) {
   if (r.coastM > COAST_M) return verdict(`${r.coastM} m from the sea coastline`);
   if (r.waterM !== null && r.waterM <= r.coastM + SAME_SHORE_M)
     return verdict(`its shore is enclosed water${r.waterName ? ` (${r.waterName})` : ''}, not the open sea`);
-  if (a.referenceKm !== null && a.referenceKm > REFERENCE_KM) return verdict(`the reference puts this break ${a.referenceKm} km away`);
+  // A reviewed place was checked by a person, who records why the reference's
+  // point is off (Palombina's is 5 km east, in Llanes).
+  if (!a.reviewed && a.referenceKm !== null && a.referenceKm > REFERENCE_KM)
+    return verdict(`the reference puts this break ${a.referenceKm} km away`);
   return verdict(null);
 }
 
@@ -300,22 +320,38 @@ for (let i = 0; i < todo.length; i += BATCH) {
 }
 
 // --- Long beaches: move the centroid to the shoreline ----------------------
+// A surf-forecast point (stage 3.5b) is their two-decimal rounding of the
+// break, so one that lands beside a lagoon -- La Manga is a strip a few hundred
+// metres wide -- belongs on the sea side of it and is moved there too.
+const fromReference = s => s.attestation.coordinate === 'surf-forecast';
 const offShore = checked.filter(
-  s => !results[s.id].ok && (results[s.id].coastM === null || results[s.id].coastM > COAST_M) && !results[s.id].snapped
+  s =>
+    !results[s.id].ok &&
+    !results[s.id].snapped &&
+    (results[s.id].coastM === null || results[s.id].coastM > COAST_M || (fromReference(s) && results[s.id].waterM !== null))
 );
-for (const spot of offShore) {
-  const c = spot.coordinates;
+// Batched like the check above: surf-forecast's two-decimal points (stage 3.5b)
+// put dozens of spots a few hundred metres off the shore at once.
+const SNAP_BATCH = 10;
+for (let i = 0; i < offShore.length; i += SNAP_BATCH) {
+  const batch = offShore.slice(i, i + SNAP_BATCH);
   const data = await overpass(
-    `[out:json][timeout:120];way["natural"="coastline"](around:${SNAP_M},${c.lat},${c.lon});out geom(${bbox(c, SNAP_M * 1.2)});`
+    `[out:json][timeout:180];\n${batch
+      .map(({ coordinates: c }, k) => `make marker spot="${k}";out;\nway["natural"="coastline"](around:${SNAP_M},${c.lat},${c.lon});out geom(${bbox(c, SNAP_M * 1.2)});`)
+      .join('\n')}`
   );
-  const lines = (data.elements ?? []).map(el => el.geometry).filter(Boolean);
-  const shore = nearestPoint(c, lines);
-  if (!Number.isFinite(shore.m) || shore.m > SNAP_M) continue;
-  const moved = { ...spot, coordinates: { lat: Number(shore.lat.toFixed(5)), lon: Number(shore.lon.toFixed(5)) } };
-  const r = { lat: c.lat, lon: c.lon, coastM: 0, ...nearestEnclosed(moved) };
-  const verdict = judge(r, spot.attestation);
-  results[spot.id] = { ...r, ...verdict, snapped: { ...moved.coordinates, movedM: Math.round(shore.m) } };
-  console.log(`  ${spot.id}: moved ${Math.round(shore.m)} m to the shoreline${verdict.ok ? '' : ` -- still rejected: ${verdict.reason}`}`);
+  const perSpot = split(data.elements ?? []);
+  batch.forEach((spot, k) => {
+    const c = spot.coordinates;
+    const lines = (perSpot[k]?.coast ?? []).map(el => el.geometry).filter(Boolean);
+    const shore = nearestOpenShore(c, lines);
+    if (!Number.isFinite(shore.m) || shore.m > SNAP_M) return;
+    const moved = { ...spot, coordinates: { lat: Number(shore.lat.toFixed(5)), lon: Number(shore.lon.toFixed(5)) } };
+    const r = { lat: c.lat, lon: c.lon, coastM: 0, ...nearestEnclosed(moved) };
+    const verdict = judge(r, spot.attestation);
+    results[spot.id] = { ...r, ...verdict, snapped: { ...moved.coordinates, movedM: Math.round(shore.m) } };
+    console.log(`  ${spot.id}: moved ${Math.round(shore.m)} m to the shoreline${verdict.ok ? '' : ` -- still rejected: ${verdict.reason}`}`);
+  });
   save();
   await sleep(2000);
 }

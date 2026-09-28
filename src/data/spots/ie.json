@@ -43,54 +43,6 @@
     }
   },
   {
-    "id": "an-tra-mor-6957233",
-    "name": "Àn Trá Mor",
-    "community": "Donegal",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 55.16355,
-      "lon": -7.83025
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 315,
-        "maxAngle": 345
-      },
-      "offshoreWindAngle": 150,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 6957233,
-      "feature": "beach",
-      "facingDeg": 330,
-      "exposureDeg": 30,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22",
-      "centroid": {
-        "lat": 55.16612,
-        "lon": -7.83869
-      },
-      "movedToShoreM": 607
-    }
-  },
-  {
     "id": "annagh-strand",
     "name": "Annagh Strand",
     "community": "Mayo and Achill Island",
@@ -1502,14 +1454,14 @@
     }
   },
   {
-    "id": "derrynane-harbour",
-    "name": "Derrynane Harbour",
+    "id": "derrynane-bay-beach",
+    "name": "Derrynane Bay Beach",
     "community": "Kerry",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
-      "lat": 51.76217,
-      "lon": -10.14907
+      "lat": 51.75963,
+      "lon": -10.14135
     },
     "config": {
       "swellWindow": {
@@ -1535,10 +1487,10 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "node",
-      "osmId": 3635887402,
-      "feature": "bay",
-      "osmName": "Derrynane Harbour / Cuan Doire Fhíonáin",
+      "osmType": "way",
+      "osmId": 907026030,
+      "feature": "beach",
+      "osmName": "Derrynane Bay Beach / Trá Bhá Doire Fhionáin",
       "facingDeg": 225,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
@@ -3273,49 +3225,6 @@
     }
   },
   {
-    "id": "magheramore-beach",
-    "name": "Magheramore Beach",
-    "community": "Wexford",
-    "country": "Ireland",
-    "type": "Beach",
-    "coordinates": {
-      "lat": 52.93106,
-      "lon": -6.0217
-    },
-    "config": {
-      "swellWindow": {
-        "minAngle": 345,
-        "maxAngle": 195
-      },
-      "offshoreWindAngle": 270,
-      "windTolerance": 45,
-      "idealHeight": {
-        "beginner": {
-          "min": 0.4,
-          "max": 1.2
-        },
-        "intermediate": {
-          "min": 1,
-          "max": 2.5
-        },
-        "expert": {
-          "min": 2,
-          "max": 5
-        }
-      }
-    },
-    "provenance": {
-      "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 1329600987,
-      "feature": "beach",
-      "facingDeg": 90,
-      "exposureDeg": 210,
-      "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
-    }
-  },
-  {
     "id": "magheraroarty",
     "name": "Magheraroarty",
     "community": "Donegal",
@@ -3355,6 +3264,49 @@
       "osmName": "Machaire Rabhartaigh",
       "facingDeg": 0,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "maghermore-beach",
+    "name": "Maghermore Beach",
+    "community": "Wexford",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 52.9314,
+      "lon": -6.02164
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 345,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 270,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "relation",
+      "osmId": 2904589,
+      "feature": "beach",
+      "facingDeg": 90,
+      "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }
@@ -4732,6 +4684,49 @@
       "feature": "beach",
       "facingDeg": 300,
       "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "tra-mor",
+    "name": "Tra Mór",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Beach",
+    "coordinates": {
+      "lat": 55.17332,
+      "lon": -7.82662
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "openstreetmap-overpass",
+      "osmType": "node",
+      "osmId": 12118369929,
+      "feature": "beach",
+      "facingDeg": 300,
+      "exposureDeg": 30,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
     }

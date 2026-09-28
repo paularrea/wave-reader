@@ -2891,14 +2891,14 @@
     }
   },
   {
-    "id": "plage-de-kerhilio",
-    "name": "Plage de Kerhilio",
+    "id": "plage-de-kerhillio",
+    "name": "plage de Kerhillio",
     "community": "Bretagne",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 47.60985,
-      "lon": -3.16632
+      "lat": 47.61075,
+      "lon": -3.16753
     },
     "config": {
       "swellWindow": {
@@ -2924,8 +2924,8 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 1504434651,
+      "osmType": "node",
+      "osmId": 12118350560,
       "feature": "beach",
       "facingDeg": 240,
       "exposureDeg": 150,
@@ -6422,14 +6422,14 @@
     }
   },
   {
-    "id": "plage-des-ayguades-poste-de-secours-n-5",
-    "name": "Plage des Ayguades - Poste de secours n°5",
+    "id": "plage-des-ayguades",
+    "name": "Plage des Ayguades",
     "community": "Occitanie",
     "country": "France",
     "type": "Beach",
     "coordinates": {
-      "lat": 43.12809,
-      "lon": 3.13935
+      "lat": 43.12232,
+      "lon": 3.13505
     },
     "config": {
       "swellWindow": {
@@ -6455,8 +6455,8 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "way",
-      "osmId": 298686284,
+      "osmType": "node",
+      "osmId": 1723311743,
       "feature": "beach",
       "facingDeg": 135,
       "exposureDeg": 180,

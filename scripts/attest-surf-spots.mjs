@@ -8,9 +8,10 @@
  * other. "People surf here" is attested, not derived.
  *
  * So this stage resolves published surf-break references against the OSM
- * catalogue. Each reference contributes NAMES; the coordinates, the swell
- * window and every other config value keep coming from OpenStreetMap, which is
- * the only source this catalogue redistributes.
+ * catalogue. Here each reference contributes NAMES; the coordinate, the swell
+ * window and every other config value come from OpenStreetMap. A surf-forecast
+ * break no OSM place answers to is left unresolved and recorded in the report's
+ * `forecastBreaks`; stage 3.5b publishes it at the coordinate its page prints.
  *
  * Reference files live in .cache/benchmark/ and are NOT versioned. Rebuilding
  * them is a manual, one-off read of public pages -- do not automate it on a
@@ -22,7 +23,8 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { curatedMatch } from './lib/curated.mjs';
+import { curatedMatch, SECTION } from './lib/curated.mjs';
+import { COUNTRY_OF, FORECAST_REGIONS, normalise, distanceKm, genitive, namesAgree, spellingDrift } from './lib/references.mjs';
 
 const SPOTS = new URL('../src/data/spots.json', import.meta.url);
 const SURFLINE = new URL('../.cache/benchmark/surfline-spots.json', import.meta.url);
@@ -30,6 +32,12 @@ const FORECAST = new URL('../.cache/benchmark/surf-forecast-breaks.json', import
 /** Per break, the coordinate its surf-forecast page prints: { slug: [lat, lon] }. */
 const FORECAST_COORDS = new URL('../.cache/benchmark/surf-forecast-coords.json', import.meta.url);
 const OUT = new URL('../src/data/surf-spots.attested.json', import.meta.url);
+/**
+ * Decisions made by hand for references the rules below cannot resolve, or
+ * resolve wrongly. Versioned: each names the OSM object that IS the break, or
+ * says why there is none. See the file's own _readme.
+ */
+const REVIEWED = new URL('../src/data/surf-spots.reviewed.json', import.meta.url);
 const REPORT = new URL('../.cache/benchmark/attestation-report.json', import.meta.url);
 
 /**
@@ -49,6 +57,9 @@ const ANCHORED_KM = 1;
 /** surf-forecast prints coordinates to two decimals: up to ~600 m of rounding. */
 const FORECAST_ROUNDING_KM = 0.6;
 
+/** A reviewed decision is not applied to a reference whose own point is further away. */
+const REVIEW_REACH_KM = 25;
+
 /** Two places attested by the same name this close together are one break. */
 const ONE_BREAK_KM = 2;
 
@@ -61,214 +72,6 @@ const OWN_SAND_KM = 1;
 /** With a name in common, the two can be further apart and still be one place. */
 const SAME_NAME_KM = 6;
 
-const COUNTRY_OF = {
-  Spain: 'Spain',
-  'Spain-1': 'Spain', // surf-forecast files the Canaries under Spain (Africa)
-  France: 'France',
-  'United-Kingdom': 'United Kingdom',
-  Ireland: 'Ireland',
-  Guadeloupe: 'France',
-  Martinique: 'France',
-  Reunion: 'France',
-  'French-Guiana': 'France',
-  'United Kingdom': 'United Kingdom',
-  'Réunion': 'France',
-  Gibraltar: null,
-  Portugal: null,
-  'Isle of Man': null,
-};
-
-
-/**
- * surf-forecast groups breaks by surfing region -- "Gower", "La Cote Basque",
- * "North East England" -- which is not how this catalogue is divided. Without
- * the hint, a name on its own is ambiguous up and down a coast: "Santa Marina"
- * is a beach in Asturias and another in Galicia, and refusing to guess threw
- * away a match the reference had already disambiguated.
- *
- * A reference region maps to the set of our regions it can mean. Several of
- * theirs straddle ours, so the set narrows the candidates without pretending to
- * pick between them; a name still has to resolve to exactly one place.
- * Regions mapped to null are coasts this catalogue does not cover.
- */
-const FORECAST_REGIONS = {
-  // Spain
-  Andalucia: ['Andalucía'],
-  Asturias: ['Asturias'],
-  'Balearic Islands (Islas Baleares)': ['Baleares'],
-  Catalunia: ['Cataluña'],
-  Galicia: ['Galicia'],
-  Murcia: ['Murcia'],
-  'Pais Vasco': ['País Vasco'],
-  'Spain - Cantabria': ['Cantabria'],
-  Valencia: ['Comunidad Valenciana'],
-  Fuerteventura: ['Canarias'],
-  'Gran Canaria': ['Canarias'],
-  Lanzarote: ['Canarias'],
-  Tenerife: ['Canarias'],
-  // France
-  'Charente Maritime': ['Nouvelle-Aquitaine'],
-  Gironde: ['Nouvelle-Aquitaine'],
-  Landes: ['Nouvelle-Aquitaine'],
-  'La Cote Basque': ['Nouvelle-Aquitaine'],
-  Corsica: ['Corse'],
-  "Cote d'Armor - Brittany": ['Bretagne'],
-  'Finistere - Brittany': ['Bretagne'],
-  'Ile et Vilaine - Brittany': ['Bretagne'],
-  'Morbihan - Brittany': ['Bretagne'],
-  "Cote d'Azur": ["Provence-Alpes-Côte d'Azur"],
-  'Languedoc-Roussillon': ['Occitanie'],
-  'Loire Atlantique': ['Pays de la Loire'],
-  Vendee: ['Pays de la Loire'],
-  'Nord - Pas de Calais': ['Hauts-de-France'],
-  Normandy: ['Normandie'],
-  'Guadeloupe - Grande Terre': ['Guadeloupe'],
-  Martinique: ['Martinique'],
-  'Réunion Island': ['La Réunion'],
-  'French Guiana': ['Guyane'],
-  // Ireland -- their country page covers the whole island, so two of their
-  // regions belong to our United Kingdom.
-  Clare: ['Clare'],
-  Cork: ['Cork'],
-  Donegal: ['Donegal'],
-  Kerry: ['Kerry'],
-  'Mayo and Achill Island': ['Mayo'],
-  Sligo: ['Sligo'],
-  Waterford: ['Waterford'],
-  Wexford: ['Wexford'],
-  Antrim: ['Northern Ireland'],
-  Londonderry: ['Northern Ireland'],
-  // United Kingdom
-  'North Cornwall': ['Cornwall'],
-  'South Cornwall': ['Cornwall'],
-  'North Devon': ['Devon'],
-  'South Devon': ['Devon'],
-  Anglesy: ['Wales'],
-  Gower: ['Wales'],
-  'Lleyn Peninsula': ['Wales'],
-  'Mid Wales': ['Wales'],
-  'North Wales': ['Wales'],
-  Pembrokeshire: ['Wales'],
-  'Inner Hebrides': ['Scotland'],
-  'Outer Hebrides': ['Scotland'],
-  Kintyre: ['Scotland'],
-  'Orkney Islands': ['Scotland'],
-  'Scotland - East Coast': ['Scotland'],
-  'Scotland - North Coast': ['Scotland'],
-  'Isle of Wight': ['Isle of Wight'],
-  'North East England': ['Northumberland', 'Tyne and Wear', 'County Durham', 'North Yorkshire', 'East Riding of Yorkshire'],
-  'East Anglia': ['Norfolk', 'Suffolk', 'Essex'],
-  'South Coast of England': ['Dorset', 'Hampshire', 'East Sussex', 'West Sussex', 'Isle of Wight'],
-  'South East': ['Kent', 'East Sussex', 'West Sussex'],
-  // Coasts this catalogue does not cover
-  Alderney: null,
-  Guernsey: null,
-  Jersey: null,
-  'Isle of Man': null,
-  Lincolnshire: null,
-};
-
-const STOPWORDS = new Set(
-  ('praia playa platja plage plaja beach strand traeth hondartza sands sand bay baie bahia baia cove kala cala caleta anse playas plages ' +
-   'de del dels des du da do das dos la le les los el els lo s sa a o of the and y e i der den la')
-    .split(' ')
-);
-
-function normalise(name) {
-  return name
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .split(' ')
-    .filter(t => t.length > 1 && !STOPWORDS.has(t))
-    .join(' ')
-    .trim();
-}
-
-function distanceKm(a, b) {
-  const R = 6371;
-  const rad = Math.PI / 180;
-  const dLat = (b.lat - a.lat) * rad;
-  const dLon = (b.lon - a.lon) * rad;
-  const midLat = ((a.lat + b.lat) / 2) * rad;
-  return R * Math.sqrt(dLat ** 2 + (Math.cos(midLat) * dLon) ** 2);
-}
-
-/**
- * Words a reference adds to say which part of a beach it means. "South Fistral"
- * and "Fistral-North" are both Fistral Beach as far as a place goes.
- */
-const QUALIFIERS = new Set(
-  'north south east west nord sud norte sur little big main left right centre center central middle'.split(' ')
-);
-
-/**
- * Basque place names carry a genitive the surf references drop: Zarautz is
- * mapped as "Zarauzko hondartza", Orio as "Orioko", Deba as "Debako". Only that
- * suffix is forgiven -- a general shared-stem rule let "Carrowmore" stand in
- * for "Carrownisky", two beaches in different bays.
- */
-function genitive(t, u) {
-  const [short, long] = t.length <= u.length ? [t, u] : [u, t];
-  if (short.length < 4 || !long.endsWith('ko')) return false;
-  const base = long.replace(/e?ko$/, '');
-  return base === short || base === short.replace(/tz$/, 'z');
-}
-
-const token = (t, u) => t === u || genitive(t, u);
-const covers = (x, y) => x.every(t => y.some(u => token(t, u)));
-
-/**
- * Two names are the same break when every significant token of one appears in
- * the other. `place` is the OSM name, `ref` the reference's.
- *
- * The reference may be the shorter name ("Rodiles" for "Playa de Rodiles"),
- * and may qualify it ("South Fistral"). The OSM name may be the shorter one only
- * when it has two tokens or more, or when `anchored` -- the reference's own
- * coordinate puts it on the same sand. Unanchored, a one-word OSM place is
- * contained in far too many references: "Ness" in Brims Ness, Grim Ness and
- * Point of Ness; "Playa Roja" in "Cruz Roja".
- */
-function namesAgree(place, ref, anchored = false) {
-  if (!place || !ref) return false;
-  if (place === ref) return true;
-  const tp = place.split(' ');
-  const full = ref.split(' ');
-  // A qualifier the place does not carry is dropped ("South Fistral" is Fistral
-  // Beach); one it contradicts is not ("Portrush East Strand" is not West Strand).
-  const placeQualifiers = tp.filter(t => QUALIFIERS.has(t));
-  if (placeQualifiers.some(q => !full.includes(q))) return false;
-  const tr = full.filter(t => !QUALIFIERS.has(t) || placeQualifiers.includes(t));
-  if (tr.length === 0) return false;
-  return covers(tr, tp) || ((tp.length >= 2 || anchored) && covers(tp, full));
-}
-
-/** Edit-distance similarity, for spellings that drift: Gwynver / Gwenver, Mendia / Mandia. */
-function similarity(a, b) {
-  const A = a.replace(/ /g, '');
-  const B = b.replace(/ /g, '');
-  if (!A || !B) return 0;
-  const row = Array.from({ length: B.length + 1 }, (_, j) => j);
-  for (let i = 1; i <= A.length; i++) {
-    let prev = row[0];
-    row[0] = i;
-    for (let j = 1; j <= B.length; j++) {
-      const tmp = row[j];
-      row[j] = Math.min(row[j] + 1, row[j - 1] + 1, prev + (A[i - 1] === B[j - 1] ? 0 : 1));
-      prev = tmp;
-    }
-  }
-  return 1 - row[B.length] / Math.max(A.length, B.length);
-}
-
-/**
- * Spelling drift is allowed only between long names and only when the two
- * places are close: at 0.75 similarity "Siouville" became "Trouville" and
- * "Trestel" became "Trestrignel", real beaches kilometres apart.
- */
-const spellingDrift = (a, b) => a.replace(/ /g, '').length >= 6 && b.replace(/ /g, '').length >= 6 && similarity(a, b) >= 0.85;
-
 // --- Load ---------------------------------------------------------------
 if (!existsSync(SURFLINE) || !existsSync(FORECAST)) {
   console.error('Reference files missing from .cache/benchmark/. They are not versioned;');
@@ -276,7 +79,12 @@ if (!existsSync(SURFLINE) || !existsSync(FORECAST)) {
   process.exit(1);
 }
 
-const places = JSON.parse(readFileSync(SPOTS));
+// Stage 3.5b's breaks are surf-forecast's own coordinates, added after this
+// stage for the breaks no OSM place answered to. They are not candidates here:
+// a break is resolved against OpenStreetMap first, every run.
+// A dog or naturist section of a beach is never the break, however well its
+// name matches.
+const places = JSON.parse(readFileSync(SPOTS)).filter(p => p.provenance?.source !== 'surf-forecast' && !SECTION.test(p.name));
 const surfline = JSON.parse(readFileSync(SURFLINE));
 const forecast = JSON.parse(readFileSync(FORECAST));
 // Optional: without it, surf-forecast names are matched by name inside their
@@ -284,6 +92,55 @@ const forecast = JSON.parse(readFileSync(FORECAST));
 const forecastCoords = existsSync(FORECAST_COORDS) ? JSON.parse(readFileSync(FORECAST_COORDS)) : {};
 
 for (const p of places) p._key = normalise(p.name);
+
+const reviewed = existsSync(REVIEWED) ? JSON.parse(readFileSync(REVIEWED)) : {};
+/**
+ * "country|reference name" -> the decision recorded for it, or
+ * "country|reference region|name" where one country lists two breaks under the
+ * same name: surf-forecast has a Calita in Cádiz and another in Alicante.
+ */
+const reviewedByRef = new Map();
+const reviewKey = (country, name, region) => (region ? `${country}|${region}|${name}` : `${country}|${name}`);
+for (const [country, list] of Object.entries(reviewed)) {
+  if (country.startsWith('_')) continue;
+  for (const decision of list) reviewedByRef.set(reviewKey(country, decision.reference, decision.region), decision);
+}
+const byOsm = new Map(places.map(p => [`${p.provenance?.osmType}/${p.provenance?.osmId}`, p]));
+/** Reviewed decisions whose OSM object is not in the catalogue: stage 1.6 or 2 has to add it. */
+const reviewedMissing = [];
+/** References reviewed and found to have no OSM place of their own. */
+const reviewedAbsent = [];
+const usedReviews = new Set();
+
+/**
+ * A reviewed decision replaces the rules for that reference entirely, in both
+ * directions: it attests the place a person checked, and stops the rules from
+ * attesting the one they would have picked (Rodiles resolved to the Playina,
+ * a pocket of sand in the estuary, not the beach the wave breaks off).
+ */
+function applyReview(source, name, country, point, referenceRegion) {
+  const regional = referenceRegion && reviewKey(country, name, referenceRegion);
+  const key = regional && reviewedByRef.has(regional) ? regional : reviewKey(country, name);
+  const decision = reviewedByRef.get(key);
+  if (!decision) return false;
+  if (decision.absent) {
+    usedReviews.add(key);
+    reviewedAbsent.push({ source, reference: name, country, referenceRegion, why: decision.absent });
+    return true;
+  }
+  const place = byOsm.get(decision.osm);
+  if (!place) {
+    usedReviews.add(key);
+    reviewedMissing.push({ source, reference: name, country, osm: decision.osm });
+    return true;
+  }
+  // A decision is about one break. The same name far away is another one:
+  // surf-forecast has a Playa de San Juan in Alicante and another in Asturias.
+  if (point && distanceKm(point, place.coordinates) > REVIEW_REACH_KM) return false;
+  usedReviews.add(key);
+  attest(place, source, name, point, referenceRegion, true);
+  return true;
+}
 
 /** Coarse grid so "every place near this point" is not a full scan. */
 const grid = new Map();
@@ -304,13 +161,16 @@ function near(point, km) {
 }
 
 const evidence = new Map(); // place id -> [{source, name}]
-function attest(place, source, name, ref = null, referenceRegion = null) {
+function attest(place, source, name, ref = null, referenceRegion = null, byReview = false) {
   if (!evidence.has(place.id)) evidence.set(place.id, []);
   const list = evidence.get(place.id);
-  if (!list.some(e => e.source === source && e.name === name)) list.push({ source, name, ref, referenceRegion });
+  if (!list.some(e => e.source === source && e.name === name && e.referenceRegion === referenceRegion))
+    list.push({ source, name, ref, referenceRegion, byReview });
 }
 
 const misses = { surfline: [], 'surf-forecast': [] };
+/** Every surf-forecast break looked at, and (at the end) the place it resolved to. */
+const forecastBreaks = [];
 const unmappedRegions = new Set();
 
 // --- 1. References that carry a coordinate ------------------------------
@@ -329,6 +189,7 @@ const unconfirmed = [];
  * round their coordinates (surf-forecast prints two decimals, +/- 600 m).
  */
 function resolveAnchored(source, name, point, country, slackKm = 0, referenceRegion = null) {
+  if (applyReview(source, name, country, point, referenceRegion)) return true;
   const key = normalise(name);
   // "Rodiles - Main Beach", "Paguera - Mallorca": the qualifier is not the break.
   const keys = [key, ...name.split(/\s+[-\/]\s+|\s*\(|\)/).map(normalise)].filter(Boolean);
@@ -348,7 +209,10 @@ function resolveAnchored(source, name, point, country, slackKm = 0, referenceReg
     ...near(point, SAME_BREAK_KM + slackKm).filter(c => keys.some(k => spellingDrift(c._key, k))),
   ];
   if (named.length) {
-    named.sort((a, b) => distanceKm(point, a.coordinates) - distanceKm(point, b.coordinates));
+    // The place named exactly as the reference first: "Playa de Galizano" is
+    // the beach, not Cabo de Galizano beside it, even when the cape is nearer.
+    const exact = c => (keys.includes(c._key) ? 0 : 1);
+    named.sort((a, b) => exact(a) - exact(b) || distanceKm(point, a.coordinates) - distanceKm(point, b.coordinates));
     attest(named[0], source, name, point, referenceRegion);
     return true;
   }
@@ -356,8 +220,11 @@ function resolveAnchored(source, name, point, country, slackKm = 0, referenceReg
   // the hand-curated list says this OSM place is a break. Tarnos-Plage and
   // Plage du Metro, "Lacanau - Supersud" and "Plage Super Sud (Lacanau)" are
   // the same sand under names no string rule should be trusted to join.
+  // Beaches only. A headland shares a word with the beach beside it -- Punta
+  // do Ancoradouro and the curated Ancoradouro, Punta de Tarifa and Tarifa --
+  // so a cape is attested only by a reference that names it.
   const vouched = near(point, anchored)
-    .filter(c => curatedMatch(c))
+    .filter(c => curatedMatch(c) && !['cape', 'reef'].includes(c.provenance?.feature))
     .sort((a, b) => distanceKm(point, a.coordinates) - distanceKm(point, b.coordinates))[0];
   if (vouched) {
     attest(vouched, source, name, point, referenceRegion);
@@ -415,6 +282,8 @@ for (const [file, regions] of Object.entries(forecast)) {
     const scoped = pool.filter(p => ours.includes(p.community));
     for (const [rawName, slug] of breaks) {
       const at = forecastCoords[slug];
+      forecastBreaks.push({ country, region, name: rawName, slug, lat: at?.[0] ?? null, lon: at?.[1] ?? null });
+      if (!Array.isArray(at) && applyReview('surf-forecast', rawName, country, null, region)) continue;
       if (Array.isArray(at)) {
         resolveAnchored('surf-forecast', rawName, { lat: at[0], lon: at[1] }, country, FORECAST_ROUNDING_KM, region);
         continue;
@@ -455,7 +324,8 @@ for (const [file, regions] of Object.entries(forecast)) {
 const byId = new Map(places.map(p => [p.id, p]));
 const support = id => {
   const ev = evidence.get(id);
-  return new Set(ev.map(e => e.source)).size * 10 + ev.length;
+  // A person checked a reviewed place; the rules only guessed at the others.
+  return (ev.some(e => e.byReview) ? 100 : 0) + new Set(ev.map(e => e.source)).size * 10 + ev.length;
 };
 /** How far a place is from where the references that name it put the break. */
 const offset = (id, name) => {
@@ -490,6 +360,44 @@ for (const [id, ev] of [...evidence].sort((a, b) => support(a[0]) - support(b[0]
   }
 }
 
+// --- One place, one surf-forecast break ---------------------------------
+// surf-forecast lists peaks, not beaches: Las Canteras is El Lloret, La Cicer,
+// El Circo and Vagabundo on their page. Resolved by name they can all land on
+// the one OSM beach, and would show as one marker under the beach's name. The
+// catalogue lists every break they list, so the place keeps the break that
+// best fits it -- the one named as the place is (Zurriola hondartza, not the
+// reviewed "Playa de Gros"), then one a person checked, then the one whose own
+// coordinate is nearest -- and the others are left unresolved, for stage 3.5b
+// to publish at their own coordinates.
+const keyOf = e => `${e.referenceRegion}|${e.name}`;
+const secondBreaks = [];
+for (const [id, ev] of evidence) {
+  const place = byId.get(id);
+  const theirs = [...new Map(ev.filter(e => e.source === 'surf-forecast').map(e => [keyOf(e), e])).values()];
+  if (theirs.length < 2) continue;
+  const named = e => [e.name, ...e.name.split(/\s+[-\/]\s+|\s*\(|\)/)].map(normalise).filter(Boolean);
+  const rank = e => [
+    named(e).some(k => namesAgree(place._key, k, true)) ? 0 : 1,
+    normalise(e.name) === place._key ? 0 : 1,
+    e.byReview ? 0 : 1,
+    e.ref ? distanceKm(place.coordinates, e.ref) : Infinity,
+  ];
+  const cmp = (a, b) => {
+    const [x, y] = [rank(a), rank(b)];
+    return x[0] - y[0] || x[1] - y[1] || x[2] - y[2] || x[3] - y[3];
+  };
+  const [kept, ...others] = theirs.sort(cmp);
+  const dropped = new Set(others.map(keyOf));
+  evidence.set(id, ev.filter(e => e.source !== 'surf-forecast' || !dropped.has(keyOf(e))));
+  for (const o of others) secondBreaks.push({ reference: o.name, region: o.referenceRegion, place: place.name, keptFor: kept.name });
+}
+
+// Which place each surf-forecast break ended on, after both rules above.
+const resolvedTo = new Map();
+for (const [id, ev] of evidence)
+  for (const e of ev) if (e.source === 'surf-forecast') resolvedTo.set(keyOf(e), id);
+for (const b of forecastBreaks) b.placeId = resolvedTo.get(`${b.region}|${b.name}`) ?? null;
+
 // --- Result -------------------------------------------------------------
 const attested = [...evidence.entries()]
   .map(([id, ev]) => {
@@ -501,6 +409,13 @@ const attested = [...evidence.entries()]
       region: p.community,
       sources: [...new Set(ev.map(e => e.source))].sort(),
       attestedAs: [...new Set(ev.map(e => e.name))].sort(),
+      /**
+       * The one surf-forecast break this place is. Stage 4 publishes it under
+       * that name when OSM's says something else ("La Concha" is mapped as
+       * Kontxa hondartza), so the list reads as theirs does.
+       */
+      forecastName: ev.find(e => e.source === 'surf-forecast')?.name ?? null,
+      ...(ev.some(e => e.byReview) ? { reviewed: true } : {}),
       /**
        * The region surf-forecast files this break under, which is not always
        * the county it stands in: Tullaghan is in Leitrim and they list it in
@@ -533,7 +448,20 @@ if (unmappedRegions.size) {
 }
 console.log(`\nreferences that matched nothing: surfline ${misses.surfline.length}, surf-forecast ${misses['surf-forecast'].length}`);
 console.log(`places dropped as a second resolution of the same break: ${duplicates.length}`);
+console.log(`surf-forecast breaks sharing a place with another of theirs, left for stage 3.5b: ${secondBreaks.length}`);
+{
+  const covered = forecastBreaks.filter(b => FORECAST_REGIONS[b.region]);
+  const onOsm = covered.filter(b => b.placeId).length;
+  console.log(`surf-forecast breaks resolved to an OSM place: ${onOsm} of ${covered.length}; the rest go to stage 3.5b`);
+}
 console.log(`references whose nearby OSM place has another name (review queue): ${unconfirmed.length}`);
+console.log(`reviewed by hand: ${usedReviews.size} applied, ${reviewedAbsent.length} recorded as having no OSM place`);
+if (reviewedMissing.length) {
+  console.log(`\nreviewed places missing from the catalogue (run stage 1.6, then 2 and 3):`);
+  for (const m of reviewedMissing) console.log(`  ${m.country} / ${m.reference} -> ${m.osm}`);
+}
+const unusedReviews = [...reviewedByRef.keys()].filter(k => !usedReviews.has(k));
+if (unusedReviews.length) console.log(`\nreviewed decisions no reference used (renamed upstream?): ${unusedReviews.join(', ')}`);
 
 console.log('\nper region:');
 for (const [k, n] of [...perRegion].sort((a, b) => b[1] - a[1]))
@@ -562,7 +490,10 @@ writeFileSync(
   )}\n`
 );
 
-writeFileSync(REPORT, `${JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), perRegion: Object.fromEntries(perRegion), misses, unconfirmed, duplicates }, null, 2)}\n`);
+writeFileSync(
+  REPORT,
+  `${JSON.stringify({ generatedAt: new Date().toISOString().slice(0, 10), perRegion: Object.fromEntries(perRegion), misses, unconfirmed, duplicates, secondBreaks, reviewedAbsent, reviewedMissing, forecastBreaks }, null, 2)}\n`
+);
 console.log(`\nwrote src/data/surf-spots.attested.json and the miss report to .cache/benchmark/`);
 
 if (process.argv.includes('--report')) {

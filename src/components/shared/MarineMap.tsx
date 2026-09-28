@@ -97,6 +97,13 @@ export function MarineMap() {
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   /** Latest scoreVisible, for retries scheduled by an older closure. */
   const scoreVisibleRef = useRef<(() => Promise<void>) | null>(null);
+  /**
+   * The latest marker and summary passes, for chunks that land after a render.
+   * A chunk asked for before a theme change used to repaint every marker with
+   * the old theme when it arrived; the hour and the region go stale the same way.
+   */
+  const reconcileRef = useRef<() => void>(() => {});
+  const publishSummaryRef = useRef<() => void>(() => {});
   /** Set when the surfer, not the app, started the move under way. */
   const userMovedRef = useRef(false);
 
@@ -376,19 +383,24 @@ export function MarineMap() {
           });
         }
         chunksRef.current.set(chunkKey, Date.now());
-        reconcileMarkers();
-        publishSummary();
+        reconcileRef.current();
+        publishSummaryRef.current();
       } catch {
         if (generation === generationRef.current) chunksRef.current.delete(chunkKey);
       } finally {
         setPending(p => (p.key === level ? { key: level, n: Math.max(0, p.n - 1) } : p));
       }
     });
-  }, [nearViewport, reconcileMarkers, publishSummary, spots, selectedSpotId, userSkillLevel]);
+  }, [nearViewport, publishSummary, spots, selectedSpotId, userSkillLevel]);
 
   useEffect(() => {
     scoreVisibleRef.current = scoreVisible;
   }, [scoreVisible]);
+
+  useEffect(() => {
+    reconcileRef.current = reconcileMarkers;
+    publishSummaryRef.current = publishSummary;
+  }, [reconcileMarkers, publishSummary]);
 
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';

@@ -1,0 +1,338 @@
+{
+  "_readme": [
+    "Surf breaks resolved by hand, for references the matching rules in",
+    "scripts/attest-surf-spots.mjs cannot resolve, or resolve to the wrong place.",
+    "",
+    "Each entry is one reference name, per country, and one decision:",
+    "  osm     the OpenStreetMap object that IS the break (\"way/123\"). Its",
+    "          coordinate is published like any other OSM place; stage 1.6",
+    "          (scripts/add-reviewed-places.mjs) adds it to the raw file if stage 1",
+    "          did not fetch it.",
+    "  absent  why the break has no OSM place of its own: a nickname for a peak",
+    "          OSM has never mapped. Stage 3.5b (scripts/add-reference-breaks.mjs)",
+    "          then publishes it at the coordinate surf-forecast's page prints.",
+    "  why     what was checked: which beach the break is, and how that was known.",
+    "",
+    "A decision replaces the rules for that reference in both directions: it",
+    "attests the place a person checked, and stops the rules attesting another.",
+    "Nothing here is a coordinate: a decision names an OSM object, or none."
+  ],
+  "Spain": [
+    {
+      "reference": "Barbate River",
+      "osm": "way/186218098",
+      "why": "The river-mouth peak at the west end of Barbate's town beach, which OSM names Playa del Carmen; the reference point is 0.7 km off it."
+    },
+    {
+      "reference": "La Barossa",
+      "osm": "way/239298188",
+      "why": "Misspelling of La Barrosa, Chiclana; OSM's Playa de La Barrosa."
+    },
+    {
+      "reference": "Playa de la Barrosa",
+      "osm": "way/239298188",
+      "why": "La Barrosa, Chiclana. The polygon centroid sits 2 km from the reference because the beach is 8 km long."
+    },
+    {
+      "reference": "La Playita",
+      "osm": "way/156887753",
+      "why": "La Playita is the local name of Playa de Santa María del Mar in Cádiz; the reference point is 0.2 km from it."
+    },
+    {
+      "reference": "Mojacar",
+      "osm": "way/1244263042",
+      "why": "Town-named break: the reference point stands on Mojácar Playa's Playa de Vista de los Ángeles (0.1 km)."
+    },
+    {
+      "reference": "Pico de el Puerto",
+      "osm": "way/264233966",
+      "why": "A peak by San José harbour, Cabo de Gata; OSM's Playa de San José is the beach it breaks off."
+    },
+    {
+      "reference": "Pico de las Cocheras",
+      "osm": "way/264233966",
+      "why": "A peak at the south end of San José's beach, Cabo de Gata; OSM's Playa de San José (0.3 km)."
+    },
+    {
+      "reference": "Chipiona",
+      "osm": "way/1377576138",
+      "why": "Town-named break: the reference point stands on Chipiona's Playa de las Canteras by Punta del Perro (0.1 km)."
+    },
+    {
+      "reference": "El Sunset (Benalmádena)",
+      "osm": "way/42432415",
+      "why": "Sunset Beach, Benalmádena Costa: the stretch OSM names Playa de las Verdas (0.6 km)."
+    },
+    {
+      "reference": "Puerto Marina",
+      "osm": "way/850868067",
+      "why": "Benalmádena's Puerto Marina: the break is on Playa Malapesquera, the beach beside the marina's west wall."
+    },
+    {
+      "reference": "Chiclana de la Frontera",
+      "osm": "way/831785811",
+      "why": "Town-named break; the reference point is on Playa de Sancti Petri (0.7 km), Chiclana's beach by the castle."
+    },
+    {
+      "reference": "El Castillo",
+      "osm": "way/831785811",
+      "why": "The peak off Sancti Petri castle; OSM's Playa de Sancti Petri is the beach facing it."
+    },
+    {
+      "reference": "La Arena",
+      "region": "Asturias",
+      "osm": "way/36867849",
+      "why": "San Juan de la Arena, the Nalón river-mouth left; the beach at the mouth is Playa de los Quebrantos (0.5 km)."
+    },
+    {
+      "reference": "Playa de Otur",
+      "osm": "way/39351398",
+      "why": "Asturian spelling: OSM's Playa d'Outur."
+    },
+    {
+      "reference": "Playa de Barayo",
+      "osm": "way/39351396",
+      "why": "Asturian spelling: OSM's Playa de Barayu."
+    },
+    {
+      "reference": "Playa de Candas",
+      "osm": "relation/2402619",
+      "why": "Candás town beach, which OSM names by its Asturian name Sablera Palmera (0.3 km)."
+    },
+    {
+      "reference": "Salinas",
+      "osm": "way/516073411",
+      "why": "Salinas and El Espartal are one continuous beach; OSM maps the whole sand as Playa de El Espartal (0.6 km)."
+    },
+    {
+      "reference": "Playa de Salinas",
+      "osm": "way/516073411",
+      "why": "Salinas and El Espartal are one continuous beach; OSM maps the whole sand as Playa de El Espartal (0.6 km)."
+    },
+    {
+      "reference": "Mallorca - Paguera Tora",
+      "osm": "way/282675413",
+      "why": "Torà beach in Paguera: OSM's Platja Gran de Torà."
+    },
+    {
+      "reference": "Mallorca - Cala Ratjada",
+      "osm": "way/705038503",
+      "why": "Cala Ratjada's town beach, Son Moll (0.6 km)."
+    },
+    {
+      "reference": "Port de Mataro",
+      "osm": "relation/2154203",
+      "why": "The break beside Mataró harbour's east wall, on Platja del Varador (0.6 km)."
+    },
+    {
+      "reference": "Arenys de Mar",
+      "osm": "relation/19286107",
+      "why": "Town-named break; Arenys de Mar's beach by the harbour is Platja de la Picòrdia (0.4 km)."
+    },
+    {
+      "reference": "Miami Platja",
+      "osm": "relation/2173870",
+      "why": "Miami Platja's beach at the reference point, Platja de la Punta del Riu (0.1 km)."
+    },
+    {
+      "reference": "Cabrera",
+      "osm": "way/161135723",
+      "why": "Cabrera de Mar's beach, Platja de l'Almadrava (0.8 km)."
+    },
+    {
+      "reference": "Montgat",
+      "osm": "way/27633384",
+      "why": "Montgat's beach, Platja de la Morera (0.5 km)."
+    },
+    {
+      "reference": "Comandancia",
+      "osm": "relation/2172792",
+      "why": "La Comandància, the break at the east end of Tarragona's Platja del Miracle (0.3 km)."
+    },
+    {
+      "reference": "Torre Bank",
+      "osm": "relation/2174431",
+      "why": "Torredembarra's sandbank break, off Platja de la Paella (0.4 km)."
+    },
+    {
+      "reference": "Vilassar de Mar",
+      "osm": "way/70265874",
+      "why": "Town-named break; Vilassar de Mar's Platja dels Pescadors (0.15 km)."
+    },
+    {
+      "reference": "Playa de Premia",
+      "osm": "relation/2154298",
+      "why": "Premià de Mar's beach at the reference point, Platja dels Pescadors (0.3 km)."
+    },
+    {
+      "reference": "Playa de Espasante",
+      "osm": "way/90818963",
+      "why": "Espasante's town beach, Praia de Santo Antón (0.3 km)."
+    },
+    {
+      "reference": "Playa de Esteiro",
+      "osm": "way/231911099",
+      "why": "Praia do Esteiro in Mañón, on the Bares peninsula the reference points to; the other Esteiro beaches are 12 km and more away."
+    },
+    {
+      "reference": "Ria Foz",
+      "osm": "way/157896019",
+      "why": "The mouth of the ría de Foz, on Praia de Llas (reference point on it)."
+    },
+    {
+      "reference": "Playa de Ogeia",
+      "osm": "way/399693540",
+      "why": "Basque spelling: OSM's Ogella hondartza."
+    },
+    {
+      "reference": "Playa de Ondarreta - Pikua",
+      "osm": "way/194402388",
+      "why": "Ondarreta, Donostia. The reference's own point is 6 km west, on the Igeldo cliffs; the name is unambiguous."
+    },
+    {
+      "reference": "Playa de Ondarreta (Pico del Tenis)",
+      "osm": "way/194402388",
+      "why": "The peak off the tennis club at Ondarreta, Donostia. The reference's own point is 6 km west; the name is unambiguous."
+    },
+    {
+      "reference": "La Concha",
+      "osm": "way/22779812",
+      "why": "La Concha, Donostia: OSM's Kontxa hondartza."
+    },
+    {
+      "reference": "Playa de Gros",
+      "osm": "way/649475151",
+      "why": "Gros is the Donostia district whose beach is La Zurriola."
+    },
+    {
+      "reference": "Mutriku",
+      "osm": "way/26546138",
+      "why": "Town-named break; Mutriku's beach at the reference point, Burumendi hondartza (0.15 km)."
+    },
+    {
+      "reference": "Playa de Tagle",
+      "osm": "way/649310894",
+      "why": "Tagle's beach, which OSM names Playa El Sable (0.5 km)."
+    },
+    {
+      "reference": "Laredo",
+      "osm": "way/159113808",
+      "why": "Laredo's surf beach is La Salvé (0.6 km)."
+    },
+    {
+      "reference": "Playa de Miono",
+      "osm": "way/116411548",
+      "why": "Mioño's beach is Dícido: OSM's Playa de Dicido (0.5 km)."
+    },
+    {
+      "reference": "Melilla Beach",
+      "osm": "way/304550938",
+      "why": "Melilla's town beach at the reference point, Playa del Hipódromo (0.5 km)."
+    },
+    {
+      "reference": "El Chanquete",
+      "osm": "way/410072265",
+      "why": "Málaga's El Palo coast at the reference point: Playa de El Dedo (0.4 km)."
+    },
+    {
+      "reference": "Bristol",
+      "osm": "node/11242938331",
+      "why": "Bristol, Corralejo: OSM's El Charco de Bristol, the inlet the reef faces (0.4 km)."
+    },
+    {
+      "reference": "Playa de Famara",
+      "osm": "way/168678238",
+      "why": "Playa de Famara, Lanzarote: OSM's own beach of that name. Stage 1 does not return it for the Canarias area."
+    },
+    {
+      "reference": "Playa de Carino",
+      "osm": "way/279316608",
+      "why": "Cariño's town beach, which OSM names Area da Basteira (0.3 km)."
+    },
+    {
+      "reference": "San Vicente Rivermouth",
+      "osm": "way/108476984",
+      "why": "The bar at the mouth of San Vicente de la Barquera's ría breaks onto Playa de El Tostadero (0.4 km)."
+    },
+    {
+      "reference": "Benicassim",
+      "osm": "relation/2169043",
+      "why": "Town-named break; Benicàssim's beach at the reference point, Platja Torre de Sant Vicent (0.2 km)."
+    },
+    {
+      "reference": "Boca del Abajo",
+      "osm": "node/2593000796",
+      "why": "OSM's Boca de Abajo, the cove west of La Santa, Lanzarote (0.8 km)."
+    },
+    {
+      "reference": "Isla de Izaro",
+      "absent": "A reef off Izaro island, Bermeo; OSM has only the island's outline, whose centre is not where the wave breaks."
+    },
+    {
+      "reference": "Cabo de las Huertas",
+      "osm": "node/11270257923",
+      "why": "Cabo de las Huertas is the Valencian Cap de l'Horta, Alicante (1 km)."
+    },
+    {
+      "reference": "La Placa",
+      "osm": "node/11270257923",
+      "why": "La Placa is a reef on Cabo de las Huertas, Alicante; OSM's Cap de l'Horta."
+    },
+    {
+      "reference": "Playa Poniente",
+      "osm": "way/25092651",
+      "why": "Benidorm's Playa de Poniente, OSM's Platja de Ponent (0.3 km)."
+    },
+    {
+      "reference": "Moraira",
+      "osm": "way/43076698",
+      "why": "Town-named break; Moraira's beach, Platja de l'Ampolla (0.3 km)."
+    },
+    {
+      "reference": "Puerto Benidorm",
+      "osm": "way/59062356",
+      "why": "The break by Benidorm harbour, on Platja del Mal Pas beside it (0.95 km)."
+    },
+    {
+      "reference": "Playa de Levante",
+      "osm": "way/150794803",
+      "why": "Valencia's Playa de Levante is the Cabanyal and Las Arenas beach: OSM's Platja del Cabanyal (0.2 km)."
+    },
+    {
+      "reference": "Playa de San Juan",
+      "region": "Valencia",
+      "osm": "way/19563217",
+      "why": "Alicante's Playa de San Juan, OSM's Platja de Sant Joan."
+    },
+    {
+      "reference": "La Zenia",
+      "osm": "way/27462915",
+      "why": "La Zenia's beach at the reference point, Playa Cala Estaca (0.1 km)."
+    },
+    {
+      "reference": "Derecha de la Cala",
+      "osm": "relation/7133678",
+      "why": "The right-hander at Cala de Finestrat (0.9 km)."
+    },
+    {
+      "reference": "Playa Finestrat",
+      "osm": "relation/7133678",
+      "why": "Finestrat's only beach is Cala de Finestrat; the reference's own point, 4 km west, is on Villajoyosa's beaches."
+    },
+    {
+      "reference": "Playa de Palombina",
+      "osm": "way/1536930660",
+      "why": "Palombina, Celorio: OSM's beach of that name. The reference's point is 5 km east, in Llanes."
+    },
+    {
+      "reference": "Playa de San Martin",
+      "osm": "way/363467722",
+      "why": "San Martín, Celorio: OSM's Playa de San Martín. The reference's point is 4 km east, in Llanes."
+    },
+    {
+      "reference": "Playa la Carihuela",
+      "osm": "way/42432416",
+      "why": "La Carihuela, Torremolinos: OSM's Playa de la Carihuela."
+    }
+  ]
+}

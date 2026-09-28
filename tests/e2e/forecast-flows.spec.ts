@@ -1509,14 +1509,14 @@ test.describe('spec: region-selection / Las regiones siguen al mapa', () => {
         .map(el => el.dataset.spotId!)
     );
 
-  /** Drags the map by `dx` pixels at a third of its height, clear of the header and sheet. */
-  async function drag(page: Page, dx: number) {
+  /** Drags the map by (`dx`, `dy`) pixels from a third of its height, clear of the header and sheet. */
+  async function drag(page: Page, dx: number, dy = 0) {
     const box = (await page.locator('.mapboxgl-map').boundingBox())!;
     const y = box.y + box.height * 0.33;
     const x = box.x + box.width / 2;
     await page.mouse.move(x, y);
     await page.mouse.down();
-    await page.mouse.move(x + dx, y, { steps: 10 });
+    await page.mouse.move(x + dx, y + dy, { steps: 10 });
     await page.mouse.up();
     await page.waitForTimeout(1200);
   }
@@ -1544,7 +1544,9 @@ test.describe('spec: region-selection / Las regiones siguen al mapa', () => {
     const button = page.getByTestId('region-button');
     for (let i = 0; i < 10; i++) {
       if ((await button.getAttribute('data-country')) === 'France') break;
-      await drag(page, -300); // the view moves east, towards Hendaye and Biarritz
+      // The view follows the coast north-east, towards Hendaye and Biarritz. Due
+      // east it leaves the sea at the border and has no spots to count.
+      await drag(page, -300, 150);
     }
     await expect(button).toHaveAttribute('data-country', 'France');
     await expect(button).toHaveAttribute('data-region', 'Nouvelle-Aquitaine');

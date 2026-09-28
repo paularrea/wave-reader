@@ -9,6 +9,13 @@ import { readFileSync } from 'node:fs';
 
 const CURATED_PATH = new URL('../../src/data/surf-spots.curated.json', import.meta.url);
 
+/**
+ * Stretches of a beach set aside for something other than surfing. Never a
+ * break: stage 3.5 does not attest them and stage 4 does not publish them.
+ * "Playa de Bayas - Zona para perros" took surf-forecast's Playa de Bayas.
+ */
+export const SECTION = /(naturist|nudist|gossos|\bperros\b|canina|infantil|surf\s*school|centre de vacances)/i;
+
 export function normalise(name) {
   return name
     .toLowerCase()

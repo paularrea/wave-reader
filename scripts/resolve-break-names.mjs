@@ -26,6 +26,7 @@ import { existsSync } from 'node:fs';
 import { appendFileSync } from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { overpass, setOverpassLogger } from './lib/overpass.mjs';
+import { addressesOf, regionOfAddress } from './lib/communities.mjs';
 
 const RAW_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
 const REPORT = new URL('../.cache/benchmark/attestation-report.json', import.meta.url);
@@ -118,10 +119,27 @@ function pointOf(element) {
   return null;
 }
 
+/**
+ * Countries where a village may stand for the break. In Ireland it is often
+ * all OSM has (Mullaghmore). In Spain a break named after its town is that
+ * town's beach -- Laredo is La Salvé, Mutriku is not its harbour -- and a town
+ * centroid snapped to the nearest shore lands in the wrong place, so those are
+ * resolved by review (surf-spots.reviewed.json) instead.
+ */
+const SETTLEMENTS_STAND_FOR_BREAKS = new Set(['Ireland']);
+
+/**
+ * Water bodies, likewise Irish only. Elsewhere a name shared with water was
+ * never the break: "Quintanilla" in Gran Canaria found a reservoir inland.
+ */
+const WATER_STANDS_FOR_BREAKS = new Set(['Ireland']);
+
 /** Where an element sits in FEATURE_RANK, or -1 when it is not a shore place. */
-function rankOf(tags) {
+function rankOf(tags, country) {
   for (let i = 0; i < FEATURE_RANK.length; i++) {
     const [key, values] = FEATURE_RANK[i];
+    if (key === 'place' && !SETTLEMENTS_STAND_FOR_BREAKS.has(country)) continue;
+    if (values.includes('water') && !WATER_STANDS_FOR_BREAKS.has(country)) continue;
     if (values.includes(tags[key])) return i;
   }
   return -1;
@@ -213,7 +231,7 @@ async function main() {
     batch.forEach((ref, i) => {
       const candidates = hits[i]
         .filter(element => nameCarries(element.tags?.name, ref.term) || nameCarries(element.tags?.['name:en'], ref.term))
-        .map(element => ({ element, point: pointOf(element), rank: rankOf(element.tags ?? {}) }))
+        .map(element => ({ element, point: pointOf(element), rank: rankOf(element.tags ?? {}, ref.country) }))
         .filter(c => c.point && c.rank >= 0)
         .map(c => ({ ...c, km: distanceKm(ref, c.point) }))
         .filter(c => c.km <= SEARCH_KM)
@@ -246,27 +264,21 @@ async function main() {
   log(`${found.length} references resolved to an OSM object, ${additions.length} new to the raw file`);
   log(`${nothing.length} found nothing in OSM: ${nothing.join(', ')}`);
 
-  /** The county each new place belongs to, from Nominatim, as in stage 1. */
-  const byId = new Map();
-  for (const a of additions) byId.set(`${a.osmType[0].toUpperCase()}${a.osmId}`, a);
-  const ids = [...byId.keys()];
-  for (let i = 0; i < ids.length; i += 50) {
-    const chunk = ids.slice(i, i + 50);
-    try {
-      const res = await fetch(
-        `https://nominatim.openstreetmap.org/lookup?osm_ids=${chunk.join(',')}&format=json&addressdetails=1`,
-        { headers: { 'User-Agent': 'wave-reader-catalog/1.0 (https://github.com/paularrea/wave-reader)' } }
-      );
-      if (res.ok) {
-        for (const place of await res.json()) {
-          const entry = byId.get(`${place.osm_type[0].toUpperCase()}${place.osm_id}`);
-          if (entry) entry.county = place.address?.county?.replace(/^County /, '');
-        }
-      }
-    } catch (err) {
-      log(`  Nominatim failed (${err.message})`);
+  /** The region each new place belongs to, from Nominatim, as in stage 1. */
+  const addresses = await addressesOf(additions, log);
+  for (const a of additions) {
+    a.county = regionOfAddress(addresses.get(`${a.osmType[0].toUpperCase()}${a.osmId}`), a.country);
+    // Nominatim often gives a Spanish beach no region at all ("Playa de Famara,
+    // España"). Outside Ireland, whose borders the fallback got wrong, the
+    // region of the nearest place already catalogued is the answer.
+    if (a.county || a.country === 'Ireland') continue;
+    let best = null;
+    for (const b of raw) {
+      if (b.country !== a.country) continue;
+      const d = distanceKm(a, b);
+      if (!best || d < best.d) best = { d, community: b.community };
     }
-    await sleep(1100);
+    if (best && best.d <= SEARCH_KM * 5) a.county = best.community;
   }
 
   /**

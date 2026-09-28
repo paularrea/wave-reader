@@ -130,7 +130,18 @@ const REGIONS = [
  * coastline is empty.
  */
 const FEATURE_TAGS = {
-  Spain: [['natural', 'beach']],
+  /** France and the United Kingdom, until they are re-fetched on purpose. */
+  default: [['natural', 'beach']],
+  /**
+   * Beaches, and the headlands and reefs a surf reference may name as a break:
+   * Cabo Lastres, Punta de la Raja, Punta del Hidalgo. As in Ireland, a cape is
+   * only a coordinate on the shore; stage 3.5 still has to name it.
+   */
+  Spain: [
+    ['natural', 'beach'],
+    ['natural', 'cape'],
+    ['natural', 'reef'],
+  ],
   Ireland: [
     ['natural', 'beach'],
     ['natural', 'shingle'],
@@ -148,7 +159,7 @@ const FEATURE_TAGS = {
 };
 
 function queryFor(iso, level, country, bbox) {
-  const tags = FEATURE_TAGS[country] ?? FEATURE_TAGS.Spain;
+  const tags = FEATURE_TAGS[country] ?? FEATURE_TAGS.default;
   const clauses = tags
     .flatMap(([key, value]) =>
       ['node', 'way', 'relation'].map(
