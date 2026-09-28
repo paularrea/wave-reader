@@ -8,9 +8,19 @@
   "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna",
   "referenceKm": 5
  },
- "checked": 1171,
- "ok": 1169,
+ "checked": 1424,
+ "ok": 1422,
  "spots": {
+  "aber-wrac-h-point": {
+   "lat": 48.58,
+   "lon": -4.63,
+   "coastM": 197,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "aberavon-beach": {
    "lat": 51.59428,
    "lon": -3.82034,
@@ -66,6 +76,31 @@
    "reason": null,
    "referenceKm": 0
   },
+  "alize": {
+   "lat": 16.32,
+   "lon": -61.27,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.31407,
+    "lon": -61.27288,
+    "movedM": 724
+   }
+  },
+  "almanarre-le-petit-port": {
+   "lat": 43.08,
+   "lon": 6.12,
+   "coastM": 66,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "an-tra-bhan": {
    "lat": 54.66388,
    "lon": -8.77536,
@@ -75,6 +110,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.52
+  },
+  "anael": {
+   "lat": 48.58,
+   "lon": -4.68,
+   "coastM": 3,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anglet-la-piscine": {
+   "lat": 43.5,
+   "lon": -1.54,
+   "coastM": 266,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anglet-le-furoncle": {
+   "lat": 43.53,
+   "lon": -1.53,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.52814,
+    "lon": -1.52639,
+    "movedM": 356
+   }
+  },
+  "anglet-vvf": {
+   "lat": 43.5,
+   "lon": -1.55,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.49859,
+    "lon": -1.54516,
+    "movedM": 420
+   }
   },
   "annagh-strand": {
    "lat": 53.99946,
@@ -95,6 +180,116 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.05
+  },
+  "anse-a-la-bouelle": {
+   "lat": 16.34,
+   "lon": -61.33,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.33343,
+    "lon": -61.32889,
+    "movedM": 736
+   }
+  },
+  "anse-a-la-gourde-guadeloupe-grande-terre": {
+   "lat": 16.28,
+   "lon": -61.24,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.27569,
+    "lon": -61.24359,
+    "movedM": 612
+   }
+  },
+  "anse-de-cabestan": {
+   "lat": 48.01,
+   "lon": -4.6,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.01283,
+    "lon": -4.59672,
+    "movedM": 397
+   }
+  },
+  "anse-de-lesconil": {
+   "lat": 47.79,
+   "lon": -4.27,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anse-de-pen-hat": {
+   "lat": 48.27,
+   "lon": -4.62,
+   "coastM": 189,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anse-de-remire-l-apcat": {
+   "lat": 4.9,
+   "lon": -52.26,
+   "coastM": 229,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anse-du-brick": {
+   "lat": 49.67,
+   "lon": -1.49,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "anse-salabouelle": {
+   "lat": 16.31,
+   "lon": -61.25,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.30365,
+    "lon": -61.25901,
+    "movedM": 1191
+   }
+  },
+  "anse-st-martin": {
+   "lat": 49.71,
+   "lon": -1.89,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "ardtermon-strand": {
    "lat": 54.33362,
@@ -136,6 +331,16 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "arna-plage": {
+   "lat": 43.91,
+   "lon": -1.38,
+   "coastM": 261,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "arrieta": {
    "lat": 29.13,
    "lon": -13.46,
@@ -166,6 +371,16 @@
    "reason": null,
    "referenceKm": 0.65
   },
+  "audierne": {
+   "lat": 48.01,
+   "lon": -4.55,
+   "coastM": 119,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "avon-beach": {
    "lat": 50.72825,
    "lon": -1.73488,
@@ -175,6 +390,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.17
+  },
+  "aytre-lopette": {
+   "lat": 46.13,
+   "lon": -1.15,
+   "coastM": 87,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "bagasse": {
+   "lat": 14.87,
+   "lon": -61.19,
+   "coastM": 231,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "baie-du-soleil": {
+   "lat": 43.78,
+   "lon": 7.51,
+   "coastM": 6,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "bajo-del-medio": {
    "lat": 28.73136,
@@ -306,6 +551,21 @@
     "movedM": 714
    }
   },
+  "bandol-les-nervis": {
+   "lat": 43.14,
+   "lon": 5.74,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.13607,
+    "lon": 5.73738,
+    "movedM": 484
+   }
+  },
   "banna-strand": {
    "lat": 52.33347,
    "lon": -9.84326,
@@ -325,6 +585,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.29
+  },
+  "banyuls": {
+   "lat": 42.48,
+   "lon": 3.13,
+   "coastM": 187,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "barachois": {
+   "lat": -20.86,
+   "lon": 55.45,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -20.87174,
+    "lon": 55.4505,
+    "movedM": 1299
+   }
   },
   "barcarola-puerto-del-carmen": {
    "lat": 28.92,
@@ -401,6 +686,26 @@
    "reason": null,
    "referenceKm": 0.82
   },
+  "basse-pointe": {
+   "lat": 14.87,
+   "lon": -61.12,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "baubigny": {
+   "lat": 49.43,
+   "lon": -1.82,
+   "coastM": 177,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "beacon-cove-65089018": {
    "lat": 50.46007,
    "lon": -5.0399,
@@ -421,6 +726,46 @@
    "reason": null,
    "referenceKm": 0.51
   },
+  "beaulieu-sur-mer": {
+   "lat": 43.7,
+   "lon": 7.33,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "beauvallon-la-cigale": {
+   "lat": 43.29,
+   "lon": 6.61,
+   "coastM": 43,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "beg-an-tour": {
+   "lat": 47.78,
+   "lon": -3.64,
+   "coastM": 318,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "beg-leguer": {
+   "lat": 48.74,
+   "lon": -3.55,
+   "coastM": 77,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "belderra-strand": {
    "lat": 54.21061,
    "lon": -10.06207,
@@ -430,6 +775,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.14
+  },
+  "belharra": {
+   "lat": 43.4,
+   "lon": -1.75,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.38503,
+    "lon": -1.74871,
+    "movedM": 1658
+   }
+  },
+  "belle-ile": {
+   "lat": 47.32,
+   "lon": -3.25,
+   "coastM": 324,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "benllech-sands": {
    "lat": 53.31063,
@@ -456,6 +826,16 @@
    "reason": null,
    "referenceKm": 0.61
   },
+  "berneval": {
+   "lat": 49.97,
+   "lon": 1.2,
+   "coastM": 54,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "bertra-beach": {
    "lat": 53.79414,
    "lon": -9.65711,
@@ -476,6 +856,21 @@
    "reason": null,
    "referenceKm": 0.1
   },
+  "black-rocks-jetty": {
+   "lat": -21.04,
+   "lon": 55.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.03151,
+    "lon": 55.22266,
+    "movedM": 1209
+   }
+  },
   "blackpool-sands-1157820": {
    "lat": 50.31877,
    "lon": -3.60912,
@@ -486,6 +881,16 @@
    "reason": null,
    "referenceKm": 0.1
   },
+  "bobby-s": {
+   "lat": 44.5,
+   "lon": -1.25,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "boca-de-abajo": {
    "lat": 29.12234,
    "lon": -13.65275,
@@ -495,6 +900,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.75
+  },
+  "bois-rouge": {
+   "lat": -20.9,
+   "lon": 55.63,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -20.91068,
+    "lon": 55.62933,
+    "movedM": 1183
+   }
   },
   "bolonia": {
    "lat": 36.16,
@@ -551,6 +971,31 @@
    "reason": null,
    "referenceKm": 0.23
   },
+  "boucan-lefts": {
+   "lat": -21.01,
+   "lon": 55.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.01787,
+    "lon": 55.23524,
+    "movedM": 1026
+   }
+  },
+  "boucau": {
+   "lat": 43.53,
+   "lon": -1.52,
+   "coastM": 163,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "bournemouth-west-beach": {
    "lat": 50.71454,
    "lon": -1.88175,
@@ -560,6 +1005,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.38
+  },
+  "bout-de-l-etang": {
+   "lat": -20.98,
+   "lon": 55.28,
+   "coastM": 233,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "bovisand-beach": {
    "lat": 50.33565,
@@ -671,6 +1126,16 @@
    "reason": null,
    "referenceKm": 0.11
   },
+  "brutal-beach-six-fours": {
+   "lat": 43.11,
+   "lon": 5.81,
+   "coastM": 101,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "bucks-mills-beach": {
    "lat": 50.98949,
    "lon": -4.34337,
@@ -680,6 +1145,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.1
+  },
+  "bud-bud": {
+   "lat": 46.39,
+   "lon": -1.49,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 46.38812,
+    "lon": -1.49411,
+    "movedM": 378
+   }
   },
   "budleigh-salterton": {
    "lat": 50.62053,
@@ -805,6 +1285,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.39
+  },
+  "caille-dehors": {
+   "lat": 16.33,
+   "lon": -61.29,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.32733,
+    "lon": -61.29695,
+    "movedM": 799
+   }
   },
   "cala-agulla": {
    "lat": 39.72267,
@@ -1036,6 +1531,31 @@
    "reason": null,
    "referenceKm": 1.44
   },
+  "cannes": {
+   "lat": 43.55,
+   "lon": 7.03,
+   "coastM": 255,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cap-3000": {
+   "lat": 43.66,
+   "lon": 7.2,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.65672,
+    "lon": 7.19704,
+    "movedM": 434
+   }
+  },
   "cap-blanc-nez": {
    "lat": 50.9294,
    "lon": 1.71344,
@@ -1056,6 +1576,46 @@
    "reason": null,
    "referenceKm": 1
   },
+  "cap-de-la-chevre": {
+   "lat": 48.17,
+   "lon": -4.56,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cap-ferret": {
+   "lat": 44.63,
+   "lon": -1.26,
+   "coastM": 50,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cap-frehel": {
+   "lat": 48.69,
+   "lon": -2.32,
+   "coastM": 200,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cap-gris-nez": {
+   "lat": 50.87,
+   "lon": 1.59,
+   "coastM": 70,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "cap-homard": {
    "lat": -21.03311,
    "lon": 55.22113,
@@ -1066,6 +1626,41 @@
    "reason": null,
    "referenceKm": 1.72
   },
+  "cap-rousset": {
+   "lat": 43.15,
+   "lon": 5.68,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.15455,
+    "lon": 5.68284,
+    "movedM": 554
+   }
+  },
+  "cap-st-louis": {
+   "lat": 43.18,
+   "lon": 5.68,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "capo-di-feno": {
+   "lat": 41.96,
+   "lon": 8.59,
+   "coastM": 220,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "carbis-bay-beach": {
    "lat": 50.1993,
    "lon": -5.46283,
@@ -1075,6 +1670,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.14
+  },
+  "cargese": {
+   "lat": 42.13,
+   "lon": 8.6,
+   "coastM": 183,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "carne-and-pendower-beach": {
    "lat": 50.20606,
@@ -1156,6 +1761,16 @@
    "reason": null,
    "referenceKm": 0.61
   },
+  "carteret": {
+   "lat": 49.37,
+   "lon": -1.81,
+   "coastM": 263,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "castillo-del-rubicon-playa-blanca": {
    "lat": 28.86,
    "lon": -13.81,
@@ -1216,6 +1831,31 @@
    "reason": null,
    "referenceKm": 0.32
   },
+  "charlot": {
+   "lat": 14.87,
+   "lon": -61.18,
+   "coastM": 333,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "charpencaye": {
+   "lat": 14.8,
+   "lon": -61.02,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 14.80751,
+    "lon": -61.01597,
+    "movedM": 937
+   }
+  },
   "chesil-beach": {
    "lat": 50.6153,
    "lon": -2.54181,
@@ -1235,6 +1875,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.27
+  },
+  "ciotel": {
+   "lat": 43.18,
+   "lon": 5.66,
+   "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "clonea-strand": {
    "lat": 52.09387,
@@ -1271,6 +1921,16 @@
     "movedM": 986
    }
   },
+  "cocoa": {
+   "lat": 14.76,
+   "lon": -60.91,
+   "coastM": 346,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "coldingham-sands": {
    "lat": 55.89244,
    "lon": -2.13345,
@@ -1280,6 +1940,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.06
+  },
+  "collignon": {
+   "lat": 49.66,
+   "lon": -1.57,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "collioure": {
+   "lat": 42.53,
+   "lon": 3.09,
+   "coastM": 232,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "combe-martin-beach": {
    "lat": 51.20707,
@@ -1361,6 +2041,16 @@
    "reason": null,
    "referenceKm": 0.41
   },
+  "contis-plage": {
+   "lat": 44.09,
+   "lon": -1.33,
+   "coastM": 154,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "copacabana": {
    "lat": 43.46,
    "lon": -3.95,
@@ -1384,6 +2074,21 @@
     "lat": 52.1082,
     "lon": -10.47026,
     "movedM": 481
+   }
+  },
+  "courseulles-sur-mer": {
+   "lat": 49.34,
+   "lon": -0.45,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.33577,
+    "lon": -0.45014,
+    "movedM": 468
    }
   },
   "courtown-bay": {
@@ -1491,6 +2196,31 @@
    "reason": null,
    "referenceKm": 0.34
   },
+  "dalbosc-h": {
+   "lat": 48.34,
+   "lon": -4.63,
+   "coastM": 57,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "dame-jouanne": {
+   "lat": 48.64,
+   "lon": -2.14,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.63805,
+    "lon": -2.13416,
+    "movedM": 481
+   }
+  },
   "dawlish-town-beach": {
    "lat": 50.57947,
    "lon": -3.46527,
@@ -1520,6 +2250,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.05
+  },
+  "dead-zone": {
+   "lat": 44.52,
+   "lon": -1.26,
+   "coastM": 348,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "debako-santiago-hondartza": {
    "lat": 43.29812,
@@ -1575,6 +2315,46 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.97
+  },
+  "diam-s": {
+   "lat": 14.47,
+   "lon": -61.05,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 14.46844,
+    "lon": -61.04622,
+    "movedM": 442
+   }
+  },
+  "dielette-harbour": {
+   "lat": 49.55,
+   "lon": -1.86,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "dielette-left": {
+   "lat": 49.56,
+   "lon": -1.86,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.56047,
+    "lon": -1.85437,
+    "movedM": 410
+   }
   },
   "dirk-bay": {
    "lat": 51.54279,
@@ -1746,6 +2526,21 @@
    "reason": null,
    "referenceKm": 0.71
   },
+  "dunkerque": {
+   "lat": 51.06,
+   "lon": 2.36,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 51.05421,
+    "lon": 2.36239,
+    "movedM": 661
+   }
+  },
   "dunmoran-strand": {
    "lat": 54.26452,
    "lon": -8.73164,
@@ -1810,6 +2605,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.88
+  },
+  "ecalgrain": {
+   "lat": 49.69,
+   "lon": -1.94,
+   "coastM": 245,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "el-balneario": {
    "lat": 36.02,
@@ -2146,6 +2951,46 @@
    "reason": null,
    "referenceKm": 0.2
   },
+  "etang-de-l-ovu-santu": {
+   "lat": 41.72,
+   "lon": 9.4,
+   "coastM": 253,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "etel": {
+   "lat": 47.64,
+   "lon": -3.22,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.64417,
+    "lon": -3.21403,
+    "movedM": 643
+   }
+  },
+  "etretat": {
+   "lat": 49.71,
+   "lon": 0.19,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.70715,
+    "lon": 0.19261,
+    "movedM": 367
+   }
+  },
   "exmouth-beach": {
    "lat": 50.61556,
    "lon": -3.41518,
@@ -2175,6 +3020,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "fecamp": {
+   "lat": 49.76,
+   "lon": 0.36,
+   "coastM": 64,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "figari": {
+   "lat": 41.44,
+   "lon": 9.07,
+   "coastM": 277,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "filey-sands": {
    "lat": 54.21026,
@@ -2206,6 +3071,16 @@
    "reason": null,
    "referenceKm": 0.95
   },
+  "fort-de-st-germain-des-vaux": {
+   "lat": 49.72,
+   "lon": -1.9,
+   "coastM": 81,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "frainslake-sands": {
    "lat": 51.64192,
    "lon": -5.05344,
@@ -2235,6 +3110,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.31
+  },
+  "fremur": {
+   "lat": 48.63,
+   "lon": -2.15,
+   "coastM": 90,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "freshwater-beach": {
    "lat": 50.66957,
@@ -2275,6 +3160,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "galiote": {
+   "lat": 43.27,
+   "lon": 6.58,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.27049,
+    "lon": 6.5856,
+    "movedM": 458
+   }
   },
   "garretstown-strand": {
    "lat": 51.6434,
@@ -2396,6 +3296,16 @@
    "reason": null,
    "referenceKm": 0.55
   },
+  "grande-trait": {
+   "lat": 47.24,
+   "lon": -2.31,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "great-western-beach": {
    "lat": 50.41697,
    "lon": -5.0794,
@@ -2415,6 +3325,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.52
+  },
+  "gruissan-plage": {
+   "lat": 43.1,
+   "lon": 3.11,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.09834,
+    "lon": 3.11464,
+    "movedM": 420
+   }
   },
   "grunta-beach": {
    "lat": 51.18185,
@@ -2446,6 +3371,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "guidel-plages": {
+   "lat": 47.76,
+   "lon": -3.52,
+   "coastM": 167,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "gullane-bents": {
    "lat": 56.04472,
    "lon": -2.84601,
@@ -2470,6 +3405,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.08
+  },
+  "gwendrez-left": {
+   "lat": 47.99,
+   "lon": -4.48,
+   "coastM": 54,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "gwynver-beach": {
    "lat": 50.08975,
@@ -2596,6 +3541,36 @@
    "reason": null,
    "referenceKm": 0.33
   },
+  "hotel-novotel": {
+   "lat": 16.22,
+   "lon": -61.52,
+   "coastM": 274,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "hourtin-plage": {
+   "lat": 45.25,
+   "lon": -1.17,
+   "coastM": 69,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ilbaritz-bora-bora": {
+   "lat": 43.47,
+   "lon": -1.57,
+   "coastM": 115,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "ilbarritz": {
    "lat": 43.4592,
    "lon": -1.57954,
@@ -2605,6 +3580,166 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.7
+  },
+  "ile-d-oleron-chassiron": {
+   "lat": 46.04,
+   "lon": -1.41,
+   "coastM": 23,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-d-oleron-grand-village": {
+   "lat": 45.85,
+   "lon": -1.26,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.85091,
+    "lon": -1.25114,
+    "movedM": 694
+   }
+  },
+  "ile-d-oleron-la-cotiniere": {
+   "lat": 45.92,
+   "lon": -1.33,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.91554,
+    "lon": -1.32933,
+    "movedM": 496
+   }
+  },
+  "ile-d-oleron-les-trois-pierres": {
+   "lat": 46.01,
+   "lon": -1.4,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 46.01151,
+    "lon": -1.39558,
+    "movedM": 380
+   }
+  },
+  "ile-d-oleron-passe-du-trillou": {
+   "lat": 45.87,
+   "lon": -1.26,
+   "coastM": 90,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-d-oleron-st-denis": {
+   "lat": 46.04,
+   "lon": -1.37,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-de-noirmoutier": {
+   "lat": 47.01,
+   "lon": -2.29,
+   "coastM": 204,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-de-noirmoutier-barbatre": {
+   "lat": 46.94,
+   "lon": -2.19,
+   "coastM": 298,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-de-re-la-couarde-mer": {
+   "lat": 46.2,
+   "lon": -1.45,
+   "coastM": 182,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-de-re-rivedoux": {
+   "lat": 46.16,
+   "lon": -1.25,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 46.16256,
+    "lon": -1.25272,
+    "movedM": 352
+   }
+  },
+  "ile-des-embiez-le-phare": {
+   "lat": 43.08,
+   "lon": 5.78,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-st-honorat": {
+   "lat": 43.51,
+   "lon": 7.05,
+   "coastM": 86,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ile-ste-marguerite": {
+   "lat": 43.52,
+   "lon": 7.03,
+   "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ilet-du-novotel": {
+   "lat": 4.95,
+   "lon": -52.3,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "inch": {
    "lat": 51.79513,
@@ -2781,6 +3916,41 @@
    "reason": null,
    "referenceKm": 0.83
   },
+  "kerloch": {
+   "lat": 48.26,
+   "lon": -4.56,
+   "coastM": 258,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "kerlouan": {
+   "lat": 48.66,
+   "lon": -4.4,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.6633,
+    "lon": -4.40128,
+    "movedM": 376
+   }
+  },
+  "kersiguenno": {
+   "lat": 48.25,
+   "lon": -4.55,
+   "coastM": 147,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "kilcummin": {
    "lat": 54.27778,
    "lon": -9.21694,
@@ -2871,6 +4041,16 @@
    "reason": null,
    "referenceKm": 0.03
   },
+  "kirminhy": {
+   "lat": 47.64,
+   "lon": -3.21,
+   "coastM": 100,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "kontxa-hondartza": {
    "lat": 43.31772,
    "lon": -1.99152,
@@ -2881,6 +4061,91 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "l-abbatoir": {
+   "lat": 16.48,
+   "lon": -61.51,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.478,
+    "lon": -61.50607,
+    "movedM": 474
+   }
+  },
+  "l-amelie": {
+   "lat": 45.47,
+   "lon": -1.16,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.46997,
+    "lon": -1.15504,
+    "movedM": 387
+   }
+  },
+  "l-arquet": {
+   "lat": 43.33,
+   "lon": 5.06,
+   "coastM": 55,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "l-epi-nord": {
+   "lat": 43.66,
+   "lon": -1.44,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.66119,
+    "lon": -1.44506,
+    "movedM": 428
+   }
+  },
+  "l-hermitage": {
+   "lat": 43.33,
+   "lon": 5.11,
+   "coastM": 35,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "l-ile-aux-vaches-lervily": {
+   "lat": 48,
+   "lon": -4.56,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "l-olivette": {
+   "lat": 43.55,
+   "lon": 7.12,
+   "coastM": 127,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-barossa": {
    "lat": 36.36,
    "lon": -6.18,
@@ -2890,6 +4155,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "la-caffrine": {
+   "lat": -21.15,
+   "lon": 55.29,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.15435,
+    "lon": 55.28221,
+    "movedM": 940
+   }
   },
   "la-caleta-lanzarote": {
    "lat": 29.12,
@@ -2916,6 +4196,36 @@
    "reason": null,
    "referenceKm": 0.28
   },
+  "la-caravelle-guadeloupe-grande-terre": {
+   "lat": 16.23,
+   "lon": -61.37,
+   "coastM": 157,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-chaise": {
+   "lat": 16.25,
+   "lon": -61.19,
+   "coastM": 50,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-chapelle": {
+   "lat": 43.39,
+   "lon": 3.67,
+   "coastM": 252,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-chucha": {
    "lat": 36.7,
    "lon": -3.46,
@@ -2929,6 +4239,21 @@
     "lat": 36.69636,
     "lon": -3.46046,
     "movedM": 405
+   }
+  },
+  "la-ciotat": {
+   "lat": 43.19,
+   "lon": 5.62,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.18638,
+    "lon": 5.62203,
+    "movedM": 433
    }
   },
   "la-concha": {
@@ -2956,6 +4281,46 @@
     "movedM": 370
    }
   },
+  "la-cote-sauvage": {
+   "lat": 45.74,
+   "lon": -1.25,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.74064,
+    "lon": -1.24004,
+    "movedM": 777
+   }
+  },
+  "la-cote-sauvage-le-43": {
+   "lat": 45.71,
+   "lon": -1.24,
+   "coastM": 157,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-cote-sauvage-le-semaphore": {
+   "lat": 45.69,
+   "lon": -1.24,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.69148,
+    "lon": -1.23398,
+    "movedM": 496
+   }
+  },
   "la-courance": {
    "lat": 47.23932,
    "lon": -2.27216,
@@ -2965,6 +4330,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.6
+  },
+  "la-crecque": {
+   "lat": 49.64,
+   "lon": -1.86,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.64112,
+    "lon": -1.85489,
+    "movedM": 389
+   }
   },
   "la-derecha": {
    "lat": 28.74152,
@@ -3026,6 +4406,16 @@
    "reason": null,
    "referenceKm": 0.94
   },
+  "la-grande-motte": {
+   "lat": 43.56,
+   "lon": 4.08,
+   "coastM": 44,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-grande-plage-316981030": {
    "lat": 45.82544,
    "lon": -1.23809,
@@ -3056,6 +4446,31 @@
     "movedM": 546
    }
   },
+  "la-guillotine": {
+   "lat": 43.28,
+   "lon": 3.45,
+   "coastM": 189,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-jenny": {
+   "lat": 44.85,
+   "lon": -1.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 44.84924,
+    "lon": -1.22522,
+    "movedM": 387
+   }
+  },
   "la-lette-blanche-vielle": {
    "lat": 43.90116,
    "lon": -1.37863,
@@ -3075,6 +4490,41 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "la-mere": {
+   "lat": 4.89,
+   "lon": -52.18,
+   "coastM": 23,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-mondree": {
+   "lat": 49.69,
+   "lon": -1.46,
+   "coastM": 278,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "la-paillotte": {
+   "lat": 43.42,
+   "lon": 6.84,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.41657,
+    "lon": 6.83987,
+    "movedM": 380
+   }
   },
   "la-rotonda": {
    "lat": 41.47,
@@ -3121,6 +4571,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "la-station": {
+   "lat": 16.33,
+   "lon": -61.3,
+   "coastM": 242,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-tejita": {
    "lat": 28.03107,
    "lon": -16.55642,
@@ -3131,10 +4591,30 @@
    "reason": null,
    "referenceKm": 1.34
   },
+  "la-tranche-sur-mer": {
+   "lat": 46.34,
+   "lon": -1.47,
+   "coastM": 342,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "la-yerbabuena": {
    "lat": 36.18,
    "lon": -5.97,
    "coastM": 104,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "labenne-ocean": {
+   "lat": 43.59,
+   "lon": -1.48,
+   "coastM": 30,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -3201,6 +4681,26 @@
    "reason": null,
    "referenceKm": 0.59
   },
+  "lampaul-plouarzel": {
+   "lat": 48.46,
+   "lon": -4.77,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "lampaul-ploudalmezeau": {
+   "lat": 48.57,
+   "lon": -4.68,
+   "coastM": 298,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "lancing-beach": {
    "lat": 50.82006,
    "lon": -0.32123,
@@ -3235,6 +4735,16 @@
    "lat": 36.46,
    "lon": -5,
    "coastM": 316,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "larmor-plage": {
+   "lat": 47.7,
+   "lon": -3.39,
+   "coastM": 112,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -3311,6 +4821,111 @@
    "reason": null,
    "referenceKm": 0
   },
+  "le-butor": {
+   "lat": -20.87,
+   "lon": 55.5,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -20.88233,
+    "lon": 55.50183,
+    "movedM": 1376
+   }
+  },
+  "le-cimetiere": {
+   "lat": 44.69,
+   "lon": -1.26,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 44.68963,
+    "lon": -1.25514,
+    "movedM": 387
+   }
+  },
+  "le-club": {
+   "lat": 46.72,
+   "lon": -1.99,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 46.72276,
+    "lon": -1.9854,
+    "movedM": 465
+   }
+  },
+  "le-fort-bloque": {
+   "lat": 47.73,
+   "lon": -3.5,
+   "coastM": 81,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-fozo": {
+   "lat": 47.59,
+   "lon": -3.15,
+   "coastM": 177,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-goudoul": {
+   "lat": 47.79,
+   "lon": -4.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.79326,
+    "lon": -4.2295,
+    "movedM": 362
+   }
+  },
+  "le-grand-large": {
+   "lat": 49.49,
+   "lon": -1.85,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.49019,
+    "lon": -1.84455,
+    "movedM": 395
+   }
+  },
+  "le-guet": {
+   "lat": 48.1,
+   "lon": -4.34,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "le-gurp": {
    "lat": 45.43399,
    "lon": -1.15364,
@@ -3320,6 +4935,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.18
+  },
+  "le-letty": {
+   "lat": 47.86,
+   "lon": -4.09,
+   "coastM": 125,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "le-liouquet": {
    "lat": 43.18199,
@@ -3331,6 +4956,96 @@
    "reason": null,
    "referenceKm": 0.32
   },
+  "le-lorrain": {
+   "lat": 14.83,
+   "lon": -61.06,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 14.83448,
+    "lon": -61.05741,
+    "movedM": 568
+   }
+  },
+  "le-mail": {
+   "lat": 43.27,
+   "lon": 3.48,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.27313,
+    "lon": 3.4824,
+    "movedM": 397
+   }
+  },
+  "le-manege": {
+   "lat": 43.1,
+   "lon": 5.81,
+   "coastM": 147,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-moule": {
+   "lat": 16.34,
+   "lon": -61.34,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.33339,
+    "lon": -61.33885,
+    "movedM": 741
+   }
+  },
+  "le-niel-giens": {
+   "lat": 43.04,
+   "lon": 6.14,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.03591,
+    "lon": 6.13615,
+    "movedM": 550
+   }
+  },
+  "le-pain-de-sucre": {
+   "lat": 42.57,
+   "lon": 8.8,
+   "coastM": 218,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-petits-dalles": {
+   "lat": 49.79,
+   "lon": 0.44,
+   "coastM": 110,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "le-phare": {
    "lat": 46.34413,
    "lon": -1.461,
@@ -3340,6 +5055,116 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.47
+  },
+  "le-pin-sec": {
+   "lat": 45.29,
+   "lon": -1.17,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.28925,
+    "lon": -1.16304,
+    "movedM": 551
+   }
+  },
+  "le-port": {
+   "lat": 43.39,
+   "lon": -1.67,
+   "coastM": 152,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-port-reunion-island": {
+   "lat": -20.93,
+   "lon": 55.29,
+   "coastM": 208,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-poux": {
+   "lat": 49.47,
+   "lon": -1.84,
+   "coastM": 144,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-rozel": {
+   "lat": 49.48,
+   "lon": -1.85,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 49.48015,
+    "lon": -1.84481,
+    "movedM": 376
+   }
+  },
+  "le-ruppione": {
+   "lat": 41.8,
+   "lon": 8.71,
+   "coastM": 44,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-sail-fish": {
+   "lat": 44.64,
+   "lon": -1.26,
+   "coastM": 108,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-triangle": {
+   "lat": 48.54,
+   "lon": -4.75,
+   "coastM": 95,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-truc-vert": {
+   "lat": 44.72,
+   "lon": -1.25,
+   "coastM": 6,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "le-verdon": {
+   "lat": 45.57,
+   "lon": -1.09,
+   "coastM": 338,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "le-vivier": {
    "lat": 44.45814,
@@ -3371,6 +5196,21 @@
    "reason": null,
    "referenceKm": 0.95
   },
+  "les-aigrettes-right": {
+   "lat": -21.02,
+   "lon": 55.22,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.02645,
+    "lon": 55.22529,
+    "movedM": 900
+   }
+  },
   "les-amiets": {
    "lat": 48.69402,
    "lon": -4.14228,
@@ -3380,6 +5220,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.23
+  },
+  "les-bormettes": {
+   "lat": 43.12,
+   "lon": 6.25,
+   "coastM": 128,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "les-dunes": {
+   "lat": 46.56,
+   "lon": -1.84,
+   "coastM": 229,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "les-flots-bleus": {
    "lat": 43.39801,
@@ -3391,6 +5251,16 @@
    "reason": null,
    "referenceKm": 0.25
   },
+  "les-roches-blanches": {
+   "lat": 48.11,
+   "lon": -4.36,
+   "coastM": 170,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "les-roches-noires": {
    "lat": -21.05289,
    "lon": 55.22322,
@@ -3400,6 +5270,71 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.77
+  },
+  "les-roquilles": {
+   "lat": 43.54,
+   "lon": 3.97,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "les-sables-blancs": {
+   "lat": 48.69,
+   "lon": -3.66,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.69277,
+    "lon": -3.66271,
+    "movedM": 365
+   }
+  },
+  "les-sables-d-or": {
+   "lat": 48.65,
+   "lon": -2.39,
+   "coastM": 35,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "lhermitage-left": {
+   "lat": -21.06,
+   "lon": 55.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.05966,
+    "lon": 55.22173,
+    "movedM": 860
+   }
+  },
+  "lhermitage-right": {
+   "lat": -21.07,
+   "lon": 55.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.06894,
+    "lon": 55.22058,
+    "movedM": 985
+   }
   },
   "liencres": {
    "lat": 43.47,
@@ -3450,6 +5385,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.19
+  },
+  "locquirec": {
+   "lat": 48.7,
+   "lon": -3.65,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.6968,
+    "lon": -3.64449,
+    "movedM": 538
+   }
   },
   "longsands": {
    "lat": 55.02782,
@@ -3531,6 +5481,16 @@
    "reason": null,
    "referenceKm": 3.08
   },
+  "luc-sur-mer": {
+   "lat": 49.32,
+   "lon": -0.35,
+   "coastM": 122,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "lulworth-cove": {
    "lat": 50.61866,
    "lon": -2.24679,
@@ -3540,6 +5500,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.04
+  },
+  "lumio": {
+   "lat": 42.58,
+   "lon": 8.8,
+   "coastM": 194,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "lunan-bay": {
    "lat": 56.64694,
@@ -3656,6 +5626,21 @@
     "movedM": 1035
    }
   },
+  "mahury": {
+   "lat": 4.86,
+   "lon": -52.26,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 4.86016,
+    "lon": -52.25683,
+    "movedM": 352
+   }
+  },
   "maiarko": {
    "lat": 43.41869,
    "lon": -1.62551,
@@ -3700,6 +5685,31 @@
     "lon": 3.14114,
     "movedM": 528
    }
+  },
+  "manapany": {
+   "lat": -21.36,
+   "lon": 55.59,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.37152,
+    "lon": 55.5865,
+    "movedM": 1324
+   }
+  },
+  "mandelieu-l-aerospatiale": {
+   "lat": 43.55,
+   "lon": 6.98,
+   "coastM": 284,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "manorbier-beach": {
    "lat": 51.64249,
@@ -3756,6 +5766,26 @@
     "movedM": 393
    }
   },
+  "marseille-boutofolle": {
+   "lat": 43.24,
+   "lon": 5.36,
+   "coastM": 108,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "mauvaise-greve": {
+   "lat": 48.69,
+   "lon": -4.09,
+   "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "mawgan-porth": {
    "lat": 50.46871,
    "lon": -5.03632,
@@ -3806,6 +5836,16 @@
    "reason": null,
    "referenceKm": 0.65
   },
+  "mers-les-bains": {
+   "lat": 50.07,
+   "lon": 1.39,
+   "coastM": 183,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "millendreath-beach": {
    "lat": 50.36097,
    "lon": -4.43621,
@@ -3816,10 +5856,40 @@
    "reason": null,
    "referenceKm": 0.02
   },
+  "mimizan": {
+   "lat": 44.22,
+   "lon": -1.3,
+   "coastM": 154,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "molino-de-papel": {
    "lat": 36.75,
    "lon": -3.82,
    "coastM": 185,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "mongrels": {
+   "lat": 43.64,
+   "lon": -1.45,
+   "coastM": 88,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "montalivet-les-bains": {
+   "lat": 45.39,
+   "lon": -1.16,
+   "coastM": 16,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -3891,6 +5961,16 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "moulin-la-rive": {
+   "lat": 48.69,
+   "lon": -3.68,
+   "coastM": 301,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "muckros-head": {
    "lat": 54.60883,
    "lon": -8.59256,
@@ -3961,6 +6041,16 @@
    "reason": null,
    "referenceKm": 0.5
   },
+  "narbonne-plage": {
+   "lat": 43.15,
+   "lon": 3.16,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "newbiggin-beach": {
    "lat": 55.18198,
    "lon": -1.50953,
@@ -4001,6 +6091,16 @@
    "reason": null,
    "referenceKm": 0.37
   },
+  "nez-bayard": {
+   "lat": 49.73,
+   "lon": -1.94,
+   "coastM": 339,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "noja": {
    "lat": 43.47,
    "lon": -3.5,
@@ -4030,6 +6130,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.04
+  },
+  "nouveau-cimetiere": {
+   "lat": 41.91,
+   "lon": 8.71,
+   "coastM": 179,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "o-areal-de-sabon": {
    "lat": 43.32969,
@@ -4166,6 +6276,16 @@
     "movedM": 394
    }
   },
+  "oye-plage-escardines": {
+   "lat": 51,
+   "lon": 2.04,
+   "coastM": 107,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "oyster-haven": {
    "lat": 51.69588,
    "lon": -8.45063,
@@ -4206,6 +6326,16 @@
    "reason": null,
    "referenceKm": 0.71
   },
+  "palm-beach": {
+   "lat": 43.54,
+   "lon": 7.04,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "par-sands": {
    "lat": 50.34668,
    "lon": -4.69617,
@@ -4215,6 +6345,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.03
+  },
+  "parata-point": {
+   "lat": 41.89,
+   "lon": 8.61,
+   "coastM": 257,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "parlementia": {
    "lat": 43.42815,
@@ -4240,6 +6380,16 @@
    "lat": 29.26,
    "lon": -13.48,
    "coastM": 70,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pelle-a-tarte": {
+   "lat": 14.77,
+   "lon": -60.9,
+   "coastM": 4,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -4291,6 +6441,16 @@
    "reason": null,
    "referenceKm": 0.15
   },
+  "penthievre": {
+   "lat": 47.57,
+   "lon": -3.14,
+   "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "perran-beach": {
    "lat": 50.36223,
    "lon": -5.15336,
@@ -4330,6 +6490,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.42
+  },
+  "pic-kipu": {
+   "lat": 47.71,
+   "lon": -3.38,
+   "coastM": 205,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "pico-de-el-errizo": {
    "lat": 37.74,
@@ -5890,6 +8060,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.1
+  },
+  "plage-du-loch": {
+   "lat": 47.74,
+   "lon": -3.51,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.74111,
+    "lon": -3.50367,
+    "movedM": 490
+   }
   },
   "plage-du-metro": {
    "lat": 43.55917,
@@ -9486,6 +11671,16 @@
    "reason": null,
    "referenceKm": 0.71
   },
+  "pleherel": {
+   "lat": 48.66,
+   "lon": -2.36,
+   "coastM": 274,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "plentzia": {
    "lat": 43.41104,
    "lon": -2.9466,
@@ -9496,6 +11691,26 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "plombier": {
+   "lat": 16.47,
+   "lon": -61.52,
+   "coastM": 121,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "plovan": {
+   "lat": 47.92,
+   "lon": -4.38,
+   "coastM": 289,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "pobbles-beach": {
    "lat": 51.56842,
    "lon": -4.10761,
@@ -9505,6 +11720,111 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.24
+  },
+  "pointe-aux-oies": {
+   "lat": 50.79,
+   "lon": 1.61,
+   "coastM": 207,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pointe-de-dinan": {
+   "lat": 48.23,
+   "lon": -4.57,
+   "coastM": 124,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pointe-de-lervily": {
+   "lat": 48,
+   "lon": -4.57,
+   "coastM": 16,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pointe-de-leyde": {
+   "lat": 48.11,
+   "lon": -4.38,
+   "coastM": 228,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pointe-des-chateaux": {
+   "lat": 16.26,
+   "lon": -61.19,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 16.25496,
+    "lon": -61.18983,
+    "movedM": 557
+   }
+  },
+  "pointe-des-trois-bassins": {
+   "lat": -21.09,
+   "lon": 55.25,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.10063,
+    "lon": 55.24268,
+    "movedM": 1400
+   }
+  },
+  "pointe-du-couregan": {
+   "lat": 47.72,
+   "lon": -3.48,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.71819,
+    "lon": -3.48427,
+    "movedM": 377
+   }
+  },
+  "pointe-du-milier": {
+   "lat": 48.1,
+   "lon": -4.47,
+   "coastM": 254,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pointe-du-toulinguet": {
+   "lat": 48.28,
+   "lon": -4.63,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "poldhu-cove": {
    "lat": 50.03335,
@@ -9551,6 +11871,66 @@
    "reason": null,
    "referenceKm": 1.6
   },
+  "pornichet": {
+   "lat": 47.26,
+   "lon": -2.35,
+   "coastM": 80,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pors-ar-ville": {
+   "lat": 48.7,
+   "lon": -3.66,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.6967,
+    "lon": -3.65597,
+    "movedM": 470
+   }
+  },
+  "pors-naye": {
+   "lat": 48.28,
+   "lon": -4.61,
+   "coastM": 115,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pors-nevez": {
+   "lat": 48.82,
+   "lon": -3.45,
+   "coastM": 324,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pors-poulhan": {
+   "lat": 47.99,
+   "lon": -4.47,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.98542,
+    "lon": -4.47257,
+    "movedM": 541
+   }
+  },
   "port-bara": {
    "lat": 47.51417,
    "lon": -3.15167,
@@ -9570,6 +11950,51 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.12
+  },
+  "port-d-albret": {
+   "lat": 43.88,
+   "lon": -1.38,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 43.88117,
+    "lon": -1.38555,
+    "movedM": 464
+   }
+  },
+  "port-francois-harbour": {
+   "lat": 16.25,
+   "lon": -61.28,
+   "coastM": 22,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "port-louis": {
+   "lat": 16.43,
+   "lon": -61.54,
+   "coastM": 319,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "port-rhu": {
+   "lat": 47.5,
+   "lon": -3.15,
+   "coastM": 24,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "portballintrae-beach": {
    "lat": 55.21706,
@@ -9816,6 +12241,16 @@
    "reason": null,
    "referenceKm": 0.35
   },
+  "portigliolo": {
+   "lat": 41.67,
+   "lon": 8.88,
+   "coastM": 92,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "portmarnock-beach": {
    "lat": 53.41588,
    "lon": -6.11757,
@@ -9880,6 +12315,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.09
+  },
+  "postollonec": {
+   "lat": 48.24,
+   "lon": -4.47,
+   "coastM": 209,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "pourville": {
+   "lat": 49.92,
+   "lon": 1.03,
+   "coastM": 258,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "pozo-izquierdo": {
    "lat": 27.8249,
@@ -10461,6 +12916,21 @@
    "reason": null,
    "referenceKm": 0.45
   },
+  "prefailles": {
+   "lat": 47.12,
+   "lon": -2.21,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 47.12427,
+    "lon": -2.21177,
+    "movedM": 491
+   }
+  },
   "preston-sands-56319943": {
    "lat": 50.44348,
    "lon": -3.55501,
@@ -10470,6 +12940,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.11
+  },
+  "prima-tregastel": {
+   "lat": 48.71,
+   "lon": -3.81,
+   "coastM": 215,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "primera-playa-de-el-sardinero": {
    "lat": 43.47306,
@@ -10591,6 +13071,16 @@
     "movedM": 895
    }
   },
+  "punta-di-testa": {
+   "lat": 41.69,
+   "lon": 9.39,
+   "coastM": 84,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "punta-galea": {
    "lat": 43.36,
    "lon": -3.02,
@@ -10631,6 +13121,21 @@
    "reason": null,
    "referenceKm": 0.52
   },
+  "quai-du-diable": {
+   "lat": -21.32,
+   "lon": 55.45,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.32819,
+    "lon": 55.44863,
+    "movedM": 916
+   }
+  },
   "quintanilla": {
    "lat": 28.15,
    "lon": -15.53,
@@ -10645,6 +13150,16 @@
     "lon": -15.53267,
     "movedM": 383
    }
+  },
+  "rade-de-croisic": {
+   "lat": 47.3,
+   "lon": -2.55,
+   "coastM": 308,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "ramsgate-sands": {
    "lat": 51.33932,
@@ -10871,6 +13386,36 @@
     "movedM": 512
    }
   },
+  "saint-benoit-lefts": {
+   "lat": -21.01,
+   "lon": 55.72,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.0195,
+    "lon": 55.70516,
+    "movedM": 1866
+   }
+  },
+  "saint-benoit-rights": {
+   "lat": -21.01,
+   "lon": 55.71,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -21.01133,
+    "lon": 55.70176,
+    "movedM": 868
+   }
+  },
   "saint-girons-plage": {
    "lat": 43.95166,
    "lon": -1.36464,
@@ -10881,6 +13426,76 @@
    "reason": null,
    "referenceKm": 0.52
   },
+  "saint-girons-plage-landes": {
+   "lat": 44.01,
+   "lon": -1.35,
+   "coastM": 94,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "saint-joseph-iles-du-salut": {
+   "lat": 5.29,
+   "lon": -52.58,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 5.29193,
+    "lon": -52.58358,
+    "movedM": 451
+   }
+  },
+  "saint-leu": {
+   "lat": -21.16,
+   "lon": 55.29,
+   "coastM": 342,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "saint-marie": {
+   "lat": -20.88,
+   "lon": 55.55,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": -20.8924,
+    "lon": 55.55556,
+    "movedM": 1488
+   }
+  },
+  "saint-nicolas": {
+   "lat": 46.42,
+   "lon": -1.65,
+   "coastM": 45,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "sainte-adresse": {
+   "lat": 49.51,
+   "lon": 0.07,
+   "coastM": 240,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "sainte-restitude": {
    "lat": 42.5695,
    "lon": 8.80399,
@@ -10890,6 +13505,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.33
+  },
+  "saintes-maries": {
+   "lat": 43.45,
+   "lon": 4.42,
+   "coastM": 122,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "salinas": {
    "lat": 43.58,
@@ -10991,6 +13616,16 @@
    "reason": null,
    "referenceKm": 0.72
   },
+  "sangatte": {
+   "lat": 50.94,
+   "lon": 1.74,
+   "coastM": 214,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "sango-bay": {
    "lat": 58.56877,
    "lon": -4.73734,
@@ -11051,6 +13686,16 @@
     "movedM": 784
    }
   },
+  "sausset-les-pins": {
+   "lat": 43.33,
+   "lon": 5.1,
+   "coastM": 20,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "saviskaill-beach-nousty-sand": {
    "lat": 59.18362,
    "lon": -3.0492,
@@ -11110,6 +13755,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.57
+  },
+  "seignosse-les-bourdaines": {
+   "lat": 43.7,
+   "lon": -1.44,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "senix-cenitz": {
    "lat": 43.42252,
@@ -11200,6 +13855,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.53
+  },
+  "sion-sur-l-ocean": {
+   "lat": 46.71,
+   "lon": -1.98,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "sker-beach": {
    "lat": 51.52547,
@@ -11306,6 +13971,21 @@
     "movedM": 400
    }
   },
+  "soulac-sur-mer": {
+   "lat": 45.51,
+   "lon": -1.14,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 45.50857,
+    "lon": -1.13448,
+    "movedM": 459
+   }
+  },
   "south-beach-603668668": {
    "lat": 51.66177,
    "lon": -4.70786,
@@ -11356,6 +14036,16 @@
    "reason": null,
    "referenceKm": 0.15
   },
+  "st-cyprien": {
+   "lat": 42.63,
+   "lon": 3.04,
+   "coastM": 286,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "st-finians-bay-beach": {
    "lat": 51.84567,
    "lon": -10.3364,
@@ -11365,6 +14055,96 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.05
+  },
+  "st-georges-de-didonne": {
+   "lat": 45.6,
+   "lon": -1,
+   "coastM": 63,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "st-gilles-croix-de-vie": {
+   "lat": 46.7,
+   "lon": -1.97,
+   "coastM": 241,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "st-jean": {
+   "lat": 43.19,
+   "lon": 5.63,
+   "coastM": 340,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "st-jean-de-doigt": {
+   "lat": 48.71,
+   "lon": -3.77,
+   "coastM": 172,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "st-jean-de-monts": {
+   "lat": 46.77,
+   "lon": -2.06,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 46.77279,
+    "lon": -2.05547,
+    "movedM": 463
+   }
+  },
+  "ste-anne-la-palud": {
+   "lat": 48.14,
+   "lon": -4.28,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 48.1402,
+    "lon": -4.27479,
+    "movedM": 387
+   }
+  },
+  "ste-barbe": {
+   "lat": 47.6,
+   "lon": -3.16,
+   "coastM": 311,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ste-marguerite": {
+   "lat": 47.24,
+   "lon": -2.32,
+   "coastM": 331,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "stonehaven-beach": {
    "lat": 56.96408,
@@ -11496,6 +14276,31 @@
     "movedM": 925
    }
   },
+  "tamaris-cote-d-azur": {
+   "lat": 43.33,
+   "lon": 5.08,
+   "coastM": 11,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "tardinghen": {
+   "lat": 50.88,
+   "lon": 1.63,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 50.87559,
+    "lon": 1.63278,
+    "movedM": 525
+   }
+  },
   "teignmouth-beach": {
    "lat": 50.54587,
    "lon": -3.49318,
@@ -11505,6 +14310,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.51
+  },
+  "terminus-berck": {
+   "lat": 50.42,
+   "lon": 1.57,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 50.42077,
+    "lon": 1.56436,
+    "movedM": 409
+   }
   },
   "the-bubble": {
    "lat": 28.75,
@@ -11541,6 +14361,16 @@
    "reason": null,
    "referenceKm": 0.21
   },
+  "three-rocks": {
+   "lat": -21.03,
+   "lon": 55.22,
+   "coastM": 276,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "tolcarne-beach": {
    "lat": 50.41848,
    "lon": -5.07496,
@@ -11550,6 +14380,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.06
+  },
+  "tomate": {
+   "lat": 14.83,
+   "lon": -61.23,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 14.8303,
+    "lon": -61.22643,
+    "movedM": 385
+   }
   },
   "torimbia": {
    "lat": 43.44274,
@@ -11570,6 +14415,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.95
+  },
+  "toulon": {
+   "lat": 43.11,
+   "lon": 5.96,
+   "coastM": 296,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "towan-beach": {
    "lat": 50.41679,
@@ -11811,6 +14666,16 @@
    "reason": null,
    "referenceKm": 3
   },
+  "tregastel-plage": {
+   "lat": 48.83,
+   "lon": -3.52,
+   "coastM": 4,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "tremone-bay-6171963": {
    "lat": 55.27194,
    "lon": -7.06803,
@@ -11820,6 +14685,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.25
+  },
+  "treustel": {
+   "lat": 47.86,
+   "lon": -4.14,
+   "coastM": 65,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "trevaunance-cove": {
    "lat": 50.32072,
@@ -11941,6 +14816,16 @@
    "reason": null,
    "referenceKm": 0.03
   },
+  "veules-les-roses": {
+   "lat": 49.88,
+   "lon": 0.8,
+   "coastM": 206,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "viking-bay": {
    "lat": 51.35777,
    "lon": 1.44395,
@@ -11950,6 +14835,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.13
+  },
+  "villefranche-sur-mer": {
+   "lat": 43.7,
+   "lon": 7.32,
+   "coastM": 106,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "watergate-beach": {
    "lat": 50.44462,
@@ -11970,6 +14865,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.31
+  },
+  "west-peak": {
+   "lat": 43.69,
+   "lon": -1.44,
+   "coastM": 74,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "west-sands": {
    "lat": 56.35872,
@@ -12110,6 +15015,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.1
+  },
+  "wimereux": {
+   "lat": 50.77,
+   "lon": 1.61,
+   "coastM": 222,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "wissant": {
+   "lat": 50.9,
+   "lon": 1.68,
+   "coastM": 194,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "withernsea-beach": {
    "lat": 53.7295,

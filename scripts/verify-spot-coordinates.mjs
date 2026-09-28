@@ -33,6 +33,7 @@
  *   node scripts/verify-spot-coordinates.mjs            # check what is new or moved
  *   FULL=1 node scripts/verify-spot-coordinates.mjs     # re-check everything
  *   ONLY=id,id node scripts/verify-spot-coordinates.mjs # just these (writes only them)
+ *   BATCH=10 node scripts/verify-spot-coordinates.mjs   # smaller queries when Overpass times out
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -68,7 +69,8 @@ const SAME_SHORE_M = 60;
 /** Past this, the reference and OSM are describing different beaches. */
 const REFERENCE_KM = 5;
 
-const BATCH = 30;
+/** Spots per coastline query. Brittany's coastline is detailed enough that 30 times out; BATCH=10 gets through. */
+const BATCH = Number(process.env.BATCH ?? 30);
 
 /** Enclosed waters, fetched once per region and measured locally. Not versioned. */
 const ENCLOSED_CACHE = new URL('../.cache/enclosed-waters-by-zone.json', import.meta.url);
@@ -232,7 +234,9 @@ const places = new Map(JSON.parse(readFileSync(SPOTS)).map(p => [p.id, p]));
 const attested = JSON.parse(readFileSync(ATTESTED)).spots;
 const previous = existsSync(OUT) && !process.env.FULL ? JSON.parse(readFileSync(OUT)).spots : {};
 
-const results = {};
+// Results for places not checked this run stay: stage 3.5b's breaks drop out
+// of the attested file each time stage 3.5 runs, and are back after 3.5b.
+const results = Object.fromEntries(Object.entries(previous).filter(([id]) => places.has(id)));
 const todo = [];
 const only = process.env.ONLY ? new Set(process.env.ONLY.split(',')) : null;
 const checked = [];
@@ -332,7 +336,7 @@ const offShore = checked.filter(
 );
 // Batched like the check above: surf-forecast's two-decimal points (stage 3.5b)
 // put dozens of spots a few hundred metres off the shore at once.
-const SNAP_BATCH = 10;
+const SNAP_BATCH = Math.min(10, BATCH);
 for (let i = 0; i < offShore.length; i += SNAP_BATCH) {
   const batch = offShore.slice(i, i + SNAP_BATCH);
   const data = await overpass(

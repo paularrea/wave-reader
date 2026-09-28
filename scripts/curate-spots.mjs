@@ -38,6 +38,7 @@ const ISO2 = {
   France: 'fr',
   'United Kingdom': 'gb',
   Ireland: 'ie',
+  Portugal: 'pt',
 };
 
 /** Two entries with one name this close apart are one beach mapped twice. */
@@ -92,6 +93,25 @@ function irishRegion(spot, attestation) {
 }
 
 /**
+ * Portugal is published under surf-forecast's regions, as Ireland is: Peniche
+ * and Ericeira are what Portuguese surfers call those coasts, and neither is a
+ * district. A break they name carries their region (without their "The" and
+ * "Portugal - "); a place none of their breaks names takes the region of the
+ * nearest one that does.
+ */
+const PORTUGUESE_REGION = {
+  'Douro and Minho': 'Douro and Minho',
+  Beira: 'Beira',
+  Peniche: 'Peniche',
+  Ericeira: 'Ericeira',
+  Lisboa: 'Lisboa',
+  'Portugal - Alentejo': 'Alentejo',
+  'The Algarve': 'Algarve',
+  Madeira: 'Madeira',
+  'The Azores': 'Azores',
+};
+
+/**
  * The name the spot is published under. The catalogue lists surf-forecast's
  * breaks, so a place that is one of them carries their name when OSM's says
  * something else: a local or older name (La Playita is Playa de Santa María del
@@ -123,6 +143,22 @@ const spots = JSON.parse(readFileSync(IN_PATH));
 const attested = new Map(JSON.parse(readFileSync(ATTESTED_PATH)).spots.map(a => [a.id, a]));
 const coordinateCheck = JSON.parse(readFileSync(COORDINATE_CHECK_PATH)).spots;
 
+/** Portuguese places a surf-forecast break names, and the region it gives them. */
+const portugueseAnchors = spots
+  .filter(s => s.country === 'Portugal' && PORTUGUESE_REGION[attested.get(s.id)?.referenceRegion])
+  .map(s => ({ at: s.coordinates, region: PORTUGUESE_REGION[attested.get(s.id).referenceRegion] }));
+
+function portugueseRegion(spot) {
+  const own = PORTUGUESE_REGION[attested.get(spot.id)?.referenceRegion];
+  if (own) return own;
+  let best = null;
+  for (const a of portugueseAnchors) {
+    const d = distanceKm(spot.coordinates, a.at);
+    if (!best || d < best.d) best = { d, region: a.region };
+  }
+  return best?.region ?? null;
+}
+
 const dropped = [];
 function drop(spot, reason) {
   dropped.push({ id: spot.id, name: spot.name, country: spot.country, region: spot.community, reason });
@@ -135,7 +171,10 @@ for (let spot of spots) {
     drop(spot, 'not attested: no surf reference names this place');
     continue;
   }
-  if (INLAND.test(spot.name)) {
+  // A break surf-forecast names is theirs to call a break, and its point has
+  // passed the lagoon check: Plage du Loch at Guidel, L'Étang-Salé on Réunion.
+  const theirs = FULL_LIST_COUNTRIES.includes(spot.country) && Boolean(attested.get(spot.id).forecastName ?? attested.get(spot.id).coordinate);
+  if (INLAND.test(spot.name) && !theirs) {
     drop(spot, 'not a surf place: inland water');
     continue;
   }
@@ -160,6 +199,14 @@ for (let spot of spots) {
       continue;
     }
     spot.community = region;
+  }
+  if (spot.country === 'Portugal') {
+    const region = portugueseRegion(spot);
+    if (!region) {
+      drop(spot, 'no surf-forecast region near it');
+      continue;
+    }
+    spot = { ...spot, community: region };
   }
   const name = publishedName(spot, attested.get(spot.id));
   if (name !== spot.name) spot = { ...spot, name, provenance: { ...spot.provenance, osmName: spot.provenance?.osmName ?? spot.name } };
@@ -199,8 +246,12 @@ for (const c of candidates) {
 
 const kept = [];
 for (const group of byRegion.values()) {
+  // One of surf-forecast's breaks first: Hossegor has two OSM "Plage Centrale"
+  // and only one carries their La Centrale.
+  const holdsBreak = c => Number(FULL_LIST_COUNTRIES.includes(c.spot.country) && Boolean(attested.get(c.spot.id).forecastName));
   group.sort(
     (a, b) =>
+      holdsBreak(b) - holdsBreak(a) ||
       Number(Boolean(b.named)) - Number(Boolean(a.named)) ||
       (a.named?.rank ?? 0) - (b.named?.rank ?? 0) ||
       attested.get(b.spot.id).sources.length - attested.get(a.spot.id).sources.length ||

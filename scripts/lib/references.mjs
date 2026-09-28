@@ -10,7 +10,7 @@
  * an OSM place or, failing one, at their coordinate (stage 3.5b), under their
  * name (stage 4). One country per deploy, each checked before the next is added.
  */
-export const FULL_LIST_COUNTRIES = ['Spain'];
+export const FULL_LIST_COUNTRIES = ['Spain', 'France'];
 
 /** surf-forecast's country pages, and the catalogue country each one feeds. */
 export const COUNTRY_OF = {
@@ -26,7 +26,7 @@ export const COUNTRY_OF = {
   'United Kingdom': 'United Kingdom',
   'Réunion': 'France',
   Gibraltar: null,
-  Portugal: null,
+  Portugal: 'Portugal',
   'Isle of Man': null,
 };
 
@@ -112,6 +112,18 @@ export const FORECAST_REGIONS = {
   'East Anglia': ['Norfolk', 'Suffolk', 'Essex'],
   'South Coast of England': ['Dorset', 'Hampshire', 'East Sussex', 'West Sussex', 'Isle of Wight'],
   'South East': ['Kent', 'East Sussex', 'West Sussex'],
+  // Portugal -- stage 1 fetches it by district; stage 4 publishes it under
+  // these regions. Peniche, Ericeira and Lisboa cut across districts, and Beira
+  // runs into Leiria (Nazaré), so each lists every district it can mean.
+  'Douro and Minho': ['Viana do Castelo', 'Braga', 'Porto'],
+  Beira: ['Aveiro', 'Coimbra', 'Leiria'],
+  Peniche: ['Leiria', 'Lisboa'],
+  Ericeira: ['Lisboa'],
+  Lisboa: ['Lisboa', 'Setúbal'],
+  'Portugal - Alentejo': ['Setúbal', 'Beja'],
+  'The Algarve': ['Faro'],
+  Madeira: ['Madeira'],
+  'The Azores': ['Açores'],
   // Coasts this catalogue does not cover
   Alderney: null,
   Guernsey: null,

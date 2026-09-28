@@ -118,6 +118,25 @@ const REGIONS = [
    * batched is_in lookups instead.
    */
   { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: { filter: '["boundary"="ceremonial"]' } },
+
+  /**
+   * Portugal, as Ireland: the mainland is one bounding box split by district
+   * (admin_level 6), with is_in dropping the Galician and Andalusian shore the
+   * box also covers. Stage 4 publishes it under surf-forecast's regions (Peniche
+   * and Ericeira are towns, not districts); the district is only where a place
+   * starts. The islands are their own boxes, each one region.
+   */
+  { iso: 'PT', name: 'Portugal', country: 'Portugal', level: 2, bbox: '36.9,-9.6,42.2,-7.3', subdivide: {
+    filter: '["boundary"="administrative"]["admin_level"="6"]',
+    within: 'PT',
+    names: {
+      'PT-16': 'Viana do Castelo', 'PT-03': 'Braga', 'PT-13': 'Porto', 'PT-01': 'Aveiro',
+      'PT-06': 'Coimbra', 'PT-10': 'Leiria', 'PT-11': 'Lisboa', 'PT-15': 'Setúbal',
+      'PT-02': 'Beja', 'PT-08': 'Faro',
+    },
+  } },
+  { iso: 'PT-20', name: 'Açores', country: 'Portugal', level: 4, bbox: '36.8,-31.4,39.8,-24.9' },
+  { iso: 'PT-30', name: 'Madeira', country: 'Portugal', level: 4, bbox: '32.3,-17.4,33.2,-16.2' },
 ];
 
 /**
@@ -138,6 +157,12 @@ const FEATURE_TAGS = {
    * only a coordinate on the shore; stage 3.5 still has to name it.
    */
   Spain: [
+    ['natural', 'beach'],
+    ['natural', 'cape'],
+    ['natural', 'reef'],
+  ],
+  /** As Spain: Ponta do Pargo, Cabo Girão and Coxos are points and reefs. */
+  Portugal: [
     ['natural', 'beach'],
     ['natural', 'cape'],
     ['natural', 'reef'],

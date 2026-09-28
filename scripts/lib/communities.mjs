@@ -30,6 +30,18 @@ export const REGION_OF_ISO = {
   'FR-971': 'Guadeloupe',
   'FR-972': 'Martinique',
   'FR-GF': 'Guyane',
+  'PT-16': 'Viana do Castelo',
+  'PT-03': 'Braga',
+  'PT-13': 'Porto',
+  'PT-01': 'Aveiro',
+  'PT-06': 'Coimbra',
+  'PT-10': 'Leiria',
+  'PT-11': 'Lisboa',
+  'PT-15': 'Setúbal',
+  'PT-02': 'Beja',
+  'PT-08': 'Faro',
+  'PT-20': 'Açores',
+  'PT-30': 'Madeira',
 };
 
 const NOMINATIM = 'https://nominatim.openstreetmap.org/lookup';

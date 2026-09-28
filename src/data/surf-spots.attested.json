@@ -10,8 +10,23 @@
     "Stage 4 publishes a place only if it appears here."
   ],
   "generatedAt": "2026-09-28",
-  "count": 1171,
+  "count": 1424,
   "spots": [
+    {
+      "id": "aber-wrac-h-point",
+      "name": "Aber Wrac'h Point",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aber Wrac'h Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
     {
       "id": "aberavon-beach",
       "name": "Aberavon Beach",
@@ -92,6 +107,36 @@
       "referenceKm": 0
     },
     {
+      "id": "alize",
+      "name": "Alize",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Alize"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "almanarre-le-petit-port",
+      "name": "Almanarre - Le Petit Port",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Almanarre - Le Petit Port"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "an-tra-bhan",
       "name": "An Trá Bhán",
       "country": "Ireland",
@@ -105,6 +150,66 @@
       "forecastName": "Silver Strand (Malin Beg)",
       "referenceRegion": "Donegal",
       "referenceKm": 0.52
+    },
+    {
+      "id": "anael",
+      "name": "Anael",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anael"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "anglet-la-piscine",
+      "name": "Anglet - La Piscine",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anglet - La Piscine"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
+    },
+    {
+      "id": "anglet-le-furoncle",
+      "name": "Anglet - Le Furoncle",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anglet - Le Furoncle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
+    },
+    {
+      "id": "anglet-vvf",
+      "name": "Anglet - VVF",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anglet - VVF"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
     },
     {
       "id": "annagh-strand",
@@ -138,6 +243,142 @@
       "forecastName": "Annestown",
       "referenceRegion": "Waterford",
       "referenceKm": 0.05
+    },
+    {
+      "id": "anse-a-la-bouelle",
+      "name": "Anse A la Bouelle",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse A la Bouelle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-a-la-gourde-guadeloupe-grande-terre",
+      "name": "Anse a La Gourde",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse a La Gourde"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-de-cabestan",
+      "name": "Anse de Cabestan / St Tugen",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse de Cabestan",
+        "St Tugen"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-de-lesconil",
+      "name": "Anse de Lesconil",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse de Lesconil"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-de-pen-hat",
+      "name": "Anse de Pen-Hat",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse de Pen-Hat"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-de-remire-l-apcat",
+      "name": "Anse de Rémire (L'apcat)",
+      "country": "France",
+      "region": "Guyane",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse de Rémire (L'apcat)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "French Guiana",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-du-brick",
+      "name": "Anse du Brick",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse du Brick"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-salabouelle",
+      "name": "Anse Salabouelle",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse Salabouelle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "anse-st-martin",
+      "name": "Anse St Martin",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Anse St Martin"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "ardtermon-strand",
@@ -202,6 +443,22 @@
       "referenceKm": 0.3
     },
     {
+      "id": "arna-plage",
+      "name": "Arna Plage / Messanges",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Arna Plage",
+        "Messanges"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
       "id": "arrieta",
       "name": "Arrieta",
       "country": "Spain",
@@ -249,6 +506,21 @@
       "referenceKm": 0.65
     },
     {
+      "id": "audierne",
+      "name": "Audierne",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Audierne"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "avon-beach",
       "name": "Avon Beach",
       "country": "United Kingdom",
@@ -262,6 +534,52 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.17
+    },
+    {
+      "id": "aytre-lopette",
+      "name": "Aytre Lopette",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aytre Lopette"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "bagasse",
+      "name": "Bagasse",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bagasse"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "baie-du-soleil",
+      "name": "Baie du Soleil / Le Port",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baie du Soleil",
+        "Le Port"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "bajo-del-medio",
@@ -433,6 +751,21 @@
       "referenceKm": 0.94
     },
     {
+      "id": "bandol-les-nervis",
+      "name": "Bandol - Les Nervis",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bandol - Les Nervis"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "banna-strand",
       "name": "Banna Strand",
       "country": "Ireland",
@@ -464,6 +797,36 @@
       "forecastName": "Bantham",
       "referenceRegion": "South Devon",
       "referenceKm": 0.29
+    },
+    {
+      "id": "banyuls",
+      "name": "Banyuls",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Banyuls"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
+      "id": "barachois",
+      "name": "Barachois",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barachois"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
     },
     {
       "id": "barcarola-puerto-del-carmen",
@@ -573,6 +936,36 @@
       "referenceKm": 0.82
     },
     {
+      "id": "basse-pointe",
+      "name": "Basse-Pointe",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Basse-Pointe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "baubigny",
+      "name": "Baubigny",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baubigny"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "beacon-cove-65089018",
       "name": "Beacon Cove",
       "country": "United Kingdom",
@@ -603,6 +996,66 @@
       "referenceKm": 0.51
     },
     {
+      "id": "beaulieu-sur-mer",
+      "name": "Beaulieu sur Mer",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beaulieu sur Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "beauvallon-la-cigale",
+      "name": "Beauvallon - La Cigale",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beauvallon - La Cigale"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "beg-an-tour",
+      "name": "Beg An Tour",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beg An Tour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "beg-leguer",
+      "name": "Beg Leguer",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beg Leguer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "belderra-strand",
       "name": "Belderra Strand",
       "country": "Ireland",
@@ -616,6 +1069,36 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.14
+    },
+    {
+      "id": "belharra",
+      "name": "Belharra",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Belharra"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
+    },
+    {
+      "id": "belle-ile",
+      "name": "Belle Ile",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Belle Ile"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "benllech-sands",
@@ -646,6 +1129,21 @@
       "forecastName": "Berck Sur Mer",
       "referenceRegion": "Nord - Pas de Calais",
       "referenceKm": 0.61
+    },
+    {
+      "id": "berneval",
+      "name": "Berneval",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Berneval"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "bertra-beach",
@@ -681,6 +1179,21 @@
       "referenceKm": 0.1
     },
     {
+      "id": "black-rocks-jetty",
+      "name": "Black Rocks Jetty",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Black Rocks Jetty"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
       "id": "blackpool-sands-1157820",
       "name": "Blackpool Sands",
       "country": "United Kingdom",
@@ -694,6 +1207,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.1
+    },
+    {
+      "id": "bobby-s",
+      "name": "Bobby's",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bobby's"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
     },
     {
       "id": "boca-de-abajo",
@@ -710,6 +1238,21 @@
       "reviewed": true,
       "referenceRegion": "Lanzarote",
       "referenceKm": 0.75
+    },
+    {
+      "id": "bois-rouge",
+      "name": "Bois-Rouge",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bois-Rouge"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
     },
     {
       "id": "bolonia",
@@ -790,6 +1333,37 @@
       "referenceKm": 0.23
     },
     {
+      "id": "boucan-lefts",
+      "name": "Boucan Lefts / Boucan Rights",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Boucan Lefts",
+        "Boucan Rights"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "boucau",
+      "name": "Boucau",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Boucau"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
       "id": "bournemouth-west-beach",
       "name": "Bournemouth West Beach",
       "country": "United Kingdom",
@@ -805,6 +1379,21 @@
       "forecastName": "Bournemouth Pier",
       "referenceRegion": "South Coast of England",
       "referenceKm": 0.38
+    },
+    {
+      "id": "bout-de-l-etang",
+      "name": "Bout de L'Etang",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bout de L'Etang"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
     },
     {
       "id": "bovisand-beach",
@@ -977,6 +1566,21 @@
       "referenceKm": 0.11
     },
     {
+      "id": "brutal-beach-six-fours",
+      "name": "Brutal Beach - Six Fours",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Brutal Beach - Six Fours"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "bucks-mills-beach",
       "name": "Bucks Mills Beach",
       "country": "United Kingdom",
@@ -991,6 +1595,21 @@
       "forecastName": "Bucks Mills",
       "referenceRegion": "North Devon",
       "referenceKm": 0.1
+    },
+    {
+      "id": "bud-bud",
+      "name": "Bud Bud",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bud Bud"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
     },
     {
       "id": "budleigh-salterton",
@@ -1173,6 +1792,21 @@
       "forecastName": "Caerfai Bay",
       "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.39
+    },
+    {
+      "id": "caille-dehors",
+      "name": "Caille Dehors",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Caille Dehors"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
     },
     {
       "id": "cala-agulla",
@@ -1517,6 +2151,37 @@
       "referenceKm": 1.44
     },
     {
+      "id": "cannes",
+      "name": "Cannes",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cannes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "cap-3000",
+      "name": "Cap 3000 / St Laurent du Var",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap 3000",
+        "St Laurent du Var"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "cap-blanc-nez",
       "name": "Cap Blanc Nez",
       "country": "France",
@@ -1548,6 +2213,66 @@
       "referenceKm": 1
     },
     {
+      "id": "cap-de-la-chevre",
+      "name": "Cap de la Chevre",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap de la Chevre"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "cap-ferret",
+      "name": "Cap Ferret",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap Ferret"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "cap-frehel",
+      "name": "Cap Frehel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap Frehel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "cap-gris-nez",
+      "name": "Cap Gris Nez",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap Gris Nez"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "cap-homard",
       "name": "Cap Homard",
       "country": "France",
@@ -1561,6 +2286,51 @@
       "forecastName": "Cap Howard",
       "referenceRegion": "Réunion Island",
       "referenceKm": 1.72
+    },
+    {
+      "id": "cap-rousset",
+      "name": "Cap Rousset",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap Rousset"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "cap-st-louis",
+      "name": "Cap St Louis",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cap St Louis"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "capo-di-feno",
+      "name": "Capo di Feno",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Capo di Feno"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "carbis-bay-beach",
@@ -1577,6 +2347,21 @@
       "forecastName": "Carbis Bay",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.14
+    },
+    {
+      "id": "cargese",
+      "name": "Cargese",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cargese"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "carne-and-pendower-beach",
@@ -1701,6 +2486,21 @@
       "referenceKm": 0.61
     },
     {
+      "id": "carteret",
+      "name": "Carteret",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Carteret"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "castillo-del-rubicon-playa-blanca",
       "name": "Castillo del Rubicón - Playa Blanca",
       "country": "Spain",
@@ -1796,6 +2596,36 @@
       "referenceKm": 0.32
     },
     {
+      "id": "charlot",
+      "name": "Charlot",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Charlot"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "charpencaye",
+      "name": "Charpencaye",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Charpencaye"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
       "id": "chesil-beach",
       "name": "Chesil Beach",
       "country": "United Kingdom",
@@ -1824,6 +2654,21 @@
       "forecastName": "Church Cove",
       "referenceRegion": "South Cornwall",
       "referenceKm": 0.27
+    },
+    {
+      "id": "ciotel",
+      "name": "Ciotel",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ciotel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "clonea-strand",
@@ -1871,6 +2716,21 @@
       "referenceKm": 1.48
     },
     {
+      "id": "cocoa",
+      "name": "Cocoa",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cocoa"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
       "id": "coldingham-sands",
       "name": "Coldingham Sands",
       "country": "United Kingdom",
@@ -1885,6 +2745,36 @@
       "forecastName": "Coldingham Bay",
       "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.06
+    },
+    {
+      "id": "collignon",
+      "name": "Collignon",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Collignon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "collioure",
+      "name": "Collioure",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Collioure"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
     },
     {
       "id": "combe-martin-beach",
@@ -2014,6 +2904,21 @@
       "referenceKm": 0.41
     },
     {
+      "id": "contis-plage",
+      "name": "Contis plage",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Contis plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
       "id": "copacabana",
       "name": "Copacabana",
       "country": "Spain",
@@ -2042,6 +2947,21 @@
       "forecastName": "Coumeenole",
       "referenceRegion": "Kerry",
       "referenceKm": 0.73
+    },
+    {
+      "id": "courseulles-sur-mer",
+      "name": "Courseulles Sur Mer",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Courseulles Sur Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "courtown-bay",
@@ -2200,6 +3120,36 @@
       "referenceKm": 0.34
     },
     {
+      "id": "dalbosc-h",
+      "name": "Dalbosc'h",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dalbosc'h"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "dame-jouanne",
+      "name": "Dame Jouanne",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dame Jouanne"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ile et Vilaine - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "dawlish-town-beach",
       "name": "Dawlish Town Beach",
       "country": "United Kingdom",
@@ -2246,6 +3196,21 @@
       "forecastName": "Daymer Point",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.05
+    },
+    {
+      "id": "dead-zone",
+      "name": "Dead Zone",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dead Zone"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
     },
     {
       "id": "debako-santiago-hondartza",
@@ -2322,6 +3287,54 @@
       "forecastName": "Derrynane",
       "referenceRegion": "Kerry",
       "referenceKm": 1.97
+    },
+    {
+      "id": "diam-s",
+      "name": "Diam's",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Diam's"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "dielette-harbour",
+      "name": "Dielette Harbour",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dielette Harbour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "dielette-left",
+      "name": "Dielette Left / Les Cous Cous / Dielette Shore Break / Siouville",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dielette Left",
+        "Les Cous Cous",
+        "Dielette Shore Break",
+        "Siouville"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "dirk-bay",
@@ -2574,6 +3587,21 @@
       "referenceKm": 0.71
     },
     {
+      "id": "dunkerque",
+      "name": "Dunkerque",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dunkerque"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "dunmoran-strand",
       "name": "Dunmoran Strand",
       "country": "Ireland",
@@ -2666,6 +3694,21 @@
       "forecastName": "Portrush-East Strand",
       "referenceRegion": "Antrim",
       "referenceKm": 0.88
+    },
+    {
+      "id": "ecalgrain",
+      "name": "Ecalgrain",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ecalgrain"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "el-balneario",
@@ -3100,6 +4143,51 @@
       "referenceKm": 0.2
     },
     {
+      "id": "etang-de-l-ovu-santu",
+      "name": "Etang de l'Ovu Santu",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Etang de l'Ovu Santu"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
+      "id": "etel",
+      "name": "Etel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Etel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "etretat",
+      "name": "Etretat",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Etretat"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "exmouth-beach",
       "name": "Exmouth Beach",
       "country": "United Kingdom",
@@ -3145,6 +4233,36 @@
       "forecastName": "Fanore",
       "referenceRegion": "Clare",
       "referenceKm": 0.09
+    },
+    {
+      "id": "fecamp",
+      "name": "Fecamp",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fecamp"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "figari",
+      "name": "Figari",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Figari"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "filey-sands",
@@ -3198,6 +4316,21 @@
       "referenceKm": 0.95
     },
     {
+      "id": "fort-de-st-germain-des-vaux",
+      "name": "Fort de St Germain Des Vaux",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fort de St Germain Des Vaux"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "frainslake-sands",
       "name": "Frainslake Sands",
       "country": "United Kingdom",
@@ -3241,6 +4374,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.31
+    },
+    {
+      "id": "fremur",
+      "name": "Fremur",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fremur"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ile et Vilaine - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "freshwater-beach",
@@ -3306,6 +4454,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Tenerife",
+      "referenceKm": 0
+    },
+    {
+      "id": "galiote",
+      "name": "Galiote",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Galiote"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0
     },
     {
@@ -3481,6 +4644,21 @@
       "referenceKm": 0.55
     },
     {
+      "id": "grande-trait",
+      "name": "Grande Trait",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Grande Trait"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Loire Atlantique",
+      "referenceKm": 0
+    },
+    {
       "id": "great-western-beach",
       "name": "Great Western Beach",
       "country": "United Kingdom",
@@ -3509,6 +4687,21 @@
       "forecastName": "Deolen",
       "referenceRegion": "Finistere - Brittany",
       "referenceKm": 1.52
+    },
+    {
+      "id": "gruissan-plage",
+      "name": "Gruissan Plage",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gruissan Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
     },
     {
       "id": "grunta-beach",
@@ -3556,6 +4749,21 @@
       "referenceKm": 0
     },
     {
+      "id": "guidel-plages",
+      "name": "Guidel Plages",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Guidel Plages"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "gullane-bents",
       "name": "Gullane Bents",
       "country": "United Kingdom",
@@ -3588,6 +4796,21 @@
       "forecastName": "Plage de Gwendrez",
       "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.08
+    },
+    {
+      "id": "gwendrez-left",
+      "name": "Gwendrez Left",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gwendrez Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "gwynver-beach",
@@ -3777,6 +5000,52 @@
       "referenceKm": 0.33
     },
     {
+      "id": "hotel-novotel",
+      "name": "Hotel Novotel",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hotel Novotel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "hourtin-plage",
+      "name": "Hourtin Plage",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hourtin Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "ilbaritz-bora-bora",
+      "name": "Ilbaritz - Bora Bora / Ilbaritz - Edouard VII",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ilbaritz - Bora Bora",
+        "Ilbaritz - Edouard VII"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
+    },
+    {
       "id": "ilbarritz",
       "name": "Ilbarritz",
       "country": "France",
@@ -3792,6 +5061,216 @@
       "forecastName": "IIbarritz",
       "referenceRegion": "La Cote Basque",
       "referenceKm": 0.7
+    },
+    {
+      "id": "ile-d-oleron-chassiron",
+      "name": "Ile d'Oleron - Chassiron",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oleron - Chassiron"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-d-oleron-grand-village",
+      "name": "Ile d'Oleron - Grand Village",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oleron - Grand Village"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-d-oleron-la-cotiniere",
+      "name": "Ile d'Oleron - La Cotiniere",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oleron - La Cotiniere"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-d-oleron-les-trois-pierres",
+      "name": "Ile d'Oleron - Les Trois Pierres",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oleron - Les Trois Pierres"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-d-oleron-passe-du-trillou",
+      "name": "Ile d'Oleron - Passe du Trillou",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oleron - Passe du Trillou"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-d-oleron-st-denis",
+      "name": "Ile d'Oléron - St Denis",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile d'Oléron - St Denis"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-de-noirmoutier",
+      "name": "Ile de Noirmoutier",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile de Noirmoutier"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-de-noirmoutier-barbatre",
+      "name": "Ile de Noirmoutier - Barbatre",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile de Noirmoutier - Barbatre"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-de-re-la-couarde-mer",
+      "name": "Ile de Re - La Couarde/Mer",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile de Re - La Couarde/Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-de-re-rivedoux",
+      "name": "Ile de Re - Rivedoux",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile de Re - Rivedoux"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-des-embiez-le-phare",
+      "name": "Ile des Embiez - Le Phare",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile des Embiez - Le Phare"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-st-honorat",
+      "name": "Ile St Honorat",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile St Honorat"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "ile-ste-marguerite",
+      "name": "Ile Ste Marguerite",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ile Ste Marguerite"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "ilet-du-novotel",
+      "name": "Ilet du Novotel",
+      "country": "France",
+      "region": "Guyane",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ilet du Novotel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "French Guiana",
+      "referenceKm": 0
     },
     {
       "id": "inch",
@@ -4043,6 +5522,51 @@
       "referenceKm": 0.83
     },
     {
+      "id": "kerloch",
+      "name": "Kerloch",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kerloch"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "kerlouan",
+      "name": "Kerlouan",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kerlouan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "kersiguenno",
+      "name": "Kersiguenno",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kersiguenno"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "kilcummin",
       "name": "Kilcummin",
       "country": "Ireland",
@@ -4166,6 +5690,21 @@
       "referenceKm": 0.03
     },
     {
+      "id": "kirminhy",
+      "name": "Kirminhy",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kirminhy"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "kontxa-hondartza",
       "name": "Kontxa hondartza",
       "country": "Spain",
@@ -4184,6 +5723,113 @@
       "referenceKm": 0.29
     },
     {
+      "id": "l-abbatoir",
+      "name": "L'Abbatoir / Anse Bertrand",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Abbatoir",
+        "Anse Bertrand"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-amelie",
+      "name": "L'Amelie",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Amelie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-arquet",
+      "name": "L'Arquet / La Couronne",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Arquet",
+        "La Couronne"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-epi-nord",
+      "name": "L'Epi Nord",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Epi Nord"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-hermitage",
+      "name": "L'Hermitage",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Hermitage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-ile-aux-vaches-lervily",
+      "name": "L'Ile Aux Vaches – Lervily",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Ile Aux Vaches – Lervily"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "l-olivette",
+      "name": "L'Olivette",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "L'Olivette"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "la-barossa",
       "name": "La Barossa",
       "country": "Spain",
@@ -4196,6 +5842,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-caffrine",
+      "name": "La Caffrine",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Caffrine"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
       "referenceKm": 0
     },
     {
@@ -4232,6 +5893,51 @@
       "referenceKm": 0.28
     },
     {
+      "id": "la-caravelle-guadeloupe-grande-terre",
+      "name": "La Caravelle",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Caravelle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-chaise",
+      "name": "La Chaise",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Chaise"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-chapelle",
+      "name": "La Chapelle",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Chapelle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
       "id": "la-chucha",
       "name": "La Chucha",
       "country": "Spain",
@@ -4244,6 +5950,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-ciotat",
+      "name": "La Ciotat",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Ciotat"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0
     },
     {
@@ -4277,6 +5998,54 @@
       "referenceKm": 0
     },
     {
+      "id": "la-cote-sauvage",
+      "name": "La Cote Sauvage / La Cote Sauvage - Le 27",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Cote Sauvage",
+        "La Cote Sauvage - Le 27"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-cote-sauvage-le-43",
+      "name": "La Cote Sauvage - Le 43 / La Cote Sauvage - Le 46 / La Cote Sauvage - Le 47",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Cote Sauvage - Le 43",
+        "La Cote Sauvage - Le 46",
+        "La Cote Sauvage - Le 47"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-cote-sauvage-le-semaphore",
+      "name": "La Cote Sauvage - Le Sémaphore",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Cote Sauvage - Le Sémaphore"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
       "id": "la-courance",
       "name": "La Courance",
       "country": "France",
@@ -4290,6 +6059,21 @@
       "forecastName": "La Courance",
       "referenceRegion": "Loire Atlantique",
       "referenceKm": 0.6
+    },
+    {
+      "id": "la-crecque",
+      "name": "La Crecque",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Crecque"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "la-derecha",
@@ -4368,6 +6152,21 @@
       "referenceKm": 0.94
     },
     {
+      "id": "la-grande-motte",
+      "name": "La Grande Motte",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Grande Motte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
       "id": "la-grande-plage-316981030",
       "name": "La Grande Plage",
       "country": "France",
@@ -4398,6 +6197,36 @@
       "referenceKm": 0
     },
     {
+      "id": "la-guillotine",
+      "name": "La Guillotine",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Guillotine"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-jenny",
+      "name": "La Jenny",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Jenny"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
       "id": "la-lette-blanche-vielle",
       "name": "La Lette Blanche - Vielle",
       "country": "France",
@@ -4425,6 +6254,51 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Murcia",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-mere",
+      "name": "La Mère",
+      "country": "France",
+      "region": "Guyane",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Mère"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "French Guiana",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-mondree",
+      "name": "La Mondree",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Mondree"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "la-paillotte",
+      "name": "La Paillotte",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Paillotte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0
     },
     {
@@ -4488,6 +6362,21 @@
       "referenceKm": 0
     },
     {
+      "id": "la-station",
+      "name": "La Station",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Station"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
       "id": "la-tejita",
       "name": "La Tejita",
       "country": "Spain",
@@ -4503,6 +6392,21 @@
       "referenceKm": 1.34
     },
     {
+      "id": "la-tranche-sur-mer",
+      "name": "La Tranche sur Mer",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "La Tranche sur Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
       "id": "la-yerbabuena",
       "name": "La Yerbabuena",
       "country": "Spain",
@@ -4515,6 +6419,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "labenne-ocean",
+      "name": "Labenne Ocean",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Labenne Ocean"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
       "referenceKm": 0
     },
     {
@@ -4613,6 +6532,36 @@
       "referenceKm": 0.59
     },
     {
+      "id": "lampaul-plouarzel",
+      "name": "Lampaul Plouarzel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lampaul Plouarzel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "lampaul-ploudalmezeau",
+      "name": "Lampaul Ploudalmezeau",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lampaul Ploudalmezeau"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "lancing-beach",
       "name": "Lancing Beach",
       "country": "United Kingdom",
@@ -4671,6 +6620,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "larmor-plage",
+      "name": "Larmor Plage",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Larmor Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0
     },
     {
@@ -4764,6 +6728,128 @@
       "referenceKm": 0
     },
     {
+      "id": "le-butor",
+      "name": "Le Butor",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Butor"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-cimetiere",
+      "name": "Le Cimetiere",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Cimetiere"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-club",
+      "name": "Le Club",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Club"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-fort-bloque",
+      "name": "Le Fort Bloque / Les Moules / Kaolins",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Fort Bloque",
+        "Les Moules",
+        "Kaolins"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-fozo",
+      "name": "Le Fozo",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Fozo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-goudoul",
+      "name": "Le Goudoul",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Goudoul"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-grand-large",
+      "name": "Le Grand Large",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Grand Large"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-guet",
+      "name": "Le Guet",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Guet"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "le-gurp",
       "name": "Le Gurp",
       "country": "France",
@@ -4778,6 +6864,21 @@
       "forecastName": "Le Gurp",
       "referenceRegion": "Gironde",
       "referenceKm": 0.18
+    },
+    {
+      "id": "le-letty",
+      "name": "Le Letty",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Letty"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "le-liouquet",
@@ -4795,6 +6896,111 @@
       "referenceKm": 0.32
     },
     {
+      "id": "le-lorrain",
+      "name": "Le Lorrain",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Lorrain"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-mail",
+      "name": "Le Mail",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Mail"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-manege",
+      "name": "Le Manege",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Manege"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-moule",
+      "name": "Le Moule",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Moule"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-niel-giens",
+      "name": "Le Niel Giens",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Niel Giens"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-pain-de-sucre",
+      "name": "Le Pain de Sucre",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Pain de Sucre"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-petits-dalles",
+      "name": "Le Petits Dalles",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Petits Dalles"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "le-phare",
       "name": "Le Phare",
       "country": "France",
@@ -4808,6 +7014,158 @@
       "forecastName": "Le Phare du Groin du Cou",
       "referenceRegion": "Vendee",
       "referenceKm": 0.47
+    },
+    {
+      "id": "le-pin-sec",
+      "name": "Le Pin Sec",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Pin Sec"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-port",
+      "name": "Le Port",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Port"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "La Cote Basque",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-port-reunion-island",
+      "name": "Le Port",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Port"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-poux",
+      "name": "Le Poux",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Poux"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-rozel",
+      "name": "Le Rozel",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Rozel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-ruppione",
+      "name": "Le Ruppione",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Ruppione"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-sail-fish",
+      "name": "Le Sail Fish",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Sail Fish"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-triangle",
+      "name": "Le Triangle / La Chapelle",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Triangle",
+        "La Chapelle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-truc-vert",
+      "name": "Le Truc Vert / Le Petit Train",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Truc Vert",
+        "Le Petit Train"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "le-verdon",
+      "name": "Le Verdon",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Le Verdon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
     },
     {
       "id": "le-vivier",
@@ -4855,6 +7213,21 @@
       "referenceKm": 0.95
     },
     {
+      "id": "les-aigrettes-right",
+      "name": "Les Aigrettes Right",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Aigrettes Right"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
       "id": "les-amiets",
       "name": "Les Amiets",
       "country": "France",
@@ -4868,6 +7241,36 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.23
+    },
+    {
+      "id": "les-bormettes",
+      "name": "Les Bormettes",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Bormettes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "les-dunes",
+      "name": "Les Dunes",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Dunes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
     },
     {
       "id": "les-flots-bleus",
@@ -4887,6 +7290,21 @@
       "referenceKm": 0.25
     },
     {
+      "id": "les-roches-blanches",
+      "name": "Les Roches Blanches",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Roches Blanches"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "les-roches-noires",
       "name": "Les Roches Noires",
       "country": "France",
@@ -4902,6 +7320,81 @@
       "forecastName": "Roches Noires",
       "referenceRegion": "Réunion Island",
       "referenceKm": 0.77
+    },
+    {
+      "id": "les-roquilles",
+      "name": "Les Roquilles",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Roquilles"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
+      "id": "les-sables-blancs",
+      "name": "Les Sables Blancs",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Sables Blancs"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "les-sables-d-or",
+      "name": "Les Sables d'Or",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Les Sables d'Or"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "lhermitage-left",
+      "name": "LHermitage Left",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "LHermitage Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "lhermitage-right",
+      "name": "LHermitage Right",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "LHermitage Right"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
     },
     {
       "id": "liencres",
@@ -4980,6 +7473,21 @@
       "forecastName": "Traeth Lligwy",
       "referenceRegion": "Anglesy",
       "referenceKm": 0.19
+    },
+    {
+      "id": "locquirec",
+      "name": "Locquirec",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Locquirec"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "longsands",
@@ -5106,6 +7614,21 @@
       "referenceKm": 3.08
     },
     {
+      "id": "luc-sur-mer",
+      "name": "Luc Sur Mer",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Luc Sur Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "lulworth-cove",
       "name": "Lulworth Cove",
       "country": "United Kingdom",
@@ -5119,6 +7642,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.04
+    },
+    {
+      "id": "lumio",
+      "name": "Lumio",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lumio"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "lunan-bay",
@@ -5278,6 +7816,21 @@
       "referenceKm": 3.46
     },
     {
+      "id": "mahury",
+      "name": "Mahury",
+      "country": "France",
+      "region": "Guyane",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mahury"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "French Guiana",
+      "referenceKm": 0
+    },
+    {
       "id": "maiarko",
       "name": "Maiarko",
       "country": "France",
@@ -5337,6 +7890,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Balearic Islands (Islas Baleares)",
+      "referenceKm": 0
+    },
+    {
+      "id": "manapany",
+      "name": "Manapany",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Manapany"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "mandelieu-l-aerospatiale",
+      "name": "Mandelieu l'Aerospatiale",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mandelieu l'Aerospatiale"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
       "referenceKm": 0
     },
     {
@@ -5417,6 +8000,38 @@
       "referenceKm": 0.21
     },
     {
+      "id": "marseille-boutofolle",
+      "name": "Marseille - Boutofolle / Marseille - Colombet / Marseille - La Verrerie",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Marseille - Boutofolle",
+        "Marseille - Colombet",
+        "Marseille - La Verrerie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "mauvaise-greve",
+      "name": "Mauvaise Greve",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mauvaise Greve"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "mawgan-porth",
       "name": "Mawgan Porth",
       "country": "United Kingdom",
@@ -5494,6 +8109,21 @@
       "referenceKm": 0.65
     },
     {
+      "id": "mers-les-bains",
+      "name": "Mers-les-Bains",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mers-les-Bains"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "millendreath-beach",
       "name": "Millendreath Beach",
       "country": "United Kingdom",
@@ -5510,6 +8140,21 @@
       "referenceKm": 0.02
     },
     {
+      "id": "mimizan",
+      "name": "Mimizan",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mimizan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
       "id": "molino-de-papel",
       "name": "Molino de Papel",
       "country": "Spain",
@@ -5522,6 +8167,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "mongrels",
+      "name": "Mongrels",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mongrels"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
+      "id": "montalivet-les-bains",
+      "name": "Montalivet-les-Bains",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Montalivet-les-Bains"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
       "referenceKm": 0
     },
     {
@@ -5618,6 +8293,21 @@
       "referenceKm": 0.3
     },
     {
+      "id": "moulin-la-rive",
+      "name": "Moulin La Rive",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Moulin La Rive"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "muckros-head",
       "name": "Muckros Head",
       "country": "Ireland",
@@ -5711,6 +8401,21 @@
       "referenceKm": 0.5
     },
     {
+      "id": "narbonne-plage",
+      "name": "Narbonne Plage",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Narbonne Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
       "id": "newbiggin-beach",
       "name": "Newbiggin Beach",
       "country": "United Kingdom",
@@ -5773,6 +8478,21 @@
       "referenceKm": 0.37
     },
     {
+      "id": "nez-bayard",
+      "name": "Nez Bayard",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Nez Bayard"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "noja",
       "name": "Noja",
       "country": "Spain",
@@ -5818,6 +8538,21 @@
       "forecastName": "Northcott",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.04
+    },
+    {
+      "id": "nouveau-cimetiere",
+      "name": "Nouveau Cimetière",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Nouveau Cimetière"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "o-areal-de-sabon",
@@ -6023,6 +8758,21 @@
       "referenceKm": 0.18
     },
     {
+      "id": "oye-plage-escardines",
+      "name": "Oye Plage Escardines",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Oye Plage Escardines"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "oyster-haven",
       "name": "Oyster Haven",
       "country": "Ireland",
@@ -6084,6 +8834,21 @@
       "referenceKm": 0.71
     },
     {
+      "id": "palm-beach",
+      "name": "Palm Beach",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Palm Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
       "id": "par-sands",
       "name": "Par Sands",
       "country": "United Kingdom",
@@ -6097,6 +8862,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.03
+    },
+    {
+      "id": "parata-point",
+      "name": "Parata Point",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Parata Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
     },
     {
       "id": "parlementia",
@@ -6144,6 +8924,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Lanzarote",
+      "referenceKm": 0
+    },
+    {
+      "id": "pelle-a-tarte",
+      "name": "Pelle a Tarte",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pelle a Tarte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
       "referenceKm": 0
     },
     {
@@ -6209,6 +9004,21 @@
       "referenceKm": 0.15
     },
     {
+      "id": "penthievre",
+      "name": "Penthievre",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Penthievre"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "perran-beach",
       "name": "Perran Beach",
       "country": "United Kingdom",
@@ -6269,6 +9079,22 @@
       "forecastName": "Phingask",
       "referenceRegion": "Scotland - East Coast",
       "referenceKm": 1.42
+    },
+    {
+      "id": "pic-kipu",
+      "name": "Pic Kipu / Thoulars",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pic Kipu",
+        "Thoulars"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "pico-de-el-errizo",
@@ -8173,13 +10999,15 @@
       "country": "France",
       "region": "Nouvelle-Aquitaine",
       "sources": [
+        "surf-forecast",
         "surfline"
       ],
       "attestedAs": [
-        "Hendaye"
+        "Hendaye",
+        "Hendaye Plage"
       ],
-      "forecastName": null,
-      "referenceRegion": null,
+      "forecastName": "Hendaye Plage",
+      "referenceRegion": "La Cote Basque",
       "referenceKm": 0.51
     },
     {
@@ -8689,6 +11517,21 @@
       "forecastName": "Ile de Re - Le lizay",
       "referenceRegion": "Charente Maritime",
       "referenceKm": 0.1
+    },
+    {
+      "id": "plage-du-loch",
+      "name": "Plage du Loch",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Plage du Loch"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "plage-du-metro",
@@ -14200,6 +17043,21 @@
       "referenceKm": 0.71
     },
     {
+      "id": "pleherel",
+      "name": "Pleherel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pleherel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "plentzia",
       "name": "Plentzia",
       "country": "Spain",
@@ -14216,6 +17074,36 @@
       "referenceKm": 0.3
     },
     {
+      "id": "plombier",
+      "name": "Plombier",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Plombier"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "plovan",
+      "name": "Plovan",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Plovan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "pobbles-beach",
       "name": "Pobbles Beach",
       "country": "United Kingdom",
@@ -14229,6 +17117,141 @@
       "forecastName": "Pobbles Beach",
       "referenceRegion": "Gower",
       "referenceKm": 0.24
+    },
+    {
+      "id": "pointe-aux-oies",
+      "name": "Pointe aux Oies",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe aux Oies"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-de-dinan",
+      "name": "Pointe De Dinan",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe De Dinan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-de-lervily",
+      "name": "Pointe de Lervily",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe de Lervily"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-de-leyde",
+      "name": "Pointe de Leyde",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe de Leyde"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-des-chateaux",
+      "name": "Pointe des Chateaux",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe des Chateaux"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-des-trois-bassins",
+      "name": "Pointe des Trois Bassins",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe des Trois Bassins"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-du-couregan",
+      "name": "Pointe du Couregan",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe du Couregan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-du-milier",
+      "name": "Pointe du Milier",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe du Milier"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pointe-du-toulinguet",
+      "name": "Pointe du Toulinguet",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pointe du Toulinguet"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "poldhu-cove",
@@ -14294,6 +17317,82 @@
       "referenceKm": 1.6
     },
     {
+      "id": "pornichet",
+      "name": "Pornichet",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pornichet"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Loire Atlantique",
+      "referenceKm": 0
+    },
+    {
+      "id": "pors-ar-ville",
+      "name": "Pors Ar Ville / La Plate",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pors Ar Ville",
+        "La Plate"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pors-naye",
+      "name": "Pors Naye",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pors Naye"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pors-nevez",
+      "name": "Pors Nevez",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pors Nevez"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pors-poulhan",
+      "name": "Pors Poulhan",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pors Poulhan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "port-bara",
       "name": "Port Bara",
       "country": "France",
@@ -14324,6 +17423,66 @@
       "forecastName": "Port Blanc",
       "referenceRegion": "Morbihan - Brittany",
       "referenceKm": 0.12
+    },
+    {
+      "id": "port-d-albret",
+      "name": "Port d'Albret",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port d'Albret"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
+      "id": "port-francois-harbour",
+      "name": "Port Francois Harbour",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Francois Harbour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "port-louis",
+      "name": "Port Louis",
+      "country": "France",
+      "region": "Guadeloupe",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Louis"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "port-rhu",
+      "name": "Port Rhu",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Rhu"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "portballintrae-beach",
@@ -14707,6 +17866,21 @@
       "referenceKm": 0.35
     },
     {
+      "id": "portigliolo",
+      "name": "Portigliolo",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Portigliolo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
       "id": "portmarnock-beach",
       "name": "Portmarnock Beach",
       "country": "Ireland",
@@ -14798,6 +17972,36 @@
       "forecastName": "Portstewart Strand",
       "referenceRegion": "Londonderry",
       "referenceKm": 0.09
+    },
+    {
+      "id": "postollonec",
+      "name": "Postollonec",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Postollonec"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "pourville",
+      "name": "Pourville",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pourville"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
     },
     {
       "id": "pozo-izquierdo",
@@ -15716,6 +18920,21 @@
       "referenceKm": 0.45
     },
     {
+      "id": "prefailles",
+      "name": "Prefailles",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Prefailles"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Loire Atlantique",
+      "referenceKm": 0
+    },
+    {
       "id": "preston-sands-56319943",
       "name": "Preston Sands",
       "country": "United Kingdom",
@@ -15729,6 +18948,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.11
+    },
+    {
+      "id": "prima-tregastel",
+      "name": "Prima Tregastel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Prima Tregastel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "primera-playa-de-el-sardinero",
@@ -15899,6 +19133,21 @@
       "referenceKm": 0
     },
     {
+      "id": "punta-di-testa",
+      "name": "Punta di Testa",
+      "country": "France",
+      "region": "Corse",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Punta di Testa"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
       "id": "punta-galea",
       "name": "Punta Galea",
       "country": "Spain",
@@ -15960,6 +19209,21 @@
       "referenceKm": 0.52
     },
     {
+      "id": "quai-du-diable",
+      "name": "Quai du Diable",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Quai du Diable"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
       "id": "quintanilla",
       "name": "Quintanilla",
       "country": "Spain",
@@ -15972,6 +19236,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Gran Canaria",
+      "referenceKm": 0
+    },
+    {
+      "id": "rade-de-croisic",
+      "name": "Rade de Croisic",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rade de Croisic"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Loire Atlantique",
       "referenceKm": 0
     },
     {
@@ -16298,6 +19577,36 @@
       "referenceKm": 0
     },
     {
+      "id": "saint-benoit-lefts",
+      "name": "Saint-Benoit Lefts",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint-Benoit Lefts"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "saint-benoit-rights",
+      "name": "Saint-Benoit Rights",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint-Benoit Rights"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
       "id": "saint-girons-plage",
       "name": "Saint-Girons Plage",
       "country": "France",
@@ -16315,6 +19624,96 @@
       "referenceKm": 0.52
     },
     {
+      "id": "saint-girons-plage-landes",
+      "name": "Saint Girons Plage",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint Girons Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
+      "id": "saint-joseph-iles-du-salut",
+      "name": "Saint Joseph (Iles du Salut)",
+      "country": "France",
+      "region": "Guyane",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint Joseph (Iles du Salut)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "French Guiana",
+      "referenceKm": 0
+    },
+    {
+      "id": "saint-leu",
+      "name": "Saint Leu",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint Leu"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "saint-marie",
+      "name": "Saint-Marie",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint-Marie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "saint-nicolas",
+      "name": "Saint Nicolas",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saint Nicolas"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "sainte-adresse",
+      "name": "Sainte Adresse",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sainte Adresse"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "sainte-restitude",
       "name": "Sainte-Restitude",
       "country": "France",
@@ -16328,6 +19727,21 @@
       "forecastName": "Sainte Restitude",
       "referenceRegion": "Corsica",
       "referenceKm": 0.33
+    },
+    {
+      "id": "saintes-maries",
+      "name": "Saintes Maries",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saintes Maries"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "salinas",
@@ -16485,6 +19899,21 @@
       "referenceKm": 0.72
     },
     {
+      "id": "sangatte",
+      "name": "Sangatte",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sangatte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "sango-bay",
       "name": "Sango Bay",
       "country": "United Kingdom",
@@ -16560,6 +19989,21 @@
       "forecastName": "Saunton",
       "referenceRegion": "North Devon",
       "referenceKm": 2.08
+    },
+    {
+      "id": "sausset-les-pins",
+      "name": "Sausset les Pins",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sausset les Pins"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "saviskaill-beach-nousty-sand",
@@ -16652,6 +20096,21 @@
       "forecastName": "El Sardinero - Primera",
       "referenceRegion": "Spain - Cantabria",
       "referenceKm": 0.57
+    },
+    {
+      "id": "seignosse-les-bourdaines",
+      "name": "Seignosse - Les Bourdaines",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Seignosse - Les Bourdaines"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
     },
     {
       "id": "senix-cenitz",
@@ -16776,6 +20235,21 @@
       "forecastName": "Sherkin Island - Silver Strand",
       "referenceRegion": "Cork",
       "referenceKm": 0.53
+    },
+    {
+      "id": "sion-sur-l-ocean",
+      "name": "Sion sur l'Ocean",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sion sur l'Ocean"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
     },
     {
       "id": "sker-beach",
@@ -16915,6 +20389,21 @@
       "referenceKm": 0
     },
     {
+      "id": "soulac-sur-mer",
+      "name": "Soulac-sur-Mer",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Soulac-sur-Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
       "id": "south-beach-603668668",
       "name": "South Beach",
       "country": "United Kingdom",
@@ -16995,6 +20484,21 @@
       "referenceKm": 0.15
     },
     {
+      "id": "st-cyprien",
+      "name": "St Cyprien",
+      "country": "France",
+      "region": "Occitanie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Cyprien"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Languedoc-Roussillon",
+      "referenceKm": 0
+    },
+    {
       "id": "st-finians-bay-beach",
       "name": "St Finians Bay Beach",
       "country": "Ireland",
@@ -17008,6 +20512,126 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.05
+    },
+    {
+      "id": "st-georges-de-didonne",
+      "name": "St Georges de Didonne",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Georges de Didonne"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Charente Maritime",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-gilles-croix-de-vie",
+      "name": "St Gilles Croix de Vie",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Gilles Croix de Vie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-jean",
+      "name": "St Jean",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Jean"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-jean-de-doigt",
+      "name": "St Jean de Doigt",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Jean de Doigt"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-jean-de-monts",
+      "name": "St Jean de Monts",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Jean de Monts"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "ste-anne-la-palud",
+      "name": "Ste Anne La Palud",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ste Anne La Palud"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "ste-barbe",
+      "name": "Ste Barbe",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ste Barbe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "ste-marguerite",
+      "name": "Ste Marguerite",
+      "country": "France",
+      "region": "Pays de la Loire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ste Marguerite"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Loire Atlantique",
+      "referenceKm": 0
     },
     {
       "id": "stonehaven-beach",
@@ -17185,6 +20809,36 @@
       "referenceKm": 1.82
     },
     {
+      "id": "tamaris-cote-d-azur",
+      "name": "Tamaris",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tamaris"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "tardinghen",
+      "name": "Tardinghen",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tardinghen"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
       "id": "teignmouth-beach",
       "name": "Teignmouth Beach",
       "country": "United Kingdom",
@@ -17199,6 +20853,21 @@
       "forecastName": "Teignmouth",
       "referenceRegion": "South Devon",
       "referenceKm": 0.51
+    },
+    {
+      "id": "terminus-berck",
+      "name": "Terminus Berck",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terminus Berck"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
     },
     {
       "id": "the-bubble",
@@ -17248,6 +20917,21 @@
       "referenceKm": 0.21
     },
     {
+      "id": "three-rocks",
+      "name": "Three Rocks",
+      "country": "France",
+      "region": "La Réunion",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Three Rocks"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
       "id": "tolcarne-beach",
       "name": "Tolcarne Beach",
       "country": "United Kingdom",
@@ -17262,6 +20946,21 @@
       "forecastName": "Tolcarne",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.06
+    },
+    {
+      "id": "tomate",
+      "name": "Tomate",
+      "country": "France",
+      "region": "Martinique",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tomate"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Martinique",
+      "referenceKm": 0
     },
     {
       "id": "torimbia",
@@ -17294,6 +20993,21 @@
       "forecastName": "Torrisdale Bay",
       "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0.95
+    },
+    {
+      "id": "toulon",
+      "name": "Toulon",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Toulon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "towan-beach",
@@ -17647,6 +21361,21 @@
       "referenceKm": 3
     },
     {
+      "id": "tregastel-plage",
+      "name": "Tregastel Plage",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tregastel Plage"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Armor - Brittany",
+      "referenceKm": 0
+    },
+    {
       "id": "tremone-bay-6171963",
       "name": "Tremone Bay",
       "country": "Ireland",
@@ -17660,6 +21389,21 @@
       "forecastName": "Tremone Strand",
       "referenceRegion": "Donegal",
       "referenceKm": 0.25
+    },
+    {
+      "id": "treustel",
+      "name": "Treustel",
+      "country": "France",
+      "region": "Bretagne",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Treustel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
     },
     {
       "id": "trevaunance-cove",
@@ -17836,6 +21580,21 @@
       "referenceKm": 0.03
     },
     {
+      "id": "veules-les-roses",
+      "name": "Veules Les Roses",
+      "country": "France",
+      "region": "Normandie",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Veules Les Roses"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
       "id": "viking-bay",
       "name": "Viking Bay",
       "country": "United Kingdom",
@@ -17851,6 +21610,21 @@
       "forecastName": "Broadstairs",
       "referenceRegion": "South Coast of England",
       "referenceKm": 0.13
+    },
+    {
+      "id": "villefranche-sur-mer",
+      "name": "Villefranche sur Mer",
+      "country": "France",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Villefranche sur Mer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
     },
     {
       "id": "watergate-beach",
@@ -17883,6 +21657,21 @@
       "forecastName": "Wembury",
       "referenceRegion": "South Devon",
       "referenceKm": 0.31
+    },
+    {
+      "id": "west-peak",
+      "name": "West Peak",
+      "country": "France",
+      "region": "Nouvelle-Aquitaine",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "West Peak"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Landes",
+      "referenceKm": 0
     },
     {
       "id": "west-sands",
@@ -18101,6 +21890,36 @@
       "forecastName": "Widemouth Bay",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.1
+    },
+    {
+      "id": "wimereux",
+      "name": "Wimereux",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wimereux"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
+      "id": "wissant",
+      "name": "Wissant",
+      "country": "France",
+      "region": "Hauts-de-France",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wissant"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
     },
     {
       "id": "withernsea-beach",

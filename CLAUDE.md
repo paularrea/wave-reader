@@ -165,7 +165,7 @@ node scripts/benchmark-catalogue.mjs      # compare with the references, region 
 
 **The target is surf-forecast's break list: every break they list is published** (decided
 2026-09-28), at an OSM place when one answers to its name and at the coordinate their page
-prints when none does (stage 3.5b). Spain is done this way; France, the United Kingdom,
+prints when none does (stage 3.5b). Spain and France are done this way; the United Kingdom,
 Ireland and Portugal follow, one country per deploy (`FULL_LIST_COUNTRIES` in
 `scripts/lib/references.mjs`, read by stages 3.5b and 4).
 Surfline-only places are still published beside them.
@@ -173,9 +173,9 @@ Surfline-only places are still published beside them.
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,144,
-564 of them in Spain, where 423 of surf-forecast's 427 breaks have a marker of their own and
-the other four share one with a same-name neighbour (Salinas and Playa de Salinas).
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,397.
+In Spain 423 of surf-forecast's 427 breaks have a marker of their own and the other four
+share one with a same-name neighbour (Salinas and Playa de Salinas); in France 476 of 477.
 
 **Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
 and reef; stage 3.5 then checks which of them a reference names. That finds nothing
@@ -238,7 +238,10 @@ looser version published a wrong beach:
   perros" took surf-forecast's Playa de Bayas.
 - Stage 4 publishes a place under **surf-forecast's name** when OSM's says something else
   (La Concha is mapped as Kontxa hondartza, La Playita as Playa de Santa María del Mar);
-  OSM's stays in `provenance.osmName`. Only in `FULL_LIST_COUNTRIES`. A stage 3.5b point
+  OSM's stays in `provenance.osmName`. Only in `FULL_LIST_COUNTRIES`, where a place holding
+  one of their breaks also wins stage 4's same-name deduplication and is exempt from the
+  inland-water name rule (Plage du Loch at Guidel, L'Étang-Salé on Réunion: the lagoon
+  check on the coordinate already ran). A stage 3.5b point
   that ends on an OSM place's own point after the shore check is one marker under both
   names (Punta Usaje / Jameos del Agua).
 - Everything unresolved is recorded in `.cache/benchmark/attestation-report.json`, with
@@ -269,9 +272,12 @@ original as `provenance.centroid`. A stage 3.5b point is moved the same way, and
 it lands beside a lagoon (their rounding put Pico de el Errizo on La Manga's Mar Menor
 side), always to open-sea shore. A reviewed place is exempt from the 5 km rule: the person
 who checked it records why the reference's point is off. Overpass mirrors go down often;
-`OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers.
+`OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers,
+and `BATCH=10` shrinks the coastline queries when Brittany's detailed shore times them out.
+Results for places not checked in a run are kept, so running it between stage 3.5 and 3.5b
+loses nothing.
 
-**Known gaps:** until stage 3.5b is run for them, France, the United Kingdom and Ireland
+**Known gaps:** until stage 3.5b is run for them, the United Kingdom and Ireland
 only list the breaks OSM maps under their name: 102 of surf-forecast's 135 Irish breaks,
 30% in Scotland. What is missing there is **surfers' nicknames** OSM has never heard of
 (Aileen's, The Peak, Shit Creek) and **peaks on a strand already published** (Brandon

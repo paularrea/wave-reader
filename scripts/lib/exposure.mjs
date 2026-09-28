@@ -40,6 +40,8 @@ export const MIN_OPEN_ARC_BY_COUNTRY = {
    * Donostia's bay all break with one or two bearings open 6 km out.
    */
   Spain: 1,
+  /** Portugal from its first run: Nazaré's Praia do Norte and Peniche's bay beaches. */
+  Portugal: 1,
 };
 /**
  * ETOPO1 returns bathymetry, so open water is genuinely negative rather than
