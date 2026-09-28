@@ -10,7 +10,7 @@
  * an OSM place or, failing one, at their coordinate (stage 3.5b), under their
  * name (stage 4). One country per deploy, each checked before the next is added.
  */
-export const FULL_LIST_COUNTRIES = ['Spain', 'France'];
+export const FULL_LIST_COUNTRIES = ['Spain', 'France', 'United Kingdom'];
 
 /** surf-forecast's country pages, and the catalogue country each one feeds. */
 export const COUNTRY_OF = {
@@ -110,8 +110,9 @@ export const FORECAST_REGIONS = {
   'Isle of Wight': ['Isle of Wight'],
   'North East England': ['Northumberland', 'Tyne and Wear', 'County Durham', 'North Yorkshire', 'East Riding of Yorkshire'],
   'East Anglia': ['Norfolk', 'Suffolk', 'Essex'],
-  'South Coast of England': ['Dorset', 'Hampshire', 'East Sussex', 'West Sussex', 'Isle of Wight'],
-  'South East': ['Kent', 'East Sussex', 'West Sussex'],
+  'South Coast of England': ['Dorset', 'Hampshire', 'East Sussex', 'West Sussex', 'Isle of Wight', 'Kent'],
+  // South East *Wales*: Porthcawl, Llantwit Major, Ogmore-by-Sea.
+  'South East': ['Wales'],
   // Portugal -- stage 1 fetches it by district; stage 4 publishes it under
   // these regions. Peniche, Ericeira and Lisboa cut across districts, and Beira
   // runs into Leiria (Nazaré), so each lists every district it can mean.
@@ -129,7 +130,8 @@ export const FORECAST_REGIONS = {
   Guernsey: null,
   Jersey: null,
   'Isle of Man': null,
-  Lincolnshire: null,
+  // OSM names no beach here; surf-forecast's coordinates (stage 3.5b) cover it.
+  Lincolnshire: ['Lincolnshire'],
 };
 
 const STOPWORDS = new Set(

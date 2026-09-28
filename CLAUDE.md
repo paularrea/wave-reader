@@ -165,17 +165,19 @@ node scripts/benchmark-catalogue.mjs      # compare with the references, region 
 
 **The target is surf-forecast's break list: every break they list is published** (decided
 2026-09-28), at an OSM place when one answers to its name and at the coordinate their page
-prints when none does (stage 3.5b). Spain and France are done this way; the United Kingdom,
-Ireland and Portugal follow, one country per deploy (`FULL_LIST_COUNTRIES` in
+prints when none does (stage 3.5b). Spain, France and the United Kingdom are done this way;
+Portugal and Ireland follow, one country per deploy (`FULL_LIST_COUNTRIES` in
 `scripts/lib/references.mjs`, read by stages 3.5b and 4).
 Surfline-only places are still published beside them.
 
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,397.
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,662.
 In Spain 423 of surf-forecast's 427 breaks have a marker of their own and the other four
-share one with a same-name neighbour (Salinas and Playa de Salinas); in France 476 of 477.
+share one with a same-name neighbour (Salinas and Playa de Salinas); in France 476 of 477;
+in the United Kingdom all 446 of the regions covered (not the Channel Islands or the Isle of
+Man, which are not the UK).
 
 **Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
 and reef; stage 3.5 then checks which of them a reference names. That finds nothing
@@ -261,6 +263,10 @@ within 1.5 km is that place and is not added twice; one Surfline names the same 
 Mundaka is OSM's Laidatxu) takes the break and surf-forecast's name. The attestation entry says
 `coordinate: 'surf-forecast'`; stage 3.5 never treats these as candidates, so a break OSM
 maps later moves back to OSM's coordinate on the next run. Run stage 3.6 again afterwards.
+Where their region spans several of ours in England ("East Anglia", "South Coast of
+England"), the county comes from OSM's ceremonial boundaries (`ceremonialCountiesOf`): OSM
+names no beach in Norfolk, Suffolk or Northumberland, and the nearest spot put Cromer in
+Essex. Their "South East" is South East Wales (Porthcawl), not Kent.
 
 **Stage 3.6 (coordinates).** Against OSM: `natural=coastline` within 350 m, the nearest
 shore is not a closed sea, and the reference is not more than 5 km away. OSM draws
@@ -277,9 +283,8 @@ and `BATCH=10` shrinks the coastline queries when Brittany's detailed shore time
 Results for places not checked in a run are kept, so running it between stage 3.5 and 3.5b
 loses nothing.
 
-**Known gaps:** until stage 3.5b is run for them, the United Kingdom and Ireland
-only list the breaks OSM maps under their name: 102 of surf-forecast's 135 Irish breaks,
-30% in Scotland. What is missing there is **surfers' nicknames** OSM has never heard of
+**Known gaps:** until stage 3.5b is run for it, Ireland only lists the breaks OSM maps
+under their name: 102 of surf-forecast's 135 Irish breaks. What is missing there is **surfers' nicknames** OSM has never heard of
 (Aileen's, The Peak, Shit Creek) and **peaks on a strand already published** (Brandon
 Bay's Stoney Gap) — exactly what stage 3.5b adds. Do not loosen the name matching to
 fill them: a loose match puts a break on the wrong beach, where stage 3.5b puts it where
@@ -308,10 +313,13 @@ Point, Fanad Head, Cream Point, Garywilliam Point), and Spain has Cabo Lastres a
 de la Raja. They are OSM coordinates like any
 other and still have to be named by a reference; the spot detail calls them Point or
 Reef rather than Beach.
-England is fetched once and split by ceremonial county with batched Overpass
-`is_in(lat,lon)` lookups (nearest resolved beach for centroids on the waterline).
-Only **named** `natural=beach` features are used, so counties whose beaches are mapped
-unnamed in OSM (Norfolk, Suffolk, Northumberland) are thin — a data limit, not a bug.
+England is fetched once and split by ceremonial county with batched Overpass lookups
+(`ceremonialCountiesOf` in `scripts/lib/communities.mjs`). OSM has a `boundary=ceremonial`
+relation only where the ceremonial county differs from the administrative one; Norfolk,
+Suffolk and Northumberland have only their `admin_level=6` county, so asking for ceremonial
+alone put Newbiggin and Spittal in Tyne and Wear and left East Anglia empty. The lookup
+takes the ceremonial county, else the administrative one, and a point on the waterline takes
+the nearest boundary. `REASSIGN=England` re-splits the places already fetched.
 
 **Stage 1** pulls every named shore feature per region from Overpass, keyed by
 **ISO 3166-2 code, never by name**: OSM labels regions in the local language

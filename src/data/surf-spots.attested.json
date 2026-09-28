@@ -10,7 +10,7 @@
     "Stage 4 publishes a place only if it appears here."
   ],
   "generatedAt": "2026-09-28",
-  "count": 1424,
+  "count": 1689,
   "spots": [
     {
       "id": "aber-wrac-h-point",
@@ -25,6 +25,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "aberaeron",
+      "name": "Aberaeron",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aberaeron"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "aberarth",
+      "name": "Aberarth",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aberarth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
       "referenceKm": 0
     },
     {
@@ -92,6 +122,52 @@
       "referenceKm": 0.35
     },
     {
+      "id": "aberwystwyth-beach",
+      "name": "Aberwystwyth Beach / Aberystwyth harbour trap",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aberwystwyth Beach",
+        "Aberystwyth harbour trap"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "ackergill",
+      "name": "Ackergill",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ackergill"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "admirals",
+      "name": "Admirals",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Admirals"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "aiguaoliva",
       "name": "Aiguaoliva",
       "country": "Spain",
@@ -134,6 +210,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "aln-estuary",
+      "name": "Aln Estuary",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aln Estuary"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
       "referenceKm": 0
     },
     {
@@ -381,6 +472,36 @@
       "referenceKm": 0
     },
     {
+      "id": "arbroath",
+      "name": "Arbroath",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Arbroath"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "ardnave-point-and-bay-islay",
+      "name": "Ardnave Point and Bay (Islay)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ardnave Point and Bay (Islay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "ardtermon-strand",
       "name": "Ardtermon Strand",
       "country": "Ireland",
@@ -441,6 +562,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.3
+    },
+    {
+      "id": "armadale-bay",
+      "name": "Armadale Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Armadale Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "arna-plage",
@@ -628,6 +764,51 @@
       "referenceKm": 0.59
     },
     {
+      "id": "balephetrish-tiree",
+      "name": "Balephetrish (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Balephetrish (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "balephuil-tiree",
+      "name": "Balephuil (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Balephuil (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "balevullin-tiree",
+      "name": "Balevullin (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Balevullin (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "ballinskelligs-bay",
       "name": "Ballinskelligs Bay",
       "country": "Ireland",
@@ -751,6 +932,51 @@
       "referenceKm": 0.94
     },
     {
+      "id": "balmedie",
+      "name": "Balmedie",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Balmedie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "balnakiel-bay",
+      "name": "Balnakiel Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Balnakiel Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "bamburgh",
+      "name": "Bamburgh",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bamburgh"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "bandol-les-nervis",
       "name": "Bandol - Les Nervis",
       "country": "France",
@@ -763,6 +989,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "banff",
+      "name": "Banff",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Banff"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0
     },
     {
@@ -891,6 +1132,21 @@
       "referenceKm": 0.07
     },
     {
+      "id": "barmouth",
+      "name": "Barmouth",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barmouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
       "id": "barnageeragh",
       "name": "Barnageeragh",
       "country": "Ireland",
@@ -936,6 +1192,21 @@
       "referenceKm": 0.82
     },
     {
+      "id": "barvas-lewis",
+      "name": "Barvas (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barvas (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "basse-pointe",
       "name": "Basse-Pointe",
       "country": "France",
@@ -966,6 +1237,21 @@
       "referenceKm": 0
     },
     {
+      "id": "bay-of-skaill",
+      "name": "Bay of Skaill",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bay of Skaill"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Orkney Islands",
+      "referenceKm": 0
+    },
+    {
       "id": "beacon-cove-65089018",
       "name": "Beacon Cove",
       "country": "United Kingdom",
@@ -979,6 +1265,21 @@
       "forecastName": "Beacon Cove",
       "referenceRegion": "North Cornwall",
       "referenceKm": 1.32
+    },
+    {
+      "id": "beadnell-bay",
+      "name": "Beadnell Bay",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beadnell Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "beau-rivage",
@@ -1023,6 +1324,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "bedruthan-steps",
+      "name": "Bedruthan Steps",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bedruthan Steps"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "beer-point",
+      "name": "Beer Point",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Beer Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Devon",
       "referenceKm": 0
     },
     {
@@ -1101,6 +1432,21 @@
       "referenceKm": 0
     },
     {
+      "id": "bellochantuy-bay",
+      "name": "Bellochantuy Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bellochantuy Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
       "id": "benllech-sands",
       "name": "Benllech Sands",
       "country": "United Kingdom",
@@ -1162,6 +1508,36 @@
       "referenceKm": 0.38
     },
     {
+      "id": "berwick-upon-tweed",
+      "name": "Berwick-Upon-Tweed",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Berwick-Upon-Tweed"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "bexhill",
+      "name": "Bexhill",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bexhill"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "bigbury-beach",
       "name": "Bigbury Beach",
       "country": "United Kingdom",
@@ -1177,6 +1553,81 @@
       "forecastName": "Bigbury Bay",
       "referenceRegion": "South Devon",
       "referenceKm": 0.1
+    },
+    {
+      "id": "birling-gap",
+      "name": "Birling Gap",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Birling Gap"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "birsay-bay",
+      "name": "Birsay Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Birsay Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Orkney Islands",
+      "referenceKm": 0
+    },
+    {
+      "id": "black-middens",
+      "name": "Black Middens",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Black Middens"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "black-rock",
+      "name": "Black Rock",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Black Rock"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
+      "id": "black-rocks",
+      "name": "Black Rocks",
+      "country": "United Kingdom",
+      "region": "Northern Ireland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Black Rocks"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Antrim",
+      "referenceKm": 0
     },
     {
       "id": "black-rocks-jetty",
@@ -1207,6 +1658,37 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.1
+    },
+    {
+      "id": "blue-pool",
+      "name": "Blue Pool / Sheeps Jaw",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Blue Pool",
+        "Sheeps Jaw"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "blyth-beach",
+      "name": "Blyth Beach",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Blyth Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "bobby-s",
@@ -1240,6 +1722,21 @@
       "referenceKm": 0.75
     },
     {
+      "id": "boiler-left",
+      "name": "Boiler Left",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Boiler Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
       "id": "bois-rouge",
       "name": "Bois-Rouge",
       "country": "France",
@@ -1267,6 +1764,22 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Andalucia",
+      "referenceKm": 0
+    },
+    {
+      "id": "bolt-head",
+      "name": "Bolt Head / Salcombe",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bolt Head",
+        "Salcombe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Devon",
       "referenceKm": 0
     },
     {
@@ -1298,6 +1811,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Gran Canaria",
+      "referenceKm": 0
+    },
+    {
+      "id": "borth",
+      "name": "Borth",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Borth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
       "referenceKm": 0
     },
     {
@@ -1426,6 +1954,51 @@
       "referenceKm": 0.12
     },
     {
+      "id": "boyndie-bay",
+      "name": "Boyndie Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Boyndie Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "bracklesham",
+      "name": "Bracklesham",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bracklesham"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "bragar-lewis",
+      "name": "Bragar (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bragar (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "brandon-bay",
       "name": "Brandon Bay",
       "country": "Ireland",
@@ -1502,6 +2075,36 @@
       "referenceKm": 0.19
     },
     {
+      "id": "bridlington",
+      "name": "Bridlington",
+      "country": "United Kingdom",
+      "region": "East Riding of Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bridlington"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "brighton",
+      "name": "Brighton",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Brighton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "brighton-beach-96624947",
       "name": "Brighton Beach",
       "country": "United Kingdom",
@@ -1516,6 +2119,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.12
+    },
+    {
+      "id": "brims-ness",
+      "name": "Brims Ness",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Brims Ness"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "brittas-bay-16313794",
@@ -1564,6 +2182,21 @@
       "forecastName": "Broadhaven South",
       "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.11
+    },
+    {
+      "id": "broughton",
+      "name": "Broughton",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Broughton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
     },
     {
       "id": "brutal-beach-six-fours",
@@ -1806,6 +2439,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "caister-on-sea",
+      "name": "Caister-on-Sea",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Caister-on-Sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
       "referenceKm": 0
     },
     {
@@ -2333,6 +2981,21 @@
       "referenceKm": 0
     },
     {
+      "id": "caravans",
+      "name": "Caravans",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Caravans"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
       "id": "carbis-bay-beach",
       "name": "Carbis Bay Beach",
       "country": "United Kingdom",
@@ -2547,6 +3210,51 @@
       "referenceKm": 0.32
     },
     {
+      "id": "caves-sandsend",
+      "name": "Caves (Sandsend)",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Caves (Sandsend)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "cayton-bay-bunkers",
+      "name": "Cayton Bay Bunkers",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cayton Bay Bunkers"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "cayton-bay-pumphouse",
+      "name": "Cayton Bay Pumphouse",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cayton Bay Pumphouse"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "cayton-sands",
       "name": "Cayton Sands",
       "country": "United Kingdom",
@@ -2580,6 +3288,21 @@
       "referenceKm": 0.36
     },
     {
+      "id": "chapel-point",
+      "name": "Chapel Point",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Chapel Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "chapel-porth-beach",
       "name": "Chapel Porth Beach",
       "country": "United Kingdom",
@@ -2594,6 +3317,36 @@
       "forecastName": "Chapel Porth",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.32
+    },
+    {
+      "id": "chapel-st-leonards",
+      "name": "Chapel St Leonards",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Chapel St Leonards"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
+    },
+    {
+      "id": "chapmans-pool",
+      "name": "Chapmans Pool",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Chapmans Pool"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "charlot",
@@ -2668,6 +3421,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "cliad-bay-coll",
+      "name": "Cliad Bay (Coll)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cliad Bay (Coll)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "cliff-beach-lewis",
+      "name": "Cliff Beach (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cliff Beach (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
       "referenceKm": 0
     },
     {
@@ -2979,6 +3762,51 @@
       "referenceKm": 0.55
     },
     {
+      "id": "crab-island",
+      "name": "Crab Island",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crab Island"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "crabart",
+      "name": "Crabart",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crabart"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "crackington-haven",
+      "name": "Crackington Haven",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crackington Haven"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "crantock-beach",
       "name": "Crantock Beach",
       "country": "United Kingdom",
@@ -3008,6 +3836,51 @@
       "forecastName": "Green Point (Cream Point)",
       "referenceRegion": "Clare",
       "referenceKm": 0.35
+    },
+    {
+      "id": "creswell-beach",
+      "name": "Creswell Beach",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Creswell Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "criccieth",
+      "name": "Criccieth",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Criccieth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
+    },
+    {
+      "id": "cromer",
+      "name": "Cromer",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cromer"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
     },
     {
       "id": "crooklets-beach",
@@ -3043,6 +3916,36 @@
       "referenceKm": 0.42
     },
     {
+      "id": "crossapoll-bay-coll",
+      "name": "Crossapoll Bay (Coll)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crossapoll Bay (Coll)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "crow-point",
+      "name": "Crow Point",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crow Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
+    },
+    {
       "id": "croyde-beach",
       "name": "Croyde Beach",
       "country": "United Kingdom",
@@ -3057,6 +3960,36 @@
       "forecastName": "Croyde",
       "referenceRegion": "North Devon",
       "referenceKm": 0.02
+    },
+    {
+      "id": "croyde-reef",
+      "name": "Croyde Reef",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Croyde Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
+    },
+    {
+      "id": "cruden-bay",
+      "name": "Cruden Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cruden Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "cruz-roja",
@@ -3090,6 +4023,21 @@
       "referenceKm": 0.63
     },
     {
+      "id": "cullen",
+      "name": "Cullen",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cullen"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "cullercoats-bay",
       "name": "Cullercoats Bay",
       "country": "United Kingdom",
@@ -3120,6 +4068,21 @@
       "referenceKm": 0.34
     },
     {
+      "id": "dalbeg-lewis",
+      "name": "Dalbeg (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dalbeg (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "dalbosc-h",
       "name": "Dalbosc'h",
       "country": "France",
@@ -3132,6 +4095,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "dalmore-bay-lewis",
+      "name": "Dalmore Bay (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dalmore Bay (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
       "referenceKm": 0
     },
     {
@@ -3337,6 +4315,21 @@
       "referenceKm": 0
     },
     {
+      "id": "dinas-dinlle",
+      "name": "Dinas Dinlle",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dinas Dinlle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
+    },
+    {
       "id": "dirk-bay",
       "name": "Dirk Bay",
       "country": "Ireland",
@@ -3507,6 +4500,52 @@
       "referenceKm": 0.37
     },
     {
+      "id": "downend-point",
+      "name": "Downend Point",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Downend Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
+    },
+    {
+      "id": "downhill",
+      "name": "Downhill",
+      "country": "United Kingdom",
+      "region": "Northern Ireland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Downhill"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Londonderry",
+      "referenceKm": 0
+    },
+    {
+      "id": "droskyn-point",
+      "name": "Droskyn Point / Perranporth",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Droskyn Point",
+        "Perranporth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "drumnacraig-beach",
       "name": "Drumnacraig Beach",
       "country": "Ireland",
@@ -3535,6 +4574,21 @@
       "forecastName": "Falcarragh Beach",
       "referenceRegion": "Donegal",
       "referenceKm": 0.48
+    },
+    {
+      "id": "druridge-bay",
+      "name": "Druridge Bay",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Druridge Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "duckpool",
@@ -3587,6 +4641,21 @@
       "referenceKm": 0.71
     },
     {
+      "id": "dunbar-belhaven-bay",
+      "name": "Dunbar/Belhaven Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dunbar/Belhaven Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "dunkerque",
       "name": "Dunkerque",
       "country": "France",
@@ -3619,6 +4688,21 @@
       "referenceKm": 0.24
     },
     {
+      "id": "dunnet-bay",
+      "name": "Dunnet Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dunnet Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "dunree-beach",
       "name": "Dunree Beach",
       "country": "Ireland",
@@ -3649,6 +4733,21 @@
       "referenceKm": 0.32
     },
     {
+      "id": "durlston",
+      "name": "Durlston",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Durlston"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "easky",
       "name": "Easky",
       "country": "Ireland",
@@ -3662,6 +4761,21 @@
       "forecastName": "Easky Right",
       "referenceRegion": "Sligo",
       "referenceKm": 0.83
+    },
+    {
+      "id": "east-runton",
+      "name": "East Runton",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "East Runton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
     },
     {
       "id": "east-sands",
@@ -3694,6 +4808,36 @@
       "forecastName": "Portrush-East Strand",
       "referenceRegion": "Antrim",
       "referenceKm": 0.88
+    },
+    {
+      "id": "east-wittering",
+      "name": "East Wittering",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "East Wittering"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "eastbourne",
+      "name": "Eastbourne",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Eastbourne"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "ecalgrain",
@@ -4063,6 +5207,21 @@
       "referenceKm": 1.32
     },
     {
+      "id": "embleton",
+      "name": "Embleton",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Embleton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "enniscrone-beach",
       "name": "Enniscrone Beach",
       "country": "Ireland",
@@ -4078,6 +5237,21 @@
       "forecastName": "Inishcrone",
       "referenceRegion": "Sligo",
       "referenceKm": 0.35
+    },
+    {
+      "id": "eoropie-lewis",
+      "name": "Eoropie (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Eoropie (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
     },
     {
       "id": "erdiko-ura",
@@ -4143,6 +5317,21 @@
       "referenceKm": 0.2
     },
     {
+      "id": "ersary-beach-barra",
+      "name": "Ersary beach (Barra)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ersary beach (Barra)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "etang-de-l-ovu-santu",
       "name": "Etang de l'Ovu Santu",
       "country": "France",
@@ -4203,6 +5392,36 @@
       "referenceKm": 0.72
     },
     {
+      "id": "eyemouth",
+      "name": "Eyemouth",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Eyemouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "fairlight",
+      "name": "Fairlight",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fairlight"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "fanad-head",
       "name": "Fanad Head",
       "country": "Ireland",
@@ -4233,6 +5452,21 @@
       "forecastName": "Fanore",
       "referenceRegion": "Clare",
       "referenceKm": 0.09
+    },
+    {
+      "id": "farr-bay",
+      "name": "Farr Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Farr Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "fecamp",
@@ -4282,6 +5516,21 @@
       "referenceKm": 0.38
     },
     {
+      "id": "fishermans-rhiw",
+      "name": "Fishermans (Rhiw)",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fishermans (Rhiw)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
+    },
+    {
       "id": "fistral-beach",
       "name": "Fistral Beach",
       "country": "United Kingdom",
@@ -4301,6 +5550,21 @@
       "referenceKm": 0.24
     },
     {
+      "id": "fistral-south",
+      "name": "Fistral-South",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fistral-South"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "five-finger-strand",
       "name": "Five Finger Strand",
       "country": "Ireland",
@@ -4314,6 +5578,36 @@
       "forecastName": "Five Finger Strand",
       "referenceRegion": "Donegal",
       "referenceKm": 0.95
+    },
+    {
+      "id": "folkestone",
+      "name": "Folkestone",
+      "country": "United Kingdom",
+      "region": "Kent",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Folkestone"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "folkestone-wear-bay",
+      "name": "Folkestone Wear Bay",
+      "country": "United Kingdom",
+      "region": "Kent",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Folkestone Wear Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "fort-de-st-germain-des-vaux",
@@ -4359,6 +5653,21 @@
       "forecastName": "Fraisthorpe",
       "referenceRegion": "North East England",
       "referenceKm": 1.11
+    },
+    {
+      "id": "fraserburgh",
+      "name": "Fraserburgh",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Fraserburgh"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "frejus-plage",
@@ -4439,6 +5748,21 @@
       "forecastName": "Freshwater West",
       "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.37
+    },
+    {
+      "id": "freswick-bay",
+      "name": "Freswick Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Freswick Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "fuero-de-la-bajeta",
@@ -4550,6 +5874,36 @@
       "referenceKm": 0.86
     },
     {
+      "id": "gileston",
+      "name": "Gileston",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gileston"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
+      "id": "gills-bay",
+      "name": "Gills Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gills Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "glass-beach",
       "name": "Glass Beach",
       "country": "Spain",
@@ -4562,6 +5916,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Fuerteventura",
+      "referenceKm": 0
+    },
+    {
+      "id": "godrevy",
+      "name": "Godrevy",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Godrevy"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "gorleston-on-sea",
+      "name": "Gorleston on Sea",
+      "country": "United Kingdom",
+      "region": "Suffolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gorleston on Sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
       "referenceKm": 0
     },
     {
@@ -4659,6 +6043,21 @@
       "referenceKm": 0
     },
     {
+      "id": "graveyards",
+      "name": "Graveyards",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Graveyards"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
       "id": "great-western-beach",
       "name": "Great Western Beach",
       "country": "United Kingdom",
@@ -4674,6 +6073,21 @@
       "referenceKm": 0.12
     },
     {
+      "id": "great-yarmouth",
+      "name": "Great Yarmouth",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Great Yarmouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
       "id": "greve-de-deolen",
       "name": "Grève de Déolen",
       "country": "France",
@@ -4687,6 +6101,36 @@
       "forecastName": "Deolen",
       "referenceRegion": "Finistere - Brittany",
       "referenceKm": 1.52
+    },
+    {
+      "id": "grim-ness",
+      "name": "Grim Ness",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Grim Ness"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Orkney Islands",
+      "referenceKm": 0
+    },
+    {
+      "id": "grishipoll-bay-coll",
+      "name": "Grishipoll Bay (Coll)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Grishipoll Bay (Coll)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
     },
     {
       "id": "gruissan-plage",
@@ -4813,6 +6257,36 @@
       "referenceKm": 0
     },
     {
+      "id": "gwenvor",
+      "name": "Gwenvor",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gwenvor"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "gwithian",
+      "name": "Gwithian",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gwithian"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "gwynver-beach",
       "name": "Gwynver Beach",
       "country": "United Kingdom",
@@ -4841,6 +6315,36 @@
       "forecastName": "Gyllyngvase Beach",
       "referenceRegion": "South Cornwall",
       "referenceKm": 0.7
+    },
+    {
+      "id": "ham",
+      "name": "Ham",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ham"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "happisburgh",
+      "name": "Happisburgh",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Happisburgh"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
     },
     {
       "id": "harbour-beach-182236039",
@@ -4892,6 +6396,51 @@
       "referenceKm": 0.31
     },
     {
+      "id": "hartlepool",
+      "name": "Hartlepool",
+      "country": "United Kingdom",
+      "region": "County Durham",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hartlepool"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "hartley-reef",
+      "name": "Hartley Reef",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hartley Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "hastings",
+      "name": "Hastings",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hastings"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "hayle-bay",
       "name": "Hayle Bay",
       "country": "United Kingdom",
@@ -4906,6 +6455,21 @@
       "forecastName": "Polzeath",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.31
+    },
+    {
+      "id": "hayling-island",
+      "name": "Hayling Island",
+      "country": "United Kingdom",
+      "region": "Hampshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hayling Island"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "hele-beach-968445109",
@@ -4936,6 +6500,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.93
+    },
+    {
+      "id": "highcliffe",
+      "name": "Highcliffe",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Highcliffe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "hive-beach",
@@ -4984,6 +6563,21 @@
       "referenceKm": 0
     },
     {
+      "id": "hope-cove",
+      "name": "Hope Cove",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hope Cove"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Devon",
+      "referenceKm": 0
+    },
+    {
       "id": "hornsea-sands",
       "name": "Hornsea Sands",
       "country": "United Kingdom",
@@ -4998,6 +6592,51 @@
       "forecastName": "Hornsea",
       "referenceRegion": "North East England",
       "referenceKm": 0.33
+    },
+    {
+      "id": "horse-head-reef",
+      "name": "Horse Head Reef",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Horse Head Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "horton",
+      "name": "Horton",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Horton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "hot-pipe",
+      "name": "Hot pipe",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hot pipe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
     },
     {
       "id": "hotel-novotel",
@@ -5027,6 +6666,51 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "huntcliff",
+      "name": "Huntcliff",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Huntcliff"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "hunts-bay",
+      "name": "Hunts Bay",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Hunts Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "huttoft-beach",
+      "name": "Huttoft Beach",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Huttoft Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
       "referenceKm": 0
     },
     {
@@ -5338,6 +7022,21 @@
       "referenceKm": 0.58
     },
     {
+      "id": "inverbervie",
+      "name": "Inverbervie",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Inverbervie"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "isla-de-izaro",
       "name": "Isla de Izaro",
       "country": "Spain",
@@ -5368,6 +7067,21 @@
       "referenceKm": 0.07
     },
     {
+      "id": "jabba-s",
+      "name": "Jabba's",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Jabba's"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
+    },
+    {
       "id": "jameos-del-agua",
       "name": "Jameos del Agua",
       "country": "Spain",
@@ -5380,6 +7094,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Lanzarote",
+      "referenceKm": 0
+    },
+    {
+      "id": "jeffs-left",
+      "name": "Jeffs Left",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Jeffs Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "johnshaven",
+      "name": "Johnshaven",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Johnshaven"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0
     },
     {
@@ -5645,6 +7389,36 @@
       "referenceKm": 0.07
     },
     {
+      "id": "kimmeridge-bay",
+      "name": "Kimmeridge Bay",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kimmeridge Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "kimmeridge-the-ledges",
+      "name": "Kimmeridge (The Ledges)",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kimmeridge (The Ledges)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "king-edward-s-bay",
       "name": "King Edward's Bay",
       "country": "United Kingdom",
@@ -5721,6 +7495,21 @@
       "reviewed": true,
       "referenceRegion": "Pais Vasco",
       "referenceKm": 0.29
+    },
+    {
+      "id": "kyle-of-tongue",
+      "name": "Kyle of Tongue",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kyle of Tongue"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "l-abbatoir",
@@ -6485,6 +8274,21 @@
       "referenceKm": 0.09
     },
     {
+      "id": "laggan-bay-islay",
+      "name": "Laggan Bay (Islay)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Laggan Bay (Islay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "lahinch-beach",
       "name": "Lahinch Beach",
       "country": "Ireland",
@@ -6606,6 +8410,21 @@
       "forecastName": "Langland Bay",
       "referenceRegion": "Gower",
       "referenceKm": 0.23
+    },
+    {
+      "id": "langland-point",
+      "name": "Langland Point",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Langland Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
     },
     {
       "id": "largos",
@@ -7428,6 +9247,51 @@
       "referenceKm": 0.06
     },
     {
+      "id": "llanddulas-breakwater",
+      "name": "Llanddulas Breakwater",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Llanddulas Breakwater"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "llanddwyn-island",
+      "name": "Llanddwyn Island",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Llanddwyn Island"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Anglesy",
+      "referenceKm": 0
+    },
+    {
+      "id": "llandudno",
+      "name": "Llandudno",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Llandudno"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Wales",
+      "referenceKm": 0
+    },
+    {
       "id": "llangennith-sands",
       "name": "Llangennith Sands",
       "country": "United Kingdom",
@@ -7460,6 +9324,21 @@
       "referenceKm": 0.02
     },
     {
+      "id": "llantwit-major",
+      "name": "Llantwit Major",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Llantwit Major"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
       "id": "lligwy-beach",
       "name": "Lligwy Beach",
       "country": "United Kingdom",
@@ -7473,6 +9352,36 @@
       "forecastName": "Traeth Lligwy",
       "referenceRegion": "Anglesy",
       "referenceKm": 0.19
+    },
+    {
+      "id": "llwyngwril",
+      "name": "Llwyngwril",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Llwyngwril"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "loch-breachacha-coll",
+      "name": "Loch Breachacha (Coll)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Loch Breachacha (Coll)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
     },
     {
       "id": "locquirec",
@@ -7505,6 +9414,21 @@
       "forecastName": "Longsands Bay",
       "referenceRegion": "North East England",
       "referenceKm": 0.25
+    },
+    {
+      "id": "looe",
+      "name": "Looe",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Looe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
     },
     {
       "id": "los-dos-hermanos",
@@ -7614,6 +9538,36 @@
       "referenceKm": 3.08
     },
     {
+      "id": "low-newton",
+      "name": "Low Newton",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Low Newton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "lowestoft",
+      "name": "Lowestoft",
+      "country": "United Kingdom",
+      "region": "Suffolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lowestoft"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
       "id": "luc-sur-mer",
       "name": "Luc Sur Mer",
       "country": "France",
@@ -7675,6 +9629,21 @@
       "referenceKm": 0.36
     },
     {
+      "id": "lundy-bay",
+      "name": "Lundy Bay",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lundy Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "lusty-glaze-beach",
       "name": "Lusty Glaze Beach",
       "country": "United Kingdom",
@@ -7689,6 +9658,81 @@
       "forecastName": "Lusty Glaze",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.17
+    },
+    {
+      "id": "lyme-regis-habour-wall",
+      "name": "Lyme Regis Habour Wall",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lyme Regis Habour Wall"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "lynemouth-beach",
+      "name": "Lynemouth Beach",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lynemouth Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "lynmouth",
+      "name": "Lynmouth",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lynmouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
+    },
+    {
+      "id": "mablethorpe",
+      "name": "Mablethorpe",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mablethorpe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
+    },
+    {
+      "id": "machir-bay-islay",
+      "name": "Machir Bay (Islay)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Machir Bay (Islay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
     },
     {
       "id": "machrihanish-beach",
@@ -7799,6 +9843,21 @@
       "forecastName": "Maghery",
       "referenceRegion": "Donegal",
       "referenceKm": 1.11
+    },
+    {
+      "id": "magillian-point",
+      "name": "Magillian Point",
+      "country": "United Kingdom",
+      "region": "Northern Ireland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Magillian Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Londonderry",
+      "referenceKm": 0
     },
     {
       "id": "magilligan-benone-strand",
@@ -7923,6 +9982,21 @@
       "referenceKm": 0
     },
     {
+      "id": "mangersta-sands-lewis",
+      "name": "Mangersta Sands (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mangersta Sands (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "manorbier-beach",
       "name": "Manorbier Beach",
       "country": "United Kingdom",
@@ -7937,6 +10011,21 @@
       "forecastName": "Manorbier",
       "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.05
+    },
+    {
+      "id": "marazion",
+      "name": "Marazion",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Marazion"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
     },
     {
       "id": "marble-hill-strand",
@@ -7998,6 +10087,21 @@
       "forecastName": "Marloes Sands",
       "referenceRegion": "Pembrokeshire",
       "referenceKm": 0.21
+    },
+    {
+      "id": "marsden-bay",
+      "name": "Marsden Bay",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Marsden Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "marseille-boutofolle",
@@ -8078,6 +10182,21 @@
       "referenceKm": 0
     },
     {
+      "id": "melvich",
+      "name": "Melvich",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Melvich"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "menakoz",
       "name": "Meñakoz",
       "country": "Spain",
@@ -8124,6 +10243,53 @@
       "referenceKm": 0
     },
     {
+      "id": "mewslade-bay",
+      "name": "Mewslade Bay / Fall Bay / Fall Bay Reef",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mewslade Bay",
+        "Fall Bay",
+        "Fall Bay Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "middle-beach-kintyre",
+      "name": "Middle Beach",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Middle Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
+      "id": "mill-bay-orkney-islands",
+      "name": "Mill Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mill Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Orkney Islands",
+      "referenceKm": 0
+    },
+    {
       "id": "millendreath-beach",
       "name": "Millendreath Beach",
       "country": "United Kingdom",
@@ -8138,6 +10304,21 @@
       "forecastName": "Millendreath",
       "referenceRegion": "South Cornwall",
       "referenceKm": 0.02
+    },
+    {
+      "id": "milook",
+      "name": "Milook",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Milook"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
     },
     {
       "id": "mimizan",
@@ -8245,6 +10426,36 @@
       "referenceKm": 0
     },
     {
+      "id": "morfa-bychan",
+      "name": "Morfa Bychan",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Morfa Bychan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "morfa-mawr",
+      "name": "Morfa Mawr",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Morfa Mawr"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
       "id": "morro-negro",
       "name": "Morro Negro",
       "country": "Spain",
@@ -8293,6 +10504,21 @@
       "referenceKm": 0.3
     },
     {
+      "id": "mother-ivey-s-spot-m",
+      "name": "Mother Ivey s Spot M",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mother Ivey s Spot M"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "moulin-la-rive",
       "name": "Moulin La Rive",
       "country": "France",
@@ -8305,6 +10531,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Finistere - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "mounts-bay-penzance",
+      "name": "Mounts Bay (Penzance)",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mounts Bay (Penzance)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
       "referenceKm": 0
     },
     {
@@ -8385,6 +10626,21 @@
       "referenceKm": 0
     },
     {
+      "id": "mupe-bay",
+      "name": "Mupe Bay",
+      "country": "United Kingdom",
+      "region": "Dorset",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mupe Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "murkle-bay",
       "name": "Murkle Bay",
       "country": "United Kingdom",
@@ -8419,7 +10675,7 @@
       "id": "newbiggin-beach",
       "name": "Newbiggin Beach",
       "country": "United Kingdom",
-      "region": "Tyne and Wear",
+      "region": "Northumberland",
       "sources": [
         "surf-forecast"
       ],
@@ -8462,6 +10718,21 @@
       "referenceKm": 0.48
     },
     {
+      "id": "newlyn-harbour-wall",
+      "name": "Newlyn Harbour Wall",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Newlyn Harbour Wall"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "newport-sands",
       "name": "Newport Sands",
       "country": "United Kingdom",
@@ -8478,6 +10749,36 @@
       "referenceKm": 0.37
     },
     {
+      "id": "newquay-town-beach",
+      "name": "Newquay Town Beach",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Newquay Town Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "newtrain-bay",
+      "name": "Newtrain Bay",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Newtrain Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "nez-bayard",
       "name": "Nez Bayard",
       "country": "France",
@@ -8490,6 +10791,51 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Normandy",
+      "referenceKm": 0
+    },
+    {
+      "id": "nigg-bay",
+      "name": "Nigg Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Nigg Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "niton",
+      "name": "Niton",
+      "country": "United Kingdom",
+      "region": "Isle of Wight",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Niton"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Isle of Wight",
+      "referenceKm": 0
+    },
+    {
+      "id": "noahs-right",
+      "name": "Noahs Right",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Noahs Right"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0
     },
     {
@@ -8523,6 +10869,21 @@
       "referenceKm": 0.46
     },
     {
+      "id": "north-berwick",
+      "name": "North Berwick",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "North Berwick"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "northcott-mouth-beach",
       "name": "Northcott Mouth beach",
       "country": "United Kingdom",
@@ -8538,6 +10899,21 @@
       "forecastName": "Northcott",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.04
+    },
+    {
+      "id": "nothing-left",
+      "name": "Nothing Left",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Nothing Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "nouveau-cimetiere",
@@ -8584,6 +10960,21 @@
       "reviewed": true,
       "referenceRegion": "Pais Vasco",
       "referenceKm": 0.52
+    },
+    {
+      "id": "ogmore-by-sea",
+      "name": "Ogmore-by-Sea",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ogmore-by-Sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
     },
     {
       "id": "ojos-de-garza",
@@ -8758,6 +11149,21 @@
       "referenceKm": 0.18
     },
     {
+      "id": "oxwich-point",
+      "name": "Oxwich Point",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Oxwich Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
       "id": "oye-plage-escardines",
       "name": "Oye Plage Escardines",
       "country": "France",
@@ -8846,6 +11252,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "palmer-cove",
+      "name": "Palmer Cove",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Palmer Cove"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0
     },
     {
@@ -8942,6 +11363,21 @@
       "referenceKm": 0
     },
     {
+      "id": "pembrey",
+      "name": "Pembrey",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pembrey"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Pembrokeshire",
+      "referenceKm": 0
+    },
+    {
       "id": "pena-roja",
       "name": "Pena Roja",
       "country": "Spain",
@@ -8986,6 +11422,36 @@
       "forecastName": "Penfoul",
       "referenceRegion": "Finistere - Brittany",
       "referenceKm": 0.42
+    },
+    {
+      "id": "penhale",
+      "name": "Penhale",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Penhale"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "pennan",
+      "name": "Pennan",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pennan"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "pentewan-beach",
@@ -9049,6 +11515,21 @@
       "forecastName": "Perranuthnoe",
       "referenceRegion": "South Cornwall",
       "referenceKm": 0.11
+    },
+    {
+      "id": "petes-reef",
+      "name": "Petes Reef",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Petes Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
     },
     {
       "id": "pettycur-beach",
@@ -17119,6 +19600,21 @@
       "referenceKm": 0.24
     },
     {
+      "id": "point-of-ness",
+      "name": "Point of Ness",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Point of Ness"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "pointe-aux-oies",
       "name": "Pointe aux Oies",
       "country": "France",
@@ -17270,6 +19766,36 @@
       "referenceKm": 0.2
     },
     {
+      "id": "polin-beach",
+      "name": "Polin Beach",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Polin Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "polkerris",
+      "name": "Polkerris",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Polkerris"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "pollacheeny-harbour",
       "name": "Pollacheeny Harbour",
       "country": "Ireland",
@@ -17302,6 +19828,21 @@
       "referenceKm": 0.41
     },
     {
+      "id": "pontllyfni",
+      "name": "Pontllyfni",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pontllyfni"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
+    },
+    {
       "id": "poppit-sands",
       "name": "Poppit Sands",
       "country": "United Kingdom",
@@ -17315,6 +19856,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 1.6
+    },
+    {
+      "id": "porlock-weir",
+      "name": "Porlock Weir",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porlock Weir"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
     },
     {
       "id": "pornichet",
@@ -17408,6 +19964,21 @@
       "referenceKm": 2.69
     },
     {
+      "id": "port-bharrapol-tiree",
+      "name": "Port Bharrapol (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Bharrapol (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "port-blanc-507836003",
       "name": "Port Blanc",
       "country": "France",
@@ -17440,6 +20011,36 @@
       "referenceKm": 0
     },
     {
+      "id": "port-eynon-bay",
+      "name": "Port Eynon Bay",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Eynon Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "port-eynon-point",
+      "name": "Port Eynon Point",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Eynon Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
       "id": "port-francois-harbour",
       "name": "Port Francois Harbour",
       "country": "France",
@@ -17452,6 +20053,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "port-isaac",
+      "name": "Port Isaac",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Port Isaac"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
       "referenceKm": 0
     },
     {
@@ -17565,6 +20181,36 @@
       "forecastName": "Porth Ceriad",
       "referenceRegion": "Lleyn Peninsula",
       "referenceKm": 0.07
+    },
+    {
+      "id": "porth-colmon",
+      "name": "Porth Colmon",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porth Colmon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
+    },
+    {
+      "id": "porth-dinllaen",
+      "name": "Porth Dinllaen",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porth Dinllaen"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lleyn Peninsula",
+      "referenceKm": 0
     },
     {
       "id": "porth-joke",
@@ -17691,6 +20337,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.96
+    },
+    {
+      "id": "porthcawl-point",
+      "name": "Porthcawl Point",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porthcawl Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
     },
     {
       "id": "porthcothan-beach",
@@ -17928,6 +20589,21 @@
       "referenceKm": 0.15
     },
     {
+      "id": "portreath-harbour-wall",
+      "name": "Portreath Harbour Wall",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Portreath Harbour Wall"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "portsalon-beach",
       "name": "Portsalon Beach",
       "country": "Ireland",
@@ -17972,6 +20648,21 @@
       "forecastName": "Portstewart Strand",
       "referenceRegion": "Londonderry",
       "referenceKm": 0.09
+    },
+    {
+      "id": "portwrinkle",
+      "name": "Portwrinkle",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Portwrinkle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
     },
     {
       "id": "postollonec",
@@ -18982,6 +21673,21 @@
       "referenceKm": 0.37
     },
     {
+      "id": "primrose-valley",
+      "name": "Primrose Valley",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Primrose Valley"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "puerto-de-vega",
       "name": "Puerto de Vega",
       "country": "Spain",
@@ -19239,6 +21945,21 @@
       "referenceKm": 0
     },
     {
+      "id": "rackwick",
+      "name": "Rackwick",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rackwick"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Orkney Islands",
+      "referenceKm": 0
+    },
+    {
       "id": "rade-de-croisic",
       "name": "Rade de Croisic",
       "country": "France",
@@ -19271,6 +21992,21 @@
       "referenceKm": 0.96
     },
     {
+      "id": "ramsgate-the-wall",
+      "name": "Ramsgate (The Wall)",
+      "country": "United Kingdom",
+      "region": "Kent",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ramsgate (The Wall)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "red-strand",
       "name": "Red Strand",
       "country": "Ireland",
@@ -19284,6 +22020,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.07
+    },
+    {
+      "id": "redcar-scars",
+      "name": "Redcar Scars",
+      "country": "United Kingdom",
+      "region": "County Durham",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Redcar Scars"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "reenrow-beach",
@@ -19315,6 +22066,36 @@
       "forecastName": "Rest Bay",
       "referenceRegion": "South East",
       "referenceKm": 0.09
+    },
+    {
+      "id": "rhos-on-sea",
+      "name": "Rhos-On-Sea",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rhos-On-Sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Wales",
+      "referenceKm": 0
+    },
+    {
+      "id": "rhosneigr",
+      "name": "Rhosneigr",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rhosneigr"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Anglesy",
+      "referenceKm": 0
     },
     {
       "id": "rhossili-bay-beach",
@@ -19361,6 +22142,21 @@
       "forecastName": "Ringstead Bay",
       "referenceRegion": "South Coast of England",
       "referenceKm": 0.2
+    },
+    {
+      "id": "robin-hoods-bay",
+      "name": "Robin Hoods Bay",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Robin Hoods Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "roc-san-cayetano",
@@ -19484,6 +22280,36 @@
       "forecastName": "Rossnowlagh",
       "referenceRegion": "Donegal",
       "referenceKm": 0.55
+    },
+    {
+      "id": "rubh-a-bhiogar-lewis",
+      "name": "Rubh A Bhiogar (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rubh A Bhiogar (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "ruhba-phail-lewis",
+      "name": "Ruhba Phail (Lewis)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ruhba Phail (Lewis)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
     },
     {
       "id": "runswick-sands",
@@ -19744,6 +22570,21 @@
       "referenceKm": 0
     },
     {
+      "id": "saligo-islay",
+      "name": "Saligo (Islay)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Saligo (Islay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "salinas",
       "name": "Salinas",
       "country": "Spain",
@@ -19834,6 +22675,96 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.11
+    },
+    {
+      "id": "sandend-bay",
+      "name": "Sandend Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandend Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "sandford-bay",
+      "name": "Sandford Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandford Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "sandhaven",
+      "name": "Sandhaven",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandhaven"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "sandilands",
+      "name": "Sandilands",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandilands"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
+    },
+    {
+      "id": "sandsend-bay",
+      "name": "Sandsend Bay",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandsend Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "sandside-bay",
+      "name": "Sandside Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sandside Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
     },
     {
       "id": "sandwood-bay",
@@ -20021,6 +22952,51 @@
       "referenceKm": 2.27
     },
     {
+      "id": "scarborough-north-bay",
+      "name": "Scarborough North Bay",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Scarborough North Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "scarborough-south-bay",
+      "name": "Scarborough South Bay",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Scarborough South Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "scratby",
+      "name": "Scratby",
+      "country": "United Kingdom",
+      "region": "Suffolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Scratby"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
       "id": "seacliff-beach",
       "name": "Seacliff Beach",
       "country": "United Kingdom",
@@ -20066,6 +23042,36 @@
       "forecastName": "Seaton",
       "referenceRegion": "South Cornwall",
       "referenceKm": 0.07
+    },
+    {
+      "id": "seaton-carew",
+      "name": "Seaton Carew",
+      "country": "United Kingdom",
+      "region": "County Durham",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Seaton Carew"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "seaton-sluice",
+      "name": "Seaton Sluice",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Seaton Sluice"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "seatown-beach",
@@ -20177,6 +23183,21 @@
       "referenceKm": 0
     },
     {
+      "id": "shitpipe",
+      "name": "Shitpipe",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Shitpipe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "shooting-gallery",
       "name": "Shooting Gallery",
       "country": "Spain",
@@ -20192,6 +23213,36 @@
       "referenceKm": 0
     },
     {
+      "id": "shoreham",
+      "name": "Shoreham",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Shoreham"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "sidmouth",
+      "name": "Sidmouth",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sidmouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Devon",
+      "referenceKm": 0
+    },
+    {
       "id": "sierra-de-irta",
       "name": "Sierra de Irta",
       "country": "Spain",
@@ -20204,6 +23255,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Valencia",
+      "referenceKm": 0
+    },
+    {
+      "id": "silos",
+      "name": "Silos",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Silos"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "silver-bay-holy-island",
+      "name": "Silver Bay (Holy Island)",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Silver Bay (Holy Island)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Anglesy",
       "referenceKm": 0
     },
     {
@@ -20237,6 +23318,21 @@
       "referenceKm": 0.53
     },
     {
+      "id": "sinclair-s-bay",
+      "name": "Sinclair's Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sinclair's Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "sion-sur-l-ocean",
       "name": "Sion sur l'Ocean",
       "country": "France",
@@ -20249,6 +23345,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "skarfskerry",
+      "name": "Skarfskerry",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Skarfskerry"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "skegness",
+      "name": "Skegness",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Skegness"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
       "referenceKm": 0
     },
     {
@@ -20266,6 +23392,51 @@
       "forecastName": "Sker",
       "referenceRegion": "South East",
       "referenceKm": 0.69
+    },
+    {
+      "id": "skerrys",
+      "name": "Skerrys",
+      "country": "United Kingdom",
+      "region": "East Riding of Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Skerrys"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "skinningrove",
+      "name": "Skinningrove",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Skinningrove"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "skirza-harbour",
+      "name": "Skirza Harbour",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Skirza Harbour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "slade-bay",
@@ -20326,6 +23497,21 @@
       "forecastName": "Smerwick Harbour",
       "referenceRegion": "Kerry",
       "referenceKm": 1.78
+    },
+    {
+      "id": "snab-point",
+      "name": "Snab Point",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Snab Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
     },
     {
       "id": "son-bou-168680340",
@@ -20421,6 +23607,21 @@
       "referenceKm": 1.06
     },
     {
+      "id": "south-shields",
+      "name": "South Shields",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "South Shields"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "southbourne-beach",
       "name": "Southbourne Beach",
       "country": "United Kingdom",
@@ -20452,6 +23653,36 @@
       "referenceKm": 0.25
     },
     {
+      "id": "southend-reef",
+      "name": "Southend Reef",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Southend Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
+      "id": "southerndown",
+      "name": "Southerndown",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Southerndown"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
       "id": "spanish-point",
       "name": "Spanish Point",
       "country": "Ireland",
@@ -20469,10 +23700,40 @@
       "referenceKm": 0.1
     },
     {
+      "id": "spekes-mills",
+      "name": "Spekes Mills",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Spekes Mills"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
+    },
+    {
+      "id": "spey-bay",
+      "name": "Spey Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Spey Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "spittal-beach",
       "name": "Spittal Beach",
       "country": "United Kingdom",
-      "region": "Tyne and Wear",
+      "region": "Northumberland",
       "sources": [
         "surfline"
       ],
@@ -20482,6 +23743,51 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.15
+    },
+    {
+      "id": "st-agnes",
+      "name": "St Agnes",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Agnes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-andrews",
+      "name": "St Andrews",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Andrews"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "st-combs",
+      "name": "St Combs",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Combs"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "st-cyprien",
@@ -20586,6 +23892,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Vendee",
+      "referenceKm": 0
+    },
+    {
+      "id": "staithes",
+      "name": "Staithes",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Staithes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "stamco",
+      "name": "Stamco",
+      "country": "United Kingdom",
+      "region": "East Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Stamco"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
       "referenceKm": 0
     },
     {
@@ -20746,6 +24082,36 @@
       "referenceKm": 0.14
     },
     {
+      "id": "sumpters",
+      "name": "Sumpters",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sumpters"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "sunnyside-bay",
+      "name": "Sunnyside Bay",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sunnyside Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "sutton-cross",
       "name": "Sutton Cross",
       "country": "Ireland",
@@ -20759,6 +24125,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.57
+    },
+    {
+      "id": "sutton-on-sea",
+      "name": "Sutton-on-Sea",
+      "country": "United Kingdom",
+      "region": "Lincolnshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sutton-on-Sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
     },
     {
       "id": "swanage-beach",
@@ -20794,6 +24175,21 @@
       "referenceKm": 0.06
     },
     {
+      "id": "swansea-bay-harbour-wall",
+      "name": "Swansea Bay Harbour Wall",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Swansea Bay Harbour Wall"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
       "id": "swansea-beach",
       "name": "Swansea Beach",
       "country": "United Kingdom",
@@ -20809,6 +24205,21 @@
       "referenceKm": 1.82
     },
     {
+      "id": "talisker-bay-skye",
+      "name": "Talisker Bay (Skye)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Talisker Bay (Skye)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
       "id": "tamaris-cote-d-azur",
       "name": "Tamaris",
       "country": "France",
@@ -20821,6 +24232,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
+      "referenceKm": 0
+    },
+    {
+      "id": "tang-head",
+      "name": "Tang Head",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tang Head"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0
     },
     {
@@ -20870,6 +24296,38 @@
       "referenceKm": 0
     },
     {
+      "id": "the-boiler",
+      "name": "The Boiler",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Boiler"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-bowl",
+      "name": "The Bowl / The Cove / The Left",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Bowl",
+        "The Cove",
+        "The Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
       "id": "the-bubble",
       "name": "The Bubble",
       "country": "Spain",
@@ -20900,6 +24358,97 @@
       "referenceKm": 0
     },
     {
+      "id": "the-cove-north-east-england",
+      "name": "The Cove",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Cove"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-cribber",
+      "name": "The Cribber / Fistral-North",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Cribber",
+        "Fistral-North"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-gare",
+      "name": "The Gare",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Gare"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-harbour",
+      "name": "The Harbour",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Harbour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-hough-tiree",
+      "name": "The Hough (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Hough (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-knap",
+      "name": "The Knap",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Knap"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South East",
+      "referenceKm": 0
+    },
+    {
       "id": "the-long-strand",
       "name": "The Long Strand",
       "country": "Ireland",
@@ -20917,6 +24466,81 @@
       "referenceKm": 0.21
     },
     {
+      "id": "the-maze-tiree",
+      "name": "The Maze (Tiree)",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Maze (Tiree)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-pole",
+      "name": "The Pole",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Pole"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-spur",
+      "name": "The Spur",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Spur"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "three-cliffs-bay",
+      "name": "Three Cliffs Bay",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Three Cliffs Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
+      "id": "three-peaks",
+      "name": "Three Peaks",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Three Peaks"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Gower",
+      "referenceKm": 0
+    },
+    {
       "id": "three-rocks",
       "name": "Three Rocks",
       "country": "France",
@@ -20929,6 +24553,52 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "thurlestone-reef",
+      "name": "Thurlestone Reef",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Thurlestone Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Devon",
+      "referenceKm": 0
+    },
+    {
+      "id": "thurso-beach",
+      "name": "Thurso Beach / Thurso Reef",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Thurso Beach",
+        "Thurso Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "thurso-east",
+      "name": "Thurso East",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Thurso East"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - North Coast",
       "referenceKm": 0
     },
     {
@@ -21330,6 +25000,21 @@
       "referenceKm": 0.3
     },
     {
+      "id": "trebarwith-strand",
+      "name": "Trebarwith Strand",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Trebarwith Strand"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "trecco-bay",
       "name": "Trecco Bay",
       "country": "United Kingdom",
@@ -21534,6 +25219,36 @@
       "referenceKm": 1.49
     },
     {
+      "id": "tynemouth-longsands",
+      "name": "Tynemouth Longsands",
+      "country": "United Kingdom",
+      "region": "Tyne and Wear",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tynemouth Longsands"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
+      "id": "tywyn",
+      "name": "Tywyn",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tywyn"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mid Wales",
+      "referenceKm": 0
+    },
+    {
       "id": "vagabundo",
       "name": "Vagabundo",
       "country": "Spain",
@@ -21627,6 +25342,66 @@
       "referenceKm": 0
     },
     {
+      "id": "walberswick",
+      "name": "Walberswick",
+      "country": "United Kingdom",
+      "region": "Suffolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Walberswick"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
+      "id": "walcott",
+      "name": "Walcott",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Walcott"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
+      "id": "walton-on-the-naze",
+      "name": "Walton-On-The-Naze",
+      "country": "United Kingdom",
+      "region": "Essex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Walton-On-The-Naze"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
+      "id": "wansbeck-estuary",
+      "name": "Wansbeck Estuary",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wansbeck Estuary"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "watergate-beach",
       "name": "Watergate Beach",
       "country": "United Kingdom",
@@ -21641,6 +25416,21 @@
       "forecastName": "Watergate Bay",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.02
+    },
+    {
+      "id": "wells-next-the-sea",
+      "name": "Wells-next-the-sea",
+      "country": "United Kingdom",
+      "region": "Norfolk",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wells-next-the-sea"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "East Anglia",
+      "referenceKm": 0
     },
     {
       "id": "wembury-beach",
@@ -21671,6 +25461,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Landes",
+      "referenceKm": 0
+    },
+    {
+      "id": "west-point",
+      "name": "West Point",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "West Point"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0
     },
     {
@@ -21706,6 +25511,21 @@
       "referenceKm": 0.31
     },
     {
+      "id": "west-wittering",
+      "name": "West Wittering",
+      "country": "United Kingdom",
+      "region": "West Sussex",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "West Wittering"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
       "id": "westdale-bay",
       "name": "Westdale Bay",
       "country": "United Kingdom",
@@ -21723,6 +25543,21 @@
       "referenceKm": 0.03
     },
     {
+      "id": "westport",
+      "name": "Westport",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Westport"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kintyre",
+      "referenceKm": 0
+    },
+    {
       "id": "westport-harbour",
       "name": "Westport Harbour",
       "country": "Ireland",
@@ -21736,6 +25571,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.41
+    },
+    {
+      "id": "westward-ho",
+      "name": "Westward Ho",
+      "country": "United Kingdom",
+      "region": "Devon",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Westward Ho"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North Devon",
+      "referenceKm": 0
     },
     {
       "id": "whipsiderry-beach",
@@ -21768,6 +25618,21 @@
       "referenceKm": 1.57
     },
     {
+      "id": "whitby",
+      "name": "Whitby",
+      "country": "United Kingdom",
+      "region": "North Yorkshire",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Whitby"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "white-park-bay",
       "name": "White Park Bay",
       "country": "United Kingdom",
@@ -21783,6 +25648,21 @@
       "referenceKm": 0.58
     },
     {
+      "id": "white-pole",
+      "name": "White Pole",
+      "country": "United Kingdom",
+      "region": "Northumberland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "White Pole"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "North East England",
+      "referenceKm": 0
+    },
+    {
       "id": "white-rock-beach",
       "name": "White Rock Beach",
       "country": "Ireland",
@@ -21796,6 +25676,36 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.09
+    },
+    {
+      "id": "white-rocks",
+      "name": "White Rocks",
+      "country": "United Kingdom",
+      "region": "Northern Ireland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "White Rocks"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Antrim",
+      "referenceKm": 0
+    },
+    {
+      "id": "white-sands",
+      "name": "White Sands",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "White Sands"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "white-strand",
@@ -21826,6 +25736,21 @@
       "forecastName": "Killard",
       "referenceRegion": "Clare",
       "referenceKm": 0.28
+    },
+    {
+      "id": "whitecliff-bay",
+      "name": "Whitecliff Bay",
+      "country": "United Kingdom",
+      "region": "Isle of Wight",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Whitecliff Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Isle of Wight",
+      "referenceKm": 0
     },
     {
       "id": "whitesands-beach",
@@ -21876,6 +25801,21 @@
       "referenceKm": 0.68
     },
     {
+      "id": "whitsand-bay-and-tregantle",
+      "name": "Whitsand Bay and Tregantle",
+      "country": "United Kingdom",
+      "region": "Cornwall",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Whitsand Bay and Tregantle"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "South Cornwall",
+      "referenceKm": 0
+    },
+    {
       "id": "widemouth-sands",
       "name": "Widemouth Sands",
       "country": "United Kingdom",
@@ -21904,6 +25844,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Nord - Pas de Calais",
+      "referenceKm": 0
+    },
+    {
+      "id": "wisemans",
+      "name": "Wisemans",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wisemans"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "wisemans-bridge",
+      "name": "Wisemans Bridge",
+      "country": "United Kingdom",
+      "region": "Wales",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Wisemans Bridge"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Pembrokeshire",
       "referenceKm": 0
     },
     {
@@ -22014,6 +25984,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.32
+    },
+    {
+      "id": "yellowcraig-beach",
+      "name": "Yellowcraig Beach",
+      "country": "United Kingdom",
+      "region": "Scotland",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Yellowcraig Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
     },
     {
       "id": "yport",

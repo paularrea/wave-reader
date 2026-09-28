@@ -506,9 +506,8 @@ export function DataInfoPanel() {
             >
               <ul className="space-y-2">
                 <Fact term="Missing breaks">
-                  Outside Spain and France, a break OpenStreetMap does not map under its name is not
-                  listed yet, however well known: reef and point breaks, and much of Scotland and the
-                  west of Ireland.
+                  In Ireland, a break OpenStreetMap does not map under its name is not listed yet,
+                  however well known: reef and point breaks along the west coast.
                 </Fact>
                 <Fact term="Break positions">
                   A break placed from surf-forecast.com is accurate to about half a kilometre, the

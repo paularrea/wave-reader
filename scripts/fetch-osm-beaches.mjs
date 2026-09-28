@@ -12,6 +12,7 @@ import { writeFile, readFile, mkdir } from 'node:fs/promises';
 import { appendFileSync } from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { overpass, setOverpassLogger } from './lib/overpass.mjs';
+import { ceremonialCountiesOf } from './lib/communities.mjs';
 
 const OUT_DIR = new URL('../src/data/', import.meta.url);
 const OUT_PATH = new URL('../src/data/osm-beaches.raw.json', import.meta.url);
@@ -115,9 +116,12 @@ const REGIONS = [
    * level 5 in England is combined authorities, which do not even cover
    * Cornwall. Querying 48 counties one by one against an Overpass that is
    * returning 504s is not viable, so each beach is assigned its county with
-   * batched is_in lookups instead.
+   * batched lookups instead (`ceremonialCountiesOf`: the ceremonial county,
+   * or the administrative one where OSM has no ceremonial relation -- Norfolk,
+   * Suffolk, Northumberland). REASSIGN=England re-runs that on the places
+   * already fetched, without querying their beaches again.
    */
-  { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: { filter: '["boundary"="ceremonial"]' } },
+  { iso: 'GB-ENG', name: 'England', country: 'United Kingdom', level: 4, subdivide: { counties: true } },
 
   /**
    * Portugal, as Ireland: the mainland is one bounding box split by district
@@ -275,7 +279,25 @@ async function assignByNominatim(beaches, names, parentName) {
  * beaches in inland counties too, and those are dropped here. `within` (an
  * ISO 3166-1 code) drops whatever a bounding-box query caught across a border.
  */
-async function assignSubdivisions(beaches, { filter, names, within }, parentName) {
+async function assignSubdivisions(beaches, { filter, names, within, counties }, parentName) {
+  if (counties) {
+    const found = await ceremonialCountiesOf(beaches, overpass, log);
+    beaches.forEach((b, i) => {
+      if (found.has(i)) b.community = found.get(i);
+    });
+    const unresolved = beaches.filter(b => b.community === parentName);
+    const resolved = beaches.filter(b => b.community !== parentName);
+    for (const beach of unresolved) {
+      let best = null;
+      for (const other of resolved) {
+        const d = (other.lat - beach.lat) ** 2 + ((other.lon - beach.lon) * Math.cos((beach.lat * Math.PI) / 180)) ** 2;
+        if (!best || d < best.d) best = { d, community: other.community };
+      }
+      if (best) beach.community = best.community;
+    }
+    log(`    ${parentName}: ${resolved.length} by county boundary, ${unresolved.length} by nearest neighbour`);
+    return beaches;
+  }
   const inside = new Set();
   for (let start = 0; start < beaches.length; start += SUBDIVISION_BATCH) {
     const batch = beaches.slice(start, start + SUBDIVISION_BATCH);
@@ -428,8 +450,29 @@ async function verify() {
   await main();
 }
 
+/**
+ * REASSIGN=England splits the places already fetched for a subdivided region
+ * again, after the subdivision rule changed, without re-querying the region.
+ */
+async function reassign(names) {
+  const beaches = JSON.parse(await readFile(OUT_PATH, 'utf8'));
+  for (const name of names) {
+    const region = REGIONS.find(r => r.name === name && r.subdivide);
+    if (!region) throw new Error(`${name} is not a subdivided region`);
+    const mine = beaches.filter(b => b.parentRegion === name);
+    const before = new Map(mine.map(b => [b, b.community]));
+    mine.forEach(b => (b.community = name));
+    await assignSubdivisions(mine, region.subdivide, name);
+    const moved = mine.filter(b => before.get(b) !== b.community);
+    log(`${name}: ${moved.length} of ${mine.length} places change region`);
+    for (const b of moved) log(`    ${b.name}: ${before.get(b)} -> ${b.community}`);
+  }
+  await writeFile(OUT_PATH, JSON.stringify(beaches, null, 1) + '\n');
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
+  if (process.env.REASSIGN) return reassign(process.env.REASSIGN.split(',').map(r => r.trim()));
 
   // Resume support: regions already in the file are skipped, so adding a
   // country does not mean re-querying everything Overpass already gave us.

@@ -26,6 +26,8 @@ import { setTimeout as sleep } from 'node:timers/promises';
 import { Bathymetry } from './lib/bathymetry.mjs';
 import { probePoints, analyse, slugify, IDEAL_HEIGHT } from './lib/exposure.mjs';
 import { nextUtcHour, waveHeights } from './lib/marine.mjs';
+import { overpass } from './lib/overpass.mjs';
+import { ceremonialCountiesOf } from './lib/communities.mjs';
 import { FORECAST_REGIONS, FULL_LIST_COUNTRIES, normalise, namesAgree, distanceKm } from './lib/references.mjs';
 
 const SPOTS = new URL('../src/data/spots.json', import.meta.url);
@@ -34,6 +36,7 @@ const ATTESTED = new URL('../src/data/surf-spots.attested.json', import.meta.url
 const CHECK = new URL('../src/data/spots.coordinate-check.json', import.meta.url);
 const ATTESTATION_REPORT = new URL('../.cache/benchmark/attestation-report.json', import.meta.url);
 const REPORT = new URL('../.cache/benchmark/reference-breaks-report.json', import.meta.url);
+const COUNTY_CACHE = new URL('../.cache/english-counties.json', import.meta.url);
 
 /**
  * An attested place this close with a name that agrees is the same break
@@ -73,9 +76,10 @@ const separated = new Set((report.secondBreaks ?? []).map(b => `${b.region}|${b.
 const skipped = [];
 const candidates = [];
 for (const b of report.forecastBreaks) {
-  if (!inScope(b.country)) continue;
   const ours = FORECAST_REGIONS[b.region];
   if (!ours) continue; // a coast this catalogue does not cover
+  // Their Ireland page carries Antrim and Londonderry, which are ours in the UK.
+  if (!inScope(countryOfCommunity.get(ours[0]) ?? b.country)) continue;
   if (b.placeId && published(b.placeId)) continue;
   if (b.lat === null) {
     skipped.push({ ...b, reason: 'no coordinate read from its page' });
@@ -108,7 +112,8 @@ for (const b of report.forecastBreaks) {
     }
   }
   // Their region is ours when it maps to one; when it straddles several (North
-  // East England), the region of the nearest spot among them.
+  // East England), the region of the nearest spot among them -- or, in England,
+  // the county the point is in (below).
   let community = ours.length === 1 ? ours[0] : null;
   if (!community) {
     const nearest = base
@@ -116,10 +121,24 @@ for (const b of report.forecastBreaks) {
       .sort((x, y) => distanceKm(at, x.coordinates) - distanceKm(at, y.coordinates))[0];
     community = nearest?.community ?? ours[0];
   }
-  // Their Ireland page carries Antrim and Londonderry, which are ours in the UK.
   const country = countryOfCommunity.get(community) ?? b.country;
-  candidates.push({ ...b, community, country, lat: b.lat, lon: b.lon, coordinates: at });
+  candidates.push({ ...b, community, country, lat: b.lat, lon: b.lon, coordinates: at, straddles: ours.length > 1 });
 }
+
+// England's counties by boundary: OSM names no beach in Norfolk, Suffolk or
+// Northumberland, so the nearest spot put Cromer in Essex and Bamburgh in Tyne
+// and Wear.
+// Cached by coordinate (not versioned): a boundary does not move between runs.
+const english = candidates.filter(c => c.country === 'United Kingdom' && c.straddles);
+const countyCache = existsSync(COUNTY_CACHE) ? JSON.parse(readFileSync(COUNTY_CACHE)) : {};
+const pointKey = c => `${c.lat},${c.lon}`;
+const unknown = english.filter(c => !(pointKey(c) in countyCache));
+if (unknown.length) {
+  const counties = await ceremonialCountiesOf(unknown, overpass);
+  unknown.forEach((c, i) => (countyCache[pointKey(c)] = counties.get(i) ?? null));
+  writeFileSync(COUNTY_CACHE, JSON.stringify(countyCache));
+}
+for (const c of english) if (countyCache[pointKey(c)]) c.community = countyCache[pointKey(c)];
 
 console.log(`${candidates.length} surf-forecast breaks with no OSM place in ${FULL_LIST_COUNTRIES.join(', ')}`);
 
