@@ -153,3 +153,107 @@ export function regionBounds(
     north: Math.max(...lats),
   };
 }
+
+/**
+ * Below this zoom the map shows only the picked region; from it up, every
+ * region with spots near the viewport, so panning from Cataluña to the Basque
+ * coast brings the Basque spots with it. Zoomed out further than this the view
+ * spans a country or more, and scoring all of it would spend the upstream
+ * quota on spots too small to tell apart -- there the region picker decides.
+ */
+export const AUTO_REGION_ZOOM = 7;
+
+/**
+ * The closest the app ever opens: markers are up to 30 px across, and at zoom
+ * 11 a kilometre of coast is about 14 px on a phone.
+ */
+export const CLOSE_ZOOM = 11;
+
+/** How many spots the opening view frames around where it opens. */
+const OPENING_SPOTS = 8;
+
+export interface ViewBounds {
+  west: number;
+  south: number;
+  east: number;
+  north: number;
+}
+
+/** A box widened by `margin` of its own span on each side. */
+export function widen(bounds: ViewBounds, margin: number): ViewBounds {
+  const lat = (bounds.north - bounds.south) * margin;
+  const lon = (bounds.east - bounds.west) * margin;
+  return { west: bounds.west - lon, south: bounds.south - lat, east: bounds.east + lon, north: bounds.north + lat };
+}
+
+/**
+ * The regions with spots inside `bounds`, most spots first. Counted on the
+ * coarse points every client already has, so it needs no country index.
+ */
+export function regionsInBounds(bounds: ViewBounds): Array<{ country: string; region: string; spots: number }> {
+  const counts = new Map<string, { country: string; region: string; spots: number }>();
+  for (const point of points) {
+    const [lat, lon] = point;
+    if (lat < bounds.south || lat > bounds.north || lon < bounds.west || lon > bounds.east) continue;
+    const region = regionNameAt(point);
+    const entry = counts.get(region) ?? { country: countries[point[2]].name, region, spots: 0 };
+    entry.spots += 1;
+    counts.set(region, entry);
+  }
+  return [...counts.values()].sort((a, b) => b.spots - a.spots || a.region.localeCompare(b.region, 'es'));
+}
+
+/** How far around a spot its neighbours are counted when picking where to open. */
+const CLUSTER_KM = 25;
+
+/**
+ * Where to open on a region: its nearest spot to `near` when given (the
+ * surfer's own coast), otherwise the spot with most neighbours -- the stretch
+ * of coast where the region's breaks are, not the middle of its bounding box,
+ * which for Cataluña is inland and for the Canaries is open sea.
+ */
+export function openingPoint(region: string, near?: { lat: number; lon: number } | null): { lat: number; lon: number } | null {
+  const inRegion = points.filter(p => regionNameAt(p) === region);
+  if (inRegion.length === 0) return null;
+  if (near) {
+    let best = inRegion[0];
+    let bestKm = Infinity;
+    for (const p of inRegion) {
+      const km = haversineKm(near.lat, near.lon, p[0], p[1]);
+      if (km < bestKm) {
+        best = p;
+        bestKm = km;
+      }
+    }
+    return { lat: best[0], lon: best[1] };
+  }
+  let densest = inRegion[0];
+  let most = -1;
+  for (const p of inRegion) {
+    const neighbours = inRegion.filter(q => haversineKm(p[0], p[1], q[0], q[1]) <= CLUSTER_KM).length;
+    if (neighbours > most) {
+      densest = p;
+      most = neighbours;
+    }
+  }
+  return { lat: densest[0], lon: densest[1] };
+}
+
+/**
+ * What the app frames when it opens: the handful of spots nearest the opening
+ * point, whatever region they are in. On the Basque coast that is a few
+ * kilometres; on Cataluña's sparser one a stretch of coast -- close in either
+ * way, with room between markers, instead of a whole region stacked into dots.
+ */
+export function openingBounds(region: string, near?: { lat: number; lon: number } | null): ViewBounds | null {
+  const at = openingPoint(region, near);
+  if (!at) return null;
+  const nearest = points
+    .map(p => ({ p, km: haversineKm(at.lat, at.lon, p[0], p[1]) }))
+    .sort((a, b) => a.km - b.km)
+    .slice(0, OPENING_SPOTS)
+    .map(({ p }) => p);
+  const lats = [at.lat, ...nearest.map(p => p[0])];
+  const lons = [at.lon, ...nearest.map(p => p[1])];
+  return { west: Math.min(...lons), south: Math.min(...lats), east: Math.max(...lons), north: Math.max(...lats) };
+}

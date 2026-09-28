@@ -247,7 +247,7 @@ Ireland. Every other country is published by its own regions.
 
 **Data structure**: one file per country, because a country is the unit of growth.
 `spot-catalogue.ts` is **server-only** (full configs, imported by the forecast routes);
-the browser gets `useCountryIndex` (dynamic import of the country in focus) plus
+the browser gets `useCountryIndexes` (dynamic import of each country the map reaches) plus
 `regions.json`, the only catalogue file always downloaded — countries, regions, counts,
 and one coarse point per spot so geolocation still resolves to the nearest *spot*.
 
@@ -336,6 +336,24 @@ and an undifferentiated cloud of dots. Country and region are always both set, d
 from geolocation via the nearest catalogued spot (`src/services/regions.ts`) — nearest
 spot beats bounding boxes because regions interlock along the coast — and defaulting to
 Cataluña. A manual pick is never overwritten by a late geolocation callback.
+
+**Regions follow the map.** From `AUTO_REGION_ZOOM` (7) up, the map scores every region
+with spots near the viewport, counted on `regions.json`'s coarse points (so a region is
+found before its country's index loads), and loads each country's index as the view
+reaches it: panning from the Basque coast into France brings the French spots, and a
+view across a border shows both. When the surfer moves the map (a move with an input
+event; `fitBounds`/`easeTo` carry none), the region with most spots strictly on screen
+becomes the picked one through `followRegion`, which never moves the camera. Only a
+`Framing` request in the store moves it: a region picked from the list (`fitBounds` of
+the region) or the surfer's coast from geolocation or "my location". Below zoom 7 the
+view spans a country and only the picked region is scored; the empty state says to zoom
+in or pick a region. Ratings and chunks are keyed by spot and `region#chunk` and survive a
+region change; only a level change clears them.
+
+**Opening view.** The app opens framed on the eight spots nearest the surfer (or the
+region's busiest stretch without geolocation), capped at `CLOSE_ZOOM` (11), never
+further out than zoom 8: close enough that markers do not overlap, on a coast rather
+than a region's bounding box.
 
 The map scores **every spot near the viewport** through `/api/forecast/batch`: each
 region's spots are ordered by id and cut into fixed chunks of 50

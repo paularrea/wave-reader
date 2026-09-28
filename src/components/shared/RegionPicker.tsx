@@ -33,8 +33,15 @@ function ScoreChip({ stars }: { stars: number }) {
  * time. Replaces two native selects that took the bottom panel's best space.
  */
 export function RegionPicker() {
-  const { selectedCountry, selectedRegion, setSelectedCountry, setSelectedRegion, regionBestToday, setUserLocation } =
-    useStore();
+  const {
+    selectedCountry,
+    selectedRegion,
+    setSelectedCountry,
+    setSelectedRegion,
+    regionBestToday,
+    setUserLocation,
+    goToLocation,
+  } = useStore();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [country, setCountry] = useState(selectedCountry);
@@ -71,7 +78,8 @@ export function RegionPicker() {
         const { latitude, longitude } = pos.coords;
         setUserLocation(latitude, longitude);
         const nearest = locationDefaults(latitude, longitude);
-        choose(nearest.region, nearest.country);
+        goToLocation(nearest.country, nearest.region, { lat: latitude, lon: longitude });
+        setOpen(false);
       },
       err => console.warn('Geolocation unavailable:', err.message)
     );

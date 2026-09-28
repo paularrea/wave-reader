@@ -1318,6 +1318,14 @@ test.describe('spec: region-selection / Mejores spots a la vista', () => {
     await page.goto('/');
     await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
     await expect(page.getByTestId('scoring-indicator')).toHaveCount(0, { timeout: 30_000 });
+    // Geolocation answers after the map opens on the default region, so the map
+    // glides to the Basque coast and scores what it reaches there: wait until
+    // no batch has been asked for in two seconds.
+    let last = -1;
+    while (last !== batches) {
+      last = batches;
+      await page.waitForTimeout(2000);
+    }
     const before = batches;
 
     for (const hour of ['10', '40', '100', '150']) {
@@ -1487,5 +1495,75 @@ test.describe('spec: appearance / Auto, claro u oscuro', () => {
     for (const icon of manifest.icons) {
       expect((await request.get(icon.src)).ok(), icon.src).toBe(true);
     }
+  });
+});
+
+test.describe('spec: region-selection / Las regiones siguen al mapa', () => {
+  const onScreenMarkers = (page: Page) =>
+    page.evaluate(() =>
+      [...document.querySelectorAll<HTMLElement>('[data-testid="spot-marker"]')]
+        .filter(el => {
+          const r = el.getBoundingClientRect();
+          return r.right > 0 && r.left < innerWidth && r.bottom > 0 && r.top < innerHeight;
+        })
+        .map(el => el.dataset.spotId!)
+    );
+
+  /** Drags the map by `dx` pixels at a third of its height, clear of the header and sheet. */
+  async function drag(page: Page, dx: number) {
+    const box = (await page.locator('.mapboxgl-map').boundingBox())!;
+    const y = box.y + box.height * 0.33;
+    const x = box.x + box.width / 2;
+    await page.mouse.move(x, y);
+    await page.mouse.down();
+    await page.mouse.move(x + dx, y, { steps: 10 });
+    await page.mouse.up();
+    await page.waitForTimeout(1200);
+  }
+
+  test('the app opens close in on the surfer\'s coast, not on the whole region', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'País Vasco');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(2000);
+
+    const inView = await onScreenMarkers(page);
+    const basque = spotIndex.filter(s => s.community === 'País Vasco').length;
+    expect(inView.length).toBeGreaterThan(1);
+    // Framed on a stretch of coast, so part of the region is off screen.
+    expect(inView.length).toBeLessThan(basque);
+  });
+
+  test('panning into France switches country and region, and brings French spots, with no pick', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+    await page.waitForTimeout(1500);
+
+    const button = page.getByTestId('region-button');
+    for (let i = 0; i < 10; i++) {
+      if ((await button.getAttribute('data-country')) === 'France') break;
+      await drag(page, -300); // the view moves east, towards Hendaye and Biarritz
+    }
+    await expect(button).toHaveAttribute('data-country', 'France');
+    await expect(button).toHaveAttribute('data-region', 'Nouvelle-Aquitaine');
+
+    const french = new Set(spotIndex.filter(s => s.country === 'France').map(s => s.id));
+    await expect
+      .poll(async () => (await onScreenMarkers(page)).some(id => french.has(id)), { timeout: 45_000 })
+      .toBe(true);
+  });
+
+  test('a region picked from the list stays picked while the map frames it', async ({ page }) => {
+    await stubForecast(page);
+    await page.goto('/');
+    await page.locator('[data-testid="spot-marker"]').first().waitFor({ state: 'attached', timeout: 45_000 });
+
+    await pickRegion(page, 'Cantabria');
+    await page.waitForTimeout(3000);
+    // The framing shows Asturias and the Basque coast at its edges; only the
+    // surfer moving the map may change the region.
+    await expect(page.getByTestId('region-button')).toHaveAttribute('data-region', 'Cantabria');
   });
 });

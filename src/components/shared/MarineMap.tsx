@@ -1,15 +1,25 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Navigation } from 'lucide-react';
 import { useStore } from '@/store/useStore';
 // The slim index, not the full catalogue: surf config and provenance are
 // server-side concerns and would otherwise ship in the JS bundle.
-import { useCountryIndex, type IndexSpot } from '@/hooks/useCountryIndex';
+import { useCountryIndexes, type IndexSpot } from '@/hooks/useCountryIndex';
 import { qualityStyle, QualityStyle } from '@/services/conditions';
-import { locationDefaults, regionBounds } from '@/services/regions';
+import {
+  AUTO_REGION_ZOOM,
+  CLOSE_ZOOM,
+  countryOfRegion,
+  locationDefaults,
+  openingBounds,
+  regionBounds,
+  regionsInBounds,
+  widen,
+  type ViewBounds,
+} from '@/services/regions';
 import { chunkIndexById } from '@/services/spot-batches';
 import { SpotHorizon, bestAt, bestByDay, ratingAt } from '@/services/map-summary';
 import { instantAt, utcMsAt, MAX_FORECAST_HOURS } from '@/services/timeline';
@@ -18,6 +28,13 @@ import { useTheme } from '@/hooks/useTheme';
 import { BrandMark } from './BrandMark';
 
 const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
+/** Room for the header above and the sheet below whatever is framed. */
+const FRAME_PADDING = { top: 90, bottom: 320, left: 40, right: 40 };
+
+const lngLatBox = (box: ViewBounds): [[number, number], [number, number]] => [
+  [box.west, box.south],
+  [box.east, box.north],
+];
 
 /** Must match the server's BATCH_SIZE so client and server cut the same chunks. */
 const BATCH_SIZE = 50;
@@ -71,15 +88,17 @@ export function MarineMap() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef(new Map<string, { marker: mapboxgl.Marker; el: HTMLElement }>());
-  /** Every hour of the horizon for the current region and level, keyed by spot id. */
+  /** Every hour of the horizon for each spot scored at the current level, keyed by spot id. */
   const horizonsRef = useRef(new Map<string, SpotHorizon>());
-  /** When each chunk was fetched; `0` while in flight. */
-  const chunksRef = useRef(new Map<number, number>());
-  /** Bumped whenever region or level change, so stale responses are ignored. */
+  /** When each chunk ("region#index") was fetched; `0` while in flight. */
+  const chunksRef = useRef(new Map<string, number>());
+  /** Bumped whenever the level changes, so stale responses are ignored. */
   const generationRef = useRef(0);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   /** Latest scoreVisible, for retries scheduled by an older closure. */
   const scoreVisibleRef = useRef<(() => Promise<void>) | null>(null);
+  /** Set when the surfer, not the app, started the move under way. */
+  const userMovedRef = useRef(false);
 
   const {
     userLocation,
@@ -91,52 +110,62 @@ export function MarineMap() {
     selectedCountry,
     selectedSpotId,
     resolveLocation,
-    setSelectedCountry,
-    setSelectedRegion,
+    goToLocation,
+    followRegion,
+    framing,
     spotUtcOffsetSeconds,
     setMapSummary,
     setRegionBestToday,
   } = useStore();
 
-  /** Only the selected country's spots are downloaded; the rest stay unfetched. */
-  const countrySpots = useCountryIndex(selectedCountry);
+  /**
+   * What the viewport covers. Zoomed in on a coast, the map scores every region
+   * with spots near it, so panning from one region into the next brings its
+   * spots along; zoomed out, only the picked region (see AUTO_REGION_ZOOM).
+   */
+  const [view, setView] = useState<{ zoomedIn: boolean; regions: string[] }>({ zoomedIn: false, regions: [] });
+  const activeKey = (view.zoomedIn ? view.regions : [selectedRegion]).join('|');
+  const activeRegions = useMemo(() => (activeKey ? activeKey.split('|') : []), [activeKey]);
+
+  /** Only the countries in play are downloaded; the rest stay unfetched. */
+  const spots = useCountryIndexes([selectedCountry, ...activeRegions.map(countryOfRegion)]);
   const { theme } = useTheme();
   /** The basemap the map was last given, so a theme change swaps it exactly once. */
   const styleRef = useRef<string | null>(null);
 
   const [loading, setLoading] = useState(true);
   /**
-   * In-flight chunks, labelled with the query they belong to. A stale label
-   * simply stops counting, so switching region mid-load can never leave the
-   * indicator stuck on screen.
+   * In-flight chunks, labelled with the level they were asked for. A stale
+   * label simply stops counting, so changing level mid-load can never leave
+   * the indicator stuck on screen.
    */
-  const queryKey = `${selectedRegion}|${userSkillLevel}`;
   const [pending, setPending] = useState<{ key: string; n: number }>({ key: '', n: 0 });
-  const pendingHere = pending.key === queryKey ? pending.n : 0;
+  const pendingHere = pending.key === userSkillLevel ? pending.n : 0;
   /** Spots in view with a rating, and whether the view has been scored at all. */
+  const queryKey = `${activeKey}|${userSkillLevel}`;
   const [inView, setInView] = useState<{ key: string; rated: number; scored: boolean }>({
     key: '',
     rated: 0,
     scored: false,
   });
 
-  const regionSpots = useCallback(
-    (): Spot[] => countrySpots.filter(spot => spot.community === selectedRegion),
-    [countrySpots, selectedRegion]
+  const activeSpots = useCallback(
+    (): Spot[] => spots.filter(spot => activeRegions.includes(spot.community)),
+    [spots, activeRegions]
   );
 
   /** Spots within the viewport widened by `margin`, so panning does not reveal bare sea. */
   const nearViewport = useCallback(
     (margin = VIEWPORT_MARGIN): Spot[] => {
       const map = mapRef.current;
-      const inRegion = regionSpots();
-      if (!map) return inRegion;
+      const inPlay = activeSpots();
+      if (!map) return inPlay;
       const bounds = map.getBounds();
-      if (!bounds) return inRegion;
+      if (!bounds) return inPlay;
 
       const latMargin = (bounds.getNorth() - bounds.getSouth()) * margin;
       const lonMargin = (bounds.getEast() - bounds.getWest()) * margin;
-      return inRegion.filter(
+      return inPlay.filter(
         s =>
           s.coordinates.lat >= bounds.getSouth() - latMargin &&
           s.coordinates.lat <= bounds.getNorth() + latMargin &&
@@ -144,7 +173,32 @@ export function MarineMap() {
           s.coordinates.lon <= bounds.getEast() + lonMargin
       );
     },
-    [regionSpots]
+    [activeSpots]
+  );
+
+  /**
+   * Reads the viewport after a move: which regions it reaches, and -- when the
+   * surfer moved it -- which one it mostly shows, which becomes the picked
+   * region without moving the camera. Counted on the coarse points every client
+   * has, so a region is found before its country's index is downloaded.
+   */
+  const readView = useCallback(
+    (userMoved: boolean) => {
+      const map = mapRef.current;
+      const b = map?.getBounds();
+      if (!map || !b) return;
+      const bounds: ViewBounds = { west: b.getWest(), south: b.getSouth(), east: b.getEast(), north: b.getNorth() };
+      const zoomedIn = map.getZoom() >= AUTO_REGION_ZOOM;
+      const regions = zoomedIn ? regionsInBounds(widen(bounds, VIEWPORT_MARGIN)).map(r => r.region) : [];
+      setView(prev =>
+        prev.zoomedIn === zoomedIn && prev.regions.join('|') === regions.join('|') ? prev : { zoomedIn, regions }
+      );
+      if (!zoomedIn || !userMoved) return;
+      // The region with most spots strictly on screen is the one the picker names.
+      const top = regionsInBounds(bounds)[0];
+      if (top && top.region !== useStore.getState().selectedRegion) followRegion(top.country, top.region);
+    },
+    [followRegion]
   );
 
   const targetMs = useCallback(
@@ -230,21 +284,30 @@ export function MarineMap() {
     setMapSummary({ best, bestByDay: byDay, rated });
     setInView({ key: queryKey, rated, scored: chunksRef.current.size > 0 });
 
-    // Today's best across the whole loaded region, for the region picker.
-    const loaded = [...horizonsRef.current.values()];
-    if (loaded.length > 0) {
+    // Today's best in each region scored so far, for the region picker.
+    const byRegion = new Map<string, SpotHorizon[]>();
+    for (const spot of activeSpots()) {
+      const horizon = horizonsRef.current.get(spot.id);
+      if (!horizon) continue;
+      if (!byRegion.has(spot.community)) byRegion.set(spot.community, []);
+      byRegion.get(spot.community)!.push(horizon);
+    }
+    if (byRegion.size > 0) {
       const today = dayOf(0);
       let hours = 0;
       while (hours < hourCount && dayOf(hours) === today) hours++;
-      const regionToday = bestByDay(loaded, hours, at, dayOf)[today];
-      if (regionToday !== undefined && regionToday >= 0) setRegionBestToday(selectedRegion, regionToday);
+      for (const [region, loaded] of byRegion) {
+        const regionToday = bestByDay(loaded, hours, at, dayOf)[today];
+        if (regionToday !== undefined && regionToday >= 0) setRegionBestToday(region, regionToday);
+      }
     }
-  }, [nearViewport, spotUtcOffsetSeconds, currentHour, setMapSummary, setRegionBestToday, selectedRegion, queryKey]);
+  }, [nearViewport, activeSpots, spotUtcOffsetSeconds, currentHour, setMapSummary, setRegionBestToday, queryKey]);
 
   /**
    * Scores every spot near the viewport, a chunk at a time. Chunks are fixed
    * per region (see spot-batches) and carry the whole horizon, so a chunk is
-   * requested once per hour of model data whatever the slider does.
+   * requested once per hour of model data whatever the slider does -- and once
+   * whichever region the map was following when it was fetched.
    */
   const scoreVisible = useCallback(async () => {
     const map = mapRef.current;
@@ -255,11 +318,15 @@ export function MarineMap() {
     const generation = generationRef.current;
     const now = Date.now();
 
-    const chunkOf = chunkIndexById(countrySpots, selectedRegion, BATCH_SIZE);
-    const needed = [
-      ...new Set(nearViewport().map(s => chunkOf.get(s.id)).filter((c): c is number => c !== undefined)),
-    ].filter(c => {
-      const fetchedAt = chunksRef.current.get(c);
+    const chunkMaps = new Map<string, Map<string, number>>();
+    const wanted = new Map<string, { region: string; chunk: number }>();
+    for (const spot of nearViewport()) {
+      if (!chunkMaps.has(spot.community)) chunkMaps.set(spot.community, chunkIndexById(spots, spot.community, BATCH_SIZE));
+      const chunk = chunkMaps.get(spot.community)!.get(spot.id);
+      if (chunk !== undefined) wanted.set(`${spot.community}#${chunk}`, { region: spot.community, chunk });
+    }
+    const needed = [...wanted].filter(([key]) => {
+      const fetchedAt = chunksRef.current.get(key);
       if (fetchedAt === undefined) return true;
       return fetchedAt !== 0 && now - fetchedAt > CHUNK_FRESH_MS;
     });
@@ -268,20 +335,20 @@ export function MarineMap() {
       publishSummary();
       return;
     }
-    needed.forEach(c => chunksRef.current.set(c, 0));
-    const key = queryKey;
-    setPending(p => ({ key, n: (p.key === key ? p.n : 0) + needed.length }));
+    needed.forEach(([key]) => chunksRef.current.set(key, 0));
+    const level = userSkillLevel;
+    setPending(p => ({ key: level, n: (p.key === level ? p.n : 0) + needed.length }));
 
-    const names = new Map(regionSpots().map(s => [s.id, s.name]));
+    const names = new Map(spots.map(s => [s.id, s.name]));
 
-    await mapWithLimit(needed, MAX_CONCURRENT_CHUNKS, async chunk => {
+    await mapWithLimit(needed, MAX_CONCURRENT_CHUNKS, async ([chunkKey, { region, chunk }]) => {
       try {
         const res = await fetch(
-          `/api/forecast/batch?region=${encodeURIComponent(selectedRegion)}&chunk=${chunk}&level=${userSkillLevel}`
+          `/api/forecast/batch?region=${encodeURIComponent(region)}&chunk=${chunk}&level=${level}`
         );
         if (generation !== generationRef.current) return;
         if (!res.ok) {
-          chunksRef.current.delete(chunk);
+          chunksRef.current.delete(chunkKey);
           // Retry by itself: without this, a 429 left a patch of the map empty
           // until the user happened to pan.
           setTimeout(() => {
@@ -308,16 +375,16 @@ export function MarineMap() {
             danger: r.danger ?? [],
           });
         }
-        chunksRef.current.set(chunk, Date.now());
+        chunksRef.current.set(chunkKey, Date.now());
         reconcileMarkers();
         publishSummary();
       } catch {
-        if (generation === generationRef.current) chunksRef.current.delete(chunk);
+        if (generation === generationRef.current) chunksRef.current.delete(chunkKey);
       } finally {
-        setPending(p => (p.key === key ? { key, n: Math.max(0, p.n - 1) } : p));
+        setPending(p => (p.key === level ? { key: level, n: Math.max(0, p.n - 1) } : p));
       }
     });
-  }, [nearViewport, reconcileMarkers, publishSummary, regionSpots, countrySpots, selectedRegion, selectedSpotId, userSkillLevel, queryKey]);
+  }, [nearViewport, reconcileMarkers, publishSummary, spots, selectedSpotId, userSkillLevel]);
 
   useEffect(() => {
     scoreVisibleRef.current = scoreVisible;
@@ -330,11 +397,15 @@ export function MarineMap() {
     // Read from the page, not the hook: on the first effect after hydration the
     // hook can still hold the server's guess.
     styleRef.current = MAP_STYLE[currentTheme()];
+    // Open close in, where the first framing will settle, rather than on the
+    // whole country: nothing is scored for a view nobody asked for.
+    const opening = framing.kind === 'open' ? openingBounds(framing.region, framing.near ?? userLocation) : null;
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: styleRef.current,
-      center: userLocation ? [userLocation.lon, userLocation.lat] : SPAIN_CENTER,
-      zoom: userLocation ? 8 : 5,
+      ...(opening
+        ? { bounds: lngLatBox(opening), fitBoundsOptions: { padding: FRAME_PADDING, maxZoom: CLOSE_ZOOM } }
+        : { center: SPAIN_CENTER, zoom: 5 }),
       attributionControl: false,
       // Mapbox's terms require the logo and credits to stay visible, so they sit
       // in the quietest corner and the sheet is kept off them (see globals.css).
@@ -352,7 +423,7 @@ export function MarineMap() {
           const { latitude, longitude } = pos.coords;
           setUserLocation(latitude, longitude);
           const { country, region } = locationDefaults(latitude, longitude);
-          resolveLocation(country, region);
+          resolveLocation(country, region, { lat: latitude, lon: longitude });
         },
         err => console.warn('Geolocation unavailable:', err.message)
       );
@@ -390,13 +461,14 @@ export function MarineMap() {
     map.setStyle(wanted);
   }, [theme]);
 
-  // A new region or level invalidates every rating and fetched chunk. The hour
-  // does not: every chunk already holds the whole horizon.
+  // A new level invalidates every rating and fetched chunk. The hour does not --
+  // every chunk already holds the whole horizon -- and neither does the region:
+  // a spot's rating is the same whichever region the map is following.
   useEffect(() => {
     generationRef.current += 1;
     horizonsRef.current.clear();
     chunksRef.current.clear();
-  }, [selectedRegion, userSkillLevel]);
+  }, [userSkillLevel]);
 
   useEffect(() => {
     if (!mapRef.current || loading) return;
@@ -405,44 +477,68 @@ export function MarineMap() {
   }, [reconcileMarkers, scoreVisible, loading]);
 
   /**
-   * Frames the region, but only when the region itself changes. Tying this to
-   * marker rendering once yanked a zoomed-in user back out on every hour step.
+   * Moves the camera when asked to (see Framing in the store): the whole region
+   * when one is picked from the list, close in on the surfer's coast when it is
+   * found. Only a new request moves it. Tying the camera to the region once
+   * yanked a zoomed-in user back out on every hour step, and would now fight
+   * the surfer every time the map follows them into the next region.
    */
   useEffect(() => {
     const map = mapRef.current;
     if (!map || loading) return;
-    const box = regionBounds(selectedRegion);
+    if (framing.kind === 'region') {
+      const box = regionBounds(framing.region);
+      if (!box) return;
+      map.fitBounds(lngLatBox(box), { padding: FRAME_PADDING, maxZoom: 9, duration: 900 });
+      return;
+    }
+    const box = openingBounds(framing.region, framing.near);
     if (!box) return;
-    map.fitBounds(
-      [
-        [box.west, box.south],
-        [box.east, box.north],
-      ],
-      { padding: { top: 90, bottom: 320, left: 40, right: 40 }, maxZoom: 9, duration: 900 }
-    );
-  }, [selectedRegion, loading]);
+    const camera = map.cameraForBounds(lngLatBox(box), { padding: FRAME_PADDING, maxZoom: CLOSE_ZOOM });
+    if (!camera?.center) return;
+    // Never so far out that the map stops following the viewport.
+    const zoom = Math.max(camera.zoom ?? CLOSE_ZOOM, AUTO_REGION_ZOOM + 1);
+    map.easeTo({ center: camera.center, zoom, duration: 900 });
+    // The request, not the objects it carries: a new nonce is a new request.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [framing.nonce, loading]);
 
-  // Panning and zooming bring new spots near the viewport.
+  // Panning and zooming bring new spots, and new regions, near the viewport.
   useEffect(() => {
     const map = mapRef.current;
     if (!map || loading) return;
 
+    // Only a move with an input event behind it (drag, pinch, wheel) is the
+    // surfer's; fitBounds and easeTo carry none.
+    const onMoveStart = (event: { originalEvent?: unknown }) => {
+      if (event.originalEvent) userMovedRef.current = true;
+    };
     const onMoveEnd = () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
       debounceRef.current = setTimeout(() => {
+        const userMoved = userMovedRef.current;
+        userMovedRef.current = false;
+        readView(userMoved);
         reconcileMarkers();
         scoreVisible();
       }, MOVE_DEBOUNCE_MS);
     };
 
+    map.on('movestart', onMoveStart);
     map.on('moveend', onMoveEnd);
     return () => {
+      map.off('movestart', onMoveStart);
       map.off('moveend', onMoveEnd);
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [reconcileMarkers, scoreVisible, loading]);
+  }, [reconcileMarkers, scoreVisible, readView, loading]);
 
-  /** Centres on the user; if they are on another coast, switches to its region. */
+  // The first reading, before anything has moved.
+  useEffect(() => {
+    if (!loading) readView(false);
+  }, [loading, readView]);
+
+  /** Centres on the surfer's coast, switching region if they are on another one. */
   const locate = () => {
     if (typeof navigator === 'undefined' || !navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition(
@@ -450,18 +546,15 @@ export function MarineMap() {
         const { latitude, longitude } = pos.coords;
         setUserLocation(latitude, longitude);
         const { country, region } = locationDefaults(latitude, longitude);
-        if (region !== selectedRegion) {
-          setSelectedCountry(country);
-          setSelectedRegion(region);
-          return;
-        }
-        mapRef.current?.flyTo({ center: [longitude, latitude], zoom: 10, duration: 900 });
+        goToLocation(country, region, { lat: latitude, lon: longitude });
       },
       err => console.warn('Geolocation unavailable:', err.message)
     );
   };
 
   const showEmpty = !loading && pendingHere === 0 && inView.key === queryKey && inView.scored && inView.rated === 0;
+  /** Zoomed out past the point where the map follows the viewport, and nothing picked is in it. */
+  const zoomHint = showEmpty && !view.zoomedIn;
 
   return (
     <div className="relative w-full h-full">
@@ -490,7 +583,9 @@ export function MarineMap() {
           className="absolute top-[76px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-0.5 px-4 py-2.5 rounded-2xl bg-sheet/90 backdrop-blur-md border border-line text-center whitespace-nowrap"
         >
           <span className="text-[14px] font-medium text-ink-0">No spots in view</span>
-          <span className="text-[13px] text-ink-2">Zoom out or pick another region.</span>
+          <span className="text-[13px] text-ink-2">
+            {zoomHint ? 'Zoom in on a coast, or pick a region.' : 'Pan along the coast or pick a region.'}
+          </span>
         </div>
       )}
       <button

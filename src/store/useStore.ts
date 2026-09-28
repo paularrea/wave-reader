@@ -5,6 +5,17 @@ export type SkillLevel = 'beginner' | 'intermediate' | 'expert';
 import { DEFAULT_COUNTRY, DEFAULT_REGION } from '@/services/regions';
 import type { BestSpot } from '@/services/map-summary';
 
+/**
+ * A request to move the camera, made only by the user (a region picked, "my
+ * location") or by geolocation on open. A region the map follows as it is
+ * panned never moves the camera: the viewport is what chose it.
+ */
+export type Framing =
+  /** The whole region, as picked from the list. */
+  | { kind: 'region'; region: string; nonce: number }
+  /** Close in on the region: at the surfer's coast when `near` is known, else its busiest stretch. */
+  | { kind: 'open'; region: string; near: { lat: number; lon: number } | null; nonce: number };
+
 export interface MapSummary {
   /** Best rated spots in view at the selected hour. */
   best: BestSpot[];
@@ -45,7 +56,13 @@ interface WaveStore {
   /** True once geolocation has decided, so it cannot overwrite a manual pick. */
   regionResolved: boolean;
   resolveRegion: (region: string) => void;
-  resolveLocation: (country: string, region: string) => void;
+  /** Geolocation on open: frames the surfer's coast unless they already chose one. */
+  resolveLocation: (country: string, region: string, near?: { lat: number; lon: number } | null) => void;
+  /** "Use my location": always frames the surfer's coast. */
+  goToLocation: (country: string, region: string, near: { lat: number; lon: number }) => void;
+  /** The region the map is mostly showing, set as it is panned. Never moves the camera. */
+  followRegion: (country: string, region: string) => void;
+  framing: Framing;
   setSpotUtcOffsetSeconds: (seconds: number) => void;
 }
 
@@ -61,6 +78,7 @@ export const useStore = create<WaveStore>(set => ({
   selectedCountry: DEFAULT_COUNTRY,
   selectedRegion: DEFAULT_REGION,
   regionResolved: false,
+  framing: { kind: 'open', region: DEFAULT_REGION, near: null, nonce: 0 },
   spotUtcOffsetSeconds: browserOffsetSeconds(),
 
   // Opening a spot starts from today's first hour, whatever the map was showing:
@@ -88,12 +106,37 @@ export const useStore = create<WaveStore>(set => ({
   // A manual choice also counts as resolved: a late geolocation callback must
   // not yank the user back to their own coast.
   setSelectedCountry: country => set({ selectedCountry: country, regionResolved: true }),
-  setSelectedRegion: region => set({ selectedRegion: region, regionResolved: true }),
+  setSelectedRegion: region =>
+    set(state => ({
+      selectedRegion: region,
+      regionResolved: true,
+      framing: { kind: 'region', region, nonce: state.framing.nonce + 1 },
+    })),
   resolveRegion: region =>
     set(state => (state.regionResolved ? state : { selectedRegion: region, regionResolved: true })),
-  resolveLocation: (country, region) =>
+  resolveLocation: (country, region, near = null) =>
     set(state =>
       state.regionResolved
+        ? state
+        : {
+            selectedCountry: country,
+            selectedRegion: region,
+            regionResolved: true,
+            framing: { kind: 'open', region, near, nonce: state.framing.nonce + 1 },
+          }
+    ),
+  goToLocation: (country, region, near) =>
+    set(state => ({
+      selectedCountry: country,
+      selectedRegion: region,
+      regionResolved: true,
+      framing: { kind: 'open', region, near, nonce: state.framing.nonce + 1 },
+    })),
+  // Panning counts as a choice too: a geolocation answer arriving after the
+  // surfer has moved the map must not drag it back.
+  followRegion: (country, region) =>
+    set(state =>
+      state.selectedCountry === country && state.selectedRegion === region
         ? state
         : { selectedCountry: country, selectedRegion: region, regionResolved: true }
     ),
