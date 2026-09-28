@@ -39,6 +39,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { overpass } from './lib/overpass.mjs';
+import { FULL_LIST_COUNTRIES } from './lib/references.mjs';
 
 const SPOTS = new URL('../src/data/spots.json', import.meta.url);
 const ATTESTED = new URL('../src/data/surf-spots.attested.json', import.meta.url);
@@ -58,7 +59,7 @@ const WATER_M = 500;
  * them. A beach whose nearest shore is one of these faces the lagoon, however
  * close the open sea is on the other side of the sandbar.
  */
-const ENCLOSED = 'Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna';
+const ENCLOSED = 'Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna|Lagoa|Ria Formosa|Ria de Aveiro|Ria de Alvor';
 
 /** A centroid is moved to the shoreline at most this far. */
 const SNAP_M = 2500;
@@ -182,6 +183,13 @@ const LAGOON_ZONES = {
   "Bassin d'Arcachon": [44.55, -1.3, 44.78, -1.0],
   'Golfe du Morbihan': [47.5, -3.0, 47.65, -2.65],
   'Rade de Brest': [48.25, -4.6, 48.45, -4.25],
+  // Portugal: Faro's and Aveiro's ocean breaks stand on the barrier beside a lagoon.
+  'Ria Formosa': [36.95, -8.1, 37.2, -7.5],
+  'Ria de Aveiro': [40.5, -8.8, 40.95, -8.6],
+  'Lagoa de Óbidos': [39.37, -9.26, 39.45, -9.16],
+  'Lagoa de Albufeira': [38.48, -9.21, 38.54, -9.13],
+  'Lagoa de Santo André': [38.04, -8.84, 38.14, -8.75],
+  'Ria de Alvor': [37.1, -8.66, 37.16, -8.56],
 };
 
 const zoneOf = ({ lat, lon }) =>
@@ -326,8 +334,12 @@ for (let i = 0; i < todo.length; i += BATCH) {
 // --- Long beaches: move the centroid to the shoreline ----------------------
 // A surf-forecast point (stage 3.5b) is their two-decimal rounding of the
 // break, so one that lands beside a lagoon -- La Manga is a strip a few hundred
-// metres wide -- belongs on the sea side of it and is moved there too.
-const fromReference = s => s.attestation.coordinate === 'surf-forecast';
+// metres wide -- belongs on the sea side of it and is moved there too. So does
+// a place their list names, in the countries it is published for: Praia da Foz
+// do Arelho-Mar and the beach at the Lagoa de Albufeira's mouth are sea beaches
+// whose centroids sit nearer the lagoon.
+const fromReference = s =>
+  s.attestation.coordinate === 'surf-forecast' || (Boolean(s.attestation.forecastName) && FULL_LIST_COUNTRIES.includes(s.country));
 const offShore = checked.filter(
   s =>
     !results[s.id].ok &&

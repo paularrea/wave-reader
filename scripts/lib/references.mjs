@@ -10,7 +10,7 @@
  * an OSM place or, failing one, at their coordinate (stage 3.5b), under their
  * name (stage 4). One country per deploy, each checked before the next is added.
  */
-export const FULL_LIST_COUNTRIES = ['Spain', 'France', 'United Kingdom'];
+export const FULL_LIST_COUNTRIES = ['Spain', 'France', 'United Kingdom', 'Portugal'];
 
 /** surf-forecast's country pages, and the catalogue country each one feeds. */
 export const COUNTRY_OF = {

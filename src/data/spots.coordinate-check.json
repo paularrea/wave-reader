@@ -5,12 +5,27 @@
   "snapM": 2500,
   "waterSearchM": 500,
   "sameShoreM": 60,
-  "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna",
+  "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna|Lagoa|Ria Formosa|Ria de Aveiro|Ria de Alvor",
   "referenceKm": 5
  },
- "checked": 1689,
- "ok": 1687,
+ "checked": 1965,
+ "ok": 1963,
  "spots": {
+  "a-ver-o-mar": {
+   "lat": 41.39,
+   "lon": -8.78,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.39283,
+    "lon": -8.7765,
+    "movedM": 428
+   }
+  },
   "aber-wrac-h-point": {
    "lat": 48.58,
    "lon": -4.63,
@@ -96,6 +111,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "achadas-da-cruz": {
+   "lat": 32.85,
+   "lon": -17.22,
+   "coastM": 51,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "ackergill": {
    "lat": 58.48,
    "lon": -3.07,
@@ -116,10 +141,50 @@
    "reason": null,
    "referenceKm": 0
   },
+  "agucadoura": {
+   "lat": 41.43,
+   "lon": -8.79,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.42972,
+    "lon": -8.78425,
+    "movedM": 481
+   }
+  },
   "aiguaoliva": {
    "lat": 40.42,
    "lon": 0.44,
    "coastM": 218,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "albufeira": {
+   "lat": 37.09,
+   "lon": -8.25,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.08615,
+    "lon": -8.25016,
+    "movedM": 426
+   }
+  },
+  "alfagar": {
+   "lat": 37.09,
+   "lon": -8.21,
+   "coastM": 238,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -140,6 +205,16 @@
     "lon": -61.27288,
     "movedM": 724
    }
+  },
+  "almagreira": {
+   "lat": 39.38,
+   "lon": -9.32,
+   "coastM": 239,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "almanarre-le-petit-port": {
    "lat": 43.08,
@@ -401,6 +476,16 @@
    "reason": null,
    "referenceKm": 0.29
   },
+  "areal-de-santa-barbara": {
+   "lat": 37.81665,
+   "lon": -25.54842,
+   "coastM": 51,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.5
+  },
   "aregno-plage-algajola": {
    "lat": 42.61062,
    "lon": 8.87092,
@@ -501,6 +586,31 @@
    "reason": null,
    "referenceKm": 0
   },
+  "azurara": {
+   "lat": 41.34,
+   "lon": -8.75,
+   "coastM": 4,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "backdoor": {
+   "lat": 38.92,
+   "lon": -9.43,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.91807,
+    "lon": -9.42661,
+    "movedM": 363
+   }
+  },
   "bagasse": {
    "lat": 14.87,
    "lon": -61.19,
@@ -510,6 +620,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "baia": {
+   "lat": 39.37,
+   "lon": -9.36,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 39.3715,
+    "lon": -9.37107,
+    "movedM": 967
+   }
   },
   "baie-du-soleil": {
    "lat": 43.78,
@@ -550,6 +675,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.59
+  },
+  "baleal-reef": {
+   "lat": 39.38,
+   "lon": -9.34,
+   "coastM": 79,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "baleal-sul": {
+   "lat": 39.36,
+   "lon": -9.36,
+   "coastM": 69,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "balephetrish-tiree": {
    "lat": 56.52,
@@ -851,6 +996,16 @@
    "reason": null,
    "referenceKm": 0.5
   },
+  "barra-do-douro": {
+   "lat": 41.15,
+   "lon": -8.68,
+   "coastM": 175,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "barricane-beach-sssi": {
    "lat": 51.17627,
    "lon": -4.21346,
@@ -1016,6 +1171,16 @@
    "reason": null,
    "referenceKm": 0.14
   },
+  "belgas": {
+   "lat": 39.42,
+   "lon": -9.25,
+   "coastM": 98,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "belharra": {
    "lat": 43.4,
    "lon": -1.75,
@@ -1120,6 +1285,16 @@
     "lon": 0.47075,
     "movedM": 388
    }
+  },
+  "bica": {
+   "lat": 38.69,
+   "lon": -9.37,
+   "coastM": 308,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "bigbury-beach": {
    "lat": 50.28098,
@@ -1280,6 +1455,16 @@
     "lon": 55.62933,
     "movedM": 1183
    }
+  },
+  "bolina": {
+   "lat": 38.7,
+   "lon": -9.39,
+   "coastM": 33,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "bolonia": {
    "lat": 36.16,
@@ -1696,6 +1881,16 @@
    "reason": null,
    "referenceKm": 0.06
   },
+  "burrinho": {
+   "lat": 37.9,
+   "lon": -8.8,
+   "coastM": 92,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "burumendi-hondartza": {
    "lat": 43.31136,
    "lon": -2.38014,
@@ -1725,6 +1920,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.82
+  },
+  "cabo-de-sines": {
+   "lat": 37.95,
+   "lon": -8.88,
+   "coastM": 55,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "cabo-girao": {
+   "lat": 32.65417,
+   "lon": -17.00511,
+   "coastM": 75,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.65
   },
   "cabo-lastres": {
    "lat": 43.53456,
@@ -1769,6 +1984,21 @@
     "lat": 16.32733,
     "lon": -61.29695,
     "movedM": 799
+   }
+  },
+  "cais-do-funchal": {
+   "lat": 32.65,
+   "lon": -16.9,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 32.64663,
+    "lon": -16.89949,
+    "movedM": 375
    }
   },
   "caister-on-sea": {
@@ -2011,6 +2241,21 @@
    "reason": null,
    "referenceKm": 1.44
   },
+  "canidelo": {
+   "lat": 41.11,
+   "lon": -8.67,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.10915,
+    "lon": -8.66451,
+    "movedM": 470
+   }
+  },
   "cannes": {
    "lat": 43.55,
    "lon": 7.03,
@@ -2020,6 +2265,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "cantinho-da-baia": {
+   "lat": 39.37224,
+   "lon": -9.33866,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
   },
   "cap-3000": {
    "lat": 43.66,
@@ -2216,6 +2471,16 @@
    "reason": null,
    "referenceKm": 0.45
   },
+  "carriagem": {
+   "lat": 37.34,
+   "lon": -8.86,
+   "coastM": 292,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "carrickfinn-beach": {
    "lat": 55.04385,
    "lon": -8.34712,
@@ -2295,6 +2560,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.32
+  },
+  "cavalos-de-fao": {
+   "lat": 41.5,
+   "lon": -8.8,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.5015,
+    "lon": -8.78984,
+    "movedM": 864
+   }
+  },
+  "cave": {
+   "lat": 38.99,
+   "lon": -9.42,
+   "coastM": 95,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "caves-sandsend": {
    "lat": 54.52,
@@ -2526,6 +2816,21 @@
    "reason": null,
    "referenceKm": 0
   },
+  "cogumelo": {
+   "lat": 37.7,
+   "lon": -8.8,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.70301,
+    "lon": -8.79766,
+    "movedM": 391
+   }
+  },
   "coldingham-sands": {
    "lat": 55.89244,
    "lon": -2.13345,
@@ -2646,10 +2951,30 @@
    "reason": null,
    "referenceKm": 0
   },
+  "contreira": {
+   "lat": 32.84,
+   "lon": -17.14,
+   "coastM": 15,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "copacabana": {
    "lat": 43.46,
    "lon": -3.95,
    "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "costa-da-caparica": {
+   "lat": 38.64,
+   "lon": -9.24,
+   "coastM": 62,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -3851,6 +4176,31 @@
     "movedM": 400
    }
   },
+  "esmoriz": {
+   "lat": 40.98,
+   "lon": -8.65,
+   "coastM": 71,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "esposende": {
+   "lat": 41.53,
+   "lon": -8.8,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.52966,
+    "lon": -8.79185,
+    "movedM": 680
+   }
+  },
   "etang-de-l-ovu-santu": {
    "lat": 41.72,
    "lon": 9.4,
@@ -3911,6 +4261,26 @@
    "reason": null,
    "referenceKm": 0
   },
+  "faial": {
+   "lat": 32.79,
+   "lon": -16.85,
+   "coastM": 214,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "faial-praia-do-norte": {
+   "lat": 38.61,
+   "lon": -28.76,
+   "coastM": 113,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "fairlight": {
    "lat": 50.87,
    "lon": 0.67,
@@ -3924,6 +4294,31 @@
     "lat": 50.87222,
     "lon": 0.66634,
     "movedM": 355
+   }
+  },
+  "faja-da-areia": {
+   "lat": 32.81,
+   "lon": -17.05,
+   "coastM": 148,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "faja-dos-padres": {
+   "lat": 32.65,
+   "lon": -17.02,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 32.65302,
+    "lon": -17.01769,
+    "movedM": 398
    }
   },
   "fanad-head": {
@@ -3966,10 +4361,40 @@
    "reason": null,
    "referenceKm": 0
   },
+  "ferrel": {
+   "lat": 39.39,
+   "lon": -9.3,
+   "coastM": 317,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "figari": {
    "lat": 41.44,
    "lon": 9.07,
    "coastM": 277,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "figueira-da-foz-buarcos": {
+   "lat": 40.17,
+   "lon": -8.89,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "figueiros": {
+   "lat": 37.25,
+   "lon": -8.87,
+   "coastM": 153,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -4050,6 +4475,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "fonte-da-telha": {
+   "lat": 38.57198,
+   "lon": -9.19676,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
   },
   "fort-de-st-germain-des-vaux": {
    "lat": 49.72,
@@ -4160,6 +4595,46 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "furadouro": {
+   "lat": 40.87057,
+   "lon": -8.67875,
+   "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.22
+  },
+  "furadouro-beira": {
+   "lat": 40.91,
+   "lon": -8.67,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 40.90905,
+    "lon": -8.66525,
+    "movedM": 413
+   }
+  },
+  "furnas": {
+   "lat": 38.9,
+   "lon": -9.44,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.90016,
+    "lon": -9.4355,
+    "movedM": 390
+   }
   },
   "galiote": {
    "lat": 43.27,
@@ -4295,6 +4770,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.11
+  },
+  "graciosa-lagou": {
+   "lat": 39.09,
+   "lon": -28.06,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 39.08917,
+    "lon": -28.05457,
+    "movedM": 478
+   }
+  },
+  "graciosa-porto-da-praia": {
+   "lat": 39.09,
+   "lon": -28.01,
+   "coastM": 26,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "grande-plage-156866423": {
    "lat": 43.48532,
@@ -5111,6 +5611,16 @@
     "movedM": 432
    }
   },
+  "jardim-do-mar": {
+   "lat": 32.74,
+   "lon": -17.21,
+   "coastM": 258,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "jeffs-left": {
    "lat": 52.61,
    "lon": -4.13,
@@ -5146,6 +5656,16 @@
    "lon": -0.24,
    "coastM": 93,
    "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "julias": {
+   "lat": 37.04,
+   "lon": -8.05,
+   "coastM": 64,
+   "waterM": 377,
    "waterName": null,
    "ok": true,
    "reason": null,
@@ -5360,6 +5880,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.16
+  },
+  "kings-rock": {
+   "lat": 41.72,
+   "lon": -8.87,
+   "coastM": 243,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "kinnagoe-bay": {
    "lat": 55.25989,
@@ -5991,6 +6521,16 @@
    "reason": null,
    "referenceKm": 0.09
   },
+  "lage-do-pescador": {
+   "lat": 37.32,
+   "lon": -8.88,
+   "coastM": 176,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "laggan-bay-islay": {
    "lat": 55.69,
    "lon": -6.27,
@@ -6000,6 +6540,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "lagide": {
+   "lat": 39.38,
+   "lon": -9.33,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 39.37472,
+    "lon": -9.32666,
+    "movedM": 650
+   }
+  },
+  "lagoa-de-albufeira": {
+   "lat": 38.50478,
+   "lon": -9.17932,
+   "coastM": 0,
+   "waterM": 301,
+   "waterName": "Lagoa de Albufeira",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.58,
+   "snapped": {
+    "lat": 38.505,
+    "lon": -9.18304,
+    "movedM": 325
+   }
   },
   "lahinch-beach": {
    "lat": 52.93749,
@@ -6711,6 +7281,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "limipicos": {
+   "lat": 38.93,
+   "lon": -9.42,
+   "coastM": 85,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "littlehampton-east-beach": {
    "lat": 50.80213,
    "lon": -0.53236,
@@ -6966,6 +7546,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "lugar-de-baixo": {
+   "lat": 32.68,
+   "lon": -17.1,
+   "coastM": 56,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "lulworth-cove": {
    "lat": 50.61866,
    "lon": -2.24679,
@@ -7066,6 +7656,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "machico": {
+   "lat": 32.71,
+   "lon": -16.76,
+   "coastM": 119,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "machir-bay-islay": {
    "lat": 55.78,
    "lon": -6.46,
@@ -7090,6 +7690,16 @@
     "lon": -5.71515,
     "movedM": 410
    }
+  },
+  "madalena-do-mar": {
+   "lat": 32.7,
+   "lon": -17.14,
+   "coastM": 336,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "maenporth-beach-436659206": {
    "lat": 50.12518,
@@ -7205,6 +7815,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.2
+  },
+  "malhadinha": {
+   "lat": 38.94,
+   "lon": -9.42,
+   "coastM": 107,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "malin-bay": {
    "lat": 54.68301,
@@ -7396,6 +8016,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "meia-praia-1245391449": {
+   "lat": 37.10961,
+   "lon": -8.65538,
+   "coastM": 223,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.41
+  },
   "mejillones": {
    "lat": 28.75,
    "lon": -13.91,
@@ -7511,6 +8141,36 @@
    "reason": null,
    "referenceKm": 0
   },
+  "mindelo": {
+   "lat": 41.31,
+   "lon": -8.74,
+   "coastM": 59,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "mini-pipe": {
+   "lat": 39.33,
+   "lon": -9.36,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "molho-leste": {
+   "lat": 39.35,
+   "lon": -9.37,
+   "coastM": 52,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "molino-de-papel": {
    "lat": 36.75,
    "lon": -3.82,
@@ -7535,6 +8195,16 @@
    "lat": 45.39,
    "lon": -1.16,
    "coastM": 16,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "monte-estoril": {
+   "lat": 38.7,
+   "lon": -9.41,
+   "coastM": 175,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -8186,6 +8856,21 @@
    "reason": null,
    "referenceKm": 0.31
   },
+  "paul-do-mar": {
+   "lat": 32.76,
+   "lon": -17.24,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 32.76156,
+    "lon": -17.23318,
+    "movedM": 662
+   }
+  },
   "pease-sands": {
    "lat": 55.93254,
    "lon": -2.33176,
@@ -8195,6 +8880,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.07
+  },
+  "pedra-branca": {
+   "lat": 38.97866,
+   "lon": -9.42175,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.21
   },
   "pedro-barba-la-graciosa": {
    "lat": 29.26,
@@ -8420,6 +9115,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.77
+  },
+  "piscinas-oceanicas-de-porto-martins": {
+   "lat": 38.68056,
+   "lon": -27.05521,
+   "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 3.3
+  },
+  "pizo": {
+   "lat": 32.64,
+   "lon": -16.96,
+   "coastM": 224,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "plage-borely": {
    "lat": 43.25634,
@@ -13751,6 +14466,76 @@
     "movedM": 620
    }
   },
+  "ponta-das-contendas": {
+   "lat": 38.64375,
+   "lon": -27.07773,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.14
+  },
+  "ponta-delgada": {
+   "lat": 32.83,
+   "lon": -16.98,
+   "coastM": 258,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "ponta-do-pargo": {
+   "lat": 32.81454,
+   "lon": -17.26539,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.71
+  },
+  "ponta-do-tristao": {
+   "lat": 32.86806,
+   "lon": -17.20033,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.17
+  },
+  "ponta-pequena": {
+   "lat": 32.74779,
+   "lon": -17.22073,
+   "coastM": 10,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.04
+  },
+  "pontal-da-carrapateira": {
+   "lat": 37.19679,
+   "lon": -8.91755,
+   "coastM": 17,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.02
+  },
+  "pontinha-ericeira": {
+   "lat": 38.96,
+   "lon": -9.42,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "pontllyfni": {
    "lat": 53.05,
    "lon": -4.35,
@@ -14261,6 +15046,46 @@
    "reason": null,
    "referenceKm": 0.65
   },
+  "porto-batel": {
+   "lat": 39.32,
+   "lon": -9.36,
+   "coastM": 175,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "porto-da-cruz": {
+   "lat": 32.77,
+   "lon": -16.82,
+   "coastM": 213,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "porto-de-santa-iria": {
+   "lat": 37.8358,
+   "lon": -25.48444,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.3
+  },
+  "porto-moniz": {
+   "lat": 32.86,
+   "lon": -17.16,
+   "coastM": 26,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "portobello-beach": {
    "lat": 55.95585,
    "lon": -3.10795,
@@ -14356,6 +15181,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "povoa-do-varzim": {
+   "lat": 41.37,
+   "lon": -8.77,
+   "coastM": 107,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "pozo-izquierdo": {
    "lat": 27.8249,
    "lon": -15.42273,
@@ -14376,6 +15211,16 @@
    "reason": null,
    "referenceKm": 0.23
   },
+  "praia-agua-d-alto": {
+   "lat": 37.71644,
+   "lon": -25.4733,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.17
+  },
   "praia-america": {
    "lat": 42.13463,
    "lon": -8.82082,
@@ -14385,6 +15230,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.37
+  },
+  "praia-azul-peniche": {
+   "lat": 39.11,
+   "lon": -9.4,
+   "coastM": 273,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "praia-cabana-do-pescador": {
+   "lat": 38.61003,
+   "lon": -9.21436,
+   "coastM": 27,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
+  "praia-da-aberta-nova": {
+   "lat": 38.17746,
+   "lon": -8.78121,
+   "coastM": 33,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.3
+  },
+  "praia-da-adraga": {
+   "lat": 38.80365,
+   "lon": -9.48497,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-aguda-1341639355": {
+   "lat": 38.85195,
+   "lon": -9.45569,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
   },
   "praia-da-aguieira": {
    "lat": 42.74211,
@@ -14396,6 +15291,26 @@
    "reason": null,
    "referenceKm": 0.24
   },
+  "praia-da-amoreira": {
+   "lat": 37.35086,
+   "lon": -8.84473,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.48
+  },
+  "praia-da-apulia": {
+   "lat": 41.48282,
+   "lon": -8.77769,
+   "coastM": 56,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
   "praia-da-area-longa-177165011": {
    "lat": 43.65953,
    "lon": -8.06734,
@@ -14405,6 +15320,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.21
+  },
+  "praia-da-areia-branca-1446589": {
+   "lat": 39.26646,
+   "lon": -9.33602,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.14
   },
   "praia-da-arnela-grande": {
    "lat": 43.31964,
@@ -14416,6 +15341,96 @@
    "reason": null,
    "referenceKm": 0.43
   },
+  "praia-da-arrifana": {
+   "lat": 37.29206,
+   "lon": -8.86546,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.46
+  },
+  "praia-da-azarujinha": {
+   "lat": 38.7006,
+   "lon": -9.38924,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.43
+  },
+  "praia-da-baforeira": {
+   "lat": 38.6921,
+   "lon": -9.36614,
+   "coastM": 7,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.41
+  },
+  "praia-da-baia-de-porto-covo": {
+   "lat": 37.84968,
+   "lon": -8.7915,
+   "coastM": 25,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.75
+  },
+  "praia-da-baleeira-129580025": {
+   "lat": 37.08177,
+   "lon": -8.26219,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
+  },
+  "praia-da-barra-168740960": {
+   "lat": 40.64209,
+   "lon": -8.74939,
+   "coastM": 187,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
+  },
+  "praia-da-bordeira": {
+   "lat": 37.1995,
+   "lon": -8.90091,
+   "coastM": 130,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
+  "praia-da-coelha": {
+   "lat": 37.07368,
+   "lon": -8.29414,
+   "coastM": 3,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
+  },
+  "praia-da-comporta": {
+   "lat": 38.38093,
+   "lon": -8.80358,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.57
+  },
   "praia-da-concha-90818804": {
    "lat": 43.7192,
    "lon": -7.80953,
@@ -14426,6 +15441,151 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "praia-da-consolacao": {
+   "lat": 39.3379,
+   "lon": -9.36356,
+   "coastM": 252,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.93
+  },
+  "praia-da-cordoama": {
+   "lat": 37.1093,
+   "lon": -8.93753,
+   "coastM": 25,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.22
+  },
+  "praia-da-cornelia": {
+   "lat": 38.62773,
+   "lon": -9.22657,
+   "coastM": 58,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-corredoura": {
+   "lat": 37.08752,
+   "lon": -8.42161,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.01
+  },
+  "praia-da-costa-nova": {
+   "lat": 40.62008,
+   "lon": -8.75298,
+   "coastM": 51,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.28
+  },
+  "praia-da-cova-do-vapor": {
+   "lat": 38.66174,
+   "lon": -9.25872,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.29
+  },
+  "praia-da-cova-gala": {
+   "lat": 40.12335,
+   "lon": -8.86407,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.63
+  },
+  "praia-da-cresmina": {
+   "lat": 38.7252,
+   "lon": -9.4764,
+   "coastM": 53,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
+  },
+  "praia-da-cruz-quebrada": {
+   "lat": 38.69922,
+   "lon": -9.25201,
+   "coastM": 22,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.04
+  },
+  "praia-da-falesia": {
+   "lat": 37.07519,
+   "lon": -8.13233,
+   "coastM": 17,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.61
+  },
+  "praia-da-figueira-da-foz": {
+   "lat": 40.15646,
+   "lon": -8.87589,
+   "coastM": 106,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.88
+  },
+  "praia-da-foz-186702860": {
+   "lat": 38.45416,
+   "lon": -9.19874,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.48
+  },
+  "praia-da-foz-do-arelho-mar": {
+   "lat": 39.43177,
+   "lon": -9.23057,
+   "coastM": 0,
+   "waterM": 236,
+   "waterName": "Lagoa de Óbidos",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.43,
+   "snapped": {
+    "lat": 39.43255,
+    "lon": -9.2315,
+    "movedM": 118
+   }
+  },
+  "praia-da-foz-do-lizandro": {
+   "lat": 38.942,
+   "lon": -9.41363,
+   "coastM": 216,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.49
+  },
   "praia-da-frouxeira": {
    "lat": 43.61247,
    "lon": -8.16695,
@@ -14435,6 +15595,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.51
+  },
+  "praia-da-gale": {
+   "lat": 37.08184,
+   "lon": -8.31833,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.23
+  },
+  "praia-da-ilha-de-faro": {
+   "lat": 37.00384,
+   "lon": -7.99081,
+   "coastM": 71,
+   "waterM": 224,
+   "waterName": "Ria Formosa",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.28
+  },
+  "praia-da-ilha-de-tavira": {
+   "lat": 37.10991,
+   "lon": -7.621,
+   "coastM": 38,
+   "waterM": 473,
+   "waterName": "Ria Formosa",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-ilha-deserta": {
+   "lat": 36.96292,
+   "lon": -7.87917,
+   "coastM": 10,
+   "waterM": 482,
+   "waterName": "Ria Formosa",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.33
+  },
+  "praia-da-ingrina": {
+   "lat": 37.04662,
+   "lon": -8.8793,
+   "coastM": 43,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.38
   },
   "praia-da-ladeira-85572857": {
    "lat": 42.57554,
@@ -14456,6 +15666,16 @@
    "reason": null,
    "referenceKm": 0.45
   },
+  "praia-da-laje": {
+   "lat": 38.68343,
+   "lon": -9.31415,
+   "coastM": 22,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.15
+  },
   "praia-da-lanzada": {
    "lat": 42.4473,
    "lon": -8.87984,
@@ -14465,6 +15685,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.28
+  },
+  "praia-da-leirosa": {
+   "lat": 40.05925,
+   "lon": -8.89024,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-luz": {
+   "lat": 37.08676,
+   "lon": -8.72461,
+   "coastM": 27,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.31
+  },
+  "praia-da-luz-444785502": {
+   "lat": 41.15369,
+   "lon": -8.67969,
+   "coastM": 55,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.18
   },
   "praia-da-madorra": {
    "lat": 42.14568,
@@ -14476,6 +15726,26 @@
    "reason": null,
    "referenceKm": 1.82
   },
+  "praia-da-mareta": {
+   "lat": 37.00505,
+   "lon": -8.93873,
+   "coastM": 61,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.17
+  },
+  "praia-da-marinha": {
+   "lat": 37.08978,
+   "lon": -8.41261,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
   "praia-da-marosa": {
    "lat": 43.6746,
    "lon": -7.37424,
@@ -14485,6 +15755,66 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.61
+  },
+  "praia-da-muracao": {
+   "lat": 37.15476,
+   "lon": -8.90836,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-murtinheira": {
+   "lat": 40.20573,
+   "lon": -8.89971,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.48
+  },
+  "praia-da-nazare": {
+   "lat": 39.5971,
+   "lon": -9.07493,
+   "coastM": 66,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.53
+  },
+  "praia-da-oura": {
+   "lat": 37.08531,
+   "lon": -8.22337,
+   "coastM": 10,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-da-parede": {
+   "lat": 38.68559,
+   "lon": -9.35393,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-da-pedra-do-ouro": {
+   "lat": 39.72963,
+   "lon": -9.04526,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.45
   },
   "praia-da-pedra-do-sal": {
    "lat": 43.30236,
@@ -14496,6 +15826,61 @@
    "reason": null,
    "referenceKm": 0.27
   },
+  "praia-da-poca": {
+   "lat": 38.70177,
+   "lon": -9.39164,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
+  },
+  "praia-da-ponta-do-sol": {
+   "lat": 32.6795,
+   "lon": -17.10528,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.17
+  },
+  "praia-da-ponta-ruiva": {
+   "lat": 37.06877,
+   "lon": -8.96457,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.02
+  },
+  "praia-da-rainha": {
+   "lat": 38.61639,
+   "lon": -9.21822,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
+  "praia-da-rainha-lisboa": {
+   "lat": 38.56,
+   "lon": -9.2,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.5622,
+    "lon": -9.19217,
+    "movedM": 723
+   }
+  },
   "praia-da-rapadoira": {
    "lat": 43.57195,
    "lon": -7.24779,
@@ -14506,6 +15891,186 @@
    "reason": null,
    "referenceKm": 1.33
   },
+  "praia-da-rocha": {
+   "lat": 37.11565,
+   "lon": -8.53621,
+   "coastM": 34,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.55
+  },
+  "praia-da-salema": {
+   "lat": 37.06497,
+   "lon": -8.82179,
+   "coastM": 47,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.23
+  },
+  "praia-da-samarra": {
+   "lat": 38.89679,
+   "lon": -9.43495,
+   "coastM": 14,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.29
+  },
+  "praia-da-saude": {
+   "lat": 38.63016,
+   "lon": -9.22835,
+   "coastM": 51,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.14
+  },
+  "praia-da-tocha": {
+   "lat": 40.33553,
+   "lon": -8.84276,
+   "coastM": 46,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.65
+  },
+  "praia-da-torre-531918708": {
+   "lat": 38.67526,
+   "lon": -9.32268,
+   "coastM": 8,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-da-torreira": {
+   "lat": 40.73705,
+   "lon": -8.72324,
+   "coastM": 6,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.27
+  },
+  "praia-da-ursa": {
+   "lat": 38.79052,
+   "lon": -9.49254,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.08
+  },
+  "praia-da-vagueira": {
+   "lat": 40.56,
+   "lon": -8.77,
+   "coastM": 65,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "praia-da-vieira": {
+   "lat": 39.87451,
+   "lon": -8.97299,
+   "coastM": 7,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.56
+  },
+  "praia-da-vieirinha-vale-de-figueiros": {
+   "lat": 37.89615,
+   "lon": -8.79739,
+   "coastM": 56,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
+  },
+  "praia-da-vigia-1341961667": {
+   "lat": 38.91915,
+   "lon": -9.42639,
+   "coastM": 44,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.31
+  },
+  "praia-da-viola": {
+   "lat": 37.83892,
+   "lon": -25.36776,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.08
+  },
+  "praia-da-vitoria": {
+   "lat": 38.72931,
+   "lon": -27.05948,
+   "coastM": 64,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-da-zambujeira-do-mar": {
+   "lat": 37.52308,
+   "lon": -8.78748,
+   "coastM": 91,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.8
+  },
+  "praia-das-amoeiras": {
+   "lat": 39.12743,
+   "lon": -9.38842,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.12
+  },
+  "praia-das-bicas": {
+   "lat": 38.46476,
+   "lon": -9.19246,
+   "coastM": 37,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.11
+  },
+  "praia-das-furnas-208114752": {
+   "lat": 37.71649,
+   "lon": -8.78389,
+   "coastM": 294,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.21
+  },
   "praia-das-illas": {
    "lat": 43.55618,
    "lon": -7.13872,
@@ -14515,6 +16080,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.02
+  },
+  "praia-das-macas": {
+   "lat": 38.82491,
+   "lon": -9.46992,
+   "coastM": 103,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
+  },
+  "praia-das-moitas-1454276841": {
+   "lat": 38.70196,
+   "lon": -9.40937,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-de-afife": {
+   "lat": 41.78502,
+   "lon": -8.87152,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.57
+  },
+  "praia-de-altura": {
+   "lat": 37.17,
+   "lon": -7.5,
+   "coastM": 127,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "praia-de-amorosa": {
+   "lat": 41.64579,
+   "lon": -8.82429,
+   "coastM": 64,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.67
   },
   "praia-de-area": {
    "lat": 43.69165,
@@ -14596,6 +16211,16 @@
    "reason": null,
    "referenceKm": 0.25
   },
+  "praia-de-carcavelos": {
+   "lat": 38.67925,
+   "lon": -9.33606,
+   "coastM": 57,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
   "praia-de-carnota": {
    "lat": 42.82453,
    "lon": -9.1084,
@@ -14605,6 +16230,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.73
+  },
+  "praia-de-caxias-19231764": {
+   "lat": 38.6982,
+   "lon": -9.27776,
+   "coastM": 4,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.16
+  },
+  "praia-de-cortegaca": {
+   "lat": 40.94051,
+   "lon": -8.65962,
+   "coastM": 42,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
   },
   "praia-de-doninos": {
    "lat": 43.49532,
@@ -14616,6 +16261,26 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "praia-de-espinho": {
+   "lat": 41.01584,
+   "lon": -8.64615,
+   "coastM": 4,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.17
+  },
+  "praia-de-faro": {
+   "lat": 37.01,
+   "lon": -8,
+   "coastM": 35,
+   "waterM": 140,
+   "waterName": "Ria Formosa",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "praia-de-fonforron": {
    "lat": 42.71468,
    "lon": -9.00929,
@@ -14625,6 +16290,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.29
+  },
+  "praia-de-labruge": {
+   "lat": 41.2726,
+   "lon": -8.72779,
+   "coastM": 70,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.49
   },
   "praia-de-larino": {
    "lat": 42.76464,
@@ -14636,6 +16311,26 @@
    "reason": null,
    "referenceKm": 0.61
   },
+  "praia-de-lavadores": {
+   "lat": 41.12831,
+   "lon": -8.66789,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.15
+  },
+  "praia-de-leca": {
+   "lat": 41.18942,
+   "lon": -8.70605,
+   "coastM": 67,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.34
+  },
   "praia-de-llas": {
    "lat": 43.58002,
    "lon": -7.26042,
@@ -14645,6 +16340,26 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.03
+  },
+  "praia-de-madalena-sul": {
+   "lat": 41.09986,
+   "lon": -8.66044,
+   "coastM": 19,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.4
+  },
+  "praia-de-matosinhos": {
+   "lat": 41.17649,
+   "lon": -8.69389,
+   "coastM": 32,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.52
   },
   "praia-de-melide": {
    "lat": 42.2514,
@@ -14656,6 +16371,46 @@
    "reason": null,
    "referenceKm": 0.31
   },
+  "praia-de-melides": {
+   "lat": 38.12914,
+   "lon": -8.79344,
+   "coastM": 64,
+   "waterM": 175,
+   "waterName": "Lagoa de Melides",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.32
+  },
+  "praia-de-mira": {
+   "lat": 40.45103,
+   "lon": -8.80558,
+   "coastM": 88,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.39
+  },
+  "praia-de-miramar": {
+   "lat": 41.06582,
+   "lon": -8.65708,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.35
+  },
+  "praia-de-moledo": {
+   "lat": 41.85093,
+   "lon": -8.86752,
+   "coastM": 54,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.13
+  },
   "praia-de-montalbo": {
    "lat": 42.39638,
    "lon": -8.85048,
@@ -14665,6 +16420,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.21
+  },
+  "praia-de-monte-clerigo": {
+   "lat": 37.34219,
+   "lon": -8.85305,
+   "coastM": 37,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.12
   },
   "praia-de-nemina": {
    "lat": 43.00731,
@@ -14676,6 +16441,56 @@
    "reason": null,
    "referenceKm": 0.3
   },
+  "praia-de-nossa-senhora-208875686": {
+   "lat": 37.53009,
+   "lon": -8.78739,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
+  },
+  "praia-de-odeceixe": {
+   "lat": 37.49,
+   "lon": -8.8,
+   "coastM": 134,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "praia-de-odeceixe-mar": {
+   "lat": 37.44214,
+   "lon": -8.79785,
+   "coastM": 88,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.61
+  },
+  "praia-de-ofir": {
+   "lat": 41.51836,
+   "lon": -8.7878,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.26
+  },
+  "praia-de-paco-de-arcos": {
+   "lat": 38.69044,
+   "lon": -9.29684,
+   "coastM": 34,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.16
+  },
   "praia-de-pantin": {
    "lat": 43.63913,
    "lon": -8.11388,
@@ -14686,6 +16501,26 @@
    "reason": null,
    "referenceKm": 0.25
   },
+  "praia-de-paramos-430526467": {
+   "lat": 40.98,
+   "lon": -8.64911,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.35
+  },
+  "praia-de-paredes-de-vitoria": {
+   "lat": 39.70177,
+   "lon": -9.05101,
+   "coastM": 9,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
   "praia-de-patos": {
    "lat": 42.15537,
    "lon": -8.8274,
@@ -14695,6 +16530,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.34
+  },
+  "praia-de-pedrogao": {
+   "lat": 39.92296,
+   "lon": -8.9517,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.36
   },
   "praia-de-peizas": {
    "lat": 43.58795,
@@ -14715,6 +16560,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.15
+  },
+  "praia-de-porto-novo": {
+   "lat": 39.17809,
+   "lon": -9.35677,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.04
   },
   "praia-de-razo": {
    "lat": 43.29027,
@@ -14776,6 +16631,26 @@
    "reason": null,
    "referenceKm": 0.04
   },
+  "praia-de-santa-rita-sul": {
+   "lat": 39.16749,
+   "lon": -9.36105,
+   "coastM": 67,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.34
+  },
+  "praia-de-santo-amaro-180126358": {
+   "lat": 38.68449,
+   "lon": -9.30965,
+   "coastM": 25,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.17
+  },
   "praia-de-santo-anton": {
    "lat": 43.72199,
    "lon": -7.80302,
@@ -14786,6 +16661,96 @@
    "reason": null,
    "referenceKm": 0.33
   },
+  "praia-de-santo-antonio-5448095": {
+   "lat": 37.17196,
+   "lon": -7.41778,
+   "coastM": 47,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.72
+  },
+  "praia-de-sao-jacinto": {
+   "lat": 40.67628,
+   "lon": -8.74608,
+   "coastM": 32,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.74
+  },
+  "praia-de-sao-joao": {
+   "lat": 38.65646,
+   "lon": -9.25191,
+   "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.09
+  },
+  "praia-de-sao-juliao": {
+   "lat": 38.92951,
+   "lon": -9.421,
+   "coastM": 25,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
+  "praia-de-sao-lourenco": {
+   "lat": 39.01182,
+   "lon": -9.42147,
+   "coastM": 41,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
+  },
+  "praia-de-sao-martinho-do-porto": {
+   "lat": 39.50731,
+   "lon": -9.14211,
+   "coastM": 330,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.4
+  },
+  "praia-de-sao-pedro-de-maceda": {
+   "lat": 40.92064,
+   "lon": -8.66125,
+   "coastM": 92,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.13
+  },
+  "praia-de-sao-pedro-do-estoril": {
+   "lat": 38.69322,
+   "lon": -9.36958,
+   "coastM": 16,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
+  },
+  "praia-de-sao-torpes": {
+   "lat": 37.91985,
+   "lon": -8.80557,
+   "coastM": 11,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.39
+  },
   "praia-de-seaia": {
    "lat": 43.32824,
    "lon": -8.82758,
@@ -14795,6 +16760,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.28
+  },
+  "praia-de-silvalde": {
+   "lat": 40.98734,
+   "lon": -8.64794,
+   "coastM": 76,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.34
   },
   "praia-de-soesto": {
    "lat": 43.21499,
@@ -14816,6 +16791,36 @@
    "reason": null,
    "referenceKm": 0.13
   },
+  "praia-de-vale-do-lobo": {
+   "lat": 37.04869,
+   "lon": -8.06572,
+   "coastM": 20,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.53
+  },
+  "praia-de-vale-figueira-1241777810": {
+   "lat": 37.24735,
+   "lon": -8.8694,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.19
+  },
+  "praia-de-vila-praia-de-ancora": {
+   "lat": 41.81325,
+   "lon": -8.86451,
+   "coastM": 77,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.58
+  },
   "praia-de-vilarrube": {
    "lat": 43.64171,
    "lon": -8.07625,
@@ -14825,6 +16830,151 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.97
+  },
+  "praia-do-abano": {
+   "lat": 38.74149,
+   "lon": -9.47253,
+   "coastM": 21,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.17
+  },
+  "praia-do-almoxarife": {
+   "lat": 38.55426,
+   "lon": -28.6087,
+   "coastM": 45,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.65
+  },
+  "praia-do-alvor-poente": {
+   "lat": 37.1227,
+   "lon": -8.59753,
+   "coastM": 45,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.23
+  },
+  "praia-do-amado": {
+   "lat": 37.16434,
+   "lon": -8.90339,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.16
+  },
+  "praia-do-aterro": {
+   "lat": 41.21086,
+   "lon": -8.71586,
+   "coastM": 27,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.36
+  },
+  "praia-do-baleal": {
+   "lat": 39.3655,
+   "lon": -9.35585,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.71,
+   "snapped": {
+    "lat": 39.36098,
+    "lon": -9.35391,
+    "movedM": 527
+   }
+  },
+  "praia-do-barranco": {
+   "lat": 37.0421,
+   "lon": -8.89517,
+   "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
+  },
+  "praia-do-barranco-das-belharucas": {
+   "lat": 37.08987,
+   "lon": -8.18049,
+   "coastM": 40,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-do-beliche": {
+   "lat": 37.02593,
+   "lon": -8.96508,
+   "coastM": 3,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.12
+  },
+  "praia-do-brejo-largo": {
+   "lat": 37.67509,
+   "lon": -8.79637,
+   "coastM": 41,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
+  },
+  "praia-do-burgau": {
+   "lat": 37.0713,
+   "lon": -8.77558,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.04
+  },
+  "praia-do-cabeco": {
+   "lat": 37.17549,
+   "lon": -7.469,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.51
+  },
+  "praia-do-cabedelo": {
+   "lat": 40.13613,
+   "lon": -8.86288,
+   "coastM": 16,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.89
+  },
+  "praia-do-cabedelo-1474807103": {
+   "lat": 41.67679,
+   "lon": -8.83122,
+   "coastM": 96,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.37
   },
   "praia-do-carreiro-2734753": {
    "lat": 41.89782,
@@ -14836,6 +16986,46 @@
    "reason": null,
    "referenceKm": 1.39
   },
+  "praia-do-carvalhal-208100114": {
+   "lat": 38.30576,
+   "lon": -8.78093,
+   "coastM": 44,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.48
+  },
+  "praia-do-carvoeiro": {
+   "lat": 37.09604,
+   "lon": -8.47239,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.02
+  },
+  "praia-do-castelejo": {
+   "lat": 37.10007,
+   "lon": -8.94702,
+   "coastM": 61,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
+  },
+  "praia-do-castelo-222678477": {
+   "lat": 38.61318,
+   "lon": -9.21634,
+   "coastM": 15,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
   "praia-do-castro-1193580453": {
    "lat": 43.75198,
    "lon": -7.69029,
@@ -14845,6 +17035,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 2.4
+  },
+  "praia-do-cerro": {
+   "lat": 39.36,
+   "lon": -9.37,
+   "coastM": 281,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "praia-do-esteiro": {
    "lat": 43.74843,
@@ -14856,6 +17056,76 @@
    "reason": null,
    "referenceKm": 4.48
   },
+  "praia-do-farol-19450196": {
+   "lat": 36.97757,
+   "lon": -7.85723,
+   "coastM": 13,
+   "waterM": 497,
+   "waterName": "Ria Formosa",
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.77
+  },
+  "praia-do-forte-novo": {
+   "lat": 37.06131,
+   "lon": -8.08845,
+   "coastM": 9,
+   "waterM": 402,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.2
+  },
+  "praia-do-guincho-147727446": {
+   "lat": 38.73318,
+   "lon": -9.47318,
+   "coastM": 46,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.22
+  },
+  "praia-do-magoito": {
+   "lat": 38.86053,
+   "lon": -9.45093,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.1
+  },
+  "praia-do-malhao-sul": {
+   "lat": 37.78015,
+   "lon": -8.80213,
+   "coastM": 29,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.19
+  },
+  "praia-do-marreco": {
+   "lat": 41.23479,
+   "lon": -8.72391,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.07
+  },
+  "praia-do-martinhal": {
+   "lat": 37.01852,
+   "lon": -8.92562,
+   "coastM": 49,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.08
+  },
   "praia-do-matadoiro": {
    "lat": 43.37549,
    "lon": -8.4039,
@@ -14866,6 +17136,66 @@
    "reason": null,
    "referenceKm": 0
   },
+  "praia-do-matadouro": {
+   "lat": 38.97555,
+   "lon": -9.42041,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.11
+  },
+  "praia-do-meco": {
+   "lat": 38.48842,
+   "lon": -9.18368,
+   "coastM": 78,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.58
+  },
+  "praia-do-mirouco": {
+   "lat": 37.13701,
+   "lon": -8.92009,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.17
+  },
+  "praia-do-monte-verde": {
+   "lat": 37.82298,
+   "lon": -25.5278,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.45
+  },
+  "praia-do-norte-1342511934": {
+   "lat": 38.96717,
+   "lon": -9.42005,
+   "coastM": 26,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.31
+  },
+  "praia-do-norte-6150268": {
+   "lat": 39.62293,
+   "lon": -9.08043,
+   "coastM": 295,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.66
+  },
   "praia-do-orzan": {
    "lat": 43.37194,
    "lon": -8.40549,
@@ -14875,6 +17205,56 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.04
+  },
+  "praia-do-osso-da-baleia": {
+   "lat": 40.00346,
+   "lon": -8.91378,
+   "coastM": 24,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.5
+  },
+  "praia-do-pego": {
+   "lat": 38.29224,
+   "lon": -8.77893,
+   "coastM": 55,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.27
+  },
+  "praia-do-populo": {
+   "lat": 37.75063,
+   "lon": -25.61837,
+   "coastM": 32,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.16
+  },
+  "praia-do-portinho-da-arrabida": {
+   "lat": 38.47695,
+   "lon": -8.9836,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.87
+  },
+  "praia-do-rei": {
+   "lat": 38.60644,
+   "lon": -9.21242,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.15
   },
   "praia-do-rias": {
    "lat": 43.29336,
@@ -14896,6 +17276,16 @@
    "reason": null,
    "referenceKm": 0.1
   },
+  "praia-do-rock": {
+   "lat": 41.36,
+   "lon": -8.76,
+   "coastM": 106,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "praia-do-rodo": {
    "lat": 43.63955,
    "lon": -8.11862,
@@ -14916,6 +17306,46 @@
    "reason": null,
    "referenceKm": 0.06
   },
+  "praia-do-sul-1342250779": {
+   "lat": 38.95763,
+   "lon": -9.41602,
+   "coastM": 37,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.24
+  },
+  "praia-do-tamariz": {
+   "lat": 38.70267,
+   "lon": -9.40002,
+   "coastM": 10,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.76
+  },
+  "praia-do-telheiro": {
+   "lat": 37.04564,
+   "lon": -8.97909,
+   "coastM": 11,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.04
+  },
+  "praia-do-tonel-1255056880": {
+   "lat": 37.00571,
+   "lon": -8.9479,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.44
+  },
   "praia-do-vilar": {
    "lat": 43.54183,
    "lon": -8.30102,
@@ -14935,6 +17365,176 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.45
+  },
+  "praia-do-zavial": {
+   "lat": 37.0464,
+   "lon": -8.87049,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.26
+  },
+  "praia-dos-aivados": {
+   "lat": 37.8098,
+   "lon": -8.79583,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 1.15
+  },
+  "praia-dos-alteirinhos": {
+   "lat": 37.5185,
+   "lon": -8.78879,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.05
+  },
+  "praia-dos-coxos": {
+   "lat": 39.00424,
+   "lon": -9.42547,
+   "coastM": 12,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.42
+  },
+  "praia-dos-lagosteiros": {
+   "lat": 38.42362,
+   "lon": -9.21461,
+   "coastM": 13,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.02
+  },
+  "praia-dos-mosteiros": {
+   "lat": 37.88778,
+   "lon": -25.82398,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.43
+  },
+  "praia-dos-salgados": {
+   "lat": 37.08634,
+   "lon": -8.32503,
+   "coastM": 29,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 2.34
+  },
+  "praia-formosa": {
+   "lat": 39.13155,
+   "lon": -9.3854,
+   "coastM": 2,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.03
+  },
+  "praia-formosa-162445881": {
+   "lat": 32.63927,
+   "lon": -16.95143,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.16
+  },
+  "praia-grande-de-almograve": {
+   "lat": 37.65199,
+   "lon": -8.80254,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.06
+  },
+  "praia-grande-do-rodizio": {
+   "lat": 38.81307,
+   "lon": -9.47855,
+   "coastM": 1,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.36
+  },
+  "praia-pequena-do-rodizio": {
+   "lat": 38.81961,
+   "lon": -9.47447,
+   "coastM": 6,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.11
+  },
+  "praia-ribeira-d-ilhas": {
+   "lat": 38.98774,
+   "lon": -9.41925,
+   "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.26
+  },
+  "praia-sao-pedro-de-moel": {
+   "lat": 39.75375,
+   "lon": -9.03357,
+   "coastM": 31,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.37
+  },
+  "praia-troia-gale": {
+   "lat": 38.47545,
+   "lon": -8.89496,
+   "coastM": 165,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 4.16
+  },
+  "praia-vale-de-frades": {
+   "lat": 39.27446,
+   "lon": -9.33568,
+   "coastM": 10,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 3.52
+  },
+  "praia-velha-6196034": {
+   "lat": 39.77374,
+   "lon": -9.02593,
+   "coastM": 46,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0.49
   },
   "prefailles": {
    "lat": 47.12,
@@ -15246,6 +17846,16 @@
     "movedM": 457
    }
   },
+  "reef": {
+   "lat": 38.98,
+   "lon": -9.42,
+   "coastM": 176,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "reenrow-beach": {
    "lat": 51.84499,
    "lon": -10.22002,
@@ -15316,6 +17926,16 @@
    "reason": null,
    "referenceKm": 2.27
   },
+  "ribeira-da-janela": {
+   "lat": 32.85,
+   "lon": -17.15,
+   "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "ringstead-beach": {
    "lat": 50.63136,
    "lon": -2.34192,
@@ -15355,6 +17975,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "rocha-negra": {
+   "lat": 37.08,
+   "lon": -8.73,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.08415,
+    "lon": -8.73001,
+    "movedM": 459
+   }
   },
   "rodiles-main-beach": {
    "lat": 43.53,
@@ -15490,6 +18125,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.27
+  },
+  "sacor": {
+   "lat": 41.19,
+   "lon": -8.71,
+   "coastM": 266,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "saint-andreu-de-llavaneres": {
    "lat": 41.55,
@@ -15686,6 +18331,61 @@
    "reason": null,
    "referenceKm": 0.03
   },
+  "san-jorge-faja-dos-cubres": {
+   "lat": 38.62,
+   "lon": -27.92,
+   "coastM": 169,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "san-jorge-punta-da-caldeira": {
+   "lat": 38.64,
+   "lon": -27.95,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.63544,
+    "lon": -27.9531,
+    "movedM": 572
+   }
+  },
+  "san-miguel-rabo-de-peixe": {
+   "lat": 37.82,
+   "lon": -25.58,
+   "coastM": 185,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "san-miguel-ribeira-grande": {
+   "lat": 37.82,
+   "lon": -25.54,
+   "coastM": 39,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "san-miguel-ribeira-quente": {
+   "lat": 37.73,
+   "lon": -25.3,
+   "coastM": 331,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "san-vicente": {
    "lat": 43.39,
    "lon": -4.37,
@@ -15836,6 +18536,16 @@
    "reason": null,
    "referenceKm": 0.07
   },
+  "sanguessuga": {
+   "lat": 37.91,
+   "lon": -8.8,
+   "coastM": 48,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "sant-marti-d-empuries": {
    "lat": 42.14,
    "lon": 3.12,
@@ -15845,6 +18555,36 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "santa-cruz": {
+   "lat": 39.15,
+   "lon": -9.38,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 39.14793,
+    "lon": -9.37361,
+    "movedM": 597
+   }
+  },
+  "santa-maria-anjos": {
+   "lat": 37.01,
+   "lon": -25.16,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 37.00627,
+    "lon": -25.16158,
+    "movedM": 436
+   }
   },
   "santa-maria-de-oia": {
    "lat": 42,
@@ -15860,6 +18600,26 @@
     "lon": -8.88244,
     "movedM": 685
    }
+  },
+  "santa-maria-praia-formosa": {
+   "lat": 36.95,
+   "lon": -25.1,
+   "coastM": 155,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "sao-pedro-de-moel": {
+   "lat": 39.82,
+   "lon": -9,
+   "coastM": 87,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "saundersfoot-beach": {
    "lat": 51.71211,
@@ -16756,6 +19516,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "supertubos": {
+   "lat": 39.34,
+   "lon": -9.36,
+   "coastM": 103,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "sutton-cross": {
    "lat": 53.38945,
    "lon": -6.11026,
@@ -16880,6 +19650,101 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.51
+  },
+  "terceira-baia-das-quatro-ribeiras": {
+   "lat": 38.79,
+   "lon": -27.19,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.79397,
+    "lon": -27.18885,
+    "movedM": 450
+   }
+  },
+  "terceira-ponta-do-queimado": {
+   "lat": 38.78,
+   "lon": -27.36,
+   "coastM": 127,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "terceira-porto-novo": {
+   "lat": 38.67,
+   "lon": -27.08,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.67069,
+    "lon": -27.0756,
+    "movedM": 390
+   }
+  },
+  "terceira-praia-da-vitoria": {
+   "lat": 38.72,
+   "lon": -27.06,
+   "coastM": 95,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "terceira-praia-do-norte": {
+   "lat": 38.78,
+   "lon": -27.09,
+   "coastM": 108,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "terceira-santa-catarina": {
+   "lat": 38.71,
+   "lon": -27.05,
+   "coastM": 26,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "terceira-sao-mateus-da-calherta": {
+   "lat": 38.65,
+   "lon": -27.28,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 38.65227,
+    "lon": -27.27695,
+    "movedM": 365
+   }
+  },
+  "terceira-vila-nova": {
+   "lat": 38.8,
+   "lon": -27.26,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "terminus-berck": {
    "lat": 50.42,
@@ -17611,6 +20476,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "viana-do-castelo": {
+   "lat": 41.69,
+   "lon": -8.85,
+   "coastM": 123,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "viking-bay": {
    "lat": 51.35777,
    "lon": 1.44395,
@@ -17620,6 +20495,31 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.13
+  },
+  "vila-do-conde": {
+   "lat": 41.35,
+   "lon": -8.76,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 41.35109,
+    "lon": -8.75572,
+    "movedM": 377
+   }
+  },
+  "vila-nova-de-milfontes": {
+   "lat": 37.71,
+   "lon": -8.79,
+   "coastM": 28,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "villefranche-sur-mer": {
    "lat": 43.7,

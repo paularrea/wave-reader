@@ -15,7 +15,7 @@ export interface IndexSpot {
 /**
  * The light spot index of each country, fetched on demand.
  *
- * The whole catalogue is 1,400 spots across four countries and will keep
+ * The whole catalogue is 2,000 spots across five countries and will keep
  * growing; a surfer in Catalunya has no use for the Scottish ones. Each
  * country's index is a separate chunk, loaded the first time the map needs it
  * -- the country picked, or one the viewport has reached -- and kept for the
@@ -26,6 +26,7 @@ const LOADERS: Record<string, () => Promise<{ default: IndexSpot[] }>> = {
   fr: () => import('@/data/spots/fr.index.json'),
   gb: () => import('@/data/spots/gb.index.json'),
   ie: () => import('@/data/spots/ie.index.json'),
+  pt: () => import('@/data/spots/pt.index.json'),
 };
 
 const cache = new Map<string, IndexSpot[]>();

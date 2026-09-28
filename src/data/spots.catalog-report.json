@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-09-28T18:41:59.616Z",
- "kept": 12034,
+ "generatedAt": "2026-09-28T19:38:38.492Z",
+ "kept": 13292,
  "dropped": [
   {
    "name": "Axo'Plage",
@@ -4950,6 +4950,811 @@
    "country": "United Kingdom",
    "osmId": 4077216,
    "reason": "open arc of only 60 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Pampilhosa da Serra",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 2657447612,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Breia",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 3371173907,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Pinheiros",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 3371184287,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Talhada",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 3685867911,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Pêgo Escuro",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 4115117305,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Casaldate",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 5272943028,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial Cabreira",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 5885966920,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Oliveira",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 7779606275,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia das Fidalgas",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 7881988633,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial Natural de Amiosinho",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 7881998587,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial dos Novos",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 8584301154,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Vale de Gaios",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 8725496808,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Quinta Amoroso",
+   "community": "Faro",
+   "country": "Portugal",
+   "osmId": 10224558485,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial dos Felinhos",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 11933916895,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Piscina Fluvial",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 11980798826,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Lago",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 12015870479,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Fraga do Rio",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 12112927599,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Pontinha",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 12115227338,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Cortez",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 12542217656,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial Porto Carrero",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 12741819609,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Cavez",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 13034415905,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Garrafas",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 14069135448,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Santa Luzia",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 14136993545,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Pego Fundo",
+   "community": "Faro",
+   "country": "Portugal",
+   "osmId": 78417257,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Areinho",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 98754786,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Burgães",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 105659049,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Faial",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 106706749,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial das Azenhas",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 157532234,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Aboadela",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 169544219,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Piscina Natural da Ereira",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 174154918,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Valeta",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 183714031,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Merelim São Paio",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 183927980,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Santa Eufémia",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 191774761,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Adaúfe",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 192930545,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Ribeira - Barreiros",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 192930546,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Navarra",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 192930547,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Palheiros e Zorro",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 199723323,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Real",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 221123462,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Castelo",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 225304583,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Gramido",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 232562946,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Zebreiros",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 232564176,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia da Lomba",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 233784765,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Avô",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 234173586,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial Aurora",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 238195470,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Melres",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 255804301,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Senhora da Graça",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 261919708,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Louçainha",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 295408826,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Alvoco das Várzeas",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 295444558,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Tapada Grande",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 297540513,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Loureira",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 302698202,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Docim",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 355536229,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 361264948,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Janeiro de Baixo",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 372291352,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Pereira",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 380028529,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Areinho",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 380518890,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Pedorido",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 388326172,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Reconquinho",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 388347221,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Paradinha",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 397135664,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Alqueirão",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 437724530,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial Moinho de Alva",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 437770247,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Ribeira de Abade",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 444796532,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Arnelas",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 444796533,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Landre",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 462865791,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial",
+   "community": "Faro",
+   "country": "Portugal",
+   "osmId": 474645895,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Barcelinhos",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 478336040,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Espiunca",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 524057804,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial do Vau",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 524103545,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Além do Barco",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 542627583,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Paço de Mato",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 542634348,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Taboão",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 546437303,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Bogueira",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 569472375,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Vimieiro",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 569472474,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Crestuma",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 608392119,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Zebreiros",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 608392218,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Ponte da Barca",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 694456168,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Ponte do Sótão",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 696692135,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Rio Homem",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 722557664,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial dos Moinhos",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 733017138,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de São Sebastião da Feira",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 760816707,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Botão",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 818434677,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Cinco Reis",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 821133685,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial da Senhora da Cabeça",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 827065025,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Moreira",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 835609124,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Fermil",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 880336422,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Fermil",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 880336424,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia de Fermil",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 880336426,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Caneiro",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 886715926,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia do Rebolim",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 931191751,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial dos Canais",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 990841799,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Messegães",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 1065256372,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Carvalho",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1069051542,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Ponte do Mouro",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 1081260393,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Cabanelas",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1081955583,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Ponte do Bico",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1081955584,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Palmeira",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1081955585,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Presa das Bicas",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 1140795547,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Gerês Albufeira",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1164102022,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Pé do Negro",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 1200680891,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Albergaria dos Fusos",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 1205519987,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Bitetos",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 1213939817,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Milheirós de Poiares",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 1222795784,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Azenhas do Guadiana",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 1257163940,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Areinho de Avintes",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 1390531389,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Lagoa",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 1391339453,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Ribeira e Meregeiro",
+   "community": "Porto",
+   "country": "Portugal",
+   "osmId": 1418180874,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de São Gião",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 1446529061,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Ribeira de Carreiras",
+   "community": "Beja",
+   "country": "Portugal",
+   "osmId": 1464577445,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Toca",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 1556806861,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial da Azenhas de Estorãos",
+   "community": "Viana do Castelo",
+   "country": "Portugal",
+   "osmId": 9651215,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Segade",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 9651217,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Pisão do Baeta",
+   "community": "Leiria",
+   "country": "Portugal",
+   "osmId": 11222149,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Ançã",
+   "community": "Coimbra",
+   "country": "Portugal",
+   "osmId": 11334507,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial do Ermal",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 12825575,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia fluvial de Verim",
+   "community": "Braga",
+   "country": "Portugal",
+   "osmId": 18069609,
+   "reason": "open arc of only 0 degrees"
+  },
+  {
+   "name": "Praia Fluvial de Albegaria da Serra",
+   "community": "Aveiro",
+   "country": "Portugal",
+   "osmId": 19193370,
+   "reason": "open arc of only 0 degrees"
   }
  ]
 }

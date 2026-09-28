@@ -2,6 +2,7 @@ import es from '../data/spots/es.json';
 import fr from '../data/spots/fr.json';
 import gb from '../data/spots/gb.json';
 import ie from '../data/spots/ie.json';
+import pt from '../data/spots/pt.json';
 import type { SpotConfig } from './star-engine';
 
 /**
@@ -33,6 +34,7 @@ const BY_COUNTRY: Record<string, CatalogueSpot[]> = {
   France: fr as CatalogueSpot[],
   'United Kingdom': gb as CatalogueSpot[],
   Ireland: ie as CatalogueSpot[],
+  Portugal: pt as CatalogueSpot[],
 };
 
 export function allSpots(): CatalogueSpot[] {

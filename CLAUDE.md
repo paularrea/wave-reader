@@ -165,19 +165,19 @@ node scripts/benchmark-catalogue.mjs      # compare with the references, region 
 
 **The target is surf-forecast's break list: every break they list is published** (decided
 2026-09-28), at an OSM place when one answers to its name and at the coordinate their page
-prints when none does (stage 3.5b). Spain, France and the United Kingdom are done this way;
-Portugal and Ireland follow, one country per deploy (`FULL_LIST_COUNTRIES` in
+prints when none does (stage 3.5b). Spain, France, the United Kingdom and Portugal are done
+this way; Ireland can follow, one country per deploy (`FULL_LIST_COUNTRIES` in
 `scripts/lib/references.mjs`, read by stages 3.5b and 4).
 Surfline-only places are still published beside them.
 
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,662.
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,938.
 In Spain 423 of surf-forecast's 427 breaks have a marker of their own and the other four
 share one with a same-name neighbour (Salinas and Playa de Salinas); in France 476 of 477;
 in the United Kingdom all 446 of the regions covered (not the Channel Islands or the Isle of
-Man, which are not the UK).
+Man, which are not the UK); in Portugal all 226.
 
 **Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
 and reef; stage 3.5 then checks which of them a reference names. That finds nothing
@@ -272,13 +272,17 @@ Essex. Their "South East" is South East Wales (Porthcawl), not Kent.
 shore is not a closed sea, and the reference is not more than 5 km away. OSM draws
 coastline around the Mar Menor, the étangs and the Ebro delta bays too, so the lagoon test
 uses the enclosed waters inside `LAGOON_ZONES` (add a box before adding a coast with a
-lagoon). Long beaches (Pendine, La Barrosa, Saunton) have polygon centroids in the dunes;
+lagoon; Portugal added Ria Formosa, Ria de Aveiro, Óbidos, Albufeira, Santo André and
+Alvor). Long beaches (Pendine, La Barrosa, Saunton) have polygon centroids in the dunes;
 those are moved to the nearest coastline point (up to 2.5 km) and stage 4 keeps the
 original as `provenance.centroid`. A stage 3.5b point is moved the same way, and also when
 it lands beside a lagoon (their rounding put Pico de el Errizo on La Manga's Mar Menor
-side), always to open-sea shore. A reviewed place is exempt from the 5 km rule: the person
+side), always to open-sea shore; so is a place their list names in a full-list country
+(Praia da Foz do Arelho-Mar, whose centroid sits nearer the Lagoa de Óbidos). A reviewed place is exempt from the 5 km rule: the person
 who checked it records why the reference's point is off. Overpass mirrors go down often;
-`OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers,
+`OVERPASS_ENDPOINTS=https://overpass-api.de/api/interpreter` pins the one that answers
+(`https://maps.mail.ru/osm/tools/overpass/api/interpreter` when overpass-api.de refuses
+connections after a long run),
 and `BATCH=10` shrinks the coastline queries when Brittany's detailed shore times them out.
 Results for places not checked in a run are kept, so running it between stage 3.5 and 3.5b
 loses nothing.
@@ -298,7 +302,12 @@ four counties they do not list — Dublin, Wicklow, Galway, Leitrim — are not 
 which is a decision about the product, not about the data: those 18 places stay in
 `spots.json` and are recorded in the curation report. Northern Ireland's breaks are on
 their Ireland page but in the United Kingdom's catalogue, and stay under Northern
-Ireland. Every other country is published by its own regions.
+Ireland. **Portugal is published under surf-forecast's regions too** (stage 4,
+`PORTUGUESE_REGION`): Peniche and Ericeira are what surfers call those coasts and neither is
+a district. Stage 1 fetches the mainland as one box split by district (as Ireland), plus a
+box each for Madeira and the Azores; a place their list names takes their region (without
+"The" and "Portugal - "), any other takes the region of the nearest one that does. Every
+other country is published by its own regions.
 
 **Data structure**: one file per country, because a country is the unit of growth.
 `spot-catalogue.ts` is **server-only** (full configs, imported by the forecast routes);
@@ -306,7 +315,8 @@ the browser gets `useCountryIndexes` (dynamic import of each country the map rea
 `regions.json`, the only catalogue file always downloaded — countries, regions, counts,
 and one coarse point per spot so geolocation still resolves to the nearest *spot*.
 
-Coverage: Spain, Ireland, France (incl. overseas régions) and the United Kingdom.
+Coverage: Spain, Ireland, France (incl. overseas régions), the United Kingdom and Portugal
+(incl. Madeira and the Azores).
 Ireland and Spain are also queried for **headlands and reefs** (`natural=cape`, `natural=reef`):
 a third of Ireland's published breaks are point and reef breaks OSM maps as capes (Doolin
 Point, Fanad Head, Cream Point, Garywilliam Point), and Spain has Cabo Lastres and Punta

@@ -40,7 +40,7 @@ interface Spot {
 const catalogue = allSpots() as unknown as Spot[];
 
 /** Countries derived with one open bearing as the floor (stage 2, MIN_OPEN_ARC_BY_COUNTRY). */
-const NARROW_WINDOW_COUNTRIES = ['Ireland', 'Spain'];
+const NARROW_WINDOW_COUNTRIES = ['Ireland', 'Spain', 'Portugal'];
 
 test.describe('spec: spot-catalog / Coordenadas trazables', () => {
   test('every spot records where its coordinate came from', () => {
@@ -190,9 +190,16 @@ test.describe('spec: spot-catalog / Cobertura', () => {
 
 
 test.describe('spec: spot-catalog / Cobertura de Francia y Reino Unido', () => {
-  test('the catalogue covers Spain, Ireland, France and the United Kingdom', () => {
+  test('the catalogue covers Spain, Ireland, France, the United Kingdom and Portugal', () => {
     const countries = new Set(catalogue.map(s => s.country));
-    for (const c of ['Spain', 'Ireland', 'France', 'United Kingdom']) expect(countries).toContain(c);
+    for (const c of ['Spain', 'Ireland', 'France', 'United Kingdom', 'Portugal']) expect(countries).toContain(c);
+  });
+
+  test("Portugal is published under surf-forecast's regions, islands included", () => {
+    const regions = new Set(catalogue.filter(s => s.country === 'Portugal').map(s => s.community));
+    for (const r of ['Peniche', 'Ericeira', 'Algarve', 'Madeira', 'Azores']) expect(regions).toContain(r);
+    // Districts are only where stage 1 starts; none is published.
+    for (const d of ['Leiria', 'Faro', 'Setúbal']) expect(regions).not.toContain(d);
   });
 
   test('England is split into counties, not one region', () => {

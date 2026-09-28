@@ -10,8 +10,23 @@
     "Stage 4 publishes a place only if it appears here."
   ],
   "generatedAt": "2026-09-28",
-  "count": 1689,
+  "count": 1965,
   "spots": [
+    {
+      "id": "a-ver-o-mar",
+      "name": "A Ver o Mar",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "A Ver o Mar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
     {
       "id": "aber-wrac-h-point",
       "name": "Aber Wrac'h Point",
@@ -138,6 +153,21 @@
       "referenceKm": 0
     },
     {
+      "id": "achadas-da-cruz",
+      "name": "Achadas Da Cruz",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Achadas Da Cruz"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "ackergill",
       "name": "Ackergill",
       "country": "United Kingdom",
@@ -168,6 +198,21 @@
       "referenceKm": 0
     },
     {
+      "id": "agucadoura",
+      "name": "Agucadoura",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Agucadoura"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "aiguaoliva",
       "name": "Aiguaoliva",
       "country": "Spain",
@@ -183,6 +228,36 @@
       "referenceKm": 0
     },
     {
+      "id": "albufeira",
+      "name": "Albufeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Albufeira"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
+      "id": "alfagar",
+      "name": "Alfagar",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Alfagar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
       "id": "alize",
       "name": "Alize",
       "country": "France",
@@ -195,6 +270,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "almagreira",
+      "name": "Almagreira",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Almagreira"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
       "referenceKm": 0
     },
     {
@@ -533,6 +623,23 @@
       "referenceKm": 0.29
     },
     {
+      "id": "areal-de-santa-barbara",
+      "name": "Areal de Santa Barbara",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Santa Barbara(Areias)",
+        "San Miguel - Areias"
+      ],
+      "forecastName": "San Miguel - Areias",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.5
+    },
+    {
       "id": "aregno-plage-algajola",
       "name": "Aregno Plage - Algajola",
       "country": "France",
@@ -687,6 +794,36 @@
       "referenceKm": 0
     },
     {
+      "id": "azurara",
+      "name": "Azurara",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Azurara"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
+      "id": "backdoor",
+      "name": "Backdoor",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Backdoor"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
+    },
+    {
       "id": "bagasse",
       "name": "Bagasse",
       "country": "France",
@@ -699,6 +836,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Martinique",
+      "referenceKm": 0
+    },
+    {
+      "id": "baia",
+      "name": "Baia",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baia"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
       "referenceKm": 0
     },
     {
@@ -762,6 +914,36 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.59
+    },
+    {
+      "id": "baleal-reef",
+      "name": "Baleal Reef",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baleal Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "baleal-sul",
+      "name": "Baleal Sul",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baleal Sul"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
     },
     {
       "id": "balephetrish-tiree",
@@ -1162,6 +1344,21 @@
       "referenceKm": 0.5
     },
     {
+      "id": "barra-do-douro",
+      "name": "Barra do Douro",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barra do Douro"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "barricane-beach-sssi",
       "name": "Barricane Beach (SSSI)",
       "country": "United Kingdom",
@@ -1402,6 +1599,21 @@
       "referenceKm": 0.14
     },
     {
+      "id": "belgas",
+      "name": "Belgas",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Belgas"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
       "id": "belharra",
       "name": "Belharra",
       "country": "France",
@@ -1535,6 +1747,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "bica",
+      "name": "Bica",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bica"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lisboa",
       "referenceKm": 0
     },
     {
@@ -1749,6 +1976,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Réunion Island",
+      "referenceKm": 0
+    },
+    {
+      "id": "bolina",
+      "name": "Bolina",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bolina"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lisboa",
       "referenceKm": 0
     },
     {
@@ -2336,6 +2578,21 @@
       "referenceKm": 0.06
     },
     {
+      "id": "burrinho",
+      "name": "Burrinho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Burrinho"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0
+    },
+    {
       "id": "burumendi-hondartza",
       "name": "Burumendi hondartza",
       "country": "Spain",
@@ -2380,6 +2637,36 @@
       "forecastName": "Playa de San Cibrao",
       "referenceRegion": "Galicia",
       "referenceKm": 2.82
+    },
+    {
+      "id": "cabo-de-sines",
+      "name": "Cabo de Sines",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cabo de Sines"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0
+    },
+    {
+      "id": "cabo-girao",
+      "name": "Cabo Girão",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cabo Girao"
+      ],
+      "forecastName": "Cabo Girao",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0.65
     },
     {
       "id": "cabo-lastres",
@@ -2439,6 +2726,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Guadeloupe - Grande Terre",
+      "referenceKm": 0
+    },
+    {
+      "id": "cais-do-funchal",
+      "name": "Cais do Funchal",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cais do Funchal"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
       "referenceKm": 0
     },
     {
@@ -2799,6 +3101,21 @@
       "referenceKm": 1.44
     },
     {
+      "id": "canidelo",
+      "name": "Canidelo",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Canidelo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "cannes",
       "name": "Cannes",
       "country": "France",
@@ -2812,6 +3129,23 @@
       "coordinate": "surf-forecast",
       "referenceRegion": "Cote d'Azur",
       "referenceKm": 0
+    },
+    {
+      "id": "cantinho-da-baia",
+      "name": "Cantinho da Baía",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cantinho",
+        "Cantinho da Baía"
+      ],
+      "forecastName": "Cantinho",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0.27
     },
     {
       "id": "cap-3000",
@@ -3088,6 +3422,21 @@
       "referenceKm": 0.45
     },
     {
+      "id": "carriagem",
+      "name": "Carriagem",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Carriagem"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
       "id": "carrickfinn-beach",
       "name": "Carrickfinn Beach",
       "country": "Ireland",
@@ -3208,6 +3557,36 @@
       "forecastName": "Caswell Bay",
       "referenceRegion": "Gower",
       "referenceKm": 0.32
+    },
+    {
+      "id": "cavalos-de-fao",
+      "name": "Cavalos de Fao",
+      "country": "Portugal",
+      "region": "Braga",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cavalos de Fao"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
+      "id": "cave",
+      "name": "Cave",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cave"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
     },
     {
       "id": "caves-sandsend",
@@ -3514,6 +3893,21 @@
       "referenceKm": 0
     },
     {
+      "id": "cogumelo",
+      "name": "Cogumelo",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cogumelo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0
+    },
+    {
       "id": "coldingham-sands",
       "name": "Coldingham Sands",
       "country": "United Kingdom",
@@ -3702,6 +4096,21 @@
       "referenceKm": 0
     },
     {
+      "id": "contreira",
+      "name": "Contreira",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Contreira"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "copacabana",
       "name": "Copacabana",
       "country": "Spain",
@@ -3714,6 +4123,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Spain - Cantabria",
+      "referenceKm": 0
+    },
+    {
+      "id": "costa-da-caparica",
+      "name": "Costa da Caparica",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Costa da Caparica"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lisboa",
       "referenceKm": 0
     },
     {
@@ -5332,6 +5756,36 @@
       "referenceKm": 0
     },
     {
+      "id": "esmoriz",
+      "name": "Esmoriz",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Esmoriz"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Beira",
+      "referenceKm": 0
+    },
+    {
+      "id": "esposende",
+      "name": "Esposende",
+      "country": "Portugal",
+      "region": "Braga",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Esposende"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "etang-de-l-ovu-santu",
       "name": "Etang de l'Ovu Santu",
       "country": "France",
@@ -5407,6 +5861,36 @@
       "referenceKm": 0
     },
     {
+      "id": "faial",
+      "name": "Faial",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Faial"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
+      "id": "faial-praia-do-norte",
+      "name": "Faial - Praia do Norte",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Faial - Praia do Norte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
       "id": "fairlight",
       "name": "Fairlight",
       "country": "United Kingdom",
@@ -5419,6 +5903,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "South Coast of England",
+      "referenceKm": 0
+    },
+    {
+      "id": "faja-da-areia",
+      "name": "Faja da Areia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Faja da Areia"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
+      "id": "faja-dos-padres",
+      "name": "Faja Dos Padres",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Faja Dos Padres"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
       "referenceKm": 0
     },
     {
@@ -5484,6 +5998,21 @@
       "referenceKm": 0
     },
     {
+      "id": "ferrel",
+      "name": "Ferrel",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ferrel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
       "id": "figari",
       "name": "Figari",
       "country": "France",
@@ -5496,6 +6025,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Corsica",
+      "referenceKm": 0
+    },
+    {
+      "id": "figueira-da-foz-buarcos",
+      "name": "Figueira da Foz - Buarcos",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Figueira da Foz - Buarcos"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Beira",
+      "referenceKm": 0
+    },
+    {
+      "id": "figueiros",
+      "name": "Figueiros",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Figueiros"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
       "referenceKm": 0
     },
     {
@@ -5608,6 +6167,22 @@
       "coordinate": "surf-forecast",
       "referenceRegion": "South Coast of England",
       "referenceKm": 0
+    },
+    {
+      "id": "fonte-da-telha",
+      "name": "Fonte da Telha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Fonte da Telha"
+      ],
+      "forecastName": "Fonte da Telha",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.27
     },
     {
       "id": "fort-de-st-germain-des-vaux",
@@ -5778,6 +6353,51 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Tenerife",
+      "referenceKm": 0
+    },
+    {
+      "id": "furadouro",
+      "name": "Furadouro",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Furadouro"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.22
+    },
+    {
+      "id": "furadouro-beira",
+      "name": "Furadouro",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Furadouro"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Beira",
+      "referenceKm": 0
+    },
+    {
+      "id": "furnas",
+      "name": "Furnas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Furnas"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
       "referenceKm": 0
     },
     {
@@ -5962,6 +6582,36 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.11
+    },
+    {
+      "id": "graciosa-lagou",
+      "name": "Graciosa - Lagou",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Graciosa - Lagou"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "graciosa-porto-da-praia",
+      "name": "Graciosa - Porto da Praia",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Graciosa - Porto da Praia"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
     },
     {
       "id": "grande-plage-156866423",
@@ -7097,6 +7747,21 @@
       "referenceKm": 0
     },
     {
+      "id": "jardim-do-mar",
+      "name": "Jardim do Mar",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Jardim do Mar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "jeffs-left",
       "name": "Jeffs Left",
       "country": "United Kingdom",
@@ -7155,6 +7820,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Valencia",
+      "referenceKm": 0
+    },
+    {
+      "id": "julias",
+      "name": "Julias",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Julias"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
       "referenceKm": 0
     },
     {
@@ -7447,6 +8127,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.16
+    },
+    {
+      "id": "kings-rock",
+      "name": "Kings Rock",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Kings Rock"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
     },
     {
       "id": "kinnagoe-bay",
@@ -8274,6 +8969,21 @@
       "referenceKm": 0.09
     },
     {
+      "id": "lage-do-pescador",
+      "name": "Lage do Pescador",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lage do Pescador"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
       "id": "laggan-bay-islay",
       "name": "Laggan Bay (Islay)",
       "country": "United Kingdom",
@@ -8287,6 +8997,37 @@
       "coordinate": "surf-forecast",
       "referenceRegion": "Inner Hebrides",
       "referenceKm": 0
+    },
+    {
+      "id": "lagide",
+      "name": "Lagide",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lagide"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "lagoa-de-albufeira",
+      "name": "Lagoa de Albufeira",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Lagoa de Albufeira"
+      ],
+      "forecastName": "Lagoa de Albufeira",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.58
     },
     {
       "id": "lahinch-beach",
@@ -9231,6 +9972,22 @@
       "referenceKm": 0
     },
     {
+      "id": "limipicos",
+      "name": "Limipicos / The Reef",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Limipicos",
+        "The Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
+    },
+    {
       "id": "littlehampton-east-beach",
       "name": "Littlehampton East Beach",
       "country": "United Kingdom",
@@ -9583,6 +10340,21 @@
       "referenceKm": 0
     },
     {
+      "id": "lugar-de-baixo",
+      "name": "Lugar De Baixo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lugar De Baixo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "lulworth-cove",
       "name": "Lulworth Cove",
       "country": "United Kingdom",
@@ -9720,6 +10492,21 @@
       "referenceKm": 0
     },
     {
+      "id": "machico",
+      "name": "Machico",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Machico"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "machir-bay-islay",
       "name": "Machir Bay (Islay)",
       "country": "United Kingdom",
@@ -9749,6 +10536,21 @@
       "forecastName": "Machrihanish",
       "referenceRegion": "Kintyre",
       "referenceKm": 2.13
+    },
+    {
+      "id": "madalena-do-mar",
+      "name": "Madalena do Mar",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Madalena do Mar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
     },
     {
       "id": "maenporth-beach-436659206",
@@ -9905,6 +10707,21 @@
       "forecastName": "Plage de Mayarco",
       "referenceRegion": "La Cote Basque",
       "referenceKm": 0.2
+    },
+    {
+      "id": "malhadinha",
+      "name": "Malhadinha",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Malhadinha"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
     },
     {
       "id": "malin-bay",
@@ -10167,6 +10984,22 @@
       "referenceKm": 0
     },
     {
+      "id": "meia-praia-1245391449",
+      "name": "Meia Praia",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Meia Praia"
+      ],
+      "forecastName": "Meia Praia",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.41
+    },
+    {
       "id": "mejillones",
       "name": "Mejillones",
       "country": "Spain",
@@ -10336,6 +11169,52 @@
       "referenceKm": 0
     },
     {
+      "id": "mindelo",
+      "name": "Mindelo",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mindelo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
+      "id": "mini-pipe",
+      "name": "Mini Pipe / Consolacao Lefts",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mini Pipe",
+        "Consolacao Lefts"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "molho-leste",
+      "name": "Molho Leste",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Molho Leste"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
       "id": "molino-de-papel",
       "name": "Molino de Papel",
       "country": "Spain",
@@ -10378,6 +11257,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Gironde",
+      "referenceKm": 0
+    },
+    {
+      "id": "monte-estoril",
+      "name": "Monte Estoril",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Monte Estoril"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lisboa",
       "referenceKm": 0
     },
     {
@@ -11317,6 +12211,21 @@
       "referenceKm": 0.31
     },
     {
+      "id": "paul-do-mar",
+      "name": "Paul do Mar",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Paul do Mar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "pease-sands",
       "name": "Pease Sands",
       "country": "United Kingdom",
@@ -11331,6 +12240,22 @@
       "forecastName": "Pease Bay",
       "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.07
+    },
+    {
+      "id": "pedra-branca",
+      "name": "Pedra Branca",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Pedra Branca"
+      ],
+      "forecastName": "Pedra Branca",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.21
     },
     {
       "id": "pedro-barba-la-graciosa",
@@ -11652,6 +12577,36 @@
       "forecastName": "Pinarellu",
       "referenceRegion": "Corsica",
       "referenceKm": 0.77
+    },
+    {
+      "id": "piscinas-oceanicas-de-porto-martins",
+      "name": "Piscinas Oceânicas de Porto Martins",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Porto Martins"
+      ],
+      "forecastName": "Terceira - Porto Martins",
+      "referenceRegion": "The Azores",
+      "referenceKm": 3.3
+    },
+    {
+      "id": "pizo",
+      "name": "Pizo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pizo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
     },
     {
       "id": "plage-borely",
@@ -19828,6 +20783,116 @@
       "referenceKm": 0.41
     },
     {
+      "id": "ponta-das-contendas",
+      "name": "Ponta das Contendas",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Contendas",
+        "Terceira - Contendas"
+      ],
+      "forecastName": "Terceira - Contendas",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.14
+    },
+    {
+      "id": "ponta-delgada",
+      "name": "Ponta Delgada",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ponta Delgada"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
+      "id": "ponta-do-pargo",
+      "name": "Ponta do Pargo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ponta do Pargo"
+      ],
+      "forecastName": "Ponta do Pargo",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0.71
+    },
+    {
+      "id": "ponta-do-tristao",
+      "name": "Ponta do Tristão",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ponta de Tristao"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 1.17
+    },
+    {
+      "id": "ponta-pequena",
+      "name": "Ponta Pequena",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ponta Pequena"
+      ],
+      "forecastName": "Ponta Pequena",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0.04
+    },
+    {
+      "id": "pontal-da-carrapateira",
+      "name": "Pontal da Carrapateira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Carrapateira"
+      ],
+      "forecastName": "Carrapateira",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 1.02
+    },
+    {
+      "id": "pontinha-ericeira",
+      "name": "Pontinha / Praia do Peixe",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pontinha",
+        "Praia do Peixe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
+    },
+    {
       "id": "pontllyfni",
       "name": "Pontllyfni",
       "country": "United Kingdom",
@@ -20557,6 +21622,68 @@
       "referenceKm": 0.65
     },
     {
+      "id": "porto-batel",
+      "name": "Porto Batel",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porto Batel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "porto-da-cruz",
+      "name": "Porto da Cruz",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porto da Cruz"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
+      "id": "porto-de-santa-iria",
+      "name": "Porto de santa iria",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "San Miguel - Santa Iria",
+        "Santa Iria"
+      ],
+      "forecastName": "San Miguel - Santa Iria",
+      "referenceRegion": "The Azores",
+      "referenceKm": 1.3
+    },
+    {
+      "id": "porto-moniz",
+      "name": "Porto Moniz",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Porto Moniz"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "portobello-beach",
       "name": "Portobello Beach",
       "country": "United Kingdom",
@@ -20695,6 +21822,21 @@
       "referenceKm": 0
     },
     {
+      "id": "povoa-do-varzim",
+      "name": "Povoa do Varzim",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Povoa do Varzim"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "pozo-izquierdo",
       "name": "Pozo Izquierdo",
       "country": "Spain",
@@ -20726,6 +21868,21 @@
       "referenceKm": 0.23
     },
     {
+      "id": "praia-agua-d-alto",
+      "name": "Praia Água d'Alto",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Agua de Alto"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.17
+    },
+    {
       "id": "praia-america",
       "name": "Praia América",
       "country": "Spain",
@@ -20739,6 +21896,83 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.37
+    },
+    {
+      "id": "praia-azul-peniche",
+      "name": "Praia Azul",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia Azul"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "praia-cabana-do-pescador",
+      "name": "Praia Cabana do Pescador",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Pescador"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.1
+    },
+    {
+      "id": "praia-da-aberta-nova",
+      "name": "Praia da Aberta Nova",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aberta A Nova"
+      ],
+      "forecastName": "Aberta A Nova",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.3
+    },
+    {
+      "id": "praia-da-adraga",
+      "name": "Praia da Adraga",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Adraga",
+        "Praia da Adraga"
+      ],
+      "forecastName": "Adraga",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-aguda-1341639355",
+      "name": "Praia da Aguda",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Aguda"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.03
     },
     {
       "id": "praia-da-aguieira",
@@ -20758,6 +21992,37 @@
       "referenceKm": 0.24
     },
     {
+      "id": "praia-da-amoreira",
+      "name": "Praia da Amoreira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Amoreira"
+      ],
+      "forecastName": "Amoreira",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.48
+    },
+    {
+      "id": "praia-da-apulia",
+      "name": "Praia da Apúlia",
+      "country": "Portugal",
+      "region": "Braga",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Apulia"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.09
+    },
+    {
       "id": "praia-da-area-longa-177165011",
       "name": "Praia da Area Longa",
       "country": "Spain",
@@ -20771,6 +22036,23 @@
       "forecastName": "Playa de Baleo",
       "referenceRegion": "Galicia",
       "referenceKm": 1.21
+    },
+    {
+      "id": "praia-da-areia-branca-1446589",
+      "name": "Praia da Areia Branca",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Da Areia Branca",
+        "Praia da Areia Branca"
+      ],
+      "forecastName": "Praia da Areia Branca",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0.14
     },
     {
       "id": "praia-da-arnela-grande",
@@ -20790,6 +22072,143 @@
       "referenceKm": 0.43
     },
     {
+      "id": "praia-da-arrifana",
+      "name": "Praia da Arrifana",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Arrifana"
+      ],
+      "forecastName": "Arrifana",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.46
+    },
+    {
+      "id": "praia-da-azarujinha",
+      "name": "Praia da Azarujinha",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Azarujinha"
+      ],
+      "forecastName": "Azarujinha",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 1.43
+    },
+    {
+      "id": "praia-da-baforeira",
+      "name": "Praia da Baforeira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bafureira"
+      ],
+      "forecastName": "Bafureira",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.41
+    },
+    {
+      "id": "praia-da-baia-de-porto-covo",
+      "name": "Praia da Baía de Porto Covo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Porto Covo"
+      ],
+      "forecastName": "Porto Covo",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.75
+    },
+    {
+      "id": "praia-da-baleeira-129580025",
+      "name": "Praia da Baleeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Baleeira"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.07
+    },
+    {
+      "id": "praia-da-barra-168740960",
+      "name": "Praia da Barra",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Barra"
+      ],
+      "forecastName": "Praia da Barra",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.24
+    },
+    {
+      "id": "praia-da-bordeira",
+      "name": "Praia da Bordeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Bordeira"
+      ],
+      "forecastName": "Praia do Bordeira",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.1
+    },
+    {
+      "id": "praia-da-coelha",
+      "name": "Praia da Coelha",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Coelha"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.03
+    },
+    {
+      "id": "praia-da-comporta",
+      "name": "Praia da Comporta",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Comporta"
+      ],
+      "forecastName": "Comporta",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.57
+    },
+    {
       "id": "praia-da-concha-90818804",
       "name": "Praia da Concha",
       "country": "Spain",
@@ -20803,6 +22222,229 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.07
+    },
+    {
+      "id": "praia-da-consolacao",
+      "name": "Praia da Consolação",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Consolacao Rights",
+        "Consolação"
+      ],
+      "forecastName": "Consolacao Rights",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0.93
+    },
+    {
+      "id": "praia-da-cordoama",
+      "name": "Praia da Cordoama",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cordoama",
+        "Praia da Cordoama"
+      ],
+      "forecastName": "Cordoama",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.22
+    },
+    {
+      "id": "praia-da-cornelia",
+      "name": "Praia da Cornélia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Cornelia"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-corredoura",
+      "name": "Praia da Corredoura",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Corredoura"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.01
+    },
+    {
+      "id": "praia-da-costa-nova",
+      "name": "Praia da Costa Nova",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Costa Nova"
+      ],
+      "forecastName": "Costa Nova",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.28
+    },
+    {
+      "id": "praia-da-cova-do-vapor",
+      "name": "Praia da Cova do Vapor",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cova Do Vapor"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.29
+    },
+    {
+      "id": "praia-da-cova-gala",
+      "name": "Praia da Cova-Gala",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Figueira da Foz - Gala"
+      ],
+      "forecastName": "Figueira da Foz - Gala",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.63
+    },
+    {
+      "id": "praia-da-cresmina",
+      "name": "Praia da Cresmina",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cresmina",
+        "Praia da Crismina"
+      ],
+      "forecastName": "Cresmina",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.27
+    },
+    {
+      "id": "praia-da-cruz-quebrada",
+      "name": "Praia da Cruz Quebrada",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Cruz Quebrada"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.04
+    },
+    {
+      "id": "praia-da-falesia",
+      "name": "Praia da Falésia",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Falesia",
+        "Praia da Falésia"
+      ],
+      "forecastName": "Praia da Falésia",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.61
+    },
+    {
+      "id": "praia-da-figueira-da-foz",
+      "name": "Praia da Figueira da Foz",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Figueira da Foz",
+        "Figueira da Foz - Cabedelo"
+      ],
+      "forecastName": "Figueira da Foz - Cabedelo",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.88
+    },
+    {
+      "id": "praia-da-foz-186702860",
+      "name": "Praia da Foz",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Foz Cabo Espichel Sesimbra"
+      ],
+      "forecastName": "Praia da Foz Cabo Espichel Sesimbra",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.48
+    },
+    {
+      "id": "praia-da-foz-do-arelho-mar",
+      "name": "Praia da Foz do Arelho-Mar",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Foz do Arelho"
+      ],
+      "forecastName": "Foz do Arelho",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0.43
+    },
+    {
+      "id": "praia-da-foz-do-lizandro",
+      "name": "Praia da Foz do Lizandro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Foz do Lizandro"
+      ],
+      "forecastName": "Foz do Lizandro",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.49
     },
     {
       "id": "praia-da-frouxeira",
@@ -20821,6 +22463,83 @@
       "forecastName": "Valdovino",
       "referenceRegion": "Galicia",
       "referenceKm": 0.51
+    },
+    {
+      "id": "praia-da-gale",
+      "name": "Praia da Galé",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Galé"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.23
+    },
+    {
+      "id": "praia-da-ilha-de-faro",
+      "name": "Praia da Ilha de Faro",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ilha de Faro",
+        "Praia de Faro"
+      ],
+      "forecastName": "Ilha de Faro",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.28
+    },
+    {
+      "id": "praia-da-ilha-de-tavira",
+      "name": "Praia da Ilha de Tavira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ilha de Tavira"
+      ],
+      "forecastName": "Ilha de Tavira",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-ilha-deserta",
+      "name": "Praia da Ilha Deserta",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ilha Deserta"
+      ],
+      "forecastName": "Ilha Deserta",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.33
+    },
+    {
+      "id": "praia-da-ingrina",
+      "name": "Praia da Ingrina",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ingrina"
+      ],
+      "forecastName": "Ingrina",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.38
     },
     {
       "id": "praia-da-ladeira-85572857",
@@ -20855,6 +22574,21 @@
       "referenceKm": 0.45
     },
     {
+      "id": "praia-da-laje",
+      "name": "Praia da Laje",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Laje"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.15
+    },
+    {
       "id": "praia-da-lanzada",
       "name": "Praia da Lanzada",
       "country": "Spain",
@@ -20872,6 +22606,57 @@
       "referenceKm": 0.28
     },
     {
+      "id": "praia-da-leirosa",
+      "name": "Praia da Leirosa",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Leirosa",
+        "Praia da Leirosa"
+      ],
+      "forecastName": "Praia da Leirosa",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-luz",
+      "name": "Praia da Luz",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Luz",
+        "Praia Da Luz"
+      ],
+      "forecastName": "Luz",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.31
+    },
+    {
+      "id": "praia-da-luz-444785502",
+      "name": "Praia da Luz",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Luz",
+        "Luz (Porto)"
+      ],
+      "forecastName": "Luz",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.18
+    },
+    {
       "id": "praia-da-madorra",
       "name": "Praia da Madorra",
       "country": "Spain",
@@ -20885,6 +22670,37 @@
       "forecastName": "Playa de Madorra",
       "referenceRegion": "Galicia",
       "referenceKm": 1.82
+    },
+    {
+      "id": "praia-da-mareta",
+      "name": "Praia da Mareta",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Mareta"
+      ],
+      "forecastName": "Mareta",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.17
+    },
+    {
+      "id": "praia-da-marinha",
+      "name": "Praia da Marinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Marinha"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.05
     },
     {
       "id": "praia-da-marosa",
@@ -20902,6 +22718,99 @@
       "referenceKm": 0.61
     },
     {
+      "id": "praia-da-muracao",
+      "name": "Praia da Muração",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Murração"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-murtinheira",
+      "name": "Praia da Murtinheira",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Murtinheira"
+      ],
+      "forecastName": "Murtinheira",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.48
+    },
+    {
+      "id": "praia-da-nazare",
+      "name": "Praia da Nazaré",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Nazare",
+        "Nazaré"
+      ],
+      "forecastName": "Nazare",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.53
+    },
+    {
+      "id": "praia-da-oura",
+      "name": "Praia da Oura",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Oura"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-da-parede",
+      "name": "Praia da Parede",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Parede"
+      ],
+      "forecastName": "Parede",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-da-pedra-do-ouro",
+      "name": "Praia da Pedra do Ouro",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Pedra do Ouro"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.45
+    },
+    {
       "id": "praia-da-pedra-do-sal",
       "name": "Praia da Pedra do Sal",
       "country": "Spain",
@@ -20915,6 +22824,83 @@
       "forecastName": "Pedra do Sal",
       "referenceRegion": "Galicia",
       "referenceKm": 0.27
+    },
+    {
+      "id": "praia-da-poca",
+      "name": "Praia da Poça",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Poca"
+      ],
+      "forecastName": "Poca",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.24
+    },
+    {
+      "id": "praia-da-ponta-do-sol",
+      "name": "Praia da Ponta do Sol",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ponta do Sol"
+      ],
+      "forecastName": "Ponta do Sol",
+      "referenceRegion": "Madeira",
+      "referenceKm": 1.17
+    },
+    {
+      "id": "praia-da-ponta-ruiva",
+      "name": "Praia da Ponta Ruiva",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ponta Ruiva",
+        "Praia da Ponta Ruiva"
+      ],
+      "forecastName": "Ponta Ruiva",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.02
+    },
+    {
+      "id": "praia-da-rainha",
+      "name": "Praia da Rainha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Rainha"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.1
+    },
+    {
+      "id": "praia-da-rainha-lisboa",
+      "name": "Praia da Rainha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Rainha"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0
     },
     {
       "id": "praia-da-rapadoira",
@@ -20932,6 +22918,288 @@
       "referenceKm": 1.33
     },
     {
+      "id": "praia-da-rocha",
+      "name": "Praia da Rocha",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Rocha"
+      ],
+      "forecastName": "Praia da Rocha",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.55
+    },
+    {
+      "id": "praia-da-salema",
+      "name": "Praia da Salema",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Salema",
+        "Salema"
+      ],
+      "forecastName": "Salema",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.23
+    },
+    {
+      "id": "praia-da-samarra",
+      "name": "Praia da Samarra",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Samarra"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.29
+    },
+    {
+      "id": "praia-da-saude",
+      "name": "Praia da Saúde",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Saude"
+      ],
+      "forecastName": "Praia da Saude",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.14
+    },
+    {
+      "id": "praia-da-tocha",
+      "name": "Praia da Tocha",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Tocha"
+      ],
+      "forecastName": "Praia da Tocha",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.65
+    },
+    {
+      "id": "praia-da-torre-531918708",
+      "name": "Praia da Torre",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Torre",
+        "Torre"
+      ],
+      "forecastName": "Torre",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-da-torreira",
+      "name": "Praia da Torreira",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Torreira",
+        "Torreira"
+      ],
+      "forecastName": "Praia da Torreira",
+      "referenceRegion": "Beira",
+      "referenceKm": 2.27
+    },
+    {
+      "id": "praia-da-ursa",
+      "name": "Praia da Ursa",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Ursa"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.08
+    },
+    {
+      "id": "praia-da-vagueira",
+      "name": "Praia da Vagueira",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Vagueira"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Beira",
+      "referenceKm": 0
+    },
+    {
+      "id": "praia-da-vieira",
+      "name": "Praia da Vieira",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Vieira"
+      ],
+      "forecastName": "Praia da Vieira",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.56
+    },
+    {
+      "id": "praia-da-vieirinha-vale-de-figueiros",
+      "name": "Praia da Vieirinha - Vale de Figueiros",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Vieirinha"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.27
+    },
+    {
+      "id": "praia-da-vigia-1341961667",
+      "name": "Praia da Vigia",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Vigia"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.31
+    },
+    {
+      "id": "praia-da-viola",
+      "name": "Praia da Viola",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Miguel - Baixa de Viola"
+      ],
+      "forecastName": "San Miguel - Baixa de Viola",
+      "referenceRegion": "The Azores",
+      "referenceKm": 1.08
+    },
+    {
+      "id": "praia-da-vitoria",
+      "name": "Praia da Vitória",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Vitoria",
+        "Terceira - Praia Vitoria"
+      ],
+      "forecastName": "Terceira - Praia Vitoria",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-da-zambujeira-do-mar",
+      "name": "Praia da Zambujeira do Mar",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Zambujeira do Mar"
+      ],
+      "forecastName": "Zambujeira do Mar",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.8
+    },
+    {
+      "id": "praia-das-amoeiras",
+      "name": "Praia das Amoeiras",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia das Amoeiras"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.12
+    },
+    {
+      "id": "praia-das-bicas",
+      "name": "Praia das Bicas",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Bicas"
+      ],
+      "forecastName": "Bicas",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.11
+    },
+    {
+      "id": "praia-das-furnas-208114752",
+      "name": "Praia das Furnas",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia das Furnas"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.21
+    },
+    {
       "id": "praia-das-illas",
       "name": "Praia das Illas",
       "country": "Spain",
@@ -20945,6 +23213,84 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.02
+    },
+    {
+      "id": "praia-das-macas",
+      "name": "Praia das Maçãs",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia das Macas",
+        "Praia das Maçãs"
+      ],
+      "forecastName": "Praia das Macas",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.27
+    },
+    {
+      "id": "praia-das-moitas-1454276841",
+      "name": "Praia das Moitas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia das Moitas"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-de-afife",
+      "name": "Praia de Afife",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Afife"
+      ],
+      "forecastName": "Afife",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.57
+    },
+    {
+      "id": "praia-de-altura",
+      "name": "Praia de Altura",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia de Altura"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
+      "id": "praia-de-amorosa",
+      "name": "Praia de Amorosa",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia da Amorosa"
+      ],
+      "forecastName": "Praia da Amorosa",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.67
     },
     {
       "id": "praia-de-area",
@@ -21073,6 +23419,22 @@
       "referenceKm": 0.25
     },
     {
+      "id": "praia-de-carcavelos",
+      "name": "Praia de Carcavelos",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Carcavelos"
+      ],
+      "forecastName": "Carcavelos",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.09
+    },
+    {
       "id": "praia-de-carnota",
       "name": "Praia de Carnota",
       "country": "Spain",
@@ -21086,6 +23448,39 @@
       "forecastName": "Playa de Carnota",
       "referenceRegion": "Galicia",
       "referenceKm": 1.73
+    },
+    {
+      "id": "praia-de-caxias-19231764",
+      "name": "Praia de Caxias",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Caxias",
+        "Praia de Caxias"
+      ],
+      "forecastName": "Caxias",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.16
+    },
+    {
+      "id": "praia-de-cortegaca",
+      "name": "Praia de Cortegaça",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cortegaca"
+      ],
+      "forecastName": "Cortegaca",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.07
     },
     {
       "id": "praia-de-doninos",
@@ -21105,6 +23500,37 @@
       "referenceKm": 0.3
     },
     {
+      "id": "praia-de-espinho",
+      "name": "Praia de Espinho",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Espinho"
+      ],
+      "forecastName": "Espinho",
+      "referenceRegion": "Beira",
+      "referenceKm": 1.17
+    },
+    {
+      "id": "praia-de-faro",
+      "name": "Praia de Faro",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia de Faro"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
       "id": "praia-de-fonforron",
       "name": "Praia de Fonforrón",
       "country": "Spain",
@@ -21122,6 +23548,21 @@
       "referenceKm": 0.29
     },
     {
+      "id": "praia-de-labruge",
+      "name": "Praia de Labruge",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Labruge"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.49
+    },
+    {
       "id": "praia-de-larino",
       "name": "Praia de Lariño",
       "country": "Spain",
@@ -21135,6 +23576,37 @@
       "forecastName": "Playa de Larino",
       "referenceRegion": "Galicia",
       "referenceKm": 0.61
+    },
+    {
+      "id": "praia-de-lavadores",
+      "name": "Praia de Lavadores",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Lavadores"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.15
+    },
+    {
+      "id": "praia-de-leca",
+      "name": "Praia de Leça",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Leca"
+      ],
+      "forecastName": "Leca",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.34
     },
     {
       "id": "praia-de-llas",
@@ -21153,6 +23625,37 @@
       "referenceKm": 0.03
     },
     {
+      "id": "praia-de-madalena-sul",
+      "name": "Praia de Madalena Sul",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia da Madalena"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.4
+    },
+    {
+      "id": "praia-de-matosinhos",
+      "name": "Praia de Matosinhos",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Matosinhos"
+      ],
+      "forecastName": "Matosinhos",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.52
+    },
+    {
       "id": "praia-de-melide",
       "name": "Praia de Melide",
       "country": "Spain",
@@ -21168,6 +23671,69 @@
       "referenceKm": 0.31
     },
     {
+      "id": "praia-de-melides",
+      "name": "Praia de Melides",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Melides"
+      ],
+      "forecastName": "Melides",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.32
+    },
+    {
+      "id": "praia-de-mira",
+      "name": "Praia de Mira",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Mira"
+      ],
+      "forecastName": "Praia de Mira",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.39
+    },
+    {
+      "id": "praia-de-miramar",
+      "name": "Praia de Miramar",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Miramar"
+      ],
+      "forecastName": "Miramar",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.35
+    },
+    {
+      "id": "praia-de-moledo",
+      "name": "Praia de Moledo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Moledo"
+      ],
+      "forecastName": "Moledo",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.13
+    },
+    {
       "id": "praia-de-montalbo",
       "name": "Praia de Montalbo",
       "country": "Spain",
@@ -21181,6 +23747,23 @@
       "forecastName": "Playa de Montalbo",
       "referenceRegion": "Galicia",
       "referenceKm": 2.21
+    },
+    {
+      "id": "praia-de-monte-clerigo",
+      "name": "Praia de Monte Clérigo",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Monte Clerigo",
+        "Monte Clérigo"
+      ],
+      "forecastName": "Monte Clerigo",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.12
     },
     {
       "id": "praia-de-nemina",
@@ -21200,6 +23783,84 @@
       "referenceKm": 0.3
     },
     {
+      "id": "praia-de-nossa-senhora-208875686",
+      "name": "Praia de Nossa Senhora",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Nossa Senhora"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.07
+    },
+    {
+      "id": "praia-de-odeceixe",
+      "name": "Praia de Odeceixe",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia de Odeceixe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0
+    },
+    {
+      "id": "praia-de-odeceixe-mar",
+      "name": "Praia de Odeceixe-Mar",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Odeceixe"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.61
+    },
+    {
+      "id": "praia-de-ofir",
+      "name": "Praia de Ofir",
+      "country": "Portugal",
+      "region": "Braga",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ofir"
+      ],
+      "forecastName": "Ofir",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.26
+    },
+    {
+      "id": "praia-de-paco-de-arcos",
+      "name": "Praia de Paço de Arcos",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Paco D 'arcos",
+        "Paco de Arcos"
+      ],
+      "forecastName": "Paco D 'arcos",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.16
+    },
+    {
       "id": "praia-de-pantin",
       "name": "Praia de Pantín",
       "country": "Spain",
@@ -21214,6 +23875,38 @@
       "forecastName": "Pantin",
       "referenceRegion": "Galicia",
       "referenceKm": 0.25
+    },
+    {
+      "id": "praia-de-paramos-430526467",
+      "name": "Praia de Paramos",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Paramos"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.35
+    },
+    {
+      "id": "praia-de-paredes-de-vitoria",
+      "name": "Praia de Paredes de Vitória",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Paredes",
+        "Praia das Paredes"
+      ],
+      "forecastName": "Praia Paredes",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.09
     },
     {
       "id": "praia-de-patos",
@@ -21232,6 +23925,21 @@
       "forecastName": "Playa de Patos (El Pico)",
       "referenceRegion": "Galicia",
       "referenceKm": 0.34
+    },
+    {
+      "id": "praia-de-pedrogao",
+      "name": "Praia de Pedrogão",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Pedrogao"
+      ],
+      "forecastName": "Pedrogao",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.36
     },
     {
       "id": "praia-de-peizas",
@@ -21263,6 +23971,21 @@
       "forecastName": "Ponzos",
       "referenceRegion": "Galicia",
       "referenceKm": 0.15
+    },
+    {
+      "id": "praia-de-porto-novo",
+      "name": "Praia de Porto Novo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Porto Novo"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.04
     },
     {
       "id": "praia-de-razo",
@@ -21359,6 +24082,37 @@
       "referenceKm": 0.04
     },
     {
+      "id": "praia-de-santa-rita-sul",
+      "name": "Praia de Santa Rita Sul",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia de Santa Rita"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.34
+    },
+    {
+      "id": "praia-de-santo-amaro-180126358",
+      "name": "Praia de Santo Amaro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Santo Amaro"
+      ],
+      "forecastName": "Santo Amaro",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.17
+    },
+    {
       "id": "praia-de-santo-anton",
       "name": "Praia de Santo Antón",
       "country": "Spain",
@@ -21375,6 +24129,153 @@
       "referenceKm": 0.33
     },
     {
+      "id": "praia-de-santo-antonio-5448095",
+      "name": "Praia de Santo António",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Vila Real de Santo Antonio"
+      ],
+      "forecastName": "Vila Real de Santo Antonio",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.72
+    },
+    {
+      "id": "praia-de-sao-jacinto",
+      "name": "Praia de São Jacinto",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Sao Jacinto",
+        "São Jacinto"
+      ],
+      "forecastName": "Sao Jacinto",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.74
+    },
+    {
+      "id": "praia-de-sao-joao",
+      "name": "Praia de São João",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Sao Joao",
+        "São João da Caparica"
+      ],
+      "forecastName": "Sao Joao",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.09
+    },
+    {
+      "id": "praia-de-sao-juliao",
+      "name": "Praia de São Julião",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Sao Juliao",
+        "São Julião"
+      ],
+      "forecastName": "Sao Juliao",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.1
+    },
+    {
+      "id": "praia-de-sao-lourenco",
+      "name": "Praia de São Lourenço",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Sao Lourenço",
+        "São Lourenço"
+      ],
+      "forecastName": "Sao Lourenço",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.24
+    },
+    {
+      "id": "praia-de-sao-martinho-do-porto",
+      "name": "Praia de São Martinho do Porto",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "São Martinho do Porto"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.4
+    },
+    {
+      "id": "praia-de-sao-pedro-de-maceda",
+      "name": "Praia de São Pedro de Maceda",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Maceda"
+      ],
+      "forecastName": "Maceda",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.13
+    },
+    {
+      "id": "praia-de-sao-pedro-do-estoril",
+      "name": "Praia de São Pedro do Estoril",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Estoril",
+        "Sao Pedro",
+        "São Pedro do Estoril"
+      ],
+      "forecastName": "Sao Pedro",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.03
+    },
+    {
+      "id": "praia-de-sao-torpes",
+      "name": "Praia de São Torpes",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Sao Torpes"
+      ],
+      "forecastName": "Sao Torpes",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.39
+    },
+    {
       "id": "praia-de-seaia",
       "name": "Praia de Seaia",
       "country": "Spain",
@@ -21388,6 +24289,21 @@
       "forecastName": "Playa de Seaia",
       "referenceRegion": "Galicia",
       "referenceKm": 0.28
+    },
+    {
+      "id": "praia-de-silvalde",
+      "name": "Praia de Silvalde",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Silvalde"
+      ],
+      "forecastName": "Silvalde",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.34
     },
     {
       "id": "praia-de-soesto",
@@ -21421,6 +24337,55 @@
       "referenceKm": 0.13
     },
     {
+      "id": "praia-de-vale-do-lobo",
+      "name": "Praia de Vale do Lobo",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Vale do Lobo"
+      ],
+      "forecastName": "Vale do Lobo",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.53
+    },
+    {
+      "id": "praia-de-vale-figueira-1241777810",
+      "name": "Praia de Vale Figueira",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Vale Figueira",
+        "Vale Figueiras"
+      ],
+      "forecastName": "Vale Figueira",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.19
+    },
+    {
+      "id": "praia-de-vila-praia-de-ancora",
+      "name": "Praia de Vila Praia de Âncora",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Vila Praia de Ancora",
+        "Vila Praia de Âncora"
+      ],
+      "forecastName": "Vila Praia de Ancora",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.58
+    },
+    {
       "id": "praia-de-vilarrube",
       "name": "Praia de Vilarrube",
       "country": "Spain",
@@ -21434,6 +24399,223 @@
       "forecastName": "Villarrube",
       "referenceRegion": "Galicia",
       "referenceKm": 0.97
+    },
+    {
+      "id": "praia-do-abano",
+      "name": "Praia do Abano",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Abano"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.17
+    },
+    {
+      "id": "praia-do-almoxarife",
+      "name": "Praia do Almoxarife",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Faial - Praia do Almoxarife"
+      ],
+      "forecastName": "Faial - Praia do Almoxarife",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.65
+    },
+    {
+      "id": "praia-do-alvor-poente",
+      "name": "Praia do Alvor Poente",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Alvor",
+        "Praia de Alvor"
+      ],
+      "forecastName": "Alvor",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.23
+    },
+    {
+      "id": "praia-do-amado",
+      "name": "Praia do Amado",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Amado"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.16
+    },
+    {
+      "id": "praia-do-aterro",
+      "name": "Praia do Aterro",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Aterro"
+      ],
+      "forecastName": "Praia do Aterro",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.36
+    },
+    {
+      "id": "praia-do-baleal",
+      "name": "Praia do Baleal",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Baleal",
+        "Praia do Baleal"
+      ],
+      "forecastName": "Praia do Baleal",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0.71
+    },
+    {
+      "id": "praia-do-barranco",
+      "name": "Praia do Barranco",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Barranco"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.03
+    },
+    {
+      "id": "praia-do-barranco-das-belharucas",
+      "name": "Praia do Barranco das Belharucas",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Barranco da Belharucas"
+      ],
+      "forecastName": "Barranco da Belharucas",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-do-beliche",
+      "name": "Praia do Beliche",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Beliche"
+      ],
+      "forecastName": "Beliche",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.12
+    },
+    {
+      "id": "praia-do-brejo-largo",
+      "name": "Praia do Brejo Largo",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Brejo Largo"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.07
+    },
+    {
+      "id": "praia-do-burgau",
+      "name": "Praia do Burgau",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Burgau",
+        "Praia do Burgau"
+      ],
+      "forecastName": "Burgau",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.04
+    },
+    {
+      "id": "praia-do-cabeco",
+      "name": "Praia do Cabeço",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Cabeco"
+      ],
+      "forecastName": "Praia do Cabeco",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.51
+    },
+    {
+      "id": "praia-do-cabedelo",
+      "name": "Praia do Cabedelo",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Cabedelo"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.89
+    },
+    {
+      "id": "praia-do-cabedelo-1474807103",
+      "name": "Praia do Cabedelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Cabedelo"
+      ],
+      "forecastName": "Praia do Cabedelo",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0.37
     },
     {
       "id": "praia-do-carreiro-2734753",
@@ -21451,6 +24633,70 @@
       "referenceKm": 1.39
     },
     {
+      "id": "praia-do-carvalhal-208100114",
+      "name": "Praia do Carvalhal",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Carvalhal"
+      ],
+      "forecastName": "Carvalhal",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.48
+    },
+    {
+      "id": "praia-do-carvoeiro",
+      "name": "Praia do Carvoeiro",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Carvoeiro"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.02
+    },
+    {
+      "id": "praia-do-castelejo",
+      "name": "Praia do Castelejo",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Castelejo",
+        "Praia Castelejo"
+      ],
+      "forecastName": "Castelejo",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.07
+    },
+    {
+      "id": "praia-do-castelo-222678477",
+      "name": "Praia do Castelo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Castelo",
+        "Praia do Castello"
+      ],
+      "forecastName": "Praia do Castello",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.1
+    },
+    {
       "id": "praia-do-castro-1193580453",
       "name": "Praia do Castro",
       "country": "Spain",
@@ -21464,6 +24710,21 @@
       "forecastName": "Playa de Castro",
       "referenceRegion": "Galicia",
       "referenceKm": 2.4
+    },
+    {
+      "id": "praia-do-cerro",
+      "name": "Praia do Cerro",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Cerro"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
     },
     {
       "id": "praia-do-esteiro",
@@ -21483,6 +24744,119 @@
       "referenceKm": 4.48
     },
     {
+      "id": "praia-do-farol-19450196",
+      "name": "Praia do Farol",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ilha do Farol"
+      ],
+      "forecastName": "Ilha do Farol",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.77
+    },
+    {
+      "id": "praia-do-forte-novo",
+      "name": "Praia do Forte Novo",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Forte Novo"
+      ],
+      "forecastName": "Forte Novo",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.2
+    },
+    {
+      "id": "praia-do-guincho-147727446",
+      "name": "Praia do Guincho",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Do Guincho",
+        "Praia do Guincho"
+      ],
+      "forecastName": "Praia do Guincho",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.22
+    },
+    {
+      "id": "praia-do-magoito",
+      "name": "Praia do Magoito",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Magoito"
+      ],
+      "forecastName": "Praia do Magoito",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.1
+    },
+    {
+      "id": "praia-do-malhao-sul",
+      "name": "Praia do Malhão Sul",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Malhao",
+        "Malhão"
+      ],
+      "forecastName": "Malhão",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.19
+    },
+    {
+      "id": "praia-do-marreco",
+      "name": "Praia do Marreco",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Marreco"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.07
+    },
+    {
+      "id": "praia-do-martinhal",
+      "name": "Praia do Martinhal",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Martinhal",
+        "Praia do Martinhal"
+      ],
+      "forecastName": "Martinhal",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.08
+    },
+    {
       "id": "praia-do-matadoiro",
       "name": "Praia do Matadoiro",
       "country": "Spain",
@@ -21500,6 +24874,97 @@
       "referenceKm": 0
     },
     {
+      "id": "praia-do-matadouro",
+      "name": "Praia do Matadouro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Matadouro"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.11
+    },
+    {
+      "id": "praia-do-meco",
+      "name": "Praia do Meco",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Meco"
+      ],
+      "forecastName": "Praia do Meco",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.58
+    },
+    {
+      "id": "praia-do-mirouco",
+      "name": "Praia do Mirouço",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Mirouço"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.17
+    },
+    {
+      "id": "praia-do-monte-verde",
+      "name": "Praia do Monte Verde",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Monte Verde"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.45
+    },
+    {
+      "id": "praia-do-norte-1342511934",
+      "name": "Praia do Norte",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Norte"
+      ],
+      "forecastName": "Praia do Norte",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.31
+    },
+    {
+      "id": "praia-do-norte-6150268",
+      "name": "Praia do Norte",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Norte"
+      ],
+      "forecastName": "Praia do Norte",
+      "referenceRegion": "Beira",
+      "referenceKm": 1.66
+    },
+    {
       "id": "praia-do-orzan",
       "name": "Praia do Orzán",
       "country": "Spain",
@@ -21515,6 +24980,84 @@
       "forecastName": "Playa do Orzan",
       "referenceRegion": "Galicia",
       "referenceKm": 0.04
+    },
+    {
+      "id": "praia-do-osso-da-baleia",
+      "name": "Praia do Osso da Baleia",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Osso da Baleia"
+      ],
+      "forecastName": "Praia do Osso da Baleia",
+      "referenceRegion": "Beira",
+      "referenceKm": 0.5
+    },
+    {
+      "id": "praia-do-pego",
+      "name": "Praia do Pêgo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Pego"
+      ],
+      "forecastName": "Praia do Pego",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.27
+    },
+    {
+      "id": "praia-do-populo",
+      "name": "Praia do Pópulo",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Populo",
+        "San Miguel - Populo"
+      ],
+      "forecastName": "San Miguel - Populo",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.16
+    },
+    {
+      "id": "praia-do-portinho-da-arrabida",
+      "name": "Praia do Portinho da Arrábida",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Portinho da Arrabida"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.87
+    },
+    {
+      "id": "praia-do-rei",
+      "name": "Praia do Rei",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Rei"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.15
     },
     {
       "id": "praia-do-rias",
@@ -21549,6 +25092,21 @@
       "referenceKm": 0.1
     },
     {
+      "id": "praia-do-rock",
+      "name": "Praia do Rock",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Rock"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "praia-do-rodo",
       "name": "Praia do Rodo",
       "country": "Spain",
@@ -21581,6 +25139,68 @@
       "referenceKm": 0.06
     },
     {
+      "id": "praia-do-sul-1342250779",
+      "name": "Praia do Sul",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Sul"
+      ],
+      "forecastName": "Praia do Sul",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.24
+    },
+    {
+      "id": "praia-do-tamariz",
+      "name": "Praia do Tamariz",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia do Tamariz"
+      ],
+      "forecastName": "Praia do Tamariz",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 1.76
+    },
+    {
+      "id": "praia-do-telheiro",
+      "name": "Praia do Telheiro",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia do Telheiro"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.04
+    },
+    {
+      "id": "praia-do-tonel-1255056880",
+      "name": "Praia do Tonel",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Tonel"
+      ],
+      "forecastName": "Tonel",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.44
+    },
+    {
       "id": "praia-do-vilar",
       "name": "Praia do Vilar",
       "country": "Spain",
@@ -21609,6 +25229,273 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.45
+    },
+    {
+      "id": "praia-do-zavial",
+      "name": "Praia do Zavial",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Zavial"
+      ],
+      "forecastName": "Zavial",
+      "referenceRegion": "The Algarve",
+      "referenceKm": 0.26
+    },
+    {
+      "id": "praia-dos-aivados",
+      "name": "Praia dos Aivados",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia dos Aivados"
+      ],
+      "forecastName": "Praia dos Aivados",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 1.15
+    },
+    {
+      "id": "praia-dos-alteirinhos",
+      "name": "Praia dos Alteirinhos",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia dos Alteirinhos"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.05
+    },
+    {
+      "id": "praia-dos-coxos",
+      "name": "Praia dos Coxos",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Coxos"
+      ],
+      "forecastName": "Coxos",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.42
+    },
+    {
+      "id": "praia-dos-lagosteiros",
+      "name": "Praia dos Lagosteiros",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia dos Lagosteiros"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.02
+    },
+    {
+      "id": "praia-dos-mosteiros",
+      "name": "Praia dos Mosteiros",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Mosteiros Left",
+        "Mosteiros Right",
+        "Praia dos Mosteiros",
+        "San Miguel - Ponta dos Mosteiros"
+      ],
+      "forecastName": "San Miguel - Ponta dos Mosteiros",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0.43
+    },
+    {
+      "id": "praia-dos-salgados",
+      "name": "Praia dos Salgados",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia dos Salgados"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 2.34
+    },
+    {
+      "id": "praia-formosa",
+      "name": "Praia Formosa",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Formosa"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.03
+    },
+    {
+      "id": "praia-formosa-162445881",
+      "name": "Praia Formosa",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Praia Formosa"
+      ],
+      "forecastName": "Praia Formosa",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0.16
+    },
+    {
+      "id": "praia-grande-de-almograve",
+      "name": "Praia Grande de Almograve",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Almograve",
+        "Praia de Almograve"
+      ],
+      "forecastName": "Almograve",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0.06
+    },
+    {
+      "id": "praia-grande-do-rodizio",
+      "name": "Praia Grande do Rodízio",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Grande"
+      ],
+      "forecastName": "Praia Grande",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.36
+    },
+    {
+      "id": "praia-pequena-do-rodizio",
+      "name": "Praia Pequena do Rodízio",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Pequena"
+      ],
+      "forecastName": "Praia Pequena",
+      "referenceRegion": "Lisboa",
+      "referenceKm": 0.11
+    },
+    {
+      "id": "praia-ribeira-d-ilhas",
+      "name": "Praia Ribeira d' Ilhas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast",
+        "surfline"
+      ],
+      "attestedAs": [
+        "Ribeira D'ilhas",
+        "Ribeira D’Ilhas"
+      ],
+      "forecastName": "Ribeira D'ilhas",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0.26
+    },
+    {
+      "id": "praia-sao-pedro-de-moel",
+      "name": "Praia São Pedro de Moel",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "São Pedro do Moel"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.37
+    },
+    {
+      "id": "praia-troia-gale",
+      "name": "Praia Tróia-Galé",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Troia"
+      ],
+      "forecastName": "Troia",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 4.16
+    },
+    {
+      "id": "praia-vale-de-frades",
+      "name": "Praia Vale de Frades",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia dos Frades"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 3.52
+    },
+    {
+      "id": "praia-velha-6196034",
+      "name": "Praia Velha",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surfline"
+      ],
+      "attestedAs": [
+        "Praia Velha"
+      ],
+      "forecastName": null,
+      "referenceRegion": null,
+      "referenceKm": 0.49
     },
     {
       "id": "prefailles",
@@ -22037,6 +25924,22 @@
       "referenceKm": 0
     },
     {
+      "id": "reef",
+      "name": "Reef / Crazy Left",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Reef",
+        "Crazy Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Ericeira",
+      "referenceKm": 0
+    },
+    {
       "id": "reenrow-beach",
       "name": "Reenrow Beach",
       "country": "Ireland",
@@ -22129,6 +26032,21 @@
       "referenceKm": 2.27
     },
     {
+      "id": "ribeira-da-janela",
+      "name": "Ribeira da Janela",
+      "country": "Portugal",
+      "region": "Madeira",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ribeira da Janela"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Madeira",
+      "referenceKm": 0
+    },
+    {
       "id": "ringstead-beach",
       "name": "Ringstead Beach",
       "country": "United Kingdom",
@@ -22186,6 +26104,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Pais Vasco",
+      "referenceKm": 0
+    },
+    {
+      "id": "rocha-negra",
+      "name": "Rocha Negra",
+      "country": "Portugal",
+      "region": "Faro",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Rocha Negra"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Algarve",
       "referenceKm": 0
     },
     {
@@ -22386,6 +26319,21 @@
       "reviewed": true,
       "referenceRegion": "Asturias",
       "referenceKm": 0.27
+    },
+    {
+      "id": "sacor",
+      "name": "Sacor",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sacor"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
     },
     {
       "id": "saint-andreu-de-llavaneres",
@@ -22647,6 +26595,81 @@
       "referenceKm": 0.03
     },
     {
+      "id": "san-jorge-faja-dos-cubres",
+      "name": "San Jorge - Faja dos Cubres",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Jorge - Faja dos Cubres"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "san-jorge-punta-da-caldeira",
+      "name": "San Jorge - Punta da Caldeira",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Jorge - Punta da Caldeira"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "san-miguel-rabo-de-peixe",
+      "name": "San Miguel - Rabo de Peixe",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Miguel - Rabo de Peixe"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "san-miguel-ribeira-grande",
+      "name": "San Miguel - Ribeira Grande",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Miguel - Ribeira Grande"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "san-miguel-ribeira-quente",
+      "name": "San Miguel - Ribeira Quente",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "San Miguel - Ribeira Quente"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
       "id": "san-vicente",
       "name": "San Vicente",
       "country": "Spain",
@@ -22861,6 +26884,21 @@
       "referenceKm": 0.07
     },
     {
+      "id": "sanguessuga",
+      "name": "Sanguessuga",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sanguessuga"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0
+    },
+    {
       "id": "sant-marti-d-empuries",
       "name": "Sant Martí d'Empúries",
       "country": "Spain",
@@ -22876,6 +26914,36 @@
       "referenceKm": 0
     },
     {
+      "id": "santa-cruz",
+      "name": "Santa Cruz",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Santa Cruz"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
+      "id": "santa-maria-anjos",
+      "name": "Santa Maria - Anjos",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Santa Maria - Anjos"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
       "id": "santa-maria-de-oia",
       "name": "Santa Maria de Oia",
       "country": "Spain",
@@ -22888,6 +26956,36 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Galicia",
+      "referenceKm": 0
+    },
+    {
+      "id": "santa-maria-praia-formosa",
+      "name": "Santa Maria - Praia Formosa",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Santa Maria - Praia Formosa"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "sao-pedro-de-moel",
+      "name": "Sao Pedro de Moel",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Sao Pedro de Moel"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Beira",
       "referenceKm": 0
     },
     {
@@ -24112,6 +28210,21 @@
       "referenceKm": 0
     },
     {
+      "id": "supertubos",
+      "name": "Supertubos",
+      "country": "Portugal",
+      "region": "Leiria",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Supertubos"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Peniche",
+      "referenceKm": 0
+    },
+    {
       "id": "sutton-cross",
       "name": "Sutton Cross",
       "country": "Ireland",
@@ -24279,6 +28392,126 @@
       "forecastName": "Teignmouth",
       "referenceRegion": "South Devon",
       "referenceKm": 0.51
+    },
+    {
+      "id": "terceira-baia-das-quatro-ribeiras",
+      "name": "Terceira - Baia Das Quatro Ribeiras",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Baia Das Quatro Ribeiras"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-ponta-do-queimado",
+      "name": "Terceira - Ponta do Queimado",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Ponta do Queimado"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-porto-novo",
+      "name": "Terceira - Porto Novo",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Porto Novo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-praia-da-vitoria",
+      "name": "Terceira - Praia da Vitoria",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Praia da Vitoria"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-praia-do-norte",
+      "name": "Terceira - Praia do Norte",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Praia do Norte"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-santa-catarina",
+      "name": "Terceira - Santa Catarina",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Santa Catarina"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-sao-mateus-da-calherta",
+      "name": "Terceira - Sao Mateus da Calherta",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Sao Mateus da Calherta"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
+    },
+    {
+      "id": "terceira-vila-nova",
+      "name": "Terceira - Vila Nova",
+      "country": "Portugal",
+      "region": "Açores",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Terceira - Vila Nova"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "The Azores",
+      "referenceKm": 0
     },
     {
       "id": "terminus-berck",
@@ -25310,6 +29543,21 @@
       "referenceKm": 0
     },
     {
+      "id": "viana-do-castelo",
+      "name": "Viana do Castelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Viana do Castelo"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
       "id": "viking-bay",
       "name": "Viking Bay",
       "country": "United Kingdom",
@@ -25325,6 +29573,36 @@
       "forecastName": "Broadstairs",
       "referenceRegion": "South Coast of England",
       "referenceKm": 0.13
+    },
+    {
+      "id": "vila-do-conde",
+      "name": "Vila do Conde",
+      "country": "Portugal",
+      "region": "Porto",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Vila do Conde"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Douro and Minho",
+      "referenceKm": 0
+    },
+    {
+      "id": "vila-nova-de-milfontes",
+      "name": "Vila Nova de Milfontes",
+      "country": "Portugal",
+      "region": "Beja",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Vila Nova de Milfontes"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Portugal - Alentejo",
+      "referenceKm": 0
     },
     {
       "id": "villefranche-sur-mer",

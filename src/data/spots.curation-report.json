@@ -4,15 +4,19 @@
     "gate": "attested by a surf reference, and coordinate verified on the open-sea coastline",
     "samePlaceKm": 1.5
   },
-  "in": 12299,
-  "out": 1662,
+  "in": 13386,
+  "out": 1938,
   "perRegion": {
+    "Portugal|Douro and Minho": 30,
     "France|Bretagne": 108,
     "United Kingdom|Wales": 104,
     "United Kingdom|Scotland": 123,
+    "Portugal|Madeira": 22,
     "United Kingdom|North Yorkshire": 19,
     "Spain|Comunidad Valenciana": 47,
+    "Portugal|Algarve": 55,
     "France|Guadeloupe": 21,
+    "Portugal|Peniche": 25,
     "France|Provence-Alpes-Côte d'Azur": 63,
     "United Kingdom|Northumberland": 16,
     "Ireland|Donegal": 37,
@@ -23,11 +27,13 @@
     "France|Normandie": 35,
     "Ireland|Sligo": 10,
     "Spain|Galicia": 67,
+    "Portugal|Azores": 29,
     "France|Corse": 25,
     "Spain|Baleares": 30,
     "Spain|Canarias": 138,
     "Spain|País Vasco": 37,
     "United Kingdom|Dorset": 20,
+    "Portugal|Ericeira": 18,
     "France|Martinique": 14,
     "Ireland|Kerry": 16,
     "United Kingdom|Northern Ireland": 12,
@@ -38,11 +44,13 @@
     "United Kingdom|Cornwall": 89,
     "France|Hauts-de-France": 13,
     "United Kingdom|East Sussex": 10,
+    "Portugal|Lisboa": 43,
     "United Kingdom|Tyne and Wear": 12,
     "Spain|Andalucía": 73,
     "United Kingdom|West Sussex": 9,
     "United Kingdom|East Riding of Yorkshire": 5,
     "France|Pays de la Loire": 29,
+    "Portugal|Alentejo": 23,
     "Spain|Asturias": 62,
     "United Kingdom|Norfolk": 7,
     "Spain|Cataluña": 43,
@@ -54,6 +62,7 @@
     "Spain|Cantabria": 42,
     "Ireland|Clare": 8,
     "Spain|Ceuta": 5,
+    "Portugal|Beira": 31,
     "United Kingdom|Kent": 8,
     "United Kingdom|Suffolk": 4,
     "United Kingdom|Hampshire": 1,
@@ -74695,6 +74704,5683 @@
       "name": "Canford Cliffs Beach",
       "country": "United Kingdom",
       "region": "Dorset",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-de-sao-vicente",
+      "name": "Cabo de São Vicente",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-atalaia",
+      "name": "Ponta da Atalaia",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-carvoeiro-lagoa",
+      "name": "Cabo Carvoeiro (Lagoa)",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-corvos",
+      "name": "Ponta dos Corvos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-da-roca",
+      "name": "Cabo da Roca",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-sao-simao",
+      "name": "Praia Fluvial São Simão",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-de-santa-maria",
+      "name": "Cabo de Santa Maria",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-torrao-do-lameiro",
+      "name": "Praia Torrão do Lameiro",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-duna-alta-naturista",
+      "name": "Praia Duna Alta Naturista",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-naturistas-da-costa-nova-em-aveiro",
+      "name": "Praia Naturistas da Costa Nova em Aveiro",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-rio-alto-naturista",
+      "name": "Praia Rio Alto Naturista",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-espichel",
+      "name": "Cabo Espichel",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barbas-de-cavalo",
+      "name": "Barbas de Cavalo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-sao-pedro",
+      "name": "Ponta de São Pedro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-frincha-grande",
+      "name": "Praia Frincha Grande",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "barroca-da-adela",
+      "name": "Barroca da Adela",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cova-do-covao",
+      "name": "Cova do Covão",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-37",
+      "name": "Praia 37",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-santo-antonio",
+      "name": "Ponta de Santo António",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pico-da-mota",
+      "name": "Praia do Pico da Mota",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-sagres",
+      "name": "Ponta de Sagres",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-de-sao-vicente-5003941303",
+      "name": "Cabo de São Vicente",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-alconchel",
+      "name": "Ponta do Alconchel",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-rodizio",
+      "name": "Ponta do Rodízio",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "bico-do-mexilhoeiro",
+      "name": "Bico do Mexilhoeiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-carneiro",
+      "name": "Ponta do Carneiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-ladras",
+      "name": "Ponta das Ladras",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-batureira",
+      "name": "Ponta da Batureira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-gale",
+      "name": "Ponta da Galé",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-alta",
+      "name": "Ponta Alta",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-carvoeiro",
+      "name": "Cabo Carvoeiro",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-assobio",
+      "name": "Ponta do Assobio",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-da-azurreira",
+      "name": "Praia fluvial da Azurreira",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-joao-arens",
+      "name": "Ponta de João Arens",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pedra-do-cavalo",
+      "name": "Pedra do Cavalo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-insua",
+      "name": "Ponta da Ínsua",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-pombeira",
+      "name": "Ponta da Pombeira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-mexilhoeiro",
+      "name": "Ponta do Mexilhoeiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-alpendurada",
+      "name": "Ponta da Alpendurada",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "espinhaco-de-cao",
+      "name": "Espinhaço de Cão",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fonte-da-guia",
+      "name": "Fonte da Guia",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-rana",
+      "name": "Ponta de Rana",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "espigao-das-ruivas",
+      "name": "Espigão das Ruivas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-carneiro-6509964344",
+      "name": "Ponta do Carneiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-adoxe",
+      "name": "Ponta do Adoxe",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-culatra",
+      "name": "Praia da Culatra",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-de-ares",
+      "name": "Cabo de Ares",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-estrela",
+      "name": "Praia da Estrela",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-arvore",
+      "name": "Praia de Árvore",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-almadena",
+      "name": "Ponta de Almádena",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-calheta",
+      "name": "Ponta da Calheta",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-aspa",
+      "name": "Ponta de Aspa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-pau",
+      "name": "Ponta do Pau",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-adao-e-eva",
+      "name": "Praia Adão e Eva",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-raso",
+      "name": "Cabo Raso",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "promontorio-da-nazare",
+      "name": "Promontório da Nazaré",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-sesmaria",
+      "name": "Praia da Sesmaria",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelo",
+      "name": "Ponta do Castelo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-atalaia-8921991789",
+      "name": "Ponta da Atalaia",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-baleeira",
+      "name": "Ponta da Baleeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-baleeira-8922259951",
+      "name": "Ponta da Baleeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-porto-dinheiro",
+      "name": "Praia de Porto Dinheiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-azulejos",
+      "name": "Ponta dos Azulejos",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-puco",
+      "name": "Praia do Puço",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pontal-dos-musgos",
+      "name": "Pontal dos Musgos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "spot-mama-prada",
+      "name": "Spot Mama Prada",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "kitesurf-und-wingsurfspot-costa-nova-sud",
+      "name": "Kitesurf und Wingsurfspot Costa Nova (Süd)",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-mondego",
+      "name": "Cabo Mondego",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "promontorio-do-morro",
+      "name": "Promontório do Morro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-estela",
+      "name": "Praia da Estela",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barranha",
+      "name": "Praia da Barranha",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-caxinas",
+      "name": "Praia das Caxinas",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-sao-lourenco",
+      "name": "Ponta de São Lourenço",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-primas",
+      "name": "Praia das Primas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-telheiro",
+      "name": "Ponta do Telheiro",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-sal",
+      "name": "Ponta do Sal",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vila-cha-vila-do-conde",
+      "name": "Praia de Vila Chã - Vila do Conde",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-angeiras-norte",
+      "name": "Praia de Angeiras Norte",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-ferrarias",
+      "name": "Ponta das Ferrarias",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-penedo",
+      "name": "Ponta do Penedo",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-franca",
+      "name": "Ponta da França",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "punta-e-cabedelo",
+      "name": "Punta e Cabedelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-sobeira",
+      "name": "Cabo Sobeira",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabo-de-santo-andre",
+      "name": "Cabo de Santo André",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-piedade",
+      "name": "Ponta da Piedade",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tesos",
+      "name": "Praia dos Tesos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-california",
+      "name": "Praia da Califórnia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-lagoal",
+      "name": "Praia do Lagoal",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-dragao-vermelho",
+      "name": "Praia do Dragão Vermelho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-paraiso",
+      "name": "Praia do Paraíso",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-nova-23848073",
+      "name": "Praia Nova",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-do-porto-brandao",
+      "name": "Prainha do Porto Brandão",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-batata",
+      "name": "Praia da Batata",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-centro",
+      "name": "Praia do Centro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santa-helena",
+      "name": "Praia de Santa Helena",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fisica",
+      "name": "Praia da Física",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pisao",
+      "name": "Praia do Pisão",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-mirante",
+      "name": "Praia do Mirante",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-navio",
+      "name": "Praia do Navio",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-vigia",
+      "name": "Praia da Vigia",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-foz-do-sizandro",
+      "name": "Praia da Foz do Sizandro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mexilhoeira",
+      "name": "Praia da Mexilhoeira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-guincho",
+      "name": "Praia do Guincho",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-dona-ana",
+      "name": "Praia de Dona Ana",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-calada",
+      "name": "Praia da Calada",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-coelha",
+      "name": "Praia de Coelha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-castelo-48433466",
+      "name": "Praia do Castelo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-evaristo",
+      "name": "Praia do Evaristo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-boa-nova",
+      "name": "Praia da Boa Nova",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-azul",
+      "name": "Praia Azul",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-sereias",
+      "name": "Praia das Sereias",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-baia",
+      "name": "Praia da Baía",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pescadores",
+      "name": "Praia dos Pescadores",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-quebrada",
+      "name": "Praia da Quebrada",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-funtao",
+      "name": "Praia do Funtão",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-memoria",
+      "name": "Praia da Memória",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santa-eulalia",
+      "name": "Praia de Santa Eulália",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-carneiro",
+      "name": "Praia do Carneiro",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-ourigo",
+      "name": "Praia do Ourigo",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-ingleses",
+      "name": "Praia dos Ingleses",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-camilo",
+      "name": "Praia do Camilo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-camilo-71500099",
+      "name": "Praia do Camilo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-angeiras-sul",
+      "name": "Praia de Angeiras Sul",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fuseta-ria",
+      "name": "Praia da Fuseta-Ria",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-barril",
+      "name": "Praia do Barril",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-terra-estreita-na-ilha-de-tavira",
+      "name": "Praia da Terra Estreita na Ilha de Tavira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-tavira-ria",
+      "name": "Praia Tavira-Ria",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-verde",
+      "name": "Praia Verde",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-alagoa",
+      "name": "Praia da Alagoa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-lota",
+      "name": "Praia da Lota",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-manta-rota",
+      "name": "Praia da Manta Rota",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cabanas-79509901",
+      "name": "Praia de Cabanas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte-da-barra",
+      "name": "Praia do Forte da Barra",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fuseta-mar",
+      "name": "Praia da Fuseta-Mar",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-armona-mar",
+      "name": "Praia da Armona-Mar",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-quinta-do-lago",
+      "name": "Praia da Quinta do Lago",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vilamoura",
+      "name": "Praia de Vilamoura",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pinhao",
+      "name": "Praia do Pinhão",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pinheiro-beach",
+      "name": "Pinheiro Beach",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-estudantes",
+      "name": "Praia dos Estudantes",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-tomas-franco",
+      "name": "Praia Tomás Franco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-dafundo",
+      "name": "Praia do Dafundo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-dafundo-98742817",
+      "name": "Praia do Dafundo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte",
+      "name": "Praia do Forte",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-caxias",
+      "name": "Praia de Caxias",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "giribita",
+      "name": "Giribita",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-velha",
+      "name": "Praia Velha",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-grande-ferragudo",
+      "name": "Praia Grande (Ferragudo)",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santa-marta-101090519",
+      "name": "Praia de Santa Marta",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angrinha",
+      "name": "Praia da Angrinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-cova-redonda",
+      "name": "Praia da Cova Redonda",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-beijinhos",
+      "name": "Praia dos Beijinhos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-carvalho",
+      "name": "Praia do Carvalho",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pintadinho",
+      "name": "Praia do Pintadinho",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-nova-119246518",
+      "name": "Praia Nova",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tremocos",
+      "name": "Praia dos Tremoços",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pescadores-129575835",
+      "name": "Praia dos Pescadores",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-peneco",
+      "name": "Praia do Peneco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-alemaes",
+      "name": "Praia dos Alemães",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-maria-luisa",
+      "name": "Praia Maria Luísa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-aveiros",
+      "name": "Praia dos Aveiros",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-falesia-alfamar",
+      "name": "Praia da Falésia Alfamar",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cabo-do-mundo",
+      "name": "Praia do Cabo do Mundo",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-nossa-senhora",
+      "name": "Praia de Nossa Senhora",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-seixal-132041853",
+      "name": "Praia do Seixal",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-lagido",
+      "name": "Praia do Lagido",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-porto-de-areia-sul",
+      "name": "Praia do Porto de Areia Sul",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-quarteira",
+      "name": "Praia de Quarteira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ribeira-152354051",
+      "name": "Praia da Ribeira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-creiro",
+      "name": "Praia do Creiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pedra-dos-bicos",
+      "name": "Praia da Pedra dos Bicos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-furnas-156814659",
+      "name": "Praia das Furnas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-figueira",
+      "name": "Praia da Figueira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-carvalhal",
+      "name": "Praia do Carvalhal",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-culatra-159418246",
+      "name": "Praia da Culatra",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mesquita",
+      "name": "Praia da Mesquita",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-malhada-do-baraco",
+      "name": "Praia da Malhada do Baraço",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pau",
+      "name": "Praia do Pau",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-fontainhas",
+      "name": "Praia das Fontaínhas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-mexilhoeiro",
+      "name": "Praia do Mexilhoeiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-moinho",
+      "name": "Praia do Moinho",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-palheirao",
+      "name": "Praia do Palheirão",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barra-168740954",
+      "name": "Praia da Barra",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pedras-ruivas",
+      "name": "Pedras Ruivas",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-baleeira-176818984",
+      "name": "Praia da Baleeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-franquia",
+      "name": "Praia da Franquia",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-morena",
+      "name": "Praia da Morena",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-rebenta-bois",
+      "name": "Praia do Rebenta Bois",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-meco-tramagueira",
+      "name": "Praia do Meco (Tramagueira)",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-areao",
+      "name": "Praia do Areão",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "monte-branco",
+      "name": "Monte Branco",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mina",
+      "name": "Praia da Mina",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vale-furado",
+      "name": "Praia de Vale Furado",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-torrado",
+      "name": "Praia do Torrado",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-tonel",
+      "name": "Praia do Tonel",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-raposa",
+      "name": "Praia da Raposa",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pinheirinho",
+      "name": "Praia do Pinheirinho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gale-fontainhas",
+      "name": "Praia da Galé-Fontainhas",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-costa-de-santo-andre",
+      "name": "Praia da Costa de Santo André",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-monte-velho",
+      "name": "Praia do Monte Velho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-areias-brancas",
+      "name": "Praia das Areias Brancas",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fonte-do-cortico",
+      "name": "Praia da Fonte do Cortiço",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-costa-do-norte",
+      "name": "Praia da Costa do Norte",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-carreiro-da-fazenda",
+      "name": "Praia Carreiro da Fazenda",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-farol",
+      "name": "Praia do Farol",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-machados",
+      "name": "Praia dos Machados",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-albarquel",
+      "name": "Praia de Albarquel",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-bica-da-areia",
+      "name": "Praia da Bica da Areia",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-canudos",
+      "name": "Praia dos Canudos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pedra-da-bica",
+      "name": "Praia da Pedra da Bica",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-canal",
+      "name": "Praia do Canal",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-alvoriao",
+      "name": "Praia do Alvorião",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-meia-laranja",
+      "name": "Praia da Meia Laranja",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-bernosas",
+      "name": "Praia das Bernosas",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-baia-da-arquinha",
+      "name": "Praia da Baía da Arquinha",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cavaleiro",
+      "name": "Praia do Cavaleiro",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-carraca",
+      "name": "Praia da Carraca",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-laginha",
+      "name": "Praia da Laginha",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cao",
+      "name": "Praia do Cão",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-almograve-sul",
+      "name": "Praia do Almograve Sul",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cavalo",
+      "name": "Praia do Cavalo",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-banho",
+      "name": "Praia do Banho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-cerca-nova",
+      "name": "Praia da Cerca Nova",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-naturista-do-salto",
+      "name": "Praia naturista do Salto",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cerro-da-aguia",
+      "name": "Praia do Cerro da Águia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-porto-covinho",
+      "name": "Praia de Porto Covinho",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-samoqueira",
+      "name": "Praia da Samoqueira",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-oliveirinha",
+      "name": "Praia da Oliveirinha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-morgavel",
+      "name": "Praia de Morgavel",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-coelhos",
+      "name": "Praia dos Coelhos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-galapinhos",
+      "name": "Praia de Galapinhos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-galapos",
+      "name": "Praia de Galápos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-cova-208967985",
+      "name": "Praia da Cova",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pipa",
+      "name": "Praia da Pipa",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-coral",
+      "name": "Praia do Coral",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pelengana",
+      "name": "Praia da Pelengana",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-canto-mosqueiro",
+      "name": "Praia do Canto Mosqueiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-brejos",
+      "name": "Praia dos Brejos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-torre-209414667",
+      "name": "Praia da Torre",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cabedelinho",
+      "name": "Praia do Cabedelinho",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-hospital",
+      "name": "Praia do Hospital",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte-212896667",
+      "name": "Praia do Forte",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-barranco-das-canas",
+      "name": "Praia do Barranco das Canas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-avencas",
+      "name": "Praia das Avencas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cds",
+      "name": "Praia do CDS",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mata",
+      "name": "Praia da Mata",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-albatroz",
+      "name": "Praia do Albatroz",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "nova-praia",
+      "name": "Nova Praia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-norte-222122957",
+      "name": "Praia do Norte",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte-222122958",
+      "name": "Praia do Forte",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santo-antonio-da-caparica",
+      "name": "Praia de Santo António da Caparica",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-bico-da-calha",
+      "name": "Praia do Bico da Calha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-tarquinio",
+      "name": "Praia do Tarquínio",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-queimado-222568860",
+      "name": "Praia do Queimado",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-armona-ria",
+      "name": "Praia da Armona-Ria",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-bela-vista",
+      "name": "Praia da Bela Vista",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-azul-222678469",
+      "name": "Praia Azul",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-nova-vaga",
+      "name": "Praia Nova Vaga",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-sereia",
+      "name": "Praia da Sereia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-riviera",
+      "name": "Praia da Riviera",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-infante",
+      "name": "Praia do Infante",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-adica-naturista",
+      "name": "Praia da Adiça (naturista)",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-portinho-da-costa",
+      "name": "Praia do Portinho da Costa",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-costa-de-lavos",
+      "name": "Praia da Costa de Lavos",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-quiaios",
+      "name": "Praia de Quiaios",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-figueirinha",
+      "name": "Praia da Figueirinha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gralha",
+      "name": "Praia da Gralha",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-buraco",
+      "name": "Praia do Buraco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-bela-vista-parte-naturista",
+      "name": "Praia da Bela Vista (parte naturista)",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-samouco",
+      "name": "Praia do Samouco",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-grande-de-pera",
+      "name": "Praia Grande de Pêra",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-moinhos",
+      "name": "Praia dos Moinhos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-armacao-de-pera",
+      "name": "Praia de Armação de Pêra",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-loule-velho",
+      "name": "Praia de Loulé Velho",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-de-viana-do-castelo",
+      "name": "Praia Fluvial de Viana do Castelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-canavial",
+      "name": "Praia do Canavial",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-paramos",
+      "name": "Praia de Paramos",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pescadores-289202909",
+      "name": "Praia dos Pescadores",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tesos-293151480",
+      "name": "Praia dos Tesos",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-madalena-norte",
+      "name": "Praia de Madalena Norte",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-marbelo",
+      "name": "Praia de Marbelo",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-areia-branca",
+      "name": "Praia da Areia Branca",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-saozinha",
+      "name": "Praia Sãozinha",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-senhor-da-pedra",
+      "name": "Praia do Senhor da Pedra",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-poco-da-cruz",
+      "name": "Praia Poço da Cruz",
+      "country": "Portugal",
+      "region": "Coimbra",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-paraiso-303665313",
+      "name": "Praia do Paraíso",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-buizinhos",
+      "name": "Praia dos Buizinhos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fraternidade",
+      "name": "Praia da Fraternidade",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-sissal",
+      "name": "Praia do Sissal",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-internacional",
+      "name": "Praia Internacional",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-pedras-da-agudela",
+      "name": "Praia de Pedras da Agudela",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-pedrogao-sul",
+      "name": "Praia de Pedrogão - Sul",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-aguda",
+      "name": "Praia da Aguda",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barrinha",
+      "name": "Praia da Barrinha",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barrinha-353632229",
+      "name": "Praia da Barrinha",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-fuzelhas",
+      "name": "Praia de Fuzelhas",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-beijinhos-360889455",
+      "name": "Praia dos Beijinhos",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-castelo-do-queijo",
+      "name": "Praia do Castelo do Queijo",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-canidelo-norte",
+      "name": "Praia Canidelo Norte",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-velha-377934250",
+      "name": "Praia Velha",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cortegaca-377934351",
+      "name": "Praia de Cortegaça",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cortegaca-377934352",
+      "name": "Praia de Cortegaça",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-giribeto",
+      "name": "Praia do Giribeto",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-das-melancias",
+      "name": "Praia da Angra das Melancias",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-do-travesso",
+      "name": "Praia da Angra do Travesso",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-picos",
+      "name": "Praia dos Picos",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-burdo",
+      "name": "Praia do Burdo",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-da-barrela",
+      "name": "Praia da Angra da Barrela",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-da-vaca",
+      "name": "Praia da Angra da Vaca",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-nascedios",
+      "name": "Praia dos Nascedios",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-saltinho",
+      "name": "Praia do Saltinho",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-malhao-norte",
+      "name": "Praia do Malhão Norte",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-santa",
+      "name": "Praia Santa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-selvagem",
+      "name": "Praia Selvagem",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-saude-405133500",
+      "name": "Praia da Saúde",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-carreiro-do-mosteiro",
+      "name": "Praia do Carreiro do Mosteiro",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-vigao",
+      "name": "Praia do Vigão",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-tramagueira",
+      "name": "Praia da Tramagueira",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-rei-cortico",
+      "name": "Praia do Rei Cortiço",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-olho-de-agua",
+      "name": "Praia Olho de Água",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "meia-praia",
+      "name": "Meia Praia",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-de-castelo-do-neiva",
+      "name": "Praia Fluvial de Castelo do Neiva",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-pequena",
+      "name": "Praia Pequena",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-foz-437514296",
+      "name": "Praia da Foz",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-engardaceira",
+      "name": "Praia da Engardaceira",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-furadouro",
+      "name": "Praia do Furadouro",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-barcos-440351543",
+      "name": "Praia dos Barcos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "chico-nega",
+      "name": "Chico Nega",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-molhe",
+      "name": "Praia do Molhe",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-gondarem",
+      "name": "Praia de Gondarém",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-paraiso-446749249",
+      "name": "Praia do Paraíso",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-facho",
+      "name": "Praia do Facho",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-ouro",
+      "name": "Praia do Ouro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-rebolos",
+      "name": "Praia dos Rebolos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-benagil",
+      "name": "Praia de Benagil",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ponta-da-adega",
+      "name": "Praia da Ponta da Adega",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-vale-espinhaco",
+      "name": "Praia do Vale Espinhaço",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ilha-da-barreta",
+      "name": "Praia da Ilha da Barreta",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-barcos-475469132",
+      "name": "Praia dos barcos",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha",
+      "name": "Praínha",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-fontainhas-479745970",
+      "name": "Praia das Fontaínhas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-vale-covo",
+      "name": "Praia do Vale Covo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-do-salgado",
+      "name": "Prainha do Salgado",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-portinho-do-forno",
+      "name": "Praia do Portinho do Forno",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-carvalhido",
+      "name": "Praia de Carvalhido",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-fragosinho",
+      "name": "Praia de Fragosinho",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-lacem",
+      "name": "Praia do Lacém",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-pedras-muitas",
+      "name": "Praia das Pedras Muitas",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-da-cerva",
+      "name": "Praia da Angra da Cerva",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-cavacos",
+      "name": "Praia dos Cavacos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-valeiras",
+      "name": "Praia das Valeiras",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-rato",
+      "name": "Praia do Rato",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-segundo-torrao",
+      "name": "Praia do Segundo Torrão",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-de-alburrica",
+      "name": "Praia Fluvial de Alburrica",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-clube-naval",
+      "name": "Praia do Clube Naval",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-copacabana",
+      "name": "Praia de Copacabana",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-penedo-furado",
+      "name": "Praia do Penedo Furado",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-chico-nega",
+      "name": "Praia do Chico Nega",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-foz-do-arelho-lagoa",
+      "name": "Praia da Foz do Arelho-Lagoa",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-rolotes",
+      "name": "Praia das Rolotes",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-da-junqueira",
+      "name": "Praia Fluvial da Junqueira",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-conceicao",
+      "name": "Praia da Conceição",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-duquesa",
+      "name": "Praia da Duquesa",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-francemar",
+      "name": "Praia Francemar",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-francelos",
+      "name": "Praia Francelos",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dunas-mar",
+      "name": "Praia Dunas Mar",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-atlantico",
+      "name": "Praia do Atlântico",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-valadares-sul",
+      "name": "Praia Valadares Sul",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-valadares-norte",
+      "name": "Praia Valadares Norte",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-549029920",
+      "name": "Prainha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-portinho-da-areia-norte",
+      "name": "Praia do Portinho da Areia Norte",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santa-marta-552844399",
+      "name": "Praia de Santa Marta",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cavalo-555028996",
+      "name": "Praia do Cavalo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-do-abalo",
+      "name": "Prainha do Abalo",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-monte-gordo",
+      "name": "Praia de Monte Gordo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-verdelago",
+      "name": "Praia Verdelago",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "monte-gordo",
+      "name": "Monte Gordo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-valmitao",
+      "name": "Praia de Valmitão",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-alvor-nascente",
+      "name": "Praia do Alvor Nascente",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-careanos",
+      "name": "Praia dos Careanos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-alemao",
+      "name": "Praia do Alemão",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-vau",
+      "name": "Praia do Vau",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-vela-areinho",
+      "name": "Praia Vela Areinho",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-castros-619230833",
+      "name": "Praia dos Castros",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-castelos-621125242",
+      "name": "Praia dos Castelos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mutela",
+      "name": "Praia da Mutela",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-almargem",
+      "name": "Praia do Almargem",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-lagoa-655688261",
+      "name": "Praia da Lagoa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-ancao",
+      "name": "Praia do Ancão",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-garrao",
+      "name": "Praia do Garrão",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-falesia-675161585",
+      "name": "Praia da Falésia",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-falesia-acoteias",
+      "name": "Praia da Falésia Açoteias",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cantinho",
+      "name": "Praia do Cantinho",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-granja",
+      "name": "Praia da Granja",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-sao-felix-da-marinha",
+      "name": "Praia de São Félix da Marinha",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-bocamar",
+      "name": "Praia de Bocamar",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-granja",
+      "name": "Praia Granja",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-brito",
+      "name": "Praia de Brito",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-aroeira",
+      "name": "Praia da Aroeira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-assentiz",
+      "name": "Praia da Assentiz",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-caneiro",
+      "name": "Praia do Caneiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-salgueiros",
+      "name": "Praia de Salgueiros",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-sereia-da-costa-verde",
+      "name": "Praia Sereia da Costa Verde",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-canide-sul",
+      "name": "Praia Canide Sul",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-tranca",
+      "name": "Praia da Tranca",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-rasca",
+      "name": "Praia da Rasca",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-porto-dinheiro-712030016",
+      "name": "Praia de Porto Dinheiro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-19",
+      "name": "Praia 19",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-lourical",
+      "name": "Praia do Louriçal",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-alibaba",
+      "name": "Praia de Alibabá",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-fisica-739595652",
+      "name": "Praia da Física",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-maria-esguelha",
+      "name": "Praia da Maria Esguelha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-comenda",
+      "name": "Praia da Comenda",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-rainha-764145147",
+      "name": "Praia da Rainha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-canical",
+      "name": "Praia do Caniçal",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pilotos",
+      "name": "Praia dos Pilotos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-joao-vaz",
+      "name": "Praia João Vaz",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vale-figueira",
+      "name": "Praia de Vale Figueira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-alteirinhos-naturista",
+      "name": "Praia dos Alteirinhos (naturista)",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-orelheira",
+      "name": "Praia da Orelheira",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-sul",
+      "name": "Praia do Sul",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-porto-de-mos",
+      "name": "Praia de Porto de Mós",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-porto-do-touro",
+      "name": "Praia do Porto do Touro",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-amalia",
+      "name": "Praia da Amália",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-redonda",
+      "name": "Praia de Redonda",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-loule",
+      "name": "Praia de Loulé",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-hotel",
+      "name": "Praia de Hotel",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-lagoa-ii",
+      "name": "Praia de Lagoa II",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-lada-i",
+      "name": "Praia de Lada I",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-lada-ii",
+      "name": "Praia de Lada II",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-beijinhos",
+      "name": "Praia de Beijinhos",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-verde-953322276",
+      "name": "Praia Verde",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-azul-953322277",
+      "name": "Praia Azul",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-salgueira",
+      "name": "Praia de Salgueira",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-pontes",
+      "name": "Praia de Pontes",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-lagoa-i",
+      "name": "Praia de Lagoa I",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-fragosa",
+      "name": "Praia de Fragosa",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-esteveira",
+      "name": "Praia da Esteveira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-grande-de-porto-covo",
+      "name": "Praia Grande de Porto Côvo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-peixe",
+      "name": "Praia do Peixe",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barradinha",
+      "name": "Praia da Barradinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-alges",
+      "name": "Praia de Algés",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gasolineira",
+      "name": "Praia da Gasolineira",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-vigia-1005327955",
+      "name": "Praia da Vigia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-vieira-norte",
+      "name": "Praia da Vieira (Norte)",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cabanas-velhas-naturista",
+      "name": "Praia de Cabanas Velhas (Naturista)",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ilha-do-pessegueiro",
+      "name": "Praia da Ilha do Pessegueiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "meia-praia-1069286046",
+      "name": "Meia Praia",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-entrada-da-barca",
+      "name": "Praia da Entrada da Barca",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-marinha-da-noeirinha",
+      "name": "Praia da Marinha da Noeirinha",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-marinha-da-noeirinha-1072329773",
+      "name": "Praia da Marinha da Noeirinha",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-angra-da-barreta",
+      "name": "Praia da Angra da Barreta",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gaivota",
+      "name": "Praia da Gaivota",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-espingardeiro",
+      "name": "Praia do Espingardeiro",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gorda",
+      "name": "Praia da Gorda",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ponta-pequena",
+      "name": "Praia da Ponta Pequena",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-bico",
+      "name": "Praia do Bico",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-bom-sucesso",
+      "name": "Praia do Bom Sucesso",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-alpertuche",
+      "name": "Praia de Alpertuche",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-redonda-leixao",
+      "name": "Praia de Redonda / Leixão",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-arriba",
+      "name": "Praia da Arriba",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-camarinhas",
+      "name": "Praia das Camarinhas",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cabedelo-1224542321",
+      "name": "Praia do Cabedelo",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-balbina",
+      "name": "Praia da Balbina",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-cordama-naturista",
+      "name": "Praia Cordama Naturista",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barriga",
+      "name": "Praia da Barriga",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-barriga-1239998572",
+      "name": "Praia da Barriga",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-mirouco-1240127231",
+      "name": "Praia do Mirouço",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-medo-da-fonte-santa",
+      "name": "Praia do Medo da Fonte Santa",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-carreagem",
+      "name": "Praia da Carreagem",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vale-dos-homens",
+      "name": "Praia de Vale dos Homens",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-adegas",
+      "name": "Praia das Adegas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-zavial-naturista",
+      "name": "Praia do Zavial Naturista",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-andorinha",
+      "name": "Praia Andorinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-foia-do-carro",
+      "name": "Praia da Foia do Carro",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-almadena",
+      "name": "Praia de Almádena",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-boca-do-rio",
+      "name": "Praia da Boca do Rio",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pinheiros",
+      "name": "Praia dos Pinheiros",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-submarino",
+      "name": "Praia do Submarino",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-submarino-1245711160",
+      "name": "Praia do Submarino",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-rf",
+      "name": "Praia RF",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tres-irmaos",
+      "name": "Praia dos Três Irmãos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-joao-de-arens",
+      "name": "Praia João de Arens",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-submarino-1245934920",
+      "name": "Praia do Submarino",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-boiao",
+      "name": "Praia do Boião",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-joao-de-arens-1246032644",
+      "name": "Praia João de Arens",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tres-castelos",
+      "name": "Praia dos Três Castelos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-mato",
+      "name": "Praia do Mato",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-caneiros",
+      "name": "Praia dos Caneiros",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vale-centianes",
+      "name": "Praia de Vale Centianes",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-vale-covo-1247020903",
+      "name": "Praia do Vale Covo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cao-raivoso",
+      "name": "Praia do Cão Raivoso",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-marinha-1249063477",
+      "name": "Praia da Marinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-barranquinho",
+      "name": "Praia do Barranquinho",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-pontal",
+      "name": "Praia do Pontal",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-morena-1249669595",
+      "name": "Praia da Morena",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-estaquinha",
+      "name": "Praia da Estaquinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-albandeira",
+      "name": "Praia da Albandeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-albandeira-1249710120",
+      "name": "Praia da Albandeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-senhora-da-rocha",
+      "name": "Praia da Senhora da Rocha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-barranco-1249999787",
+      "name": "Praia do Barranco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-escaleiras",
+      "name": "Praia das Escaleiras",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-chiringuito",
+      "name": "Praia do Chiringuito",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-sao-lourenco",
+      "name": "Praia do Sao Lourenco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-bes",
+      "name": "Praia dos Bés",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-gale-leste",
+      "name": "Praia da Galé (leste)",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-manuel-lourenco",
+      "name": "Praia Manuel Lourenço",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ponta-grande",
+      "name": "Praia da Ponta Grande",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-ninho-de-andorinha",
+      "name": "Praia do Ninho de Andorinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-salamitras",
+      "name": "Praia das Salamitras",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-mare-das-porcas",
+      "name": "Praia da Maré das Porcas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-paradinha",
+      "name": "Praia dos Paradinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-sao-rafael",
+      "name": "Praia de São Rafael",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-piratas",
+      "name": "Praia dos Piratas",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-arrifes",
+      "name": "Praia dos Arrifes",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-viga",
+      "name": "Praia da Viga",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-risco",
+      "name": "Praia do Risco",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-afurada-naturista",
+      "name": "Praia Afurada Naturista",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-afurada",
+      "name": "Praia da Afurada",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-caldeira",
+      "name": "Praia da Caldeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-rebolinhos",
+      "name": "Praia dos Rebolinhos",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-olhos-de-agua",
+      "name": "Praia dos Olhos de Água",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-canal-1255794138",
+      "name": "Praia do Canal",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-penedo",
+      "name": "Praia do Penedo",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-samouqueira",
+      "name": "Praia da Samouqueira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-grota",
+      "name": "Praia da Grota",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-alfarim",
+      "name": "Praia de Alfarim",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tomates",
+      "name": "Praia dos Tomates",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-prainha",
+      "name": "Praia da Prainha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-zimbreirinha",
+      "name": "Praia da Zimbreirinha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-amado-1328449735",
+      "name": "Praia do Amado",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-grodo-mexilhao",
+      "name": "Praia Grodo Mexilhão",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-samarra-1341888093",
+      "name": "Praia da Samarra",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-aquario",
+      "name": "Praia do Aquário",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-empa",
+      "name": "Praia da Empa",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-sao-sebastiao",
+      "name": "Praia de São Sebastião",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-pescadores-1342511938",
+      "name": "Praia dos Pescadores",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-inatel",
+      "name": "Praia do Inatel",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "porto-de-barcas",
+      "name": "Porto de Barcas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santa-rita-norte",
+      "name": "Praia de Santa Rita Norte",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-s-bartolomeu",
+      "name": "Praia de S.Bartolomeu",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-suave-mar-norte",
+      "name": "Praia Suave Mar (Norte)",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-suave-mar-centro",
+      "name": "Praia Suave Mar (Centro)",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-suave-mar-sul",
+      "name": "Praia Suave Mar (Sul)",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-rio-de-moinhos",
+      "name": "Praia de Rio de Moinhos",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cepaes",
+      "name": "Praia de Cepães",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-lordelo",
+      "name": "Praia de Lordelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ramalha",
+      "name": "Praia da Ramalha",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-pedrinhas",
+      "name": "Praia das Pedrinhas",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-pedrinhas-1383850246",
+      "name": "Praia das Pedrinhas",
+      "country": "Portugal",
+      "region": "Braga",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cabedelo-1384166636",
+      "name": "Praia do Cabedelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-carreco",
+      "name": "Praia de Carreço",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cavalinho",
+      "name": "Praia do Cavalinho",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-penedo-1403199941",
+      "name": "Praia do Penedo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-graca",
+      "name": "Praia da Graça",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-farol-ria",
+      "name": "Praia do Farol (ria)",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-outao",
+      "name": "Praia do Outão",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-moitas",
+      "name": "Praia das Moitas",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-castelo-do-neiva",
+      "name": "Praia de Castelo do Neiva",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-castelo-do-neiva-1473435566",
+      "name": "Praia de Castelo do Neiva",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-rodanho-zona-de-naturista-tolerado",
+      "name": "Praia Rodanho - zona de Naturista tolerado",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-caminha",
+      "name": "Praia de Caminha",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-cabedelo-1474807104",
+      "name": "Praia do Cabedelo",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-aquario-1474807120",
+      "name": "Praia do Aquário",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-aquario-1474807121",
+      "name": "Praia do Aquário",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pedra-da-agulha",
+      "name": "Praia da Pedra da Agulha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-vale-do-olival",
+      "name": "Praia Vale do Olival",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-barril-1501060262",
+      "name": "Praia do Barril",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-monte-branco",
+      "name": "Praia do Monte Branco",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-anicha",
+      "name": "Praia da Anicha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-rochas",
+      "name": "Praia das Rochas",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-paimongo",
+      "name": "Praia de Paimongo",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-areal-sul",
+      "name": "Praia do Areal Sul",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-peralta",
+      "name": "Praia da Peralta",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-arda",
+      "name": "Praia da Arda",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte-do-cao",
+      "name": "Praia do Forte do Cão",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-paco",
+      "name": "Praia de Paçô",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-falca",
+      "name": "Praia da Falca",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "duna-de-salir-do-porto",
+      "name": "Duna de Salir do Porto",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-salgado",
+      "name": "Praia do Salgado",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-6172498",
+      "name": "Prainha",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-agua-de-madeiros",
+      "name": "Praia de Água de Madeiros",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-penedos",
+      "name": "Praia dos Penedos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-forte-da-bandeira",
+      "name": "Praia do Forte da Bandeira",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-homem-do-leme",
+      "name": "Praia do Homem do Leme",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-molhe-7093714",
+      "name": "Praia do Molhe",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cacela-velha",
+      "name": "Praia de Cacela Velha",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-homem-nu",
+      "name": "Praia do Homem Nú",
+      "country": "Portugal",
+      "region": "Faro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-pastoras",
+      "name": "Praia das Pastoras",
+      "country": "Portugal",
+      "region": "Porto",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-baleeira-9606510",
+      "name": "Praia da Baleeira",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-cramesines",
+      "name": "Praia de Cramesines",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-cova-da-mijona",
+      "name": "Praia da Cova da Mijona",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-inferno",
+      "name": "Praia do Inferno",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-ribeiro-do-cavalo",
+      "name": "Praia do Ribeiro do Cavalo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia",
+      "name": "Praia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-troia-bico-das-lulas",
+      "name": "Praia Tróia-Bico das Lulas",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-atlantica",
+      "name": "Praia Atlântica",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "malha-da-costa",
+      "name": "Malha da Costa",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-troia",
+      "name": "Praia de Tróia",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vale-covo",
+      "name": "Praia de Vale Côvo",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-fluvial-da-ponta-dos-corvos",
+      "name": "Praia Fluvial da Ponta dos Corvos",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-velha",
+      "name": "Praia da Velha",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-vasco-da-gama",
+      "name": "Praia Vasco da Gama",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-trafaria",
+      "name": "Praia da Trafaria",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-polvoeira",
+      "name": "Praia da Polvoeira",
+      "country": "Portugal",
+      "region": "Leiria",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-foz-dos-ouricos",
+      "name": "Praia da Foz dos Ouriços",
+      "country": "Portugal",
+      "region": "Beja",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-duna-do-caldeirao",
+      "name": "Praia da Duna do Caldeirão",
+      "country": "Portugal",
+      "region": "Viana do Castelo",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-furadouro-norte",
+      "name": "Praia do Furadouro - Norte",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-furadouro-sul",
+      "name": "Praia do Furadouro - Sul",
+      "country": "Portugal",
+      "region": "Aveiro",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-rainha-19868610",
+      "name": "Praia da Rainha",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-tombadoiros",
+      "name": "Praia dos Tombadoiros",
+      "country": "Portugal",
+      "region": "Lisboa",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-duna-cinzenta",
+      "name": "Praia da Duna Cinzenta",
+      "country": "Portugal",
+      "region": "Setúbal",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-rosais",
+      "name": "Ponta dos Rosais",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelo-3189240974",
+      "name": "Ponta do Castelo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-cedros",
+      "name": "Ponta dos Cedros",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-salao",
+      "name": "Ponta do Salão",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-ribeirinha",
+      "name": "Ponta da Ribeirinha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-joao-dias",
+      "name": "Ponta João Dias",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-espalamaca",
+      "name": "Ponta da Espalamaca",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-varadouro",
+      "name": "Ponta do Varadouro",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-marco",
+      "name": "Ponta do Marco",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-frades",
+      "name": "Ponta dos Frades",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-lobaio",
+      "name": "Ponta do Lobaio",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-norte",
+      "name": "Ponta do Norte",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-matos",
+      "name": "Ponta dos Matos",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-cedro",
+      "name": "Ponta do Cedro",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-sabinas",
+      "name": "Ponta das Sabinas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelete",
+      "name": "Ponta do Castelete",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-malbusca",
+      "name": "Ponta da Malbusca",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-marvao",
+      "name": "Ponta do Marvão",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-malmerendo",
+      "name": "Ponta do Malmerendo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-pocao",
+      "name": "Ponta do Poção",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-ilheu",
+      "name": "Ponta do Ilhéu",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-lajido",
+      "name": "Ponta do Lajido",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-furada",
+      "name": "Ponta Furada",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-rocha-alta",
+      "name": "Ponta da Rocha Alta",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-lopo-vaz",
+      "name": "Ponta Lopo Vaz",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-capitao",
+      "name": "Ponta do Capitão",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-fora",
+      "name": "Ponta de Fora",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-caveira",
+      "name": "Ponta da Caveira",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-fernao-jorge",
+      "name": "Ponta de Fernão Jorge",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-ruiva",
+      "name": "Ponta Ruiva",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-barrosas",
+      "name": "Ponta das Barrosas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-ilheu-6684848996",
+      "name": "Ponta do Ilhéu",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-albernaz",
+      "name": "Ponta de Albernaz",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-fanais",
+      "name": "Ponta dos Fanais",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-baixio",
+      "name": "Ponta do Baixio",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-coelheira",
+      "name": "Ponta da Coelheira",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-bredos",
+      "name": "Ponta dos Bredos",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-cantarinhas",
+      "name": "Ponta das Cantarinhas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-negra",
+      "name": "Ponta Negra",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-ilheus",
+      "name": "Ponta dos Ilhéus",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-negra-6688410573",
+      "name": "Ponta Negra",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-grossa",
+      "name": "Ponta Grossa",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-baixa",
+      "name": "Ponta da Baixa",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-negra-6688540272",
+      "name": "Ponta Negra",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-baixas",
+      "name": "Ponta das Baixas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-luzerna",
+      "name": "Ponta da Luzerna",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-batoca",
+      "name": "Ponta da Batoca",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-rasa",
+      "name": "Ponta Rasa",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-misterio",
+      "name": "Ponta do Mistério",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-boqueirao",
+      "name": "Ponta do Boqueirão",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-rocha",
+      "name": "Ponta da Rocha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-joao-salino",
+      "name": "Ponta de João Salino",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-espigao",
+      "name": "Ponta do Espigão",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-gorda",
+      "name": "Ponta Gorda",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-trombetas",
+      "name": "Ponta das Trombetas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-baleia",
+      "name": "Ponta da Baleia",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelete-6688550799",
+      "name": "Ponta do Castelete",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-ouricos",
+      "name": "Ponta dos Ouriços",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-ilha",
+      "name": "Ponta da Ilha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-gil-afonso",
+      "name": "Ponta de Gil Afonso",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-feiteira",
+      "name": "Ponta da Feiteira",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-arrife",
+      "name": "Ponta do Arrife",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-queimada",
+      "name": "Ponta da Queimada",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelete-6688550810",
+      "name": "Ponta do Castelete",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-formigas",
+      "name": "Ponta das Formigas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-alta-6688550812",
+      "name": "Ponta Alta",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-faca",
+      "name": "Ponta da Faca",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "morro-grande",
+      "name": "Morro Grande",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "morro-de-lemos",
+      "name": "Morro de Lemos",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-ruiva-6689353465",
+      "name": "Ponta Ruiva",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-norte-grande",
+      "name": "Ponta do Norte Grande",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-goncalo",
+      "name": "Ponta do Gonçalo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pontinha",
+      "name": "Pontinha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-monteiros",
+      "name": "Ponta dos Monteiros",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-sao-joao",
+      "name": "Ponta de São João",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-forcada",
+      "name": "Ponta da Forcada",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-castelete-6689469392",
+      "name": "Ponta do Castelete",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-grande",
+      "name": "Ponta Grande",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-namorados",
+      "name": "Ponta dos Namorados",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-queimada-6689469395",
+      "name": "Ponta da Queimada",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-eiras",
+      "name": "Ponta das Eiras",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "calheta-do-frade",
+      "name": "Calheta do Frade",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-santana",
+      "name": "Praia de Santana",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-moinhos-88146338",
+      "name": "Praia dos Moinhos",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-fogo",
+      "name": "Praia do Fogo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-amora",
+      "name": "Praia da Amora",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-caloura",
+      "name": "Praia da Caloura",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-baixa-d-areia",
+      "name": "Praia Baixa D' Areia",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-pedreira",
+      "name": "Praia da Pedreira",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-vinha-d-areia",
+      "name": "Praia da Vinha d'Areia",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-calhau-d-areia",
+      "name": "Praia de Calhau D'Areia",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-milicias",
+      "name": "Praia das Milícias",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-corpo-santo",
+      "name": "Praia do Corpo Santo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "prainha-194605760",
+      "name": "Prainha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "silveira",
+      "name": "Silveira",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "zona-balnear-do-porto-das-cinco",
+      "name": "Zona Balnear do Porto das Cinco",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "escaleiras",
+      "name": "Escaleiras",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-morro-295731022",
+      "name": "Praia do Morro",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-degredo",
+      "name": "Praia do Degredo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-ingleses-308958360",
+      "name": "Praia dos Ingleses",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-porto-de-pedro-miguel",
+      "name": "Praia do Porto de Pedro Miguel",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-boca-da-grota",
+      "name": "Praia da Boca da Grota",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-ingleses-312205541",
+      "name": "Praia dos Ingleses",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-areia",
+      "name": "Praia da Areia",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-lajes-ou-calheta",
+      "name": "Praia das Lajes ou Calheta",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-oficiais",
+      "name": "Praia dos Oficiais",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-riviera-334660658",
+      "name": "Praia da Riviera",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-lombo-gordo",
+      "name": "Praia do Lombo Gordo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-faja-grande",
+      "name": "Praia Fajã Grande",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "zona-balnear-dos-moinhos-das-relvas",
+      "name": "Zona Balnear dos Moinhos das Relvas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "zona-balnear-do-lenho-achada-achadinha",
+      "name": "Zona Balnear do Lenho Achada/Achadinha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "baia-de-alagoa",
+      "name": "Baía de Alagoa",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "calheta-dos-biscoitos",
+      "name": "Calheta dos Biscoitos",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "faja-do-ficher",
+      "name": "Fajã do Ficher",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-faja",
+      "name": "Praia da Fajã",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-conceicao-1008980204",
+      "name": "Praia da Conceição",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-porto-pim",
+      "name": "Praia de Porto Pim",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "baia-das-canas",
+      "name": "Baía das Canas",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "calhau-miudo",
+      "name": "Calhau Miúdo",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "porto-da-formosinha",
+      "name": "Porto da Formosinha",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "baixa-do-moinho",
+      "name": "Baixa do Moinho",
+      "country": "Portugal",
+      "region": "Açores",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-canaveira",
+      "name": "Ponta da Canaveira",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-ferreiros",
+      "name": "Ponta dos Ferreiros",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-calheta-1574241649",
+      "name": "Ponta da Calheta",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-gale-1574241656",
+      "name": "Ponta da Galé",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-agulha",
+      "name": "Ponta da Agulha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-clerigo",
+      "name": "Ponta do Clérigo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-atalaia-3995320535",
+      "name": "Ponta da Atalaia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-gale-3995320536",
+      "name": "Ponta da Galé",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-oliveira",
+      "name": "Ponta da Oliveira",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-queimada-3995320538",
+      "name": "Ponta da Queimada",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-das-gaivotas",
+      "name": "Ponta das Gaivotas",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-catarina-pires",
+      "name": "Ponta de Catarina Pires",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-sao-jorge",
+      "name": "Ponta de São Jorge",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-santa-catarina",
+      "name": "Ponta de Santa Catarina",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-bode",
+      "name": "Ponta do Bode",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-buraco",
+      "name": "Ponta do Buraco",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-espigao-amarelo",
+      "name": "Ponta do Espigão Amarelo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-furado",
+      "name": "Ponta do Furado",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-garajau",
+      "name": "Ponta do Garajau",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-jardim",
+      "name": "Ponta do Jardim",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-pesqueiro",
+      "name": "Ponta do Pesqueiro",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-poiso",
+      "name": "Ponta do Poiso",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-rosto",
+      "name": "Ponta do Rosto",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-dos-reis-magos",
+      "name": "Ponta dos Reis Magos",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-gorda-3995321226",
+      "name": "Ponta Gorda",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-cruz",
+      "name": "Ponta da Cruz",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "porta-da-abra",
+      "name": "Porta da Abra",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-portinho",
+      "name": "Praia do Portinho",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pontinha-8410146719",
+      "name": "Pontinha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-faja-da-ovelha",
+      "name": "Ponta da Fajã da Ovelha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-vigia-8413315952",
+      "name": "Praia da Vigia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-altar",
+      "name": "Ponta do Altar",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "rocha-das-ovelhas",
+      "name": "Rocha das Ovelhas",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-cruz-9123380764",
+      "name": "Ponta da Cruz",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-ninho-do-guincho",
+      "name": "Ponta do Ninho do Guincho",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-branca",
+      "name": "Ponta Branca",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-guindaste",
+      "name": "Ponta do Guindaste",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-atalaia",
+      "name": "Praia da Atalaia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-fonte-da-areia",
+      "name": "Ponta da Fonte da Areia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-do-varadouro-12091962639",
+      "name": "Ponta do Varadouro",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-beberia",
+      "name": "Ponta da Beberia",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-da-cabra",
+      "name": "Ponta da Cabra",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ponta-de-oeste",
+      "name": "Ponta de Oeste",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-de-vigario",
+      "name": "Praia de Vigário",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-calheta",
+      "name": "Praia da Calheta",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-calheta-30121434",
+      "name": "Praia da Calheta",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-prainha-50588023",
+      "name": "Praia da Prainha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-porto-do-seixal",
+      "name": "Praia do Porto do Seixal",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-banda-d-alem",
+      "name": "Praia da Banda d’Além",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-nova-138470949",
+      "name": "Praia Nova",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "fontinha",
+      "name": "Fontinha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "pedras-pretas",
+      "name": "Pedras Pretas",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ribeiro-salgado",
+      "name": "Ribeiro Salgado",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "lagoa",
+      "name": "Lagoa",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "calhau-da-serra-de-dentro",
+      "name": "Calhau da Serra de Dentro",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-furado-142871810",
+      "name": "Praia do Furado",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-gastao",
+      "name": "Praia do Gastão",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "porto-dos-frades",
+      "name": "Porto dos Frades",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-das-lajes",
+      "name": "Praia das Lajes",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-namorados-162450920",
+      "name": "Praia dos Namorados",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-arieiro",
+      "name": "Praia do Arieiro",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-reis-magos",
+      "name": "Praia dos Reis Magos",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-reis-magos-162453453",
+      "name": "Praia dos Reis Magos",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-alagoa-168959347",
+      "name": "Praia da Alagoa",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-baia-d-abra",
+      "name": "Praia da Baía D'Abra",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-maiata",
+      "name": "Praia da Maiata",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cais-do-sardinha",
+      "name": "Cais do Sardinha",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-do-zimbralinho",
+      "name": "Praia do Zimbralinho",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-formosa-838832734",
+      "name": "Praia Formosa",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "salemas",
+      "name": "Salemas",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ribeira-brava",
+      "name": "Praia da Ribeira Brava",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-dos-surfistas",
+      "name": "Praia dos Surfistas",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "abrigo",
+      "name": "Abrigo",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "calheta",
+      "name": "Calheta",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "ribeiro-cochino",
+      "name": "Ribeiro Cochino",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "cabeco",
+      "name": "Cabeço",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ribeira-brava-1499877825",
+      "name": "Praia da Ribeira Brava",
+      "country": "Portugal",
+      "region": "Madeira",
+      "reason": "not attested: no surf reference names this place"
+    },
+    {
+      "id": "praia-da-ribeira-das-galinhas",
+      "name": "Praia da Ribeira das Galinhas",
+      "country": "Portugal",
+      "region": "Madeira",
       "reason": "not attested: no surf reference names this place"
     },
     {
