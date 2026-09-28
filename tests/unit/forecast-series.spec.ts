@@ -92,4 +92,12 @@ test.describe('pill timeline', () => {
     expect(b2).toBeLessThan(91);
     expect(pillColour(7, { isDangerous: true })).toBe('#EF4444');
   });
+
+  test('on a light drawer the grey end is light too, and yellow is the same yellow', () => {
+    expect(pillColour(0, { theme: 'light' })).toBe('rgb(212, 212, 216)');
+    expect(pillColour(5, { theme: 'light' })).toBe('rgb(251, 191, 36)');
+    expect(pillColour(7, { isDangerous: true, theme: 'light' })).toBe('#EF4444');
+    const [r2, g2] = pillColour(2, { theme: 'light' }).match(/\d+/g)!.map(Number);
+    expect(g2).toBeLessThanOrEqual(r2);
+  });
 });

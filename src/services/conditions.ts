@@ -8,6 +8,7 @@
 
 import { MarineForecast } from './marine-api';
 import { CALM_WIND_KMH } from './star-engine';
+import type { Theme } from './theme';
 
 /**
  * Quality is encoded in several channels at once -- fill, size, ring and glow --
@@ -49,59 +50,106 @@ export const MAX_STARS = 10;
 export const EPIC_THRESHOLD = 6;
 const GOOD_THRESHOLD = 1;
 
-const STYLES: Record<QualityTier, Omit<QualityStyle, 'tier'>> = {
-  // Saturated, large, ringed and glowing: impossible to miss among the rest.
-  epic: {
-    background: '#FBBF24',
-    size: 30,
-    border: '2px solid #FFFFFF',
-    boxShadow: '0 0 0 4px rgba(251,191,36,0.28), 0 0 14px 2px rgba(251,191,36,0.45)',
-    foreground: '#422006',
-    showScore: true,
-    label: 'Epic',
+/** What a tier looks like whatever the theme: its weight on the map and its name. */
+const SHAPES: Record<QualityTier, Pick<QualityStyle, 'size' | 'showScore' | 'label'>> = {
+  epic: { size: 30, showScore: true, label: 'Epic' },
+  good: { size: 22, showScore: true, label: 'Fair' },
+  poor: { size: 11, showScore: false, label: 'Poor' },
+  danger: { size: 26, showScore: true, label: 'Above your level' },
+  unrated: { size: 11, showScore: false, label: 'No data' },
+};
+
+type TierColours = Pick<QualityStyle, 'background' | 'border' | 'boxShadow' | 'foreground'>;
+
+/**
+ * The same hues in both themes; only what separates a marker from the map
+ * changes. A glow reads on a dark map and vanishes on a light one, so there
+ * epic keeps its white ring and gains a thin dark outline and a shadow.
+ */
+const COLOURS: Record<Theme, Record<QualityTier, TierColours>> = {
+  dark: {
+    // Saturated, large, ringed and glowing: impossible to miss among the rest.
+    epic: {
+      background: '#FBBF24',
+      border: '2px solid #FFFFFF',
+      boxShadow: '0 0 0 4px rgba(251,191,36,0.28), 0 0 14px 2px rgba(251,191,36,0.45)',
+      foreground: '#422006',
+    },
+    // Clearly present but visibly secondary to epic: darker, smaller, no glow.
+    good: {
+      background: '#B45309',
+      border: '1.5px solid rgba(255,255,255,0.7)',
+      boxShadow: 'none',
+      foreground: '#FEF3C7',
+    },
+    // Recedes into the map. Present, findable, never competing for attention.
+    poor: {
+      background: '#52525B',
+      border: '1px solid rgba(255,255,255,0.28)',
+      boxShadow: 'none',
+      foreground: 'transparent',
+    },
+    // Red overrides the quality ramp entirely: this is a safety signal, not a
+    // rating, and it must read as "stop" even on a spot scoring well.
+    danger: {
+      background: '#EF4444',
+      border: '3px solid #FCA5A5',
+      boxShadow: '0 0 0 3px rgba(239,68,68,0.3), 0 0 16px 3px rgba(239,68,68,0.6)',
+      foreground: '#FFFFFF',
+    },
+    // Hollow, so "no forecast" never looks like "bad forecast".
+    unrated: {
+      background: 'transparent',
+      border: '1.5px dashed rgba(161,161,170,0.8)',
+      boxShadow: 'none',
+      foreground: 'transparent',
+    },
   },
-  // Clearly present but visibly secondary to epic: darker, smaller, no glow.
-  good: {
-    background: '#B45309',
-    size: 22,
-    border: '1.5px solid rgba(255,255,255,0.7)',
-    boxShadow: 'none',
-    foreground: '#FEF3C7',
-    showScore: true,
-    label: 'Fair',
-  },
-  // Recedes into the map. Present, findable, never competing for attention.
-  poor: {
-    background: '#52525B',
-    size: 11,
-    border: '1px solid rgba(255,255,255,0.28)',
-    boxShadow: 'none',
-    foreground: 'transparent',
-    showScore: false,
-    label: 'Poor',
-  },
-  // Red overrides the quality ramp entirely: this is a safety signal, not a
-  // rating, and it must read as "stop" even on a spot scoring well.
-  danger: {
-    background: '#EF4444',
-    size: 26,
-    border: '3px solid #FCA5A5',
-    boxShadow: '0 0 0 3px rgba(239,68,68,0.3), 0 0 16px 3px rgba(239,68,68,0.6)',
-    foreground: '#FFFFFF',
-    showScore: true,
-    label: 'Above your level',
-  },
-  // Hollow, so "no forecast" never looks like "bad forecast".
-  unrated: {
-    background: 'transparent',
-    size: 11,
-    border: '1.5px dashed rgba(161,161,170,0.8)',
-    boxShadow: 'none',
-    foreground: 'transparent',
-    showScore: false,
-    label: 'No data',
+  light: {
+    epic: {
+      background: '#FBBF24',
+      border: '2px solid #FFFFFF',
+      boxShadow: '0 0 0 1.5px rgba(120,53,15,0.55), 0 3px 10px rgba(180,83,9,0.35)',
+      foreground: '#422006',
+    },
+    good: {
+      background: '#B45309',
+      border: '1.5px solid #FFFFFF',
+      boxShadow: '0 1px 3px rgba(15,23,29,0.3)',
+      foreground: '#FEF3C7',
+    },
+    // A white ring rather than a dark one: grey on light grey needs the edge.
+    poor: {
+      background: '#A1A1AA',
+      border: '1.5px solid #FFFFFF',
+      boxShadow: '0 0 0 0.5px rgba(15,23,29,0.3)',
+      foreground: 'transparent',
+    },
+    danger: {
+      background: '#EF4444',
+      border: '2px solid #FFFFFF',
+      boxShadow: '0 0 0 2px rgba(239,68,68,0.55), 0 3px 12px rgba(239,68,68,0.45)',
+      foreground: '#FFFFFF',
+    },
+    unrated: {
+      background: 'transparent',
+      border: '1.5px dashed rgba(82,82,91,0.7)',
+      boxShadow: 'none',
+      foreground: 'transparent',
+    },
   },
 };
+
+function styleFor(tier: QualityTier, theme: Theme): Omit<QualityStyle, 'tier'> {
+  return { ...SHAPES[tier], ...COLOURS[theme][tier] };
+}
+
+interface StyleOptions {
+  isDangerous?: boolean;
+  unrated?: boolean;
+  /** Defaults to dark, the theme the scale was designed on. */
+  theme?: Theme;
+}
 
 export function qualityTier(
   stars: number,
@@ -114,18 +162,15 @@ export function qualityTier(
   return 'poor';
 }
 
-export function qualityStyle(
-  stars: number,
-  options?: { isDangerous?: boolean; unrated?: boolean }
-): QualityStyle {
+export function qualityStyle(stars: number, options?: StyleOptions): QualityStyle {
   const tier = qualityTier(stars, options);
-  return { tier, ...STYLES[tier] };
+  return { tier, ...styleFor(tier, options?.theme ?? 'dark') };
 }
 
 /** The tiers a legend should list, in reading order. */
 export const LEGEND_TIERS: QualityTier[] = ['epic', 'good', 'poor', 'danger'];
 
-export function legendEntry(tier: QualityTier): QualityStyle & { range: string } {
+export function legendEntry(tier: QualityTier, theme: Theme = 'dark'): QualityStyle & { range: string } {
   const span = (from: number, to: number) => (from === to ? String(from) : `${from}-${to}`);
   const ranges: Record<QualityTier, string> = {
     epic: span(EPIC_THRESHOLD, MAX_STARS),
@@ -134,14 +179,11 @@ export function legendEntry(tier: QualityTier): QualityStyle & { range: string }
     danger: '!',
     unrated: '--',
   };
-  return { tier, ...STYLES[tier], range: ranges[tier] };
+  return { tier, ...styleFor(tier, theme), range: ranges[tier] };
 }
 
 /** Fill colour alone, for surfaces that only need the hue. */
-export function qualityColor(
-  stars: number,
-  options?: { isDangerous?: boolean; unrated?: boolean }
-): string {
+export function qualityColor(stars: number, options?: StyleOptions): string {
   return qualityStyle(stars, options).background;
 }
 
@@ -155,13 +197,24 @@ export interface WindBadge {
 }
 
 // Tinted, not filled: the wind qualifies the reading, it must not outshout the score.
-const WIND_BADGES: Record<WindCategory, Omit<WindBadge, 'label'>> = {
-  'Glass': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
-  // Same green as Glass on purpose: green means "the wind costs nothing".
-  'Light': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
-  'Offshore': { background: 'rgba(74,222,128,0.12)', foreground: '#86EFAC' },
-  'Cross-shore': { background: 'rgba(190,242,100,0.10)', foreground: '#D9F99D' },
-  'Onshore': { background: 'rgba(161,161,170,0.14)', foreground: '#D4D4D8' },
+// On white the pale greens that read on near-black disappear, so the light
+// theme uses the same hues a few steps darker.
+const WIND_BADGES: Record<Theme, Record<WindCategory, Omit<WindBadge, 'label'>>> = {
+  dark: {
+    'Glass': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
+    // Same green as Glass on purpose: green means "the wind costs nothing".
+    'Light': { background: 'rgba(74,222,128,0.16)', foreground: '#86EFAC' },
+    'Offshore': { background: 'rgba(74,222,128,0.12)', foreground: '#86EFAC' },
+    'Cross-shore': { background: 'rgba(190,242,100,0.10)', foreground: '#D9F99D' },
+    'Onshore': { background: 'rgba(161,161,170,0.14)', foreground: '#D4D4D8' },
+  },
+  light: {
+    'Glass': { background: 'rgba(22,163,74,0.13)', foreground: '#15803D' },
+    'Light': { background: 'rgba(22,163,74,0.13)', foreground: '#15803D' },
+    'Offshore': { background: 'rgba(22,163,74,0.10)', foreground: '#15803D' },
+    'Cross-shore': { background: 'rgba(101,163,13,0.14)', foreground: '#4D7C0F' },
+    'Onshore': { background: 'rgba(113,113,122,0.14)', foreground: '#52525B' },
+  },
 };
 
 /**
@@ -186,22 +239,24 @@ function angularDistance(a: number, b: number): number {
  */
 export function windBadge(
   forecast: Pick<MarineForecast, 'windSpeed' | 'windDirection'>,
-  config: { offshoreWindAngle: number; windTolerance: number }
+  config: { offshoreWindAngle: number; windTolerance: number },
+  theme: Theme = 'dark'
 ): WindBadge | null {
   const { windSpeed, windDirection } = forecast;
   if (windSpeed === null) return null;
+  const badges = WIND_BADGES[theme];
 
   if (windSpeed < GLASS_THRESHOLD_KMH) {
-    return { label: 'Glass', ...WIND_BADGES['Glass'] };
+    return { label: 'Glass', ...badges['Glass'] };
   }
   if (windSpeed < CALM_WIND_KMH) {
-    return { label: 'Light', ...WIND_BADGES['Light'] };
+    return { label: 'Light', ...badges['Light'] };
   }
   const direction = windDirectionClass(windDirection, config);
   if (direction === null) return null;
   const label: WindCategory =
     direction === 'offshore' ? 'Offshore' : direction === 'onshore' ? 'Onshore' : 'Cross-shore';
-  return { label, ...WIND_BADGES[label] };
+  return { label, ...badges[label] };
 }
 
 export type WindDirectionClass = 'offshore' | 'cross-shore' | 'onshore';
@@ -218,20 +273,21 @@ export function windDirectionClass(
   return 'cross-shore';
 }
 
-/** Light blue for small surf through to dark blue for heavy surf. */
-const SWELL_RAMP: Array<{ maxHeight: number; color: string }> = [
-  { maxHeight: 0.5, color: '#BFDBFE' }, // blue-200
-  { maxHeight: 1.0, color: '#93C5FD' }, // blue-300
-  { maxHeight: 1.5, color: '#60A5FA' }, // blue-400
-  { maxHeight: 2.5, color: '#3B82F6' }, // blue-500
-  { maxHeight: 3.5, color: '#2563EB' }, // blue-600
-  { maxHeight: 5.0, color: '#1D4ED8' }, // blue-700
-  { maxHeight: Infinity, color: '#1E3A8A' }, // blue-900
-];
+/**
+ * Light blue for small surf through to dark blue for heavy surf. The light
+ * theme starts where the pale end is still legible on white.
+ */
+const SWELL_STEPS = [0.5, 1.0, 1.5, 2.5, 3.5, 5.0, Infinity];
+const SWELL_RAMP: Record<Theme, string[]> = {
+  // blue-200 .. blue-900
+  dark: ['#BFDBFE', '#93C5FD', '#60A5FA', '#3B82F6', '#2563EB', '#1D4ED8', '#1E3A8A'],
+  // blue-500 .. blue-950
+  light: ['#3B82F6', '#2563EB', '#1D4ED8', '#1E40AF', '#1E3A8A', '#172554', '#0F1A3D'],
+};
 
-export function swellColor(height: number | null): string {
-  if (height === null) return '#52525B';
-  return SWELL_RAMP.find(step => height < step.maxHeight)!.color;
+export function swellColor(height: number | null, theme: Theme = 'dark'): string {
+  if (height === null) return theme === 'dark' ? '#52525B' : '#A1A1AA';
+  return SWELL_RAMP[theme][SWELL_STEPS.findIndex(max => height < max)];
 }
 
 /** `NE`, `SSW`, ... from a bearing in degrees. */

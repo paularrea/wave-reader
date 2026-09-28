@@ -35,13 +35,13 @@ export function LevelPicker() {
         </button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/60 z-40" />
+        <Drawer.Overlay className="fixed inset-0 bg-scrim z-40" />
         <Drawer.Content
           data-testid="level-picker"
           className="bg-sheet text-ink-0 flex flex-col rounded-t-3xl fixed bottom-0 left-0 right-0 z-50 border-t border-line outline-none max-w-lg mx-auto"
           style={{ paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
         >
-          <div className="mx-auto w-9 h-1 rounded-full bg-zinc-700 mt-2 shrink-0" />
+          <div className="mx-auto w-9 h-1 rounded-full bg-line-strong mt-2 shrink-0" />
           <div className="px-5 pt-3.5">
             <Drawer.Title className="text-[22px] font-semibold tracking-tight">Your level</Drawer.Title>
             <Drawer.Description className="text-[14px] text-ink-2 mt-1">

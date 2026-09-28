@@ -297,6 +297,10 @@ test.describe('map and spot detail', () => {
 });
 
 test.describe('spec: condition-rating', () => {
+  // The dark palette the scale was designed on; the light one is covered under
+  // spec: appearance.
+  test.use({ colorScheme: 'dark' });
+
   test('an offshore wind shows a green Offshore badge', async ({ page }) => {
     await stubForecast(page, { windSpeed: 18, windDirection: 140 });
     await page.goto('/');
@@ -1029,6 +1033,7 @@ test.describe('spec: region-selection / Todos los spots visibles puntuados', () 
 });
 
 test.describe('spec: drawer-navigation / Línea temporal de pills', () => {
+  test.use({ colorScheme: 'dark' });
   const CLOCK = new Date('2026-09-16T12:20:00Z').getTime(); // anchor 15:00 Madrid
 
   test('a better day ahead shows up in the pills without navigating', async ({ page }) => {
@@ -1398,4 +1403,89 @@ test.describe("spec: responsive-layout / Mapbox's own credits", () => {
       expect(creditsBox.x).toBeGreaterThan(logoBox.x);
     });
   }
+});
+
+test.describe('spec: appearance / Auto, claro u oscuro', () => {
+  const styleRequest = (page: Page, theme: 'light' | 'dark') =>
+    page.waitForRequest(r => r.url().includes(`/styles/v1/mapbox/${theme}-v11`), { timeout: 45_000 });
+
+  test('Auto follows a dark phone: dark page, dark basemap, dark browser chrome', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'dark' });
+    const style = styleRequest(page, 'dark');
+    await stubForecast(page);
+    await page.goto('/');
+
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute('content', '#0A0D10');
+    await style;
+  });
+
+  test('a light phone gets the light page and basemap, with badges legible on white', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'light' });
+    const style = styleRequest(page, 'light');
+    await stubForecast(page, { windSpeed: 18, windDirection: 140 });
+    await page.goto('/');
+
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+    await style;
+    await openFirstSpot(page);
+    await expect(page.getByTestId('spot-drawer')).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+    await expect(page.getByTestId('wind-badge')).toHaveText('Offshore');
+    await expect(page.getByTestId('wind-badge')).toHaveCSS('color', 'rgb(21, 128, 61)');
+  });
+
+  test('choosing Dark beats a light phone, survives a reload, and Auto hands back', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'light' });
+    await stubForecast(page);
+    await page.goto('/');
+
+    await page.getByTestId('info-button').click();
+    await expect(page.getByTestId('theme-auto')).toHaveAttribute('aria-checked', 'true');
+    const darkStyle = styleRequest(page, 'dark');
+    await page.getByTestId('theme-dark').click();
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await darkStyle;
+
+    await page.reload();
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await page.getByTestId('info-button').click();
+    await expect(page.getByTestId('theme-dark')).toHaveAttribute('aria-checked', 'true');
+    await page.getByTestId('theme-auto').click();
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  });
+
+  test('markers take the new theme in place, without reloading the map', async ({ page }) => {
+    await page.emulateMedia({ colorScheme: 'light' });
+    await stubForecast(page, { stars: 7 });
+    await page.goto('/');
+
+    const marker = page.locator('[data-testid="spot-marker"][data-tier="epic"]').first();
+    await expect(marker).toBeAttached({ timeout: 45_000 });
+    // Light: outlined, since a glow disappears on a light map.
+    await expect(marker).toHaveCSS('box-shadow', /rgba\(120, 53, 15/);
+    await expect(marker).toHaveCSS('background-color', 'rgb(251, 191, 36)');
+
+    await page.getByTestId('info-button').click();
+    await page.getByTestId('theme-dark').click();
+    await page.keyboard.press('Escape');
+    await expect(marker).toHaveCSS('box-shadow', /rgba\(251, 191, 36/);
+    await expect(marker).toHaveCSS('background-color', 'rgb(251, 191, 36)');
+  });
+
+  test('the brand is where browsers and phones look for it', async ({ page, request }) => {
+    await stubForecast(page);
+    await page.goto('/');
+
+    await expect(page).toHaveTitle(/^Wave Reader/);
+    await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveCount(1);
+    await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveCount(1);
+    await expect(page.locator('meta[property="og:image"]')).toHaveCount(1);
+
+    const manifestHref = await page.locator('link[rel="manifest"]').getAttribute('href');
+    const manifest = await (await request.get(manifestHref!)).json();
+    expect(manifest.name).toBe('Wave Reader');
+    for (const icon of manifest.icons) {
+      expect((await request.get(icon.src)).ok(), icon.src).toBe(true);
+    }
+  });
 });

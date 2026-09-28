@@ -14,6 +14,7 @@ import { buildTimeline, TimelineDay, SeriesHour } from '@/services/forecast-seri
 import { verdict, bestWindow, periodClass } from '@/services/verdict';
 import type { SeriesState } from '@/hooks/useSpotSeries';
 import { DirectionArrow } from './DirectionArrow';
+import { useTheme } from '@/hooks/useTheme';
 import { ForecastTimeline, ForecastTimelineSkeleton } from './ForecastTimeline';
 
 export interface ForecastPayload {
@@ -142,11 +143,11 @@ function TideCard({
               role="img"
               aria-label={`Tide curve: ${tides.map(t => `${t.kind} ${t.timestamp.slice(11, 16)}`).join(', ')}`}
             >
-              <path d={path} fill="none" stroke="#7DD3FC" strokeWidth={2} strokeLinejoin="round" />
+              <path d={path} fill="none" className="stroke-tide" strokeWidth={2} strokeLinejoin="round" />
               {marker && (
                 <>
-                  <line x1={marker.x} y1={0} x2={marker.x} y2={H} stroke="rgba(255,255,255,0.3)" strokeDasharray="2 3" />
-                  <circle cx={marker.x} cy={marker.y} r={4} fill="#FFFFFF" />
+                  <line x1={marker.x} y1={0} x2={marker.x} y2={H} className="stroke-line-strong" strokeDasharray="2 3" />
+                  <circle cx={marker.x} cy={marker.y} r={4} className="fill-ink-0" />
                 </>
               )}
             </svg>
@@ -181,6 +182,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
     useStore();
   const spot = useCountryIndex(selectedCountry).find(s => s.id === selectedSpotId);
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const { theme } = useTheme();
 
   const instant = instantAt(spotUtcOffsetSeconds, currentHour);
   const data = series.status === 'ready' ? series.data : null;
@@ -211,7 +213,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
   if (!spot) return null;
 
   const forecast = forecastData?.forecast ?? null;
-  const badge = forecast && forecastData?.config ? windBadge(forecast, forecastData.config) : null;
+  const badge = forecast && forecastData?.config ? windBadge(forecast, forecastData.config, theme) : null;
   const isDangerous = forecastData?.safety.isDangerous ?? false;
   const quality = forecastData ? qualityStyle(forecastData.stars, { isDangerous, unrated: forecastData.unrated }) : null;
   const shownDay = forecast?.timestamp.slice(0, 10) ?? instant.day;
@@ -254,12 +256,12 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
   return (
     <Drawer.Root open={!!selectedSpotId} onOpenChange={open => !open && setSelectedSpot(null)}>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/60 z-40" />
+        <Drawer.Overlay className="fixed inset-0 bg-scrim z-40" />
         <Drawer.Content
           data-testid="spot-drawer"
           className="bg-sheet text-ink-0 flex flex-col rounded-t-3xl fixed bottom-0 left-0 right-0 z-50 max-h-[92dvh] border-t border-line outline-none max-w-lg mx-auto"
         >
-          <div className="mx-auto w-9 h-1 rounded-full bg-zinc-700 mt-2 shrink-0" />
+          <div className="mx-auto w-9 h-1 rounded-full bg-line-strong mt-2 shrink-0" />
 
           {/* Header: name, score and the verdict, above the scroll area. */}
           <div className="px-5 pt-3.5 shrink-0">
@@ -309,7 +311,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
                 disabled={currentHour === 0}
                 aria-label="Previous hour"
                 data-testid="hour-prev"
-                className="w-11 h-11 -ml-3 rounded-full flex items-center justify-center text-ink-1 hover:text-white disabled:opacity-25 transition-colors"
+                className="w-11 h-11 -ml-3 rounded-full flex items-center justify-center text-ink-1 hover:text-ink-0 disabled:opacity-25 transition-colors"
               >
                 <ChevronLeft size={18} />
               </button>
@@ -324,7 +326,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
                 disabled={currentHour >= lastHour}
                 aria-label="Next hour"
                 data-testid="hour-next"
-                className="w-11 h-11 -mr-3 rounded-full flex items-center justify-center text-ink-1 hover:text-white disabled:opacity-25 transition-colors"
+                className="w-11 h-11 -mr-3 rounded-full flex items-center justify-center text-ink-1 hover:text-ink-0 disabled:opacity-25 transition-colors"
               >
                 <ChevronRight size={18} />
               </button>
@@ -351,7 +353,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
                 <button
                   onClick={series.retry}
                   data-testid="forecast-retry"
-                  className="shrink-0 h-11 flex items-center gap-1.5 rounded-2xl bg-ink-0 text-ground px-4 text-[14px] font-semibold active:scale-[0.98]"
+                  className="shrink-0 h-11 flex items-center gap-1.5 rounded-2xl bg-ink-0 text-sheet px-4 text-[14px] font-semibold active:scale-[0.98]"
                 >
                   <RotateCw size={14} />
                   Try again
@@ -377,11 +379,11 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
               <div
                 data-testid="danger-alert"
                 role="alert"
-                className="bg-alert/10 border border-alert/40 text-red-100 p-3.5 rounded-2xl flex gap-3 items-start mb-1"
+                className="bg-alert/10 border border-alert/40 text-alert-ink p-3.5 rounded-2xl flex gap-3 items-start mb-1"
               >
-                <AlertTriangle size={18} className="shrink-0 mt-0.5 text-red-400" />
+                <AlertTriangle size={18} className="shrink-0 mt-0.5 text-alert-strong" />
                 <div className="text-[14px] leading-snug">
-                  <span className="font-semibold block mb-0.5 text-red-200">Above your level</span>
+                  <span className="font-semibold block mb-0.5 text-alert-strong">Above your level</span>
                   {forecastData?.safety.reason}
                 </div>
               </div>
@@ -391,7 +393,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
               <MetricCard
                 label="Swell"
                 value={forecast ? metres(forecast.swellHeight).replace('m', ' m') : NO_DATA}
-                color={forecast?.swellHeight != null ? swellColor(forecast.swellHeight) : undefined}
+                color={forecast?.swellHeight != null ? swellColor(forecast.swellHeight, theme) : undefined}
                 testId="swell-height"
                 aside={
                   forecast && (
@@ -521,7 +523,7 @@ export function SpotDetailDrawer({ series }: SpotDetailDrawerProps) {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="go-to-spot"
-              className="w-full h-13 bg-ink-0 text-ground rounded-2xl font-semibold text-[16px] flex items-center justify-center gap-2 transition-transform active:scale-[0.98]"
+              className="w-full h-13 bg-ink-0 text-sheet rounded-2xl font-semibold text-[16px] flex items-center justify-center gap-2 transition-transform active:scale-[0.98]"
             >
               <Navigation size={17} />
               Directions

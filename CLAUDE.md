@@ -97,7 +97,8 @@ across basins. The basin rule would need revisiting before adding Italy or the A
    deep-water height. Beginners are alerted above `max(idealHeight.beginner.max, 1.5 m)`.
 
 ### Conditions (`src/services/conditions.ts`)
-Single source of truth for colour. Both the map markers and the drawer read from here.
+Single source of truth for colour. Both the map markers and the drawer read from here,
+passing the theme on screen (see UI system).
 - **Quality tiers** on the surfability scale: `epic` (6-10), `good` (1-5), `poor` (0),
   shown everywhere as **Epic / Fair / Poor** — the score box and the verdict use the same
   name (`Flat` and `Blown out` are the two kinds of Poor the verdict names),
@@ -364,15 +365,43 @@ left 194 of 300 Catalan markers permanently hollow — do not reintroduce a cap.
 
 ## UI system
 
-Approved design: https://claude.ai/artifact/DaKvq44utPzrFcqztPEDyx. Tokens live in
-`globals.css` `@theme` (`bg-ground`, `bg-sheet`, `bg-card`, `border-line`, `text-ink-0..3`,
-`bg-epic`, `bg-fair`, `bg-alert`). Rules: **yellow only means surf quality**, actions are
-white/neutral, no brand blue; nothing under 12 px (an E2E walks the DOM to check); touch
-targets 44 px. Region and level are Vaul sheets (`RegionPicker`, `LevelPicker`), not native
-selects; level only changes safety alerts. The spot detail leads with a one-line verdict
+Layout and flows: https://claude.ai/artifact/DaKvq44utPzrFcqztPEDyx. Brand: direction A,
+"Instrument", chosen from https://claude.ai/artifact/WFbX8hZoN5b7x94XMXjLmc (the other two
+directions, Corduroy and Rompe, were not taken). Tokens live in `globals.css` `@theme`
+(`bg-ground`, `bg-sheet`, `bg-card`, `border-line`, `text-ink-0..3`, `bg-epic`, `bg-fair`,
+`bg-alert`, `bg-poor`, `bg-track`, `bg-scrim`, `text-alert-ink`, `stroke-tide`). Rules:
+**yellow only means surf quality**, actions are ink (the theme's strongest neutral), no
+brand blue; nothing under 12 px (an E2E walks the DOM to check); touch targets 44 px.
+Region and level are Vaul sheets (`RegionPicker`, `LevelPicker`), not native selects; level
+only changes safety alerts. The spot detail leads with a one-line verdict
 (`services/verdict.ts`) and the day's best window, then swell/period/wind cards, a tide
-curve and folded sea-state details. `globals.css` once forced Arial over Geist; keep the
-body on `var(--font-sans)`.
+curve and folded sea-state details.
+
+**Brand.** The mark (`services/brand.ts`, `BrandMark`) is the app's own pill timeline:
+five 3-hour bars rising to a peak and dropping like a wave, the tallest in epic yellow.
+That is the one place yellow appears outside a score, because it depicts the slot worth
+the drive. It sits in the header button that opens the info panel, in the panel's header
+and on the loading screen. Type is Instrument Sans (loaded with its width axis; the body
+runs at `font-stretch: 92%` so the day strip and region pill fit a 375 px phone) with
+JetBrains Mono for uppercase labels. Keep the body on `var(--font-sans)`: `globals.css`
+once forced Arial over the loaded font. Favicon, app icons and the sharing card are
+generated from SVG by `scripts/brand/generate-icons.sh` and `generate-og.sh`; edit the
+sources there, never the PNGs.
+
+**Themes: Auto, Light, Dark** (`services/theme.ts`, `useTheme`, the control at the top of
+the info panel). Auto follows the phone and is the default; a choice is kept in
+localStorage. An inline script in `<head>` sets `<html data-theme>` before the first paint,
+so a dark phone never flashes white. Neutrals are CSS variables (`:root` is light,
+`[data-theme="dark"]` dark), so components use tokens and never raw palette classes
+(`zinc-*`, `white`, `black`, `red-*`). Colours that carry meaning are per-theme tables in
+TypeScript that take a `theme` argument: markers, wind badges and the swell ramp in
+`conditions.ts`, pills in `forecast-series.ts`. The hues are the same in both themes; what
+changes is how a colour separates from its background (on a light map epic gets a dark
+outline and a shadow instead of a glow, the wind greens and swell blues go darker). The
+basemap is Mapbox `light-v11` or `dark-v11`, swapped with `setStyle`; markers are DOM
+nodes, so they survive the swap and only have their colours re-applied. During
+hydration `useTheme` briefly returns the server's guess (dark), so anything imperative
+reads the page (`currentTheme()`) instead.
 
 Mapbox's logo and attribution **must stay visible** (their terms), so they are tidied
 instead: one row in the bottom-left corner, lifted above the sheet on a phone by the

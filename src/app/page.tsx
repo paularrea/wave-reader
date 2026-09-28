@@ -33,12 +33,12 @@ function useDaySegments(utcOffsetSeconds: number) {
 const TIER_FILL: Record<string, string> = {
   epic: 'bg-epic text-epic-ink',
   good: 'bg-fair text-fair-ink',
-  poor: 'bg-zinc-700 text-ink-1',
+  poor: 'bg-poor text-ink-1',
 };
 const TIER_BAR: Record<string, string> = {
   epic: 'bg-epic',
   good: 'bg-fair',
-  poor: 'bg-zinc-700',
+  poor: 'bg-poor',
 };
 
 export default function WaveReaderPage() {
@@ -126,7 +126,7 @@ export default function WaveReaderPage() {
           className="mx-auto w-full max-w-md bg-sheet border-t border-x border-line rounded-t-3xl pt-2 flex flex-col gap-3.5"
           style={{ paddingBottom: 'max(1rem, env(safe-area-inset-bottom))' }}
         >
-          <div className="w-9 h-1 rounded-full bg-zinc-700 self-center" aria-hidden />
+          <div className="w-9 h-1 rounded-full bg-line-strong self-center" aria-hidden />
 
           {/* Only when there is something to go to: with nothing surfable the
               section is dropped rather than shown empty, giving the map back
@@ -193,7 +193,7 @@ export default function WaveReaderPage() {
                   type="button"
                   onClick={() => setCurrentHour(0)}
                   data-testid="back-to-now"
-                  className="h-8 px-3 rounded-full border border-line-strong text-[13px] font-medium text-ink-1 hover:text-white transition-colors"
+                  className="h-8 px-3 rounded-full border border-line-strong text-[13px] font-medium text-ink-1 hover:text-ink-0 transition-colors"
                 >
                   Back to now
                 </button>
@@ -218,13 +218,13 @@ export default function WaveReaderPage() {
                       aria-label={`${segment.label}${known ? `, best score ${dayBest}` : ''}`}
                       className={`h-12 rounded-xl flex flex-col items-center justify-center gap-1.5 border transition-colors ${
                         isActive
-                          ? 'bg-raised border-ink-0 text-white'
+                          ? 'bg-raised border-ink-0 text-ink-0'
                           : 'border-transparent text-ink-2 hover:text-ink-0'
                       }`}
                     >
                       <span className="text-[12px] font-medium leading-none">{segment.label}</span>
                       <span
-                        className={`w-[18px] h-1 rounded-full ${known ? TIER_BAR[qualityTier(dayBest)] : 'bg-zinc-800'}`}
+                        className={`w-[18px] h-1 rounded-full ${known ? TIER_BAR[qualityTier(dayBest)] : 'bg-track'}`}
                         aria-hidden
                       />
                     </button>

@@ -3,11 +3,13 @@
 import React, { useEffect, useRef } from 'react';
 import {
   PILL_MAX_PX,
+  PILL_UNRATED_BORDER,
   TimelineDay,
   pillColour,
   pillHeightPx,
   slotContaining,
 } from '@/services/forecast-series';
+import { useTheme } from '@/hooks/useTheme';
 
 interface ForecastTimelineProps {
   days: TimelineDay[];
@@ -55,6 +57,7 @@ export function ForecastTimeline({
 }: ForecastTimelineProps) {
   const scroller = useRef<HTMLDivElement>(null);
   const selected = slotContaining(days, currentHour);
+  const { theme } = useTheme();
 
   // Keep the selected pill in view without scrolling the drawer vertically,
   // which scrollIntoView would also do.
@@ -111,18 +114,19 @@ export function ForecastTimeline({
                     >
                       <span
                         className={`w-2 rounded-full transition-[box-shadow] ${
-                          isSelected ? 'ring-2 ring-white ring-offset-1 ring-offset-sheet' : ''
+                          isSelected ? 'ring-2 ring-ink-0 ring-offset-1 ring-offset-sheet' : ''
                         }`}
                         style={
                           slot.unrated
                             ? {
                                 height: pillHeightPx(null),
-                                border: '1px dashed rgba(161,161,170,0.7)',
+                                border: PILL_UNRATED_BORDER[theme],
                               }
                             : {
                                 height: pillHeightPx(slot.swellHeight),
                                 backgroundColor: pillColour(slot.stars, {
                                   isDangerous: slot.isDangerous,
+                                  theme,
                                 }),
                               }
                         }
@@ -137,7 +141,7 @@ export function ForecastTimeline({
                 data-testid="drawer-day-tab"
                 data-active={isActiveDay}
                 className={`text-left text-[12px] font-medium leading-none transition-colors ${
-                  isActiveDay ? 'text-white' : 'text-ink-2 hover:text-ink-0'
+                  isActiveDay ? 'text-ink-0' : 'text-ink-2 hover:text-ink-0'
                 }`}
               >
                 {day.label}

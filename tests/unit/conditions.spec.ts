@@ -169,4 +169,61 @@ test.describe('spec: condition-rating / Gradiente de altura de ola', () => {
   });
 });
 
+test.describe('spec: appearance / Colores legibles en claro', () => {
+  const hexLuminance = (hex: string) => {
+    const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255);
+    const lin = (c: number) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  };
+  const contrastOnWhite = (hex: string) => 1.05 / (hexLuminance(hex) + 0.05);
+
+  test('the quality hues are the same in both themes', () => {
+    for (const stars of [0, 3, 7]) {
+      const dark = qualityStyle(stars, { theme: 'dark' });
+      const light = qualityStyle(stars, { theme: 'light' });
+      if (dark.tier !== 'poor') expect(light.background).toBe(dark.background);
+      expect(light.size).toBe(dark.size);
+      expect(light.label).toBe(dark.label);
+    }
+    expect(qualityStyle(9, { isDangerous: true, theme: 'light' }).background).toBe('#EF4444');
+  });
+
+  test('on a light map epic is outlined, not only glowing, and stays the loudest', () => {
+    const epic = qualityStyle(7, { theme: 'light' });
+    const good = qualityStyle(3, { theme: 'light' });
+    expect(epic.boxShadow).toContain('rgba(120,53,15');
+    expect(epic.size).toBeGreaterThan(good.size);
+    expect(epic.boxShadow).not.toBe(good.boxShadow);
+  });
+
+  test('no tier is green in the light theme either', () => {
+    for (let stars = 0; stars <= 10; stars++) {
+      const hex = qualityColor(stars, { theme: 'light' });
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      expect(g, `${stars} stars rendered ${hex}`).toBeLessThanOrEqual(r);
+    }
+  });
+
+  test('wind badges keep their meaning and are legible on white', () => {
+    const offshore = windBadge(forecast({ windDirection: 140, windSpeed: 15 }), SPOT, 'light')!;
+    const onshore = windBadge(forecast({ windDirection: 320, windSpeed: 15 }), SPOT, 'light')!;
+    const cross = windBadge(forecast({ windDirection: 230, windSpeed: 15 }), SPOT, 'light')!;
+    expect(offshore.label).toBe('Offshore');
+    expect(offshore.foreground).toBe('#15803D');
+    expect(onshore.foreground).toBe('#52525B');
+    for (const badge of [offshore, onshore, cross]) {
+      expect(contrastOnWhite(badge.foreground), badge.label).toBeGreaterThanOrEqual(4.5);
+    }
+  });
+
+  test('the swell ramp still runs light to dark, starting where white can show it', () => {
+    const luminance = (hex: string) =>
+      parseInt(hex.slice(1, 3), 16) + parseInt(hex.slice(3, 5), 16) + parseInt(hex.slice(5, 7), 16);
+    expect(luminance(swellColor(0.4, 'light'))).toBeGreaterThan(luminance(swellColor(2.0, 'light')));
+    expect(luminance(swellColor(2.0, 'light'))).toBeGreaterThan(luminance(swellColor(4.5, 'light')));
+    expect(contrastOnWhite(swellColor(0.2, 'light'))).toBeGreaterThanOrEqual(3);
+  });
+});
+
 // Safety is covered against breaking height in tests/unit/surf-rating.spec.ts.

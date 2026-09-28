@@ -7,6 +7,7 @@
 import type { MarineForecast } from './marine-api';
 import type { StarRatingResult } from './star-engine';
 import { compactDayLabel, LocalInstant } from './timeline';
+import type { Theme } from './theme';
 
 export interface SeriesHour extends StarRatingResult {
   forecast: MarineForecast;
@@ -39,11 +40,20 @@ export const PILL_MAX_PX = 44;
 /** Stars at which a pill reaches full yellow: the map's epic threshold. */
 export const PILL_FULL_COLOUR_STARS = 5;
 
-// The map's own ends of the scale, a step lighter at the grey end so a flat day
-// still reads against the drawer's near-black background.
-const GREY: [number, number, number] = [0x52, 0x52, 0x5b]; // zinc-600
+// The map's own ends of the scale. The grey end sits a step off the drawer in
+// each theme, so a flat day still reads against it: zinc-600 on near-black,
+// zinc-300 on white.
+const GREY: Record<Theme, [number, number, number]> = {
+  dark: [0x52, 0x52, 0x5b],
+  light: [0xd4, 0xd4, 0xd8],
+};
 const YELLOW: [number, number, number] = [0xfb, 0xbf, 0x24]; // epic marker
 export const PILL_DANGER = '#EF4444';
+/** Outline of a slot with no forecast: hollow, like an unrated marker. */
+export const PILL_UNRATED_BORDER: Record<Theme, string> = {
+  dark: '1px dashed rgba(161,161,170,0.7)',
+  light: '1px dashed rgba(82,82,91,0.6)',
+};
 
 function instantFromKey(key: string): LocalInstant {
   return { key, day: key.slice(0, 10), hour: Number.parseInt(key.slice(11, 13), 10) };
@@ -94,10 +104,11 @@ export function pillHeightPx(heightM: number | null): number {
 }
 
 /** Continuous grey-to-yellow by rating; red when above the viewer's level. */
-export function pillColour(stars: number, options?: { isDangerous?: boolean }): string {
+export function pillColour(stars: number, options?: { isDangerous?: boolean; theme?: Theme }): string {
   if (options?.isDangerous) return PILL_DANGER;
+  const grey = GREY[options?.theme ?? 'dark'];
   const t = Math.min(Math.max(stars, 0), PILL_FULL_COLOUR_STARS) / PILL_FULL_COLOUR_STARS;
-  const channel = (i: number) => Math.round(GREY[i] + (YELLOW[i] - GREY[i]) * t);
+  const channel = (i: number) => Math.round(grey[i] + (YELLOW[i] - grey[i]) * t);
   return `rgb(${channel(0)}, ${channel(1)}, ${channel(2)})`;
 }
 

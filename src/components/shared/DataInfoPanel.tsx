@@ -3,7 +3,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Drawer } from 'vaul';
 import {
-  Info,
   Waves,
   Wind,
   RefreshCw,
@@ -23,6 +22,10 @@ import {
   describeInterval,
   describeNextUpdate,
 } from '@/services/data-status';
+import { useTheme } from '@/hooks/useTheme';
+import type { ThemePreference } from '@/services/theme';
+import { BRAND } from '@/services/brand';
+import { BrandLockup, BrandMark } from './BrandMark';
 
 interface DataStatus {
   generatedAt: number;
@@ -122,6 +125,44 @@ function ModelRow({ model, now }: { model: ModelStatus; now: number }) {
   );
 }
 
+const APPEARANCE: Array<{ id: ThemePreference; label: string }> = [
+  { id: 'auto', label: 'Auto' },
+  { id: 'light', label: 'Light' },
+  { id: 'dark', label: 'Dark' },
+];
+
+/** Auto follows the phone; the choice is kept on this device. */
+function AppearanceControl() {
+  const { preference, setPreference } = useTheme();
+  return (
+    <div
+      role="radiogroup"
+      aria-label="Appearance"
+      data-testid="appearance"
+      className="flex shrink-0 rounded-full border border-line-strong p-0.5"
+    >
+      {APPEARANCE.map(option => {
+        const active = option.id === preference;
+        return (
+          <button
+            key={option.id}
+            type="button"
+            role="radio"
+            aria-checked={active}
+            data-testid={`theme-${option.id}`}
+            onClick={() => setPreference(option.id)}
+            className={`h-10 px-3 rounded-full text-[13px] font-medium transition-colors ${
+              active ? 'bg-ink-0 text-sheet' : 'text-ink-2 hover:text-ink-0'
+            }`}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 /**
  * Where the data comes from, how fresh it is, and how the rating is built.
  * Every time shown comes from the provider's model metadata; nothing is guessed.
@@ -131,6 +172,7 @@ export function DataInfoPanel() {
   const [status, setStatus] = useState<DataStatus | null>(null);
   const [failed, setFailed] = useState(false);
   const [now, setNow] = useState(() => Date.now());
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!open) return;
@@ -180,22 +222,26 @@ export function DataInfoPanel() {
     <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Trigger asChild>
         <button
-          aria-label="About the data"
+          aria-label={`About ${BRAND.name}: how to read the map, data and appearance`}
           data-testid="info-button"
           onClick={() => setNow(Date.now())}
-          className="w-11 h-11 shrink-0 rounded-full bg-sheet/90 backdrop-blur-md border border-line text-ink-1 hover:text-white flex items-center justify-center transition-colors"
+          className="w-11 h-11 shrink-0 rounded-full bg-sheet/90 backdrop-blur-md border border-line text-ink-0 flex items-center justify-center transition-colors hover:bg-sheet"
         >
-          <Info size={18} />
+          <BrandMark size={20} />
         </button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/60 z-40" />
+        <Drawer.Overlay className="fixed inset-0 bg-scrim z-40" />
         <Drawer.Content
           data-testid="info-panel"
           className="bg-sheet text-ink-0 flex flex-col rounded-t-3xl fixed bottom-0 left-0 right-0 z-50 max-h-[92dvh] border-t border-line outline-none max-w-lg mx-auto"
         >
-          <div className="mx-auto w-9 h-1 rounded-full bg-zinc-700 mt-2 shrink-0" />
+          <div className="mx-auto w-9 h-1 rounded-full bg-line-strong mt-2 shrink-0" />
           <div className="px-5 pt-3.5 pb-3 shrink-0 border-b border-line">
+            <div className="flex items-center justify-between gap-3 mb-3.5">
+              <BrandLockup size={24} />
+              <AppearanceControl />
+            </div>
             <Drawer.Title className="text-[22px] font-semibold tracking-tight">How to read the map</Drawer.Title>
             <Drawer.Description className="text-[14px] text-ink-2 mt-1">
               What scores mean, where the data comes from and how it&apos;s rated
@@ -211,7 +257,7 @@ export function DataInfoPanel() {
                   type="button"
                   onClick={() => jumpTo(link.id)}
                   data-testid={`info-link-${link.id}`}
-                  className="shrink-0 h-9 rounded-full border border-line-strong px-3.5 text-[14px] font-medium text-ink-1 hover:text-white hover:bg-card transition-colors"
+                  className="shrink-0 h-9 rounded-full border border-line-strong px-3.5 text-[14px] font-medium text-ink-1 hover:text-ink-0 hover:bg-card transition-colors"
                 >
                   {link.label}
                 </button>
@@ -238,7 +284,7 @@ export function DataInfoPanel() {
               </p>
               <ul className="rounded-2xl border border-line divide-y divide-line">
                 {LEGEND_TIERS.map(tier => {
-                  const entry = legendEntry(tier);
+                  const entry = legendEntry(tier, theme);
                   return (
                     <li
                       key={tier}
@@ -291,7 +337,7 @@ export function DataInfoPanel() {
                     <span
                       key={height}
                       className="w-2 rounded-full"
-                      style={{ height: pillHeightPx(height), backgroundColor: pillColour(stars) }}
+                      style={{ height: pillHeightPx(height), backgroundColor: pillColour(stars, { theme }) }}
                     />
                   ))}
                 </div>
@@ -328,7 +374,7 @@ export function DataInfoPanel() {
               {status && (
                 <>
                   <div className="rounded-xl bg-card px-3 pt-2">
-                    <div className="flex items-center gap-1.5 text-[12px] uppercase tracking-[0.12em] text-ink-2 font-semibold">
+                    <div className="flex items-center gap-1.5 font-mono text-[12px] uppercase tracking-[0.08em] text-ink-2 font-medium">
                       <Waves size={12} /> Waves and swell
                     </div>
                     {waves.map(m => (
@@ -336,7 +382,7 @@ export function DataInfoPanel() {
                     ))}
                   </div>
                   <div className="rounded-xl bg-card px-3 pt-2">
-                    <div className="flex items-center gap-1.5 text-[12px] uppercase tracking-[0.12em] text-ink-2 font-semibold">
+                    <div className="flex items-center gap-1.5 font-mono text-[12px] uppercase tracking-[0.08em] text-ink-2 font-medium">
                       <Wind size={12} /> Wind
                     </div>
                     {wind.map(m => (
@@ -391,7 +437,7 @@ export function DataInfoPanel() {
                   className="rounded-xl bg-card px-3 py-2.5"
                   data-testid="info-calibration"
                 >
-                  <div className="text-[12px] uppercase tracking-[0.12em] text-ink-2 font-semibold mb-1">
+                  <div className="font-mono text-[12px] uppercase tracking-[0.08em] text-ink-2 font-medium mb-1">
                     Atlantic
                   </div>
                   <p className="text-[12px] leading-snug">
@@ -404,7 +450,7 @@ export function DataInfoPanel() {
                   className="rounded-xl bg-card px-3 py-2.5"
                   data-testid="info-mediterranean"
                 >
-                  <div className="text-[12px] uppercase tracking-[0.12em] text-ink-2 font-semibold mb-1">
+                  <div className="font-mono text-[12px] uppercase tracking-[0.08em] text-ink-2 font-medium mb-1">
                     Mediterranean
                   </div>
                   <p className="text-[12px] leading-snug">

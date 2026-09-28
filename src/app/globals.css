@@ -1,41 +1,103 @@
 @import "tailwindcss";
 
 /*
- * One dark ground, one accent for quality, white for actions.
- * Yellow is reserved for how good the surf is; nothing else may use it.
+ * Wave Reader, direction A ("Instrument"): cool slate neutrals, one accent for
+ * quality, ink for actions. Yellow is reserved for how good the surf is;
+ * nothing else may use it.
+ *
+ * Every neutral is a variable swapped by <html data-theme>, which an inline
+ * script sets before the first paint (services/theme.ts). The quality hues are
+ * the same in both themes, so they stay literal.
  */
 @theme inline {
-  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-instrument-sans), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
-  --color-ground: #0a0b0d;
-  --color-sheet: #121417;
-  --color-card: #1a1d21;
-  --color-raised: #1f2226;
-  --color-line: rgba(255, 255, 255, 0.07);
-  --color-line-strong: rgba(255, 255, 255, 0.14);
+  --color-ground: var(--ground);
+  --color-sheet: var(--sheet);
+  --color-card: var(--card);
+  --color-raised: var(--raised);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
 
-  --color-ink-0: #f4f4f5;
-  --color-ink-1: #d4d4d8;
-  --color-ink-2: #a1a1aa;
-  --color-ink-3: #71717a;
+  --color-ink-0: var(--ink-0);
+  --color-ink-1: var(--ink-1);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
 
   --color-epic: #fbbf24;
   --color-epic-ink: #422006;
   --color-fair: #b45309;
   --color-fair-ink: #fef3c7;
   --color-alert: #ef4444;
+  --color-alert-ink: var(--alert-ink);
+  --color-alert-strong: var(--alert-strong);
+
+  /* Poor on the day strip and in score boxes: present, never competing. */
+  --color-poor: var(--poor);
+  /* A day not scored yet, and the slider's empty track. */
+  --color-track: var(--track);
+  --color-scrim: var(--scrim);
+  --color-tide: var(--tide);
+}
+
+/* Light: paper sheets on a fog ground, slate ink. */
+:root {
+  color-scheme: light;
+  --ground: #e9edf0;
+  --sheet: #ffffff;
+  --card: #f1f4f6;
+  --raised: #e6ebee;
+  --line: rgba(15, 23, 29, 0.09);
+  --line-strong: rgba(15, 23, 29, 0.18);
+  --ink-0: #0f171d;
+  --ink-1: #33414b;
+  --ink-2: #5f6c76;
+  --ink-3: #768390;
+  --alert-ink: #7f1d1d;
+  --alert-strong: #b91c1c;
+  --poor: #dce2e6;
+  --track: #dce2e6;
+  --scrim: rgba(12, 18, 22, 0.35);
+  --tide: #0284c7;
+  --slider-fill: #0f171d;
+  --slider-thumb-ring: rgba(15, 23, 29, 0.28);
+}
+
+/* Dark: a night sea, not black. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #0a0d10;
+  --sheet: #11161a;
+  --card: #182026;
+  --raised: #1f282f;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --ink-0: #f1f4f6;
+  --ink-1: #cbd3d9;
+  --ink-2: #95a1aa;
+  --ink-3: #66727b;
+  --alert-ink: #fee2e2;
+  --alert-strong: #f87171;
+  --poor: #3a444c;
+  --track: #273038;
+  --scrim: rgba(0, 0, 0, 0.6);
+  --tide: #7dd3fc;
+  --slider-fill: #e4e8eb;
+  --slider-thumb-ring: rgba(255, 255, 255, 0.2);
 }
 
 html,
 body {
-  background: #0a0b0d;
-  color: #f4f4f5;
+  background: var(--ground);
+  color: var(--ink-0);
 }
 
 /* The font Next loads is the font the page uses; an Arial override once hid it. */
 body {
   font-family: var(--font-sans);
+  /* Instrument Sans at full width is roomier than a 375 px phone allows. */
+  font-stretch: 92%;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
 }
@@ -58,11 +120,11 @@ textarea {
 }
 
 :focus-visible {
-  outline: 2px solid #f4f4f5;
+  outline: 2px solid var(--ink-0);
   outline-offset: 2px;
 }
 
-/* The forecast slider: a quiet track, a white thumb large enough for a thumb. */
+/* The forecast slider: a quiet track, an ink fill, a white thumb large enough for a thumb. */
 input[type="range"].time-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -73,17 +135,17 @@ input[type="range"].time-slider {
 input[type="range"].time-slider::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(to right, #e4e4e7 var(--progress, 0%), #27272a var(--progress, 0%));
+  background: linear-gradient(to right, var(--slider-fill) var(--progress, 0%), var(--track) var(--progress, 0%));
 }
 input[type="range"].time-slider::-moz-range-track {
   height: 4px;
   border-radius: 2px;
-  background: #27272a;
+  background: var(--track);
 }
 input[type="range"].time-slider::-moz-range-progress {
   height: 4px;
   border-radius: 2px;
-  background: #e4e4e7;
+  background: var(--slider-fill);
 }
 input[type="range"].time-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -92,15 +154,16 @@ input[type="range"].time-slider::-webkit-slider-thumb {
   margin-top: -10px;
   border-radius: 50%;
   background: #ffffff;
-  border: 4px solid #121417;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 4px solid var(--sheet);
+  box-shadow: 0 0 0 1px var(--slider-thumb-ring), 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 input[type="range"].time-slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #ffffff;
-  border: 4px solid #121417;
+  border: 4px solid var(--sheet);
+  box-shadow: 0 0 0 1px var(--slider-thumb-ring);
 }
 
 .no-scrollbar {
@@ -147,7 +210,8 @@ input[type="range"].time-slider::-moz-range-thumb {
     bottom: 0 !important;
   }
 }
-/* Mapbox's compact attribution, toned to the dark UI. */
+/* Mapbox's compact attribution, toned to the sheet in either theme. */
 .mapboxgl-ctrl-attrib.mapboxgl-compact {
-  background: rgba(18, 20, 23, 0.8) !important;
+  background: color-mix(in srgb, var(--sheet) 80%, transparent) !important;
+  color: var(--ink-1);
 }

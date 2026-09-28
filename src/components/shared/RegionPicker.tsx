@@ -110,12 +110,12 @@ export function RegionPicker() {
         </button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/60 z-40" />
+        <Drawer.Overlay className="fixed inset-0 bg-scrim z-40" />
         <Drawer.Content
           data-testid="region-picker"
           className="bg-sheet text-ink-0 flex flex-col rounded-t-3xl fixed bottom-0 left-0 right-0 z-50 h-[88dvh] border-t border-line outline-none max-w-lg mx-auto"
         >
-          <div className="mx-auto w-9 h-1 rounded-full bg-zinc-700 mt-2 shrink-0" />
+          <div className="mx-auto w-9 h-1 rounded-full bg-line-strong mt-2 shrink-0" />
           <div className="px-5 pt-3.5 shrink-0">
             <Drawer.Title className="text-[22px] font-semibold tracking-tight">Choose a region</Drawer.Title>
             <Drawer.Description className="sr-only">

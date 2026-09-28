@@ -13,6 +13,9 @@ import { locationDefaults, regionBounds } from '@/services/regions';
 import { chunkIndexById } from '@/services/spot-batches';
 import { SpotHorizon, bestAt, bestByDay, ratingAt } from '@/services/map-summary';
 import { instantAt, utcMsAt, MAX_FORECAST_HOURS } from '@/services/timeline';
+import { MAP_STYLE, currentTheme } from '@/services/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { BrandMark } from './BrandMark';
 
 const SPAIN_CENTER: [number, number] = [-3.7, 40.4];
 
@@ -97,6 +100,9 @@ export function MarineMap() {
 
   /** Only the selected country's spots are downloaded; the rest stay unfetched. */
   const countrySpots = useCountryIndex(selectedCountry);
+  const { theme } = useTheme();
+  /** The basemap the map was last given, so a theme change swaps it exactly once. */
+  const styleRef = useRef<string | null>(null);
 
   const [loading, setLoading] = useState(true);
   /**
@@ -173,7 +179,7 @@ export function MarineMap() {
     }
 
     for (const { spot, stars, isDangerous } of wanted) {
-      const style = qualityStyle(stars, { isDangerous });
+      const style = qualityStyle(stars, { isDangerous, theme });
       const existing = markersRef.current.get(spot.id);
       if (existing) {
         applyStyle(existing.el, style, stars);
@@ -204,7 +210,7 @@ export function MarineMap() {
         .addTo(map);
       markersRef.current.set(spot.id, { marker, el });
     }
-  }, [nearViewport, setSelectedSpot, targetMs, currentHour]);
+  }, [nearViewport, setSelectedSpot, targetMs, currentHour, theme]);
 
   /** Ranks what is strictly on screen for the bottom sheet. */
   const publishSummary = useCallback(() => {
@@ -321,9 +327,12 @@ export function MarineMap() {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || '';
     if (!mapContainerRef.current) return;
 
+    // Read from the page, not the hook: on the first effect after hydration the
+    // hook can still hold the server's guess.
+    styleRef.current = MAP_STYLE[currentTheme()];
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/dark-v11',
+      style: styleRef.current,
       center: userLocation ? [userLocation.lon, userLocation.lat] : SPAIN_CENTER,
       zoom: userLocation ? 8 : 5,
       attributionControl: false,
@@ -368,6 +377,18 @@ export function MarineMap() {
     // Mount-only: re-running would tear down the map on every store change.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Light or dark basemap with the theme. Markers are DOM nodes, not layers, so
+  // they survive the swap and only their colours are re-applied.
+  // The page is the source of truth: during hydration the hook briefly holds
+  // the server's guess, and following it would load the wrong style first.
+  useEffect(() => {
+    const map = mapRef.current;
+    const wanted = MAP_STYLE[currentTheme()];
+    if (!map || styleRef.current === wanted) return;
+    styleRef.current = wanted;
+    map.setStyle(wanted);
+  }, [theme]);
 
   // A new region or level invalidates every rating and fetched chunk. The hour
   // does not: every chunk already holds the whole horizon.
@@ -446,8 +467,8 @@ export function MarineMap() {
     <div className="relative w-full h-full">
       {loading && (
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-ground">
-          <div className="flex items-center gap-2.5 text-[13px] text-ink-2" role="status">
-            <span className="w-2 h-2 rounded-full bg-epic animate-pulse" />
+          <div className="flex flex-col items-center gap-3 text-[13px] text-ink-2" role="status">
+            <BrandMark size={36} className="text-ink-0 animate-pulse" />
             Loading map
           </div>
         </div>
@@ -477,7 +498,7 @@ export function MarineMap() {
         onClick={locate}
         aria-label="Centre on my location"
         data-testid="locate-button"
-        className="absolute right-4 top-[76px] z-10 w-11 h-11 rounded-full bg-sheet/90 backdrop-blur-md border border-line flex items-center justify-center text-ink-1 hover:text-white transition-colors"
+        className="absolute right-4 top-[76px] z-10 w-11 h-11 rounded-full bg-sheet/90 backdrop-blur-md border border-line flex items-center justify-center text-ink-1 hover:text-ink-0 transition-colors"
       >
         <Navigation size={17} />
       </button>
