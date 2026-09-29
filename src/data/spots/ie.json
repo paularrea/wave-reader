@@ -1,7 +1,55 @@
 [
   {
+    "id": "aileen-s",
+    "name": "Aileen's",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.98024,
+      "lon": -9.43092
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Aileens",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 270,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 52.98,
+        "lon": -9.44
+      },
+      "movedToShoreM": 609
+    }
+  },
+  {
     "id": "an-tra-bhan",
-    "name": "An Trá Bhán",
+    "name": "Silver Strand (Malin Beg)",
     "community": "Donegal",
     "country": "Ireland",
     "type": "Beach",
@@ -39,7 +87,8 @@
       "facingDeg": 255,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "An Trá Bhán"
     }
   },
   {
@@ -86,6 +135,54 @@
     }
   },
   {
+    "id": "annascaul-rivermouth",
+    "name": "Annascaul Rivermouth",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.13437,
+      "lon": -10.0526
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Annascaul-Rivermouth",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 180,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 52.13,
+        "lon": -10.05
+      },
+      "movedToShoreM": 515
+    }
+  },
+  {
     "id": "annestown-beach",
     "name": "Annestown Beach",
     "community": "Waterford",
@@ -129,6 +226,49 @@
     }
   },
   {
+    "id": "ardmore",
+    "name": "Ardmore",
+    "community": "Waterford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 51.95,
+      "lon": -7.78
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Ardmore",
+      "referenceRegion": "Waterford",
+      "feature": "break",
+      "facingDeg": 165,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "ardtermon-strand",
     "name": "Ardtermon Strand",
     "community": "Sligo",
@@ -169,6 +309,97 @@
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "back-strands",
+    "name": "Back Strands",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.45283,
+      "lon": -8.48554
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Back-Strands",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 330,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.45,
+        "lon": -8.49
+      },
+      "movedToShoreM": 426
+    }
+  },
+  {
+    "id": "ballinknockane-brandon-bay",
+    "name": "Ballinknockane (Brandon Bay)",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.25,
+      "lon": -10.09
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Ballinknockane",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 345,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -261,6 +492,54 @@
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "ballyconnell",
+    "name": "Ballyconnell",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.36283,
+      "lon": -8.66305
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Ballyconnell",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.36,
+        "lon": -8.66
+      },
+      "movedToShoreM": 370
     }
   },
   {
@@ -538,14 +817,14 @@
     }
   },
   {
-    "id": "barley-cove-5957120",
+    "id": "barley-cove",
     "name": "Barley Cove",
     "community": "Cork",
     "country": "Ireland",
     "type": "Beach",
     "coordinates": {
-      "lat": 51.4683,
-      "lon": -9.77604
+      "lat": 51.4524,
+      "lon": -9.77468
     },
     "config": {
       "swellWindow": {
@@ -571,13 +850,61 @@
     },
     "provenance": {
       "source": "openstreetmap-overpass",
-      "osmType": "relation",
-      "osmId": 5957120,
-      "feature": "beach",
+      "osmType": "node",
+      "osmId": 2001501143,
+      "feature": "bay",
       "facingDeg": 210,
       "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "centroid": {
+        "lat": 51.45637,
+        "lon": -9.77806
+      },
+      "movedToShoreM": 497
+    }
+  },
+  {
+    "id": "baslicon",
+    "name": "Baslicon",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 51.81,
+      "lon": -10.18
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 165,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 45,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Baslicon",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 225,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -669,7 +996,7 @@
   },
   {
     "id": "boyeegther-bay",
-    "name": "Boyeegther Bay",
+    "name": "Murder Hole Beach",
     "community": "Donegal",
     "country": "Ireland",
     "type": "Beach",
@@ -707,7 +1034,94 @@
       "facingDeg": 330,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Boyeegther Bay"
+    }
+  },
+  {
+    "id": "brandon-bay-kerry",
+    "name": "Brandon Bay",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.26,
+      "lon": -10.07
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Brandon-Bay_1",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 330,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
+    "id": "brinlack-point-bloody-foreland",
+    "name": "Brinlack Point (Bloody Foreland)",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.14,
+      "lon": -8.3
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Brinlack-Point",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 315,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -803,7 +1217,7 @@
   },
   {
     "id": "bunlough-strand",
-    "name": "Bunlough Strand",
+    "name": "Killadoon",
     "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
@@ -841,7 +1255,51 @@
       "facingDeg": 270,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Bunlough Strand"
+    }
+  },
+  {
+    "id": "bunmahon",
+    "name": "Bunmahon",
+    "community": "Waterford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.13,
+      "lon": -7.39
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 75,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Bunmahon",
+      "referenceRegion": "Waterford",
+      "feature": "break",
+      "facingDeg": 165,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -889,7 +1347,7 @@
   },
   {
     "id": "camport-bay",
-    "name": "Camport Bay",
+    "name": "Dooega",
     "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
@@ -1104,6 +1562,49 @@
     }
   },
   {
+    "id": "clogherhead-beach",
+    "name": "Clogherhead Beach",
+    "community": "Wexford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.86,
+      "lon": -6.24
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 225,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Clogherhead-beach",
+      "referenceRegion": "Wexford",
+      "feature": "break",
+      "facingDeg": 45,
+      "exposureDeg": 240,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "clonea-strand",
     "name": "Clonea Strand",
     "community": "Waterford",
@@ -1187,6 +1688,54 @@
       "exposureDeg": 30,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "cornish-reef",
+    "name": "Cornish Reef",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.90685,
+      "lon": -9.37829
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Cornish-Reef",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 52.91,
+        "lon": -9.38
+      },
+      "movedToShoreM": 367
     }
   },
   {
@@ -1282,6 +1831,49 @@
     }
   },
   {
+    "id": "crab-island-clare",
+    "name": "Crab Island",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.04,
+      "lon": -9.39
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Crab-Island_Clare",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "cream-point",
     "name": "Cream Point",
     "community": "Clare",
@@ -1325,6 +1917,54 @@
     }
   },
   {
+    "id": "cregg-beach",
+    "name": "Cregg Beach",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.89278,
+      "lon": -9.40306
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Cregg-Beach",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 270,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 52.89,
+        "lon": -9.4
+      },
+      "movedToShoreM": 370
+    }
+  },
+  {
     "id": "cross-strand",
     "name": "Cross Strand",
     "community": "Mayo and Achill Island",
@@ -1365,6 +2005,49 @@
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "crummie-s-bay",
+    "name": "Crummie's Bay",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.2,
+      "lon": -7.54
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Crummies-Bay",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 345,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1451,6 +2134,49 @@
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "curransport",
+    "name": "Curransport",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.15,
+      "lon": -8.21
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Curransport",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 345,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1806,7 +2532,7 @@
   },
   {
     "id": "doonlaughaun-bay",
-    "name": "Doonlaughaun Bay",
+    "name": "Doonloughan",
     "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
@@ -1844,7 +2570,51 @@
       "facingDeg": 240,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Doonlaughaun Bay"
+    }
+  },
+  {
+    "id": "doughmore",
+    "name": "Doughmore",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.8,
+      "lon": -9.49
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Doughmore",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 285,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1940,7 +2710,7 @@
   },
   {
     "id": "drumnatinney-beach",
-    "name": "Drumnatinney Beach",
+    "name": "Falcarragh Beach",
     "community": "Donegal",
     "country": "Ireland",
     "type": "Beach",
@@ -1980,6 +2750,54 @@
       "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "dumps-brandon-bay",
+    "name": "Dumps (Brandon Bay)",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.28977,
+      "lon": -10.03151
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Dumps",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 0,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 52.29,
+        "lon": -10.04
+      },
+      "movedToShoreM": 578
     }
   },
   {
@@ -2117,6 +2935,49 @@
     }
   },
   {
+    "id": "easky-left",
+    "name": "Easky Left",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.29,
+      "lon": -8.98
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Easky-Left",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 0,
+      "exposureDeg": 210,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "elly-strand",
     "name": "Elly Strand",
     "community": "Mayo and Achill Island",
@@ -2167,7 +3028,7 @@
   },
   {
     "id": "enniscrone-beach",
-    "name": "Enniscrone Beach",
+    "name": "Inishcrone",
     "community": "Sligo",
     "country": "Ireland",
     "type": "Beach",
@@ -2205,7 +3066,8 @@
       "facingDeg": 345,
       "exposureDeg": 60,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Enniscrone Beach"
     }
   },
   {
@@ -2517,6 +3379,183 @@
     }
   },
   {
+    "id": "gweebara-heads-left",
+    "name": "Gweebara Heads left",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.88,
+      "lon": -8.39
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 105,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Gweebara-Heads-left",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 285,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
+    "id": "gweebara-heads-right",
+    "name": "Gweebara Heads right",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.88,
+      "lon": -8.38
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Gweebara-Heads-right",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
+    "id": "gweebarra-dooey-beach",
+    "name": "Gweebarra (Dooey beach)",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.85997,
+      "lon": -8.38413
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 120,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Gweebarra",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 300,
+      "exposureDeg": 30,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.86,
+        "lon": -8.39
+      },
+      "movedToShoreM": 376
+    }
+  },
+  {
+    "id": "harbour",
+    "name": "Harbour",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.48,
+      "lon": -8.31
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Harbour",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 315,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "inch",
     "name": "Inch",
     "community": "Cork",
@@ -2648,6 +3687,49 @@
       "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "jacks-hole",
+    "name": "Jacks Hole",
+    "community": "Wexford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.92,
+      "lon": -6.04
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 45,
+        "maxAngle": 195
+      },
+      "offshoreWindAngle": 300,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Jacks-Hole",
+      "referenceRegion": "Wexford",
+      "feature": "break",
+      "facingDeg": 120,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3011,7 +4093,7 @@
   },
   {
     "id": "lacken-strand",
-    "name": "Lacken Strand",
+    "name": "Lackan Bay",
     "community": "Mayo and Achill Island",
     "country": "Ireland",
     "type": "Beach",
@@ -3049,7 +4131,8 @@
       "facingDeg": 45,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Lacken Strand"
     }
   },
   {
@@ -3096,6 +4179,49 @@
     }
   },
   {
+    "id": "lahinch-left",
+    "name": "Lahinch Left",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.91,
+      "lon": -9.37
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Lahinch-Left",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "leenan-fort",
     "name": "Leenan Fort",
     "community": "Donegal",
@@ -3136,6 +4262,102 @@
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "lighthouse",
+    "name": "Lighthouse",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.30773,
+      "lon": -8.61608
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 90,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Lighthouse_1",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 270,
+      "exposureDeg": 90,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.31,
+        "lon": -8.61
+      },
+      "movedToShoreM": 468
+    }
+  },
+  {
+    "id": "lislary",
+    "name": "Lislary",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.38443,
+      "lon": -8.59875
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Lislary",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 315,
+      "exposureDeg": 180,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.39,
+        "lon": -8.6
+      },
+      "movedToShoreM": 621
     }
   },
   {
@@ -3266,6 +4488,49 @@
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "magheraroarty-reef",
+    "name": "Magheraroarty Reef",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.15,
+      "lon": -8.18
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Magheroarty-Reef",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 0,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3447,6 +4712,49 @@
     }
   },
   {
+    "id": "mossies-brandon-bay",
+    "name": "Mossies (Brandon Bay)",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.3,
+      "lon": -10.04
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Mossies",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 345,
+      "exposureDeg": 300,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "muckros-head",
     "name": "Muckros Head",
     "community": "Donegal",
@@ -3577,6 +4885,49 @@
     }
   },
   {
+    "id": "mullranny-pier",
+    "name": "Mullranny Pier",
+    "community": "Mayo and Achill Island",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 53.9,
+      "lon": -9.78
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 225
+      },
+      "offshoreWindAngle": 345,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Mullranny-Pier",
+      "referenceRegion": "Mayo and Achill Island",
+      "feature": "break",
+      "facingDeg": 165,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "mulranny",
     "name": "Mulranny",
     "community": "Mayo and Achill Island",
@@ -3669,7 +5020,7 @@
   },
   {
     "id": "ownahincha-strand-west",
-    "name": "Ownahincha Strand (West)",
+    "name": "Ownachincha",
     "community": "Cork",
     "country": "Ireland",
     "type": "Beach",
@@ -3707,7 +5058,8 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Ownahincha Strand (West)"
     }
   },
   {
@@ -3751,6 +5103,49 @@
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "perfect-wave",
+    "name": "Perfect Wave",
+    "community": "Waterford",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.14,
+      "lon": -7.26
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 255
+      },
+      "offshoreWindAngle": 0,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Perfect-Wave",
+      "referenceRegion": "Waterford",
+      "feature": "break",
+      "facingDeg": 180,
+      "exposureDeg": 150,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -4242,6 +5637,49 @@
     }
   },
   {
+    "id": "shit-creek",
+    "name": "Shit Creek",
+    "community": "Clare",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.9,
+      "lon": -9.39
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 285
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Shit-Creek",
+      "referenceRegion": "Clare",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "silver-strand-190627102",
     "name": "Silver Strand",
     "community": "Cork",
@@ -4282,6 +5720,54 @@
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "slivebawn-right",
+    "name": "Slivebawn Right",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 55.37675,
+      "lon": -7.32766
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 105
+      },
+      "offshoreWindAngle": 150,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Slivebawn-right",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 330,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 55.38,
+        "lon": -7.33
+      },
+      "movedToShoreM": 388
     }
   },
   {
@@ -4377,6 +5863,49 @@
     }
   },
   {
+    "id": "st-finan-s-bay",
+    "name": "St Finan's Bay",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 51.84,
+      "lon": -10.34
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 195,
+        "maxAngle": 315
+      },
+      "offshoreWindAngle": 75,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/St-Finnans-Bay",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 255,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "st-finians-bay-beach",
     "name": "St Finians Bay Beach",
     "community": "Kerry",
@@ -4418,6 +5947,49 @@
       "exposureDeg": 90,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "stoney-gap-brandon-bay",
+    "name": "Stoney Gap (Brandon Bay)",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.28,
+      "lon": -10.04
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 225,
+        "maxAngle": 135
+      },
+      "offshoreWindAngle": 180,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Stoney-Gap",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 0,
+      "exposureDeg": 270,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -4560,6 +6132,54 @@
     }
   },
   {
+    "id": "the-bar",
+    "name": "The Bar",
+    "community": "Sligo",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.25911,
+      "lon": -8.62414
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 285,
+        "maxAngle": 45
+      },
+      "offshoreWindAngle": 165,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/The-Bar",
+      "referenceRegion": "Sligo",
+      "feature": "break",
+      "facingDeg": 345,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29",
+      "centroid": {
+        "lat": 54.26,
+        "lon": -8.63
+      },
+      "movedToShoreM": 393
+    }
+  },
+  {
     "id": "the-long-strand",
     "name": "The Long Strand",
     "community": "Cork",
@@ -4600,6 +6220,49 @@
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "the-peak",
+    "name": "The Peak",
+    "community": "Donegal",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.49,
+      "lon": -8.27
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 255,
+        "maxAngle": 15
+      },
+      "offshoreWindAngle": 135,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/The-Peak_1",
+      "referenceRegion": "Donegal",
+      "feature": "break",
+      "facingDeg": 315,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -4647,7 +6310,7 @@
   },
   {
     "id": "tra-an-ghleanna",
-    "name": "Trá an Ghleanna",
+    "name": "Glencolumbkille",
     "community": "Donegal",
     "country": "Ireland",
     "type": "Beach",
@@ -4685,7 +6348,8 @@
       "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "Trá an Ghleanna"
     }
   },
   {
@@ -4729,6 +6393,49 @@
       "exposureDeg": 30,
       "elevationSource": "etopo1-erddap-bilinear",
       "retrievedAt": "2026-09-22"
+    }
+  },
+  {
+    "id": "tralee-bay-kerry",
+    "name": "Tralee Bay",
+    "community": "Kerry",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 52.23,
+      "lon": -9.94
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 315,
+        "maxAngle": 75
+      },
+      "offshoreWindAngle": 195,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Tralee-Bay",
+      "referenceRegion": "Kerry",
+      "feature": "break",
+      "facingDeg": 15,
+      "exposureDeg": 120,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -5134,6 +6841,49 @@
     }
   },
   {
+    "id": "valley-left",
+    "name": "Valley Left",
+    "community": "Mayo and Achill Island",
+    "country": "Ireland",
+    "type": "Break",
+    "coordinates": {
+      "lat": 54.02,
+      "lon": -9.96
+    },
+    "config": {
+      "swellWindow": {
+        "minAngle": 105,
+        "maxAngle": 165
+      },
+      "offshoreWindAngle": 315,
+      "windTolerance": 45,
+      "idealHeight": {
+        "beginner": {
+          "min": 0.4,
+          "max": 1.2
+        },
+        "intermediate": {
+          "min": 1,
+          "max": 2.5
+        },
+        "expert": {
+          "min": 2,
+          "max": 5
+        }
+      }
+    },
+    "provenance": {
+      "source": "surf-forecast",
+      "reference": "https://www.surf-forecast.com/breaks/Valley-Left",
+      "referenceRegion": "Mayo and Achill Island",
+      "feature": "break",
+      "facingDeg": 135,
+      "exposureDeg": 60,
+      "elevationSource": "etopo1-erddap-bilinear",
+      "retrievedAt": "2026-09-29"
+    }
+  },
+  {
     "id": "westport-harbour",
     "name": "Westport Harbour",
     "community": "Mayo and Achill Island",
@@ -5221,7 +6971,7 @@
   },
   {
     "id": "white-strand-4225157",
-    "name": "White Strand",
+    "name": "Killard",
     "community": "Clare",
     "country": "Ireland",
     "type": "Beach",
@@ -5259,7 +7009,8 @@
       "facingDeg": 330,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-22"
+      "retrievedAt": "2026-09-22",
+      "osmName": "White Strand"
     }
   },
   {

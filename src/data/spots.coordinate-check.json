@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28",
+ "generatedAt": "2026-09-29",
  "rules": {
   "coastM": 350,
   "snapM": 2500,
@@ -8,8 +8,8 @@
   "enclosed": "Mar Menor|[ÉE]tang|Estany|Albufera|Bassin d.Arcachon|Badia dels Alfacs|Badia del Fangar|Golfe du Morbihan|Rade de Brest|Laguna|Lagoa|Ria Formosa|Ria de Aveiro|Ria de Alvor",
   "referenceKm": 5
  },
- "checked": 1965,
- "ok": 1963,
+ "checked": 2004,
+ "ok": 2002,
  "spots": {
   "a-ver-o-mar": {
    "lat": 41.39,
@@ -166,6 +166,21 @@
    "reason": null,
    "referenceKm": 0
   },
+  "aileen-s": {
+   "lat": 52.98,
+   "lon": -9.44,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 52.98024,
+    "lon": -9.43092,
+    "movedM": 609
+   }
+  },
   "albufeira": {
    "lat": 37.09,
    "lon": -8.25,
@@ -306,6 +321,21 @@
    "reason": null,
    "referenceKm": 0.27
   },
+  "annascaul-rivermouth": {
+   "lat": 52.13,
+   "lon": -10.05,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 52.13437,
+    "lon": -10.0526,
+    "movedM": 515
+   }
+  },
   "annestown-beach": {
    "lat": 52.13892,
    "lon": -7.27262,
@@ -440,6 +470,16 @@
     "lon": -2.5832,
     "movedM": 455
    }
+  },
+  "ardmore": {
+   "lat": 51.95,
+   "lon": -7.78,
+   "coastM": 147,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "ardnave-point-and-bay-islay": {
    "lat": 55.88,
@@ -596,6 +636,21 @@
    "reason": null,
    "referenceKm": 0
   },
+  "back-strands": {
+   "lat": 54.45,
+   "lon": -8.49,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.45283,
+    "lon": -8.48554,
+    "movedM": 426
+   }
+  },
   "backdoor": {
    "lat": 38.92,
    "lon": -9.43,
@@ -726,6 +781,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "ballinknockane-brandon-bay": {
+   "lat": 52.25,
+   "lon": -10.09,
+   "coastM": 244,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "ballinskelligs-bay": {
    "lat": 51.81915,
    "lon": -10.22631,
@@ -760,6 +825,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.13
+  },
+  "ballyconnell": {
+   "lat": 54.36,
+   "lon": -8.66,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.36283,
+    "lon": -8.66305,
+    "movedM": 370
+   }
   },
   "ballycotton-bay": {
    "lat": 51.84077,
@@ -1030,6 +1110,16 @@
    "lat": 58.37,
    "lon": -6.54,
    "coastM": 172,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "baslicon": {
+   "lat": 51.81,
+   "lon": -10.18,
+   "coastM": 77,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -1656,6 +1746,16 @@
    "reason": "no sea coastline within 500 m",
    "referenceKm": 0.31
   },
+  "brandon-bay-kerry": {
+   "lat": 52.26,
+   "lon": -10.07,
+   "coastM": 307,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "branksome-dene-chine-beach": {
    "lat": 50.7087,
    "lon": -1.90231,
@@ -1730,6 +1830,16 @@
    "lat": 58.62,
    "lon": -3.66,
    "coastM": 16,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "brinlack-point-bloody-foreland": {
+   "lat": 55.14,
+   "lon": -8.3,
+   "coastM": 67,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -1860,6 +1970,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.46
+  },
+  "bunmahon": {
+   "lat": 52.13,
+   "lon": -7.39,
+   "coastM": 7,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "bunmahon-strand": {
    "lat": 52.13831,
@@ -2771,6 +2891,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "clogherhead-beach": {
+   "lat": 53.86,
+   "lon": -6.24,
+   "coastM": 105,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "clonea-strand": {
    "lat": 52.09387,
    "lon": -7.54084,
@@ -2971,6 +3101,21 @@
    "reason": null,
    "referenceKm": 0
   },
+  "cornish-reef": {
+   "lat": 52.91,
+   "lon": -9.38,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 52.90685,
+    "lon": -9.37829,
+    "movedM": 367
+   }
+  },
   "costa-da-caparica": {
    "lat": 38.64,
    "lon": -9.24,
@@ -3036,6 +3181,16 @@
     "movedM": 490
    }
   },
+  "crab-island-clare": {
+   "lat": 53.04,
+   "lon": -9.39,
+   "coastM": 310,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "crabart": {
    "lat": 51.56,
    "lon": -4.31,
@@ -3075,6 +3230,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.35
+  },
+  "cregg-beach": {
+   "lat": 52.89,
+   "lon": -9.4,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 52.89278,
+    "lon": -9.40306,
+    "movedM": 370
+   }
   },
   "creswell-beach": {
    "lat": 55.24,
@@ -3181,6 +3351,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "crummie-s-bay": {
+   "lat": 55.2,
+   "lon": -7.54,
+   "coastM": 160,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "cruz-roja": {
    "lat": 28.04,
    "lon": -14.33,
@@ -3240,6 +3420,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.34
+  },
+  "curransport": {
+   "lat": 55.15,
+   "lon": -8.21,
+   "coastM": 72,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "dalbeg-lewis": {
    "lat": 58.31,
@@ -3526,6 +3716,16 @@
    "reason": null,
    "referenceKm": 0.62
   },
+  "doughmore": {
+   "lat": 52.8,
+   "lon": -9.49,
+   "coastM": 196,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "doughmore-beach": {
    "lat": 52.75708,
    "lon": -9.499,
@@ -3620,6 +3820,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.06
+  },
+  "dumps-brandon-bay": {
+   "lat": 52.29,
+   "lon": -10.04,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 52.28977,
+    "lon": -10.03151,
+    "movedM": 578
+   }
   },
   "dunas-de-corralejo": {
    "lat": 28.71525,
@@ -3740,6 +3955,16 @@
     "lon": -8.95877,
     "movedM": 686
    }
+  },
+  "easky-left": {
+   "lat": 54.29,
+   "lon": -8.98,
+   "coastM": 243,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "east-runton": {
    "lat": 52.94,
@@ -4981,6 +5206,41 @@
     "movedM": 599
    }
   },
+  "gweebara-heads-left": {
+   "lat": 54.88,
+   "lon": -8.39,
+   "coastM": 135,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "gweebara-heads-right": {
+   "lat": 54.88,
+   "lon": -8.38,
+   "coastM": 88,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "gweebarra-dooey-beach": {
+   "lat": 54.86,
+   "lon": -8.39,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.85997,
+    "lon": -8.38413,
+    "movedM": 376
+   }
+  },
   "gwendrez": {
    "lat": 47.9917,
    "lon": -4.48175,
@@ -5060,6 +5320,16 @@
    "lat": 52.78,
    "lon": 1.62,
    "coastM": 30,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "harbour": {
+   "lat": 54.48,
+   "lon": -8.31,
+   "coastM": 151,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -5590,6 +5860,16 @@
    "lat": 53.35,
    "lon": 0.26,
    "coastM": 5,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "jacks-hole": {
+   "lat": 52.92,
+   "lon": -6.04,
+   "coastM": 331,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -6581,6 +6861,16 @@
    "reason": null,
    "referenceKm": 0.93
   },
+  "lahinch-left": {
+   "lat": 52.91,
+   "lon": -9.37,
+   "coastM": 17,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "laida": {
    "lat": 43.4003,
    "lon": -2.68501,
@@ -7281,6 +7571,21 @@
    "reason": null,
    "referenceKm": 0
   },
+  "lighthouse": {
+   "lat": 54.31,
+   "lon": -8.61,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.30773,
+    "lon": -8.61608,
+    "movedM": 468
+   }
+  },
   "limipicos": {
    "lat": 38.93,
    "lon": -9.42,
@@ -7290,6 +7595,21 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0
+  },
+  "lislary": {
+   "lat": 54.39,
+   "lon": -8.6,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.38443,
+    "lon": -8.59875,
+    "movedM": 621
+   }
   },
   "littlehampton-east-beach": {
    "lat": 50.80213,
@@ -7740,6 +8060,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 1.76
+  },
+  "magheraroarty-reef": {
+   "lat": 55.15,
+   "lon": -8.18,
+   "coastM": 273,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "maghermore-beach": {
    "lat": 52.9314,
@@ -8286,6 +8616,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "mossies-brandon-bay": {
+   "lat": 52.3,
+   "lon": -10.04,
+   "coastM": 103,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "mothecombe-beach": {
    "lat": 50.30807,
    "lon": -3.94895,
@@ -8355,6 +8695,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.72
+  },
+  "mullranny-pier": {
+   "lat": 53.9,
+   "lon": -9.78,
+   "coastM": 118,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "mulranny": {
    "lat": 53.90741,
@@ -8990,6 +9340,16 @@
    "lat": 47.57,
    "lon": -3.14,
    "coastM": 36,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "perfect-wave": {
+   "lat": 52.14,
+   "lon": -7.26,
+   "coastM": 346,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -18831,6 +19191,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "shit-creek": {
+   "lat": 52.9,
+   "lon": -9.39,
+   "coastM": 170,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "shitpipe": {
    "lat": 58.6,
    "lon": -3.54,
@@ -19039,6 +19409,21 @@
     "lat": 50.28831,
     "lon": -3.64371,
     "movedM": 429
+   }
+  },
+  "slivebawn-right": {
+   "lat": 55.38,
+   "lon": -7.33,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 55.37675,
+    "lon": -7.32766,
+    "movedM": 388
    }
   },
   "small-hope-beach": {
@@ -19286,6 +19671,16 @@
    "reason": null,
    "referenceKm": 0
   },
+  "st-finan-s-bay": {
+   "lat": 51.84,
+   "lon": -10.34,
+   "coastM": 340,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "st-finians-bay-beach": {
    "lat": 51.84567,
    "lon": -10.3364,
@@ -19415,6 +19810,16 @@
    "ok": true,
    "reason": null,
    "referenceKm": 0.25
+  },
+  "stoney-gap-brandon-bay": {
+   "lat": 52.28,
+   "lon": -10.04,
+   "coastM": 278,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "strandhill": {
    "lat": 54.26995,
@@ -19761,6 +20166,21 @@
     "movedM": 409
    }
   },
+  "the-bar": {
+   "lat": 54.26,
+   "lon": -8.63,
+   "coastM": 0,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0,
+   "snapped": {
+    "lat": 54.25911,
+    "lon": -8.62414,
+    "movedM": 393
+   }
+  },
   "the-boiler": {
    "lat": 51.56,
    "lon": -4.02,
@@ -19890,6 +20310,16 @@
    "lat": 56.5,
    "lon": -6.98,
    "coastM": 184,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
+  "the-peak": {
+   "lat": 54.49,
+   "lon": -8.27,
+   "coastM": 72,
    "waterM": null,
    "waterName": null,
    "ok": true,
@@ -20206,6 +20636,16 @@
    "reason": null,
    "referenceKm": 0.26
   },
+  "tralee-bay-kerry": {
+   "lat": 52.23,
+   "lon": -9.94,
+   "coastM": 162,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
+  },
   "tramore-bay": {
    "lat": 52.14782,
    "lon": -7.13209,
@@ -20445,6 +20885,16 @@
     "lon": -15.60227,
     "movedM": 368
    }
+  },
+  "valley-left": {
+   "lat": 54.02,
+   "lon": -9.96,
+   "coastM": 120,
+   "waterM": null,
+   "waterName": null,
+   "ok": true,
+   "reason": null,
+   "referenceKm": 0
   },
   "vardiola": {
    "lat": 41.6901,

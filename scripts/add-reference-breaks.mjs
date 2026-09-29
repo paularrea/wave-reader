@@ -37,6 +37,8 @@ const CHECK = new URL('../src/data/spots.coordinate-check.json', import.meta.url
 const ATTESTATION_REPORT = new URL('../.cache/benchmark/attestation-report.json', import.meta.url);
 const REPORT = new URL('../.cache/benchmark/reference-breaks-report.json', import.meta.url);
 const COUNTY_CACHE = new URL('../.cache/english-counties.json', import.meta.url);
+/** Wave-model answers by coordinate (not versioned): Open-Meteo rate-limits a full re-check. */
+const WAVE_CACHE = new URL('../.cache/reference-wave-data.json', import.meta.url);
 
 /**
  * An attested place this close with a name that agrees is the same break
@@ -156,12 +158,19 @@ for (const c of candidates) {
 
 // --- Wave-model data, as stage 3 checks -----------------------------------
 const hour = nextUtcHour();
-const withData = [];
-for (let i = 0; i < exposed.length; i += BATCH) {
-  const batch = exposed.slice(i, i + BATCH);
+const waveCache = existsSync(WAVE_CACHE) ? JSON.parse(readFileSync(WAVE_CACHE)) : {};
+const unchecked = exposed.filter(c => !(pointKey(c) in waveCache));
+for (let i = 0; i < unchecked.length; i += BATCH) {
+  const batch = unchecked.slice(i, i + BATCH);
   const has = await waveHeights(batch, hour);
-  batch.forEach((c, k) => (has[k] ? withData.push(c) : skipped.push({ ...c, reason: 'no wave model data at these coordinates' })));
-  if (i + BATCH < exposed.length) await sleep(PAUSE_MS);
+  batch.forEach((c, k) => (waveCache[pointKey(c)] = has[k]));
+  writeFileSync(WAVE_CACHE, JSON.stringify(waveCache));
+  if (i + BATCH < unchecked.length) await sleep(PAUSE_MS);
+}
+const withData = [];
+for (const c of exposed) {
+  if (waveCache[pointKey(c)]) withData.push(c);
+  else skipped.push({ ...c, reason: 'no wave model data at these coordinates' });
 }
 
 // --- Write ----------------------------------------------------------------

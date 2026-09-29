@@ -505,9 +505,10 @@ export function DataInfoPanel() {
               testId="info-limitations"
             >
               <ul className="space-y-2">
-                <Fact term="Missing breaks">
-                  In Ireland, a break OpenStreetMap does not map under its name is not listed yet,
-                  however well known: reef and point breaks along the west coast.
+                <Fact term="Coverage">
+                  Spain, Portugal, France, the UK and Ireland, with every break surf-forecast.com
+                  lists there. Other coasts, the Channel Islands and the Isle of Man aren&apos;t covered
+                  yet.
                 </Fact>
                 <Fact term="Break positions">
                   A break placed from surf-forecast.com is accurate to about half a kilometre, the

@@ -10,7 +10,7 @@
     "Stage 4 publishes a place only if it appears here."
   ],
   "generatedAt": "2026-09-28",
-  "count": 1965,
+  "count": 2004,
   "spots": [
     {
       "id": "a-ver-o-mar",
@@ -228,6 +228,21 @@
       "referenceKm": 0
     },
     {
+      "id": "aileen-s",
+      "name": "Aileen's",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Aileen's"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "albufeira",
       "name": "Albufeira",
       "country": "Portugal",
@@ -408,6 +423,21 @@
       "referenceKm": 0.27
     },
     {
+      "id": "annascaul-rivermouth",
+      "name": "Annascaul Rivermouth",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Annascaul Rivermouth"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "annestown-beach",
       "name": "Annestown Beach",
       "country": "Ireland",
@@ -574,6 +604,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Scotland - East Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "ardmore",
+      "name": "Ardmore",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ardmore"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Waterford",
       "referenceKm": 0
     },
     {
@@ -809,6 +854,21 @@
       "referenceKm": 0
     },
     {
+      "id": "back-strands",
+      "name": "Back Strands",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Back Strands"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
+      "referenceKm": 0
+    },
+    {
       "id": "backdoor",
       "name": "Backdoor",
       "country": "Portugal",
@@ -991,6 +1051,21 @@
       "referenceKm": 0
     },
     {
+      "id": "ballinknockane-brandon-bay",
+      "name": "Ballinknockane (Brandon Bay)",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ballinknockane (Brandon Bay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "ballinskelligs-bay",
       "name": "Ballinskelligs Bay",
       "country": "Ireland",
@@ -1036,6 +1111,21 @@
       "forecastName": "Ballycastle",
       "referenceRegion": "Antrim",
       "referenceKm": 0.13
+    },
+    {
+      "id": "ballyconnell",
+      "name": "Ballyconnell",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Ballyconnell"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
+      "referenceKm": 0
     },
     {
       "id": "ballycotton-bay",
@@ -1401,6 +1491,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Outer Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "baslicon",
+      "name": "Baslicon",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Baslicon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
       "referenceKm": 0
     },
     {
@@ -2257,6 +2362,21 @@
       "referenceKm": 0.31
     },
     {
+      "id": "brandon-bay-kerry",
+      "name": "Brandon Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Brandon Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "branksome-dene-chine-beach",
       "name": "Branksome Dene Chine Beach",
       "country": "United Kingdom",
@@ -2375,6 +2495,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Scotland - North Coast",
+      "referenceKm": 0
+    },
+    {
+      "id": "brinlack-point-bloody-foreland",
+      "name": "Brinlack Point (Bloody Foreland)",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Brinlack Point (Bloody Foreland)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
       "referenceKm": 0
     },
     {
@@ -2546,6 +2681,21 @@
       "forecastName": "Killadoon",
       "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0.46
+    },
+    {
+      "id": "bunmahon",
+      "name": "Bunmahon",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Bunmahon"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Waterford",
+      "referenceKm": 0
     },
     {
       "id": "bunmahon-strand",
@@ -3833,6 +3983,21 @@
       "referenceKm": 0
     },
     {
+      "id": "clogherhead-beach",
+      "name": "Clogherhead Beach",
+      "country": "Ireland",
+      "region": "Wexford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Clogherhead Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Wexford",
+      "referenceKm": 0
+    },
+    {
       "id": "clonea-strand",
       "name": "Clonea Strand",
       "country": "Ireland",
@@ -4126,6 +4291,21 @@
       "referenceKm": 0
     },
     {
+      "id": "cornish-reef",
+      "name": "Cornish Reef",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cornish Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "costa-da-caparica",
       "name": "Costa da Caparica",
       "country": "Portugal",
@@ -4201,6 +4381,21 @@
       "referenceKm": 0
     },
     {
+      "id": "crab-island-clare",
+      "name": "Crab Island",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crab Island"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "crabart",
       "name": "Crabart",
       "country": "United Kingdom",
@@ -4260,6 +4455,21 @@
       "forecastName": "Green Point (Cream Point)",
       "referenceRegion": "Clare",
       "referenceKm": 0.35
+    },
+    {
+      "id": "cregg-beach",
+      "name": "Cregg Beach",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Cregg Beach"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
     },
     {
       "id": "creswell-beach",
@@ -4416,6 +4626,21 @@
       "referenceKm": 0
     },
     {
+      "id": "crummie-s-bay",
+      "name": "Crummie's Bay",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Crummie's Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
+    },
+    {
       "id": "cruz-roja",
       "name": "Cruz Roja",
       "country": "Spain",
@@ -4490,6 +4715,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.34
+    },
+    {
+      "id": "curransport",
+      "name": "Curransport",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Curransport"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
     },
     {
       "id": "dalbeg-lewis",
@@ -4894,6 +5134,21 @@
       "referenceKm": 0.62
     },
     {
+      "id": "doughmore",
+      "name": "Doughmore",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Doughmore"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "doughmore-beach",
       "name": "Doughmore Beach",
       "country": "Ireland",
@@ -5030,6 +5285,21 @@
       "forecastName": "Duckpool Bay",
       "referenceRegion": "North Cornwall",
       "referenceKm": 0.06
+    },
+    {
+      "id": "dumps-brandon-bay",
+      "name": "Dumps (Brandon Bay)",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Dumps (Brandon Bay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
     },
     {
       "id": "dunas-de-corralejo",
@@ -5185,6 +5455,21 @@
       "forecastName": "Easky Right",
       "referenceRegion": "Sligo",
       "referenceKm": 0.83
+    },
+    {
+      "id": "easky-left",
+      "name": "Easky Left",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Easky Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
+      "referenceKm": 0
     },
     {
       "id": "east-runton",
@@ -6875,6 +7160,51 @@
       "referenceKm": 0.5
     },
     {
+      "id": "gweebara-heads-left",
+      "name": "Gweebara Heads left",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gweebara Heads left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
+    },
+    {
+      "id": "gweebara-heads-right",
+      "name": "Gweebara Heads right",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gweebara Heads right"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
+    },
+    {
+      "id": "gweebarra-dooey-beach",
+      "name": "Gweebarra (Dooey beach)",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Gweebarra (Dooey beach)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
+    },
+    {
       "id": "gwendrez",
       "name": "Gwendrez",
       "country": "France",
@@ -6994,6 +7324,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "East Anglia",
+      "referenceKm": 0
+    },
+    {
+      "id": "harbour",
+      "name": "Harbour",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Harbour"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
       "referenceKm": 0
     },
     {
@@ -7729,6 +8074,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Lincolnshire",
+      "referenceKm": 0
+    },
+    {
+      "id": "jacks-hole",
+      "name": "Jacks Hole",
+      "country": "Ireland",
+      "region": "Wexford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Jacks Hole"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Wexford",
       "referenceKm": 0
     },
     {
@@ -9047,6 +9407,21 @@
       "referenceKm": 0.93
     },
     {
+      "id": "lahinch-left",
+      "name": "Lahinch Left",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lahinch Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "laida",
       "name": "Laida",
       "country": "Spain",
@@ -9972,6 +10347,21 @@
       "referenceKm": 0
     },
     {
+      "id": "lighthouse",
+      "name": "Lighthouse",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lighthouse"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
+      "referenceKm": 0
+    },
+    {
       "id": "limipicos",
       "name": "Limipicos / The Reef",
       "country": "Portugal",
@@ -9985,6 +10375,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Ericeira",
+      "referenceKm": 0
+    },
+    {
+      "id": "lislary",
+      "name": "Lislary",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Lislary"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
       "referenceKm": 0
     },
     {
@@ -10615,6 +11020,21 @@
       "forecastName": "Magheraroarty Strand",
       "referenceRegion": "Donegal",
       "referenceKm": 1.76
+    },
+    {
+      "id": "magheraroarty-reef",
+      "name": "Magheraroarty Reef",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Magheraroarty Reef"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
     },
     {
       "id": "maghermore-beach",
@@ -11382,6 +11802,21 @@
       "referenceKm": 0
     },
     {
+      "id": "mossies-brandon-bay",
+      "name": "Mossies (Brandon Bay)",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mossies (Brandon Bay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "mothecombe-beach",
       "name": "Mothecombe Beach",
       "country": "United Kingdom",
@@ -11488,6 +11923,21 @@
       "forecastName": "Mullaghmore",
       "referenceRegion": "Sligo",
       "referenceKm": 0.72
+    },
+    {
+      "id": "mullranny-pier",
+      "name": "Mullranny Pier",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Mullranny Pier"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mayo and Achill Island",
+      "referenceKm": 0
     },
     {
       "id": "mulranny",
@@ -12407,6 +12857,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Morbihan - Brittany",
+      "referenceKm": 0
+    },
+    {
+      "id": "perfect-wave",
+      "name": "Perfect Wave",
+      "country": "Ireland",
+      "region": "Waterford",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Perfect Wave"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Waterford",
       "referenceKm": 0
     },
     {
@@ -27281,6 +27746,21 @@
       "referenceKm": 0
     },
     {
+      "id": "shit-creek",
+      "name": "Shit Creek",
+      "country": "Ireland",
+      "region": "Clare",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Shit Creek"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Clare",
+      "referenceKm": 0
+    },
+    {
       "id": "shitpipe",
       "name": "Shitpipe",
       "country": "United Kingdom",
@@ -27565,6 +28045,21 @@
       "forecastName": null,
       "referenceRegion": null,
       "referenceKm": 0.47
+    },
+    {
+      "id": "slivebawn-right",
+      "name": "Slivebawn Right",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Slivebawn Right"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
+      "referenceKm": 0
     },
     {
       "id": "small-hope-beach",
@@ -27903,6 +28398,21 @@
       "referenceKm": 0
     },
     {
+      "id": "st-finan-s-bay",
+      "name": "St Finan's Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "St Finan's Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "st-finians-bay-beach",
       "name": "St Finians Bay Beach",
       "country": "Ireland",
@@ -28082,6 +28592,21 @@
       "forecastName": "Stonehaven",
       "referenceRegion": "Scotland - East Coast",
       "referenceKm": 0.25
+    },
+    {
+      "id": "stoney-gap-brandon-bay",
+      "name": "Stoney Gap (Brandon Bay)",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Stoney Gap (Brandon Bay)"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
     },
     {
       "id": "strandhill",
@@ -28529,6 +29054,21 @@
       "referenceKm": 0
     },
     {
+      "id": "the-bar",
+      "name": "The Bar",
+      "country": "Ireland",
+      "region": "Sligo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Bar"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Sligo",
+      "referenceKm": 0
+    },
+    {
       "id": "the-boiler",
       "name": "The Boiler",
       "country": "United Kingdom",
@@ -28711,6 +29251,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Inner Hebrides",
+      "referenceKm": 0
+    },
+    {
+      "id": "the-peak",
+      "name": "The Peak",
+      "country": "Ireland",
+      "region": "Donegal",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "The Peak"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Donegal",
       "referenceKm": 0
     },
     {
@@ -29156,6 +29711,21 @@
       "referenceKm": 0.26
     },
     {
+      "id": "tralee-bay-kerry",
+      "name": "Tralee Bay",
+      "country": "Ireland",
+      "region": "Kerry",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Tralee Bay"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Kerry",
+      "referenceKm": 0
+    },
+    {
       "id": "tramore-bay",
       "name": "Tramore Bay",
       "country": "Ireland",
@@ -29494,6 +30064,21 @@
       ],
       "coordinate": "surf-forecast",
       "referenceRegion": "Gran Canaria",
+      "referenceKm": 0
+    },
+    {
+      "id": "valley-left",
+      "name": "Valley Left",
+      "country": "Ireland",
+      "region": "Mayo",
+      "sources": [
+        "surf-forecast"
+      ],
+      "attestedAs": [
+        "Valley Left"
+      ],
+      "coordinate": "surf-forecast",
+      "referenceRegion": "Mayo and Achill Island",
       "referenceKm": 0
     },
     {

@@ -165,19 +165,19 @@ node scripts/benchmark-catalogue.mjs      # compare with the references, region 
 
 **The target is surf-forecast's break list: every break they list is published** (decided
 2026-09-28), at an OSM place when one answers to its name and at the coordinate their page
-prints when none does (stage 3.5b). Spain, France, the United Kingdom and Portugal are done
-this way; Ireland can follow, one country per deploy (`FULL_LIST_COUNTRIES` in
-`scripts/lib/references.mjs`, read by stages 3.5b and 4).
+prints when none does (stage 3.5b). Every country is done this way -- Spain, France, the
+United Kingdom, Portugal and Ireland, each in its own deploy (`FULL_LIST_COUNTRIES` in
+`scripts/lib/references.mjs`, read by stages 3.5b, 3.6 and 4).
 Surfline-only places are still published beside them.
 
 **A spot is published only if a surf reference names it (stage 3.5) and its coordinate
 passed the shore check (stage 3.6).** An exposed beach is not a surf spot: stage 4 used to
 publish every OSM beach with 120 deg of open water -- 1,690 places, 1,048 of them with no
-Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,938.
+Surfline or surf-forecast spot within 2 km, including the Mar Menor lagoon shore. Now 1,977.
 In Spain 423 of surf-forecast's 427 breaks have a marker of their own and the other four
 share one with a same-name neighbour (Salinas and Playa de Salinas); in France 476 of 477;
 in the United Kingdom all 446 of the regions covered (not the Channel Islands or the Isle of
-Man, which are not the UK); in Portugal all 226.
+Man, which are not the UK); in Portugal all 226; on their Ireland page 145 of 146.
 
 **Stage 1.5 (break names).** Stage 1 asks OSM for every named beach, bay, headland
 and reef; stage 3.5 then checks which of them a reference names. That finds nothing
@@ -287,12 +287,12 @@ and `BATCH=10` shrinks the coastline queries when Brittany's detailed shore time
 Results for places not checked in a run are kept, so running it between stage 3.5 and 3.5b
 loses nothing.
 
-**Known gaps:** until stage 3.5b is run for it, Ireland only lists the breaks OSM maps
-under their name: 102 of surf-forecast's 135 Irish breaks. What is missing there is **surfers' nicknames** OSM has never heard of
-(Aileen's, The Peak, Shit Creek) and **peaks on a strand already published** (Brandon
-Bay's Stoney Gap) — exactly what stage 3.5b adds. Do not loosen the name matching to
-fill them: a loose match puts a break on the wrong beach, where stage 3.5b puts it where
-the reference does.
+**Known gaps:** none against surf-forecast in the countries covered. What stage 3.5b fills
+is **surfers' nicknames** OSM has never heard of (Aileen's, The Peak, Shit Creek) and
+**peaks on a strand already published** (Brandon Bay's Stoney Gap). Do not loosen the name
+matching to fill them instead: a loose match puts a break on the wrong beach, where stage
+3.5b puts it where the reference does. Their coordinates have two decimals (about 500 m),
+which the info panel says.
 
 **Ireland is published under surf-forecast's regions, not its counties** (stage 4,
 `IRISH_REGION_OF_COUNTY`): that is the list Irish surfers read. They file Tullaghan,

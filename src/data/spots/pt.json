@@ -39,7 +39,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.39,
         "lon": -8.78
@@ -87,7 +87,7 @@
       "facingDeg": 345,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -130,7 +130,7 @@
       "facingDeg": 270,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.43,
         "lon": -8.79
@@ -178,7 +178,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 37.09,
         "lon": -8.25
@@ -226,7 +226,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -269,7 +269,7 @@
       "facingDeg": 330,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -356,7 +356,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -399,7 +399,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.92,
         "lon": -9.43
@@ -447,7 +447,7 @@
       "facingDeg": 300,
       "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 39.37,
         "lon": -9.36
@@ -495,7 +495,7 @@
       "facingDeg": 345,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -538,7 +538,7 @@
       "facingDeg": 285,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -581,7 +581,7 @@
       "facingDeg": 240,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -624,7 +624,7 @@
       "facingDeg": 300,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -667,7 +667,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -710,7 +710,7 @@
       "facingDeg": 195,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -753,7 +753,7 @@
       "facingDeg": 240,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -796,7 +796,7 @@
       "facingDeg": 240,
       "exposureDeg": 270,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -882,7 +882,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 32.65,
         "lon": -16.9
@@ -930,7 +930,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.11,
         "lon": -8.67
@@ -1021,7 +1021,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1064,7 +1064,7 @@
       "facingDeg": 270,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.5,
         "lon": -8.8
@@ -1112,7 +1112,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1155,7 +1155,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 37.7,
         "lon": -8.8
@@ -1203,7 +1203,7 @@
       "facingDeg": 30,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1246,7 +1246,7 @@
       "facingDeg": 240,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1289,7 +1289,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1332,7 +1332,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.53,
         "lon": -8.8
@@ -1380,7 +1380,7 @@
       "facingDeg": 45,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1423,7 +1423,7 @@
       "facingDeg": 315,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1466,7 +1466,7 @@
       "facingDeg": 0,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1509,7 +1509,7 @@
       "facingDeg": 195,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 32.65,
         "lon": -17.02
@@ -1557,7 +1557,7 @@
       "facingDeg": 330,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1600,7 +1600,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1643,7 +1643,7 @@
       "facingDeg": 285,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1772,7 +1772,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 40.91,
         "lon": -8.67
@@ -1820,7 +1820,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.9,
         "lon": -9.44
@@ -1868,7 +1868,7 @@
       "facingDeg": 315,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 39.09,
         "lon": -28.06
@@ -1916,7 +1916,7 @@
       "facingDeg": 15,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -1959,7 +1959,7 @@
       "facingDeg": 225,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2002,7 +2002,7 @@
       "facingDeg": 195,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2045,7 +2045,7 @@
       "facingDeg": 240,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2088,7 +2088,7 @@
       "facingDeg": 285,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2131,7 +2131,7 @@
       "facingDeg": 330,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 39.38,
         "lon": -9.33
@@ -2227,7 +2227,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "alsoReference": [
         "https://www.surf-forecast.com/breaks/The-Reef"
       ]
@@ -2273,7 +2273,7 @@
       "facingDeg": 210,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2316,7 +2316,7 @@
       "facingDeg": 135,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2359,7 +2359,7 @@
       "facingDeg": 210,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2402,7 +2402,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2488,7 +2488,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2531,7 +2531,7 @@
       "facingDeg": 270,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "alsoReference": [
         "https://www.surf-forecast.com/breaks/Consolacao-Lefts"
       ]
@@ -2577,7 +2577,7 @@
       "facingDeg": 285,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2620,7 +2620,7 @@
       "facingDeg": 195,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2663,7 +2663,7 @@
       "facingDeg": 240,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 32.76,
         "lon": -17.24
@@ -2797,7 +2797,7 @@
       "facingDeg": 180,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -2883,7 +2883,7 @@
       "facingDeg": 345,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3098,7 +3098,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "alsoReference": [
         "https://www.surf-forecast.com/breaks/Praiado-Peixe"
       ]
@@ -3144,7 +3144,7 @@
       "facingDeg": 240,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3187,7 +3187,7 @@
       "facingDeg": 15,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3273,7 +3273,7 @@
       "facingDeg": 15,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3316,7 +3316,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -3402,7 +3402,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -5643,7 +5643,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.56,
         "lon": -9.2
@@ -6035,7 +6035,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -6594,7 +6594,7 @@
       "facingDeg": 150,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -6852,7 +6852,7 @@
       "facingDeg": 195,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -7368,7 +7368,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -9136,7 +9136,7 @@
       "facingDeg": 285,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -9953,7 +9953,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -10899,7 +10899,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "alsoReference": [
         "https://www.surf-forecast.com/breaks/Crazy-Left"
       ]
@@ -10945,7 +10945,7 @@
       "facingDeg": 30,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -10988,7 +10988,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 37.08,
         "lon": -8.73
@@ -11036,7 +11036,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11079,7 +11079,7 @@
       "facingDeg": 30,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11122,7 +11122,7 @@
       "facingDeg": 30,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.64,
         "lon": -27.95
@@ -11170,7 +11170,7 @@
       "facingDeg": 0,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11213,7 +11213,7 @@
       "facingDeg": 345,
       "exposureDeg": 120,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11256,7 +11256,7 @@
       "facingDeg": 165,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11299,7 +11299,7 @@
       "facingDeg": 240,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11342,7 +11342,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 39.15,
         "lon": -9.38
@@ -11390,7 +11390,7 @@
       "facingDeg": 315,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 37.01,
         "lon": -25.16
@@ -11438,7 +11438,7 @@
       "facingDeg": 180,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11481,7 +11481,7 @@
       "facingDeg": 285,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11524,7 +11524,7 @@
       "facingDeg": 285,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11567,7 +11567,7 @@
       "facingDeg": 0,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.79,
         "lon": -27.19
@@ -11615,7 +11615,7 @@
       "facingDeg": 315,
       "exposureDeg": 240,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11658,7 +11658,7 @@
       "facingDeg": 120,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.67,
         "lon": -27.08
@@ -11706,7 +11706,7 @@
       "facingDeg": 90,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11749,7 +11749,7 @@
       "facingDeg": 45,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11792,7 +11792,7 @@
       "facingDeg": 90,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11835,7 +11835,7 @@
       "facingDeg": 210,
       "exposureDeg": 210,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 38.65,
         "lon": -27.28
@@ -11883,7 +11883,7 @@
       "facingDeg": 15,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11926,7 +11926,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   },
   {
@@ -11969,7 +11969,7 @@
       "facingDeg": 255,
       "exposureDeg": 180,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28",
+      "retrievedAt": "2026-09-29",
       "centroid": {
         "lat": 41.35,
         "lon": -8.76
@@ -12017,7 +12017,7 @@
       "facingDeg": 270,
       "exposureDeg": 150,
       "elevationSource": "etopo1-erddap-bilinear",
-      "retrievedAt": "2026-09-28"
+      "retrievedAt": "2026-09-29"
     }
   }
 ]
